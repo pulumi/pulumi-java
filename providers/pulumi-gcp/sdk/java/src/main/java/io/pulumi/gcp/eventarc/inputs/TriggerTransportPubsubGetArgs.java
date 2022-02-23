@@ -20,7 +20,7 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscription")
-        private final @Nullable Input<String> subscription;
+      private final @Nullable Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription == null ? Input.empty() : this.subscription;
@@ -31,7 +31,7 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topic")
-        private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;

@@ -23,7 +23,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
+      private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getActions() {
         return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
@@ -34,7 +34,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="contents")
-        private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
+      private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getContents() {
         return this.contents == null ? Optional.empty() : Optional.ofNullable(this.contents);
@@ -45,7 +45,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="triggers")
-        private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
+      private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getTriggers() {
         return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
@@ -56,7 +56,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="workflowManagement")
-        private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
+      private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getWorkflowManagement() {
         return this.workflowManagement == null ? Optional.empty() : Optional.ofNullable(this.workflowManagement);

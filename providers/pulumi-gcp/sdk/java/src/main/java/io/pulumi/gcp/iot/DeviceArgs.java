@@ -24,7 +24,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blocked")
-        private final @Nullable Input<Boolean> blocked;
+      private final @Nullable Input<Boolean> blocked;
 
     public Input<Boolean> getBlocked() {
         return this.blocked == null ? Input.empty() : this.blocked;
@@ -36,7 +36,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
+      private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
 
     public Input<List<DeviceCredentialArgs>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -48,7 +48,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-        private final @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig;
+      private final @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig;
 
     public Input<DeviceGatewayConfigArgs> getGatewayConfig() {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
@@ -60,7 +60,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-        private final @Nullable Input<String> logLevel;
+      private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -71,7 +71,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -82,7 +82,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registry", required=true)
-        private final Input<String> registry;
+      private final Input<String> registry;
 
     public Input<String> getRegistry() {
         return this.registry;

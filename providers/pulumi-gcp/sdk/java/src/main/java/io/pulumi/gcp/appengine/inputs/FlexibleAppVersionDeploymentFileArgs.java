@@ -19,7 +19,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sha1Sum")
-        private final @Nullable Input<String> sha1Sum;
+      private final @Nullable Input<String> sha1Sum;
 
     public Input<String> getSha1Sum() {
         return this.sha1Sum == null ? Input.empty() : this.sha1Sum;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceUrl", required=true)
-        private final Input<String> sourceUrl;
+      private final Input<String> sourceUrl;
 
     public Input<String> getSourceUrl() {
         return this.sourceUrl;

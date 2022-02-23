@@ -15,21 +15,21 @@ public final class TaskDefinitionLoRaWANGatewayVersion extends io.pulumi.resourc
     public static final TaskDefinitionLoRaWANGatewayVersion Empty = new TaskDefinitionLoRaWANGatewayVersion();
 
     @InputImport(name="model")
-        private final @Nullable String model;
+      private final @Nullable String model;
 
     public Optional<String> getModel() {
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
     }
 
     @InputImport(name="packageVersion")
-        private final @Nullable String packageVersion;
+      private final @Nullable String packageVersion;
 
     public Optional<String> getPackageVersion() {
         return this.packageVersion == null ? Optional.empty() : Optional.ofNullable(this.packageVersion);
     }
 
     @InputImport(name="station")
-        private final @Nullable String station;
+      private final @Nullable String station;
 
     public Optional<String> getStation() {
         return this.station == null ? Optional.empty() : Optional.ofNullable(this.station);

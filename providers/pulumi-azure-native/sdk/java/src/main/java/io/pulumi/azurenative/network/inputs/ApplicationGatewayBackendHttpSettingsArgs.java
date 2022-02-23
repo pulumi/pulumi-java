@@ -31,7 +31,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="affinityCookieName")
-        private final @Nullable Input<String> affinityCookieName;
+      private final @Nullable Input<String> affinityCookieName;
 
     public Input<String> getAffinityCookieName() {
         return this.affinityCookieName == null ? Input.empty() : this.affinityCookieName;
@@ -42,7 +42,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authenticationCertificates")
-        private final @Nullable Input<List<SubResourceArgs>> authenticationCertificates;
+      private final @Nullable Input<List<SubResourceArgs>> authenticationCertificates;
 
     public Input<List<SubResourceArgs>> getAuthenticationCertificates() {
         return this.authenticationCertificates == null ? Input.empty() : this.authenticationCertificates;
@@ -53,7 +53,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionDraining")
-        private final @Nullable Input<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
+      private final @Nullable Input<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
 
     public Input<ApplicationGatewayConnectionDrainingArgs> getConnectionDraining() {
         return this.connectionDraining == null ? Input.empty() : this.connectionDraining;
@@ -64,7 +64,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cookieBasedAffinity")
-        private final @Nullable Input<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
+      private final @Nullable Input<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
 
     public Input<Either<String,ApplicationGatewayCookieBasedAffinity>> getCookieBasedAffinity() {
         return this.cookieBasedAffinity == null ? Input.empty() : this.cookieBasedAffinity;
@@ -75,7 +75,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="hostName")
-        private final @Nullable Input<String> hostName;
+      private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -86,7 +86,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -97,7 +97,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -108,7 +108,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -119,7 +119,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="pickHostNameFromBackendAddress")
-        private final @Nullable Input<Boolean> pickHostNameFromBackendAddress;
+      private final @Nullable Input<Boolean> pickHostNameFromBackendAddress;
 
     public Input<Boolean> getPickHostNameFromBackendAddress() {
         return this.pickHostNameFromBackendAddress == null ? Input.empty() : this.pickHostNameFromBackendAddress;
@@ -130,7 +130,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -141,7 +141,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="probe")
-        private final @Nullable Input<SubResourceArgs> probe;
+      private final @Nullable Input<SubResourceArgs> probe;
 
     public Input<SubResourceArgs> getProbe() {
         return this.probe == null ? Input.empty() : this.probe;
@@ -152,7 +152,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="probeEnabled")
-        private final @Nullable Input<Boolean> probeEnabled;
+      private final @Nullable Input<Boolean> probeEnabled;
 
     public Input<Boolean> getProbeEnabled() {
         return this.probeEnabled == null ? Input.empty() : this.probeEnabled;
@@ -163,7 +163,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
+      private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
 
     public Input<Either<String,ApplicationGatewayProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -174,7 +174,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="requestTimeout")
-        private final @Nullable Input<Integer> requestTimeout;
+      private final @Nullable Input<Integer> requestTimeout;
 
     public Input<Integer> getRequestTimeout() {
         return this.requestTimeout == null ? Input.empty() : this.requestTimeout;
@@ -185,7 +185,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="trustedRootCertificates")
-        private final @Nullable Input<List<SubResourceArgs>> trustedRootCertificates;
+      private final @Nullable Input<List<SubResourceArgs>> trustedRootCertificates;
 
     public Input<List<SubResourceArgs>> getTrustedRootCertificates() {
         return this.trustedRootCertificates == null ? Input.empty() : this.trustedRootCertificates;

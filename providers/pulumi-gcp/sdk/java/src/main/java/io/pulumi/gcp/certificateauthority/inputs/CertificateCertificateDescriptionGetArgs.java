@@ -22,35 +22,35 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
     public static final CertificateCertificateDescriptionGetArgs Empty = new CertificateCertificateDescriptionGetArgs();
 
     @InputImport(name="aiaIssuingCertificateUrls")
-        private final @Nullable Input<List<String>> aiaIssuingCertificateUrls;
+      private final @Nullable Input<List<String>> aiaIssuingCertificateUrls;
 
     public Input<List<String>> getAiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls == null ? Input.empty() : this.aiaIssuingCertificateUrls;
     }
 
     @InputImport(name="authorityKeyIds")
-        private final @Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
+      private final @Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
 
     public Input<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> getAuthorityKeyIds() {
         return this.authorityKeyIds == null ? Input.empty() : this.authorityKeyIds;
     }
 
     @InputImport(name="certFingerprints")
-        private final @Nullable Input<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
+      private final @Nullable Input<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
 
     public Input<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> getCertFingerprints() {
         return this.certFingerprints == null ? Input.empty() : this.certFingerprints;
     }
 
     @InputImport(name="configValues")
-        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
+      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
 
     public Input<List<CertificateCertificateDescriptionConfigValueGetArgs>> getConfigValues() {
         return this.configValues == null ? Input.empty() : this.configValues;
     }
 
     @InputImport(name="crlDistributionPoints")
-        private final @Nullable Input<List<String>> crlDistributionPoints;
+      private final @Nullable Input<List<String>> crlDistributionPoints;
 
     public Input<List<String>> getCrlDistributionPoints() {
         return this.crlDistributionPoints == null ? Input.empty() : this.crlDistributionPoints;
@@ -62,21 +62,21 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="publicKeys")
-        private final @Nullable Input<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
+      private final @Nullable Input<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
 
     public Input<List<CertificateCertificateDescriptionPublicKeyGetArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
     }
 
     @InputImport(name="subjectDescriptions")
-        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
+      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> getSubjectDescriptions() {
         return this.subjectDescriptions == null ? Input.empty() : this.subjectDescriptions;
     }
 
     @InputImport(name="subjectKeyIds")
-        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
+      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
 
     public Input<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> getSubjectKeyIds() {
         return this.subjectKeyIds == null ? Input.empty() : this.subjectKeyIds;

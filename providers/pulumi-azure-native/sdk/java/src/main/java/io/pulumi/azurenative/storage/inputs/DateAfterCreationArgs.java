@@ -22,7 +22,7 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="daysAfterCreationGreaterThan", required=true)
-        private final Input<Double> daysAfterCreationGreaterThan;
+      private final Input<Double> daysAfterCreationGreaterThan;
 
     public Input<Double> getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;

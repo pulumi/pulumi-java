@@ -23,7 +23,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShares", required=true)
-        private final Input<InstanceFileSharesArgs> fileShares;
+      private final Input<InstanceFileSharesArgs> fileShares;
 
     public Input<InstanceFileSharesArgs> getFileShares() {
         return this.fileShares;
@@ -47,7 +47,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks", required=true)
-        private final Input<List<InstanceNetworkArgs>> networks;
+      private final Input<List<InstanceNetworkArgs>> networks;
 
     public Input<List<InstanceNetworkArgs>> getNetworks() {
         return this.networks;
@@ -94,7 +94,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-        private final Input<String> tier;
+      private final Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier;
@@ -123,7 +123,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of location. */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */
     public Input<String> getZone() {

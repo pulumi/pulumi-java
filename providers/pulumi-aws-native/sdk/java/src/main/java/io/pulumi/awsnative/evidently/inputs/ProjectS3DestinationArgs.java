@@ -15,14 +15,14 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     public static final ProjectS3DestinationArgs Empty = new ProjectS3DestinationArgs();
 
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

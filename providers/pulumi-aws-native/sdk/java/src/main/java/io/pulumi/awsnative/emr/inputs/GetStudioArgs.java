@@ -17,7 +17,7 @@ public final class GetStudioArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="studioId", required=true)
-        private final String studioId;
+      private final String studioId;
 
     public String getStudioId() {
         return this.studioId;

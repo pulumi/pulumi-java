@@ -17,7 +17,7 @@ public final class GetApiDiagnosticArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiDiagnosticArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diagnosticId", required=true)
-        private final String diagnosticId;
+      private final String diagnosticId;
 
     public String getDiagnosticId() {
         return this.diagnosticId;
@@ -39,7 +39,7 @@ public final class GetApiDiagnosticArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetApiDiagnosticArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

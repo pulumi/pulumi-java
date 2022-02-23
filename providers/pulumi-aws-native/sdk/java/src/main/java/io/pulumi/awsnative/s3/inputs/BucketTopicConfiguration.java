@@ -24,7 +24,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="event", required=true)
-        private final String event;
+      private final String event;
 
     public String getEvent() {
         return this.event;
@@ -35,7 +35,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable BucketNotificationFilter filter;
+      private final @Nullable BucketNotificationFilter filter;
 
     public Optional<BucketNotificationFilter> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -46,7 +46,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="topic", required=true)
-        private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;

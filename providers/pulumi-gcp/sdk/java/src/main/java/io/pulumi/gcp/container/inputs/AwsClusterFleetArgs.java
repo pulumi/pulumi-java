@@ -20,7 +20,7 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="membership")
-        private final @Nullable Input<String> membership;
+      private final @Nullable Input<String> membership;
 
     public Input<String> getMembership() {
         return this.membership == null ? Input.empty() : this.membership;
@@ -31,7 +31,7 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

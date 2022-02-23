@@ -22,7 +22,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadClientId", required=true)
-        private final Input<String> aadClientId;
+      private final Input<String> aadClientId;
 
     public Input<String> getAadClientId() {
         return this.aadClientId;
@@ -33,7 +33,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadTenantId", required=true)
-        private final Input<String> aadTenantId;
+      private final Input<String> aadTenantId;
 
     public Input<String> getAadTenantId() {
         return this.aadTenantId;
@@ -44,7 +44,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-        private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -55,7 +55,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-        private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -66,7 +66,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-        private final @Nullable Input<String> createdBy;
+      private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -77,7 +77,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-        private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
     public Input<Either<String,CreatedByType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -88,7 +88,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-        private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -99,7 +99,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-        private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -110,7 +110,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-        private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
     public Input<Either<String,CreatedByType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -121,7 +121,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -132,7 +132,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -143,7 +143,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -26,7 +26,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -37,7 +37,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -48,7 +48,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imagePaths")
-        private final @Nullable List<String> imagePaths;
+      private final @Nullable List<String> imagePaths;
 
     public List<String> getImagePaths() {
         return this.imagePaths == null ? List.of() : this.imagePaths;
@@ -59,7 +59,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -70,7 +70,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,Object> parameters;
+      private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -81,7 +81,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="supportedResourceTypes")
-        private final @Nullable List<String> supportedResourceTypes;
+      private final @Nullable List<String> supportedResourceTypes;
 
     public List<String> getSupportedResourceTypes() {
         return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;

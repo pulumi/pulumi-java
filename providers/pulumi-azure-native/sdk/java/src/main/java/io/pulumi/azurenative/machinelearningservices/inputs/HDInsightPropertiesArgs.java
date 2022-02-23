@@ -21,7 +21,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -32,7 +32,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorAccount")
-        private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
+      private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
 
     public Input<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
         return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
@@ -43,7 +43,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sshPort")
-        private final @Nullable Input<Integer> sshPort;
+      private final @Nullable Input<Integer> sshPort;
 
     public Input<Integer> getSshPort() {
         return this.sshPort == null ? Input.empty() : this.sshPort;

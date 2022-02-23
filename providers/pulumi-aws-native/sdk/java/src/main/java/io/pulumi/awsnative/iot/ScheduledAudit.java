@@ -126,6 +126,21 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ScheduledAudit(String name) {
+        this(name, ScheduledAuditArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ScheduledAudit(String name, ScheduledAuditArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

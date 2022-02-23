@@ -23,7 +23,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable String capacity;
+      private final @Nullable String capacity;
 
     public Optional<String> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -34,7 +34,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="freeSpace")
-        private final @Nullable String freeSpace;
+      private final @Nullable String freeSpace;
 
     public Optional<String> getFreeSpace() {
         return this.freeSpace == null ? Optional.empty() : Optional.ofNullable(this.freeSpace);
@@ -45,7 +45,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="symbolicName")
-        private final @Nullable String symbolicName;
+      private final @Nullable String symbolicName;
 
     public Optional<String> getSymbolicName() {
         return this.symbolicName == null ? Optional.empty() : Optional.ofNullable(this.symbolicName);
@@ -56,7 +56,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -67,7 +67,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uuid")
-        private final @Nullable String uuid;
+      private final @Nullable String uuid;
 
     public Optional<String> getUuid() {
         return this.uuid == null ? Optional.empty() : Optional.ofNullable(this.uuid);

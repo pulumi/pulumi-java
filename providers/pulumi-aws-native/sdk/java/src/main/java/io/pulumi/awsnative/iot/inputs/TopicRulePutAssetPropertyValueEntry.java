@@ -17,35 +17,35 @@ public final class TopicRulePutAssetPropertyValueEntry extends io.pulumi.resourc
     public static final TopicRulePutAssetPropertyValueEntry Empty = new TopicRulePutAssetPropertyValueEntry();
 
     @InputImport(name="assetId")
-        private final @Nullable String assetId;
+      private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
     }
 
     @InputImport(name="entryId")
-        private final @Nullable String entryId;
+      private final @Nullable String entryId;
 
     public Optional<String> getEntryId() {
         return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
     }
 
     @InputImport(name="propertyAlias")
-        private final @Nullable String propertyAlias;
+      private final @Nullable String propertyAlias;
 
     public Optional<String> getPropertyAlias() {
         return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
     }
 
     @InputImport(name="propertyId")
-        private final @Nullable String propertyId;
+      private final @Nullable String propertyId;
 
     public Optional<String> getPropertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
     @InputImport(name="propertyValues", required=true)
-        private final List<TopicRuleAssetPropertyValue> propertyValues;
+      private final List<TopicRuleAssetPropertyValue> propertyValues;
 
     public List<TopicRuleAssetPropertyValue> getPropertyValues() {
         return this.propertyValues;

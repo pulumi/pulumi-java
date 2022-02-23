@@ -22,7 +22,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob", required=true)
-        private final Integer maxDegreeOfParallelismPerJob;
+      private final Integer maxDegreeOfParallelismPerJob;
 
     public Integer getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
@@ -44,7 +44,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="minPriorityPerJob", required=true)
-        private final Integer minPriorityPerJob;
+      private final Integer minPriorityPerJob;
 
     public Integer getMinPriorityPerJob() {
         return this.minPriorityPerJob;
@@ -55,7 +55,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="objectId", required=true)
-        private final String objectId;
+      private final String objectId;
 
     public String getObjectId() {
         return this.objectId;
@@ -77,7 +77,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -88,7 +88,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

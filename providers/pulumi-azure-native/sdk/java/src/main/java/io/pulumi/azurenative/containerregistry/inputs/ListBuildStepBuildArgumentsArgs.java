@@ -17,7 +17,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="buildTaskName", required=true)
-        private final String buildTaskName;
+      private final String buildTaskName;
 
     public String getBuildTaskName() {
         return this.buildTaskName;
@@ -28,7 +28,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="registryName", required=true)
-        private final String registryName;
+      private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -39,7 +39,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="stepName", required=true)
-        private final String stepName;
+      private final String stepName;
 
     public String getStepName() {
         return this.stepName;

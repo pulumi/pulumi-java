@@ -24,7 +24,7 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,IntegrationAccountSkuName>> name;
+      private final Input<Either<String,IntegrationAccountSkuName>> name;
 
     public Input<Either<String,IntegrationAccountSkuName>> getName() {
         return this.name;

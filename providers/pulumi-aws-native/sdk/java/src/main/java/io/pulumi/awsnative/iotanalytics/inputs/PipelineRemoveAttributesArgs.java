@@ -16,21 +16,21 @@ public final class PipelineRemoveAttributesArgs extends io.pulumi.resources.Reso
     public static final PipelineRemoveAttributesArgs Empty = new PipelineRemoveAttributesArgs();
 
     @InputImport(name="attributes", required=true)
-        private final Input<List<String>> attributes;
+      private final Input<List<String>> attributes;
 
     public Input<List<String>> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-        private final @Nullable Input<String> next;
+      private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;

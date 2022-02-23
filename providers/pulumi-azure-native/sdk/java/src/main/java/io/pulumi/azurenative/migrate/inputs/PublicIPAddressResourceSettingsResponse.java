@@ -23,7 +23,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="domainNameLabel")
-        private final @Nullable String domainNameLabel;
+      private final @Nullable String domainNameLabel;
 
     public Optional<String> getDomainNameLabel() {
         return this.domainNameLabel == null ? Optional.empty() : Optional.ofNullable(this.domainNameLabel);
@@ -34,7 +34,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="fqdn")
-        private final @Nullable String fqdn;
+      private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -45,7 +45,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="publicIpAllocationMethod")
-        private final @Nullable String publicIpAllocationMethod;
+      private final @Nullable String publicIpAllocationMethod;
 
     public Optional<String> getPublicIpAllocationMethod() {
         return this.publicIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIpAllocationMethod);
@@ -57,7 +57,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -68,7 +68,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable String sku;
+      private final @Nullable String sku;
 
     public Optional<String> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -79,7 +79,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final String targetResourceName;
+      private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -90,7 +90,7 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable String zones;
+      private final @Nullable String zones;
 
     public Optional<String> getZones() {
         return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);

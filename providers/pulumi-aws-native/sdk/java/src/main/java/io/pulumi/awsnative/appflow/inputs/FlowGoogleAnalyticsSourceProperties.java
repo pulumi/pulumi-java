@@ -13,7 +13,7 @@ public final class FlowGoogleAnalyticsSourceProperties extends io.pulumi.resourc
     public static final FlowGoogleAnalyticsSourceProperties Empty = new FlowGoogleAnalyticsSourceProperties();
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;

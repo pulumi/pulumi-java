@@ -25,7 +25,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quarantinePolicy")
-        private final @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
+      private final @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
 
     public Input<QuarantinePolicyArgs> getQuarantinePolicy() {
         return this.quarantinePolicy == null ? Input.empty() : this.quarantinePolicy;
@@ -36,7 +36,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
 
     public Input<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -47,7 +47,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustPolicy")
-        private final @Nullable Input<TrustPolicyArgs> trustPolicy;
+      private final @Nullable Input<TrustPolicyArgs> trustPolicy;
 
     public Input<TrustPolicyArgs> getTrustPolicy() {
         return this.trustPolicy == null ? Input.empty() : this.trustPolicy;

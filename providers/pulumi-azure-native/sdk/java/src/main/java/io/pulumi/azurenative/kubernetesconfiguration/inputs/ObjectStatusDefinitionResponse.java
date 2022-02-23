@@ -27,7 +27,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="appliedBy")
-        private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
+      private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
 
     public Optional<ObjectReferenceDefinitionResponse> getAppliedBy() {
         return this.appliedBy == null ? Optional.empty() : Optional.ofNullable(this.appliedBy);
@@ -38,7 +38,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="complianceState")
-        private final @Nullable String complianceState;
+      private final @Nullable String complianceState;
 
     public Optional<String> getComplianceState() {
         return this.complianceState == null ? Optional.empty() : Optional.ofNullable(this.complianceState);
@@ -49,7 +49,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="helmReleaseProperties")
-        private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
+      private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
 
     public Optional<HelmReleasePropertiesDefinitionResponse> getHelmReleaseProperties() {
         return this.helmReleaseProperties == null ? Optional.empty() : Optional.ofNullable(this.helmReleaseProperties);
@@ -60,7 +60,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -71,7 +71,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -82,7 +82,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="namespace")
-        private final @Nullable String namespace;
+      private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -93,7 +93,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="statusConditions")
-        private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
+      private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
     public List<ObjectStatusConditionDefinitionResponse> getStatusConditions() {
         return this.statusConditions == null ? List.of() : this.statusConditions;

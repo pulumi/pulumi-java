@@ -13,14 +13,14 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @InputImport(name="analysisId", required=true)
-        private final String analysisId;
+      private final String analysisId;
 
     public String getAnalysisId() {
         return this.analysisId;
     }
 
     @InputImport(name="awsAccountId", required=true)
-        private final String awsAccountId;
+      private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;

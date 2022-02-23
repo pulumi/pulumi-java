@@ -209,6 +209,21 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public P2sVpnServerConfiguration(String name) {
+        this(name, P2sVpnServerConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public P2sVpnServerConfiguration(String name, P2sVpnServerConfigurationArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

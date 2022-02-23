@@ -25,7 +25,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="accelerators")
-        private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
+      private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
 
     public Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> getAccelerators() {
         return this.accelerators == null ? Input.empty() : this.accelerators;
@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="diskConfig")
-        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
+      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
@@ -47,7 +47,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="image")
-        private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -59,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="instanceNames")
-        private final @Nullable Input<List<String>> instanceNames;
+      private final @Nullable Input<List<String>> instanceNames;
 
     public Input<List<String>> getInstanceNames() {
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
@@ -71,7 +71,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="isPreemptible")
-        private final @Nullable Input<Boolean> isPreemptible;
+      private final @Nullable Input<Boolean> isPreemptible;
 
     public Input<Boolean> getIsPreemptible() {
         return this.isPreemptible == null ? Input.empty() : this.isPreemptible;
@@ -82,7 +82,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="machineType")
-        private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -94,7 +94,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="managedGroupConfigs")
-        private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
+      private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
 
     public Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> getManagedGroupConfigs() {
         return this.managedGroupConfigs == null ? Input.empty() : this.managedGroupConfigs;
@@ -105,7 +105,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="minCpuPlatform")
-        private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -116,7 +116,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="numInstances")
-        private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Input<Integer> numInstances;
 
     public Input<Integer> getNumInstances() {
         return this.numInstances == null ? Input.empty() : this.numInstances;
@@ -127,7 +127,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="preemptibility")
-        private final @Nullable Input<String> preemptibility;
+      private final @Nullable Input<String> preemptibility;
 
     public Input<String> getPreemptibility() {
         return this.preemptibility == null ? Input.empty() : this.preemptibility;

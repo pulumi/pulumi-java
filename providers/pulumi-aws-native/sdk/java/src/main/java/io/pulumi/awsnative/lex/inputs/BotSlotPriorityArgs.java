@@ -19,7 +19,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     public static final BotSlotPriorityArgs Empty = new BotSlotPriorityArgs();
 
     @InputImport(name="priority", required=true)
-        private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -30,7 +30,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="slotName", required=true)
-        private final Input<String> slotName;
+      private final Input<String> slotName;
 
     public Input<String> getSlotName() {
         return this.slotName;

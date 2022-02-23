@@ -23,7 +23,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,EnabledState>> enabledState;
+      private final @Nullable Input<Either<String,EnabledState>> enabledState;
 
     public Input<Either<String,EnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -34,7 +34,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName")
-        private final @Nullable Input<String> endpointName;
+      private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -45,7 +45,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originResponseTimeoutSeconds")
-        private final @Nullable Input<Integer> originResponseTimeoutSeconds;
+      private final @Nullable Input<Integer> originResponseTimeoutSeconds;
 
     public Input<Integer> getOriginResponseTimeoutSeconds() {
         return this.originResponseTimeoutSeconds == null ? Input.empty() : this.originResponseTimeoutSeconds;
@@ -67,7 +67,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -78,7 +78,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

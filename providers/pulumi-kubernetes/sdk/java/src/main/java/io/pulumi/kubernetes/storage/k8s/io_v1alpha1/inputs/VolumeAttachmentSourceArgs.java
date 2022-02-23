@@ -24,7 +24,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inlineVolumeSpec")
-        private final @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
+      private final @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
     public Input<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
         return this.inlineVolumeSpec == null ? Input.empty() : this.inlineVolumeSpec;
@@ -35,7 +35,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="persistentVolumeName")
-        private final @Nullable Input<String> persistentVolumeName;
+      private final @Nullable Input<String> persistentVolumeName;
 
     public Input<String> getPersistentVolumeName() {
         return this.persistentVolumeName == null ? Input.empty() : this.persistentVolumeName;

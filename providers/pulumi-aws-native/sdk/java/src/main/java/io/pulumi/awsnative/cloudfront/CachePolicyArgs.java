@@ -14,7 +14,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final CachePolicyArgs Empty = new CachePolicyArgs();
 
     @InputImport(name="cachePolicyConfig", required=true)
-        private final Input<CachePolicyConfigArgs> cachePolicyConfig;
+      private final Input<CachePolicyConfigArgs> cachePolicyConfig;
 
     public Input<CachePolicyConfigArgs> getCachePolicyConfig() {
         return this.cachePolicyConfig;

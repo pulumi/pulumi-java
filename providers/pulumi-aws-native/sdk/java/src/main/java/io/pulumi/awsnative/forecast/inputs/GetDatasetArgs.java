@@ -13,7 +13,7 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDatasetArgs Empty = new GetDatasetArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

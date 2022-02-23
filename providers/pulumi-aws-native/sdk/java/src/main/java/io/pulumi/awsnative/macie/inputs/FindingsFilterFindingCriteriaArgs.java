@@ -15,7 +15,7 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
     public static final FindingsFilterFindingCriteriaArgs Empty = new FindingsFilterFindingCriteriaArgs();
 
     @InputImport(name="criterion")
-        private final @Nullable Input<FindingsFilterCriterionArgs> criterion;
+      private final @Nullable Input<FindingsFilterCriterionArgs> criterion;
 
     public Input<FindingsFilterCriterionArgs> getCriterion() {
         return this.criterion == null ? Input.empty() : this.criterion;

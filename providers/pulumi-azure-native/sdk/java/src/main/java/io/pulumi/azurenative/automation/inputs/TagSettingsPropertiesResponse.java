@@ -25,7 +25,7 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filterOperator")
-        private final @Nullable String filterOperator;
+      private final @Nullable String filterOperator;
 
     public Optional<String> getFilterOperator() {
         return this.filterOperator == null ? Optional.empty() : Optional.ofNullable(this.filterOperator);
@@ -36,7 +36,7 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,List<String>> tags;
+      private final @Nullable Map<String,List<String>> tags;
 
     public Map<String,List<String>> getTags() {
         return this.tags == null ? Map.of() : this.tags;

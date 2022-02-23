@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action", required=true)
-        private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="match", required=true)
-        private final Input<SecurityPolicyRuleMatchGetArgs> match;
+      private final Input<SecurityPolicyRuleMatchGetArgs> match;
 
     public Input<SecurityPolicyRuleMatchGetArgs> getMatch() {
         return this.match;
@@ -62,7 +62,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="preview")
-        private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -74,7 +74,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -86,7 +86,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rateLimitOptions")
-        private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
+      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
 
     public Input<SecurityPolicyRuleRateLimitOptionsGetArgs> getRateLimitOptions() {
         return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;

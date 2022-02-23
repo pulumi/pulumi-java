@@ -25,7 +25,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="freeOfferExpirationTime")
-        private final @Nullable Input<String> freeOfferExpirationTime;
+      private final @Nullable Input<String> freeOfferExpirationTime;
 
     public Input<String> getFreeOfferExpirationTime() {
         return this.freeOfferExpirationTime == null ? Input.empty() : this.freeOfferExpirationTime;
@@ -36,7 +36,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingEnvironmentProfile")
-        private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+      private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
     public Input<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
@@ -47,7 +47,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperV")
-        private final @Nullable Input<Boolean> hyperV;
+      private final @Nullable Input<Boolean> hyperV;
 
     public Input<Boolean> getHyperV() {
         return this.hyperV == null ? Input.empty() : this.hyperV;
@@ -58,7 +58,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSpot")
-        private final @Nullable Input<Boolean> isSpot;
+      private final @Nullable Input<Boolean> isSpot;
 
     public Input<Boolean> getIsSpot() {
         return this.isSpot == null ? Input.empty() : this.isSpot;
@@ -69,7 +69,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isXenon")
-        private final @Nullable Input<Boolean> isXenon;
+      private final @Nullable Input<Boolean> isXenon;
 
     public Input<Boolean> getIsXenon() {
         return this.isXenon == null ? Input.empty() : this.isXenon;
@@ -80,7 +80,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -91,7 +91,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeEnvironmentProfile")
-        private final @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
+      private final @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
     public Input<KubeEnvironmentProfileArgs> getKubeEnvironmentProfile() {
         return this.kubeEnvironmentProfile == null ? Input.empty() : this.kubeEnvironmentProfile;
@@ -102,7 +102,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -113,7 +113,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumElasticWorkerCount")
-        private final @Nullable Input<Integer> maximumElasticWorkerCount;
+      private final @Nullable Input<Integer> maximumElasticWorkerCount;
 
     public Input<Integer> getMaximumElasticWorkerCount() {
         return this.maximumElasticWorkerCount == null ? Input.empty() : this.maximumElasticWorkerCount;
@@ -124,7 +124,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -136,7 +136,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="perSiteScaling")
-        private final @Nullable Input<Boolean> perSiteScaling;
+      private final @Nullable Input<Boolean> perSiteScaling;
 
     public Input<Boolean> getPerSiteScaling() {
         return this.perSiteScaling == null ? Input.empty() : this.perSiteScaling;
@@ -147,7 +147,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reserved")
-        private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Input<Boolean> reserved;
 
     public Input<Boolean> getReserved() {
         return this.reserved == null ? Input.empty() : this.reserved;
@@ -158,7 +158,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -169,7 +169,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<SkuDescriptionArgs> sku;
+      private final @Nullable Input<SkuDescriptionArgs> sku;
 
     public Input<SkuDescriptionArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -180,7 +180,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spotExpirationTime")
-        private final @Nullable Input<String> spotExpirationTime;
+      private final @Nullable Input<String> spotExpirationTime;
 
     public Input<String> getSpotExpirationTime() {
         return this.spotExpirationTime == null ? Input.empty() : this.spotExpirationTime;
@@ -191,7 +191,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -202,7 +202,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWorkerCount")
-        private final @Nullable Input<Integer> targetWorkerCount;
+      private final @Nullable Input<Integer> targetWorkerCount;
 
     public Input<Integer> getTargetWorkerCount() {
         return this.targetWorkerCount == null ? Input.empty() : this.targetWorkerCount;
@@ -213,7 +213,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWorkerSizeId")
-        private final @Nullable Input<Integer> targetWorkerSizeId;
+      private final @Nullable Input<Integer> targetWorkerSizeId;
 
     public Input<Integer> getTargetWorkerSizeId() {
         return this.targetWorkerSizeId == null ? Input.empty() : this.targetWorkerSizeId;
@@ -224,7 +224,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerTierName")
-        private final @Nullable Input<String> workerTierName;
+      private final @Nullable Input<String> workerTierName;
 
     public Input<String> getWorkerTierName() {
         return this.workerTierName == null ? Input.empty() : this.workerTierName;

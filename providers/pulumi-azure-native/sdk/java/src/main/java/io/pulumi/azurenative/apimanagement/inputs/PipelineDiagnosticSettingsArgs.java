@@ -23,7 +23,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="request")
-        private final @Nullable Input<HttpMessageDiagnosticArgs> request;
+      private final @Nullable Input<HttpMessageDiagnosticArgs> request;
 
     public Input<HttpMessageDiagnosticArgs> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -34,7 +34,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="response")
-        private final @Nullable Input<HttpMessageDiagnosticArgs> response;
+      private final @Nullable Input<HttpMessageDiagnosticArgs> response;
 
     public Input<HttpMessageDiagnosticArgs> getResponse() {
         return this.response == null ? Input.empty() : this.response;

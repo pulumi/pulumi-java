@@ -15,14 +15,14 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     public static final ContainerEnvironmentVariableArgs Empty = new ContainerEnvironmentVariableArgs();
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
     }
 
     @InputImport(name="variable")
-        private final @Nullable Input<String> variable;
+      private final @Nullable Input<String> variable;
 
     public Input<String> getVariable() {
         return this.variable == null ? Input.empty() : this.variable;

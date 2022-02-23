@@ -15,14 +15,14 @@ public final class IPSetTag extends io.pulumi.resources.InvokeArgs {
     public static final IPSetTag Empty = new IPSetTag();
 
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

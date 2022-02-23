@@ -23,7 +23,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerGroupName")
-        private final @Nullable Input<String> containerGroupName;
+      private final @Nullable Input<String> containerGroupName;
 
     public Input<String> getContainerGroupName() {
         return this.containerGroupName == null ? Input.empty() : this.containerGroupName;

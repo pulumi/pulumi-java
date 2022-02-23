@@ -16,14 +16,14 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     public static final DeliveryStreamDynamicPartitioningConfigurationArgs Empty = new DeliveryStreamDynamicPartitioningConfigurationArgs();
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="retryOptions")
-        private final @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
+      private final @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
 
     public Input<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Input.empty() : this.retryOptions;

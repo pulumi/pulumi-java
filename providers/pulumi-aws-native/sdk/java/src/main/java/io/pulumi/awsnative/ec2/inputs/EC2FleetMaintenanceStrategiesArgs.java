@@ -15,7 +15,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     public static final EC2FleetMaintenanceStrategiesArgs Empty = new EC2FleetMaintenanceStrategiesArgs();
 
     @InputImport(name="capacityRebalance")
-        private final @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+      private final @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
     public Input<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
         return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;

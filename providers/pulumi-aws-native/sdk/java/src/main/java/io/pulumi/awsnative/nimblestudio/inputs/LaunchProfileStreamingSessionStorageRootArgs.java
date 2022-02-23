@@ -24,7 +24,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
      * 
      */
     @InputImport(name="linux")
-        private final @Nullable Input<String> linux;
+      private final @Nullable Input<String> linux;
 
     public Input<String> getLinux() {
         return this.linux == null ? Input.empty() : this.linux;
@@ -35,7 +35,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
      * 
      */
     @InputImport(name="windows")
-        private final @Nullable Input<String> windows;
+      private final @Nullable Input<String> windows;
 
     public Input<String> getWindows() {
         return this.windows == null ? Input.empty() : this.windows;

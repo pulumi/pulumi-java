@@ -17,7 +17,7 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="suiteDefinitionId", required=true)
-        private final String suiteDefinitionId;
+      private final String suiteDefinitionId;
 
     public String getSuiteDefinitionId() {
         return this.suiteDefinitionId;

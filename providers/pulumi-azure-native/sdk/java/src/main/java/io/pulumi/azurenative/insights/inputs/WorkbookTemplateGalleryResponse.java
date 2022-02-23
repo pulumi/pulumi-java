@@ -24,7 +24,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="category")
-        private final @Nullable String category;
+      private final @Nullable String category;
 
     public Optional<String> getCategory() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
@@ -35,7 +35,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="order")
-        private final @Nullable Integer order;
+      private final @Nullable Integer order;
 
     public Optional<Integer> getOrder() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
@@ -57,7 +57,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceType")
-        private final @Nullable String resourceType;
+      private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -68,7 +68,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

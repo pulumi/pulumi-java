@@ -25,7 +25,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataflowSinks")
-        private final @Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks;
+      private final @Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks;
 
     public Input<List<PowerQuerySinkArgs>> getDataflowSinks() {
         return this.dataflowSinks == null ? Input.empty() : this.dataflowSinks;
@@ -36,7 +36,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryName")
-        private final @Nullable Input<String> queryName;
+      private final @Nullable Input<String> queryName;
 
     public Input<String> getQueryName() {
         return this.queryName == null ? Input.empty() : this.queryName;

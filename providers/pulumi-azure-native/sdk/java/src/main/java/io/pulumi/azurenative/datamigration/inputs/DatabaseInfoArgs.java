@@ -22,7 +22,7 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-        private final Input<String> sourceDatabaseName;
+      private final Input<String> sourceDatabaseName;
 
     public Input<String> getSourceDatabaseName() {
         return this.sourceDatabaseName;

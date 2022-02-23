@@ -20,42 +20,42 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-        private final Input<String> applicationIdentifier;
+      private final Input<String> applicationIdentifier;
 
     public Input<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="endpointType")
-        private final @Nullable Input<ServiceEndpointType> endpointType;
+      private final @Nullable Input<ServiceEndpointType> endpointType;
 
     public Input<ServiceEndpointType> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-        private final Input<String> environmentIdentifier;
+      private final Input<String> environmentIdentifier;
 
     public Input<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="lambdaEndpoint")
-        private final @Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
+      private final @Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
     public Input<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
         return this.lambdaEndpoint == null ? Input.empty() : this.lambdaEndpoint;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,21 +66,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ServiceTagArgs>> tags;
+      private final @Nullable Input<List<ServiceTagArgs>> tags;
 
     public Input<List<ServiceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="urlEndpoint")
-        private final @Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint;
+      private final @Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint;
 
     public Input<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
         return this.urlEndpoint == null ? Input.empty() : this.urlEndpoint;
     }
 
     @InputImport(name="vpcId")
-        private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

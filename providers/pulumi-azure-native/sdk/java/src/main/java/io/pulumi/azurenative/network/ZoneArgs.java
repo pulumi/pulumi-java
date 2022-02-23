@@ -23,7 +23,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationVirtualNetworks")
-        private final @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks;
+      private final @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks;
 
     public Input<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
         return this.registrationVirtualNetworks == null ? Input.empty() : this.registrationVirtualNetworks;
@@ -45,7 +45,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolutionVirtualNetworks")
-        private final @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks;
+      private final @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks;
 
     public Input<List<SubResourceArgs>> getResolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks == null ? Input.empty() : this.resolutionVirtualNetworks;
@@ -56,7 +56,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneName")
-        private final @Nullable Input<String> zoneName;
+      private final @Nullable Input<String> zoneName;
 
     public Input<String> getZoneName() {
         return this.zoneName == null ? Input.empty() : this.zoneName;
@@ -89,7 +89,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneType")
-        private final @Nullable Input<ZoneType> zoneType;
+      private final @Nullable Input<ZoneType> zoneType;
 
     public Input<ZoneType> getZoneType() {
         return this.zoneType == null ? Input.empty() : this.zoneType;

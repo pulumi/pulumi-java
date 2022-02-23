@@ -16,7 +16,7 @@ public final class ListenerRuleSourceIpConfigArgs extends io.pulumi.resources.Re
     public static final ListenerRuleSourceIpConfigArgs Empty = new ListenerRuleSourceIpConfigArgs();
 
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

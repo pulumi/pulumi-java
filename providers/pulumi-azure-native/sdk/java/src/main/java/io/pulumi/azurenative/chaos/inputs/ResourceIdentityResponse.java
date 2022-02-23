@@ -21,7 +21,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -43,7 +43,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

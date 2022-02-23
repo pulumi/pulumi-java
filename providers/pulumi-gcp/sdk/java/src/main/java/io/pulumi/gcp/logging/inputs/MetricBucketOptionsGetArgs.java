@@ -22,7 +22,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="explicitBuckets")
-        private final @Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
+      private final @Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
 
     public Input<MetricBucketOptionsExplicitBucketsGetArgs> getExplicitBuckets() {
         return this.explicitBuckets == null ? Input.empty() : this.explicitBuckets;
@@ -35,7 +35,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exponentialBuckets")
-        private final @Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
+      private final @Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
 
     public Input<MetricBucketOptionsExponentialBucketsGetArgs> getExponentialBuckets() {
         return this.exponentialBuckets == null ? Input.empty() : this.exponentialBuckets;
@@ -48,7 +48,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="linearBuckets")
-        private final @Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
+      private final @Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
 
     public Input<MetricBucketOptionsLinearBucketsGetArgs> getLinearBuckets() {
         return this.linearBuckets == null ? Input.empty() : this.linearBuckets;

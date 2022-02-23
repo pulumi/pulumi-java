@@ -28,7 +28,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitAccessEnabled", required=true)
-        private final Input<Boolean> jitAccessEnabled;
+      private final Input<Boolean> jitAccessEnabled;
 
     public Input<Boolean> getJitAccessEnabled() {
         return this.jitAccessEnabled;
@@ -39,7 +39,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitApprovalMode")
-        private final @Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode;
+      private final @Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode;
 
     public Input<Either<String,JitApprovalMode>> getJitApprovalMode() {
         return this.jitApprovalMode == null ? Input.empty() : this.jitApprovalMode;
@@ -50,7 +50,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitApprovers")
-        private final @Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers;
+      private final @Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers;
 
     public Input<List<JitApproverDefinitionArgs>> getJitApprovers() {
         return this.jitApprovers == null ? Input.empty() : this.jitApprovers;
@@ -61,7 +61,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maximumJitAccessDuration")
-        private final @Nullable Input<String> maximumJitAccessDuration;
+      private final @Nullable Input<String> maximumJitAccessDuration;
 
     public Input<String> getMaximumJitAccessDuration() {
         return this.maximumJitAccessDuration == null ? Input.empty() : this.maximumJitAccessDuration;

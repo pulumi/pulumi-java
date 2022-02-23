@@ -17,7 +17,7 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-        private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;

@@ -22,7 +22,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -35,7 +35,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceId")
-        private final @Nullable Input<String> namespaceId;
+      private final @Nullable Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId == null ? Input.empty() : this.namespaceId;
@@ -70,7 +70,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

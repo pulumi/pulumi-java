@@ -16,14 +16,14 @@ public final class OriginRequestPolicyCookiesConfig extends io.pulumi.resources.
     public static final OriginRequestPolicyCookiesConfig Empty = new OriginRequestPolicyCookiesConfig();
 
     @InputImport(name="cookieBehavior", required=true)
-        private final String cookieBehavior;
+      private final String cookieBehavior;
 
     public String getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-        private final @Nullable List<String> cookies;
+      private final @Nullable List<String> cookies;
 
     public List<String> getCookies() {
         return this.cookies == null ? List.of() : this.cookies;

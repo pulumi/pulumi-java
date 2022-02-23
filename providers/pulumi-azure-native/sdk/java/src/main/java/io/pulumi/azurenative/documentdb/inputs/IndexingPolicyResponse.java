@@ -29,7 +29,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="automatic")
-        private final @Nullable Boolean automatic;
+      private final @Nullable Boolean automatic;
 
     public Optional<Boolean> getAutomatic() {
         return this.automatic == null ? Optional.empty() : Optional.ofNullable(this.automatic);
@@ -40,7 +40,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="compositeIndexes")
-        private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
+      private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
     public List<List<CompositePathResponse>> getCompositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
@@ -51,7 +51,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="excludedPaths")
-        private final @Nullable List<ExcludedPathResponse> excludedPaths;
+      private final @Nullable List<ExcludedPathResponse> excludedPaths;
 
     public List<ExcludedPathResponse> getExcludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
@@ -62,7 +62,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includedPaths")
-        private final @Nullable List<IncludedPathResponse> includedPaths;
+      private final @Nullable List<IncludedPathResponse> includedPaths;
 
     public List<IncludedPathResponse> getIncludedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
@@ -73,7 +73,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="indexingMode")
-        private final @Nullable String indexingMode;
+      private final @Nullable String indexingMode;
 
     public Optional<String> getIndexingMode() {
         return this.indexingMode == null ? Optional.empty() : Optional.ofNullable(this.indexingMode);
@@ -84,7 +84,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="spatialIndexes")
-        private final @Nullable List<SpatialSpecResponse> spatialIndexes;
+      private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
     public List<SpatialSpecResponse> getSpatialIndexes() {
         return this.spatialIndexes == null ? List.of() : this.spatialIndexes;

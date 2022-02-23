@@ -22,28 +22,28 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 
     @InputImport(name="allow")
-        private final @Nullable Input<WebACLAllowActionArgs> allow;
+      private final @Nullable Input<WebACLAllowActionArgs> allow;
 
     public Input<WebACLAllowActionArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
     }
 
     @InputImport(name="block")
-        private final @Nullable Input<WebACLBlockActionArgs> block;
+      private final @Nullable Input<WebACLBlockActionArgs> block;
 
     public Input<WebACLBlockActionArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;
     }
 
     @InputImport(name="captcha")
-        private final @Nullable Input<WebACLCaptchaActionArgs> captcha;
+      private final @Nullable Input<WebACLCaptchaActionArgs> captcha;
 
     public Input<WebACLCaptchaActionArgs> getCaptcha() {
         return this.captcha == null ? Input.empty() : this.captcha;
     }
 
     @InputImport(name="count")
-        private final @Nullable Input<WebACLCountActionArgs> count;
+      private final @Nullable Input<WebACLCountActionArgs> count;
 
     public Input<WebACLCountActionArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;

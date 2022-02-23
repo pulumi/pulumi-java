@@ -22,7 +22,7 @@ public final class DataSourceRdsParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="database", required=true)
-        private final Input<String> database;
+      private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -33,7 +33,7 @@ public final class DataSourceRdsParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceId", required=true)
-        private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;

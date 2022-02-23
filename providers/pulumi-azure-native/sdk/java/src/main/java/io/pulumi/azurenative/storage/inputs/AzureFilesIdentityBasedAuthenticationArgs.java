@@ -26,7 +26,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="activeDirectoryProperties")
-        private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
+      private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
     public Input<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
         return this.activeDirectoryProperties == null ? Input.empty() : this.activeDirectoryProperties;
@@ -37,7 +37,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="directoryServiceOptions", required=true)
-        private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
+      private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
     public Input<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
         return this.directoryServiceOptions;

@@ -23,7 +23,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attacher", required=true)
-        private final Input<String> attacher;
+      private final Input<String> attacher;
 
     public Input<String> getAttacher() {
         return this.attacher;
@@ -34,7 +34,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeName", required=true)
-        private final Input<String> nodeName;
+      private final Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName;
@@ -45,7 +45,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<VolumeAttachmentSourceArgs> source;
+      private final Input<VolumeAttachmentSourceArgs> source;
 
     public Input<VolumeAttachmentSourceArgs> getSource() {
         return this.source;

@@ -16,21 +16,21 @@ public final class CanaryVPCConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final CanaryVPCConfigArgs Empty = new CanaryVPCConfigArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-        private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-        private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     @InputImport(name="vpcId")
-        private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

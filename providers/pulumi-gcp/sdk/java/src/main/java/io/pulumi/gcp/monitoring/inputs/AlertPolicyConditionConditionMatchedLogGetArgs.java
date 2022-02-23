@@ -20,7 +20,7 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
      * 
      */
     @InputImport(name="filter", required=true)
-        private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -37,7 +37,7 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
      * 
      */
     @InputImport(name="labelExtractors")
-        private final @Nullable Input<Map<String,String>> labelExtractors;
+      private final @Nullable Input<Map<String,String>> labelExtractors;
 
     public Input<Map<String,String>> getLabelExtractors() {
         return this.labelExtractors == null ? Input.empty() : this.labelExtractors;

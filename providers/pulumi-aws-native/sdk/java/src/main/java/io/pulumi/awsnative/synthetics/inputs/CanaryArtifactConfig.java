@@ -19,7 +19,7 @@ public final class CanaryArtifactConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="s3Encryption")
-        private final @Nullable CanaryS3Encryption s3Encryption;
+      private final @Nullable CanaryS3Encryption s3Encryption;
 
     public Optional<CanaryS3Encryption> getS3Encryption() {
         return this.s3Encryption == null ? Optional.empty() : Optional.ofNullable(this.s3Encryption);

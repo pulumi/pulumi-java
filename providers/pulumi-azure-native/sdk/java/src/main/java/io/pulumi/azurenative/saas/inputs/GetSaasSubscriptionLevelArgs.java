@@ -17,7 +17,7 @@ public final class GetSaasSubscriptionLevelArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSaasSubscriptionLevelArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

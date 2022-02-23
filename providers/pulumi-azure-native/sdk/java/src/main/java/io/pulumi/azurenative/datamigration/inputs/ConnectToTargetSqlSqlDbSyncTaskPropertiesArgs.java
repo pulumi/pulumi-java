@@ -24,7 +24,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<ConnectToTargetSqlSqlDbSyncTaskInputArgs> input;
+      private final @Nullable Input<ConnectToTargetSqlSqlDbSyncTaskInputArgs> input;
 
     public Input<ConnectToTargetSqlSqlDbSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

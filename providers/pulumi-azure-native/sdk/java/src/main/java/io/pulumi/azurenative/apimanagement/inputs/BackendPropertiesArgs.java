@@ -23,7 +23,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceFabricCluster")
-        private final @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+      private final @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
     public Input<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
         return this.serviceFabricCluster == null ? Input.empty() : this.serviceFabricCluster;

@@ -23,7 +23,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customPluginArn", required=true)
-        private final Input<String> customPluginArn;
+      private final Input<String> customPluginArn;
 
     public Input<String> getCustomPluginArn() {
         return this.customPluginArn;
@@ -34,7 +34,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="revision", required=true)
-        private final Input<Integer> revision;
+      private final Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision;

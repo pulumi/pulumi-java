@@ -23,7 +23,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;

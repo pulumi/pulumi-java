@@ -21,7 +21,7 @@ public final class BackendServiceConsistentHashHttpCookieTtlArgs extends io.pulu
      * 
      */
     @InputImport(name="nanos")
-        private final @Nullable Input<Integer> nanos;
+      private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class BackendServiceConsistentHashHttpCookieTtlArgs extends io.pulu
      * 
      */
     @InputImport(name="seconds", required=true)
-        private final Input<Integer> seconds;
+      private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;

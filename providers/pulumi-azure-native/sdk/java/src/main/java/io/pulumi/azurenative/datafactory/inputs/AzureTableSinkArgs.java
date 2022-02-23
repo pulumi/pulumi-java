@@ -24,7 +24,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureTableDefaultPartitionKeyValue")
-        private final @Nullable Input<Object> azureTableDefaultPartitionKeyValue;
+      private final @Nullable Input<Object> azureTableDefaultPartitionKeyValue;
 
     public Input<Object> getAzureTableDefaultPartitionKeyValue() {
         return this.azureTableDefaultPartitionKeyValue == null ? Input.empty() : this.azureTableDefaultPartitionKeyValue;
@@ -35,7 +35,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureTableInsertType")
-        private final @Nullable Input<Object> azureTableInsertType;
+      private final @Nullable Input<Object> azureTableInsertType;
 
     public Input<Object> getAzureTableInsertType() {
         return this.azureTableInsertType == null ? Input.empty() : this.azureTableInsertType;
@@ -46,7 +46,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureTablePartitionKeyName")
-        private final @Nullable Input<Object> azureTablePartitionKeyName;
+      private final @Nullable Input<Object> azureTablePartitionKeyName;
 
     public Input<Object> getAzureTablePartitionKeyName() {
         return this.azureTablePartitionKeyName == null ? Input.empty() : this.azureTablePartitionKeyName;
@@ -57,7 +57,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureTableRowKeyName")
-        private final @Nullable Input<Object> azureTableRowKeyName;
+      private final @Nullable Input<Object> azureTableRowKeyName;
 
     public Input<Object> getAzureTableRowKeyName() {
         return this.azureTableRowKeyName == null ? Input.empty() : this.azureTableRowKeyName;
@@ -68,7 +68,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -79,7 +79,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -90,7 +90,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Input<Object> sinkRetryCount;
 
     public Input<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
@@ -101,7 +101,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Input<Object> sinkRetryWait;
 
     public Input<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
@@ -113,7 +113,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -124,7 +124,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Input<Object> writeBatchSize;
 
     public Input<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
@@ -135,7 +135,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Input<Object> writeBatchTimeout;
 
     public Input<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;

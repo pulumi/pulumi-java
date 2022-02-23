@@ -23,7 +23,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -34,7 +34,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
      * 
      */
     @InputImport(name="thumbprint")
-        private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;

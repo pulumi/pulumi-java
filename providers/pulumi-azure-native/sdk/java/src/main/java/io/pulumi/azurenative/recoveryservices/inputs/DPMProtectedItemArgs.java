@@ -30,7 +30,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backupEngineName")
-        private final @Nullable Input<String> backupEngineName;
+      private final @Nullable Input<String> backupEngineName;
 
     public Input<String> getBackupEngineName() {
         return this.backupEngineName == null ? Input.empty() : this.backupEngineName;
@@ -41,7 +41,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -52,7 +52,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backupSetName")
-        private final @Nullable Input<String> backupSetName;
+      private final @Nullable Input<String> backupSetName;
 
     public Input<String> getBackupSetName() {
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
@@ -63,7 +63,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="containerName")
-        private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -74,7 +74,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createMode")
-        private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -85,7 +85,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-        private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
     public Input<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
@@ -96,7 +96,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-        private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
     public Input<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
@@ -107,7 +107,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedInfo")
-        private final @Nullable Input<DPMProtectedItemExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<DPMProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Input<DPMProtectedItemExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -118,7 +118,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -129,7 +129,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-        private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
@@ -140,7 +140,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="isRehydrate")
-        private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Input<Boolean> isRehydrate;
 
     public Input<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
@@ -151,7 +151,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-        private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
     public Input<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
@@ -162,7 +162,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-        private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Input<String> lastRecoveryPoint;
 
     public Input<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
@@ -173,7 +173,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -185,7 +185,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-        private final Input<String> protectedItemType;
+      private final Input<String> protectedItemType;
 
     public Input<String> getProtectedItemType() {
         return this.protectedItemType;
@@ -196,7 +196,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectionState")
-        private final @Nullable Input<Either<String,ProtectedItemState>> protectionState;
+      private final @Nullable Input<Either<String,ProtectedItemState>> protectionState;
 
     public Input<Either<String,ProtectedItemState>> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -207,7 +207,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -218,7 +218,7 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workloadType")
-        private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 
     public Input<Either<String,DataSourceType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;

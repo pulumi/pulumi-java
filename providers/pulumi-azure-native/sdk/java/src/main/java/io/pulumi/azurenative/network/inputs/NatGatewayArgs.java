@@ -28,7 +28,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -39,7 +39,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -50,7 +50,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -61,7 +61,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpAddresses")
-        private final @Nullable Input<List<SubResourceArgs>> publicIpAddresses;
+      private final @Nullable Input<List<SubResourceArgs>> publicIpAddresses;
 
     public Input<List<SubResourceArgs>> getPublicIpAddresses() {
         return this.publicIpAddresses == null ? Input.empty() : this.publicIpAddresses;
@@ -72,7 +72,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpPrefixes")
-        private final @Nullable Input<List<SubResourceArgs>> publicIpPrefixes;
+      private final @Nullable Input<List<SubResourceArgs>> publicIpPrefixes;
 
     public Input<List<SubResourceArgs>> getPublicIpPrefixes() {
         return this.publicIpPrefixes == null ? Input.empty() : this.publicIpPrefixes;
@@ -83,7 +83,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<NatGatewaySkuArgs> sku;
+      private final @Nullable Input<NatGatewaySkuArgs> sku;
 
     public Input<NatGatewaySkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -94,7 +94,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -105,7 +105,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

@@ -18,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="cryptoKeyName", required=true)
-        private final Input<String> cryptoKeyName;
+      private final Input<String> cryptoKeyName;
 
     public Input<String> getCryptoKeyName() {
         return this.cryptoKeyName;
@@ -30,7 +30,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="wrappedKey", required=true)
-        private final Input<String> wrappedKey;
+      private final Input<String> wrappedKey;
 
     public Input<String> getWrappedKey() {
         return this.wrappedKey;

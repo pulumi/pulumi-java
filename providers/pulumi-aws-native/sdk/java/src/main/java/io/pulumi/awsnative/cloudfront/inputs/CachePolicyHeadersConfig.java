@@ -16,14 +16,14 @@ public final class CachePolicyHeadersConfig extends io.pulumi.resources.InvokeAr
     public static final CachePolicyHeadersConfig Empty = new CachePolicyHeadersConfig();
 
     @InputImport(name="headerBehavior", required=true)
-        private final String headerBehavior;
+      private final String headerBehavior;
 
     public String getHeaderBehavior() {
         return this.headerBehavior;
     }
 
     @InputImport(name="headers")
-        private final @Nullable List<String> headers;
+      private final @Nullable List<String> headers;
 
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;

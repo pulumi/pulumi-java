@@ -23,7 +23,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;

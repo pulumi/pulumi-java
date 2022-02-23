@@ -22,7 +22,7 @@ public final class WorkspaceCustomBooleanParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -33,7 +33,7 @@ public final class WorkspaceCustomBooleanParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="value", required=true)
-        private final Boolean value;
+      private final Boolean value;
 
     public Boolean getValue() {
         return this.value;

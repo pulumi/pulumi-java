@@ -23,7 +23,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="delete")
-        private final @Nullable Input<DateAfterCreationArgs> delete;
+      private final @Nullable Input<DateAfterCreationArgs> delete;
 
     public Input<DateAfterCreationArgs> getDelete() {
         return this.delete == null ? Input.empty() : this.delete;
@@ -34,7 +34,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToArchive")
-        private final @Nullable Input<DateAfterCreationArgs> tierToArchive;
+      private final @Nullable Input<DateAfterCreationArgs> tierToArchive;
 
     public Input<DateAfterCreationArgs> getTierToArchive() {
         return this.tierToArchive == null ? Input.empty() : this.tierToArchive;
@@ -45,7 +45,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToCool")
-        private final @Nullable Input<DateAfterCreationArgs> tierToCool;
+      private final @Nullable Input<DateAfterCreationArgs> tierToCool;
 
     public Input<DateAfterCreationArgs> getTierToCool() {
         return this.tierToCool == null ? Input.empty() : this.tierToCool;

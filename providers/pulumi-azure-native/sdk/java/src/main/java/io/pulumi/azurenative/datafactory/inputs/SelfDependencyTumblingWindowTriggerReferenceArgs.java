@@ -23,7 +23,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="offset", required=true)
-        private final Input<String> offset;
+      private final Input<String> offset;
 
     public Input<String> getOffset() {
         return this.offset;
@@ -34,7 +34,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="size")
-        private final @Nullable Input<String> size;
+      private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -46,7 +46,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

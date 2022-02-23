@@ -19,7 +19,7 @@ public final class PatchDeploymentRecurringScheduleWeeklyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-        private final Input<String> dayOfWeek;
+      private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;

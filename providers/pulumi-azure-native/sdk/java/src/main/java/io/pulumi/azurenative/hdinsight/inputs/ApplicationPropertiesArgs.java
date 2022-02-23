@@ -29,7 +29,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationType")
-        private final @Nullable Input<String> applicationType;
+      private final @Nullable Input<String> applicationType;
 
     public Input<String> getApplicationType() {
         return this.applicationType == null ? Input.empty() : this.applicationType;
@@ -40,7 +40,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeProfile")
-        private final @Nullable Input<ComputeProfileArgs> computeProfile;
+      private final @Nullable Input<ComputeProfileArgs> computeProfile;
 
     public Input<ComputeProfileArgs> getComputeProfile() {
         return this.computeProfile == null ? Input.empty() : this.computeProfile;
@@ -51,7 +51,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="errors")
-        private final @Nullable Input<List<ErrorsArgs>> errors;
+      private final @Nullable Input<List<ErrorsArgs>> errors;
 
     public Input<List<ErrorsArgs>> getErrors() {
         return this.errors == null ? Input.empty() : this.errors;
@@ -62,7 +62,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpsEndpoints")
-        private final @Nullable Input<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
+      private final @Nullable Input<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
 
     public Input<List<ApplicationGetHttpsEndpointArgs>> getHttpsEndpoints() {
         return this.httpsEndpoints == null ? Input.empty() : this.httpsEndpoints;
@@ -73,7 +73,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="installScriptActions")
-        private final @Nullable Input<List<RuntimeScriptActionArgs>> installScriptActions;
+      private final @Nullable Input<List<RuntimeScriptActionArgs>> installScriptActions;
 
     public Input<List<RuntimeScriptActionArgs>> getInstallScriptActions() {
         return this.installScriptActions == null ? Input.empty() : this.installScriptActions;
@@ -84,7 +84,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sshEndpoints")
-        private final @Nullable Input<List<ApplicationGetEndpointArgs>> sshEndpoints;
+      private final @Nullable Input<List<ApplicationGetEndpointArgs>> sshEndpoints;
 
     public Input<List<ApplicationGetEndpointArgs>> getSshEndpoints() {
         return this.sshEndpoints == null ? Input.empty() : this.sshEndpoints;
@@ -95,7 +95,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uninstallScriptActions")
-        private final @Nullable Input<List<RuntimeScriptActionArgs>> uninstallScriptActions;
+      private final @Nullable Input<List<RuntimeScriptActionArgs>> uninstallScriptActions;
 
     public Input<List<RuntimeScriptActionArgs>> getUninstallScriptActions() {
         return this.uninstallScriptActions == null ? Input.empty() : this.uninstallScriptActions;

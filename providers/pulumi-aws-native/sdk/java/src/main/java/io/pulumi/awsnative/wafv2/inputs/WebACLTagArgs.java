@@ -15,14 +15,14 @@ public final class WebACLTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final WebACLTagArgs Empty = new WebACLTagArgs();
 
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

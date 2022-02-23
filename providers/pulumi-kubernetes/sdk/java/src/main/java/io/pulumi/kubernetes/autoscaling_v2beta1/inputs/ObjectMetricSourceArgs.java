@@ -25,7 +25,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="averageValue")
-        private final @Nullable Input<String> averageValue;
+      private final @Nullable Input<String> averageValue;
 
     public Input<String> getAverageValue() {
         return this.averageValue == null ? Input.empty() : this.averageValue;
@@ -36,7 +36,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metricName", required=true)
-        private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -47,7 +47,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -58,7 +58,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target", required=true)
-        private final Input<CrossVersionObjectReferenceArgs> target;
+      private final Input<CrossVersionObjectReferenceArgs> target;
 
     public Input<CrossVersionObjectReferenceArgs> getTarget() {
         return this.target;
@@ -69,7 +69,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetValue", required=true)
-        private final Input<String> targetValue;
+      private final Input<String> targetValue;
 
     public Input<String> getTargetValue() {
         return this.targetValue;

@@ -24,7 +24,7 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends io.p
      * 
      */
     @InputImport(name="antiMalware")
-        private final @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
+      private final @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
 
     public Optional<ConfigurationProfilePreferenceAntiMalwareResponse> getAntiMalware() {
         return this.antiMalware == null ? Optional.empty() : Optional.ofNullable(this.antiMalware);
@@ -35,7 +35,7 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends io.p
      * 
      */
     @InputImport(name="vmBackup")
-        private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
+      private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
     public Optional<ConfigurationProfilePreferenceVmBackupResponse> getVmBackup() {
         return this.vmBackup == null ? Optional.empty() : Optional.ofNullable(this.vmBackup);

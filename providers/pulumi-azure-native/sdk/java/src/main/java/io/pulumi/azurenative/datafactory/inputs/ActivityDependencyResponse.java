@@ -22,7 +22,7 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="activity", required=true)
-        private final String activity;
+      private final String activity;
 
     public String getActivity() {
         return this.activity;
@@ -33,7 +33,7 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dependencyConditions", required=true)
-        private final List<String> dependencyConditions;
+      private final List<String> dependencyConditions;
 
     public List<String> getDependencyConditions() {
         return this.dependencyConditions;

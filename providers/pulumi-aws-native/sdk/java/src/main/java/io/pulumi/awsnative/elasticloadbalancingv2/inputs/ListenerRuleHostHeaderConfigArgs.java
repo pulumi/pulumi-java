@@ -16,7 +16,7 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
     public static final ListenerRuleHostHeaderConfigArgs Empty = new ListenerRuleHostHeaderConfigArgs();
 
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

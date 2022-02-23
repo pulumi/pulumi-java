@@ -24,7 +24,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fsType")
-        private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -35,7 +35,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -46,7 +46,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="volumeID", required=true)
-        private final Input<String> volumeID;
+      private final Input<String> volumeID;
 
     public Input<String> getVolumeID() {
         return this.volumeID;

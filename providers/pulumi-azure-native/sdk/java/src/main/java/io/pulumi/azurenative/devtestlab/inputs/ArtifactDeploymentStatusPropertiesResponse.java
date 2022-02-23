@@ -24,7 +24,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="artifactsApplied")
-        private final @Nullable Integer artifactsApplied;
+      private final @Nullable Integer artifactsApplied;
 
     public Optional<Integer> getArtifactsApplied() {
         return this.artifactsApplied == null ? Optional.empty() : Optional.ofNullable(this.artifactsApplied);
@@ -35,7 +35,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="deploymentStatus")
-        private final @Nullable String deploymentStatus;
+      private final @Nullable String deploymentStatus;
 
     public Optional<String> getDeploymentStatus() {
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
@@ -46,7 +46,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="totalArtifacts")
-        private final @Nullable Integer totalArtifacts;
+      private final @Nullable Integer totalArtifacts;
 
     public Optional<Integer> getTotalArtifacts() {
         return this.totalArtifacts == null ? Optional.empty() : Optional.ofNullable(this.totalArtifacts);

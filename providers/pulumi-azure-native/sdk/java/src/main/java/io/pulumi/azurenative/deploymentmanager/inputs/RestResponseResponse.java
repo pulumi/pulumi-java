@@ -25,7 +25,7 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regex")
-        private final @Nullable RestResponseResponseRegex regex;
+      private final @Nullable RestResponseResponseRegex regex;
 
     public Optional<RestResponseResponseRegex> getRegex() {
         return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
@@ -36,7 +36,7 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="successStatusCodes")
-        private final @Nullable List<String> successStatusCodes;
+      private final @Nullable List<String> successStatusCodes;
 
     public List<String> getSuccessStatusCodes() {
         return this.successStatusCodes == null ? List.of() : this.successStatusCodes;

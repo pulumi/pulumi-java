@@ -27,7 +27,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,FactoryIdentityType>> type;
+      private final Input<Either<String,FactoryIdentityType>> type;
 
     public Input<Either<String,FactoryIdentityType>> getType() {
         return this.type;
@@ -38,7 +38,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;

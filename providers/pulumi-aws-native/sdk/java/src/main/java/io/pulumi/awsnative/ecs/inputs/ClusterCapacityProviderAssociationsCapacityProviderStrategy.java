@@ -18,21 +18,21 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy e
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategy Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategy();
 
     @InputImport(name="base")
-        private final @Nullable Integer base;
+      private final @Nullable Integer base;
 
     public Optional<Integer> getBase() {
         return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
     }
 
     @InputImport(name="capacityProvider", required=true)
-        private final Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
+      private final Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
 
     public Either<ClusterCapacityProviderAssociationsCapacityProvider,String> getCapacityProvider() {
         return this.capacityProvider;
     }
 
     @InputImport(name="weight")
-        private final @Nullable Integer weight;
+      private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);

@@ -23,7 +23,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="issuerCertificateThumbprint")
-        private final @Nullable Input<String> issuerCertificateThumbprint;
+      private final @Nullable Input<String> issuerCertificateThumbprint;
 
     public Input<String> getIssuerCertificateThumbprint() {
         return this.issuerCertificateThumbprint == null ? Input.empty() : this.issuerCertificateThumbprint;
@@ -34,7 +34,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

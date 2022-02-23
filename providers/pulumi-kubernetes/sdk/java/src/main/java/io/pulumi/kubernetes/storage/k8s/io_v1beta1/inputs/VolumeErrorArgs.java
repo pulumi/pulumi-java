@@ -23,7 +23,7 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -34,7 +34,7 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-        private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;

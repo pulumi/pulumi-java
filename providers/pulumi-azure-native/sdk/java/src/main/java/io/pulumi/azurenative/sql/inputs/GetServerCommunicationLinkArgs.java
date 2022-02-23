@@ -17,7 +17,7 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="communicationLinkName", required=true)
-        private final String communicationLinkName;
+      private final String communicationLinkName;
 
     public String getCommunicationLinkName() {
         return this.communicationLinkName;
@@ -28,7 +28,7 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

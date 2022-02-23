@@ -23,7 +23,7 @@ public final class ApiPortalCustomDomainPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="thumbprint")
-        private final @Nullable String thumbprint;
+      private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);

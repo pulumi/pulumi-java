@@ -13,7 +13,7 @@ public final class GetEnvironmentConfigWebServerConfig extends io.pulumi.resourc
     public static final GetEnvironmentConfigWebServerConfig Empty = new GetEnvironmentConfigWebServerConfig();
 
     @InputImport(name="machineType", required=true)
-        private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;

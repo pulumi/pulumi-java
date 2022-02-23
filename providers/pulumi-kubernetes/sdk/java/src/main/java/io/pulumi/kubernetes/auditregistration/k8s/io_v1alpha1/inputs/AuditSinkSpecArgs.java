@@ -23,7 +23,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-        private final Input<PolicyArgs> policy;
+      private final Input<PolicyArgs> policy;
 
     public Input<PolicyArgs> getPolicy() {
         return this.policy;
@@ -34,7 +34,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhook", required=true)
-        private final Input<WebhookArgs> webhook;
+      private final Input<WebhookArgs> webhook;
 
     public Input<WebhookArgs> getWebhook() {
         return this.webhook;

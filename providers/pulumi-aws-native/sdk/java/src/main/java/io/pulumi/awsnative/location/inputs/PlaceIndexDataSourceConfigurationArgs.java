@@ -15,7 +15,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     public static final PlaceIndexDataSourceConfigurationArgs Empty = new PlaceIndexDataSourceConfigurationArgs();
 
     @InputImport(name="intendedUse")
-        private final @Nullable Input<PlaceIndexIntendedUse> intendedUse;
+      private final @Nullable Input<PlaceIndexIntendedUse> intendedUse;
 
     public Input<PlaceIndexIntendedUse> getIntendedUse() {
         return this.intendedUse == null ? Input.empty() : this.intendedUse;

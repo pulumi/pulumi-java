@@ -34,7 +34,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowHostNameCNMismatch")
-        private final @Nullable Input<Object> allowHostNameCNMismatch;
+      private final @Nullable Input<Object> allowHostNameCNMismatch;
 
     public Input<Object> getAllowHostNameCNMismatch() {
         return this.allowHostNameCNMismatch == null ? Input.empty() : this.allowHostNameCNMismatch;
@@ -45,7 +45,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowSelfSignedServerCert")
-        private final @Nullable Input<Object> allowSelfSignedServerCert;
+      private final @Nullable Input<Object> allowSelfSignedServerCert;
 
     public Input<Object> getAllowSelfSignedServerCert() {
         return this.allowSelfSignedServerCert == null ? Input.empty() : this.allowSelfSignedServerCert;
@@ -56,7 +56,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -67,7 +67,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<Either<String,SparkAuthenticationType>> authenticationType;
+      private final Input<Either<String,SparkAuthenticationType>> authenticationType;
 
     public Input<Either<String,SparkAuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
@@ -78,7 +78,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -89,7 +89,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -100,7 +100,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableSsl")
-        private final @Nullable Input<Object> enableSsl;
+      private final @Nullable Input<Object> enableSsl;
 
     public Input<Object> getEnableSsl() {
         return this.enableSsl == null ? Input.empty() : this.enableSsl;
@@ -111,7 +111,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -122,7 +122,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="host", required=true)
-        private final Input<Object> host;
+      private final Input<Object> host;
 
     public Input<Object> getHost() {
         return this.host;
@@ -133,7 +133,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpPath")
-        private final @Nullable Input<Object> httpPath;
+      private final @Nullable Input<Object> httpPath;
 
     public Input<Object> getHttpPath() {
         return this.httpPath == null ? Input.empty() : this.httpPath;
@@ -144,7 +144,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -155,7 +155,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -166,7 +166,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Object> port;
+      private final Input<Object> port;
 
     public Input<Object> getPort() {
         return this.port;
@@ -177,7 +177,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverType")
-        private final @Nullable Input<Either<String,SparkServerType>> serverType;
+      private final @Nullable Input<Either<String,SparkServerType>> serverType;
 
     public Input<Either<String,SparkServerType>> getServerType() {
         return this.serverType == null ? Input.empty() : this.serverType;
@@ -188,7 +188,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="thriftTransportProtocol")
-        private final @Nullable Input<Either<String,SparkThriftTransportProtocol>> thriftTransportProtocol;
+      private final @Nullable Input<Either<String,SparkThriftTransportProtocol>> thriftTransportProtocol;
 
     public Input<Either<String,SparkThriftTransportProtocol>> getThriftTransportProtocol() {
         return this.thriftTransportProtocol == null ? Input.empty() : this.thriftTransportProtocol;
@@ -199,7 +199,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="trustedCertPath")
-        private final @Nullable Input<Object> trustedCertPath;
+      private final @Nullable Input<Object> trustedCertPath;
 
     public Input<Object> getTrustedCertPath() {
         return this.trustedCertPath == null ? Input.empty() : this.trustedCertPath;
@@ -211,7 +211,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -222,7 +222,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="useSystemTrustStore")
-        private final @Nullable Input<Object> useSystemTrustStore;
+      private final @Nullable Input<Object> useSystemTrustStore;
 
     public Input<Object> getUseSystemTrustStore() {
         return this.useSystemTrustStore == null ? Input.empty() : this.useSystemTrustStore;
@@ -233,7 +233,7 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;

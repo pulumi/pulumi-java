@@ -25,7 +25,7 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days")
-        private final @Nullable Input<List<DaysOfWeek>> days;
+      private final @Nullable Input<List<DaysOfWeek>> days;
 
     public Input<List<DaysOfWeek>> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -36,7 +36,7 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeAndCapacity")
-        private final @Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
+      private final @Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
     public Input<AutoscaleTimeAndCapacityArgs> getTimeAndCapacity() {
         return this.timeAndCapacity == null ? Input.empty() : this.timeAndCapacity;

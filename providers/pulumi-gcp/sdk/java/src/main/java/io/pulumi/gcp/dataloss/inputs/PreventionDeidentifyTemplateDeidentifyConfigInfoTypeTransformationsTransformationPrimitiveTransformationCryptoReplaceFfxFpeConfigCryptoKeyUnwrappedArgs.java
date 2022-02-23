@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;

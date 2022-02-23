@@ -19,7 +19,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessKeyName")
-        private final @Nullable Input<String> accessKeyName;
+      private final @Nullable Input<String> accessKeyName;
 
     public Input<String> getAccessKeyName() {
         return this.accessKeyName == null ? Input.empty() : this.accessKeyName;
@@ -30,7 +30,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -41,7 +41,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notAfter")
-        private final @Nullable Input<String> notAfter;
+      private final @Nullable Input<String> notAfter;
 
     public Input<String> getNotAfter() {
         return this.notAfter == null ? Input.empty() : this.notAfter;
@@ -52,7 +52,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notBefore")
-        private final @Nullable Input<String> notBefore;
+      private final @Nullable Input<String> notBefore;
 
     public Input<String> getNotBefore() {
         return this.notBefore == null ? Input.empty() : this.notBefore;
@@ -63,7 +63,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workflowName", required=true)
-        private final Input<String> workflowName;
+      private final Input<String> workflowName;
 
     public Input<String> getWorkflowName() {
         return this.workflowName;

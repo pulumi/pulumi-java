@@ -17,7 +17,7 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
      * 
      */
     @InputImport(name="eventSubscriptionName", required=true)
-        private final String eventSubscriptionName;
+      private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
      * 
      */
     @InputImport(name="partnerTopicName", required=true)
-        private final String partnerTopicName;
+      private final String partnerTopicName;
 
     public String getPartnerTopicName() {
         return this.partnerTopicName;
@@ -39,7 +39,7 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

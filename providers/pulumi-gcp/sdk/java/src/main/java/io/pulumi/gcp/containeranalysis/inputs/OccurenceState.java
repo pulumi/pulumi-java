@@ -28,7 +28,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-        private final @Nullable Input<OccurenceAttestationGetArgs> attestation;
+      private final @Nullable Input<OccurenceAttestationGetArgs> attestation;
 
     public Input<OccurenceAttestationGetArgs> getAttestation() {
         return this.attestation == null ? Input.empty() : this.attestation;
@@ -39,7 +39,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -51,7 +51,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -62,7 +62,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName")
-        private final @Nullable Input<String> noteName;
+      private final @Nullable Input<String> noteName;
 
     public Input<String> getNoteName() {
         return this.noteName == null ? Input.empty() : this.noteName;
@@ -87,7 +87,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -98,7 +98,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-        private final @Nullable Input<String> remediation;
+      private final @Nullable Input<String> remediation;
 
     public Input<String> getRemediation() {
         return this.remediation == null ? Input.empty() : this.remediation;
@@ -111,7 +111,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-        private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -122,7 +122,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

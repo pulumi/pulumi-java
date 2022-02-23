@@ -26,7 +26,7 @@ public final class ThemeDataColorPalette extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="colors")
-        private final @Nullable List<String> colors;
+      private final @Nullable List<String> colors;
 
     public List<String> getColors() {
         return this.colors == null ? List.of() : this.colors;
@@ -38,7 +38,7 @@ public final class ThemeDataColorPalette extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="emptyFillColor")
-        private final @Nullable String emptyFillColor;
+      private final @Nullable String emptyFillColor;
 
     public Optional<String> getEmptyFillColor() {
         return this.emptyFillColor == null ? Optional.empty() : Optional.ofNullable(this.emptyFillColor);
@@ -49,7 +49,7 @@ public final class ThemeDataColorPalette extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="minMaxGradient")
-        private final @Nullable List<String> minMaxGradient;
+      private final @Nullable List<String> minMaxGradient;
 
     public List<String> getMinMaxGradient() {
         return this.minMaxGradient == null ? List.of() : this.minMaxGradient;

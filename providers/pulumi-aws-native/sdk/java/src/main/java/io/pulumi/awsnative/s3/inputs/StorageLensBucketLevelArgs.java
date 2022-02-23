@@ -20,14 +20,14 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     public static final StorageLensBucketLevelArgs Empty = new StorageLensBucketLevelArgs();
 
     @InputImport(name="activityMetrics")
-        private final @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
+      private final @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
 
     public Input<StorageLensActivityMetricsArgs> getActivityMetrics() {
         return this.activityMetrics == null ? Input.empty() : this.activityMetrics;
     }
 
     @InputImport(name="prefixLevel")
-        private final @Nullable Input<StorageLensPrefixLevelArgs> prefixLevel;
+      private final @Nullable Input<StorageLensPrefixLevelArgs> prefixLevel;
 
     public Input<StorageLensPrefixLevelArgs> getPrefixLevel() {
         return this.prefixLevel == null ? Input.empty() : this.prefixLevel;

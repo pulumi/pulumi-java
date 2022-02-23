@@ -22,7 +22,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -34,7 +34,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -45,7 +45,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

@@ -25,7 +25,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiGroups", required=true)
-        private final Input<List<String>> apiGroups;
+      private final Input<List<String>> apiGroups;
 
     public Input<List<String>> getApiGroups() {
         return this.apiGroups;
@@ -36,7 +36,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterScope")
-        private final @Nullable Input<Boolean> clusterScope;
+      private final @Nullable Input<Boolean> clusterScope;
 
     public Input<Boolean> getClusterScope() {
         return this.clusterScope == null ? Input.empty() : this.clusterScope;
@@ -47,7 +47,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespaces")
-        private final @Nullable Input<List<String>> namespaces;
+      private final @Nullable Input<List<String>> namespaces;
 
     public Input<List<String>> getNamespaces() {
         return this.namespaces == null ? Input.empty() : this.namespaces;
@@ -58,7 +58,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resources", required=true)
-        private final Input<List<String>> resources;
+      private final Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources;
@@ -69,7 +69,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verbs", required=true)
-        private final Input<List<String>> verbs;
+      private final Input<List<String>> verbs;
 
     public Input<List<String>> getVerbs() {
         return this.verbs;

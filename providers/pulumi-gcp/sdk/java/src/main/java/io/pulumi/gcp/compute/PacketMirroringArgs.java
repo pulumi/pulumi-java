@@ -28,7 +28,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collectorIlb", required=true)
-        private final Input<PacketMirroringCollectorIlbArgs> collectorIlb;
+      private final Input<PacketMirroringCollectorIlbArgs> collectorIlb;
 
     public Input<PacketMirroringCollectorIlbArgs> getCollectorIlb() {
         return this.collectorIlb;
@@ -39,7 +39,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<PacketMirroringFilterArgs> filter;
+      private final @Nullable Input<PacketMirroringFilterArgs> filter;
 
     public Input<PacketMirroringFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -63,7 +63,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mirroredResources", required=true)
-        private final Input<PacketMirroringMirroredResourcesArgs> mirroredResources;
+      private final Input<PacketMirroringMirroredResourcesArgs> mirroredResources;
 
     public Input<PacketMirroringMirroredResourcesArgs> getMirroredResources() {
         return this.mirroredResources;
@@ -74,7 +74,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="network", required=true)
-        private final Input<PacketMirroringNetworkArgs> network;
+      private final Input<PacketMirroringNetworkArgs> network;
 
     public Input<PacketMirroringNetworkArgs> getNetwork() {
         return this.network;
@@ -101,7 +101,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -113,7 +113,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -125,7 +125,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;

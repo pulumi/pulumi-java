@@ -26,7 +26,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -39,7 +39,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isAutoProvisioned")
-        private final @Nullable Input<Boolean> isAutoProvisioned;
+      private final @Nullable Input<Boolean> isAutoProvisioned;
 
     public Input<Boolean> getIsAutoProvisioned() {
         return this.isAutoProvisioned == null ? Input.empty() : this.isAutoProvisioned;
@@ -50,7 +50,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="login")
-        private final @Nullable Input<AzureActiveDirectoryLoginArgs> login;
+      private final @Nullable Input<AzureActiveDirectoryLoginArgs> login;
 
     public Input<AzureActiveDirectoryLoginArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -61,7 +61,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="registration")
-        private final @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration;
+      private final @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration;
 
     public Input<AzureActiveDirectoryRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;
@@ -72,7 +72,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validation")
-        private final @Nullable Input<AzureActiveDirectoryValidationArgs> validation;
+      private final @Nullable Input<AzureActiveDirectoryValidationArgs> validation;
 
     public Input<AzureActiveDirectoryValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;

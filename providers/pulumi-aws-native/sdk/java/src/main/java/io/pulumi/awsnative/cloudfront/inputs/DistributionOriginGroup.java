@@ -15,21 +15,21 @@ public final class DistributionOriginGroup extends io.pulumi.resources.InvokeArg
     public static final DistributionOriginGroup Empty = new DistributionOriginGroup();
 
     @InputImport(name="failoverCriteria", required=true)
-        private final DistributionOriginGroupFailoverCriteria failoverCriteria;
+      private final DistributionOriginGroupFailoverCriteria failoverCriteria;
 
     public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {
         return this.failoverCriteria;
     }
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="members", required=true)
-        private final DistributionOriginGroupMembers members;
+      private final DistributionOriginGroupMembers members;
 
     public DistributionOriginGroupMembers getMembers() {
         return this.members;

@@ -17,7 +17,7 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reportName", required=true)
-        private final String reportName;
+      private final String reportName;
 
     public String getReportName() {
         return this.reportName;
@@ -28,7 +28,7 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

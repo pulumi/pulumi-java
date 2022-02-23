@@ -23,7 +23,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appId")
-        private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -34,7 +34,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appSecretSettingName")
-        private final @Nullable Input<String> appSecretSettingName;
+      private final @Nullable Input<String> appSecretSettingName;
 
     public Input<String> getAppSecretSettingName() {
         return this.appSecretSettingName == null ? Input.empty() : this.appSecretSettingName;

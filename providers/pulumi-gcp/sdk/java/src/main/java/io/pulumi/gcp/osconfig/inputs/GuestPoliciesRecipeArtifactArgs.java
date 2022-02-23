@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowInsecure")
-        private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -36,7 +36,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gcs")
-        private final @Nullable Input<GuestPoliciesRecipeArtifactGcsArgs> gcs;
+      private final @Nullable Input<GuestPoliciesRecipeArtifactGcsArgs> gcs;
 
     public Input<GuestPoliciesRecipeArtifactGcsArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -48,7 +48,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -60,7 +60,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="remote")
-        private final @Nullable Input<GuestPoliciesRecipeArtifactRemoteArgs> remote;
+      private final @Nullable Input<GuestPoliciesRecipeArtifactRemoteArgs> remote;
 
     public Input<GuestPoliciesRecipeArtifactRemoteArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;

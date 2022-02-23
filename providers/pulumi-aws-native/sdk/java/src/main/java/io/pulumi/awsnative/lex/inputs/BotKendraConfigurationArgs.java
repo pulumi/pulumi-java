@@ -20,14 +20,14 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     public static final BotKendraConfigurationArgs Empty = new BotKendraConfigurationArgs();
 
     @InputImport(name="kendraIndex", required=true)
-        private final Input<String> kendraIndex;
+      private final Input<String> kendraIndex;
 
     public Input<String> getKendraIndex() {
         return this.kendraIndex;
     }
 
     @InputImport(name="queryFilterString")
-        private final @Nullable Input<String> queryFilterString;
+      private final @Nullable Input<String> queryFilterString;
 
     public Input<String> getQueryFilterString() {
         return this.queryFilterString == null ? Input.empty() : this.queryFilterString;
@@ -38,7 +38,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="queryFilterStringEnabled")
-        private final @Nullable Input<Boolean> queryFilterStringEnabled;
+      private final @Nullable Input<Boolean> queryFilterStringEnabled;
 
     public Input<Boolean> getQueryFilterStringEnabled() {
         return this.queryFilterStringEnabled == null ? Input.empty() : this.queryFilterStringEnabled;

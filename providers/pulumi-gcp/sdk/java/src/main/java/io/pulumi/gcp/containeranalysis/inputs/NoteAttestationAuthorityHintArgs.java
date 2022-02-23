@@ -19,7 +19,7 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-        private final Input<String> humanReadableName;
+      private final Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName;

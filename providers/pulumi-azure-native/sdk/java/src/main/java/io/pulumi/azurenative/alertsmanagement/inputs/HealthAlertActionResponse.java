@@ -24,7 +24,7 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="actionGroupId")
-        private final @Nullable String actionGroupId;
+      private final @Nullable String actionGroupId;
 
     public Optional<String> getActionGroupId() {
         return this.actionGroupId == null ? Optional.empty() : Optional.ofNullable(this.actionGroupId);
@@ -35,7 +35,7 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="webHookProperties")
-        private final @Nullable Map<String,String> webHookProperties;
+      private final @Nullable Map<String,String> webHookProperties;
 
     public Map<String,String> getWebHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;

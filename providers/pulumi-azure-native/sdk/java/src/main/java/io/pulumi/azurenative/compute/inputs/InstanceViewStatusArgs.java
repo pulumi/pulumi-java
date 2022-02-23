@@ -24,7 +24,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="code")
-        private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -35,7 +35,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayStatus")
-        private final @Nullable Input<String> displayStatus;
+      private final @Nullable Input<String> displayStatus;
 
     public Input<String> getDisplayStatus() {
         return this.displayStatus == null ? Input.empty() : this.displayStatus;
@@ -46,7 +46,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="level")
-        private final @Nullable Input<StatusLevelTypes> level;
+      private final @Nullable Input<StatusLevelTypes> level;
 
     public Input<StatusLevelTypes> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -57,7 +57,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -68,7 +68,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="time")
-        private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;

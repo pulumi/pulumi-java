@@ -24,7 +24,7 @@ public final class ExportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="configuration")
-        private final @Nullable ExportDatasetConfigurationResponse configuration;
+      private final @Nullable ExportDatasetConfigurationResponse configuration;
 
     public Optional<ExportDatasetConfigurationResponse> getConfiguration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
@@ -35,7 +35,7 @@ public final class ExportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="granularity")
-        private final @Nullable String granularity;
+      private final @Nullable String granularity;
 
     public Optional<String> getGranularity() {
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);

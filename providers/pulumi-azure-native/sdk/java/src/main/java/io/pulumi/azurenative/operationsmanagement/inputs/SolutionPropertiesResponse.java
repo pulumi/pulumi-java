@@ -24,7 +24,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="containedResources")
-        private final @Nullable List<String> containedResources;
+      private final @Nullable List<String> containedResources;
 
     public List<String> getContainedResources() {
         return this.containedResources == null ? List.of() : this.containedResources;
@@ -35,7 +35,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -46,7 +46,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="referencedResources")
-        private final @Nullable List<String> referencedResources;
+      private final @Nullable List<String> referencedResources;
 
     public List<String> getReferencedResources() {
         return this.referencedResources == null ? List.of() : this.referencedResources;
@@ -57,7 +57,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="workspaceResourceId", required=true)
-        private final String workspaceResourceId;
+      private final String workspaceResourceId;
 
     public String getWorkspaceResourceId() {
         return this.workspaceResourceId;

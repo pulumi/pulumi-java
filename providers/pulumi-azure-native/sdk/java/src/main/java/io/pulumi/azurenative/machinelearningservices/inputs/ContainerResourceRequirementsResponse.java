@@ -25,7 +25,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpu")
-        private final @Nullable Double cpu;
+      private final @Nullable Double cpu;
 
     public Optional<Double> getCpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
@@ -37,7 +37,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpuLimit")
-        private final @Nullable Double cpuLimit;
+      private final @Nullable Double cpuLimit;
 
     public Optional<Double> getCpuLimit() {
         return this.cpuLimit == null ? Optional.empty() : Optional.ofNullable(this.cpuLimit);
@@ -48,7 +48,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="fpga")
-        private final @Nullable Integer fpga;
+      private final @Nullable Integer fpga;
 
     public Optional<Integer> getFpga() {
         return this.fpga == null ? Optional.empty() : Optional.ofNullable(this.fpga);
@@ -59,7 +59,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="gpu")
-        private final @Nullable Integer gpu;
+      private final @Nullable Integer gpu;
 
     public Optional<Integer> getGpu() {
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
@@ -71,7 +71,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="memoryInGB")
-        private final @Nullable Double memoryInGB;
+      private final @Nullable Double memoryInGB;
 
     public Optional<Double> getMemoryInGB() {
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
@@ -83,7 +83,7 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="memoryInGBLimit")
-        private final @Nullable Double memoryInGBLimit;
+      private final @Nullable Double memoryInGBLimit;
 
     public Optional<Double> getMemoryInGBLimit() {
         return this.memoryInGBLimit == null ? Optional.empty() : Optional.ofNullable(this.memoryInGBLimit);

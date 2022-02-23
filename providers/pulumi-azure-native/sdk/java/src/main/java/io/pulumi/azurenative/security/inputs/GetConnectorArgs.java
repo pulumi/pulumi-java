@@ -17,7 +17,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectorName", required=true)
-        private final String connectorName;
+      private final String connectorName;
 
     public String getConnectorName() {
         return this.connectorName;

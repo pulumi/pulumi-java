@@ -20,7 +20,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="communicationServiceName")
-        private final @Nullable Input<String> communicationServiceName;
+      private final @Nullable Input<String> communicationServiceName;
 
     public Input<String> getCommunicationServiceName() {
         return this.communicationServiceName == null ? Input.empty() : this.communicationServiceName;
@@ -31,7 +31,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataLocation", required=true)
-        private final Input<String> dataLocation;
+      private final Input<String> dataLocation;
 
     public Input<String> getDataLocation() {
         return this.dataLocation;
@@ -42,7 +42,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

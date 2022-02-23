@@ -21,7 +21,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -32,7 +32,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverKeyType", required=true)
-        private final Input<Either<String,ServerKeyType>> serverKeyType;
+      private final Input<Either<String,ServerKeyType>> serverKeyType;
 
     public Input<Either<String,ServerKeyType>> getServerKeyType() {
         return this.serverKeyType;
@@ -54,7 +54,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -65,7 +65,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

@@ -24,7 +24,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuOvercommitType")
-        private final @Nullable Input<String> cpuOvercommitType;
+      private final @Nullable Input<String> cpuOvercommitType;
 
     public Input<String> getCpuOvercommitType() {
         return this.cpuOvercommitType == null ? Input.empty() : this.cpuOvercommitType;
@@ -35,7 +35,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-        private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -46,7 +46,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinityLabels")
-        private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
+      private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
 
     public Input<Map<String,String>> getNodeAffinityLabels() {
         return this.nodeAffinityLabels == null ? Input.empty() : this.nodeAffinityLabels;
@@ -81,7 +81,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType")
-        private final @Nullable Input<String> nodeType;
+      private final @Nullable Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType == null ? Input.empty() : this.nodeType;
@@ -96,7 +96,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypeFlexibility")
-        private final @Nullable Input<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
+      private final @Nullable Input<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
     public Input<NodeTemplateNodeTypeFlexibilityGetArgs> getNodeTypeFlexibility() {
         return this.nodeTypeFlexibility == null ? Input.empty() : this.nodeTypeFlexibility;
@@ -108,7 +108,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -120,7 +120,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -131,7 +131,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -144,7 +144,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverBinding")
-        private final @Nullable Input<NodeTemplateServerBindingGetArgs> serverBinding;
+      private final @Nullable Input<NodeTemplateServerBindingGetArgs> serverBinding;
 
     public Input<NodeTemplateServerBindingGetArgs> getServerBinding() {
         return this.serverBinding == null ? Input.empty() : this.serverBinding;

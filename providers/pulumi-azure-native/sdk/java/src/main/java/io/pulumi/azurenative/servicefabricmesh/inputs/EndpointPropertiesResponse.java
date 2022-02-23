@@ -24,7 +24,7 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);

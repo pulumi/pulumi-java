@@ -24,7 +24,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -35,7 +35,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * 
      */
     @InputImport(name="lastModifiedBy", required=true)
-        private final PrincipalResponse lastModifiedBy;
+      private final PrincipalResponse lastModifiedBy;
 
     public PrincipalResponse getLastModifiedBy() {
         return this.lastModifiedBy;
@@ -46,7 +46,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * 
      */
     @InputImport(name="lastModifiedDateTime")
-        private final @Nullable String lastModifiedDateTime;
+      private final @Nullable String lastModifiedDateTime;
 
     public Optional<String> getLastModifiedDateTime() {
         return this.lastModifiedDateTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedDateTime);

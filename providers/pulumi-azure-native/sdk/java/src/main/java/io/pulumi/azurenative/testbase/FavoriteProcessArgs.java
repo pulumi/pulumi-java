@@ -19,7 +19,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actualProcessName", required=true)
-        private final Input<String> actualProcessName;
+      private final Input<String> actualProcessName;
 
     public Input<String> getActualProcessName() {
         return this.actualProcessName;
@@ -30,7 +30,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="favoriteProcessResourceName")
-        private final @Nullable Input<String> favoriteProcessResourceName;
+      private final @Nullable Input<String> favoriteProcessResourceName;
 
     public Input<String> getFavoriteProcessResourceName() {
         return this.favoriteProcessResourceName == null ? Input.empty() : this.favoriteProcessResourceName;
@@ -41,7 +41,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="packageName", required=true)
-        private final Input<String> packageName;
+      private final Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName;
@@ -52,7 +52,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-        private final Input<String> testBaseAccountName;
+      private final Input<String> testBaseAccountName;
 
     public Input<String> getTestBaseAccountName() {
         return this.testBaseAccountName;

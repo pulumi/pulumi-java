@@ -23,7 +23,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;

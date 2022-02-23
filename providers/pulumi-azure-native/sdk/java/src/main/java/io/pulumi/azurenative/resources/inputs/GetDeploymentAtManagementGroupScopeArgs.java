@@ -17,7 +17,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deploymentName", required=true)
-        private final String deploymentName;
+      private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -28,7 +28,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupId", required=true)
-        private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;

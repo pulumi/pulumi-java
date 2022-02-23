@@ -15,14 +15,14 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequestArgs extends io.pulum
     public static final SpotFleetBaselineEbsBandwidthMbpsRequestArgs Empty = new SpotFleetBaselineEbsBandwidthMbpsRequestArgs();
 
     @InputImport(name="max")
-        private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-        private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;

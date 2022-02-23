@@ -22,7 +22,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * 
      */
     @InputImport(name="subnetId", required=true)
-        private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

@@ -32,7 +32,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableNodePublicIp")
-        private final @Nullable Input<Boolean> enableNodePublicIp;
+      private final @Nullable Input<Boolean> enableNodePublicIp;
 
     public Input<Boolean> getEnableNodePublicIp() {
         return this.enableNodePublicIp == null ? Input.empty() : this.enableNodePublicIp;
@@ -43,7 +43,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isolatedNetwork")
-        private final @Nullable Input<Boolean> isolatedNetwork;
+      private final @Nullable Input<Boolean> isolatedNetwork;
 
     public Input<Boolean> getIsolatedNetwork() {
         return this.isolatedNetwork == null ? Input.empty() : this.isolatedNetwork;
@@ -54,7 +54,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Input<Either<String,OsType>> osType;
 
     public Input<Either<String,OsType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -65,7 +65,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="remoteLoginPortPublicAccess")
-        private final @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
+      private final @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
     public Input<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
         return this.remoteLoginPortPublicAccess == null ? Input.empty() : this.remoteLoginPortPublicAccess;
@@ -76,7 +76,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scaleSettings")
-        private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
+      private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
 
     public Input<ScaleSettingsArgs> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
@@ -87,7 +87,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<ResourceIdArgs> subnet;
+      private final @Nullable Input<ResourceIdArgs> subnet;
 
     public Input<ResourceIdArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -98,7 +98,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userAccountCredentials")
-        private final @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials;
+      private final @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials;
 
     public Input<UserAccountCredentialsArgs> getUserAccountCredentials() {
         return this.userAccountCredentials == null ? Input.empty() : this.userAccountCredentials;
@@ -109,7 +109,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualMachineImage")
-        private final @Nullable Input<VirtualMachineImageArgs> virtualMachineImage;
+      private final @Nullable Input<VirtualMachineImageArgs> virtualMachineImage;
 
     public Input<VirtualMachineImageArgs> getVirtualMachineImage() {
         return this.virtualMachineImage == null ? Input.empty() : this.virtualMachineImage;
@@ -120,7 +120,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmPriority")
-        private final @Nullable Input<Either<String,VmPriority>> vmPriority;
+      private final @Nullable Input<Either<String,VmPriority>> vmPriority;
 
     public Input<Either<String,VmPriority>> getVmPriority() {
         return this.vmPriority == null ? Input.empty() : this.vmPriority;
@@ -131,7 +131,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;

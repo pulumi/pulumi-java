@@ -23,7 +23,7 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends io
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends io
      * 
      */
     @InputImport(name="publicCertData")
-        private final @Nullable String publicCertData;
+      private final @Nullable String publicCertData;
 
     public Optional<String> getPublicCertData() {
         return this.publicCertData == null ? Optional.empty() : Optional.ofNullable(this.publicCertData);

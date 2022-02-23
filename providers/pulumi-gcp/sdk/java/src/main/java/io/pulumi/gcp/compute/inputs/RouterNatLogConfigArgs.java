@@ -19,7 +19,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enable", required=true)
-        private final Input<Boolean> enable;
+      private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
@@ -31,7 +31,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter", required=true)
-        private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;

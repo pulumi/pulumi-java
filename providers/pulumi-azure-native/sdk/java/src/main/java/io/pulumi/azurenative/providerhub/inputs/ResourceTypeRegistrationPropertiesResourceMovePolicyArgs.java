@@ -15,21 +15,21 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
     public static final ResourceTypeRegistrationPropertiesResourceMovePolicyArgs Empty = new ResourceTypeRegistrationPropertiesResourceMovePolicyArgs();
 
     @InputImport(name="crossResourceGroupMoveEnabled")
-        private final @Nullable Input<Boolean> crossResourceGroupMoveEnabled;
+      private final @Nullable Input<Boolean> crossResourceGroupMoveEnabled;
 
     public Input<Boolean> getCrossResourceGroupMoveEnabled() {
         return this.crossResourceGroupMoveEnabled == null ? Input.empty() : this.crossResourceGroupMoveEnabled;
     }
 
     @InputImport(name="crossSubscriptionMoveEnabled")
-        private final @Nullable Input<Boolean> crossSubscriptionMoveEnabled;
+      private final @Nullable Input<Boolean> crossSubscriptionMoveEnabled;
 
     public Input<Boolean> getCrossSubscriptionMoveEnabled() {
         return this.crossSubscriptionMoveEnabled == null ? Input.empty() : this.crossSubscriptionMoveEnabled;
     }
 
     @InputImport(name="validationRequired")
-        private final @Nullable Input<Boolean> validationRequired;
+      private final @Nullable Input<Boolean> validationRequired;
 
     public Input<Boolean> getValidationRequired() {
         return this.validationRequired == null ? Input.empty() : this.validationRequired;

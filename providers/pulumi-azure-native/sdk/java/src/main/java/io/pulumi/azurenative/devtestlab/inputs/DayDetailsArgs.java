@@ -23,7 +23,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-        private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;

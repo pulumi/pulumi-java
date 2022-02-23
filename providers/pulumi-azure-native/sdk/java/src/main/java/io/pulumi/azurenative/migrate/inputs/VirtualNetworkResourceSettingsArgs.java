@@ -26,7 +26,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="addressSpace")
-        private final @Nullable Input<List<String>> addressSpace;
+      private final @Nullable Input<List<String>> addressSpace;
 
     public Input<List<String>> getAddressSpace() {
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
@@ -38,7 +38,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -50,7 +50,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableDdosProtection")
-        private final @Nullable Input<Boolean> enableDdosProtection;
+      private final @Nullable Input<Boolean> enableDdosProtection;
 
     public Input<Boolean> getEnableDdosProtection() {
         return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
@@ -62,7 +62,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -73,7 +73,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnets")
-        private final @Nullable Input<List<SubnetResourceSettingsArgs>> subnets;
+      private final @Nullable Input<List<SubnetResourceSettingsArgs>> subnets;
 
     public Input<List<SubnetResourceSettingsArgs>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -84,7 +84,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;

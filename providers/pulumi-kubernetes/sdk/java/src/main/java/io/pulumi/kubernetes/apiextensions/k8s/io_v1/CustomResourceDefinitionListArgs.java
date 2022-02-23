@@ -22,7 +22,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="items", required=true)
-        private final Input<List<CustomResourceDefinitionArgs>> items;
+      private final Input<List<CustomResourceDefinitionArgs>> items;
 
     public Input<List<CustomResourceDefinitionArgs>> getItems() {
         return this.items;
@@ -44,7 +44,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -55,7 +55,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;

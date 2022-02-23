@@ -24,7 +24,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConcurrentRequestsPerInstance")
-        private final @Nullable Input<Integer> maxConcurrentRequestsPerInstance;
+      private final @Nullable Input<Integer> maxConcurrentRequestsPerInstance;
 
     public Input<Integer> getMaxConcurrentRequestsPerInstance() {
         return this.maxConcurrentRequestsPerInstance == null ? Input.empty() : this.maxConcurrentRequestsPerInstance;
@@ -35,7 +35,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxQueueWait")
-        private final @Nullable Input<String> maxQueueWait;
+      private final @Nullable Input<String> maxQueueWait;
 
     public Input<String> getMaxQueueWait() {
         return this.maxQueueWait == null ? Input.empty() : this.maxQueueWait;
@@ -46,7 +46,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requestTimeout")
-        private final @Nullable Input<String> requestTimeout;
+      private final @Nullable Input<String> requestTimeout;
 
     public Input<String> getRequestTimeout() {
         return this.requestTimeout == null ? Input.empty() : this.requestTimeout;

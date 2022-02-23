@@ -26,7 +26,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accesses")
-        private final @Nullable Input<List<DatasetAccessGetArgs>> accesses;
+      private final @Nullable Input<List<DatasetAccessGetArgs>> accesses;
 
     public Input<List<DatasetAccessGetArgs>> getAccesses() {
         return this.accesses == null ? Input.empty() : this.accesses;
@@ -37,7 +37,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-        private final @Nullable Input<Integer> creationTime;
+      private final @Nullable Input<Integer> creationTime;
 
     public Input<Integer> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -48,7 +48,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-        private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -62,7 +62,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEncryptionConfiguration")
-        private final @Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
+      private final @Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
 
     public Input<DatasetDefaultEncryptionConfigurationGetArgs> getDefaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
@@ -74,7 +74,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPartitionExpirationMs")
-        private final @Nullable Input<Integer> defaultPartitionExpirationMs;
+      private final @Nullable Input<Integer> defaultPartitionExpirationMs;
 
     public Input<Integer> getDefaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
@@ -86,7 +86,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTableExpirationMs")
-        private final @Nullable Input<Integer> defaultTableExpirationMs;
+      private final @Nullable Input<Integer> defaultTableExpirationMs;
 
     public Input<Integer> getDefaultTableExpirationMs() {
         return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
@@ -99,7 +99,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteContentsOnDestroy")
-        private final @Nullable Input<Boolean> deleteContentsOnDestroy;
+      private final @Nullable Input<Boolean> deleteContentsOnDestroy;
 
     public Input<Boolean> getDeleteContentsOnDestroy() {
         return this.deleteContentsOnDestroy == null ? Input.empty() : this.deleteContentsOnDestroy;
@@ -110,7 +110,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -121,7 +121,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -132,7 +132,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -144,7 +144,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -155,7 +155,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-        private final @Nullable Input<Integer> lastModifiedTime;
+      private final @Nullable Input<Integer> lastModifiedTime;
 
     public Input<Integer> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
@@ -167,7 +167,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -179,7 +179,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -190,7 +190,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;

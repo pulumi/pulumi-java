@@ -23,7 +23,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localhostProfile")
-        private final @Nullable Input<String> localhostProfile;
+      private final @Nullable Input<String> localhostProfile;
 
     public Input<String> getLocalhostProfile() {
         return this.localhostProfile == null ? Input.empty() : this.localhostProfile;
@@ -41,7 +41,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

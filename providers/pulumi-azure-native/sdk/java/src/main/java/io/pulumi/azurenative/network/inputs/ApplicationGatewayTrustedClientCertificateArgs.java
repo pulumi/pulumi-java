@@ -23,7 +23,7 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="data")
-        private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

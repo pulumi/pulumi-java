@@ -23,7 +23,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointNames", required=true)
-        private final Input<List<String>> endpointNames;
+      private final Input<List<String>> endpointNames;
 
     public Input<List<String>> getEndpointNames() {
         return this.endpointNames;
@@ -34,7 +34,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -45,7 +45,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

@@ -14,14 +14,14 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
     public static final GlobalTableKeySchemaArgs Empty = new GlobalTableKeySchemaArgs();
 
     @InputImport(name="attributeName", required=true)
-        private final Input<String> attributeName;
+      private final Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="keyType", required=true)
-        private final Input<String> keyType;
+      private final Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType;

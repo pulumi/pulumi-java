@@ -18,7 +18,7 @@ public final class CapacityReservationGroupInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="capacityReservations", required=true)
-        private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
+      private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
     public List<CapacityReservationInstanceViewWithNameResponse> getCapacityReservations() {
         return this.capacityReservations;

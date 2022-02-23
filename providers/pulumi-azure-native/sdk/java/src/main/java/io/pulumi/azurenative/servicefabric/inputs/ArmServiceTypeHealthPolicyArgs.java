@@ -23,7 +23,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyPartitionsPerService")
-        private final @Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService;
+      private final @Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService;
 
     public Input<Integer> getMaxPercentUnhealthyPartitionsPerService() {
         return this.maxPercentUnhealthyPartitionsPerService == null ? Input.empty() : this.maxPercentUnhealthyPartitionsPerService;
@@ -34,7 +34,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyReplicasPerPartition")
-        private final @Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition;
+      private final @Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition;
 
     public Input<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
         return this.maxPercentUnhealthyReplicasPerPartition == null ? Input.empty() : this.maxPercentUnhealthyReplicasPerPartition;
@@ -45,7 +45,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-        private final @Nullable Input<Integer> maxPercentUnhealthyServices;
+      private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 
     public Input<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Input.empty() : this.maxPercentUnhealthyServices;

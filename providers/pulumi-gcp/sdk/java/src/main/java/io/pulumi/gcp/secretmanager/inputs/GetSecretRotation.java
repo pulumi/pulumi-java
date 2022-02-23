@@ -13,14 +13,14 @@ public final class GetSecretRotation extends io.pulumi.resources.InvokeArgs {
     public static final GetSecretRotation Empty = new GetSecretRotation();
 
     @InputImport(name="nextRotationTime", required=true)
-        private final String nextRotationTime;
+      private final String nextRotationTime;
 
     public String getNextRotationTime() {
         return this.nextRotationTime;
     }
 
     @InputImport(name="rotationPeriod", required=true)
-        private final String rotationPeriod;
+      private final String rotationPeriod;
 
     public String getRotationPeriod() {
         return this.rotationPeriod;

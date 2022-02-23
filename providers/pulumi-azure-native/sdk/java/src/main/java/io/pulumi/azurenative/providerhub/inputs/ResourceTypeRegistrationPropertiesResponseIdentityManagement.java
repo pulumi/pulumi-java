@@ -15,14 +15,14 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
     public static final ResourceTypeRegistrationPropertiesResponseIdentityManagement Empty = new ResourceTypeRegistrationPropertiesResponseIdentityManagement();
 
     @InputImport(name="applicationId")
-        private final @Nullable String applicationId;
+      private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

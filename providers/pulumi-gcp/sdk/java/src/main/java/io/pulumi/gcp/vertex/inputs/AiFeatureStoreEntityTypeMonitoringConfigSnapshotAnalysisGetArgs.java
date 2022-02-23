@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @InputImport(name="disabled")
-        private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -32,7 +32,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @InputImport(name="monitoringInterval")
-        private final @Nullable Input<String> monitoringInterval;
+      private final @Nullable Input<String> monitoringInterval;
 
     public Input<String> getMonitoringInterval() {
         return this.monitoringInterval == null ? Input.empty() : this.monitoringInterval;

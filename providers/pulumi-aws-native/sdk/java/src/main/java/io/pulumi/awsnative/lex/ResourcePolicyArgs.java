@@ -15,14 +15,14 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
     @InputImport(name="policy", required=true)
-        private final Input<ResourcePolicyPolicyArgs> policy;
+      private final Input<ResourcePolicyPolicyArgs> policy;
 
     public Input<ResourcePolicyPolicyArgs> getPolicy() {
         return this.policy;
     }
 
     @InputImport(name="resourceArn", required=true)
-        private final Input<String> resourceArn;
+      private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;

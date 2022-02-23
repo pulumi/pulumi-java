@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * 
      */
     @InputImport(name="hotwordRegex", required=true)
-        private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> hotwordRegex;
+      private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> hotwordRegex;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> getHotwordRegex() {
         return this.hotwordRegex;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * 
      */
     @InputImport(name="likelihoodAdjustment", required=true)
-        private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment;
+      private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> getLikelihoodAdjustment() {
         return this.likelihoodAdjustment;
@@ -49,7 +49,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * 
      */
     @InputImport(name="proximity", required=true)
-        private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity;
+      private final Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> getProximity() {
         return this.proximity;

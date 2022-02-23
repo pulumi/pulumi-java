@@ -17,7 +17,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="attachmentId", required=true)
-        private final String attachmentId;
+      private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
@@ -39,7 +39,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="issueId", required=true)
-        private final String issueId;
+      private final String issueId;
 
     public String getIssueId() {
         return this.issueId;
@@ -50,7 +50,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

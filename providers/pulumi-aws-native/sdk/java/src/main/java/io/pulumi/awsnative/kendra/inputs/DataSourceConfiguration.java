@@ -24,70 +24,70 @@ public final class DataSourceConfiguration extends io.pulumi.resources.InvokeArg
     public static final DataSourceConfiguration Empty = new DataSourceConfiguration();
 
     @InputImport(name="confluenceConfiguration")
-        private final @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
+      private final @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
 
     public Optional<DataSourceConfluenceConfiguration> getConfluenceConfiguration() {
         return this.confluenceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.confluenceConfiguration);
     }
 
     @InputImport(name="databaseConfiguration")
-        private final @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
+      private final @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
 
     public Optional<DataSourceDatabaseConfiguration> getDatabaseConfiguration() {
         return this.databaseConfiguration == null ? Optional.empty() : Optional.ofNullable(this.databaseConfiguration);
     }
 
     @InputImport(name="googleDriveConfiguration")
-        private final @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration;
+      private final @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration;
 
     public Optional<DataSourceGoogleDriveConfiguration> getGoogleDriveConfiguration() {
         return this.googleDriveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.googleDriveConfiguration);
     }
 
     @InputImport(name="oneDriveConfiguration")
-        private final @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration;
+      private final @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration;
 
     public Optional<DataSourceOneDriveConfiguration> getOneDriveConfiguration() {
         return this.oneDriveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.oneDriveConfiguration);
     }
 
     @InputImport(name="s3Configuration")
-        private final @Nullable DataSourceS3DataSourceConfiguration s3Configuration;
+      private final @Nullable DataSourceS3DataSourceConfiguration s3Configuration;
 
     public Optional<DataSourceS3DataSourceConfiguration> getS3Configuration() {
         return this.s3Configuration == null ? Optional.empty() : Optional.ofNullable(this.s3Configuration);
     }
 
     @InputImport(name="salesforceConfiguration")
-        private final @Nullable DataSourceSalesforceConfiguration salesforceConfiguration;
+      private final @Nullable DataSourceSalesforceConfiguration salesforceConfiguration;
 
     public Optional<DataSourceSalesforceConfiguration> getSalesforceConfiguration() {
         return this.salesforceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.salesforceConfiguration);
     }
 
     @InputImport(name="serviceNowConfiguration")
-        private final @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration;
+      private final @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration;
 
     public Optional<DataSourceServiceNowConfiguration> getServiceNowConfiguration() {
         return this.serviceNowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.serviceNowConfiguration);
     }
 
     @InputImport(name="sharePointConfiguration")
-        private final @Nullable DataSourceSharePointConfiguration sharePointConfiguration;
+      private final @Nullable DataSourceSharePointConfiguration sharePointConfiguration;
 
     public Optional<DataSourceSharePointConfiguration> getSharePointConfiguration() {
         return this.sharePointConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharePointConfiguration);
     }
 
     @InputImport(name="webCrawlerConfiguration")
-        private final @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
+      private final @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
 
     public Optional<DataSourceWebCrawlerConfiguration> getWebCrawlerConfiguration() {
         return this.webCrawlerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.webCrawlerConfiguration);
     }
 
     @InputImport(name="workDocsConfiguration")
-        private final @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
+      private final @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
 
     public Optional<DataSourceWorkDocsConfiguration> getWorkDocsConfiguration() {
         return this.workDocsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.workDocsConfiguration);

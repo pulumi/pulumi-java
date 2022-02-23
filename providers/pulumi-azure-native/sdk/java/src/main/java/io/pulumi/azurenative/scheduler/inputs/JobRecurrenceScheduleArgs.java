@@ -22,7 +22,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hours")
-        private final @Nullable Input<List<Integer>> hours;
+      private final @Nullable Input<List<Integer>> hours;
 
     public Input<List<Integer>> getHours() {
         return this.hours == null ? Input.empty() : this.hours;
@@ -33,7 +33,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minutes")
-        private final @Nullable Input<List<Integer>> minutes;
+      private final @Nullable Input<List<Integer>> minutes;
 
     public Input<List<Integer>> getMinutes() {
         return this.minutes == null ? Input.empty() : this.minutes;
@@ -44,7 +44,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="monthDays")
-        private final @Nullable Input<List<Integer>> monthDays;
+      private final @Nullable Input<List<Integer>> monthDays;
 
     public Input<List<Integer>> getMonthDays() {
         return this.monthDays == null ? Input.empty() : this.monthDays;
@@ -55,7 +55,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="monthlyOccurrences")
-        private final @Nullable Input<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
+      private final @Nullable Input<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
     public Input<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? Input.empty() : this.monthlyOccurrences;
@@ -66,7 +66,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="weekDays")
-        private final @Nullable Input<List<DayOfWeek>> weekDays;
+      private final @Nullable Input<List<DayOfWeek>> weekDays;
 
     public Input<List<DayOfWeek>> getWeekDays() {
         return this.weekDays == null ? Input.empty() : this.weekDays;

@@ -19,21 +19,21 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     public static final DeviceLastErrorStatusGetArgs Empty = new DeviceLastErrorStatusGetArgs();
 
     @InputImport(name="details")
-        private final @Nullable Input<List<Map<String,Object>>> details;
+      private final @Nullable Input<List<Map<String,Object>>> details;
 
     public Input<List<Map<String,Object>>> getDetails() {
         return this.details == null ? Input.empty() : this.details;
     }
 
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="number")
-        private final @Nullable Input<Integer> number;
+      private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;

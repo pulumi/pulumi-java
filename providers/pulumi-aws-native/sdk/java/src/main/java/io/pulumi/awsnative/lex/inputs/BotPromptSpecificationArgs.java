@@ -26,21 +26,21 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowInterrupt")
-        private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="maxRetries", required=true)
-        private final Input<Integer> maxRetries;
+      private final Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-        private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+      private final Input<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;

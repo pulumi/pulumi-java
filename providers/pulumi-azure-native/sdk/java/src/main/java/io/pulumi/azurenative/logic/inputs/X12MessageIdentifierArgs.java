@@ -22,7 +22,7 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final Input<String> messageId;
+      private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;

@@ -17,7 +17,7 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scheduledActionName", required=true)
-        private final String scheduledActionName;
+      private final String scheduledActionName;
 
     public String getScheduledActionName() {
         return this.scheduledActionName;

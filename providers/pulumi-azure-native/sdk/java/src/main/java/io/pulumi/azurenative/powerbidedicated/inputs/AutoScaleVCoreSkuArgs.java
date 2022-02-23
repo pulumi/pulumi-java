@@ -26,7 +26,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,VCoreSkuTier>> tier;
+      private final @Nullable Input<Either<String,VCoreSkuTier>> tier;
 
     public Input<Either<String,VCoreSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

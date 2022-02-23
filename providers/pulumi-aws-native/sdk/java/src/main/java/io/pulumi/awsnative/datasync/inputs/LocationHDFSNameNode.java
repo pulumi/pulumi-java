@@ -22,7 +22,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostname", required=true)
-        private final String hostname;
+      private final String hostname;
 
     public String getHostname() {
         return this.hostname;
@@ -33,7 +33,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-        private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;

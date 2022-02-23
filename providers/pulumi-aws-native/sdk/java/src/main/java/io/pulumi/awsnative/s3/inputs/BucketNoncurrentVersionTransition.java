@@ -24,7 +24,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-        private final @Nullable Integer newerNoncurrentVersions;
+      private final @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> getNewerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Optional.empty() : Optional.ofNullable(this.newerNoncurrentVersions);
@@ -35,7 +35,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageClass", required=true)
-        private final BucketNoncurrentVersionTransitionStorageClass storageClass;
+      private final BucketNoncurrentVersionTransitionStorageClass storageClass;
 
     public BucketNoncurrentVersionTransitionStorageClass getStorageClass() {
         return this.storageClass;
@@ -46,7 +46,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitionInDays", required=true)
-        private final Integer transitionInDays;
+      private final Integer transitionInDays;
 
     public Integer getTransitionInDays() {
         return this.transitionInDays;

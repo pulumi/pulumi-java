@@ -23,7 +23,7 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disableArchive")
-        private final @Nullable Input<String> disableArchive;
+      private final @Nullable Input<String> disableArchive;
 
     public Input<String> getDisableArchive() {
         return this.disableArchive == null ? Input.empty() : this.disableArchive;
@@ -34,7 +34,7 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disableRtspPublishing")
-        private final @Nullable Input<String> disableRtspPublishing;
+      private final @Nullable Input<String> disableRtspPublishing;
 
     public Input<String> getDisableRtspPublishing() {
         return this.disableRtspPublishing == null ? Input.empty() : this.disableRtspPublishing;

@@ -17,7 +17,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="importCollectorName", required=true)
-        private final String importCollectorName;
+      private final String importCollectorName;
 
     public String getImportCollectorName() {
         return this.importCollectorName;
@@ -28,7 +28,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="projectName", required=true)
-        private final String projectName;
+      private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -39,7 +39,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

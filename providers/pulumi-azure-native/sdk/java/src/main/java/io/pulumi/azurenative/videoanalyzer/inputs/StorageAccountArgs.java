@@ -24,7 +24,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;

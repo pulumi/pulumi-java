@@ -25,7 +25,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-        private final Input<String> cluster;
+      private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -36,7 +36,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId")
-        private final @Nullable Input<String> externalId;
+      private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -47,21 +47,21 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchType")
-        private final @Nullable Input<TaskSetLaunchType> launchType;
+      private final @Nullable Input<TaskSetLaunchType> launchType;
 
     public Input<TaskSetLaunchType> getLaunchType() {
         return this.launchType == null ? Input.empty() : this.launchType;
     }
 
     @InputImport(name="loadBalancers")
-        private final @Nullable Input<List<TaskSetLoadBalancerArgs>> loadBalancers;
+      private final @Nullable Input<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
     public Input<List<TaskSetLoadBalancerArgs>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
     }
 
     @InputImport(name="networkConfiguration")
-        private final @Nullable Input<TaskSetNetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Input<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
     public Input<TaskSetNetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -72,7 +72,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-        private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
@@ -83,7 +83,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-        private final @Nullable Input<TaskSetScaleArgs> scale;
+      private final @Nullable Input<TaskSetScaleArgs> scale;
 
     public Input<TaskSetScaleArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -94,7 +94,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -105,7 +105,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRegistries")
-        private final @Nullable Input<List<TaskSetServiceRegistryArgs>> serviceRegistries;
+      private final @Nullable Input<List<TaskSetServiceRegistryArgs>> serviceRegistries;
 
     public Input<List<TaskSetServiceRegistryArgs>> getServiceRegistries() {
         return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
@@ -116,7 +116,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinition", required=true)
-        private final Input<String> taskDefinition;
+      private final Input<String> taskDefinition;
 
     public Input<String> getTaskDefinition() {
         return this.taskDefinition;

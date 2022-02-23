@@ -17,7 +17,7 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="experimentName", required=true)
-        private final String experimentName;
+      private final String experimentName;
 
     public String getExperimentName() {
         return this.experimentName;
@@ -28,7 +28,7 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

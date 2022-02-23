@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigKalmConfig extends io.pulumi.resources.
     public static final GetClusterAddonsConfigKalmConfig Empty = new GetClusterAddonsConfigKalmConfig();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

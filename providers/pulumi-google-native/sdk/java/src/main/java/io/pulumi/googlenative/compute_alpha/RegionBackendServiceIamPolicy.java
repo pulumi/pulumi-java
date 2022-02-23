@@ -99,6 +99,21 @@ public class RegionBackendServiceIamPolicy extends io.pulumi.resources.CustomRes
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public RegionBackendServiceIamPolicy(String name) {
+        this(name, RegionBackendServiceIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegionBackendServiceIamPolicy(String name, RegionBackendServiceIamPolicyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

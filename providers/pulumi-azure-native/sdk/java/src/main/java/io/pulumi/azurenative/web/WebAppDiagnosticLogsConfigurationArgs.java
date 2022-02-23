@@ -22,7 +22,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applicationLogs")
-        private final @Nullable Input<ApplicationLogsConfigArgs> applicationLogs;
+      private final @Nullable Input<ApplicationLogsConfigArgs> applicationLogs;
 
     public Input<ApplicationLogsConfigArgs> getApplicationLogs() {
         return this.applicationLogs == null ? Input.empty() : this.applicationLogs;
@@ -33,7 +33,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="detailedErrorMessages")
-        private final @Nullable Input<EnabledConfigArgs> detailedErrorMessages;
+      private final @Nullable Input<EnabledConfigArgs> detailedErrorMessages;
 
     public Input<EnabledConfigArgs> getDetailedErrorMessages() {
         return this.detailedErrorMessages == null ? Input.empty() : this.detailedErrorMessages;
@@ -44,7 +44,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="failedRequestsTracing")
-        private final @Nullable Input<EnabledConfigArgs> failedRequestsTracing;
+      private final @Nullable Input<EnabledConfigArgs> failedRequestsTracing;
 
     public Input<EnabledConfigArgs> getFailedRequestsTracing() {
         return this.failedRequestsTracing == null ? Input.empty() : this.failedRequestsTracing;
@@ -55,7 +55,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="httpLogs")
-        private final @Nullable Input<HttpLogsConfigArgs> httpLogs;
+      private final @Nullable Input<HttpLogsConfigArgs> httpLogs;
 
     public Input<HttpLogsConfigArgs> getHttpLogs() {
         return this.httpLogs == null ? Input.empty() : this.httpLogs;
@@ -66,7 +66,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -77,7 +77,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -88,7 +88,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

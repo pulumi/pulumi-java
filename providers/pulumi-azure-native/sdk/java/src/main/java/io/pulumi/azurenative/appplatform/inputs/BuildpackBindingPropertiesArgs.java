@@ -26,7 +26,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bindingType")
-        private final @Nullable Input<Either<String,BindingType>> bindingType;
+      private final @Nullable Input<Either<String,BindingType>> bindingType;
 
     public Input<Either<String,BindingType>> getBindingType() {
         return this.bindingType == null ? Input.empty() : this.bindingType;
@@ -37,7 +37,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="launchProperties")
-        private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+      private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
     public Input<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
         return this.launchProperties == null ? Input.empty() : this.launchProperties;

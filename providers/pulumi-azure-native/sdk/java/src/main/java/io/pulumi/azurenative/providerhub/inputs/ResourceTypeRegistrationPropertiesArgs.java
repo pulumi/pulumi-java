@@ -39,203 +39,203 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
     public static final ResourceTypeRegistrationPropertiesArgs Empty = new ResourceTypeRegistrationPropertiesArgs();
 
     @InputImport(name="allowedUnauthorizedActions")
-        private final @Nullable Input<List<String>> allowedUnauthorizedActions;
+      private final @Nullable Input<List<String>> allowedUnauthorizedActions;
 
     public Input<List<String>> getAllowedUnauthorizedActions() {
         return this.allowedUnauthorizedActions == null ? Input.empty() : this.allowedUnauthorizedActions;
     }
 
     @InputImport(name="authorizationActionMappings")
-        private final @Nullable Input<List<AuthorizationActionMappingArgs>> authorizationActionMappings;
+      private final @Nullable Input<List<AuthorizationActionMappingArgs>> authorizationActionMappings;
 
     public Input<List<AuthorizationActionMappingArgs>> getAuthorizationActionMappings() {
         return this.authorizationActionMappings == null ? Input.empty() : this.authorizationActionMappings;
     }
 
     @InputImport(name="checkNameAvailabilitySpecifications")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications;
 
     public Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> getCheckNameAvailabilitySpecifications() {
         return this.checkNameAvailabilitySpecifications == null ? Input.empty() : this.checkNameAvailabilitySpecifications;
     }
 
     @InputImport(name="defaultApiVersion")
-        private final @Nullable Input<String> defaultApiVersion;
+      private final @Nullable Input<String> defaultApiVersion;
 
     public Input<String> getDefaultApiVersion() {
         return this.defaultApiVersion == null ? Input.empty() : this.defaultApiVersion;
     }
 
     @InputImport(name="disallowedActionVerbs")
-        private final @Nullable Input<List<String>> disallowedActionVerbs;
+      private final @Nullable Input<List<String>> disallowedActionVerbs;
 
     public Input<List<String>> getDisallowedActionVerbs() {
         return this.disallowedActionVerbs == null ? Input.empty() : this.disallowedActionVerbs;
     }
 
     @InputImport(name="enableAsyncOperation")
-        private final @Nullable Input<Boolean> enableAsyncOperation;
+      private final @Nullable Input<Boolean> enableAsyncOperation;
 
     public Input<Boolean> getEnableAsyncOperation() {
         return this.enableAsyncOperation == null ? Input.empty() : this.enableAsyncOperation;
     }
 
     @InputImport(name="enableThirdPartyS2S")
-        private final @Nullable Input<Boolean> enableThirdPartyS2S;
+      private final @Nullable Input<Boolean> enableThirdPartyS2S;
 
     public Input<Boolean> getEnableThirdPartyS2S() {
         return this.enableThirdPartyS2S == null ? Input.empty() : this.enableThirdPartyS2S;
     }
 
     @InputImport(name="endpoints")
-        private final @Nullable Input<List<ResourceTypeEndpointArgs>> endpoints;
+      private final @Nullable Input<List<ResourceTypeEndpointArgs>> endpoints;
 
     public Input<List<ResourceTypeEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
     @InputImport(name="extendedLocations")
-        private final @Nullable Input<List<ExtendedLocationOptionsArgs>> extendedLocations;
+      private final @Nullable Input<List<ExtendedLocationOptionsArgs>> extendedLocations;
 
     public Input<List<ExtendedLocationOptionsArgs>> getExtendedLocations() {
         return this.extendedLocations == null ? Input.empty() : this.extendedLocations;
     }
 
     @InputImport(name="extensionOptions")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions;
 
     public Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> getExtensionOptions() {
         return this.extensionOptions == null ? Input.empty() : this.extensionOptions;
     }
 
     @InputImport(name="featuresRule")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule;
 
     public Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> getFeaturesRule() {
         return this.featuresRule == null ? Input.empty() : this.featuresRule;
     }
 
     @InputImport(name="identityManagement")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement;
 
     public Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> getIdentityManagement() {
         return this.identityManagement == null ? Input.empty() : this.identityManagement;
     }
 
     @InputImport(name="isPureProxy")
-        private final @Nullable Input<Boolean> isPureProxy;
+      private final @Nullable Input<Boolean> isPureProxy;
 
     public Input<Boolean> getIsPureProxy() {
         return this.isPureProxy == null ? Input.empty() : this.isPureProxy;
     }
 
     @InputImport(name="linkedAccessChecks")
-        private final @Nullable Input<List<LinkedAccessCheckArgs>> linkedAccessChecks;
+      private final @Nullable Input<List<LinkedAccessCheckArgs>> linkedAccessChecks;
 
     public Input<List<LinkedAccessCheckArgs>> getLinkedAccessChecks() {
         return this.linkedAccessChecks == null ? Input.empty() : this.linkedAccessChecks;
     }
 
     @InputImport(name="loggingRules")
-        private final @Nullable Input<List<LoggingRuleArgs>> loggingRules;
+      private final @Nullable Input<List<LoggingRuleArgs>> loggingRules;
 
     public Input<List<LoggingRuleArgs>> getLoggingRules() {
         return this.loggingRules == null ? Input.empty() : this.loggingRules;
     }
 
     @InputImport(name="marketplaceType")
-        private final @Nullable Input<String> marketplaceType;
+      private final @Nullable Input<String> marketplaceType;
 
     public Input<String> getMarketplaceType() {
         return this.marketplaceType == null ? Input.empty() : this.marketplaceType;
     }
 
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
     @InputImport(name="regionality")
-        private final @Nullable Input<Either<String,Regionality>> regionality;
+      private final @Nullable Input<Either<String,Regionality>> regionality;
 
     public Input<Either<String,Regionality>> getRegionality() {
         return this.regionality == null ? Input.empty() : this.regionality;
     }
 
     @InputImport(name="requestHeaderOptions")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
     public Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
         return this.requestHeaderOptions == null ? Input.empty() : this.requestHeaderOptions;
     }
 
     @InputImport(name="requiredFeatures")
-        private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Input<List<String>> requiredFeatures;
 
     public Input<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="resourceDeletionPolicy")
-        private final @Nullable Input<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy;
+      private final @Nullable Input<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy;
 
     public Input<Either<String,ResourceDeletionPolicy>> getResourceDeletionPolicy() {
         return this.resourceDeletionPolicy == null ? Input.empty() : this.resourceDeletionPolicy;
     }
 
     @InputImport(name="resourceMovePolicy")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy;
 
     public Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> getResourceMovePolicy() {
         return this.resourceMovePolicy == null ? Input.empty() : this.resourceMovePolicy;
     }
 
     @InputImport(name="routingType")
-        private final @Nullable Input<Either<String,RoutingType>> routingType;
+      private final @Nullable Input<Either<String,RoutingType>> routingType;
 
     public Input<Either<String,RoutingType>> getRoutingType() {
         return this.routingType == null ? Input.empty() : this.routingType;
     }
 
     @InputImport(name="serviceTreeInfos")
-        private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+      private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
     public Input<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
         return this.serviceTreeInfos == null ? Input.empty() : this.serviceTreeInfos;
     }
 
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
     public Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Input.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @InputImport(name="subscriptionStateRules")
-        private final @Nullable Input<List<SubscriptionStateRuleArgs>> subscriptionStateRules;
+      private final @Nullable Input<List<SubscriptionStateRuleArgs>> subscriptionStateRules;
 
     public Input<List<SubscriptionStateRuleArgs>> getSubscriptionStateRules() {
         return this.subscriptionStateRules == null ? Input.empty() : this.subscriptionStateRules;
     }
 
     @InputImport(name="swaggerSpecifications")
-        private final @Nullable Input<List<SwaggerSpecificationArgs>> swaggerSpecifications;
+      private final @Nullable Input<List<SwaggerSpecificationArgs>> swaggerSpecifications;
 
     public Input<List<SwaggerSpecificationArgs>> getSwaggerSpecifications() {
         return this.swaggerSpecifications == null ? Input.empty() : this.swaggerSpecifications;
     }
 
     @InputImport(name="templateDeploymentOptions")
-        private final @Nullable Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
+      private final @Nullable Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
     public Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
         return this.templateDeploymentOptions == null ? Input.empty() : this.templateDeploymentOptions;
     }
 
     @InputImport(name="throttlingRules")
-        private final @Nullable Input<List<ThrottlingRuleArgs>> throttlingRules;
+      private final @Nullable Input<List<ThrottlingRuleArgs>> throttlingRules;
 
     public Input<List<ThrottlingRuleArgs>> getThrottlingRules() {
         return this.throttlingRules == null ? Input.empty() : this.throttlingRules;

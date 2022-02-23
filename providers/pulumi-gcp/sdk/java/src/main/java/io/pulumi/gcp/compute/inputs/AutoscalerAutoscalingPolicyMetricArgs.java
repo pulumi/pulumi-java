@@ -46,7 +46,7 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -57,7 +57,7 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -81,7 +81,7 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-        private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Input<Double> singleInstanceAssignment;
 
     public Input<Double> getSingleInstanceAssignment() {
         return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
@@ -94,7 +94,7 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<Double> target;
+      private final @Nullable Input<Double> target;
 
     public Input<Double> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -107,7 +107,7 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

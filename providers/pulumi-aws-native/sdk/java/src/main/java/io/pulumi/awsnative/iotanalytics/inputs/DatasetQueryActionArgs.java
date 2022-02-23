@@ -17,14 +17,14 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetQueryActionArgs Empty = new DatasetQueryActionArgs();
 
     @InputImport(name="filters")
-        private final @Nullable Input<List<DatasetFilterArgs>> filters;
+      private final @Nullable Input<List<DatasetFilterArgs>> filters;
 
     public Input<List<DatasetFilterArgs>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
     }
 
     @InputImport(name="sqlQuery", required=true)
-        private final Input<String> sqlQuery;
+      private final Input<String> sqlQuery;
 
     public Input<String> getSqlQuery() {
         return this.sqlQuery;

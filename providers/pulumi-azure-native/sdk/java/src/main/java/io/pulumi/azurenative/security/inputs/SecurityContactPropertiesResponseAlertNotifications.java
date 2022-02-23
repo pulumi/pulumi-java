@@ -23,7 +23,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
      * 
      */
     @InputImport(name="minimalSeverity")
-        private final @Nullable String minimalSeverity;
+      private final @Nullable String minimalSeverity;
 
     public Optional<String> getMinimalSeverity() {
         return this.minimalSeverity == null ? Optional.empty() : Optional.ofNullable(this.minimalSeverity);
@@ -34,7 +34,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);

@@ -18,7 +18,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;

@@ -26,7 +26,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="causes")
-        private final @Nullable Input<List<StatusCauseArgs>> causes;
+      private final @Nullable Input<List<StatusCauseArgs>> causes;
 
     public Input<List<StatusCauseArgs>> getCauses() {
         return this.causes == null ? Input.empty() : this.causes;
@@ -37,7 +37,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="group")
-        private final @Nullable Input<String> group;
+      private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -48,7 +48,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,7 +59,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryAfterSeconds")
-        private final @Nullable Input<Integer> retryAfterSeconds;
+      private final @Nullable Input<Integer> retryAfterSeconds;
 
     public Input<Integer> getRetryAfterSeconds() {
         return this.retryAfterSeconds == null ? Input.empty() : this.retryAfterSeconds;
@@ -81,7 +81,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;

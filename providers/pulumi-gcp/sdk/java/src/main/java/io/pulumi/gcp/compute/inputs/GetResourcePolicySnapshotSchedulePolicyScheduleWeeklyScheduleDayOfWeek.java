@@ -13,14 +13,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     public static final GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek Empty = new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek();
 
     @InputImport(name="day", required=true)
-        private final String day;
+      private final String day;
 
     public String getDay() {
         return this.day;
     }
 
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;

@@ -27,7 +27,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="endOfLifeDate")
-        private final @Nullable String endOfLifeDate;
+      private final @Nullable String endOfLifeDate;
 
     public Optional<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Optional.empty() : Optional.ofNullable(this.endOfLifeDate);
@@ -38,7 +38,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="excludeFromLatest")
-        private final @Nullable Boolean excludeFromLatest;
+      private final @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
@@ -49,7 +49,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="publishedDate", required=true)
-        private final String publishedDate;
+      private final String publishedDate;
 
     public String getPublishedDate() {
         return this.publishedDate;
@@ -60,7 +60,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="replicaCount")
-        private final @Nullable Integer replicaCount;
+      private final @Nullable Integer replicaCount;
 
     public Optional<Integer> getReplicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
@@ -71,7 +71,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable String storageAccountType;
+      private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
@@ -82,7 +82,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="targetRegions")
-        private final @Nullable List<TargetRegionResponse> targetRegions;
+      private final @Nullable List<TargetRegionResponse> targetRegions;
 
     public List<TargetRegionResponse> getTargetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;

@@ -22,7 +22,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
      * 
      */
     @InputImport(name="rawBody", required=true)
-        private final String rawBody;
+      private final String rawBody;
 
     public String getRawBody() {
         return this.rawBody;

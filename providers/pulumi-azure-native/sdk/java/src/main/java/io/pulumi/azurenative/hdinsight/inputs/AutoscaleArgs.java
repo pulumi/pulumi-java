@@ -24,7 +24,7 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<AutoscaleCapacityArgs> capacity;
+      private final @Nullable Input<AutoscaleCapacityArgs> capacity;
 
     public Input<AutoscaleCapacityArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -35,7 +35,7 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-        private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
+      private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
 
     public Input<AutoscaleRecurrenceArgs> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;

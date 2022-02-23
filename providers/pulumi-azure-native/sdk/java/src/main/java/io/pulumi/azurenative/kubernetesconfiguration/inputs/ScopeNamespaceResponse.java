@@ -23,7 +23,7 @@ public final class ScopeNamespaceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="targetNamespace")
-        private final @Nullable String targetNamespace;
+      private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);

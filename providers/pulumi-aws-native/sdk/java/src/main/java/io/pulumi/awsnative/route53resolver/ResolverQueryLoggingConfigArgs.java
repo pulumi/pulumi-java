@@ -19,7 +19,7 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinationArn")
-        private final @Nullable Input<String> destinationArn;
+      private final @Nullable Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn == null ? Input.empty() : this.destinationArn;
@@ -30,7 +30,7 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

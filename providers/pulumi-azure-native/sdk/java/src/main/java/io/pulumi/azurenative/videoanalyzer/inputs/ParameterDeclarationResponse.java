@@ -23,7 +23,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="default")
-        private final @Nullable String $default;
+      private final @Nullable String $default;
 
     public Optional<String> get$default() {
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
@@ -34,7 +34,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -45,7 +45,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

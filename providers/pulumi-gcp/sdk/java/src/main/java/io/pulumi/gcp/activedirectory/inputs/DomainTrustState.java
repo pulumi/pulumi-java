@@ -22,7 +22,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-        private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -34,7 +34,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectiveAuthentication")
-        private final @Nullable Input<Boolean> selectiveAuthentication;
+      private final @Nullable Input<Boolean> selectiveAuthentication;
 
     public Input<Boolean> getSelectiveAuthentication() {
         return this.selectiveAuthentication == null ? Input.empty() : this.selectiveAuthentication;
@@ -56,7 +56,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDnsIpAddresses")
-        private final @Nullable Input<List<String>> targetDnsIpAddresses;
+      private final @Nullable Input<List<String>> targetDnsIpAddresses;
 
     public Input<List<String>> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses == null ? Input.empty() : this.targetDnsIpAddresses;
@@ -67,7 +67,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDomainName")
-        private final @Nullable Input<String> targetDomainName;
+      private final @Nullable Input<String> targetDomainName;
 
     public Input<String> getTargetDomainName() {
         return this.targetDomainName == null ? Input.empty() : this.targetDomainName;
@@ -79,7 +79,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustDirection")
-        private final @Nullable Input<String> trustDirection;
+      private final @Nullable Input<String> trustDirection;
 
     public Input<String> getTrustDirection() {
         return this.trustDirection == null ? Input.empty() : this.trustDirection;
@@ -91,7 +91,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustHandshakeSecret")
-        private final @Nullable Input<String> trustHandshakeSecret;
+      private final @Nullable Input<String> trustHandshakeSecret;
 
     public Input<String> getTrustHandshakeSecret() {
         return this.trustHandshakeSecret == null ? Input.empty() : this.trustHandshakeSecret;
@@ -103,7 +103,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustType")
-        private final @Nullable Input<String> trustType;
+      private final @Nullable Input<String> trustType;
 
     public Input<String> getTrustType() {
         return this.trustType == null ? Input.empty() : this.trustType;

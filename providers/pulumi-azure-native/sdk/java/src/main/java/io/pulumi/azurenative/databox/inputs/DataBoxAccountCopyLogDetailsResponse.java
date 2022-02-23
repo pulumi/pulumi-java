@@ -21,7 +21,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="copyLogDetailsType", required=true)
-        private final String copyLogDetailsType;
+      private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -44,7 +44,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="copyLogLink", required=true)
-        private final String copyLogLink;
+      private final String copyLogLink;
 
     public String getCopyLogLink() {
         return this.copyLogLink;
@@ -55,7 +55,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="copyVerboseLogLink", required=true)
-        private final String copyVerboseLogLink;
+      private final String copyVerboseLogLink;
 
     public String getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;

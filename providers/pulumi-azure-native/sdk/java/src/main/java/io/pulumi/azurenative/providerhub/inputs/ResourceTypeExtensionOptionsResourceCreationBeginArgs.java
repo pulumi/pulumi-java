@@ -18,14 +18,14 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     public static final ResourceTypeExtensionOptionsResourceCreationBeginArgs Empty = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
 
     @InputImport(name="request")
-        private final @Nullable Input<List<Either<String,ExtensionOptionType>>> request;
+      private final @Nullable Input<List<Either<String,ExtensionOptionType>>> request;
 
     public Input<List<Either<String,ExtensionOptionType>>> getRequest() {
         return this.request == null ? Input.empty() : this.request;
     }
 
     @InputImport(name="response")
-        private final @Nullable Input<List<Either<String,ExtensionOptionType>>> response;
+      private final @Nullable Input<List<Either<String,ExtensionOptionType>>> response;
 
     public Input<List<Either<String,ExtensionOptionType>>> getResponse() {
         return this.response == null ? Input.empty() : this.response;

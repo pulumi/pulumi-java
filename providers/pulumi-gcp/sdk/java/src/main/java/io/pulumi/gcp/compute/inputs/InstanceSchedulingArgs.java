@@ -25,7 +25,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="automaticRestart")
-        private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Input<Boolean> automaticRestart;
 
     public Input<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
@@ -36,7 +36,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minNodeCpus")
-        private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Input<Integer> minNodeCpus;
 
     public Input<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
@@ -51,7 +51,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeAffinities")
-        private final @Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
+      private final @Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Input<List<InstanceSchedulingNodeAffinityArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
@@ -64,7 +64,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="onHostMaintenance")
-        private final @Nullable Input<String> onHostMaintenance;
+      private final @Nullable Input<String> onHostMaintenance;
 
     public Input<String> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
@@ -77,7 +77,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preemptible")
-        private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;

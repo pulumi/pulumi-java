@@ -19,7 +19,7 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="architecture", required=true)
-        private final Input<RobotApplicationSourceConfigArchitecture> architecture;
+      private final Input<RobotApplicationSourceConfigArchitecture> architecture;
 
     public Input<RobotApplicationSourceConfigArchitecture> getArchitecture() {
         return this.architecture;
@@ -30,7 +30,7 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Bucket", required=true)
-        private final Input<String> s3Bucket;
+      private final Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket;
@@ -41,7 +41,7 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Key", required=true)
-        private final Input<String> s3Key;
+      private final Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key;

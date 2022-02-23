@@ -24,7 +24,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roles")
-        private final @Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles;
+      private final @Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
     public Input<List<CloudServiceRoleProfilePropertiesArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;

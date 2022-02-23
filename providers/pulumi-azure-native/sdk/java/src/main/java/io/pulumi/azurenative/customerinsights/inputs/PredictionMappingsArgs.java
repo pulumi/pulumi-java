@@ -22,7 +22,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="grade", required=true)
-        private final Input<String> grade;
+      private final Input<String> grade;
 
     public Input<String> getGrade() {
         return this.grade;
@@ -33,7 +33,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reason", required=true)
-        private final Input<String> reason;
+      private final Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason;
@@ -44,7 +44,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="score", required=true)
-        private final Input<String> score;
+      private final Input<String> score;
 
     public Input<String> getScore() {
         return this.score;

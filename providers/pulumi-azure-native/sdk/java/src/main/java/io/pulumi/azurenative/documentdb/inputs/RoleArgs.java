@@ -23,7 +23,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="db")
-        private final @Nullable Input<String> db;
+      private final @Nullable Input<String> db;
 
     public Input<String> getDb() {
         return this.db == null ? Input.empty() : this.db;
@@ -34,7 +34,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

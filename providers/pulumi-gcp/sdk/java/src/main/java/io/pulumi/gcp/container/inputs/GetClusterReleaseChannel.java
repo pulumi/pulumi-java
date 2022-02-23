@@ -13,7 +13,7 @@ public final class GetClusterReleaseChannel extends io.pulumi.resources.InvokeAr
     public static final GetClusterReleaseChannel Empty = new GetClusterReleaseChannel();
 
     @InputImport(name="channel", required=true)
-        private final String channel;
+      private final String channel;
 
     public String getChannel() {
         return this.channel;

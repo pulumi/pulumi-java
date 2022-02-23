@@ -19,35 +19,35 @@ public final class InstanceFromMachineImageSchedulingGetArgs extends io.pulumi.r
     public static final InstanceFromMachineImageSchedulingGetArgs Empty = new InstanceFromMachineImageSchedulingGetArgs();
 
     @InputImport(name="automaticRestart")
-        private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Input<Boolean> automaticRestart;
 
     public Input<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
     }
 
     @InputImport(name="minNodeCpus")
-        private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Input<Integer> minNodeCpus;
 
     public Input<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
     }
 
     @InputImport(name="nodeAffinities")
-        private final @Nullable Input<List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs>> nodeAffinities;
+      private final @Nullable Input<List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs>> nodeAffinities;
 
     public Input<List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
     }
 
     @InputImport(name="onHostMaintenance")
-        private final @Nullable Input<String> onHostMaintenance;
+      private final @Nullable Input<String> onHostMaintenance;
 
     public Input<String> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
     }
 
     @InputImport(name="preemptible")
-        private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;

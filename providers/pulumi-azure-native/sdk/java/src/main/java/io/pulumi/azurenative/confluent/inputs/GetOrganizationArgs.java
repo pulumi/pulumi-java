@@ -17,7 +17,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="organizationName", required=true)
-        private final String organizationName;
+      private final String organizationName;
 
     public String getOrganizationName() {
         return this.organizationName;
@@ -28,7 +28,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

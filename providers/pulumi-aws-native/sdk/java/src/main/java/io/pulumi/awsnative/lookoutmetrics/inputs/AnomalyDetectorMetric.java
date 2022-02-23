@@ -20,21 +20,21 @@ public final class AnomalyDetectorMetric extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="aggregationFunction", required=true)
-        private final AnomalyDetectorMetricAggregationFunction aggregationFunction;
+      private final AnomalyDetectorMetricAggregationFunction aggregationFunction;
 
     public AnomalyDetectorMetricAggregationFunction getAggregationFunction() {
         return this.aggregationFunction;
     }
 
     @InputImport(name="metricName", required=true)
-        private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="namespace")
-        private final @Nullable String namespace;
+      private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);

@@ -17,7 +17,7 @@ public final class GetAcceleratorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acceleratorArn", required=true)
-        private final String acceleratorArn;
+      private final String acceleratorArn;
 
     public String getAcceleratorArn() {
         return this.acceleratorArn;

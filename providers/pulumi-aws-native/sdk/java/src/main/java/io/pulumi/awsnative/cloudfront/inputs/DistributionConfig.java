@@ -27,133 +27,133 @@ public final class DistributionConfig extends io.pulumi.resources.InvokeArgs {
     public static final DistributionConfig Empty = new DistributionConfig();
 
     @InputImport(name="aliases")
-        private final @Nullable List<String> aliases;
+      private final @Nullable List<String> aliases;
 
     public List<String> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
 
     @InputImport(name="cNAMEs")
-        private final @Nullable List<String> cNAMEs;
+      private final @Nullable List<String> cNAMEs;
 
     public List<String> getCNAMEs() {
         return this.cNAMEs == null ? List.of() : this.cNAMEs;
     }
 
     @InputImport(name="cacheBehaviors")
-        private final @Nullable List<DistributionCacheBehavior> cacheBehaviors;
+      private final @Nullable List<DistributionCacheBehavior> cacheBehaviors;
 
     public List<DistributionCacheBehavior> getCacheBehaviors() {
         return this.cacheBehaviors == null ? List.of() : this.cacheBehaviors;
     }
 
     @InputImport(name="comment")
-        private final @Nullable String comment;
+      private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @InputImport(name="customErrorResponses")
-        private final @Nullable List<DistributionCustomErrorResponse> customErrorResponses;
+      private final @Nullable List<DistributionCustomErrorResponse> customErrorResponses;
 
     public List<DistributionCustomErrorResponse> getCustomErrorResponses() {
         return this.customErrorResponses == null ? List.of() : this.customErrorResponses;
     }
 
     @InputImport(name="customOrigin")
-        private final @Nullable DistributionLegacyCustomOrigin customOrigin;
+      private final @Nullable DistributionLegacyCustomOrigin customOrigin;
 
     public Optional<DistributionLegacyCustomOrigin> getCustomOrigin() {
         return this.customOrigin == null ? Optional.empty() : Optional.ofNullable(this.customOrigin);
     }
 
     @InputImport(name="defaultCacheBehavior")
-        private final @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior;
+      private final @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior;
 
     public Optional<DistributionDefaultCacheBehavior> getDefaultCacheBehavior() {
         return this.defaultCacheBehavior == null ? Optional.empty() : Optional.ofNullable(this.defaultCacheBehavior);
     }
 
     @InputImport(name="defaultRootObject")
-        private final @Nullable String defaultRootObject;
+      private final @Nullable String defaultRootObject;
 
     public Optional<String> getDefaultRootObject() {
         return this.defaultRootObject == null ? Optional.empty() : Optional.ofNullable(this.defaultRootObject);
     }
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="httpVersion")
-        private final @Nullable String httpVersion;
+      private final @Nullable String httpVersion;
 
     public Optional<String> getHttpVersion() {
         return this.httpVersion == null ? Optional.empty() : Optional.ofNullable(this.httpVersion);
     }
 
     @InputImport(name="iPV6Enabled")
-        private final @Nullable Boolean iPV6Enabled;
+      private final @Nullable Boolean iPV6Enabled;
 
     public Optional<Boolean> getIPV6Enabled() {
         return this.iPV6Enabled == null ? Optional.empty() : Optional.ofNullable(this.iPV6Enabled);
     }
 
     @InputImport(name="logging")
-        private final @Nullable DistributionLogging logging;
+      private final @Nullable DistributionLogging logging;
 
     public Optional<DistributionLogging> getLogging() {
         return this.logging == null ? Optional.empty() : Optional.ofNullable(this.logging);
     }
 
     @InputImport(name="originGroups")
-        private final @Nullable DistributionOriginGroups originGroups;
+      private final @Nullable DistributionOriginGroups originGroups;
 
     public Optional<DistributionOriginGroups> getOriginGroups() {
         return this.originGroups == null ? Optional.empty() : Optional.ofNullable(this.originGroups);
     }
 
     @InputImport(name="origins")
-        private final @Nullable List<DistributionOrigin> origins;
+      private final @Nullable List<DistributionOrigin> origins;
 
     public List<DistributionOrigin> getOrigins() {
         return this.origins == null ? List.of() : this.origins;
     }
 
     @InputImport(name="priceClass")
-        private final @Nullable String priceClass;
+      private final @Nullable String priceClass;
 
     public Optional<String> getPriceClass() {
         return this.priceClass == null ? Optional.empty() : Optional.ofNullable(this.priceClass);
     }
 
     @InputImport(name="restrictions")
-        private final @Nullable DistributionRestrictions restrictions;
+      private final @Nullable DistributionRestrictions restrictions;
 
     public Optional<DistributionRestrictions> getRestrictions() {
         return this.restrictions == null ? Optional.empty() : Optional.ofNullable(this.restrictions);
     }
 
     @InputImport(name="s3Origin")
-        private final @Nullable DistributionLegacyS3Origin s3Origin;
+      private final @Nullable DistributionLegacyS3Origin s3Origin;
 
     public Optional<DistributionLegacyS3Origin> getS3Origin() {
         return this.s3Origin == null ? Optional.empty() : Optional.ofNullable(this.s3Origin);
     }
 
     @InputImport(name="viewerCertificate")
-        private final @Nullable DistributionViewerCertificate viewerCertificate;
+      private final @Nullable DistributionViewerCertificate viewerCertificate;
 
     public Optional<DistributionViewerCertificate> getViewerCertificate() {
         return this.viewerCertificate == null ? Optional.empty() : Optional.ofNullable(this.viewerCertificate);
     }
 
     @InputImport(name="webACLId")
-        private final @Nullable String webACLId;
+      private final @Nullable String webACLId;
 
     public Optional<String> getWebACLId() {
         return this.webACLId == null ? Optional.empty() : Optional.ofNullable(this.webACLId);

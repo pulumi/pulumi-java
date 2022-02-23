@@ -21,7 +21,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="carrierName", required=true)
-        private final String carrierName;
+      private final String carrierName;
 
     public String getCarrierName() {
         return this.carrierName;
@@ -32,7 +32,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingId", required=true)
-        private final String trackingId;
+      private final String trackingId;
 
     public String getTrackingId() {
         return this.trackingId;
@@ -43,7 +43,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingUrl", required=true)
-        private final String trackingUrl;
+      private final String trackingUrl;
 
     public String getTrackingUrl() {
         return this.trackingUrl;

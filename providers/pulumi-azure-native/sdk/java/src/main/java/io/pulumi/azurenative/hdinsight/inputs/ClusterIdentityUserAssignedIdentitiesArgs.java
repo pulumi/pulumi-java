@@ -19,7 +19,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

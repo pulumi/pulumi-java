@@ -20,14 +20,14 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
     public static final PackagingConfigurationMssManifestArgs Empty = new PackagingConfigurationMssManifestArgs();
 
     @InputImport(name="manifestName")
-        private final @Nullable Input<String> manifestName;
+      private final @Nullable Input<String> manifestName;
 
     public Input<String> getManifestName() {
         return this.manifestName == null ? Input.empty() : this.manifestName;
     }
 
     @InputImport(name="streamSelection")
-        private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+      private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
     public Input<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;

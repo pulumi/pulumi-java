@@ -25,7 +25,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="localizedValueNames")
-        private final @Nullable Input<Map<String,String>> localizedValueNames;
+      private final @Nullable Input<Map<String,String>> localizedValueNames;
 
     public Input<Map<String,String>> getLocalizedValueNames() {
         return this.localizedValueNames == null ? Input.empty() : this.localizedValueNames;
@@ -36,7 +36,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<Integer> value;
+      private final @Nullable Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value == null ? Input.empty() : this.value;

@@ -23,7 +23,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="identities")
-        private final @Nullable Input<List<String>> identities;
+      private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -37,7 +37,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="identityType")
-        private final @Nullable Input<String> identityType;
+      private final @Nullable Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -49,7 +49,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="sources")
-        private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
 
     public Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;

@@ -24,7 +24,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -35,7 +35,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -46,7 +46,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isValidated")
-        private final @Nullable Input<Boolean> isValidated;
+      private final @Nullable Input<Boolean> isValidated;
 
     public Input<Boolean> getIsValidated() {
         return this.isValidated == null ? Input.empty() : this.isValidated;

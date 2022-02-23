@@ -25,7 +25,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="bindingParameters")
-        private final @Nullable Map<String,Object> bindingParameters;
+      private final @Nullable Map<String,Object> bindingParameters;
 
     public Map<String,Object> getBindingParameters() {
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
@@ -36,7 +36,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="createdAt", required=true)
-        private final String createdAt;
+      private final String createdAt;
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -47,7 +47,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="generatedProperties", required=true)
-        private final String generatedProperties;
+      private final String generatedProperties;
 
     public String getGeneratedProperties() {
         return this.generatedProperties;
@@ -58,7 +58,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -69,7 +69,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -80,7 +80,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -91,7 +91,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -102,7 +102,7 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="updatedAt", required=true)
-        private final String updatedAt;
+      private final String updatedAt;
 
     public String getUpdatedAt() {
         return this.updatedAt;

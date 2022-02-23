@@ -22,7 +22,7 @@ public final class HealthCheckStepPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="attributes", required=true)
-        private final RestHealthCheckStepAttributesResponse attributes;
+      private final RestHealthCheckStepAttributesResponse attributes;
 
     public RestHealthCheckStepAttributesResponse getAttributes() {
         return this.attributes;
@@ -34,7 +34,7 @@ public final class HealthCheckStepPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="stepType", required=true)
-        private final String stepType;
+      private final String stepType;
 
     public String getStepType() {
         return this.stepType;

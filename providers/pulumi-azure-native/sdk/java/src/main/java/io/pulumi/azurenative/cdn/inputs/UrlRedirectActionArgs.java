@@ -24,7 +24,7 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<UrlRedirectActionParametersArgs> parameters;
+      private final Input<UrlRedirectActionParametersArgs> parameters;
 
     public Input<UrlRedirectActionParametersArgs> getParameters() {
         return this.parameters;

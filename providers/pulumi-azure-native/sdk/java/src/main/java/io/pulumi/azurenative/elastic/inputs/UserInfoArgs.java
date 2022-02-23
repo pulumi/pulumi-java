@@ -24,7 +24,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyInfo")
-        private final @Nullable Input<CompanyInfoArgs> companyInfo;
+      private final @Nullable Input<CompanyInfoArgs> companyInfo;
 
     public Input<CompanyInfoArgs> getCompanyInfo() {
         return this.companyInfo == null ? Input.empty() : this.companyInfo;
@@ -35,7 +35,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName")
-        private final @Nullable Input<String> companyName;
+      private final @Nullable Input<String> companyName;
 
     public Input<String> getCompanyName() {
         return this.companyName == null ? Input.empty() : this.companyName;
@@ -46,7 +46,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-        private final @Nullable Input<String> emailAddress;
+      private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -57,7 +57,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName")
-        private final @Nullable Input<String> firstName;
+      private final @Nullable Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName == null ? Input.empty() : this.firstName;
@@ -68,7 +68,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName")
-        private final @Nullable Input<String> lastName;
+      private final @Nullable Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName == null ? Input.empty() : this.lastName;

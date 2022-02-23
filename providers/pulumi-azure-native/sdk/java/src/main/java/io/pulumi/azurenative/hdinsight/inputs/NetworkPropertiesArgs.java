@@ -26,7 +26,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateLink")
-        private final @Nullable Input<Either<String,PrivateLink>> privateLink;
+      private final @Nullable Input<Either<String,PrivateLink>> privateLink;
 
     public Input<Either<String,PrivateLink>> getPrivateLink() {
         return this.privateLink == null ? Input.empty() : this.privateLink;
@@ -37,7 +37,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceProviderConnection")
-        private final @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+      private final @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
     public Input<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
         return this.resourceProviderConnection == null ? Input.empty() : this.resourceProviderConnection;

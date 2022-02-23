@@ -23,7 +23,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="linkType")
-        private final @Nullable String linkType;
+      private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
@@ -34,7 +34,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-        private final String sourcePropertyName;
+      private final String sourcePropertyName;
 
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
@@ -45,7 +45,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-        private final String targetPropertyName;
+      private final String targetPropertyName;
 
     public String getTargetPropertyName() {
         return this.targetPropertyName;

@@ -25,14 +25,14 @@ public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="columns", required=true)
-        private final List<String> columns;
+      private final List<String> columns;
 
     public List<String> getColumns() {
         return this.columns;
     }
 
     @InputImport(name="countryCode")
-        private final @Nullable DataSetGeoSpatialCountryCode countryCode;
+      private final @Nullable DataSetGeoSpatialCountryCode countryCode;
 
     public Optional<DataSetGeoSpatialCountryCode> getCountryCode() {
         return this.countryCode == null ? Optional.empty() : Optional.ofNullable(this.countryCode);
@@ -43,7 +43,7 @@ public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

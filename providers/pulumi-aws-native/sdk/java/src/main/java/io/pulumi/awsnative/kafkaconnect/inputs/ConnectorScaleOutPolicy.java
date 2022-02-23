@@ -21,7 +21,7 @@ public final class ConnectorScaleOutPolicy extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-        private final Integer cpuUtilizationPercentage;
+      private final Integer cpuUtilizationPercentage;
 
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;

@@ -26,7 +26,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="option")
-        private final @Nullable Input<Either<String,DiffDiskOptions>> option;
+      private final @Nullable Input<Either<String,DiffDiskOptions>> option;
 
     public Input<Either<String,DiffDiskOptions>> getOption() {
         return this.option == null ? Input.empty() : this.option;
@@ -37,7 +37,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="placement")
-        private final @Nullable Input<Either<String,DiffDiskPlacement>> placement;
+      private final @Nullable Input<Either<String,DiffDiskPlacement>> placement;
 
     public Input<Either<String,DiffDiskPlacement>> getPlacement() {
         return this.placement == null ? Input.empty() : this.placement;

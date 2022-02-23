@@ -25,7 +25,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -36,7 +36,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+      private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

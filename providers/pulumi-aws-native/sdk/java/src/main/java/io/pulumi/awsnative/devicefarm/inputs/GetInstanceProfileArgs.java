@@ -13,7 +13,7 @@ public final class GetInstanceProfileArgs extends io.pulumi.resources.InvokeArgs
     public static final GetInstanceProfileArgs Empty = new GetInstanceProfileArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

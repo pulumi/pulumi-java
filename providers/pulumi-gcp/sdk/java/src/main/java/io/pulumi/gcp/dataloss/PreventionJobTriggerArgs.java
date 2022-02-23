@@ -22,7 +22,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inspectJob")
-        private final @Nullable Input<PreventionJobTriggerInspectJobArgs> inspectJob;
+      private final @Nullable Input<PreventionJobTriggerInspectJobArgs> inspectJob;
 
     public Input<PreventionJobTriggerInspectJobArgs> getInspectJob() {
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
@@ -57,7 +57,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -70,7 +70,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -82,7 +82,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="triggers", required=true)
-        private final Input<List<PreventionJobTriggerTriggerArgs>> triggers;
+      private final Input<List<PreventionJobTriggerTriggerArgs>> triggers;
 
     public Input<List<PreventionJobTriggerTriggerArgs>> getTriggers() {
         return this.triggers;

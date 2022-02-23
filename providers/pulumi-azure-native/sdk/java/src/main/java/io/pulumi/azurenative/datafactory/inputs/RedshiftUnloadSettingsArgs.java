@@ -23,7 +23,7 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucketName", required=true)
-        private final Input<Object> bucketName;
+      private final Input<Object> bucketName;
 
     public Input<Object> getBucketName() {
         return this.bucketName;
@@ -34,7 +34,7 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="s3LinkedServiceName", required=true)
-        private final Input<LinkedServiceReferenceArgs> s3LinkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getS3LinkedServiceName() {
         return this.s3LinkedServiceName;

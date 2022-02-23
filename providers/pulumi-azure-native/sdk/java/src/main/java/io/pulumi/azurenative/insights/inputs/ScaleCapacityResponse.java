@@ -21,7 +21,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="default", required=true)
-        private final String $default;
+      private final String $default;
 
     public String get$default() {
         return this.$default;
@@ -32,7 +32,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maximum", required=true)
-        private final String maximum;
+      private final String maximum;
 
     public String getMaximum() {
         return this.maximum;
@@ -43,7 +43,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="minimum", required=true)
-        private final String minimum;
+      private final String minimum;
 
     public String getMinimum() {
         return this.minimum;

@@ -22,7 +22,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appEngineRouting")
-        private final @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
+      private final @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
 
     public Input<JobAppEngineHttpTargetAppEngineRoutingArgs> getAppEngineRouting() {
         return this.appEngineRouting == null ? Input.empty() : this.appEngineRouting;
@@ -36,7 +36,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -48,7 +48,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -59,7 +59,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="httpMethod")
-        private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -74,7 +74,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="relativeUri", required=true)
-        private final Input<String> relativeUri;
+      private final Input<String> relativeUri;
 
     public Input<String> getRelativeUri() {
         return this.relativeUri;

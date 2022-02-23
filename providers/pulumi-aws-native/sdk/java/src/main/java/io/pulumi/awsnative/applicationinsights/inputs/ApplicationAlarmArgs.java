@@ -24,7 +24,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alarmName", required=true)
-        private final Input<String> alarmName;
+      private final Input<String> alarmName;
 
     public Input<String> getAlarmName() {
         return this.alarmName;
@@ -35,7 +35,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="severity")
-        private final @Nullable Input<ApplicationAlarmSeverity> severity;
+      private final @Nullable Input<ApplicationAlarmSeverity> severity;
 
     public Input<ApplicationAlarmSeverity> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;

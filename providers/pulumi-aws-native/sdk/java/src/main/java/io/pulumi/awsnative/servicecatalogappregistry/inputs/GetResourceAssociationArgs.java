@@ -13,7 +13,7 @@ public final class GetResourceAssociationArgs extends io.pulumi.resources.Invoke
     public static final GetResourceAssociationArgs Empty = new GetResourceAssociationArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

@@ -23,7 +23,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expirationTime")
-        private final @Nullable String expirationTime;
+      private final @Nullable String expirationTime;
 
     public Optional<String> getExpirationTime() {
         return this.expirationTime == null ? Optional.empty() : Optional.ofNullable(this.expirationTime);
@@ -34,7 +34,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="registrationTokenOperation")
-        private final @Nullable String registrationTokenOperation;
+      private final @Nullable String registrationTokenOperation;
 
     public Optional<String> getRegistrationTokenOperation() {
         return this.registrationTokenOperation == null ? Optional.empty() : Optional.ofNullable(this.registrationTokenOperation);
@@ -45,7 +45,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="token")
-        private final @Nullable String token;
+      private final @Nullable String token;
 
     public Optional<String> getToken() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);

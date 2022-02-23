@@ -17,7 +17,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recommendationId", required=true)
-        private final String recommendationId;
+      private final String recommendationId;
 
     public String getRecommendationId() {
         return this.recommendationId;
@@ -39,7 +39,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;

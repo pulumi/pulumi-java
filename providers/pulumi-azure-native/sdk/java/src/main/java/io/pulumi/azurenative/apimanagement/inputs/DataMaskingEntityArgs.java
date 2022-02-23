@@ -21,7 +21,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<Either<String,DataMaskingMode>> mode;
+      private final @Nullable Input<Either<String,DataMaskingMode>> mode;
 
     public Input<Either<String,DataMaskingMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -32,7 +32,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

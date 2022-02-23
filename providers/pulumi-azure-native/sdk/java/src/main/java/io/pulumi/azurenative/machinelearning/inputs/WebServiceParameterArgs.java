@@ -24,7 +24,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificateThumbprint")
-        private final @Nullable Input<String> certificateThumbprint;
+      private final @Nullable Input<String> certificateThumbprint;
 
     public Input<String> getCertificateThumbprint() {
         return this.certificateThumbprint == null ? Input.empty() : this.certificateThumbprint;
@@ -35,7 +35,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<Object> value;
+      private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;

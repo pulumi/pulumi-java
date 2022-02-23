@@ -20,7 +20,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -44,7 +44,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -56,7 +56,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -68,7 +68,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-        private final String serviceNamespace;
+      private final String serviceNamespace;
 
     public String getServiceNamespace() {
         return this.serviceNamespace;

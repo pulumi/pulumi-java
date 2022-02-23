@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="agentJobs", required=true)
-        private final List<String> agentJobs;
+      private final List<String> agentJobs;
 
     public List<String> getAgentJobs() {
         return this.agentJobs;
@@ -34,7 +34,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="logins", required=true)
-        private final List<String> logins;
+      private final List<String> logins;
 
     public List<String> getLogins() {
         return this.logins;
@@ -56,7 +56,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-        private final String targetServerBrandVersion;
+      private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -67,7 +67,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-        private final String targetServerVersion;
+      private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;
@@ -78,7 +78,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="validationErrors", required=true)
-        private final List<ReportableExceptionResponse> validationErrors;
+      private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

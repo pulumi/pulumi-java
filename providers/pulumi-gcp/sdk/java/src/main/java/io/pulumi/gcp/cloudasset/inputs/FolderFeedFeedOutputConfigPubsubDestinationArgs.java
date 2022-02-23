@@ -18,7 +18,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="topic", required=true)
-        private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

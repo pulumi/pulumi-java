@@ -122,6 +122,21 @@ public class PrivateEndpointConnectionsComp extends io.pulumi.resources.CustomRe
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateEndpointConnectionsComp(String name) {
+        this(name, PrivateEndpointConnectionsCompArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateEndpointConnectionsComp(String name, PrivateEndpointConnectionsCompArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

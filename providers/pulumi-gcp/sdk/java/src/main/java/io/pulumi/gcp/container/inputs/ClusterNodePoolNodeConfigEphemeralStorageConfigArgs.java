@@ -18,7 +18,7 @@ public final class ClusterNodePoolNodeConfigEphemeralStorageConfigArgs extends i
      * 
      */
     @InputImport(name="localSsdCount", required=true)
-        private final Input<Integer> localSsdCount;
+      private final Input<Integer> localSsdCount;
 
     public Input<Integer> getLocalSsdCount() {
         return this.localSsdCount;

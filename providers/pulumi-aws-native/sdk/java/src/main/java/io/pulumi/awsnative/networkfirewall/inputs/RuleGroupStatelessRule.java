@@ -14,14 +14,14 @@ public final class RuleGroupStatelessRule extends io.pulumi.resources.InvokeArgs
     public static final RuleGroupStatelessRule Empty = new RuleGroupStatelessRule();
 
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
     }
 
     @InputImport(name="ruleDefinition", required=true)
-        private final RuleGroupRuleDefinition ruleDefinition;
+      private final RuleGroupRuleDefinition ruleDefinition;
 
     public RuleGroupRuleDefinition getRuleDefinition() {
         return this.ruleDefinition;

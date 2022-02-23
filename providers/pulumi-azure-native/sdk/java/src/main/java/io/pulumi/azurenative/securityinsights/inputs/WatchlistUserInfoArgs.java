@@ -23,7 +23,7 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;

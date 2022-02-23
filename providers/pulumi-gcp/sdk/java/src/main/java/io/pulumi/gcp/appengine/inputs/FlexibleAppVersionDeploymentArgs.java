@@ -24,7 +24,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudBuildOptions")
-        private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsArgs> cloudBuildOptions;
+      private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsArgs> cloudBuildOptions;
 
     public Input<FlexibleAppVersionDeploymentCloudBuildOptionsArgs> getCloudBuildOptions() {
         return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="container")
-        private final @Nullable Input<FlexibleAppVersionDeploymentContainerArgs> container;
+      private final @Nullable Input<FlexibleAppVersionDeploymentContainerArgs> container;
 
     public Input<FlexibleAppVersionDeploymentContainerArgs> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -49,7 +49,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="files")
-        private final @Nullable Input<List<FlexibleAppVersionDeploymentFileArgs>> files;
+      private final @Nullable Input<List<FlexibleAppVersionDeploymentFileArgs>> files;
 
     public Input<List<FlexibleAppVersionDeploymentFileArgs>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -61,7 +61,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="zip")
-        private final @Nullable Input<FlexibleAppVersionDeploymentZipArgs> zip;
+      private final @Nullable Input<FlexibleAppVersionDeploymentZipArgs> zip;
 
     public Input<FlexibleAppVersionDeploymentZipArgs> getZip() {
         return this.zip == null ? Input.empty() : this.zip;

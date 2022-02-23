@@ -23,7 +23,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="secureValue")
-        private final @Nullable String secureValue;
+      private final @Nullable String secureValue;
 
     public Optional<String> getSecureValue() {
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
@@ -45,7 +45,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

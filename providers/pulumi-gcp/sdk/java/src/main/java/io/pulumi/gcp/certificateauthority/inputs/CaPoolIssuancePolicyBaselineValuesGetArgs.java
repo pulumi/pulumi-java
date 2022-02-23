@@ -25,7 +25,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="additionalExtensions")
-        private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
+      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="aiaOcspServers")
-        private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -49,7 +49,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="caOptions", required=true)
-        private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
+      private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
 
     public Input<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> getCaOptions() {
         return this.caOptions;
@@ -61,7 +61,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="keyUsage", required=true)
-        private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
+      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> getKeyUsage() {
         return this.keyUsage;
@@ -73,7 +73,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="policyIds")
-        private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
+      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;

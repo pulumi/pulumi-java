@@ -135,6 +135,21 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ApplicationGatewayPrivateEndpointConnection(String name) {
+        this(name, ApplicationGatewayPrivateEndpointConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApplicationGatewayPrivateEndpointConnection(String name, ApplicationGatewayPrivateEndpointConnectionArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

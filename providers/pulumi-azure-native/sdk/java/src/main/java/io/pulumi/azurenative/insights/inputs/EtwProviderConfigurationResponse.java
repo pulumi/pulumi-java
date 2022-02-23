@@ -15,14 +15,14 @@ public final class EtwProviderConfigurationResponse extends io.pulumi.resources.
     public static final EtwProviderConfigurationResponse Empty = new EtwProviderConfigurationResponse();
 
     @InputImport(name="events", required=true)
-        private final List<EtwEventConfigurationResponse> events;
+      private final List<EtwEventConfigurationResponse> events;
 
     public List<EtwEventConfigurationResponse> getEvents() {
         return this.events;
     }
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

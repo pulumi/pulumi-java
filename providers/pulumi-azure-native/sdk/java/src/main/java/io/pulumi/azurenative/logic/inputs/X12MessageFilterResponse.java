@@ -21,7 +21,7 @@ public final class X12MessageFilterResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="messageFilterType", required=true)
-        private final String messageFilterType;
+      private final String messageFilterType;
 
     public String getMessageFilterType() {
         return this.messageFilterType;

@@ -24,7 +24,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="modifiedPath")
-        private final @Nullable Input<String> modifiedPath;
+      private final @Nullable Input<String> modifiedPath;
 
     public Input<String> getModifiedPath() {
         return this.modifiedPath == null ? Input.empty() : this.modifiedPath;
@@ -35,7 +35,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="modifiedQueryString")
-        private final @Nullable Input<String> modifiedQueryString;
+      private final @Nullable Input<String> modifiedQueryString;
 
     public Input<String> getModifiedQueryString() {
         return this.modifiedQueryString == null ? Input.empty() : this.modifiedQueryString;
@@ -46,7 +46,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reroute")
-        private final @Nullable Input<Boolean> reroute;
+      private final @Nullable Input<Boolean> reroute;
 
     public Input<Boolean> getReroute() {
         return this.reroute == null ? Input.empty() : this.reroute;

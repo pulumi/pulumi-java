@@ -27,14 +27,14 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="algorithm")
-        private final @Nullable Input<Either<String,Algorithm>> algorithm;
+      private final @Nullable Input<Either<String,Algorithm>> algorithm;
 
     public Input<Either<String,Algorithm>> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
     }
 
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -45,7 +45,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameterNameOverride")
-        private final @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
+      private final @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
     public Input<List<UrlSigningParamIdentifierArgs>> getParameterNameOverride() {
         return this.parameterNameOverride == null ? Input.empty() : this.parameterNameOverride;

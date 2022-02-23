@@ -28,7 +28,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -40,7 +40,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="streams")
-        private final @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
+      private final @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
     public Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -51,7 +51,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="xPathQueries")
-        private final @Nullable Input<List<String>> xPathQueries;
+      private final @Nullable Input<List<String>> xPathQueries;
 
     public Input<List<String>> getXPathQueries() {
         return this.xPathQueries == null ? Input.empty() : this.xPathQueries;

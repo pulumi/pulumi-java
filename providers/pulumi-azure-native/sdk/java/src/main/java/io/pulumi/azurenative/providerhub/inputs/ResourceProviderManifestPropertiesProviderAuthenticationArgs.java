@@ -15,7 +15,7 @@ public final class ResourceProviderManifestPropertiesProviderAuthenticationArgs 
     public static final ResourceProviderManifestPropertiesProviderAuthenticationArgs Empty = new ResourceProviderManifestPropertiesProviderAuthenticationArgs();
 
     @InputImport(name="allowedAudiences", required=true)
-        private final Input<List<String>> allowedAudiences;
+      private final Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences;

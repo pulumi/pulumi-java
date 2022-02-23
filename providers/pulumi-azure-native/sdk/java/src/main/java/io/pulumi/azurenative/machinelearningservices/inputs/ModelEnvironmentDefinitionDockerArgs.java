@@ -24,7 +24,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseDockerfile")
-        private final @Nullable Input<String> baseDockerfile;
+      private final @Nullable Input<String> baseDockerfile;
 
     public Input<String> getBaseDockerfile() {
         return this.baseDockerfile == null ? Input.empty() : this.baseDockerfile;
@@ -35,7 +35,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseImage")
-        private final @Nullable Input<String> baseImage;
+      private final @Nullable Input<String> baseImage;
 
     public Input<String> getBaseImage() {
         return this.baseImage == null ? Input.empty() : this.baseImage;
@@ -46,7 +46,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseImageRegistry")
-        private final @Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
+      private final @Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
     public Input<ModelDockerSectionBaseImageRegistryArgs> getBaseImageRegistry() {
         return this.baseImageRegistry == null ? Input.empty() : this.baseImageRegistry;

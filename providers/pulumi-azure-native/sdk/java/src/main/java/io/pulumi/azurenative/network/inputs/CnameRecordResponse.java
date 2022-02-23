@@ -23,7 +23,7 @@ public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cname")
-        private final @Nullable String cname;
+      private final @Nullable String cname;
 
     public Optional<String> getCname() {
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);

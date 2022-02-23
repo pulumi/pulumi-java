@@ -25,7 +25,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computeSize")
-        private final @Nullable String computeSize;
+      private final @Nullable String computeSize;
 
     public Optional<String> getComputeSize() {
         return this.computeSize == null ? Optional.empty() : Optional.ofNullable(this.computeSize);
@@ -36,7 +36,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memory")
-        private final @Nullable Double memory;
+      private final @Nullable Double memory;
 
     public Optional<Double> getMemory() {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
@@ -47,7 +47,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numberOfCores")
-        private final @Nullable Integer numberOfCores;
+      private final @Nullable Integer numberOfCores;
 
     public Optional<Integer> getNumberOfCores() {
         return this.numberOfCores == null ? Optional.empty() : Optional.ofNullable(this.numberOfCores);
@@ -58,7 +58,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="price")
-        private final @Nullable Double price;
+      private final @Nullable Double price;
 
     public Optional<Double> getPrice() {
         return this.price == null ? Optional.empty() : Optional.ofNullable(this.price);

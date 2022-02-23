@@ -28,7 +28,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deadLetterTopic")
-        private final @Nullable Input<String> deadLetterTopic;
+      private final @Nullable Input<String> deadLetterTopic;
 
     public Input<String> getDeadLetterTopic() {
         return this.deadLetterTopic == null ? Input.empty() : this.deadLetterTopic;
@@ -46,7 +46,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxDeliveryAttempts")
-        private final @Nullable Input<Integer> maxDeliveryAttempts;
+      private final @Nullable Input<Integer> maxDeliveryAttempts;
 
     public Input<Integer> getMaxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Input.empty() : this.maxDeliveryAttempts;

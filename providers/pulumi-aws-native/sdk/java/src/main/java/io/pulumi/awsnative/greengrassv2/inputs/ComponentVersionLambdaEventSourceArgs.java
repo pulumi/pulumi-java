@@ -16,14 +16,14 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     public static final ComponentVersionLambdaEventSourceArgs Empty = new ComponentVersionLambdaEventSourceArgs();
 
     @InputImport(name="topic")
-        private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<ComponentVersionLambdaEventSourceType> type;
+      private final @Nullable Input<ComponentVersionLambdaEventSourceType> type;
 
     public Input<ComponentVersionLambdaEventSourceType> getType() {
         return this.type == null ? Input.empty() : this.type;

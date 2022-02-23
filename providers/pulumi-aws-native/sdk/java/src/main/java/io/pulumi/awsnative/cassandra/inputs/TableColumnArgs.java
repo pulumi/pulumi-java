@@ -14,14 +14,14 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableColumnArgs Empty = new TableColumnArgs();
 
     @InputImport(name="columnName", required=true)
-        private final Input<String> columnName;
+      private final Input<String> columnName;
 
     public Input<String> getColumnName() {
         return this.columnName;
     }
 
     @InputImport(name="columnType", required=true)
-        private final Input<String> columnType;
+      private final Input<String> columnType;
 
     public Input<String> getColumnType() {
         return this.columnType;

@@ -22,7 +22,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitment")
-        private final @Nullable Input<String> commitment;
+      private final @Nullable Input<String> commitment;
 
     public Input<String> getCommitment() {
         return this.commitment == null ? Input.empty() : this.commitment;
@@ -33,7 +33,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-        private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -44,7 +44,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -84,7 +84,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -96,7 +96,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSettings")
-        private final @Nullable Input<ReservationShareSettingsGetArgs> shareSettings;
+      private final @Nullable Input<ReservationShareSettingsGetArgs> shareSettings;
 
     public Input<ReservationShareSettingsGetArgs> getShareSettings() {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
@@ -108,7 +108,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservation")
-        private final @Nullable Input<ReservationSpecificReservationGetArgs> specificReservation;
+      private final @Nullable Input<ReservationSpecificReservationGetArgs> specificReservation;
 
     public Input<ReservationSpecificReservationGetArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
@@ -121,7 +121,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservationRequired")
-        private final @Nullable Input<Boolean> specificReservationRequired;
+      private final @Nullable Input<Boolean> specificReservationRequired;
 
     public Input<Boolean> getSpecificReservationRequired() {
         return this.specificReservationRequired == null ? Input.empty() : this.specificReservationRequired;
@@ -132,7 +132,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -143,7 +143,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

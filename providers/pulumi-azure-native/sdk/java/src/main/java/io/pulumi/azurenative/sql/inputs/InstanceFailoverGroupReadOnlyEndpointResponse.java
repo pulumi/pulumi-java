@@ -23,7 +23,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse extends io.pulu
      * 
      */
     @InputImport(name="failoverPolicy")
-        private final @Nullable String failoverPolicy;
+      private final @Nullable String failoverPolicy;
 
     public Optional<String> getFailoverPolicy() {
         return this.failoverPolicy == null ? Optional.empty() : Optional.ofNullable(this.failoverPolicy);

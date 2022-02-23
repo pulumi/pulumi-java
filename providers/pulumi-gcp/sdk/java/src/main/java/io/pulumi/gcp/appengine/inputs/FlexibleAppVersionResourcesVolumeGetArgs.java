@@ -19,7 +19,7 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sizeGb", required=true)
-        private final Input<Integer> sizeGb;
+      private final Input<Integer> sizeGb;
 
     public Input<Integer> getSizeGb() {
         return this.sizeGb;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="volumeType", required=true)
-        private final Input<String> volumeType;
+      private final Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType;

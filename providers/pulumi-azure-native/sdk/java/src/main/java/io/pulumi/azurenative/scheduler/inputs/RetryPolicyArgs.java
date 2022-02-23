@@ -21,7 +21,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryCount")
-        private final @Nullable Input<Integer> retryCount;
+      private final @Nullable Input<Integer> retryCount;
 
     public Input<Integer> getRetryCount() {
         return this.retryCount == null ? Input.empty() : this.retryCount;
@@ -32,7 +32,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryInterval")
-        private final @Nullable Input<String> retryInterval;
+      private final @Nullable Input<String> retryInterval;
 
     public Input<String> getRetryInterval() {
         return this.retryInterval == null ? Input.empty() : this.retryInterval;
@@ -43,7 +43,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryType")
-        private final @Nullable Input<RetryType> retryType;
+      private final @Nullable Input<RetryType> retryType;
 
     public Input<RetryType> getRetryType() {
         return this.retryType == null ? Input.empty() : this.retryType;

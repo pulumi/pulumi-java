@@ -17,7 +17,7 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-        private final String cacheName;
+      private final String cacheName;
 
     public String getCacheName() {
         return this.cacheName;
@@ -28,7 +28,7 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -31,7 +31,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="providerSpecificInput")
-        private final @Nullable Input<Object> providerSpecificInput;
+      private final @Nullable Input<Object> providerSpecificInput;
 
     public Input<Object> getProviderSpecificInput() {
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;

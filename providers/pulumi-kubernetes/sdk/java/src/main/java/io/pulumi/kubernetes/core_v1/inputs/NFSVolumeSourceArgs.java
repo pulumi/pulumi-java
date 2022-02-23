@@ -24,7 +24,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -35,7 +35,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -46,7 +46,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="server", required=true)
-        private final Input<String> server;
+      private final Input<String> server;
 
     public Input<String> getServer() {
         return this.server;

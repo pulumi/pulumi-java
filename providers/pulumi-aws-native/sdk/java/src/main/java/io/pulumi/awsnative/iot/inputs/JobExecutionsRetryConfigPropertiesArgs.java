@@ -16,7 +16,7 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends io.pulumi.reso
     public static final JobExecutionsRetryConfigPropertiesArgs Empty = new JobExecutionsRetryConfigPropertiesArgs();
 
     @InputImport(name="retryCriteriaList")
-        private final @Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
+      private final @Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
 
     public Input<List<JobTemplateRetryCriteriaArgs>> getRetryCriteriaList() {
         return this.retryCriteriaList == null ? Input.empty() : this.retryCriteriaList;

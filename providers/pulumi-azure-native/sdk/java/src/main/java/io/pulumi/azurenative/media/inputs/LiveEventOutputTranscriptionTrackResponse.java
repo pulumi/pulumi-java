@@ -21,7 +21,7 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="trackName", required=true)
-        private final String trackName;
+      private final String trackName;
 
     public String getTrackName() {
         return this.trackName;

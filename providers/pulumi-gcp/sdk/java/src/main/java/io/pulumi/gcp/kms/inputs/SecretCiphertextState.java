@@ -20,7 +20,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalAuthenticatedData")
-        private final @Nullable Input<String> additionalAuthenticatedData;
+      private final @Nullable Input<String> additionalAuthenticatedData;
 
     public Input<String> getAdditionalAuthenticatedData() {
         return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
@@ -31,7 +31,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ciphertext")
-        private final @Nullable Input<String> ciphertext;
+      private final @Nullable Input<String> ciphertext;
 
     public Input<String> getCiphertext() {
         return this.ciphertext == null ? Input.empty() : this.ciphertext;
@@ -43,7 +43,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cryptoKey")
-        private final @Nullable Input<String> cryptoKey;
+      private final @Nullable Input<String> cryptoKey;
 
     public Input<String> getCryptoKey() {
         return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
@@ -55,7 +55,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="plaintext")
-        private final @Nullable Input<String> plaintext;
+      private final @Nullable Input<String> plaintext;
 
     public Input<String> getPlaintext() {
         return this.plaintext == null ? Input.empty() : this.plaintext;

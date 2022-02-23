@@ -13,7 +13,7 @@ public final class GlobalTableContributorInsightsSpecification extends io.pulumi
     public static final GlobalTableContributorInsightsSpecification Empty = new GlobalTableContributorInsightsSpecification();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

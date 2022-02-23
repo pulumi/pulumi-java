@@ -17,21 +17,21 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupStatefulRuleArgs Empty = new RuleGroupStatefulRuleArgs();
 
     @InputImport(name="action", required=true)
-        private final Input<RuleGroupStatefulRuleAction> action;
+      private final Input<RuleGroupStatefulRuleAction> action;
 
     public Input<RuleGroupStatefulRuleAction> getAction() {
         return this.action;
     }
 
     @InputImport(name="header", required=true)
-        private final Input<RuleGroupHeaderArgs> header;
+      private final Input<RuleGroupHeaderArgs> header;
 
     public Input<RuleGroupHeaderArgs> getHeader() {
         return this.header;
     }
 
     @InputImport(name="ruleOptions", required=true)
-        private final Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
+      private final Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
     public Input<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
         return this.ruleOptions;

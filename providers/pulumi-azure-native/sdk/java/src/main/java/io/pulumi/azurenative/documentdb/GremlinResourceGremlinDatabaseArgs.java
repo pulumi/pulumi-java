@@ -22,7 +22,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName")
-        private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -44,7 +44,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -66,7 +66,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resource", required=true)
-        private final Input<GremlinDatabaseResourceArgs> resource;
+      private final Input<GremlinDatabaseResourceArgs> resource;
 
     public Input<GremlinDatabaseResourceArgs> getResource() {
         return this.resource;
@@ -77,7 +77,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

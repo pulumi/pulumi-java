@@ -23,7 +23,7 @@ public final class CopyVideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -35,7 +35,7 @@ public final class CopyVideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

@@ -25,7 +25,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldNames")
-        private final @Nullable Input<List<String>> fieldNames;
+      private final @Nullable Input<List<String>> fieldNames;
 
     public Input<List<String>> getFieldNames() {
         return this.fieldNames == null ? Input.empty() : this.fieldNames;
@@ -36,7 +36,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="standardIdentifiers")
-        private final @Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
+      private final @Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
     public Input<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {
         return this.standardIdentifiers == null ? Input.empty() : this.standardIdentifiers;

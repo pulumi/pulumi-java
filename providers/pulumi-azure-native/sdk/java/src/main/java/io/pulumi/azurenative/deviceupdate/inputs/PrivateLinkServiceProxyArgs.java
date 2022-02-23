@@ -26,7 +26,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupConnectivityInformation")
-        private final @Nullable Input<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
+      private final @Nullable Input<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
     public Input<List<GroupConnectivityInformationArgs>> getGroupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? Input.empty() : this.groupConnectivityInformation;
@@ -37,7 +37,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="remotePrivateLinkServiceConnectionState")
-        private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
+      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getRemotePrivateLinkServiceConnectionState() {
         return this.remotePrivateLinkServiceConnectionState == null ? Input.empty() : this.remotePrivateLinkServiceConnectionState;

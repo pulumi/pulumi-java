@@ -23,7 +23,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="defaultDatabase", required=true)
-        private final String defaultDatabase;
+      private final String defaultDatabase;
 
     public String getDefaultDatabase() {
         return this.defaultDatabase;
@@ -34,7 +34,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -56,7 +56,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="loginType", required=true)
-        private final String loginType;
+      private final String loginType;
 
     public String getLoginType() {
         return this.loginType;
@@ -67,7 +67,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="migrationEligibility", required=true)
-        private final MigrationEligibilityInfoResponse migrationEligibility;
+      private final MigrationEligibilityInfoResponse migrationEligibility;
 
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
@@ -78,7 +78,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -90,7 +90,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * 
      */
     @InputImport(name="resultType", required=true)
-        private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;

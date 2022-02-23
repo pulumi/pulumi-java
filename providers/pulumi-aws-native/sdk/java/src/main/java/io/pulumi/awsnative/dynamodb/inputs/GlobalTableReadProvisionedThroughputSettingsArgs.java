@@ -16,14 +16,14 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     public static final GlobalTableReadProvisionedThroughputSettingsArgs Empty = new GlobalTableReadProvisionedThroughputSettingsArgs();
 
     @InputImport(name="readCapacityAutoScalingSettings")
-        private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
+      private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
 
     public Input<GlobalTableCapacityAutoScalingSettingsArgs> getReadCapacityAutoScalingSettings() {
         return this.readCapacityAutoScalingSettings == null ? Input.empty() : this.readCapacityAutoScalingSettings;
     }
 
     @InputImport(name="readCapacityUnits")
-        private final @Nullable Input<Integer> readCapacityUnits;
+      private final @Nullable Input<Integer> readCapacityUnits;
 
     public Input<Integer> getReadCapacityUnits() {
         return this.readCapacityUnits == null ? Input.empty() : this.readCapacityUnits;

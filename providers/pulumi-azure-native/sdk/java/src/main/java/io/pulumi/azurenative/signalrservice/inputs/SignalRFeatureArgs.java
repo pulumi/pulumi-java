@@ -28,7 +28,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flag", required=true)
-        private final Input<Either<String,FeatureFlags>> flag;
+      private final Input<Either<String,FeatureFlags>> flag;
 
     public Input<Either<String,FeatureFlags>> getFlag() {
         return this.flag;
@@ -39,7 +39,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -50,7 +50,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

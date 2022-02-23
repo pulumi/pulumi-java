@@ -21,7 +21,7 @@ public final class EnterpriseKeyIosSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowAllBundleIds")
-        private final @Nullable Input<Boolean> allowAllBundleIds;
+      private final @Nullable Input<Boolean> allowAllBundleIds;
 
     public Input<Boolean> getAllowAllBundleIds() {
         return this.allowAllBundleIds == null ? Input.empty() : this.allowAllBundleIds;
@@ -32,7 +32,7 @@ public final class EnterpriseKeyIosSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedBundleIds")
-        private final @Nullable Input<List<String>> allowedBundleIds;
+      private final @Nullable Input<List<String>> allowedBundleIds;
 
     public Input<List<String>> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;

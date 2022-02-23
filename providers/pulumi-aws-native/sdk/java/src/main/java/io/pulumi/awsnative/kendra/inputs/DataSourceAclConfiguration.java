@@ -13,7 +13,7 @@ public final class DataSourceAclConfiguration extends io.pulumi.resources.Invoke
     public static final DataSourceAclConfiguration Empty = new DataSourceAclConfiguration();
 
     @InputImport(name="allowedGroupsColumnName", required=true)
-        private final String allowedGroupsColumnName;
+      private final String allowedGroupsColumnName;
 
     public String getAllowedGroupsColumnName() {
         return this.allowedGroupsColumnName;

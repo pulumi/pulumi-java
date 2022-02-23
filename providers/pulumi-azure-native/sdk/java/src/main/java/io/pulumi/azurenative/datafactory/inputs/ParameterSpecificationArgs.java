@@ -26,7 +26,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultValue")
-        private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -37,7 +37,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ParameterType>> type;
+      private final Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type;

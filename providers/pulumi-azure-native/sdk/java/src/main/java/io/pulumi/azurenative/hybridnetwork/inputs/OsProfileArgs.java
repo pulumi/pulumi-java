@@ -25,7 +25,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-        private final @Nullable Input<String> adminUsername;
+      private final @Nullable Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername == null ? Input.empty() : this.adminUsername;
@@ -36,7 +36,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customData")
-        private final @Nullable Input<String> customData;
+      private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -47,7 +47,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDataRequired")
-        private final @Nullable Input<Boolean> customDataRequired;
+      private final @Nullable Input<Boolean> customDataRequired;
 
     public Input<Boolean> getCustomDataRequired() {
         return this.customDataRequired == null ? Input.empty() : this.customDataRequired;
@@ -58,7 +58,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxConfiguration")
-        private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+      private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
 
     public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
         return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;

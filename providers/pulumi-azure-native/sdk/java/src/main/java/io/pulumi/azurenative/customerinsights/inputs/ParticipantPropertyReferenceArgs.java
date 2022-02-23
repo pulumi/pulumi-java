@@ -22,7 +22,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-        private final Input<String> sourcePropertyName;
+      private final Input<String> sourcePropertyName;
 
     public Input<String> getSourcePropertyName() {
         return this.sourcePropertyName;
@@ -33,7 +33,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-        private final Input<String> targetPropertyName;
+      private final Input<String> targetPropertyName;
 
     public Input<String> getTargetPropertyName() {
         return this.targetPropertyName;

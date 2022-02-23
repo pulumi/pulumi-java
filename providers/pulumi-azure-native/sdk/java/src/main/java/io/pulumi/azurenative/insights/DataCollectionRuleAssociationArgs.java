@@ -19,7 +19,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="associationName")
-        private final @Nullable Input<String> associationName;
+      private final @Nullable Input<String> associationName;
 
     public Input<String> getAssociationName() {
         return this.associationName == null ? Input.empty() : this.associationName;
@@ -30,7 +30,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataCollectionRuleId")
-        private final @Nullable Input<String> dataCollectionRuleId;
+      private final @Nullable Input<String> dataCollectionRuleId;
 
     public Input<String> getDataCollectionRuleId() {
         return this.dataCollectionRuleId == null ? Input.empty() : this.dataCollectionRuleId;
@@ -41,7 +41,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final Input<String> resourceUri;
+      private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;

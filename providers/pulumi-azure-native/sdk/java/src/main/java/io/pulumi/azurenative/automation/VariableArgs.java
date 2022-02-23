@@ -20,7 +20,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -31,7 +31,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEncrypted")
-        private final @Nullable Input<Boolean> isEncrypted;
+      private final @Nullable Input<Boolean> isEncrypted;
 
     public Input<Boolean> getIsEncrypted() {
         return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
@@ -53,7 +53,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -64,7 +64,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -86,7 +86,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variableName")
-        private final @Nullable Input<String> variableName;
+      private final @Nullable Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName == null ? Input.empty() : this.variableName;

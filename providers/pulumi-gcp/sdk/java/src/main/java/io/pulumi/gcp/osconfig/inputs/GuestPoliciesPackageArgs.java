@@ -25,7 +25,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="desiredState")
-        private final @Nullable Input<String> desiredState;
+      private final @Nullable Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState == null ? Input.empty() : this.desiredState;
@@ -42,7 +42,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="manager")
-        private final @Nullable Input<String> manager;
+      private final @Nullable Input<String> manager;
 
     public Input<String> getManager() {
         return this.manager == null ? Input.empty() : this.manager;
@@ -56,7 +56,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

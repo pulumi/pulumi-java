@@ -24,7 +24,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateArn")
-        private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -35,7 +35,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -46,7 +46,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -57,7 +57,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="systemIds", required=true)
-        private final Input<List<String>> systemIds;
+      private final Input<List<String>> systemIds;
 
     public Input<List<String>> getSystemIds() {
         return this.systemIds;
@@ -68,7 +68,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

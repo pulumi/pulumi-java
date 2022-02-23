@@ -13,7 +13,7 @@ public final class GetGeofenceCollectionArgs extends io.pulumi.resources.InvokeA
     public static final GetGeofenceCollectionArgs Empty = new GetGeofenceCollectionArgs();
 
     @InputImport(name="collectionName", required=true)
-        private final String collectionName;
+      private final String collectionName;
 
     public String getCollectionName() {
         return this.collectionName;

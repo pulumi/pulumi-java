@@ -165,6 +165,21 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForO365ManagementActivityAPI(String name) {
+        this(name, PrivateLinkServicesForO365ManagementActivityAPIArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForO365ManagementActivityAPI(String name, PrivateLinkServicesForO365ManagementActivityAPIArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

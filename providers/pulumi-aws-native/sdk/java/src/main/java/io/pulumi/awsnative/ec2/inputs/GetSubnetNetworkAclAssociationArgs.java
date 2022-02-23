@@ -13,7 +13,7 @@ public final class GetSubnetNetworkAclAssociationArgs extends io.pulumi.resource
     public static final GetSubnetNetworkAclAssociationArgs Empty = new GetSubnetNetworkAclAssociationArgs();
 
     @InputImport(name="associationId", required=true)
-        private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;

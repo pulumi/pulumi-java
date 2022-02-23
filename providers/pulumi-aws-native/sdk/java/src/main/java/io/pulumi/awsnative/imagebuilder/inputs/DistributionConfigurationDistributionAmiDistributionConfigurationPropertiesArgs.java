@@ -26,7 +26,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="amiTags")
-        private final @Nullable Input<Object> amiTags;
+      private final @Nullable Input<Object> amiTags;
 
     public Input<Object> getAmiTags() {
         return this.amiTags == null ? Input.empty() : this.amiTags;
@@ -37,7 +37,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -59,7 +59,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="launchPermissionConfiguration")
-        private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration;
+      private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration;
 
     public Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> getLaunchPermissionConfiguration() {
         return this.launchPermissionConfiguration == null ? Input.empty() : this.launchPermissionConfiguration;
@@ -70,7 +70,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="targetAccountIds")
-        private final @Nullable Input<List<String>> targetAccountIds;
+      private final @Nullable Input<List<String>> targetAccountIds;
 
     public Input<List<String>> getTargetAccountIds() {
         return this.targetAccountIds == null ? Input.empty() : this.targetAccountIds;

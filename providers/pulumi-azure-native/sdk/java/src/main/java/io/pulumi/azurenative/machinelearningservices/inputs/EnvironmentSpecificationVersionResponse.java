@@ -31,7 +31,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="condaFile")
-        private final @Nullable String condaFile;
+      private final @Nullable String condaFile;
 
     public Optional<String> getCondaFile() {
         return this.condaFile == null ? Optional.empty() : Optional.ofNullable(this.condaFile);
@@ -42,7 +42,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -53,7 +53,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="docker")
-        private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
+      private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
 
     public Either<DockerBuildResponse,DockerImageResponse> getDocker() {
         return this.docker == null ? null : this.docker;
@@ -65,7 +65,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="environmentSpecificationType", required=true)
-        private final String environmentSpecificationType;
+      private final String environmentSpecificationType;
 
     public String getEnvironmentSpecificationType() {
         return this.environmentSpecificationType;
@@ -76,7 +76,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="inferenceContainerProperties")
-        private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
+      private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
 
     public Optional<InferenceContainerPropertiesResponse> getInferenceContainerProperties() {
         return this.inferenceContainerProperties == null ? Optional.empty() : Optional.ofNullable(this.inferenceContainerProperties);
@@ -87,7 +87,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isAnonymous")
-        private final @Nullable Boolean isAnonymous;
+      private final @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
@@ -98,7 +98,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -109,7 +109,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

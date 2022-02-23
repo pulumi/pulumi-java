@@ -21,21 +21,21 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
     public static final ServiceCatalogProvisioningDetailsPropertiesArgs Empty = new ServiceCatalogProvisioningDetailsPropertiesArgs();
 
     @InputImport(name="pathId")
-        private final @Nullable Input<String> pathId;
+      private final @Nullable Input<String> pathId;
 
     public Input<String> getPathId() {
         return this.pathId == null ? Input.empty() : this.pathId;
     }
 
     @InputImport(name="productId", required=true)
-        private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="provisioningArtifactId")
-        private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
@@ -46,7 +46,7 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="provisioningParameters")
-        private final @Nullable Input<List<ProjectProvisioningParameterArgs>> provisioningParameters;
+      private final @Nullable Input<List<ProjectProvisioningParameterArgs>> provisioningParameters;
 
     public Input<List<ProjectProvisioningParameterArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;

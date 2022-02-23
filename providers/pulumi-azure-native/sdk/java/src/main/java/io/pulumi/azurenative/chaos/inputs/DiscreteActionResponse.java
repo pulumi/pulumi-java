@@ -23,7 +23,7 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final List<KeyValuePairResponse> parameters;
+      private final List<KeyValuePairResponse> parameters;
 
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
@@ -45,7 +45,7 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="selectorId", required=true)
-        private final String selectorId;
+      private final String selectorId;
 
     public String getSelectorId() {
         return this.selectorId;
@@ -57,7 +57,7 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

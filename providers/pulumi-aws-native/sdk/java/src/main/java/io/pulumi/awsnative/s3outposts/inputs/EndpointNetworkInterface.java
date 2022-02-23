@@ -17,7 +17,7 @@ public final class EndpointNetworkInterface extends io.pulumi.resources.InvokeAr
     public static final EndpointNetworkInterface Empty = new EndpointNetworkInterface();
 
     @InputImport(name="networkInterfaceId", required=true)
-        private final String networkInterfaceId;
+      private final String networkInterfaceId;
 
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;

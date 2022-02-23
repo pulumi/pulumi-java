@@ -14,7 +14,7 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
     public static final MultiRegionAccessPointRegionArgs Empty = new MultiRegionAccessPointRegionArgs();
 
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;

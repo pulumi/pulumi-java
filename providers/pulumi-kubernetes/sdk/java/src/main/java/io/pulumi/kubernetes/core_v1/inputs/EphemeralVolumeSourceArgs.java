@@ -24,7 +24,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -41,7 +41,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="volumeClaimTemplate")
-        private final @Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
+      private final @Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
     public Input<PersistentVolumeClaimTemplateArgs> getVolumeClaimTemplate() {
         return this.volumeClaimTemplate == null ? Input.empty() : this.volumeClaimTemplate;

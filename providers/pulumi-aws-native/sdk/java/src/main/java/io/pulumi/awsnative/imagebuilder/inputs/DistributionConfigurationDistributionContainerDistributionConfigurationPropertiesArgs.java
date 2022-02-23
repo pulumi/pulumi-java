@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="containerTags")
-        private final @Nullable Input<List<String>> containerTags;
+      private final @Nullable Input<List<String>> containerTags;
 
     public Input<List<String>> getContainerTags() {
         return this.containerTags == null ? Input.empty() : this.containerTags;
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="targetRepository")
-        private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
+      private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
 
     public Input<DistributionConfigurationTargetContainerRepositoryArgs> getTargetRepository() {
         return this.targetRepository == null ? Input.empty() : this.targetRepository;

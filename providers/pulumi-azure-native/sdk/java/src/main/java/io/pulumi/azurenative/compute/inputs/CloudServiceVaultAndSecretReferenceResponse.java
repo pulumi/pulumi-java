@@ -16,14 +16,14 @@ public final class CloudServiceVaultAndSecretReferenceResponse extends io.pulumi
     public static final CloudServiceVaultAndSecretReferenceResponse Empty = new CloudServiceVaultAndSecretReferenceResponse();
 
     @InputImport(name="secretUrl")
-        private final @Nullable String secretUrl;
+      private final @Nullable String secretUrl;
 
     public Optional<String> getSecretUrl() {
         return this.secretUrl == null ? Optional.empty() : Optional.ofNullable(this.secretUrl);
     }
 
     @InputImport(name="sourceVault")
-        private final @Nullable SubResourceResponse sourceVault;
+      private final @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> getSourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);

@@ -17,7 +17,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="certificateOrderName", required=true)
-        private final String certificateOrderName;
+      private final String certificateOrderName;
 
     public String getCertificateOrderName() {
         return this.certificateOrderName;
@@ -28,7 +28,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

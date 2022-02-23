@@ -24,7 +24,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nonResourceAttributes")
-        private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
+      private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Input<NonResourceAttributesArgs> getNonResourceAttributes() {
         return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
@@ -35,7 +35,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceAttributes")
-        private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+      private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
 
     public Input<ResourceAttributesArgs> getResourceAttributes() {
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;

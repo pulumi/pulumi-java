@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="listUrl", required=true)
-        private final Input<String> listUrl;
+      private final Input<String> listUrl;
 
     public Input<String> getListUrl() {
         return this.listUrl;

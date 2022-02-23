@@ -14,21 +14,21 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     public static final ServiceActionAssociationArgs Empty = new ServiceActionAssociationArgs();
 
     @InputImport(name="productId", required=true)
-        private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="provisioningArtifactId", required=true)
-        private final Input<String> provisioningArtifactId;
+      private final Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @InputImport(name="serviceActionId", required=true)
-        private final Input<String> serviceActionId;
+      private final Input<String> serviceActionId;
 
     public Input<String> getServiceActionId() {
         return this.serviceActionId;

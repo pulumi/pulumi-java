@@ -25,7 +25,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exec")
-        private final @Nullable Input<ContainerExecArgs> exec;
+      private final @Nullable Input<ContainerExecArgs> exec;
 
     public Input<ContainerExecArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -36,7 +36,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-        private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -47,7 +47,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpGet")
-        private final @Nullable Input<ContainerHttpGetArgs> httpGet;
+      private final @Nullable Input<ContainerHttpGetArgs> httpGet;
 
     public Input<ContainerHttpGetArgs> getHttpGet() {
         return this.httpGet == null ? Input.empty() : this.httpGet;
@@ -58,7 +58,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelaySeconds")
-        private final @Nullable Input<Integer> initialDelaySeconds;
+      private final @Nullable Input<Integer> initialDelaySeconds;
 
     public Input<Integer> getInitialDelaySeconds() {
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
@@ -69,7 +69,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="periodSeconds")
-        private final @Nullable Input<Integer> periodSeconds;
+      private final @Nullable Input<Integer> periodSeconds;
 
     public Input<Integer> getPeriodSeconds() {
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
@@ -80,7 +80,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-        private final @Nullable Input<Integer> successThreshold;
+      private final @Nullable Input<Integer> successThreshold;
 
     public Input<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -91,7 +91,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-        private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;

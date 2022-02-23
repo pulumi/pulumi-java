@@ -19,7 +19,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="coarseGrainTimestamp")
-        private final @Nullable Input<String> coarseGrainTimestamp;
+      private final @Nullable Input<String> coarseGrainTimestamp;
 
     public Input<String> getCoarseGrainTimestamp() {
         return this.coarseGrainTimestamp == null ? Input.empty() : this.coarseGrainTimestamp;
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fineGrainTimestamp")
-        private final @Nullable Input<String> fineGrainTimestamp;
+      private final @Nullable Input<String> fineGrainTimestamp;
 
     public Input<String> getFineGrainTimestamp() {
         return this.fineGrainTimestamp == null ? Input.empty() : this.fineGrainTimestamp;

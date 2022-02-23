@@ -25,7 +25,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="healthStates", required=true)
-        private final List<HealthStateResponse> healthStates;
+      private final List<HealthStateResponse> healthStates;
 
     public List<HealthStateResponse> getHealthStates() {
         return this.healthStates;
@@ -36,7 +36,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monitorNames")
-        private final @Nullable List<String> monitorNames;
+      private final @Nullable List<String> monitorNames;
 
     public List<String> getMonitorNames() {
         return this.monitorNames == null ? List.of() : this.monitorNames;
@@ -47,7 +47,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monitorTypes")
-        private final @Nullable List<String> monitorTypes;
+      private final @Nullable List<String> monitorTypes;
 
     public List<String> getMonitorTypes() {
         return this.monitorTypes == null ? List.of() : this.monitorTypes;
@@ -59,7 +59,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-        private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;

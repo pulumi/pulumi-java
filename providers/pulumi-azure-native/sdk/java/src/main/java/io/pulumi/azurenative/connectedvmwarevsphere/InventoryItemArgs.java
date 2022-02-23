@@ -21,7 +21,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inventoryItemName")
-        private final @Nullable Input<String> inventoryItemName;
+      private final @Nullable Input<String> inventoryItemName;
 
     public Input<String> getInventoryItemName() {
         return this.inventoryItemName == null ? Input.empty() : this.inventoryItemName;
@@ -32,7 +32,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inventoryType", required=true)
-        private final Input<Either<String,InventoryType>> inventoryType;
+      private final Input<Either<String,InventoryType>> inventoryType;
 
     public Input<Either<String,InventoryType>> getInventoryType() {
         return this.inventoryType;
@@ -43,7 +43,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -54,7 +54,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedResourceId")
-        private final @Nullable Input<String> managedResourceId;
+      private final @Nullable Input<String> managedResourceId;
 
     public Input<String> getManagedResourceId() {
         return this.managedResourceId == null ? Input.empty() : this.managedResourceId;
@@ -65,7 +65,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moName")
-        private final @Nullable Input<String> moName;
+      private final @Nullable Input<String> moName;
 
     public Input<String> getMoName() {
         return this.moName == null ? Input.empty() : this.moName;
@@ -76,7 +76,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moRefId")
-        private final @Nullable Input<String> moRefId;
+      private final @Nullable Input<String> moRefId;
 
     public Input<String> getMoRefId() {
         return this.moRefId == null ? Input.empty() : this.moRefId;
@@ -87,7 +87,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcenterName", required=true)
-        private final Input<String> vcenterName;
+      private final Input<String> vcenterName;
 
     public Input<String> getVcenterName() {
         return this.vcenterName;

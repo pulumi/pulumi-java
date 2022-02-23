@@ -23,7 +23,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="interactionFieldName", required=true)
-        private final String interactionFieldName;
+      private final String interactionFieldName;
 
     public String getInteractionFieldName() {
         return this.interactionFieldName;
@@ -34,7 +34,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="linkType")
-        private final @Nullable String linkType;
+      private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
@@ -45,7 +45,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="relationshipFieldName", required=true)
-        private final String relationshipFieldName;
+      private final String relationshipFieldName;
 
     public String getRelationshipFieldName() {
         return this.relationshipFieldName;

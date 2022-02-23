@@ -29,7 +29,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accessConfigs")
-        private final @Nullable Input<List<InstanceNetworkInterfaceAccessConfigArgs>> accessConfigs;
+      private final @Nullable Input<List<InstanceNetworkInterfaceAccessConfigArgs>> accessConfigs;
 
     public Input<List<InstanceNetworkInterfaceAccessConfigArgs>> getAccessConfigs() {
         return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
@@ -42,7 +42,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="aliasIpRanges")
-        private final @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
+      private final @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
 
     public Input<List<InstanceNetworkInterfaceAliasIpRangeArgs>> getAliasIpRanges() {
         return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
@@ -55,7 +55,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipv6AccessConfigs")
-        private final @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
+      private final @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
 
     public Input<List<InstanceNetworkInterfaceIpv6AccessConfigArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
@@ -67,7 +67,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipv6AccessType")
-        private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Input<String> ipv6AccessType;
 
     public Input<String> getIpv6AccessType() {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
@@ -79,7 +79,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -104,7 +104,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkIp")
-        private final @Nullable Input<String> networkIp;
+      private final @Nullable Input<String> networkIp;
 
     public Input<String> getNetworkIp() {
         return this.networkIp == null ? Input.empty() : this.networkIp;
@@ -115,7 +115,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable Input<String> nicType;
+      private final @Nullable Input<String> nicType;
 
     public Input<String> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -126,7 +126,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="queueCount")
-        private final @Nullable Input<Integer> queueCount;
+      private final @Nullable Input<Integer> queueCount;
 
     public Input<Integer> getQueueCount() {
         return this.queueCount == null ? Input.empty() : this.queueCount;
@@ -137,7 +137,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stackType")
-        private final @Nullable Input<String> stackType;
+      private final @Nullable Input<String> stackType;
 
     public Input<String> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -154,7 +154,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetwork")
-        private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -168,7 +168,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetworkProject")
-        private final @Nullable Input<String> subnetworkProject;
+      private final @Nullable Input<String> subnetworkProject;
 
     public Input<String> getSubnetworkProject() {
         return this.subnetworkProject == null ? Input.empty() : this.subnetworkProject;

@@ -17,7 +17,7 @@ public final class GetBuildServiceResourceUploadUrlArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-        private final String buildServiceName;
+      private final String buildServiceName;
 
     public String getBuildServiceName() {
         return this.buildServiceName;
@@ -28,7 +28,7 @@ public final class GetBuildServiceResourceUploadUrlArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetBuildServiceResourceUploadUrlArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

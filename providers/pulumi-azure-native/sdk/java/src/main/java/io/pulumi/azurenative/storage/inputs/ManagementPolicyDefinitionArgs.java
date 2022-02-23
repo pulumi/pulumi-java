@@ -24,7 +24,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="actions", required=true)
-        private final Input<ManagementPolicyActionArgs> actions;
+      private final Input<ManagementPolicyActionArgs> actions;
 
     public Input<ManagementPolicyActionArgs> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filters")
-        private final @Nullable Input<ManagementPolicyFilterArgs> filters;
+      private final @Nullable Input<ManagementPolicyFilterArgs> filters;
 
     public Input<ManagementPolicyFilterArgs> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;

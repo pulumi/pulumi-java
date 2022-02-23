@@ -24,7 +24,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames")
-        private final @Nullable Input<List<String>> hostnames;
+      private final @Nullable Input<List<String>> hostnames;
 
     public Input<List<String>> getHostnames() {
         return this.hostnames == null ? Input.empty() : this.hostnames;
@@ -35,7 +35,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-        private final @Nullable Input<String> ip;
+      private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;

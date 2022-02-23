@@ -19,7 +19,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIpAddress")
-        private final @Nullable Input<String> endIpAddress;
+      private final @Nullable Input<String> endIpAddress;
 
     public Input<String> getEndIpAddress() {
         return this.endIpAddress == null ? Input.empty() : this.endIpAddress;
@@ -30,7 +30,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-        private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -52,7 +52,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIpAddress")
-        private final @Nullable Input<String> startIpAddress;
+      private final @Nullable Input<String> startIpAddress;
 
     public Input<String> getStartIpAddress() {
         return this.startIpAddress == null ? Input.empty() : this.startIpAddress;
@@ -63,7 +63,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

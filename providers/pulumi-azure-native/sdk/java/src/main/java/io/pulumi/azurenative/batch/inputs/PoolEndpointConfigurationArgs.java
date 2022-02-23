@@ -19,7 +19,7 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inboundNatPools", required=true)
-        private final Input<List<InboundNatPoolArgs>> inboundNatPools;
+      private final Input<List<InboundNatPoolArgs>> inboundNatPools;
 
     public Input<List<InboundNatPoolArgs>> getInboundNatPools() {
         return this.inboundNatPools;

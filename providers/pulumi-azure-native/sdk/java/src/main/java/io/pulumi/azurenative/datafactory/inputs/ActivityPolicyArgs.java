@@ -25,7 +25,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retry")
-        private final @Nullable Input<Object> retry;
+      private final @Nullable Input<Object> retry;
 
     public Input<Object> getRetry() {
         return this.retry == null ? Input.empty() : this.retry;
@@ -36,7 +36,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-        private final @Nullable Input<Integer> retryIntervalInSeconds;
+      private final @Nullable Input<Integer> retryIntervalInSeconds;
 
     public Input<Integer> getRetryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Input.empty() : this.retryIntervalInSeconds;
@@ -47,7 +47,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secureInput")
-        private final @Nullable Input<Boolean> secureInput;
+      private final @Nullable Input<Boolean> secureInput;
 
     public Input<Boolean> getSecureInput() {
         return this.secureInput == null ? Input.empty() : this.secureInput;
@@ -58,7 +58,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secureOutput")
-        private final @Nullable Input<Boolean> secureOutput;
+      private final @Nullable Input<Boolean> secureOutput;
 
     public Input<Boolean> getSecureOutput() {
         return this.secureOutput == null ? Input.empty() : this.secureOutput;
@@ -69,7 +69,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<Object> timeout;
+      private final @Nullable Input<Object> timeout;
 
     public Input<Object> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

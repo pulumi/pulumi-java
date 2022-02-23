@@ -19,7 +19,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificate", required=true)
-        private final Input<String> certificate;
+      private final Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate;
@@ -30,7 +30,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateAuthorityArn", required=true)
-        private final Input<String> certificateAuthorityArn;
+      private final Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -41,7 +41,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateChain")
-        private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -52,7 +52,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

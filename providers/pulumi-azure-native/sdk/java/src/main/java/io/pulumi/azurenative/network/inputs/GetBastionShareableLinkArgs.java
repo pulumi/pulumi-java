@@ -21,7 +21,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="bastionHostName", required=true)
-        private final String bastionHostName;
+      private final String bastionHostName;
 
     public String getBastionHostName() {
         return this.bastionHostName;
@@ -32,7 +32,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vms")
-        private final @Nullable List<BastionShareableLink> vms;
+      private final @Nullable List<BastionShareableLink> vms;
 
     public List<BastionShareableLink> getVms() {
         return this.vms == null ? List.of() : this.vms;

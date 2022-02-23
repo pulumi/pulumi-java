@@ -24,7 +24,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementGroups")
-        private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
+      private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
 
     public Input<List<ResourceIdArgs>> getManagementGroups() {
         return this.managementGroups == null ? Input.empty() : this.managementGroups;
@@ -35,7 +35,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-        private final @Nullable Input<List<ResourceIdArgs>> subnets;
+      private final @Nullable Input<List<ResourceIdArgs>> subnets;
 
     public Input<List<ResourceIdArgs>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -46,7 +46,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptions")
-        private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
+      private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
 
     public Input<List<ResourceIdArgs>> getSubscriptions() {
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
@@ -57,7 +57,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworks")
-        private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
+      private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
 
     public Input<List<ResourceIdArgs>> getVirtualNetworks() {
         return this.virtualNetworks == null ? Input.empty() : this.virtualNetworks;

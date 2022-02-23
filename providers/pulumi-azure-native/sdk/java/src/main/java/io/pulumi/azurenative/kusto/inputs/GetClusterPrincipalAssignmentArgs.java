@@ -17,7 +17,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="principalAssignmentName", required=true)
-        private final String principalAssignmentName;
+      private final String principalAssignmentName;
 
     public String getPrincipalAssignmentName() {
         return this.principalAssignmentName;
@@ -39,7 +39,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

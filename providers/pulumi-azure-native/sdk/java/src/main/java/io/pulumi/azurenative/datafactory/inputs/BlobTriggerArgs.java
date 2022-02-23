@@ -28,7 +28,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -39,7 +39,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath", required=true)
-        private final Input<String> folderPath;
+      private final Input<String> folderPath;
 
     public Input<String> getFolderPath() {
         return this.folderPath;
@@ -61,7 +61,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedService", required=true)
-        private final Input<LinkedServiceReferenceArgs> linkedService;
+      private final Input<LinkedServiceReferenceArgs> linkedService;
 
     public Input<LinkedServiceReferenceArgs> getLinkedService() {
         return this.linkedService;
@@ -72,7 +72,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrency", required=true)
-        private final Input<Integer> maxConcurrency;
+      private final Input<Integer> maxConcurrency;
 
     public Input<Integer> getMaxConcurrency() {
         return this.maxConcurrency;
@@ -83,7 +83,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelines")
-        private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
         return this.pipelines == null ? Input.empty() : this.pipelines;
@@ -95,7 +95,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

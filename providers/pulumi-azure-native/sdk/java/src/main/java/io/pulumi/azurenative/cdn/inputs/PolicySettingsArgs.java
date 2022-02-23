@@ -27,7 +27,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCustomBlockResponseBody")
-        private final @Nullable Input<String> defaultCustomBlockResponseBody;
+      private final @Nullable Input<String> defaultCustomBlockResponseBody;
 
     public Input<String> getDefaultCustomBlockResponseBody() {
         return this.defaultCustomBlockResponseBody == null ? Input.empty() : this.defaultCustomBlockResponseBody;
@@ -38,7 +38,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCustomBlockResponseStatusCode")
-        private final @Nullable Input<Integer> defaultCustomBlockResponseStatusCode;
+      private final @Nullable Input<Integer> defaultCustomBlockResponseStatusCode;
 
     public Input<Integer> getDefaultCustomBlockResponseStatusCode() {
         return this.defaultCustomBlockResponseStatusCode == null ? Input.empty() : this.defaultCustomBlockResponseStatusCode;
@@ -49,7 +49,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRedirectUrl")
-        private final @Nullable Input<String> defaultRedirectUrl;
+      private final @Nullable Input<String> defaultRedirectUrl;
 
     public Input<String> getDefaultRedirectUrl() {
         return this.defaultRedirectUrl == null ? Input.empty() : this.defaultRedirectUrl;
@@ -60,7 +60,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
+      private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
 
     public Input<Either<String,PolicyEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -71,7 +71,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<Either<String,PolicyMode>> mode;
+      private final @Nullable Input<Either<String,PolicyMode>> mode;
 
     public Input<Either<String,PolicyMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;

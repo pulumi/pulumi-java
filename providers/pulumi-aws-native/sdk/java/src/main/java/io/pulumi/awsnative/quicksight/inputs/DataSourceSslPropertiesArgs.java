@@ -24,7 +24,7 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disableSsl")
-        private final @Nullable Input<Boolean> disableSsl;
+      private final @Nullable Input<Boolean> disableSsl;
 
     public Input<Boolean> getDisableSsl() {
         return this.disableSsl == null ? Input.empty() : this.disableSsl;

@@ -20,42 +20,42 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     public static final ExperimentTemplateArgs Empty = new ExperimentTemplateArgs();
 
     @InputImport(name="actions")
-        private final @Nullable Input<ExperimentTemplateActionMapArgs> actions;
+      private final @Nullable Input<ExperimentTemplateActionMapArgs> actions;
 
     public Input<ExperimentTemplateActionMapArgs> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
     @InputImport(name="description", required=true)
-        private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stopConditions", required=true)
-        private final Input<List<ExperimentTemplateStopConditionArgs>> stopConditions;
+      private final Input<List<ExperimentTemplateStopConditionArgs>> stopConditions;
 
     public Input<List<ExperimentTemplateStopConditionArgs>> getStopConditions() {
         return this.stopConditions;
     }
 
     @InputImport(name="tags", required=true)
-        private final Input<Object> tags;
+      private final Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags;
     }
 
     @InputImport(name="targets", required=true)
-        private final Input<ExperimentTemplateTargetMapArgs> targets;
+      private final Input<ExperimentTemplateTargetMapArgs> targets;
 
     public Input<ExperimentTemplateTargetMapArgs> getTargets() {
         return this.targets;

@@ -26,7 +26,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Input<BodyDiagnosticSettingsArgs> body;
+      private final @Nullable Input<BodyDiagnosticSettingsArgs> body;
 
     public Input<BodyDiagnosticSettingsArgs> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -37,7 +37,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataMasking")
-        private final @Nullable Input<DataMaskingArgs> dataMasking;
+      private final @Nullable Input<DataMaskingArgs> dataMasking;
 
     public Input<DataMaskingArgs> getDataMasking() {
         return this.dataMasking == null ? Input.empty() : this.dataMasking;
@@ -48,7 +48,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<List<String>> headers;
+      private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;

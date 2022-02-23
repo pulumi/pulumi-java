@@ -23,7 +23,7 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<SimulationApplicationRenderingEngineName> name;
+      private final Input<SimulationApplicationRenderingEngineName> name;
 
     public Input<SimulationApplicationRenderingEngineName> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="version", required=true)
-        private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

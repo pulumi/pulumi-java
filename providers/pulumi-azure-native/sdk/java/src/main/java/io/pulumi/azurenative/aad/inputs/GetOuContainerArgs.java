@@ -17,7 +17,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainServiceName", required=true)
-        private final String domainServiceName;
+      private final String domainServiceName;
 
     public String getDomainServiceName() {
         return this.domainServiceName;
@@ -28,7 +28,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ouContainerName", required=true)
-        private final String ouContainerName;
+      private final String ouContainerName;
 
     public String getOuContainerName() {
         return this.ouContainerName;
@@ -39,7 +39,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

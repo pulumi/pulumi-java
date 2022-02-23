@@ -25,7 +25,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="networkInterfaces")
-        private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
+      private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
 
     public List<EndpointAccessNetworkInterface> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
@@ -36,7 +36,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vpcEndpointId")
-        private final @Nullable String vpcEndpointId;
+      private final @Nullable String vpcEndpointId;
 
     public Optional<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Optional.empty() : Optional.ofNullable(this.vpcEndpointId);
@@ -47,7 +47,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vpcId")
-        private final @Nullable String vpcId;
+      private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);

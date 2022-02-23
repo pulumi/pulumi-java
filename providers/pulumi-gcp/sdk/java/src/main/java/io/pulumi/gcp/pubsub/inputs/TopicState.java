@@ -26,7 +26,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-        private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -37,7 +37,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,7 +54,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-        private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Input<String> messageRetentionDuration;
 
     public Input<String> getMessageRetentionDuration() {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
@@ -68,7 +68,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageStoragePolicy")
-        private final @Nullable Input<TopicMessageStoragePolicyGetArgs> messageStoragePolicy;
+      private final @Nullable Input<TopicMessageStoragePolicyGetArgs> messageStoragePolicy;
 
     public Input<TopicMessageStoragePolicyGetArgs> getMessageStoragePolicy() {
         return this.messageStoragePolicy == null ? Input.empty() : this.messageStoragePolicy;
@@ -79,7 +79,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaSettings")
-        private final @Nullable Input<TopicSchemaSettingsGetArgs> schemaSettings;
+      private final @Nullable Input<TopicSchemaSettingsGetArgs> schemaSettings;
 
     public Input<TopicSchemaSettingsGetArgs> getSchemaSettings() {
         return this.schemaSettings == null ? Input.empty() : this.schemaSettings;

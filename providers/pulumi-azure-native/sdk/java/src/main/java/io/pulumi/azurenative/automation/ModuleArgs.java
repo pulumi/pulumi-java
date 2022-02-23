@@ -21,7 +21,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -32,7 +32,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLink", required=true)
-        private final Input<ContentLinkArgs> contentLink;
+      private final Input<ContentLinkArgs> contentLink;
 
     public Input<ContentLinkArgs> getContentLink() {
         return this.contentLink;
@@ -43,7 +43,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleName")
-        private final @Nullable Input<String> moduleName;
+      private final @Nullable Input<String> moduleName;
 
     public Input<String> getModuleName() {
         return this.moduleName == null ? Input.empty() : this.moduleName;
@@ -65,7 +65,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

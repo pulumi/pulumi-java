@@ -17,7 +17,7 @@ public final class GetDataFlowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataFlowName", required=true)
-        private final String dataFlowName;
+      private final String dataFlowName;
 
     public String getDataFlowName() {
         return this.dataFlowName;
@@ -28,7 +28,7 @@ public final class GetDataFlowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -39,7 +39,7 @@ public final class GetDataFlowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

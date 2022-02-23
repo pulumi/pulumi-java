@@ -17,7 +17,7 @@ public final class BotAliasCodeHookSpecification extends io.pulumi.resources.Inv
     public static final BotAliasCodeHookSpecification Empty = new BotAliasCodeHookSpecification();
 
     @InputImport(name="lambdaCodeHook", required=true)
-        private final BotAliasLambdaCodeHook lambdaCodeHook;
+      private final BotAliasLambdaCodeHook lambdaCodeHook;
 
     public BotAliasLambdaCodeHook getLambdaCodeHook() {
         return this.lambdaCodeHook;

@@ -25,7 +25,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindingParameters")
-        private final @Nullable Input<Map<String,Object>> bindingParameters;
+      private final @Nullable Input<Map<String,Object>> bindingParameters;
 
     public Input<Map<String,Object>> getBindingParameters() {
         return this.bindingParameters == null ? Input.empty() : this.bindingParameters;
@@ -36,7 +36,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -47,7 +47,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

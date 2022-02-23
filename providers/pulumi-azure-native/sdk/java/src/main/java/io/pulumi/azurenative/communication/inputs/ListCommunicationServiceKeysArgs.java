@@ -17,7 +17,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="communicationServiceName", required=true)
-        private final String communicationServiceName;
+      private final String communicationServiceName;
 
     public String getCommunicationServiceName() {
         return this.communicationServiceName;
@@ -28,7 +28,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

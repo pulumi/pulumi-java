@@ -26,7 +26,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-        private final @Nullable Input<Either<String,AppType>> appType;
+      private final @Nullable Input<Either<String,AppType>> appType;
 
     public Input<Either<String,AppType>> getAppType() {
         return this.appType == null ? Input.empty() : this.appType;
@@ -37,7 +37,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confirmation")
-        private final @Nullable Input<Either<String,Confirmation>> confirmation;
+      private final @Nullable Input<Either<String,Confirmation>> confirmation;
 
     public Input<Either<String,Confirmation>> getConfirmation() {
         return this.confirmation == null ? Input.empty() : this.confirmation;
@@ -48,7 +48,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-        private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -59,7 +59,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName", required=true)
-        private final Input<String> firstName;
+      private final Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName;
@@ -70,7 +70,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-        private final @Nullable Input<List<UserIdentityContractArgs>> identities;
+      private final @Nullable Input<List<UserIdentityContractArgs>> identities;
 
     public Input<List<UserIdentityContractArgs>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -81,7 +81,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName", required=true)
-        private final Input<String> lastName;
+      private final Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName;
@@ -92,7 +92,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="note")
-        private final @Nullable Input<String> note;
+      private final @Nullable Input<String> note;
 
     public Input<String> getNote() {
         return this.note == null ? Input.empty() : this.note;
@@ -103,7 +103,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notify")
-        private final @Nullable Input<Boolean> notify;
+      private final @Nullable Input<Boolean> notify;
 
     public Input<Boolean> getNotify() {
         return this.notify == null ? Input.empty() : this.notify;
@@ -114,7 +114,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -125,7 +125,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -136,7 +136,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -147,7 +147,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,UserState>> state;
+      private final @Nullable Input<Either<String,UserState>> state;
 
     public Input<Either<String,UserState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -158,7 +158,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId")
-        private final @Nullable Input<String> userId;
+      private final @Nullable Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId == null ? Input.empty() : this.userId;

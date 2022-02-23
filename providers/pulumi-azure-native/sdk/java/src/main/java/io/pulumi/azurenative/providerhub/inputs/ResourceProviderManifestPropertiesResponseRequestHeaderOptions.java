@@ -15,7 +15,7 @@ public final class ResourceProviderManifestPropertiesResponseRequestHeaderOption
     public static final ResourceProviderManifestPropertiesResponseRequestHeaderOptions Empty = new ResourceProviderManifestPropertiesResponseRequestHeaderOptions();
 
     @InputImport(name="optInHeaders")
-        private final @Nullable String optInHeaders;
+      private final @Nullable String optInHeaders;
 
     public Optional<String> getOptInHeaders() {
         return this.optInHeaders == null ? Optional.empty() : Optional.ofNullable(this.optInHeaders);

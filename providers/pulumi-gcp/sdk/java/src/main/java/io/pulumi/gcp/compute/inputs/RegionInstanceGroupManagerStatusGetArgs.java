@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="isStable")
-        private final @Nullable Input<Boolean> isStable;
+      private final @Nullable Input<Boolean> isStable;
 
     public Input<Boolean> getIsStable() {
         return this.isStable == null ? Input.empty() : this.isStable;
@@ -33,7 +33,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statefuls")
-        private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls;
 
     public Input<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> getStatefuls() {
         return this.statefuls == null ? Input.empty() : this.statefuls;
@@ -44,7 +44,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="versionTargets")
-        private final @Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets;
 
     public Input<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> getVersionTargets() {
         return this.versionTargets == null ? Input.empty() : this.versionTargets;

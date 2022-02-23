@@ -19,7 +19,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cluster", required=true)
-        private final Input<String> cluster;
+      private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -30,7 +30,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -42,7 +42,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;

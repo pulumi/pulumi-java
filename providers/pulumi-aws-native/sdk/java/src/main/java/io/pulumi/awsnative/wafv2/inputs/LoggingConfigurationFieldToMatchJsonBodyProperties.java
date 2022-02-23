@@ -25,7 +25,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
      * 
      */
     @InputImport(name="invalidFallbackBehavior")
-        private final @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior;
+      private final @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior;
 
     public Optional<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Optional.empty() : Optional.ofNullable(this.invalidFallbackBehavior);
@@ -36,7 +36,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
      * 
      */
     @InputImport(name="matchPattern", required=true)
-        private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern;
+      private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern;
 
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties getMatchPattern() {
         return this.matchPattern;
@@ -47,7 +47,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
      * 
      */
     @InputImport(name="matchScope", required=true)
-        private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
+      private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope getMatchScope() {
         return this.matchScope;

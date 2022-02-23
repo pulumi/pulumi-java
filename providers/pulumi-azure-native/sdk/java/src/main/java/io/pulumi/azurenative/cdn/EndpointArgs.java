@@ -32,7 +32,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypesToCompress")
-        private final @Nullable Input<List<String>> contentTypesToCompress;
+      private final @Nullable Input<List<String>> contentTypesToCompress;
 
     public Input<List<String>> getContentTypesToCompress() {
         return this.contentTypesToCompress == null ? Input.empty() : this.contentTypesToCompress;
@@ -43,7 +43,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultOriginGroup")
-        private final @Nullable Input<ResourceReferenceArgs> defaultOriginGroup;
+      private final @Nullable Input<ResourceReferenceArgs> defaultOriginGroup;
 
     public Input<ResourceReferenceArgs> getDefaultOriginGroup() {
         return this.defaultOriginGroup == null ? Input.empty() : this.defaultOriginGroup;
@@ -54,7 +54,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryPolicy")
-        private final @Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
+      private final @Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
     public Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
         return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
@@ -65,7 +65,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName")
-        private final @Nullable Input<String> endpointName;
+      private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -76,7 +76,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoFilters")
-        private final @Nullable Input<List<GeoFilterArgs>> geoFilters;
+      private final @Nullable Input<List<GeoFilterArgs>> geoFilters;
 
     public Input<List<GeoFilterArgs>> getGeoFilters() {
         return this.geoFilters == null ? Input.empty() : this.geoFilters;
@@ -87,7 +87,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCompressionEnabled")
-        private final @Nullable Input<Boolean> isCompressionEnabled;
+      private final @Nullable Input<Boolean> isCompressionEnabled;
 
     public Input<Boolean> getIsCompressionEnabled() {
         return this.isCompressionEnabled == null ? Input.empty() : this.isCompressionEnabled;
@@ -98,7 +98,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isHttpAllowed")
-        private final @Nullable Input<Boolean> isHttpAllowed;
+      private final @Nullable Input<Boolean> isHttpAllowed;
 
     public Input<Boolean> getIsHttpAllowed() {
         return this.isHttpAllowed == null ? Input.empty() : this.isHttpAllowed;
@@ -109,7 +109,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isHttpsAllowed")
-        private final @Nullable Input<Boolean> isHttpsAllowed;
+      private final @Nullable Input<Boolean> isHttpsAllowed;
 
     public Input<Boolean> getIsHttpsAllowed() {
         return this.isHttpsAllowed == null ? Input.empty() : this.isHttpsAllowed;
@@ -120,7 +120,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -131,7 +131,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizationType")
-        private final @Nullable Input<Either<String,OptimizationType>> optimizationType;
+      private final @Nullable Input<Either<String,OptimizationType>> optimizationType;
 
     public Input<Either<String,OptimizationType>> getOptimizationType() {
         return this.optimizationType == null ? Input.empty() : this.optimizationType;
@@ -142,7 +142,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroups")
-        private final @Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups;
+      private final @Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups;
 
     public Input<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
         return this.originGroups == null ? Input.empty() : this.originGroups;
@@ -153,7 +153,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originHostHeader")
-        private final @Nullable Input<String> originHostHeader;
+      private final @Nullable Input<String> originHostHeader;
 
     public Input<String> getOriginHostHeader() {
         return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
@@ -164,7 +164,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originPath")
-        private final @Nullable Input<String> originPath;
+      private final @Nullable Input<String> originPath;
 
     public Input<String> getOriginPath() {
         return this.originPath == null ? Input.empty() : this.originPath;
@@ -175,7 +175,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins", required=true)
-        private final Input<List<DeepCreatedOriginArgs>> origins;
+      private final Input<List<DeepCreatedOriginArgs>> origins;
 
     public Input<List<DeepCreatedOriginArgs>> getOrigins() {
         return this.origins;
@@ -186,7 +186,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="probePath")
-        private final @Nullable Input<String> probePath;
+      private final @Nullable Input<String> probePath;
 
     public Input<String> getProbePath() {
         return this.probePath == null ? Input.empty() : this.probePath;
@@ -197,7 +197,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -208,7 +208,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringCachingBehavior")
-        private final @Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior;
+      private final @Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior;
 
     public Input<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
         return this.queryStringCachingBehavior == null ? Input.empty() : this.queryStringCachingBehavior;
@@ -219,7 +219,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -230,7 +230,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -241,7 +241,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlSigningKeys")
-        private final @Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys;
+      private final @Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys;
 
     public Input<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
         return this.urlSigningKeys == null ? Input.empty() : this.urlSigningKeys;
@@ -252,7 +252,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-        private final @Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+      private final @Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;

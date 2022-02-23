@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateEndpoint")
-        private final @Nullable PrivateEndpointResponse privateEndpoint;
+      private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -69,14 +69,14 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -87,7 +87,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

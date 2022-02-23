@@ -13,7 +13,7 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAccessPointArgs Empty = new GetAccessPointArgs();
 
     @InputImport(name="accessPointId", required=true)
-        private final String accessPointId;
+      private final String accessPointId;
 
     public String getAccessPointId() {
         return this.accessPointId;

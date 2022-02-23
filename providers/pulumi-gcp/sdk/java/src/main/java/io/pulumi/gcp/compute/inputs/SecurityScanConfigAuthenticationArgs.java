@@ -21,7 +21,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customAccount")
-        private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
+      private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
 
     public Input<SecurityScanConfigAuthenticationCustomAccountArgs> getCustomAccount() {
         return this.customAccount == null ? Input.empty() : this.customAccount;
@@ -33,7 +33,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="googleAccount")
-        private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
+      private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
 
     public Input<SecurityScanConfigAuthenticationGoogleAccountArgs> getGoogleAccount() {
         return this.googleAccount == null ? Input.empty() : this.googleAccount;

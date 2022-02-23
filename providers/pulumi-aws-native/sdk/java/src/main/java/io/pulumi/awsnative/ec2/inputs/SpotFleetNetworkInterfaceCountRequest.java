@@ -15,14 +15,14 @@ public final class SpotFleetNetworkInterfaceCountRequest extends io.pulumi.resou
     public static final SpotFleetNetworkInterfaceCountRequest Empty = new SpotFleetNetworkInterfaceCountRequest();
 
     @InputImport(name="max")
-        private final @Nullable Integer max;
+      private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @InputImport(name="min")
-        private final @Nullable Integer min;
+      private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);

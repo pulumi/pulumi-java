@@ -24,7 +24,7 @@ public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<UrlPathMatchConditionParametersArgs> parameters;
+      private final Input<UrlPathMatchConditionParametersArgs> parameters;
 
     public Input<UrlPathMatchConditionParametersArgs> getParameters() {
         return this.parameters;

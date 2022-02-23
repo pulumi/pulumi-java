@@ -18,7 +18,7 @@ public final class StandardAppVersionHandlerScriptGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scriptPath", required=true)
-        private final Input<String> scriptPath;
+      private final Input<String> scriptPath;
 
     public Input<String> getScriptPath() {
         return this.scriptPath;

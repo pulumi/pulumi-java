@@ -19,7 +19,7 @@ public final class TaxonomyIamPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -31,7 +31,7 @@ public final class TaxonomyIamPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -43,14 +43,14 @@ public final class TaxonomyIamPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -61,7 +61,7 @@ public final class TaxonomyIamPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taxonomy")
-        private final @Nullable Input<String> taxonomy;
+      private final @Nullable Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy == null ? Input.empty() : this.taxonomy;

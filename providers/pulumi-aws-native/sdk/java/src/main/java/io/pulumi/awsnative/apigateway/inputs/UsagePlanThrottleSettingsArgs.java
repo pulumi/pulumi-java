@@ -20,7 +20,7 @@ public final class UsagePlanThrottleSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="burstLimit")
-        private final @Nullable Input<Integer> burstLimit;
+      private final @Nullable Input<Integer> burstLimit;
 
     public Input<Integer> getBurstLimit() {
         return this.burstLimit == null ? Input.empty() : this.burstLimit;
@@ -31,7 +31,7 @@ public final class UsagePlanThrottleSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rateLimit")
-        private final @Nullable Input<Double> rateLimit;
+      private final @Nullable Input<Double> rateLimit;
 
     public Input<Double> getRateLimit() {
         return this.rateLimit == null ? Input.empty() : this.rateLimit;

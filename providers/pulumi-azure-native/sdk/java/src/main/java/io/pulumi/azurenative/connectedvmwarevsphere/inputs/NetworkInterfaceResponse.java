@@ -26,7 +26,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deviceKey")
-        private final @Nullable Integer deviceKey;
+      private final @Nullable Integer deviceKey;
 
     public Optional<Integer> getDeviceKey() {
         return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
@@ -37,7 +37,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipAddresses", required=true)
-        private final List<String> ipAddresses;
+      private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses;
@@ -48,7 +48,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipSettings")
-        private final @Nullable NicIPSettingsResponse ipSettings;
+      private final @Nullable NicIPSettingsResponse ipSettings;
 
     public Optional<NicIPSettingsResponse> getIpSettings() {
         return this.ipSettings == null ? Optional.empty() : Optional.ofNullable(this.ipSettings);
@@ -59,7 +59,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="label", required=true)
-        private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -70,7 +70,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="macAddress", required=true)
-        private final String macAddress;
+      private final String macAddress;
 
     public String getMacAddress() {
         return this.macAddress;
@@ -81,7 +81,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -92,7 +92,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkId")
-        private final @Nullable String networkId;
+      private final @Nullable String networkId;
 
     public Optional<String> getNetworkId() {
         return this.networkId == null ? Optional.empty() : Optional.ofNullable(this.networkId);
@@ -103,7 +103,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkMoName", required=true)
-        private final String networkMoName;
+      private final String networkMoName;
 
     public String getNetworkMoName() {
         return this.networkMoName;
@@ -115,7 +115,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkMoRefId", required=true)
-        private final String networkMoRefId;
+      private final String networkMoRefId;
 
     public String getNetworkMoRefId() {
         return this.networkMoRefId;
@@ -126,7 +126,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable String nicType;
+      private final @Nullable String nicType;
 
     public Optional<String> getNicType() {
         return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
@@ -137,7 +137,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="powerOnBoot")
-        private final @Nullable String powerOnBoot;
+      private final @Nullable String powerOnBoot;
 
     public Optional<String> getPowerOnBoot() {
         return this.powerOnBoot == null ? Optional.empty() : Optional.ofNullable(this.powerOnBoot);

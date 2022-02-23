@@ -14,28 +14,28 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends io.pulumi.re
     public static final GetDatabaseInstanceSettingInsightsConfig Empty = new GetDatabaseInstanceSettingInsightsConfig();
 
     @InputImport(name="queryInsightsEnabled", required=true)
-        private final Boolean queryInsightsEnabled;
+      private final Boolean queryInsightsEnabled;
 
     public Boolean getQueryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
 
     @InputImport(name="queryStringLength", required=true)
-        private final Integer queryStringLength;
+      private final Integer queryStringLength;
 
     public Integer getQueryStringLength() {
         return this.queryStringLength;
     }
 
     @InputImport(name="recordApplicationTags", required=true)
-        private final Boolean recordApplicationTags;
+      private final Boolean recordApplicationTags;
 
     public Boolean getRecordApplicationTags() {
         return this.recordApplicationTags;
     }
 
     @InputImport(name="recordClientAddress", required=true)
-        private final Boolean recordClientAddress;
+      private final Boolean recordClientAddress;
 
     public Boolean getRecordClientAddress() {
         return this.recordClientAddress;

@@ -14,21 +14,21 @@ public final class GetResourcePolicyGroupPlacementPolicy extends io.pulumi.resou
     public static final GetResourcePolicyGroupPlacementPolicy Empty = new GetResourcePolicyGroupPlacementPolicy();
 
     @InputImport(name="availabilityDomainCount", required=true)
-        private final Integer availabilityDomainCount;
+      private final Integer availabilityDomainCount;
 
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
     }
 
     @InputImport(name="collocation", required=true)
-        private final String collocation;
+      private final String collocation;
 
     public String getCollocation() {
         return this.collocation;
     }
 
     @InputImport(name="vmCount", required=true)
-        private final Integer vmCount;
+      private final Integer vmCount;
 
     public Integer getVmCount() {
         return this.vmCount;

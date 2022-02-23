@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
+      private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
     public Input<PrivateEndpointConnectionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;

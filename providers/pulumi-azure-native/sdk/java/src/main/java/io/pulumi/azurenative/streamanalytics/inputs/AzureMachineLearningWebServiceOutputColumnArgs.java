@@ -23,7 +23,7 @@ public final class AzureMachineLearningWebServiceOutputColumnArgs extends io.pul
      * 
      */
     @InputImport(name="dataType")
-        private final @Nullable Input<String> dataType;
+      private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -34,7 +34,7 @@ public final class AzureMachineLearningWebServiceOutputColumnArgs extends io.pul
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

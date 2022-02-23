@@ -23,7 +23,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="associationAssignedCode")
-        private final @Nullable Input<String> associationAssignedCode;
+      private final @Nullable Input<String> associationAssignedCode;
 
     public Input<String> getAssociationAssignedCode() {
         return this.associationAssignedCode == null ? Input.empty() : this.associationAssignedCode;
@@ -34,7 +34,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final Input<String> messageId;
+      private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;
@@ -45,7 +45,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageRelease", required=true)
-        private final Input<String> messageRelease;
+      private final Input<String> messageRelease;
 
     public Input<String> getMessageRelease() {
         return this.messageRelease;
@@ -56,7 +56,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageVersion", required=true)
-        private final Input<String> messageVersion;
+      private final Input<String> messageVersion;
 
     public Input<String> getMessageVersion() {
         return this.messageVersion;
@@ -67,7 +67,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schemaName", required=true)
-        private final Input<String> schemaName;
+      private final Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName;
@@ -78,7 +78,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderApplicationId")
-        private final @Nullable Input<String> senderApplicationId;
+      private final @Nullable Input<String> senderApplicationId;
 
     public Input<String> getSenderApplicationId() {
         return this.senderApplicationId == null ? Input.empty() : this.senderApplicationId;
@@ -89,7 +89,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderApplicationQualifier")
-        private final @Nullable Input<String> senderApplicationQualifier;
+      private final @Nullable Input<String> senderApplicationQualifier;
 
     public Input<String> getSenderApplicationQualifier() {
         return this.senderApplicationQualifier == null ? Input.empty() : this.senderApplicationQualifier;

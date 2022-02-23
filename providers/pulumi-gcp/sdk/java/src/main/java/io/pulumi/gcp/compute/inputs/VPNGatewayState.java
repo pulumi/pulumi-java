@@ -20,7 +20,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-        private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -31,7 +31,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-        private final @Nullable Input<Integer> gatewayId;
+      private final @Nullable Input<Integer> gatewayId;
 
     public Input<Integer> getGatewayId() {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
@@ -59,7 +59,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -82,7 +82,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -93,7 +93,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -104,7 +104,7 @@ public final class VPNGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;

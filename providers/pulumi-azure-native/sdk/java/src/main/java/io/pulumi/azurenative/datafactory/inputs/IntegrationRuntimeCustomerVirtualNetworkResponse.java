@@ -23,7 +23,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends io.p
      * 
      */
     @InputImport(name="subnetId")
-        private final @Nullable String subnetId;
+      private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);

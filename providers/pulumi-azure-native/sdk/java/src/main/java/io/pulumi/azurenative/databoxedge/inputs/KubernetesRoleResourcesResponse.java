@@ -25,7 +25,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="compute", required=true)
-        private final KubernetesRoleComputeResponse compute;
+      private final KubernetesRoleComputeResponse compute;
 
     public KubernetesRoleComputeResponse getCompute() {
         return this.compute;
@@ -36,7 +36,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="network", required=true)
-        private final KubernetesRoleNetworkResponse network;
+      private final KubernetesRoleNetworkResponse network;
 
     public KubernetesRoleNetworkResponse getNetwork() {
         return this.network;
@@ -47,7 +47,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="storage")
-        private final @Nullable KubernetesRoleStorageResponse storage;
+      private final @Nullable KubernetesRoleStorageResponse storage;
 
     public Optional<KubernetesRoleStorageResponse> getStorage() {
         return this.storage == null ? Optional.empty() : Optional.ofNullable(this.storage);

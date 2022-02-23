@@ -19,42 +19,42 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
     public static final ComponentVersionLambdaFunctionRecipeSourceArgs Empty = new ComponentVersionLambdaFunctionRecipeSourceArgs();
 
     @InputImport(name="componentDependencies")
-        private final @Nullable Input<Object> componentDependencies;
+      private final @Nullable Input<Object> componentDependencies;
 
     public Input<Object> getComponentDependencies() {
         return this.componentDependencies == null ? Input.empty() : this.componentDependencies;
     }
 
     @InputImport(name="componentLambdaParameters")
-        private final @Nullable Input<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters;
+      private final @Nullable Input<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters;
 
     public Input<ComponentVersionLambdaExecutionParametersArgs> getComponentLambdaParameters() {
         return this.componentLambdaParameters == null ? Input.empty() : this.componentLambdaParameters;
     }
 
     @InputImport(name="componentName")
-        private final @Nullable Input<String> componentName;
+      private final @Nullable Input<String> componentName;
 
     public Input<String> getComponentName() {
         return this.componentName == null ? Input.empty() : this.componentName;
     }
 
     @InputImport(name="componentPlatforms")
-        private final @Nullable Input<List<ComponentVersionComponentPlatformArgs>> componentPlatforms;
+      private final @Nullable Input<List<ComponentVersionComponentPlatformArgs>> componentPlatforms;
 
     public Input<List<ComponentVersionComponentPlatformArgs>> getComponentPlatforms() {
         return this.componentPlatforms == null ? Input.empty() : this.componentPlatforms;
     }
 
     @InputImport(name="componentVersion")
-        private final @Nullable Input<String> componentVersion;
+      private final @Nullable Input<String> componentVersion;
 
     public Input<String> getComponentVersion() {
         return this.componentVersion == null ? Input.empty() : this.componentVersion;
     }
 
     @InputImport(name="lambdaArn")
-        private final @Nullable Input<String> lambdaArn;
+      private final @Nullable Input<String> lambdaArn;
 
     public Input<String> getLambdaArn() {
         return this.lambdaArn == null ? Input.empty() : this.lambdaArn;

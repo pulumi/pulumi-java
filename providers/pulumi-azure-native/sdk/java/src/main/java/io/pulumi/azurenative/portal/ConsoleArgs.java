@@ -20,7 +20,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consoleName")
-        private final @Nullable Input<String> consoleName;
+      private final @Nullable Input<String> consoleName;
 
     public Input<String> getConsoleName() {
         return this.consoleName == null ? Input.empty() : this.consoleName;
@@ -31,7 +31,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<ConsoleCreatePropertiesArgs> properties;
+      private final Input<ConsoleCreatePropertiesArgs> properties;
 
     public Input<ConsoleCreatePropertiesArgs> getProperties() {
         return this.properties;

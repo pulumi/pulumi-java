@@ -15,14 +15,14 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
     public static final DatastorePartitionArgs Empty = new DatastorePartitionArgs();
 
     @InputImport(name="partition")
-        private final @Nullable Input<DatastorePartitionArgs> partition;
+      private final @Nullable Input<DatastorePartitionArgs> partition;
 
     public Input<DatastorePartitionArgs> getPartition() {
         return this.partition == null ? Input.empty() : this.partition;
     }
 
     @InputImport(name="timestampPartition")
-        private final @Nullable Input<DatastoreTimestampPartitionArgs> timestampPartition;
+      private final @Nullable Input<DatastoreTimestampPartitionArgs> timestampPartition;
 
     public Input<DatastoreTimestampPartitionArgs> getTimestampPartition() {
         return this.timestampPartition == null ? Input.empty() : this.timestampPartition;

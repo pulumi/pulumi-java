@@ -24,7 +24,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
      * 
      */
     @InputImport(name="count", required=true)
-        private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -35,7 +35,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -57,7 +57,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
      * 
      */
     @InputImport(name="subnetCidr")
-        private final @Nullable String subnetCidr;
+      private final @Nullable String subnetCidr;
 
     public Optional<String> getSubnetCidr() {
         return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
@@ -68,7 +68,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
      * 
      */
     @InputImport(name="vmSize", required=true)
-        private final String vmSize;
+      private final String vmSize;
 
     public String getVmSize() {
         return this.vmSize;

@@ -43,7 +43,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -54,7 +54,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compression")
-        private final @Nullable Input<DatasetCompressionArgs> compression;
+      private final @Nullable Input<DatasetCompressionArgs> compression;
 
     public Input<DatasetCompressionArgs> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -65,7 +65,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstRowAsHeader")
-        private final @Nullable Input<Object> firstRowAsHeader;
+      private final @Nullable Input<Object> firstRowAsHeader;
 
     public Input<Object> getFirstRowAsHeader() {
         return this.firstRowAsHeader == null ? Input.empty() : this.firstRowAsHeader;
@@ -87,7 +87,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-        private final @Nullable Input<DatasetFolderArgs> folder;
+      private final @Nullable Input<DatasetFolderArgs> folder;
 
     public Input<DatasetFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -98,7 +98,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -109,7 +109,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<Object> location;
+      private final Input<Object> location;
 
     public Input<Object> getLocation() {
         return this.location;
@@ -120,7 +120,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nullValue")
-        private final @Nullable Input<Object> nullValue;
+      private final @Nullable Input<Object> nullValue;
 
     public Input<Object> getNullValue() {
         return this.nullValue == null ? Input.empty() : this.nullValue;
@@ -131,7 +131,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="range")
-        private final @Nullable Input<Object> range;
+      private final @Nullable Input<Object> range;
 
     public Input<Object> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -153,7 +153,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-        private final @Nullable Input<Object> schema;
+      private final @Nullable Input<Object> schema;
 
     public Input<Object> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -164,7 +164,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sheetIndex")
-        private final @Nullable Input<Object> sheetIndex;
+      private final @Nullable Input<Object> sheetIndex;
 
     public Input<Object> getSheetIndex() {
         return this.sheetIndex == null ? Input.empty() : this.sheetIndex;
@@ -175,7 +175,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sheetName")
-        private final @Nullable Input<Object> sheetName;
+      private final @Nullable Input<Object> sheetName;
 
     public Input<Object> getSheetName() {
         return this.sheetName == null ? Input.empty() : this.sheetName;
@@ -186,7 +186,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="structure")
-        private final @Nullable Input<Object> structure;
+      private final @Nullable Input<Object> structure;
 
     public Input<Object> getStructure() {
         return this.structure == null ? Input.empty() : this.structure;
@@ -198,7 +198,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

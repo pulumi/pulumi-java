@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="deleteOption")
-        private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+      private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
     public Input<Either<String,DeleteOptions>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="dnsSettings")
-        private final @Nullable Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings;
+      private final @Nullable Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings;
 
     public Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-        private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
     public Input<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="enableFpga")
-        private final @Nullable Input<Boolean> enableFpga;
+      private final @Nullable Input<Boolean> enableFpga;
 
     public Input<Boolean> getEnableFpga() {
         return this.enableFpga == null ? Input.empty() : this.enableFpga;
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="enableIPForwarding")
-        private final @Nullable Input<Boolean> enableIPForwarding;
+      private final @Nullable Input<Boolean> enableIPForwarding;
 
     public Input<Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="ipConfigurations", required=true)
-        private final Input<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations;
+      private final Input<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations;
 
     public Input<List<VirtualMachineScaleSetIPConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations;
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="networkSecurityGroup")
-        private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
+      private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
 
     public Input<SubResourceArgs> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
@@ -129,7 +129,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;

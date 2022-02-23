@@ -22,7 +22,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ServiceTemplateMetadataArgs> metadata;
+      private final @Nullable Input<ServiceTemplateMetadataArgs> metadata;
 
     public Input<ServiceTemplateMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -34,7 +34,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-        private final @Nullable Input<ServiceTemplateSpecArgs> spec;
+      private final @Nullable Input<ServiceTemplateSpecArgs> spec;
 
     public Input<ServiceTemplateSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;

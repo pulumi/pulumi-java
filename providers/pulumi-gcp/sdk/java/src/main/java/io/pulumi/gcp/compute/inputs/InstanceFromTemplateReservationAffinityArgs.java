@@ -16,14 +16,14 @@ public final class InstanceFromTemplateReservationAffinityArgs extends io.pulumi
     public static final InstanceFromTemplateReservationAffinityArgs Empty = new InstanceFromTemplateReservationAffinityArgs();
 
     @InputImport(name="specificReservation")
-        private final @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
+      private final @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

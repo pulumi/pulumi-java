@@ -16,21 +16,21 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     public static final RuleGroupIPSetForwardedIPConfigurationArgs Empty = new RuleGroupIPSetForwardedIPConfigurationArgs();
 
     @InputImport(name="fallbackBehavior", required=true)
-        private final Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+      private final Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
     public Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-        private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="position", required=true)
-        private final Input<RuleGroupIPSetForwardedIPConfigurationPosition> position;
+      private final Input<RuleGroupIPSetForwardedIPConfigurationPosition> position;
 
     public Input<RuleGroupIPSetForwardedIPConfigurationPosition> getPosition() {
         return this.position;

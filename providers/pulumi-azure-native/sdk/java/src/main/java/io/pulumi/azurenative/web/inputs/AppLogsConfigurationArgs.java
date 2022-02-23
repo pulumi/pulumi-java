@@ -16,14 +16,14 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     public static final AppLogsConfigurationArgs Empty = new AppLogsConfigurationArgs();
 
     @InputImport(name="destination")
-        private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
     @InputImport(name="logAnalyticsConfiguration")
-        private final @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
+      private final @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
     public Input<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {
         return this.logAnalyticsConfiguration == null ? Input.empty() : this.logAnalyticsConfiguration;

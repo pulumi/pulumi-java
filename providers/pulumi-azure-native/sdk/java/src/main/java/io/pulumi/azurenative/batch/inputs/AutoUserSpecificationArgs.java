@@ -20,7 +20,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="elevationLevel")
-        private final @Nullable Input<ElevationLevel> elevationLevel;
+      private final @Nullable Input<ElevationLevel> elevationLevel;
 
     public Input<ElevationLevel> getElevationLevel() {
         return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
@@ -31,7 +31,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<AutoUserScope> scope;
+      private final @Nullable Input<AutoUserScope> scope;
 
     public Input<AutoUserScope> getScope() {
         return this.scope == null ? Input.empty() : this.scope;

@@ -18,7 +18,7 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessLevels", required=true)
-        private final Input<String> accessLevels;
+      private final Input<String> accessLevels;
 
     public Input<String> getAccessLevels() {
         return this.accessLevels;
@@ -29,7 +29,7 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="groupKey", required=true)
-        private final Input<String> groupKey;
+      private final Input<String> groupKey;
 
     public Input<String> getGroupKey() {
         return this.groupKey;
@@ -40,7 +40,7 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="organizationId", required=true)
-        private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;

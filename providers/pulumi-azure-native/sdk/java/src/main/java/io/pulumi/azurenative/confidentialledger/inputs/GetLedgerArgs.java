@@ -17,7 +17,7 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ledgerName", required=true)
-        private final String ledgerName;
+      private final String ledgerName;
 
     public String getLedgerName() {
         return this.ledgerName;
@@ -28,7 +28,7 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

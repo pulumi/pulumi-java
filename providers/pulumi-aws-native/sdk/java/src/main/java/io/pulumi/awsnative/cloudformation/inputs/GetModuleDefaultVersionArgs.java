@@ -17,7 +17,7 @@ public final class GetModuleDefaultVersionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

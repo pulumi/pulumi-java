@@ -18,7 +18,7 @@ public final class FlowZendeskDestinationProperties extends io.pulumi.resources.
     public static final FlowZendeskDestinationProperties Empty = new FlowZendeskDestinationProperties();
 
     @InputImport(name="errorHandlingConfig")
-        private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+      private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
@@ -29,21 +29,21 @@ public final class FlowZendeskDestinationProperties extends io.pulumi.resources.
      * 
      */
     @InputImport(name="idFieldNames")
-        private final @Nullable List<String> idFieldNames;
+      private final @Nullable List<String> idFieldNames;
 
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
     }
 
     @InputImport(name="writeOperationType")
-        private final @Nullable FlowWriteOperationType writeOperationType;
+      private final @Nullable FlowWriteOperationType writeOperationType;
 
     public Optional<FlowWriteOperationType> getWriteOperationType() {
         return this.writeOperationType == null ? Optional.empty() : Optional.ofNullable(this.writeOperationType);

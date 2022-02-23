@@ -30,7 +30,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeLocationId")
-        private final @Nullable Input<String> alternativeLocationId;
+      private final @Nullable Input<String> alternativeLocationId;
 
     public Input<String> getAlternativeLocationId() {
         return this.alternativeLocationId == null ? Input.empty() : this.alternativeLocationId;
@@ -43,7 +43,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authEnabled")
-        private final @Nullable Input<Boolean> authEnabled;
+      private final @Nullable Input<Boolean> authEnabled;
 
     public Input<Boolean> getAuthEnabled() {
         return this.authEnabled == null ? Input.empty() : this.authEnabled;
@@ -54,7 +54,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authString")
-        private final @Nullable Input<String> authString;
+      private final @Nullable Input<String> authString;
 
     public Input<String> getAuthString() {
         return this.authString == null ? Input.empty() : this.authString;
@@ -67,7 +67,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-        private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -80,7 +80,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectMode")
-        private final @Nullable Input<String> connectMode;
+      private final @Nullable Input<String> connectMode;
 
     public Input<String> getConnectMode() {
         return this.connectMode == null ? Input.empty() : this.connectMode;
@@ -94,7 +94,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -107,7 +107,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentLocationId")
-        private final @Nullable Input<String> currentLocationId;
+      private final @Nullable Input<String> currentLocationId;
 
     public Input<String> getCurrentLocationId() {
         return this.currentLocationId == null ? Input.empty() : this.currentLocationId;
@@ -118,7 +118,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -129,7 +129,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -140,7 +140,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -155,7 +155,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationId")
-        private final @Nullable Input<String> locationId;
+      private final @Nullable Input<String> locationId;
 
     public Input<String> getLocationId() {
         return this.locationId == null ? Input.empty() : this.locationId;
@@ -167,7 +167,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-        private final @Nullable Input<InstanceMaintenancePolicyGetArgs> maintenancePolicy;
+      private final @Nullable Input<InstanceMaintenancePolicyGetArgs> maintenancePolicy;
 
     public Input<InstanceMaintenancePolicyGetArgs> getMaintenancePolicy() {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
@@ -179,7 +179,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceSchedule")
-        private final @Nullable Input<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule;
+      private final @Nullable Input<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule;
 
     public Input<InstanceMaintenanceScheduleGetArgs> getMaintenanceSchedule() {
         return this.maintenanceSchedule == null ? Input.empty() : this.maintenanceSchedule;
@@ -190,7 +190,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySizeGb")
-        private final @Nullable Input<Integer> memorySizeGb;
+      private final @Nullable Input<Integer> memorySizeGb;
 
     public Input<Integer> getMemorySizeGb() {
         return this.memorySizeGb == null ? Input.empty() : this.memorySizeGb;
@@ -201,7 +201,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -212,7 +212,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodes")
-        private final @Nullable Input<List<InstanceNodeGetArgs>> nodes;
+      private final @Nullable Input<List<InstanceNodeGetArgs>> nodes;
 
     public Input<List<InstanceNodeGetArgs>> getNodes() {
         return this.nodes == null ? Input.empty() : this.nodes;
@@ -225,7 +225,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="persistenceIamIdentity")
-        private final @Nullable Input<String> persistenceIamIdentity;
+      private final @Nullable Input<String> persistenceIamIdentity;
 
     public Input<String> getPersistenceIamIdentity() {
         return this.persistenceIamIdentity == null ? Input.empty() : this.persistenceIamIdentity;
@@ -236,7 +236,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -248,7 +248,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -261,7 +261,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readEndpoint")
-        private final @Nullable Input<String> readEndpoint;
+      private final @Nullable Input<String> readEndpoint;
 
     public Input<String> getReadEndpoint() {
         return this.readEndpoint == null ? Input.empty() : this.readEndpoint;
@@ -273,7 +273,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readEndpointPort")
-        private final @Nullable Input<Integer> readEndpointPort;
+      private final @Nullable Input<Integer> readEndpointPort;
 
     public Input<Integer> getReadEndpointPort() {
         return this.readEndpointPort == null ? Input.empty() : this.readEndpointPort;
@@ -288,7 +288,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readReplicasMode")
-        private final @Nullable Input<String> readReplicasMode;
+      private final @Nullable Input<String> readReplicasMode;
 
     public Input<String> getReadReplicasMode() {
         return this.readReplicasMode == null ? Input.empty() : this.readReplicasMode;
@@ -301,7 +301,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisConfigs")
-        private final @Nullable Input<Map<String,String>> redisConfigs;
+      private final @Nullable Input<Map<String,String>> redisConfigs;
 
     public Input<Map<String,String>> getRedisConfigs() {
         return this.redisConfigs == null ? Input.empty() : this.redisConfigs;
@@ -314,7 +314,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisVersion")
-        private final @Nullable Input<String> redisVersion;
+      private final @Nullable Input<String> redisVersion;
 
     public Input<String> getRedisVersion() {
         return this.redisVersion == null ? Input.empty() : this.redisVersion;
@@ -325,7 +325,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -338,7 +338,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaCount")
-        private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -353,7 +353,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-        private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
@@ -364,7 +364,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCaCerts")
-        private final @Nullable Input<List<InstanceServerCaCertGetArgs>> serverCaCerts;
+      private final @Nullable Input<List<InstanceServerCaCertGetArgs>> serverCaCerts;
 
     public Input<List<InstanceServerCaCertGetArgs>> getServerCaCerts() {
         return this.serverCaCerts == null ? Input.empty() : this.serverCaCerts;
@@ -379,7 +379,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -393,7 +393,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitEncryptionMode")
-        private final @Nullable Input<String> transitEncryptionMode;
+      private final @Nullable Input<String> transitEncryptionMode;
 
     public Input<String> getTransitEncryptionMode() {
         return this.transitEncryptionMode == null ? Input.empty() : this.transitEncryptionMode;

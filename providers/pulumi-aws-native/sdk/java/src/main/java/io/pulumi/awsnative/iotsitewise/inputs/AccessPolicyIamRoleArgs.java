@@ -23,7 +23,7 @@ public final class AccessPolicyIamRoleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-        private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;

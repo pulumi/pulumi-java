@@ -20,7 +20,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseModels")
-        private final @Nullable Input<Object> responseModels;
+      private final @Nullable Input<Object> responseModels;
 
     public Input<Object> getResponseModels() {
         return this.responseModels == null ? Input.empty() : this.responseModels;
@@ -31,7 +31,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseParameters")
-        private final @Nullable Input<Object> responseParameters;
+      private final @Nullable Input<Object> responseParameters;
 
     public Input<Object> getResponseParameters() {
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
@@ -42,7 +42,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusCode", required=true)
-        private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

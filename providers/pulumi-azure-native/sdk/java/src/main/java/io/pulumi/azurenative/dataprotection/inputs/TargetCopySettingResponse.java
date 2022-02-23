@@ -25,7 +25,7 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="copyAfter", required=true)
-        private final Object copyAfter;
+      private final Object copyAfter;
 
     public Object getCopyAfter() {
         return this.copyAfter;
@@ -36,7 +36,7 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataStore", required=true)
-        private final DataStoreInfoBaseResponse dataStore;
+      private final DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;

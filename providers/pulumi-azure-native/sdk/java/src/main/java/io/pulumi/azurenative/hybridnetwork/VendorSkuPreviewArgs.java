@@ -19,7 +19,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="previewSubscription")
-        private final @Nullable Input<String> previewSubscription;
+      private final @Nullable Input<String> previewSubscription;
 
     public Input<String> getPreviewSubscription() {
         return this.previewSubscription == null ? Input.empty() : this.previewSubscription;
@@ -30,7 +30,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="skuName", required=true)
-        private final Input<String> skuName;
+      private final Input<String> skuName;
 
     public Input<String> getSkuName() {
         return this.skuName;
@@ -41,7 +41,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vendorName", required=true)
-        private final Input<String> vendorName;
+      private final Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName;

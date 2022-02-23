@@ -195,6 +195,21 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public RegionPerInstanceConfig(String name) {
+        this(name, RegionPerInstanceConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegionPerInstanceConfig(String name, RegionPerInstanceConfigArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

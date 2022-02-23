@@ -24,7 +24,7 @@ public final class TaskPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,String> parameters;
+      private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -35,7 +35,7 @@ public final class TaskPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="source")
-        private final @Nullable String source;
+      private final @Nullable String source;
 
     public Optional<String> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);

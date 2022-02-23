@@ -22,14 +22,14 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operation", required=true)
-        private final Input<String> operation;
+      private final Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="parameters")
-        private final @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+      private final @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
     public Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

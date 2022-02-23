@@ -16,35 +16,35 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     public static final InstanceMemcacheNodeArgs Empty = new InstanceMemcacheNodeArgs();
 
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
     }
 
     @InputImport(name="nodeId")
-        private final @Nullable Input<String> nodeId;
+      private final @Nullable Input<String> nodeId;
 
     public Input<String> getNodeId() {
         return this.nodeId == null ? Input.empty() : this.nodeId;
     }
 
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="state")
-        private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

@@ -13,7 +13,7 @@ public final class DistributionOriginGroupMember extends io.pulumi.resources.Inv
     public static final DistributionOriginGroupMember Empty = new DistributionOriginGroupMember();
 
     @InputImport(name="originId", required=true)
-        private final String originId;
+      private final String originId;
 
     public String getOriginId() {
         return this.originId;

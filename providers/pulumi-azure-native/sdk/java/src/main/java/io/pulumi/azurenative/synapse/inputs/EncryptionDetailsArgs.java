@@ -23,7 +23,7 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cmk")
-        private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
+      private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
 
     public Input<CustomerManagedKeyDetailsArgs> getCmk() {
         return this.cmk == null ? Input.empty() : this.cmk;

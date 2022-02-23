@@ -14,14 +14,14 @@ public final class GetClusterAddonsConfigIstioConfig extends io.pulumi.resources
     public static final GetClusterAddonsConfigIstioConfig Empty = new GetClusterAddonsConfigIstioConfig();
 
     @InputImport(name="auth", required=true)
-        private final String auth;
+      private final String auth;
 
     public String getAuth() {
         return this.auth;
     }
 
     @InputImport(name="disabled", required=true)
-        private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;

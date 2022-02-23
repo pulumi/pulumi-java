@@ -23,7 +23,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessKey1", required=true)
-        private final String accessKey1;
+      private final String accessKey1;
 
     public String getAccessKey1() {
         return this.accessKey1;
@@ -34,7 +34,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessKey2")
-        private final @Nullable String accessKey2;
+      private final @Nullable String accessKey2;
 
     public Optional<String> getAccessKey2() {
         return this.accessKey2 == null ? Optional.empty() : Optional.ofNullable(this.accessKey2);
@@ -45,7 +45,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authenticationType")
-        private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -56,7 +56,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime", required=true)
-        private final String createdTime;
+      private final String createdTime;
 
     public String getCreatedTime() {
         return this.createdTime;
@@ -67,7 +67,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deadLetterSecret")
-        private final @Nullable String deadLetterSecret;
+      private final @Nullable String deadLetterSecret;
 
     public Optional<String> getDeadLetterSecret() {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
@@ -78,7 +78,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deadLetterUri")
-        private final @Nullable String deadLetterUri;
+      private final @Nullable String deadLetterUri;
 
     public Optional<String> getDeadLetterUri() {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
@@ -90,7 +90,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final String endpointType;
+      private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -101,7 +101,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -112,7 +112,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicEndpoint", required=true)
-        private final String topicEndpoint;
+      private final String topicEndpoint;
 
     public String getTopicEndpoint() {
         return this.topicEndpoint;

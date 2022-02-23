@@ -29,7 +29,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allSettings")
-        private final @Nullable Input<Map<String,String>> allSettings;
+      private final @Nullable Input<Map<String,String>> allSettings;
 
     public Input<Map<String,String>> getAllSettings() {
         return this.allSettings == null ? Input.empty() : this.allSettings;
@@ -40,7 +40,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appPasswordHint")
-        private final @Nullable Input<String> appPasswordHint;
+      private final @Nullable Input<String> appPasswordHint;
 
     public Input<String> getAppPasswordHint() {
         return this.appPasswordHint == null ? Input.empty() : this.appPasswordHint;
@@ -51,7 +51,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cmekKeyVaultUrl")
-        private final @Nullable Input<String> cmekKeyVaultUrl;
+      private final @Nullable Input<String> cmekKeyVaultUrl;
 
     public Input<String> getCmekKeyVaultUrl() {
         return this.cmekKeyVaultUrl == null ? Input.empty() : this.cmekKeyVaultUrl;
@@ -62,7 +62,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightKey")
-        private final @Nullable Input<String> developerAppInsightKey;
+      private final @Nullable Input<String> developerAppInsightKey;
 
     public Input<String> getDeveloperAppInsightKey() {
         return this.developerAppInsightKey == null ? Input.empty() : this.developerAppInsightKey;
@@ -84,7 +84,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightsApiKey")
-        private final @Nullable Input<String> developerAppInsightsApiKey;
+      private final @Nullable Input<String> developerAppInsightsApiKey;
 
     public Input<String> getDeveloperAppInsightsApiKey() {
         return this.developerAppInsightsApiKey == null ? Input.empty() : this.developerAppInsightsApiKey;
@@ -95,7 +95,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightsApplicationId")
-        private final @Nullable Input<String> developerAppInsightsApplicationId;
+      private final @Nullable Input<String> developerAppInsightsApplicationId;
 
     public Input<String> getDeveloperAppInsightsApplicationId() {
         return this.developerAppInsightsApplicationId == null ? Input.empty() : this.developerAppInsightsApplicationId;
@@ -106,7 +106,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableLocalAuth")
-        private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Input<Boolean> disableLocalAuth;
 
     public Input<Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
@@ -117,7 +117,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -128,7 +128,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final Input<String> endpoint;
+      private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;
@@ -139,7 +139,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconUrl")
-        private final @Nullable Input<String> iconUrl;
+      private final @Nullable Input<String> iconUrl;
 
     public Input<String> getIconUrl() {
         return this.iconUrl == null ? Input.empty() : this.iconUrl;
@@ -150,7 +150,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCmekEnabled")
-        private final @Nullable Input<Boolean> isCmekEnabled;
+      private final @Nullable Input<Boolean> isCmekEnabled;
 
     public Input<Boolean> getIsCmekEnabled() {
         return this.isCmekEnabled == null ? Input.empty() : this.isCmekEnabled;
@@ -161,7 +161,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isStreamingSupported")
-        private final @Nullable Input<Boolean> isStreamingSupported;
+      private final @Nullable Input<Boolean> isStreamingSupported;
 
     public Input<Boolean> getIsStreamingSupported() {
         return this.isStreamingSupported == null ? Input.empty() : this.isStreamingSupported;
@@ -172,7 +172,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="luisAppIds")
-        private final @Nullable Input<List<String>> luisAppIds;
+      private final @Nullable Input<List<String>> luisAppIds;
 
     public Input<List<String>> getLuisAppIds() {
         return this.luisAppIds == null ? Input.empty() : this.luisAppIds;
@@ -183,7 +183,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="luisKey")
-        private final @Nullable Input<String> luisKey;
+      private final @Nullable Input<String> luisKey;
 
     public Input<String> getLuisKey() {
         return this.luisKey == null ? Input.empty() : this.luisKey;
@@ -194,7 +194,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestUrl")
-        private final @Nullable Input<String> manifestUrl;
+      private final @Nullable Input<String> manifestUrl;
 
     public Input<String> getManifestUrl() {
         return this.manifestUrl == null ? Input.empty() : this.manifestUrl;
@@ -205,7 +205,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppId", required=true)
-        private final Input<String> msaAppId;
+      private final Input<String> msaAppId;
 
     public Input<String> getMsaAppId() {
         return this.msaAppId;
@@ -216,7 +216,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppMSIResourceId")
-        private final @Nullable Input<String> msaAppMSIResourceId;
+      private final @Nullable Input<String> msaAppMSIResourceId;
 
     public Input<String> getMsaAppMSIResourceId() {
         return this.msaAppMSIResourceId == null ? Input.empty() : this.msaAppMSIResourceId;
@@ -227,7 +227,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppTenantId")
-        private final @Nullable Input<String> msaAppTenantId;
+      private final @Nullable Input<String> msaAppTenantId;
 
     public Input<String> getMsaAppTenantId() {
         return this.msaAppTenantId == null ? Input.empty() : this.msaAppTenantId;
@@ -238,7 +238,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppType")
-        private final @Nullable Input<Either<String,MsaAppType>> msaAppType;
+      private final @Nullable Input<Either<String,MsaAppType>> msaAppType;
 
     public Input<Either<String,MsaAppType>> getMsaAppType() {
         return this.msaAppType == null ? Input.empty() : this.msaAppType;
@@ -249,7 +249,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openWithHint")
-        private final @Nullable Input<String> openWithHint;
+      private final @Nullable Input<String> openWithHint;
 
     public Input<String> getOpenWithHint() {
         return this.openWithHint == null ? Input.empty() : this.openWithHint;
@@ -260,7 +260,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -271,7 +271,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -282,7 +282,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingCredentials")
-        private final @Nullable Input<String> publishingCredentials;
+      private final @Nullable Input<String> publishingCredentials;
 
     public Input<String> getPublishingCredentials() {
         return this.publishingCredentials == null ? Input.empty() : this.publishingCredentials;
@@ -293,7 +293,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaTransformationVersion")
-        private final @Nullable Input<String> schemaTransformationVersion;
+      private final @Nullable Input<String> schemaTransformationVersion;
 
     public Input<String> getSchemaTransformationVersion() {
         return this.schemaTransformationVersion == null ? Input.empty() : this.schemaTransformationVersion;
@@ -304,7 +304,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageResourceId")
-        private final @Nullable Input<String> storageResourceId;
+      private final @Nullable Input<String> storageResourceId;
 
     public Input<String> getStorageResourceId() {
         return this.storageResourceId == null ? Input.empty() : this.storageResourceId;

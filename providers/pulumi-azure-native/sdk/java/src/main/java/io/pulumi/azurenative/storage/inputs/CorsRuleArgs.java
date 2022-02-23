@@ -24,7 +24,7 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedHeaders", required=true)
-        private final Input<List<String>> allowedHeaders;
+      private final Input<List<String>> allowedHeaders;
 
     public Input<List<String>> getAllowedHeaders() {
         return this.allowedHeaders;
@@ -35,7 +35,7 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-        private final Input<List<String>> allowedMethods;
+      private final Input<List<String>> allowedMethods;
 
     public Input<List<String>> getAllowedMethods() {
         return this.allowedMethods;
@@ -46,7 +46,7 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins", required=true)
-        private final Input<List<String>> allowedOrigins;
+      private final Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins;
@@ -57,7 +57,7 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exposedHeaders", required=true)
-        private final Input<List<String>> exposedHeaders;
+      private final Input<List<String>> exposedHeaders;
 
     public Input<List<String>> getExposedHeaders() {
         return this.exposedHeaders;
@@ -68,7 +68,7 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAgeInSeconds", required=true)
-        private final Input<Integer> maxAgeInSeconds;
+      private final Input<Integer> maxAgeInSeconds;
 
     public Input<Integer> getMaxAgeInSeconds() {
         return this.maxAgeInSeconds;

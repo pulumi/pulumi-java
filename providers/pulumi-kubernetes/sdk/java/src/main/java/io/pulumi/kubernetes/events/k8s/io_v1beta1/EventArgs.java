@@ -24,7 +24,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-        private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -35,7 +35,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -46,7 +46,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecatedCount")
-        private final @Nullable Input<Integer> deprecatedCount;
+      private final @Nullable Input<Integer> deprecatedCount;
 
     public Input<Integer> getDeprecatedCount() {
         return this.deprecatedCount == null ? Input.empty() : this.deprecatedCount;
@@ -57,7 +57,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecatedFirstTimestamp")
-        private final @Nullable Input<String> deprecatedFirstTimestamp;
+      private final @Nullable Input<String> deprecatedFirstTimestamp;
 
     public Input<String> getDeprecatedFirstTimestamp() {
         return this.deprecatedFirstTimestamp == null ? Input.empty() : this.deprecatedFirstTimestamp;
@@ -68,7 +68,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecatedLastTimestamp")
-        private final @Nullable Input<String> deprecatedLastTimestamp;
+      private final @Nullable Input<String> deprecatedLastTimestamp;
 
     public Input<String> getDeprecatedLastTimestamp() {
         return this.deprecatedLastTimestamp == null ? Input.empty() : this.deprecatedLastTimestamp;
@@ -79,7 +79,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecatedSource")
-        private final @Nullable Input<EventSourceArgs> deprecatedSource;
+      private final @Nullable Input<EventSourceArgs> deprecatedSource;
 
     public Input<EventSourceArgs> getDeprecatedSource() {
         return this.deprecatedSource == null ? Input.empty() : this.deprecatedSource;
@@ -90,7 +90,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTime", required=true)
-        private final Input<String> eventTime;
+      private final Input<String> eventTime;
 
     public Input<String> getEventTime() {
         return this.eventTime;
@@ -101,7 +101,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -112,7 +112,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -123,7 +123,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="note")
-        private final @Nullable Input<String> note;
+      private final @Nullable Input<String> note;
 
     public Input<String> getNote() {
         return this.note == null ? Input.empty() : this.note;
@@ -134,7 +134,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-        private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -145,7 +145,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regarding")
-        private final @Nullable Input<ObjectReferenceArgs> regarding;
+      private final @Nullable Input<ObjectReferenceArgs> regarding;
 
     public Input<ObjectReferenceArgs> getRegarding() {
         return this.regarding == null ? Input.empty() : this.regarding;
@@ -156,7 +156,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="related")
-        private final @Nullable Input<ObjectReferenceArgs> related;
+      private final @Nullable Input<ObjectReferenceArgs> related;
 
     public Input<ObjectReferenceArgs> getRelated() {
         return this.related == null ? Input.empty() : this.related;
@@ -167,7 +167,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingController")
-        private final @Nullable Input<String> reportingController;
+      private final @Nullable Input<String> reportingController;
 
     public Input<String> getReportingController() {
         return this.reportingController == null ? Input.empty() : this.reportingController;
@@ -178,7 +178,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingInstance")
-        private final @Nullable Input<String> reportingInstance;
+      private final @Nullable Input<String> reportingInstance;
 
     public Input<String> getReportingInstance() {
         return this.reportingInstance == null ? Input.empty() : this.reportingInstance;
@@ -189,7 +189,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="series")
-        private final @Nullable Input<EventSeriesArgs> series;
+      private final @Nullable Input<EventSeriesArgs> series;
 
     public Input<EventSeriesArgs> getSeries() {
         return this.series == null ? Input.empty() : this.series;
@@ -200,7 +200,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

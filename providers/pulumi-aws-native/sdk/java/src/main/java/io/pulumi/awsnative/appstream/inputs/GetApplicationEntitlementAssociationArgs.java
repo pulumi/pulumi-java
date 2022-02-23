@@ -13,21 +13,21 @@ public final class GetApplicationEntitlementAssociationArgs extends io.pulumi.re
     public static final GetApplicationEntitlementAssociationArgs Empty = new GetApplicationEntitlementAssociationArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-        private final String applicationIdentifier;
+      private final String applicationIdentifier;
 
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="entitlementName", required=true)
-        private final String entitlementName;
+      private final String entitlementName;
 
     public String getEntitlementName() {
         return this.entitlementName;
     }
 
     @InputImport(name="stackName", required=true)
-        private final String stackName;
+      private final String stackName;
 
     public String getStackName() {
         return this.stackName;

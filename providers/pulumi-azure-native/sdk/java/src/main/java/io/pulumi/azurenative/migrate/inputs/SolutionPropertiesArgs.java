@@ -24,7 +24,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cleanupState")
-        private final @Nullable Input<String> cleanupState;
+      private final @Nullable Input<String> cleanupState;
 
     public Input<String> getCleanupState() {
         return this.cleanupState == null ? Input.empty() : this.cleanupState;
@@ -35,7 +35,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="details")
-        private final @Nullable Input<SolutionDetailsArgs> details;
+      private final @Nullable Input<SolutionDetailsArgs> details;
 
     public Input<SolutionDetailsArgs> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -46,7 +46,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="goal")
-        private final @Nullable Input<String> goal;
+      private final @Nullable Input<String> goal;
 
     public Input<String> getGoal() {
         return this.goal == null ? Input.empty() : this.goal;
@@ -57,7 +57,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="purpose")
-        private final @Nullable Input<String> purpose;
+      private final @Nullable Input<String> purpose;
 
     public Input<String> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -68,7 +68,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -79,7 +79,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tool")
-        private final @Nullable Input<String> tool;
+      private final @Nullable Input<String> tool;
 
     public Input<String> getTool() {
         return this.tool == null ? Input.empty() : this.tool;

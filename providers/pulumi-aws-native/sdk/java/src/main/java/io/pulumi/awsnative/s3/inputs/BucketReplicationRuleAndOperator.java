@@ -17,14 +17,14 @@ public final class BucketReplicationRuleAndOperator extends io.pulumi.resources.
     public static final BucketReplicationRuleAndOperator Empty = new BucketReplicationRuleAndOperator();
 
     @InputImport(name="prefix")
-        private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @InputImport(name="tagFilters")
-        private final @Nullable List<BucketTagFilter> tagFilters;
+      private final @Nullable List<BucketTagFilter> tagFilters;
 
     public List<BucketTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;

@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.re
     public static final RuleGroupRuleActionCaptchaPropertiesArgs Empty = new RuleGroupRuleActionCaptchaPropertiesArgs();
 
     @InputImport(name="customRequestHandling")
-        private final @Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+      private final @Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
     public Input<RuleGroupCustomRequestHandlingArgs> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;

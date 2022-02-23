@@ -15,21 +15,21 @@ public final class AzureClusterWorkloadIdentityConfigArgs extends io.pulumi.reso
     public static final AzureClusterWorkloadIdentityConfigArgs Empty = new AzureClusterWorkloadIdentityConfigArgs();
 
     @InputImport(name="identityProvider")
-        private final @Nullable Input<String> identityProvider;
+      private final @Nullable Input<String> identityProvider;
 
     public Input<String> getIdentityProvider() {
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
     }
 
     @InputImport(name="issuerUri")
-        private final @Nullable Input<String> issuerUri;
+      private final @Nullable Input<String> issuerUri;
 
     public Input<String> getIssuerUri() {
         return this.issuerUri == null ? Input.empty() : this.issuerUri;
     }
 
     @InputImport(name="workloadPool")
-        private final @Nullable Input<String> workloadPool;
+      private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;

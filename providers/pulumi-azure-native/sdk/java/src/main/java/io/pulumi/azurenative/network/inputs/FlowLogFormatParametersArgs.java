@@ -26,7 +26,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,FlowLogFormatType>> type;
+      private final @Nullable Input<Either<String,FlowLogFormatType>> type;
 
     public Input<Either<String,FlowLogFormatType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -37,7 +37,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

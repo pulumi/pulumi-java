@@ -23,7 +23,7 @@ public final class EventSourceMappingOnFailureArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destination")
-        private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;

@@ -13,14 +13,14 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock e
     public static final GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock Empty = new GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock();
 
     @InputImport(name="cidrBlock", required=true)
-        private final String cidrBlock;
+      private final String cidrBlock;
 
     public String getCidrBlock() {
         return this.cidrBlock;
     }
 
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;

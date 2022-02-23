@@ -22,7 +22,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="day", required=true)
-        private final HoursOfOperationConfigDay day;
+      private final HoursOfOperationConfigDay day;
 
     public HoursOfOperationConfigDay getDay() {
         return this.day;
@@ -33,7 +33,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endTime", required=true)
-        private final HoursOfOperationTimeSlice endTime;
+      private final HoursOfOperationTimeSlice endTime;
 
     public HoursOfOperationTimeSlice getEndTime() {
         return this.endTime;
@@ -44,7 +44,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final HoursOfOperationTimeSlice startTime;
+      private final HoursOfOperationTimeSlice startTime;
 
     public HoursOfOperationTimeSlice getStartTime() {
         return this.startTime;

@@ -15,35 +15,35 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     public static final ResourceDataSyncS3DestinationArgs Empty = new ResourceDataSyncS3DestinationArgs();
 
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-        private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="bucketRegion", required=true)
-        private final Input<String> bucketRegion;
+      private final Input<String> bucketRegion;
 
     public Input<String> getBucketRegion() {
         return this.bucketRegion;
     }
 
     @InputImport(name="kMSKeyArn")
-        private final @Nullable Input<String> kMSKeyArn;
+      private final @Nullable Input<String> kMSKeyArn;
 
     public Input<String> getKMSKeyArn() {
         return this.kMSKeyArn == null ? Input.empty() : this.kMSKeyArn;
     }
 
     @InputImport(name="syncFormat", required=true)
-        private final Input<String> syncFormat;
+      private final Input<String> syncFormat;
 
     public Input<String> getSyncFormat() {
         return this.syncFormat;

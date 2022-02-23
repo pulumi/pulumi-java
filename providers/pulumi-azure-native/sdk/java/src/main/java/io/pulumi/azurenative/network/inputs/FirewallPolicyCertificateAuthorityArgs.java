@@ -23,7 +23,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyVaultSecretId")
-        private final @Nullable Input<String> keyVaultSecretId;
+      private final @Nullable Input<String> keyVaultSecretId;
 
     public Input<String> getKeyVaultSecretId() {
         return this.keyVaultSecretId == null ? Input.empty() : this.keyVaultSecretId;
@@ -34,7 +34,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -13,7 +13,7 @@ public final class GetHostedZoneArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHostedZoneArgs Empty = new GetHostedZoneArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

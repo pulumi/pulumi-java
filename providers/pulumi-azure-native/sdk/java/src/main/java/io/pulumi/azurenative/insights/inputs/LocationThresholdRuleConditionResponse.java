@@ -27,7 +27,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataSource")
-        private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
+      private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
     public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> getDataSource() {
         return this.dataSource == null ? null : this.dataSource;
@@ -38,7 +38,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-        private final Integer failedLocationCount;
+      private final Integer failedLocationCount;
 
     public Integer getFailedLocationCount() {
         return this.failedLocationCount;
@@ -50,7 +50,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -61,7 +61,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="windowSize")
-        private final @Nullable String windowSize;
+      private final @Nullable String windowSize;
 
     public Optional<String> getWindowSize() {
         return this.windowSize == null ? Optional.empty() : Optional.ofNullable(this.windowSize);

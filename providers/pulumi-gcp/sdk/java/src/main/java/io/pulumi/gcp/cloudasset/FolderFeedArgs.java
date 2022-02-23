@@ -25,7 +25,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetNames")
-        private final @Nullable Input<List<String>> assetNames;
+      private final @Nullable Input<List<String>> assetNames;
 
     public Input<List<String>> getAssetNames() {
         return this.assetNames == null ? Input.empty() : this.assetNames;
@@ -40,7 +40,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetTypes")
-        private final @Nullable Input<List<String>> assetTypes;
+      private final @Nullable Input<List<String>> assetTypes;
 
     public Input<List<String>> getAssetTypes() {
         return this.assetTypes == null ? Input.empty() : this.assetTypes;
@@ -53,7 +53,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingProject", required=true)
-        private final Input<String> billingProject;
+      private final Input<String> billingProject;
 
     public Input<String> getBillingProject() {
         return this.billingProject;
@@ -69,7 +69,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<FolderFeedConditionArgs> condition;
+      private final @Nullable Input<FolderFeedConditionArgs> condition;
 
     public Input<FolderFeedConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -81,7 +81,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-        private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -92,7 +92,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedId", required=true)
-        private final Input<String> feedId;
+      private final Input<String> feedId;
 
     public Input<String> getFeedId() {
         return this.feedId;
@@ -104,7 +104,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedOutputConfig", required=true)
-        private final Input<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
+      private final Input<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
     public Input<FolderFeedFeedOutputConfigArgs> getFeedOutputConfig() {
         return this.feedOutputConfig;
@@ -115,7 +115,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder", required=true)
-        private final Input<String> folder;
+      private final Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder;

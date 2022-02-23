@@ -23,7 +23,7 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="windowsOsState")
-        private final @Nullable String windowsOsState;
+      private final @Nullable String windowsOsState;
 
     public Optional<String> getWindowsOsState() {
         return this.windowsOsState == null ? Optional.empty() : Optional.ofNullable(this.windowsOsState);

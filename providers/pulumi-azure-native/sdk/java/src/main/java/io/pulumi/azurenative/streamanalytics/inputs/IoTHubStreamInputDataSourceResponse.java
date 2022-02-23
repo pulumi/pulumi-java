@@ -23,7 +23,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consumerGroupName")
-        private final @Nullable String consumerGroupName;
+      private final @Nullable String consumerGroupName;
 
     public Optional<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Optional.empty() : Optional.ofNullable(this.consumerGroupName);
@@ -34,7 +34,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable String endpoint;
+      private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -45,7 +45,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="iotHubNamespace")
-        private final @Nullable String iotHubNamespace;
+      private final @Nullable String iotHubNamespace;
 
     public Optional<String> getIotHubNamespace() {
         return this.iotHubNamespace == null ? Optional.empty() : Optional.ofNullable(this.iotHubNamespace);
@@ -56,7 +56,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-        private final @Nullable String sharedAccessPolicyKey;
+      private final @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
@@ -67,7 +67,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-        private final @Nullable String sharedAccessPolicyName;
+      private final @Nullable String sharedAccessPolicyName;
 
     public Optional<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
@@ -79,7 +79,7 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

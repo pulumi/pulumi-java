@@ -20,7 +20,7 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationServiceName")
-        private final @Nullable Input<String> configurationServiceName;
+      private final @Nullable Input<String> configurationServiceName;
 
     public Input<String> getConfigurationServiceName() {
         return this.configurationServiceName == null ? Input.empty() : this.configurationServiceName;
@@ -31,7 +31,7 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<ConfigurationServicePropertiesArgs> properties;
+      private final @Nullable Input<ConfigurationServicePropertiesArgs> properties;
 
     public Input<ConfigurationServicePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

@@ -20,7 +20,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName")
-        private final @Nullable Input<String> hubName;
+      private final @Nullable Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName == null ? Input.empty() : this.hubName;
@@ -31,7 +31,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<WebPubSubHubPropertiesArgs> properties;
+      private final Input<WebPubSubHubPropertiesArgs> properties;
 
     public Input<WebPubSubHubPropertiesArgs> getProperties() {
         return this.properties;
@@ -42,7 +42,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

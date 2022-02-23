@@ -25,7 +25,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificate")
-        private final @Nullable CertificateInformationResponse certificate;
+      private final @Nullable CertificateInformationResponse certificate;
 
     public Optional<CertificateInformationResponse> getCertificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
@@ -36,7 +36,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificatePassword")
-        private final @Nullable String certificatePassword;
+      private final @Nullable String certificatePassword;
 
     public Optional<String> getCertificatePassword() {
         return this.certificatePassword == null ? Optional.empty() : Optional.ofNullable(this.certificatePassword);
@@ -47,7 +47,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="defaultSslBinding")
-        private final @Nullable Boolean defaultSslBinding;
+      private final @Nullable Boolean defaultSslBinding;
 
     public Optional<Boolean> getDefaultSslBinding() {
         return this.defaultSslBinding == null ? Optional.empty() : Optional.ofNullable(this.defaultSslBinding);
@@ -58,7 +58,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="encodedCertificate")
-        private final @Nullable String encodedCertificate;
+      private final @Nullable String encodedCertificate;
 
     public Optional<String> getEncodedCertificate() {
         return this.encodedCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedCertificate);
@@ -69,7 +69,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="hostName", required=true)
-        private final String hostName;
+      private final String hostName;
 
     public String getHostName() {
         return this.hostName;
@@ -80,7 +80,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="identityClientId")
-        private final @Nullable String identityClientId;
+      private final @Nullable String identityClientId;
 
     public Optional<String> getIdentityClientId() {
         return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
@@ -91,7 +91,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyVaultId")
-        private final @Nullable String keyVaultId;
+      private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
@@ -102,7 +102,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="negotiateClientCertificate")
-        private final @Nullable Boolean negotiateClientCertificate;
+      private final @Nullable Boolean negotiateClientCertificate;
 
     public Optional<Boolean> getNegotiateClientCertificate() {
         return this.negotiateClientCertificate == null ? Optional.empty() : Optional.ofNullable(this.negotiateClientCertificate);
@@ -113,7 +113,7 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

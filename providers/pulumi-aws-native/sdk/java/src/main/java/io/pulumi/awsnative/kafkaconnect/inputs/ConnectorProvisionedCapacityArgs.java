@@ -23,7 +23,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mcuCount")
-        private final @Nullable Input<Integer> mcuCount;
+      private final @Nullable Input<Integer> mcuCount;
 
     public Input<Integer> getMcuCount() {
         return this.mcuCount == null ? Input.empty() : this.mcuCount;
@@ -34,7 +34,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workerCount", required=true)
-        private final Input<Integer> workerCount;
+      private final Input<Integer> workerCount;
 
     public Input<Integer> getWorkerCount() {
         return this.workerCount;

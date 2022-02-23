@@ -22,7 +22,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="bandwidthMHz", required=true)
-        private final Double bandwidthMHz;
+      private final Double bandwidthMHz;
 
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
@@ -33,7 +33,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="centerFrequencyMHz", required=true)
-        private final Double centerFrequencyMHz;
+      private final Double centerFrequencyMHz;
 
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
@@ -44,7 +44,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="direction", required=true)
-        private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -55,7 +55,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="polarization", required=true)
-        private final String polarization;
+      private final String polarization;
 
     public String getPolarization() {
         return this.polarization;

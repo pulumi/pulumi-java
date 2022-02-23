@@ -25,7 +25,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="directLineEmbedCode")
-        private final @Nullable Input<String> directLineEmbedCode;
+      private final @Nullable Input<String> directLineEmbedCode;
 
     public Input<String> getDirectLineEmbedCode() {
         return this.directLineEmbedCode == null ? Input.empty() : this.directLineEmbedCode;
@@ -36,7 +36,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sites")
-        private final @Nullable Input<List<DirectLineSiteArgs>> sites;
+      private final @Nullable Input<List<DirectLineSiteArgs>> sites;
 
     public Input<List<DirectLineSiteArgs>> getSites() {
         return this.sites == null ? Input.empty() : this.sites;

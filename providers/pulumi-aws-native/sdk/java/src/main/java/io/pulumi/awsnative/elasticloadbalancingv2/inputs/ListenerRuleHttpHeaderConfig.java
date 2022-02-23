@@ -16,14 +16,14 @@ public final class ListenerRuleHttpHeaderConfig extends io.pulumi.resources.Invo
     public static final ListenerRuleHttpHeaderConfig Empty = new ListenerRuleHttpHeaderConfig();
 
     @InputImport(name="httpHeaderName")
-        private final @Nullable String httpHeaderName;
+      private final @Nullable String httpHeaderName;
 
     public Optional<String> getHttpHeaderName() {
         return this.httpHeaderName == null ? Optional.empty() : Optional.ofNullable(this.httpHeaderName);
     }
 
     @InputImport(name="values")
-        private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

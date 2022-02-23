@@ -25,7 +25,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="defaultMode")
-        private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -41,7 +41,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="items")
-        private final @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> items;
+      private final @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> items;
 
     public Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -60,7 +60,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretName", required=true)
-        private final Input<String> secretName;
+      private final Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName;

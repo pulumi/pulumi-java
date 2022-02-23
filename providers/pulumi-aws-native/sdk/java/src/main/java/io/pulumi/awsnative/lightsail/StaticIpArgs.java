@@ -19,7 +19,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedTo")
-        private final @Nullable Input<String> attachedTo;
+      private final @Nullable Input<String> attachedTo;
 
     public Input<String> getAttachedTo() {
         return this.attachedTo == null ? Input.empty() : this.attachedTo;
@@ -30,7 +30,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIpName")
-        private final @Nullable Input<String> staticIpName;
+      private final @Nullable Input<String> staticIpName;
 
     public Input<String> getStaticIpName() {
         return this.staticIpName == null ? Input.empty() : this.staticIpName;

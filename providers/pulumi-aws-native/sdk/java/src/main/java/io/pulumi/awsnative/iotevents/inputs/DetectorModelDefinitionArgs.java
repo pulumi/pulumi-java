@@ -24,7 +24,7 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="initialStateName", required=true)
-        private final Input<String> initialStateName;
+      private final Input<String> initialStateName;
 
     public Input<String> getInitialStateName() {
         return this.initialStateName;
@@ -35,7 +35,7 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="states", required=true)
-        private final Input<List<DetectorModelStateArgs>> states;
+      private final Input<List<DetectorModelStateArgs>> states;
 
     public Input<List<DetectorModelStateArgs>> getStates() {
         return this.states;

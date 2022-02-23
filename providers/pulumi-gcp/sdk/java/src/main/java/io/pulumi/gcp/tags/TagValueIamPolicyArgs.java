@@ -19,7 +19,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -30,7 +30,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagValue", required=true)
-        private final Input<String> tagValue;
+      private final Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue;

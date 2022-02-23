@@ -23,7 +23,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * 
      */
     @InputImport(name="accessKey", required=true)
-        private final Input<String> accessKey;
+      private final Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey;
@@ -34,7 +34,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * 
      */
     @InputImport(name="suffix")
-        private final @Nullable Input<String> suffix;
+      private final @Nullable Input<String> suffix;
 
     public Input<String> getSuffix() {
         return this.suffix == null ? Input.empty() : this.suffix;

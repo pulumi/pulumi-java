@@ -18,28 +18,28 @@ public final class IntegrationSourceFlowConfigArgs extends io.pulumi.resources.R
     public static final IntegrationSourceFlowConfigArgs Empty = new IntegrationSourceFlowConfigArgs();
 
     @InputImport(name="connectorProfileName")
-        private final @Nullable Input<String> connectorProfileName;
+      private final @Nullable Input<String> connectorProfileName;
 
     public Input<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
     }
 
     @InputImport(name="connectorType", required=true)
-        private final Input<IntegrationConnectorType> connectorType;
+      private final Input<IntegrationConnectorType> connectorType;
 
     public Input<IntegrationConnectorType> getConnectorType() {
         return this.connectorType;
     }
 
     @InputImport(name="incrementalPullConfig")
-        private final @Nullable Input<IntegrationIncrementalPullConfigArgs> incrementalPullConfig;
+      private final @Nullable Input<IntegrationIncrementalPullConfigArgs> incrementalPullConfig;
 
     public Input<IntegrationIncrementalPullConfigArgs> getIncrementalPullConfig() {
         return this.incrementalPullConfig == null ? Input.empty() : this.incrementalPullConfig;
     }
 
     @InputImport(name="sourceConnectorProperties", required=true)
-        private final Input<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties;
+      private final Input<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
     public Input<IntegrationSourceConnectorPropertiesArgs> getSourceConnectorProperties() {
         return this.sourceConnectorProperties;

@@ -18,7 +18,7 @@ public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.Resourc
     public static final DataPrivacyPropertiesArgs Empty = new DataPrivacyPropertiesArgs();
 
     @InputImport(name="childDirected", required=true)
-        private final Input<Boolean> childDirected;
+      private final Input<Boolean> childDirected;
 
     public Input<Boolean> getChildDirected() {
         return this.childDirected;

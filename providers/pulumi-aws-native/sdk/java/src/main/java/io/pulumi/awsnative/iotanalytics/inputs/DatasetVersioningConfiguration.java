@@ -16,14 +16,14 @@ public final class DatasetVersioningConfiguration extends io.pulumi.resources.In
     public static final DatasetVersioningConfiguration Empty = new DatasetVersioningConfiguration();
 
     @InputImport(name="maxVersions")
-        private final @Nullable Integer maxVersions;
+      private final @Nullable Integer maxVersions;
 
     public Optional<Integer> getMaxVersions() {
         return this.maxVersions == null ? Optional.empty() : Optional.ofNullable(this.maxVersions);
     }
 
     @InputImport(name="unlimited")
-        private final @Nullable Boolean unlimited;
+      private final @Nullable Boolean unlimited;
 
     public Optional<Boolean> getUnlimited() {
         return this.unlimited == null ? Optional.empty() : Optional.ofNullable(this.unlimited);

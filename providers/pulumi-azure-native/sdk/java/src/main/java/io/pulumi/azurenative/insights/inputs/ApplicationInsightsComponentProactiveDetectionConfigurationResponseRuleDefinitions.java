@@ -24,7 +24,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -46,7 +46,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="helpUrl")
-        private final @Nullable String helpUrl;
+      private final @Nullable String helpUrl;
 
     public Optional<String> getHelpUrl() {
         return this.helpUrl == null ? Optional.empty() : Optional.ofNullable(this.helpUrl);
@@ -57,7 +57,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="isEnabledByDefault")
-        private final @Nullable Boolean isEnabledByDefault;
+      private final @Nullable Boolean isEnabledByDefault;
 
     public Optional<Boolean> getIsEnabledByDefault() {
         return this.isEnabledByDefault == null ? Optional.empty() : Optional.ofNullable(this.isEnabledByDefault);
@@ -68,7 +68,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="isHidden")
-        private final @Nullable Boolean isHidden;
+      private final @Nullable Boolean isHidden;
 
     public Optional<Boolean> getIsHidden() {
         return this.isHidden == null ? Optional.empty() : Optional.ofNullable(this.isHidden);
@@ -79,7 +79,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="isInPreview")
-        private final @Nullable Boolean isInPreview;
+      private final @Nullable Boolean isInPreview;
 
     public Optional<Boolean> getIsInPreview() {
         return this.isInPreview == null ? Optional.empty() : Optional.ofNullable(this.isInPreview);
@@ -90,7 +90,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -101,7 +101,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @InputImport(name="supportsEmailNotifications")
-        private final @Nullable Boolean supportsEmailNotifications;
+      private final @Nullable Boolean supportsEmailNotifications;
 
     public Optional<Boolean> getSupportsEmailNotifications() {
         return this.supportsEmailNotifications == null ? Optional.empty() : Optional.ofNullable(this.supportsEmailNotifications);

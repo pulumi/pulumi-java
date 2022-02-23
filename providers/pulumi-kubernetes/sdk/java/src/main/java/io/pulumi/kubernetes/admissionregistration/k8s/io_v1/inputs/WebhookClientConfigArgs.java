@@ -24,7 +24,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="caBundle")
-        private final @Nullable Input<String> caBundle;
+      private final @Nullable Input<String> caBundle;
 
     public Input<String> getCaBundle() {
         return this.caBundle == null ? Input.empty() : this.caBundle;
@@ -37,7 +37,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<ServiceReferenceArgs> service;
+      private final @Nullable Input<ServiceReferenceArgs> service;
 
     public Input<ServiceReferenceArgs> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -58,7 +58,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url")
-        private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

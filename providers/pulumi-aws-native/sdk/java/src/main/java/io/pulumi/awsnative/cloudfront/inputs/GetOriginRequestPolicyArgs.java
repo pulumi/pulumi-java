@@ -13,7 +13,7 @@ public final class GetOriginRequestPolicyArgs extends io.pulumi.resources.Invoke
     public static final GetOriginRequestPolicyArgs Empty = new GetOriginRequestPolicyArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

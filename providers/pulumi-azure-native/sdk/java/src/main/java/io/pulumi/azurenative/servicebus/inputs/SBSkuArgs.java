@@ -25,7 +25,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -36,7 +36,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<SkuName> name;
+      private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<SkuTier> tier;
+      private final @Nullable Input<SkuTier> tier;
 
     public Input<SkuTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

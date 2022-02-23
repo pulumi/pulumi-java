@@ -29,7 +29,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administrationRoleARN")
-        private final @Nullable Input<String> administrationRoleARN;
+      private final @Nullable Input<String> administrationRoleARN;
 
     public Input<String> getAdministrationRoleARN() {
         return this.administrationRoleARN == null ? Input.empty() : this.administrationRoleARN;
@@ -40,7 +40,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeployment")
-        private final @Nullable Input<StackSetAutoDeploymentArgs> autoDeployment;
+      private final @Nullable Input<StackSetAutoDeploymentArgs> autoDeployment;
 
     public Input<StackSetAutoDeploymentArgs> getAutoDeployment() {
         return this.autoDeployment == null ? Input.empty() : this.autoDeployment;
@@ -51,7 +51,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callAs")
-        private final @Nullable Input<StackSetCallAs> callAs;
+      private final @Nullable Input<StackSetCallAs> callAs;
 
     public Input<StackSetCallAs> getCallAs() {
         return this.callAs == null ? Input.empty() : this.callAs;
@@ -62,7 +62,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-        private final @Nullable Input<List<StackSetCapability>> capabilities;
+      private final @Nullable Input<List<StackSetCapability>> capabilities;
 
     public Input<List<StackSetCapability>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
@@ -73,7 +73,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,7 +84,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleName")
-        private final @Nullable Input<String> executionRoleName;
+      private final @Nullable Input<String> executionRoleName;
 
     public Input<String> getExecutionRoleName() {
         return this.executionRoleName == null ? Input.empty() : this.executionRoleName;
@@ -95,14 +95,14 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedExecution")
-        private final @Nullable Input<ManagedExecutionPropertiesArgs> managedExecution;
+      private final @Nullable Input<ManagedExecutionPropertiesArgs> managedExecution;
 
     public Input<ManagedExecutionPropertiesArgs> getManagedExecution() {
         return this.managedExecution == null ? Input.empty() : this.managedExecution;
     }
 
     @InputImport(name="operationPreferences")
-        private final @Nullable Input<StackSetOperationPreferencesArgs> operationPreferences;
+      private final @Nullable Input<StackSetOperationPreferencesArgs> operationPreferences;
 
     public Input<StackSetOperationPreferencesArgs> getOperationPreferences() {
         return this.operationPreferences == null ? Input.empty() : this.operationPreferences;
@@ -113,7 +113,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<StackSetParameterArgs>> parameters;
+      private final @Nullable Input<List<StackSetParameterArgs>> parameters;
 
     public Input<List<StackSetParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -124,7 +124,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionModel", required=true)
-        private final Input<StackSetPermissionModel> permissionModel;
+      private final Input<StackSetPermissionModel> permissionModel;
 
     public Input<StackSetPermissionModel> getPermissionModel() {
         return this.permissionModel;
@@ -135,7 +135,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackInstancesGroup")
-        private final @Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup;
+      private final @Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
     public Input<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
         return this.stackInstancesGroup == null ? Input.empty() : this.stackInstancesGroup;
@@ -146,7 +146,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackSetName")
-        private final @Nullable Input<String> stackSetName;
+      private final @Nullable Input<String> stackSetName;
 
     public Input<String> getStackSetName() {
         return this.stackSetName == null ? Input.empty() : this.stackSetName;
@@ -157,7 +157,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<StackSetTagArgs>> tags;
+      private final @Nullable Input<List<StackSetTagArgs>> tags;
 
     public Input<List<StackSetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -168,7 +168,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateBody")
-        private final @Nullable Input<String> templateBody;
+      private final @Nullable Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody == null ? Input.empty() : this.templateBody;
@@ -179,7 +179,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateURL")
-        private final @Nullable Input<String> templateURL;
+      private final @Nullable Input<String> templateURL;
 
     public Input<String> getTemplateURL() {
         return this.templateURL == null ? Input.empty() : this.templateURL;

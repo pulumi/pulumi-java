@@ -21,7 +21,7 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-        private final Boolean authentication;
+      private final Boolean authentication;
 
     public Boolean getAuthentication() {
         return this.authentication;
@@ -32,7 +32,7 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prodModeWriteProtect", required=true)
-        private final Boolean prodModeWriteProtect;
+      private final Boolean prodModeWriteProtect;
 
     public Boolean getProdModeWriteProtect() {
         return this.prodModeWriteProtect;

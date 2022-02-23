@@ -25,7 +25,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fqdnTags")
-        private final @Nullable Input<List<String>> fqdnTags;
+      private final @Nullable Input<List<String>> fqdnTags;
 
     public Input<List<String>> getFqdnTags() {
         return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
@@ -47,7 +47,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocols")
-        private final @Nullable Input<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
+      private final @Nullable Input<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
 
     public Input<List<AzureFirewallApplicationRuleProtocolArgs>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -69,7 +69,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceAddresses")
-        private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -80,7 +80,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceIpGroups")
-        private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
@@ -91,7 +91,7 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetFqdns")
-        private final @Nullable Input<List<String>> targetFqdns;
+      private final @Nullable Input<List<String>> targetFqdns;
 
     public Input<List<String>> getTargetFqdns() {
         return this.targetFqdns == null ? Input.empty() : this.targetFqdns;

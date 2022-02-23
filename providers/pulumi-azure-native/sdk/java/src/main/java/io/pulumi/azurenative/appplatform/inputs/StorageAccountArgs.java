@@ -22,7 +22,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountKey", required=true)
-        private final Input<String> accountKey;
+      private final Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey;
@@ -33,7 +33,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType", required=true)
-        private final Input<String> storageType;
+      private final Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType;

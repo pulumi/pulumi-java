@@ -20,7 +20,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="associationName")
-        private final @Nullable Input<String> associationName;
+      private final @Nullable Input<String> associationName;
 
     public Input<String> getAssociationName() {
         return this.associationName == null ? Input.empty() : this.associationName;
@@ -31,7 +31,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="guestDiagnosticSettingsName", required=true)
-        private final Input<String> guestDiagnosticSettingsName;
+      private final Input<String> guestDiagnosticSettingsName;
 
     public Input<String> getGuestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
@@ -42,7 +42,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final Input<String> resourceUri;
+      private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -64,7 +64,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

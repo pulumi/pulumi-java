@@ -16,14 +16,14 @@ public final class DataSetColumnLevelPermissionRule extends io.pulumi.resources.
     public static final DataSetColumnLevelPermissionRule Empty = new DataSetColumnLevelPermissionRule();
 
     @InputImport(name="columnNames")
-        private final @Nullable List<String> columnNames;
+      private final @Nullable List<String> columnNames;
 
     public List<String> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
 
     @InputImport(name="principals")
-        private final @Nullable List<String> principals;
+      private final @Nullable List<String> principals;
 
     public List<String> getPrincipals() {
         return this.principals == null ? List.of() : this.principals;

@@ -26,7 +26,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-        private final Input<Integer> maxReplicas;
+      private final Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas;
@@ -37,7 +37,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metrics")
-        private final @Nullable Input<List<MetricSpecArgs>> metrics;
+      private final @Nullable Input<List<MetricSpecArgs>> metrics;
 
     public Input<List<MetricSpecArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -48,7 +48,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minReplicas")
-        private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -59,7 +59,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scaleTargetRef", required=true)
-        private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
+      private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Input<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
         return this.scaleTargetRef;

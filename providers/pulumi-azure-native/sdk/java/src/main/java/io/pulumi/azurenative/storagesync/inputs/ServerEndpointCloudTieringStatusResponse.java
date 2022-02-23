@@ -27,7 +27,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="cachePerformance", required=true)
-        private final CloudTieringCachePerformanceResponse cachePerformance;
+      private final CloudTieringCachePerformanceResponse cachePerformance;
 
     public CloudTieringCachePerformanceResponse getCachePerformance() {
         return this.cachePerformance;
@@ -38,7 +38,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="datePolicyStatus", required=true)
-        private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
+      private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
 
     public CloudTieringDatePolicyStatusResponse getDatePolicyStatus() {
         return this.datePolicyStatus;
@@ -49,7 +49,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="filesNotTiering", required=true)
-        private final CloudTieringFilesNotTieringResponse filesNotTiering;
+      private final CloudTieringFilesNotTieringResponse filesNotTiering;
 
     public CloudTieringFilesNotTieringResponse getFilesNotTiering() {
         return this.filesNotTiering;
@@ -60,7 +60,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="health", required=true)
-        private final String health;
+      private final String health;
 
     public String getHealth() {
         return this.health;
@@ -71,7 +71,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="healthLastUpdatedTimestamp", required=true)
-        private final String healthLastUpdatedTimestamp;
+      private final String healthLastUpdatedTimestamp;
 
     public String getHealthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
@@ -82,7 +82,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastCloudTieringResult", required=true)
-        private final Integer lastCloudTieringResult;
+      private final Integer lastCloudTieringResult;
 
     public Integer getLastCloudTieringResult() {
         return this.lastCloudTieringResult;
@@ -93,7 +93,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastSuccessTimestamp", required=true)
-        private final String lastSuccessTimestamp;
+      private final String lastSuccessTimestamp;
 
     public String getLastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
@@ -104,7 +104,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastUpdatedTimestamp", required=true)
-        private final String lastUpdatedTimestamp;
+      private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -115,7 +115,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="spaceSavings", required=true)
-        private final CloudTieringSpaceSavingsResponse spaceSavings;
+      private final CloudTieringSpaceSavingsResponse spaceSavings;
 
     public CloudTieringSpaceSavingsResponse getSpaceSavings() {
         return this.spaceSavings;
@@ -126,7 +126,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="volumeFreeSpacePolicyStatus", required=true)
-        private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
+      private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
     public CloudTieringVolumeFreeSpacePolicyStatusResponse getVolumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;

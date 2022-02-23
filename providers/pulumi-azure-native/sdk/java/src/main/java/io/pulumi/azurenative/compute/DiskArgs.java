@@ -35,7 +35,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="burstingEnabled")
-        private final @Nullable Input<Boolean> burstingEnabled;
+      private final @Nullable Input<Boolean> burstingEnabled;
 
     public Input<Boolean> getBurstingEnabled() {
         return this.burstingEnabled == null ? Input.empty() : this.burstingEnabled;
@@ -46,7 +46,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData", required=true)
-        private final Input<CreationDataArgs> creationData;
+      private final Input<CreationDataArgs> creationData;
 
     public Input<CreationDataArgs> getCreationData() {
         return this.creationData;
@@ -57,7 +57,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskAccessId")
-        private final @Nullable Input<String> diskAccessId;
+      private final @Nullable Input<String> diskAccessId;
 
     public Input<String> getDiskAccessId() {
         return this.diskAccessId == null ? Input.empty() : this.diskAccessId;
@@ -68,7 +68,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskIOPSReadOnly")
-        private final @Nullable Input<Double> diskIOPSReadOnly;
+      private final @Nullable Input<Double> diskIOPSReadOnly;
 
     public Input<Double> getDiskIOPSReadOnly() {
         return this.diskIOPSReadOnly == null ? Input.empty() : this.diskIOPSReadOnly;
@@ -79,7 +79,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskIOPSReadWrite")
-        private final @Nullable Input<Double> diskIOPSReadWrite;
+      private final @Nullable Input<Double> diskIOPSReadWrite;
 
     public Input<Double> getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite == null ? Input.empty() : this.diskIOPSReadWrite;
@@ -90,7 +90,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskMBpsReadOnly")
-        private final @Nullable Input<Double> diskMBpsReadOnly;
+      private final @Nullable Input<Double> diskMBpsReadOnly;
 
     public Input<Double> getDiskMBpsReadOnly() {
         return this.diskMBpsReadOnly == null ? Input.empty() : this.diskMBpsReadOnly;
@@ -101,7 +101,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskMBpsReadWrite")
-        private final @Nullable Input<Double> diskMBpsReadWrite;
+      private final @Nullable Input<Double> diskMBpsReadWrite;
 
     public Input<Double> getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite == null ? Input.empty() : this.diskMBpsReadWrite;
@@ -112,7 +112,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskName")
-        private final @Nullable Input<String> diskName;
+      private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -123,7 +123,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-        private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -134,7 +134,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable Input<EncryptionArgs> encryption;
+      private final @Nullable Input<EncryptionArgs> encryption;
 
     public Input<EncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -145,7 +145,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettingsCollection")
-        private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+      private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
     public Input<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
         return this.encryptionSettingsCollection == null ? Input.empty() : this.encryptionSettingsCollection;
@@ -156,7 +156,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -167,7 +167,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-        private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+      private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
 
     public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
         return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
@@ -178,7 +178,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -189,7 +189,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxShares")
-        private final @Nullable Input<Integer> maxShares;
+      private final @Nullable Input<Integer> maxShares;
 
     public Input<Integer> getMaxShares() {
         return this.maxShares == null ? Input.empty() : this.maxShares;
@@ -200,7 +200,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkAccessPolicy")
-        private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+      private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
     public Input<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
         return this.networkAccessPolicy == null ? Input.empty() : this.networkAccessPolicy;
@@ -211,7 +211,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<OperatingSystemTypes> osType;
+      private final @Nullable Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -222,7 +222,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-        private final @Nullable Input<PurchasePlanArgs> purchasePlan;
+      private final @Nullable Input<PurchasePlanArgs> purchasePlan;
 
     public Input<PurchasePlanArgs> getPurchasePlan() {
         return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
@@ -233,7 +233,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -244,7 +244,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityProfile")
-        private final @Nullable Input<DiskSecurityProfileArgs> securityProfile;
+      private final @Nullable Input<DiskSecurityProfileArgs> securityProfile;
 
     public Input<DiskSecurityProfileArgs> getSecurityProfile() {
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
@@ -255,7 +255,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<DiskSkuArgs> sku;
+      private final @Nullable Input<DiskSkuArgs> sku;
 
     public Input<DiskSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -266,7 +266,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportsHibernation")
-        private final @Nullable Input<Boolean> supportsHibernation;
+      private final @Nullable Input<Boolean> supportsHibernation;
 
     public Input<Boolean> getSupportsHibernation() {
         return this.supportsHibernation == null ? Input.empty() : this.supportsHibernation;
@@ -277,7 +277,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -288,7 +288,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -299,7 +299,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

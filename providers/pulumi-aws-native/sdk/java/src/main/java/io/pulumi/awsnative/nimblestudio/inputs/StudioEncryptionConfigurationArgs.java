@@ -24,14 +24,14 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="keyArn")
-        private final @Nullable Input<String> keyArn;
+      private final @Nullable Input<String> keyArn;
 
     public Input<String> getKeyArn() {
         return this.keyArn == null ? Input.empty() : this.keyArn;
     }
 
     @InputImport(name="keyType", required=true)
-        private final Input<StudioEncryptionConfigurationKeyType> keyType;
+      private final Input<StudioEncryptionConfigurationKeyType> keyType;
 
     public Input<StudioEncryptionConfigurationKeyType> getKeyType() {
         return this.keyType;

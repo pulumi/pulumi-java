@@ -17,7 +17,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-        private final String subscriptionName;
+      private final String subscriptionName;
 
     public String getSubscriptionName() {
         return this.subscriptionName;

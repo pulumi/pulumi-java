@@ -13,7 +13,7 @@ public final class GetDHCPOptionsArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDHCPOptionsArgs Empty = new GetDHCPOptionsArgs();
 
     @InputImport(name="dhcpOptionsId", required=true)
-        private final String dhcpOptionsId;
+      private final String dhcpOptionsId;
 
     public String getDhcpOptionsId() {
         return this.dhcpOptionsId;

@@ -23,7 +23,7 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="governmentCloud")
-        private final @Nullable String governmentCloud;
+      private final @Nullable String governmentCloud;
 
     public Optional<String> getGovernmentCloud() {
         return this.governmentCloud == null ? Optional.empty() : Optional.ofNullable(this.governmentCloud);
@@ -34,7 +34,7 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="publicAzure")
-        private final @Nullable String publicAzure;
+      private final @Nullable String publicAzure;
 
     public Optional<String> getPublicAzure() {
         return this.publicAzure == null ? Optional.empty() : Optional.ofNullable(this.publicAzure);

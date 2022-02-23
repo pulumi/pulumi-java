@@ -13,21 +13,21 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-        private final String applicationIdentifier;
+      private final String applicationIdentifier;
 
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-        private final String environmentIdentifier;
+      private final String environmentIdentifier;
 
     public String getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="routeIdentifier", required=true)
-        private final String routeIdentifier;
+      private final String routeIdentifier;
 
     public String getRouteIdentifier() {
         return this.routeIdentifier;

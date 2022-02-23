@@ -19,7 +19,7 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -30,7 +30,7 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

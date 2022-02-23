@@ -23,7 +23,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataCollectionEndpointName")
-        private final @Nullable Input<String> dataCollectionEndpointName;
+      private final @Nullable Input<String> dataCollectionEndpointName;
 
     public Input<String> getDataCollectionEndpointName() {
         return this.dataCollectionEndpointName == null ? Input.empty() : this.dataCollectionEndpointName;
@@ -34,7 +34,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="immutableId")
-        private final @Nullable Input<String> immutableId;
+      private final @Nullable Input<String> immutableId;
 
     public Input<String> getImmutableId() {
         return this.immutableId == null ? Input.empty() : this.immutableId;
@@ -56,7 +56,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
+      private final @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
     public Input<Either<String,KnownDataCollectionEndpointResourceKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -67,7 +67,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkAcls")
-        private final @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls;
+      private final @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
     public Input<DataCollectionEndpointNetworkAclsArgs> getNetworkAcls() {
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
@@ -89,7 +89,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

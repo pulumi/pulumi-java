@@ -18,21 +18,21 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
     @InputImport(name="endpointUri")
-        private final @Nullable Input<String> endpointUri;
+      private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
     }
 
     @InputImport(name="extensionCategories")
-        private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
+      private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
 
     public Input<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
         return this.extensionCategories == null ? Input.empty() : this.extensionCategories;
     }
 
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

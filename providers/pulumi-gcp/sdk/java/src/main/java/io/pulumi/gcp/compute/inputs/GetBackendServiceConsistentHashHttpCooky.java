@@ -19,21 +19,21 @@ public final class GetBackendServiceConsistentHashHttpCooky extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="path", required=true)
-        private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
     }
 
     @InputImport(name="ttls", required=true)
-        private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
+      private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
 
     public List<GetBackendServiceConsistentHashHttpCookyTtl> getTtls() {
         return this.ttls;

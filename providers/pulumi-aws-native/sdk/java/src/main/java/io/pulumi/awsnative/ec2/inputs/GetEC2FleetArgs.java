@@ -13,7 +13,7 @@ public final class GetEC2FleetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEC2FleetArgs Empty = new GetEC2FleetArgs();
 
     @InputImport(name="fleetId", required=true)
-        private final String fleetId;
+      private final String fleetId;
 
     public String getFleetId() {
         return this.fleetId;

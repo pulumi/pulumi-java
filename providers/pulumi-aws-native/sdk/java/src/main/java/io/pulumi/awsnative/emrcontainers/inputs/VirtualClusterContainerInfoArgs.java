@@ -14,7 +14,7 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     public static final VirtualClusterContainerInfoArgs Empty = new VirtualClusterContainerInfoArgs();
 
     @InputImport(name="eksInfo", required=true)
-        private final Input<VirtualClusterEksInfoArgs> eksInfo;
+      private final Input<VirtualClusterEksInfoArgs> eksInfo;
 
     public Input<VirtualClusterEksInfoArgs> getEksInfo() {
         return this.eksInfo;

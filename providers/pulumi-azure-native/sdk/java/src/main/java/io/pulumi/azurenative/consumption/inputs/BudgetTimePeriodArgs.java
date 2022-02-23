@@ -23,7 +23,7 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endDate")
-        private final @Nullable Input<String> endDate;
+      private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -34,7 +34,7 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startDate", required=true)
-        private final Input<String> startDate;
+      private final Input<String> startDate;
 
     public Input<String> getStartDate() {
         return this.startDate;

@@ -35,7 +35,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -46,7 +46,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="bucketName", required=true)
-        private final Object bucketName;
+      private final Object bucketName;
 
     public Object getBucketName() {
         return this.bucketName;
@@ -57,7 +57,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="compression")
-        private final @Nullable DatasetCompressionResponse compression;
+      private final @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> getCompression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
@@ -68,7 +68,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -79,7 +79,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="folder")
-        private final @Nullable DatasetResponseFolder folder;
+      private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -90,7 +90,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="format")
-        private final @Nullable Object format;
+      private final @Nullable Object format;
 
     public Object getFormat() {
         return this.format == null ? null : this.format;
@@ -101,7 +101,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Object key;
+      private final @Nullable Object key;
 
     public Optional<Object> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -112,7 +112,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -123,7 +123,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-        private final @Nullable Object modifiedDatetimeEnd;
+      private final @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> getModifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
@@ -134,7 +134,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-        private final @Nullable Object modifiedDatetimeStart;
+      private final @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> getModifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
@@ -145,7 +145,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -156,7 +156,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Object prefix;
+      private final @Nullable Object prefix;
 
     public Optional<Object> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -167,7 +167,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="schema")
-        private final @Nullable Object schema;
+      private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -178,7 +178,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="structure")
-        private final @Nullable Object structure;
+      private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -190,7 +190,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -201,7 +201,7 @@ public final class AmazonS3DatasetResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Object version;
+      private final @Nullable Object version;
 
     public Optional<Object> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

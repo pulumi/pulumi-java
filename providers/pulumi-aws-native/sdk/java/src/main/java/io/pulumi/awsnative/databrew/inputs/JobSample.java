@@ -20,14 +20,14 @@ public final class JobSample extends io.pulumi.resources.InvokeArgs {
     public static final JobSample Empty = new JobSample();
 
     @InputImport(name="mode")
-        private final @Nullable JobSampleMode mode;
+      private final @Nullable JobSampleMode mode;
 
     public Optional<JobSampleMode> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
     @InputImport(name="size")
-        private final @Nullable Integer size;
+      private final @Nullable Integer size;
 
     public Optional<Integer> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);

@@ -24,14 +24,14 @@ public final class StreamingImageEncryptionConfiguration extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyArn")
-        private final @Nullable String keyArn;
+      private final @Nullable String keyArn;
 
     public Optional<String> getKeyArn() {
         return this.keyArn == null ? Optional.empty() : Optional.ofNullable(this.keyArn);
     }
 
     @InputImport(name="keyType", required=true)
-        private final StreamingImageEncryptionConfigurationKeyType keyType;
+      private final StreamingImageEncryptionConfigurationKeyType keyType;
 
     public StreamingImageEncryptionConfigurationKeyType getKeyType() {
         return this.keyType;

@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="allowInsecure")
-        private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="gcs")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="localPath")
-        private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="remote")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;

@@ -27,7 +27,7 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -38,7 +38,7 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyType", required=true)
-        private final Input<Either<String,CostAllocationPolicyType>> policyType;
+      private final Input<Either<String,CostAllocationPolicyType>> policyType;
 
     public Input<Either<String,CostAllocationPolicyType>> getPolicyType() {
         return this.policyType;
@@ -49,7 +49,7 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<Either<String,CostAllocationResourceType>> resourceType;
+      private final Input<Either<String,CostAllocationResourceType>> resourceType;
 
     public Input<Either<String,CostAllocationResourceType>> getPropResourceType() {
         return this.resourceType;
@@ -60,7 +60,7 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<CostAllocationProportionArgs>> values;
+      private final Input<List<CostAllocationProportionArgs>> values;
 
     public Input<List<CostAllocationProportionArgs>> getValues() {
         return this.values;

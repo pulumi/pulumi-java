@@ -21,7 +21,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="conformancePackInputParameters")
-        private final @Nullable Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
+      private final @Nullable Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
 
     public Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? Input.empty() : this.conformancePackInputParameters;
@@ -32,7 +32,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deliveryS3Bucket")
-        private final @Nullable Input<String> deliveryS3Bucket;
+      private final @Nullable Input<String> deliveryS3Bucket;
 
     public Input<String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
@@ -43,7 +43,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deliveryS3KeyPrefix")
-        private final @Nullable Input<String> deliveryS3KeyPrefix;
+      private final @Nullable Input<String> deliveryS3KeyPrefix;
 
     public Input<String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
@@ -54,7 +54,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="excludedAccounts")
-        private final @Nullable Input<List<String>> excludedAccounts;
+      private final @Nullable Input<List<String>> excludedAccounts;
 
     public Input<List<String>> getExcludedAccounts() {
         return this.excludedAccounts == null ? Input.empty() : this.excludedAccounts;
@@ -65,7 +65,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="organizationConformancePackName")
-        private final @Nullable Input<String> organizationConformancePackName;
+      private final @Nullable Input<String> organizationConformancePackName;
 
     public Input<String> getOrganizationConformancePackName() {
         return this.organizationConformancePackName == null ? Input.empty() : this.organizationConformancePackName;
@@ -76,7 +76,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="templateBody")
-        private final @Nullable Input<String> templateBody;
+      private final @Nullable Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody == null ? Input.empty() : this.templateBody;
@@ -87,7 +87,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="templateS3Uri")
-        private final @Nullable Input<String> templateS3Uri;
+      private final @Nullable Input<String> templateS3Uri;
 
     public Input<String> getTemplateS3Uri() {
         return this.templateS3Uri == null ? Input.empty() : this.templateS3Uri;

@@ -29,7 +29,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -51,7 +51,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folder")
-        private final @Nullable DataFlowResponseFolder folder;
+      private final @Nullable DataFlowResponseFolder folder;
 
     public Optional<DataFlowResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -62,7 +62,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="script")
-        private final @Nullable String script;
+      private final @Nullable String script;
 
     public Optional<String> getScript() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
@@ -73,7 +73,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scriptLines")
-        private final @Nullable List<String> scriptLines;
+      private final @Nullable List<String> scriptLines;
 
     public List<String> getScriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
@@ -84,7 +84,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinks")
-        private final @Nullable List<DataFlowSinkResponse> sinks;
+      private final @Nullable List<DataFlowSinkResponse> sinks;
 
     public List<DataFlowSinkResponse> getSinks() {
         return this.sinks == null ? List.of() : this.sinks;
@@ -95,7 +95,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sources")
-        private final @Nullable List<DataFlowSourceResponse> sources;
+      private final @Nullable List<DataFlowSourceResponse> sources;
 
     public List<DataFlowSourceResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
@@ -106,7 +106,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transformations")
-        private final @Nullable List<TransformationResponse> transformations;
+      private final @Nullable List<TransformationResponse> transformations;
 
     public List<TransformationResponse> getTransformations() {
         return this.transformations == null ? List.of() : this.transformations;
@@ -118,7 +118,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

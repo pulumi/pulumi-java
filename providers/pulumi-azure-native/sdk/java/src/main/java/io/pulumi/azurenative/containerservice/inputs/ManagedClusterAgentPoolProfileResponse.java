@@ -32,7 +32,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="availabilityZones")
-        private final @Nullable List<String> availabilityZones;
+      private final @Nullable List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
@@ -43,7 +43,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -54,7 +54,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableAutoScaling")
-        private final @Nullable Boolean enableAutoScaling;
+      private final @Nullable Boolean enableAutoScaling;
 
     public Optional<Boolean> getEnableAutoScaling() {
         return this.enableAutoScaling == null ? Optional.empty() : Optional.ofNullable(this.enableAutoScaling);
@@ -65,7 +65,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableEncryptionAtHost")
-        private final @Nullable Boolean enableEncryptionAtHost;
+      private final @Nullable Boolean enableEncryptionAtHost;
 
     public Optional<Boolean> getEnableEncryptionAtHost() {
         return this.enableEncryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.enableEncryptionAtHost);
@@ -76,7 +76,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableFIPS")
-        private final @Nullable Boolean enableFIPS;
+      private final @Nullable Boolean enableFIPS;
 
     public Optional<Boolean> getEnableFIPS() {
         return this.enableFIPS == null ? Optional.empty() : Optional.ofNullable(this.enableFIPS);
@@ -87,7 +87,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableNodePublicIP")
-        private final @Nullable Boolean enableNodePublicIP;
+      private final @Nullable Boolean enableNodePublicIP;
 
     public Optional<Boolean> getEnableNodePublicIP() {
         return this.enableNodePublicIP == null ? Optional.empty() : Optional.ofNullable(this.enableNodePublicIP);
@@ -98,7 +98,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="gpuInstanceProfile")
-        private final @Nullable String gpuInstanceProfile;
+      private final @Nullable String gpuInstanceProfile;
 
     public Optional<String> getGpuInstanceProfile() {
         return this.gpuInstanceProfile == null ? Optional.empty() : Optional.ofNullable(this.gpuInstanceProfile);
@@ -109,7 +109,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="kubeletConfig")
-        private final @Nullable KubeletConfigResponse kubeletConfig;
+      private final @Nullable KubeletConfigResponse kubeletConfig;
 
     public Optional<KubeletConfigResponse> getKubeletConfig() {
         return this.kubeletConfig == null ? Optional.empty() : Optional.ofNullable(this.kubeletConfig);
@@ -120,7 +120,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="kubeletDiskType")
-        private final @Nullable String kubeletDiskType;
+      private final @Nullable String kubeletDiskType;
 
     public Optional<String> getKubeletDiskType() {
         return this.kubeletDiskType == null ? Optional.empty() : Optional.ofNullable(this.kubeletDiskType);
@@ -131,7 +131,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="linuxOSConfig")
-        private final @Nullable LinuxOSConfigResponse linuxOSConfig;
+      private final @Nullable LinuxOSConfigResponse linuxOSConfig;
 
     public Optional<LinuxOSConfigResponse> getLinuxOSConfig() {
         return this.linuxOSConfig == null ? Optional.empty() : Optional.ofNullable(this.linuxOSConfig);
@@ -142,7 +142,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxCount")
-        private final @Nullable Integer maxCount;
+      private final @Nullable Integer maxCount;
 
     public Optional<Integer> getMaxCount() {
         return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
@@ -153,7 +153,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxPods")
-        private final @Nullable Integer maxPods;
+      private final @Nullable Integer maxPods;
 
     public Optional<Integer> getMaxPods() {
         return this.maxPods == null ? Optional.empty() : Optional.ofNullable(this.maxPods);
@@ -164,7 +164,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="minCount")
-        private final @Nullable Integer minCount;
+      private final @Nullable Integer minCount;
 
     public Optional<Integer> getMinCount() {
         return this.minCount == null ? Optional.empty() : Optional.ofNullable(this.minCount);
@@ -175,7 +175,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -186,7 +186,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -197,7 +197,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodeImageVersion", required=true)
-        private final String nodeImageVersion;
+      private final String nodeImageVersion;
 
     public String getNodeImageVersion() {
         return this.nodeImageVersion;
@@ -208,7 +208,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodeLabels")
-        private final @Nullable Map<String,String> nodeLabels;
+      private final @Nullable Map<String,String> nodeLabels;
 
     public Map<String,String> getNodeLabels() {
         return this.nodeLabels == null ? Map.of() : this.nodeLabels;
@@ -219,7 +219,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodePublicIPPrefixID")
-        private final @Nullable String nodePublicIPPrefixID;
+      private final @Nullable String nodePublicIPPrefixID;
 
     public Optional<String> getNodePublicIPPrefixID() {
         return this.nodePublicIPPrefixID == null ? Optional.empty() : Optional.ofNullable(this.nodePublicIPPrefixID);
@@ -230,7 +230,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodeTaints")
-        private final @Nullable List<String> nodeTaints;
+      private final @Nullable List<String> nodeTaints;
 
     public List<String> getNodeTaints() {
         return this.nodeTaints == null ? List.of() : this.nodeTaints;
@@ -241,7 +241,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="orchestratorVersion")
-        private final @Nullable String orchestratorVersion;
+      private final @Nullable String orchestratorVersion;
 
     public Optional<String> getOrchestratorVersion() {
         return this.orchestratorVersion == null ? Optional.empty() : Optional.ofNullable(this.orchestratorVersion);
@@ -252,7 +252,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="osDiskSizeGB")
-        private final @Nullable Integer osDiskSizeGB;
+      private final @Nullable Integer osDiskSizeGB;
 
     public Optional<Integer> getOsDiskSizeGB() {
         return this.osDiskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.osDiskSizeGB);
@@ -263,7 +263,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="osDiskType")
-        private final @Nullable String osDiskType;
+      private final @Nullable String osDiskType;
 
     public Optional<String> getOsDiskType() {
         return this.osDiskType == null ? Optional.empty() : Optional.ofNullable(this.osDiskType);
@@ -274,7 +274,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="osSKU")
-        private final @Nullable String osSKU;
+      private final @Nullable String osSKU;
 
     public Optional<String> getOsSKU() {
         return this.osSKU == null ? Optional.empty() : Optional.ofNullable(this.osSKU);
@@ -285,7 +285,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -296,7 +296,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="podSubnetID")
-        private final @Nullable String podSubnetID;
+      private final @Nullable String podSubnetID;
 
     public Optional<String> getPodSubnetID() {
         return this.podSubnetID == null ? Optional.empty() : Optional.ofNullable(this.podSubnetID);
@@ -307,7 +307,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="powerState", required=true)
-        private final PowerStateResponse powerState;
+      private final PowerStateResponse powerState;
 
     public PowerStateResponse getPowerState() {
         return this.powerState;
@@ -318,7 +318,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -329,7 +329,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="proximityPlacementGroupID")
-        private final @Nullable String proximityPlacementGroupID;
+      private final @Nullable String proximityPlacementGroupID;
 
     public Optional<String> getProximityPlacementGroupID() {
         return this.proximityPlacementGroupID == null ? Optional.empty() : Optional.ofNullable(this.proximityPlacementGroupID);
@@ -340,7 +340,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="scaleSetEvictionPolicy")
-        private final @Nullable String scaleSetEvictionPolicy;
+      private final @Nullable String scaleSetEvictionPolicy;
 
     public Optional<String> getScaleSetEvictionPolicy() {
         return this.scaleSetEvictionPolicy == null ? Optional.empty() : Optional.ofNullable(this.scaleSetEvictionPolicy);
@@ -351,7 +351,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="scaleSetPriority")
-        private final @Nullable String scaleSetPriority;
+      private final @Nullable String scaleSetPriority;
 
     public Optional<String> getScaleSetPriority() {
         return this.scaleSetPriority == null ? Optional.empty() : Optional.ofNullable(this.scaleSetPriority);
@@ -362,7 +362,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="spotMaxPrice")
-        private final @Nullable Double spotMaxPrice;
+      private final @Nullable Double spotMaxPrice;
 
     public Optional<Double> getSpotMaxPrice() {
         return this.spotMaxPrice == null ? Optional.empty() : Optional.ofNullable(this.spotMaxPrice);
@@ -373,7 +373,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -384,7 +384,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -395,7 +395,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="upgradeSettings")
-        private final @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings;
+      private final @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings;
 
     public Optional<AgentPoolUpgradeSettingsResponse> getUpgradeSettings() {
         return this.upgradeSettings == null ? Optional.empty() : Optional.ofNullable(this.upgradeSettings);
@@ -406,7 +406,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable String vmSize;
+      private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -417,7 +417,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="vnetSubnetID")
-        private final @Nullable String vnetSubnetID;
+      private final @Nullable String vnetSubnetID;
 
     public Optional<String> getVnetSubnetID() {
         return this.vnetSubnetID == null ? Optional.empty() : Optional.ofNullable(this.vnetSubnetID);

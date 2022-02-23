@@ -13,7 +13,7 @@ public final class GetSsmParameterStringArgs extends io.pulumi.resources.InvokeA
     public static final GetSsmParameterStringArgs Empty = new GetSsmParameterStringArgs();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

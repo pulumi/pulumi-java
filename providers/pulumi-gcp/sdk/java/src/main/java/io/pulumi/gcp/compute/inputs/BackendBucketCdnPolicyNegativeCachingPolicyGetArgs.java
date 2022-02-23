@@ -20,7 +20,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyGetArgs extends io
      * 
      */
     @InputImport(name="code")
-        private final @Nullable Input<Integer> code;
+      private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -32,7 +32,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyGetArgs extends io
      * 
      */
     @InputImport(name="ttl")
-        private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;

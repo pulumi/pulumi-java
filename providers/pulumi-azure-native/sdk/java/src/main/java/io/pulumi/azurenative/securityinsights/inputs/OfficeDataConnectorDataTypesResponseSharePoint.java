@@ -23,7 +23,7 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint extends io.pul
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);

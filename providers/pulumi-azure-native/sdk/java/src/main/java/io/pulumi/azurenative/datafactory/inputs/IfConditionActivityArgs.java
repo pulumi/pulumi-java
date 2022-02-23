@@ -65,7 +65,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -76,7 +76,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="expression", required=true)
-        private final Input<ExpressionArgs> expression;
+      private final Input<ExpressionArgs> expression;
 
     public Input<ExpressionArgs> getExpression() {
         return this.expression;
@@ -98,7 +98,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ifFalseActivities")
-        private final @Nullable Input<List<Object>> ifFalseActivities;
+      private final @Nullable Input<List<Object>> ifFalseActivities;
 
     public Input<List<Object>> getIfFalseActivities() {
         return this.ifFalseActivities == null ? Input.empty() : this.ifFalseActivities;
@@ -109,7 +109,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ifTrueActivities")
-        private final @Nullable Input<List<Object>> ifTrueActivities;
+      private final @Nullable Input<List<Object>> ifTrueActivities;
 
     public Input<List<Object>> getIfTrueActivities() {
         return this.ifTrueActivities == null ? Input.empty() : this.ifTrueActivities;
@@ -120,7 +120,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -132,7 +132,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

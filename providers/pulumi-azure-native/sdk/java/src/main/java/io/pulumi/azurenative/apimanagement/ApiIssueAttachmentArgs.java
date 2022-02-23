@@ -19,7 +19,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attachmentId")
-        private final @Nullable Input<String> attachmentId;
+      private final @Nullable Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
@@ -41,7 +41,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="content", required=true)
-        private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -52,7 +52,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentFormat", required=true)
-        private final Input<String> contentFormat;
+      private final Input<String> contentFormat;
 
     public Input<String> getContentFormat() {
         return this.contentFormat;
@@ -63,7 +63,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="issueId", required=true)
-        private final Input<String> issueId;
+      private final Input<String> issueId;
 
     public Input<String> getIssueId() {
         return this.issueId;
@@ -74,7 +74,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -85,7 +85,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -96,7 +96,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title", required=true)
-        private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;

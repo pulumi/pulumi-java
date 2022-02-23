@@ -20,7 +20,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instance")
-        private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -33,7 +33,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -44,7 +44,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -56,7 +56,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -74,7 +74,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="projectId")
-        private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;

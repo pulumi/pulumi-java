@@ -23,7 +23,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authType", required=true)
-        private final Input<String> authType;
+      private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;

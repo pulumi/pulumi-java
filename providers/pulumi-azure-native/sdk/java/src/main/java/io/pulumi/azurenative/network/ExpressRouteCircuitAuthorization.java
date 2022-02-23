@@ -119,6 +119,21 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ExpressRouteCircuitAuthorization(String name) {
+        this(name, ExpressRouteCircuitAuthorizationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ExpressRouteCircuitAuthorization(String name, ExpressRouteCircuitAuthorizationArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

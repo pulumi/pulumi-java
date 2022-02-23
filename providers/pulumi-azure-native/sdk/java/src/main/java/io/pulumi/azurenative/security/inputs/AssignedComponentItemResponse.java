@@ -23,7 +23,7 @@ public final class AssignedComponentItemResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);

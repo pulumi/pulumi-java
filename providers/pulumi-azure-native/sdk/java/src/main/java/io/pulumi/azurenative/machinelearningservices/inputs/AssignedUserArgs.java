@@ -22,7 +22,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-        private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -33,7 +33,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;

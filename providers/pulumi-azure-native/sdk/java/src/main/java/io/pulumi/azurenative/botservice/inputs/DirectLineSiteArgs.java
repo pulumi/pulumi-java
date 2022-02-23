@@ -25,7 +25,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isBlockUserUploadEnabled")
-        private final @Nullable Input<Boolean> isBlockUserUploadEnabled;
+      private final @Nullable Input<Boolean> isBlockUserUploadEnabled;
 
     public Input<Boolean> getIsBlockUserUploadEnabled() {
         return this.isBlockUserUploadEnabled == null ? Input.empty() : this.isBlockUserUploadEnabled;
@@ -36,7 +36,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -47,7 +47,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSecureSiteEnabled")
-        private final @Nullable Input<Boolean> isSecureSiteEnabled;
+      private final @Nullable Input<Boolean> isSecureSiteEnabled;
 
     public Input<Boolean> getIsSecureSiteEnabled() {
         return this.isSecureSiteEnabled == null ? Input.empty() : this.isSecureSiteEnabled;
@@ -58,7 +58,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isV1Enabled", required=true)
-        private final Input<Boolean> isV1Enabled;
+      private final Input<Boolean> isV1Enabled;
 
     public Input<Boolean> getIsV1Enabled() {
         return this.isV1Enabled;
@@ -69,7 +69,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isV3Enabled", required=true)
-        private final Input<Boolean> isV3Enabled;
+      private final Input<Boolean> isV3Enabled;
 
     public Input<Boolean> getIsV3Enabled() {
         return this.isV3Enabled;
@@ -80,7 +80,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteName", required=true)
-        private final Input<String> siteName;
+      private final Input<String> siteName;
 
     public Input<String> getSiteName() {
         return this.siteName;
@@ -91,7 +91,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedOrigins")
-        private final @Nullable Input<List<String>> trustedOrigins;
+      private final @Nullable Input<List<String>> trustedOrigins;
 
     public Input<List<String>> getTrustedOrigins() {
         return this.trustedOrigins == null ? Input.empty() : this.trustedOrigins;

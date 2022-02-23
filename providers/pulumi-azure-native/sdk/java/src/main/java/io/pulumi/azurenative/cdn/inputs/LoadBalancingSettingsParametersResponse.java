@@ -23,7 +23,7 @@ public final class LoadBalancingSettingsParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="additionalLatencyInMilliseconds")
-        private final @Nullable Integer additionalLatencyInMilliseconds;
+      private final @Nullable Integer additionalLatencyInMilliseconds;
 
     public Optional<Integer> getAdditionalLatencyInMilliseconds() {
         return this.additionalLatencyInMilliseconds == null ? Optional.empty() : Optional.ofNullable(this.additionalLatencyInMilliseconds);
@@ -34,7 +34,7 @@ public final class LoadBalancingSettingsParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sampleSize")
-        private final @Nullable Integer sampleSize;
+      private final @Nullable Integer sampleSize;
 
     public Optional<Integer> getSampleSize() {
         return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
@@ -45,7 +45,7 @@ public final class LoadBalancingSettingsParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="successfulSamplesRequired")
-        private final @Nullable Integer successfulSamplesRequired;
+      private final @Nullable Integer successfulSamplesRequired;
 
     public Optional<Integer> getSuccessfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Optional.empty() : Optional.ofNullable(this.successfulSamplesRequired);

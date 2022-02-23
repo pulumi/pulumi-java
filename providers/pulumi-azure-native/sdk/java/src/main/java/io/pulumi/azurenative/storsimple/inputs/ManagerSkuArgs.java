@@ -22,7 +22,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<ManagerSkuType> name;
+      private final Input<ManagerSkuType> name;
 
     public Input<ManagerSkuType> getName() {
         return this.name;

@@ -17,7 +17,7 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-        private final String managementGroupId;
+      private final String managementGroupId;
 
     public String getManagementGroupId() {
         return this.managementGroupId;
@@ -28,7 +28,7 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
      * 
      */
     @InputImport(name="policySetDefinitionName", required=true)
-        private final String policySetDefinitionName;
+      private final String policySetDefinitionName;
 
     public String getPolicySetDefinitionName() {
         return this.policySetDefinitionName;

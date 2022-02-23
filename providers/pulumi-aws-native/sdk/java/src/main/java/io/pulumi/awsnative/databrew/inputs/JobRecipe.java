@@ -19,7 +19,7 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

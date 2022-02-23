@@ -84,6 +84,21 @@ public class EndpointPolicyIamPolicy extends io.pulumi.resources.CustomResource 
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public EndpointPolicyIamPolicy(String name) {
+        this(name, EndpointPolicyIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EndpointPolicyIamPolicy(String name, EndpointPolicyIamPolicyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

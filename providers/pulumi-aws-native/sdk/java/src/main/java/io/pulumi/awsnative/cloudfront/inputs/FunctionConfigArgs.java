@@ -14,14 +14,14 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionConfigArgs Empty = new FunctionConfigArgs();
 
     @InputImport(name="comment", required=true)
-        private final Input<String> comment;
+      private final Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment;
     }
 
     @InputImport(name="runtime", required=true)
-        private final Input<String> runtime;
+      private final Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime;

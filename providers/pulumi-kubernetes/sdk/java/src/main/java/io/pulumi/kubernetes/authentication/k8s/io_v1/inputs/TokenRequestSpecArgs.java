@@ -26,7 +26,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="audiences", required=true)
-        private final Input<List<String>> audiences;
+      private final Input<List<String>> audiences;
 
     public Input<List<String>> getAudiences() {
         return this.audiences;
@@ -37,7 +37,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="boundObjectRef")
-        private final @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
+      private final @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
 
     public Input<BoundObjectReferenceArgs> getBoundObjectRef() {
         return this.boundObjectRef == null ? Input.empty() : this.boundObjectRef;
@@ -48,7 +48,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationSeconds")
-        private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Input<Integer> expirationSeconds;
 
     public Input<Integer> getExpirationSeconds() {
         return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;

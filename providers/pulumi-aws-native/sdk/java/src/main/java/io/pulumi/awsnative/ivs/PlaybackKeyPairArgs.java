@@ -21,7 +21,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicKeyMaterial", required=true)
-        private final Input<String> publicKeyMaterial;
+      private final Input<String> publicKeyMaterial;
 
     public Input<String> getPublicKeyMaterial() {
         return this.publicKeyMaterial;
@@ -43,7 +43,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
+      private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
 
     public Input<List<PlaybackKeyPairTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

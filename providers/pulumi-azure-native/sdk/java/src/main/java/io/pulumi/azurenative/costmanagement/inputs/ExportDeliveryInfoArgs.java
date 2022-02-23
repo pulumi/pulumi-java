@@ -22,7 +22,7 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-        private final Input<ExportDeliveryDestinationArgs> destination;
+      private final Input<ExportDeliveryDestinationArgs> destination;
 
     public Input<ExportDeliveryDestinationArgs> getDestination() {
         return this.destination;

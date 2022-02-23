@@ -24,7 +24,7 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forZones")
-        private final @Nullable Input<List<ForZoneArgs>> forZones;
+      private final @Nullable Input<List<ForZoneArgs>> forZones;
 
     public Input<List<ForZoneArgs>> getForZones() {
         return this.forZones == null ? Input.empty() : this.forZones;

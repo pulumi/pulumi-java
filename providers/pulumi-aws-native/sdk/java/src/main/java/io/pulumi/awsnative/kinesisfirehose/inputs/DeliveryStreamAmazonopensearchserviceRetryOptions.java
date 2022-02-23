@@ -15,7 +15,7 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptions extends io.
     public static final DeliveryStreamAmazonopensearchserviceRetryOptions Empty = new DeliveryStreamAmazonopensearchserviceRetryOptions();
 
     @InputImport(name="durationInSeconds")
-        private final @Nullable Integer durationInSeconds;
+      private final @Nullable Integer durationInSeconds;
 
     public Optional<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);

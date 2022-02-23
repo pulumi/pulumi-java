@@ -17,7 +17,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 
     @InputImport(name="suiteDefinitionConfiguration", required=true)
-        private final Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
+      private final Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
     public Input<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
@@ -28,7 +28,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
+      private final @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
 
     public Input<List<SuiteDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

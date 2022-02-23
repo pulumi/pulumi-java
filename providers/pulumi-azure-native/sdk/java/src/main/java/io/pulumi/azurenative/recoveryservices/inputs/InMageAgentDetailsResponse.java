@@ -23,7 +23,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="agentExpiryDate")
-        private final @Nullable String agentExpiryDate;
+      private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
@@ -34,7 +34,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="agentUpdateStatus")
-        private final @Nullable String agentUpdateStatus;
+      private final @Nullable String agentUpdateStatus;
 
     public Optional<String> getAgentUpdateStatus() {
         return this.agentUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentUpdateStatus);
@@ -45,7 +45,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="agentVersion")
-        private final @Nullable String agentVersion;
+      private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
@@ -56,7 +56,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="postUpdateRebootStatus")
-        private final @Nullable String postUpdateRebootStatus;
+      private final @Nullable String postUpdateRebootStatus;
 
     public Optional<String> getPostUpdateRebootStatus() {
         return this.postUpdateRebootStatus == null ? Optional.empty() : Optional.ofNullable(this.postUpdateRebootStatus);

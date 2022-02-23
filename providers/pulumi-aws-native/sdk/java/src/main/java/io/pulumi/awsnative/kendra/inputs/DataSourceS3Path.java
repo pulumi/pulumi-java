@@ -13,14 +13,14 @@ public final class DataSourceS3Path extends io.pulumi.resources.InvokeArgs {
     public static final DataSourceS3Path Empty = new DataSourceS3Path();
 
     @InputImport(name="bucket", required=true)
-        private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;

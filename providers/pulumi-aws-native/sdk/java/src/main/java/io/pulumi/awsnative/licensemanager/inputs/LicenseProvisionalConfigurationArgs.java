@@ -14,7 +14,7 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
     public static final LicenseProvisionalConfigurationArgs Empty = new LicenseProvisionalConfigurationArgs();
 
     @InputImport(name="maxTimeToLiveInMinutes", required=true)
-        private final Input<Integer> maxTimeToLiveInMinutes;
+      private final Input<Integer> maxTimeToLiveInMinutes;
 
     public Input<Integer> getMaxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;

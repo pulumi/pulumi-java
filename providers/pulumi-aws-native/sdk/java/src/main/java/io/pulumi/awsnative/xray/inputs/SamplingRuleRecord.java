@@ -20,7 +20,7 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdAt")
-        private final @Nullable String createdAt;
+      private final @Nullable String createdAt;
 
     public Optional<String> getCreatedAt() {
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
@@ -31,14 +31,14 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="modifiedAt")
-        private final @Nullable String modifiedAt;
+      private final @Nullable String modifiedAt;
 
     public Optional<String> getModifiedAt() {
         return this.modifiedAt == null ? Optional.empty() : Optional.ofNullable(this.modifiedAt);
     }
 
     @InputImport(name="samplingRule")
-        private final @Nullable SamplingRule samplingRule;
+      private final @Nullable SamplingRule samplingRule;
 
     public Optional<SamplingRule> getSamplingRule() {
         return this.samplingRule == null ? Optional.empty() : Optional.ofNullable(this.samplingRule);

@@ -28,7 +28,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final Input<String> factoryName;
+      private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -39,7 +39,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<Object> properties;
+      private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -50,7 +50,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerName")
-        private final @Nullable Input<String> triggerName;
+      private final @Nullable Input<String> triggerName;
 
     public Input<String> getTriggerName() {
         return this.triggerName == null ? Input.empty() : this.triggerName;

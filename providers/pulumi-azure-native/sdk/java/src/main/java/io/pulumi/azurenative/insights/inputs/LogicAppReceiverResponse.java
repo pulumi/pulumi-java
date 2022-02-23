@@ -24,7 +24,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="callbackUrl", required=true)
-        private final String callbackUrl;
+      private final String callbackUrl;
 
     public String getCallbackUrl() {
         return this.callbackUrl;
@@ -35,7 +35,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -57,7 +57,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-        private final @Nullable Boolean useCommonAlertSchema;
+      private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);

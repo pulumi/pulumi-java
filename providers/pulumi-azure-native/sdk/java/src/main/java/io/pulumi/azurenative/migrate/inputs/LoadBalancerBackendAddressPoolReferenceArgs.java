@@ -23,7 +23,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-        private final Input<String> sourceArmResourceId;
+      private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;

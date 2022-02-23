@@ -23,7 +23,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="additionalMetadataId")
-        private final @Nullable String additionalMetadataId;
+      private final @Nullable String additionalMetadataId;
 
     public Optional<String> getAdditionalMetadataId() {
         return this.additionalMetadataId == null ? Optional.empty() : Optional.ofNullable(this.additionalMetadataId);
@@ -34,7 +34,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="category")
-        private final @Nullable String category;
+      private final @Nullable String category;
 
     public Optional<String> getCategory() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
@@ -45,7 +45,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -56,7 +56,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -67,7 +67,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

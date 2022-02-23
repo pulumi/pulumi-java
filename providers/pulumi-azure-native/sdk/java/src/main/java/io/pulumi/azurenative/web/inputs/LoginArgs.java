@@ -31,7 +31,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedExternalRedirectUrls")
-        private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
+      private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
 
     public Input<List<String>> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? Input.empty() : this.allowedExternalRedirectUrls;
@@ -42,7 +42,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cookieExpiration")
-        private final @Nullable Input<CookieExpirationArgs> cookieExpiration;
+      private final @Nullable Input<CookieExpirationArgs> cookieExpiration;
 
     public Input<CookieExpirationArgs> getCookieExpiration() {
         return this.cookieExpiration == null ? Input.empty() : this.cookieExpiration;
@@ -53,7 +53,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonce")
-        private final @Nullable Input<NonceArgs> nonce;
+      private final @Nullable Input<NonceArgs> nonce;
 
     public Input<NonceArgs> getNonce() {
         return this.nonce == null ? Input.empty() : this.nonce;
@@ -64,7 +64,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveUrlFragmentsForLogins")
-        private final @Nullable Input<Boolean> preserveUrlFragmentsForLogins;
+      private final @Nullable Input<Boolean> preserveUrlFragmentsForLogins;
 
     public Input<Boolean> getPreserveUrlFragmentsForLogins() {
         return this.preserveUrlFragmentsForLogins == null ? Input.empty() : this.preserveUrlFragmentsForLogins;
@@ -75,7 +75,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable Input<LoginRoutesArgs> routes;
+      private final @Nullable Input<LoginRoutesArgs> routes;
 
     public Input<LoginRoutesArgs> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -86,7 +86,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenStore")
-        private final @Nullable Input<TokenStoreArgs> tokenStore;
+      private final @Nullable Input<TokenStoreArgs> tokenStore;
 
     public Input<TokenStoreArgs> getTokenStore() {
         return this.tokenStore == null ? Input.empty() : this.tokenStore;

@@ -27,7 +27,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientAuthConfiguration")
-        private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
+      private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
 
     public Optional<ApplicationGatewayClientAuthConfigurationResponse> getClientAuthConfiguration() {
         return this.clientAuthConfiguration == null ? Optional.empty() : Optional.ofNullable(this.clientAuthConfiguration);
@@ -38,7 +38,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -49,7 +49,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -60,7 +60,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -71,7 +71,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -82,7 +82,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sslPolicy")
-        private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+      private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
@@ -93,7 +93,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="trustedClientCertificates")
-        private final @Nullable List<SubResourceResponse> trustedClientCertificates;
+      private final @Nullable List<SubResourceResponse> trustedClientCertificates;
 
     public List<SubResourceResponse> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
@@ -104,7 +104,7 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

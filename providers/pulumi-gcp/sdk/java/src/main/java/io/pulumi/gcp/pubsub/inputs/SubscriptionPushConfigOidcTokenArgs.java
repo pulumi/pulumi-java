@@ -24,7 +24,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="audience")
-        private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -38,7 +38,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-        private final Input<String> serviceAccountEmail;
+      private final Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;

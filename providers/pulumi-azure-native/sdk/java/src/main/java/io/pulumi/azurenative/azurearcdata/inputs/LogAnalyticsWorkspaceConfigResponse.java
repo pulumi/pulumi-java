@@ -23,7 +23,7 @@ public final class LogAnalyticsWorkspaceConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceId")
-        private final @Nullable String workspaceId;
+      private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);

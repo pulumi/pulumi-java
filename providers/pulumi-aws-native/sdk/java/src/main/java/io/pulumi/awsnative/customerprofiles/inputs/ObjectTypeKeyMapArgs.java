@@ -17,14 +17,14 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     public static final ObjectTypeKeyMapArgs Empty = new ObjectTypeKeyMapArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="objectTypeKeyList")
-        private final @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+      private final @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
     public Input<List<ObjectTypeKeyArgs>> getObjectTypeKeyList() {
         return this.objectTypeKeyList == null ? Input.empty() : this.objectTypeKeyList;

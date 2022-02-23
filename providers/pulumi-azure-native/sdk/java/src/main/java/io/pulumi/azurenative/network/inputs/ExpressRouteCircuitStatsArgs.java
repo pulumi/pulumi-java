@@ -23,7 +23,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primarybytesIn")
-        private final @Nullable Input<Double> primarybytesIn;
+      private final @Nullable Input<Double> primarybytesIn;
 
     public Input<Double> getPrimarybytesIn() {
         return this.primarybytesIn == null ? Input.empty() : this.primarybytesIn;
@@ -34,7 +34,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primarybytesOut")
-        private final @Nullable Input<Double> primarybytesOut;
+      private final @Nullable Input<Double> primarybytesOut;
 
     public Input<Double> getPrimarybytesOut() {
         return this.primarybytesOut == null ? Input.empty() : this.primarybytesOut;
@@ -45,7 +45,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondarybytesIn")
-        private final @Nullable Input<Double> secondarybytesIn;
+      private final @Nullable Input<Double> secondarybytesIn;
 
     public Input<Double> getSecondarybytesIn() {
         return this.secondarybytesIn == null ? Input.empty() : this.secondarybytesIn;
@@ -56,7 +56,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondarybytesOut")
-        private final @Nullable Input<Double> secondarybytesOut;
+      private final @Nullable Input<Double> secondarybytesOut;
 
     public Input<Double> getSecondarybytesOut() {
         return this.secondarybytesOut == null ? Input.empty() : this.secondarybytesOut;

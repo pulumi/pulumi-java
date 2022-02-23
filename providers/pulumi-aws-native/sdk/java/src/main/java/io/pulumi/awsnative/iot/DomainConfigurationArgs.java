@@ -20,56 +20,56 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
     public static final DomainConfigurationArgs Empty = new DomainConfigurationArgs();
 
     @InputImport(name="authorizerConfig")
-        private final @Nullable Input<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
+      private final @Nullable Input<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
 
     public Input<DomainConfigurationAuthorizerConfigArgs> getAuthorizerConfig() {
         return this.authorizerConfig == null ? Input.empty() : this.authorizerConfig;
     }
 
     @InputImport(name="domainConfigurationName")
-        private final @Nullable Input<String> domainConfigurationName;
+      private final @Nullable Input<String> domainConfigurationName;
 
     public Input<String> getDomainConfigurationName() {
         return this.domainConfigurationName == null ? Input.empty() : this.domainConfigurationName;
     }
 
     @InputImport(name="domainConfigurationStatus")
-        private final @Nullable Input<DomainConfigurationStatus> domainConfigurationStatus;
+      private final @Nullable Input<DomainConfigurationStatus> domainConfigurationStatus;
 
     public Input<DomainConfigurationStatus> getDomainConfigurationStatus() {
         return this.domainConfigurationStatus == null ? Input.empty() : this.domainConfigurationStatus;
     }
 
     @InputImport(name="domainName")
-        private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
     @InputImport(name="serverCertificateArns")
-        private final @Nullable Input<List<String>> serverCertificateArns;
+      private final @Nullable Input<List<String>> serverCertificateArns;
 
     public Input<List<String>> getServerCertificateArns() {
         return this.serverCertificateArns == null ? Input.empty() : this.serverCertificateArns;
     }
 
     @InputImport(name="serviceType")
-        private final @Nullable Input<DomainConfigurationServiceType> serviceType;
+      private final @Nullable Input<DomainConfigurationServiceType> serviceType;
 
     public Input<DomainConfigurationServiceType> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<DomainConfigurationTagArgs>> tags;
+      private final @Nullable Input<List<DomainConfigurationTagArgs>> tags;
 
     public Input<List<DomainConfigurationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="validationCertificateArn")
-        private final @Nullable Input<String> validationCertificateArn;
+      private final @Nullable Input<String> validationCertificateArn;
 
     public Input<String> getValidationCertificateArn() {
         return this.validationCertificateArn == null ? Input.empty() : this.validationCertificateArn;

@@ -22,7 +22,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-        private final String dataAccountType;
+      private final String dataAccountType;
 
     public String getDataAccountType() {
         return this.dataAccountType;
@@ -33,7 +33,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-        private final String storageAccountId;
+      private final String storageAccountId;
 
     public String getStorageAccountId() {
         return this.storageAccountId;

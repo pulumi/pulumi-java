@@ -17,7 +17,7 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-        private final String testBaseAccountName;
+      private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
         return this.testBaseAccountName;

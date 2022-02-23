@@ -23,7 +23,7 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="content")
-        private final @Nullable String content;
+      private final @Nullable String content;
 
     public Optional<String> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -34,7 +34,7 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="contentLink")
-        private final @Nullable String contentLink;
+      private final @Nullable String contentLink;
 
     public Optional<String> getContentLink() {
         return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);

@@ -15,14 +15,14 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
     public static final ClusterMaintenancePolicyDailyMaintenanceWindowArgs Empty = new ClusterMaintenancePolicyDailyMaintenanceWindowArgs();
 
     @InputImport(name="duration")
-        private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
     }
 
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

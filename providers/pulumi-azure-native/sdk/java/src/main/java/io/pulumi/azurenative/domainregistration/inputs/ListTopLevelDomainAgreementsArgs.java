@@ -20,7 +20,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="forTransfer")
-        private final @Nullable Boolean forTransfer;
+      private final @Nullable Boolean forTransfer;
 
     public Optional<Boolean> getForTransfer() {
         return this.forTransfer == null ? Optional.empty() : Optional.ofNullable(this.forTransfer);
@@ -31,7 +31,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="includePrivacy")
-        private final @Nullable Boolean includePrivacy;
+      private final @Nullable Boolean includePrivacy;
 
     public Optional<Boolean> getIncludePrivacy() {
         return this.includePrivacy == null ? Optional.empty() : Optional.ofNullable(this.includePrivacy);
@@ -42,7 +42,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

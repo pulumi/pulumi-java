@@ -23,7 +23,7 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends io.pulum
      * 
      */
     @InputImport(name="emailAddress")
-        private final @Nullable Input<String> emailAddress;
+      private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -34,7 +34,7 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends io.pulum
      * 
      */
     @InputImport(name="firstName")
-        private final @Nullable Input<String> firstName;
+      private final @Nullable Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName == null ? Input.empty() : this.firstName;
@@ -45,7 +45,7 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends io.pulum
      * 
      */
     @InputImport(name="lastName")
-        private final @Nullable Input<String> lastName;
+      private final @Nullable Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName == null ? Input.empty() : this.lastName;

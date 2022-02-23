@@ -23,7 +23,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alarmRoleArn")
-        private final @Nullable Input<String> alarmRoleArn;
+      private final @Nullable Input<String> alarmRoleArn;
 
     public Input<String> getAlarmRoleArn() {
         return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;
@@ -34,7 +34,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notificationLambdaArn")
-        private final @Nullable Input<String> notificationLambdaArn;
+      private final @Nullable Input<String> notificationLambdaArn;
 
     public Input<String> getNotificationLambdaArn() {
         return this.notificationLambdaArn == null ? Input.empty() : this.notificationLambdaArn;

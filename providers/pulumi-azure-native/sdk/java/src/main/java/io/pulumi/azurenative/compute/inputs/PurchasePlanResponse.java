@@ -23,7 +23,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="product", required=true)
-        private final String product;
+      private final String product;
 
     public String getProduct() {
         return this.product;
@@ -45,7 +45,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="promotionCode")
-        private final @Nullable String promotionCode;
+      private final @Nullable String promotionCode;
 
     public Optional<String> getPromotionCode() {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
@@ -56,7 +56,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-        private final String publisher;
+      private final String publisher;
 
     public String getPublisher() {
         return this.publisher;

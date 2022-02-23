@@ -22,7 +22,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="authType", required=true)
-        private final String authType;
+      private final String authType;
 
     public String getAuthType() {
         return this.authType;
@@ -33,7 +33,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -44,7 +44,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -55,7 +55,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="secret", required=true)
-        private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;

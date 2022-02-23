@@ -23,7 +23,7 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="errorMessage", required=true)
-        private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -34,7 +34,7 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="queryId")
-        private final @Nullable String queryId;
+      private final @Nullable String queryId;
 
     public Optional<String> getQueryId() {
         return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);

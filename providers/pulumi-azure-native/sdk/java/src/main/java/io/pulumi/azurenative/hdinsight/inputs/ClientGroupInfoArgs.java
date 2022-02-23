@@ -23,7 +23,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -34,7 +34,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupName")
-        private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;

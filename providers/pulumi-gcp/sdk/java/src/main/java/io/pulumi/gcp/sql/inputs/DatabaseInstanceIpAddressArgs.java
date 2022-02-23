@@ -15,21 +15,21 @@ public final class DatabaseInstanceIpAddressArgs extends io.pulumi.resources.Res
     public static final DatabaseInstanceIpAddressArgs Empty = new DatabaseInstanceIpAddressArgs();
 
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="timeToRetire")
-        private final @Nullable Input<String> timeToRetire;
+      private final @Nullable Input<String> timeToRetire;
 
     public Input<String> getTimeToRetire() {
         return this.timeToRetire == null ? Input.empty() : this.timeToRetire;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

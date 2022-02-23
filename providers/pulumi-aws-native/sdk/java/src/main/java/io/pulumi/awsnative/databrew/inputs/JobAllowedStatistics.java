@@ -14,7 +14,7 @@ public final class JobAllowedStatistics extends io.pulumi.resources.InvokeArgs {
     public static final JobAllowedStatistics Empty = new JobAllowedStatistics();
 
     @InputImport(name="statistics", required=true)
-        private final List<String> statistics;
+      private final List<String> statistics;
 
     public List<String> getStatistics() {
         return this.statistics;

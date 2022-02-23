@@ -13,14 +13,14 @@ public final class GetBucketLogging extends io.pulumi.resources.InvokeArgs {
     public static final GetBucketLogging Empty = new GetBucketLogging();
 
     @InputImport(name="logBucket", required=true)
-        private final String logBucket;
+      private final String logBucket;
 
     public String getLogBucket() {
         return this.logBucket;
     }
 
     @InputImport(name="logObjectPrefix", required=true)
-        private final String logObjectPrefix;
+      private final String logObjectPrefix;
 
     public String getLogObjectPrefix() {
         return this.logObjectPrefix;

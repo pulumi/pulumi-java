@@ -22,7 +22,7 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="info", required=true)
-        private final Object info;
+      private final Object info;
 
     public Object getInfo() {
         return this.info;
@@ -33,7 +33,7 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

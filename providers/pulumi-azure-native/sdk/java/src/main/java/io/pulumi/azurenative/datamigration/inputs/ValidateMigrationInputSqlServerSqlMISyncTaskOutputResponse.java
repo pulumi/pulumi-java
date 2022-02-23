@@ -23,7 +23,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @InputImport(name="validationErrors", required=true)
-        private final List<ReportableExceptionResponse> validationErrors;
+      private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

@@ -29,7 +29,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cipherSuites")
-        private final @Nullable Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
+      private final @Nullable Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
 
     public Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> getCipherSuites() {
         return this.cipherSuites == null ? Input.empty() : this.cipherSuites;
@@ -40,7 +40,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disabledSslProtocols")
-        private final @Nullable Input<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
+      private final @Nullable Input<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
 
     public Input<List<Either<String,ApplicationGatewaySslProtocol>>> getDisabledSslProtocols() {
         return this.disabledSslProtocols == null ? Input.empty() : this.disabledSslProtocols;
@@ -51,7 +51,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minProtocolVersion")
-        private final @Nullable Input<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
+      private final @Nullable Input<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
 
     public Input<Either<String,ApplicationGatewaySslProtocol>> getMinProtocolVersion() {
         return this.minProtocolVersion == null ? Input.empty() : this.minProtocolVersion;
@@ -62,7 +62,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyName>> policyName;
+      private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyName>> policyName;
 
     public Input<Either<String,ApplicationGatewaySslPolicyName>> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -73,7 +73,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyType")
-        private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyType>> policyType;
+      private final @Nullable Input<Either<String,ApplicationGatewaySslPolicyType>> policyType;
 
     public Input<Either<String,ApplicationGatewaySslPolicyType>> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;

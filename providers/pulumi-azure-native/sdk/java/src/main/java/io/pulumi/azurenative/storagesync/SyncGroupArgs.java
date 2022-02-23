@@ -19,7 +19,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -30,7 +30,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-        private final Input<String> storageSyncServiceName;
+      private final Input<String> storageSyncServiceName;
 
     public Input<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -41,7 +41,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName")
-        private final @Nullable Input<String> syncGroupName;
+      private final @Nullable Input<String> syncGroupName;
 
     public Input<String> getSyncGroupName() {
         return this.syncGroupName == null ? Input.empty() : this.syncGroupName;

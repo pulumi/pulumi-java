@@ -21,7 +21,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends io.p
      * 
      */
     @InputImport(name="updateStatus", required=true)
-        private final String updateStatus;
+      private final String updateStatus;
 
     public String getUpdateStatus() {
         return this.updateStatus;

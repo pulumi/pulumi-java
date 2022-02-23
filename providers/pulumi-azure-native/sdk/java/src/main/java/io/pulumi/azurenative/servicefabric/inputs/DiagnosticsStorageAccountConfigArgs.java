@@ -23,7 +23,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="blobEndpoint", required=true)
-        private final Input<String> blobEndpoint;
+      private final Input<String> blobEndpoint;
 
     public Input<String> getBlobEndpoint() {
         return this.blobEndpoint;
@@ -34,7 +34,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedAccountKeyName", required=true)
-        private final Input<String> protectedAccountKeyName;
+      private final Input<String> protectedAccountKeyName;
 
     public Input<String> getProtectedAccountKeyName() {
         return this.protectedAccountKeyName;
@@ -45,7 +45,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedAccountKeyName2")
-        private final @Nullable Input<String> protectedAccountKeyName2;
+      private final @Nullable Input<String> protectedAccountKeyName2;
 
     public Input<String> getProtectedAccountKeyName2() {
         return this.protectedAccountKeyName2 == null ? Input.empty() : this.protectedAccountKeyName2;
@@ -56,7 +56,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="queueEndpoint", required=true)
-        private final Input<String> queueEndpoint;
+      private final Input<String> queueEndpoint;
 
     public Input<String> getQueueEndpoint() {
         return this.queueEndpoint;
@@ -67,7 +67,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-        private final Input<String> storageAccountName;
+      private final Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName;
@@ -78,7 +78,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableEndpoint", required=true)
-        private final Input<String> tableEndpoint;
+      private final Input<String> tableEndpoint;
 
     public Input<String> getTableEndpoint() {
         return this.tableEndpoint;

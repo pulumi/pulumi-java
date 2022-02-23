@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupIds")
-        private final @Nullable List<String> groupIds;
+      private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -80,7 +80,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkServiceId")
-        private final @Nullable String privateLinkServiceId;
+      private final @Nullable String privateLinkServiceId;
 
     public Optional<String> getPrivateLinkServiceId() {
         return this.privateLinkServiceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceId);
@@ -91,7 +91,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -102,7 +102,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="requestMessage")
-        private final @Nullable String requestMessage;
+      private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
@@ -113,7 +113,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

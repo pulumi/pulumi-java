@@ -17,14 +17,14 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
     public static final EC2FleetTagSpecificationArgs Empty = new EC2FleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-        private final @Nullable Input<EC2FleetTagSpecificationResourceType> resourceType;
+      private final @Nullable Input<EC2FleetTagSpecificationResourceType> resourceType;
 
     public Input<EC2FleetTagSpecificationResourceType> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<EC2FleetTagArgs>> tags;
+      private final @Nullable Input<List<EC2FleetTagArgs>> tags;
 
     public Input<List<EC2FleetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -23,7 +23,7 @@ public final class DataQualityJobDefinitionVpcConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-        private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -34,7 +34,7 @@ public final class DataQualityJobDefinitionVpcConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subnets", required=true)
-        private final Input<List<String>> subnets;
+      private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;

@@ -23,7 +23,7 @@ public final class GetUserTablesSqlTaskInputResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-        private final SqlConnectionInfoResponse connectionInfo;
+      private final SqlConnectionInfoResponse connectionInfo;
 
     public SqlConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
@@ -34,7 +34,7 @@ public final class GetUserTablesSqlTaskInputResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-        private final List<String> selectedDatabases;
+      private final List<String> selectedDatabases;
 
     public List<String> getSelectedDatabases() {
         return this.selectedDatabases;

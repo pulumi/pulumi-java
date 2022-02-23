@@ -15,7 +15,7 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends io
     public static final KnowledgeBaseServerSideEncryptionConfigurationArgs Empty = new KnowledgeBaseServerSideEncryptionConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;

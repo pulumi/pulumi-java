@@ -23,7 +23,7 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxInstanceCount")
-        private final @Nullable Integer maxInstanceCount;
+      private final @Nullable Integer maxInstanceCount;
 
     public Optional<Integer> getMaxInstanceCount() {
         return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
@@ -34,7 +34,7 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="minInstanceCount")
-        private final @Nullable Integer minInstanceCount;
+      private final @Nullable Integer minInstanceCount;
 
     public Optional<Integer> getMinInstanceCount() {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);

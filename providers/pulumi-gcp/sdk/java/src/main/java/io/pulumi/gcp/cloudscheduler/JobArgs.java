@@ -26,7 +26,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpTarget")
-        private final @Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
+      private final @Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
     public Input<JobAppEngineHttpTargetArgs> getAppEngineHttpTarget() {
         return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
@@ -44,7 +44,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attemptDeadline")
-        private final @Nullable Input<String> attemptDeadline;
+      private final @Nullable Input<String> attemptDeadline;
 
     public Input<String> getAttemptDeadline() {
         return this.attemptDeadline == null ? Input.empty() : this.attemptDeadline;
@@ -56,7 +56,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpTarget")
-        private final @Nullable Input<JobHttpTargetArgs> httpTarget;
+      private final @Nullable Input<JobHttpTargetArgs> httpTarget;
 
     public Input<JobHttpTargetArgs> getHttpTarget() {
         return this.httpTarget == null ? Input.empty() : this.httpTarget;
@@ -81,7 +81,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -107,7 +107,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubTarget")
-        private final @Nullable Input<JobPubsubTargetArgs> pubsubTarget;
+      private final @Nullable Input<JobPubsubTargetArgs> pubsubTarget;
 
     public Input<JobPubsubTargetArgs> getPubsubTarget() {
         return this.pubsubTarget == null ? Input.empty() : this.pubsubTarget;
@@ -118,7 +118,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -132,7 +132,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-        private final @Nullable Input<JobRetryConfigArgs> retryConfig;
+      private final @Nullable Input<JobRetryConfigArgs> retryConfig;
 
     public Input<JobRetryConfigArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -143,7 +143,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -155,7 +155,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

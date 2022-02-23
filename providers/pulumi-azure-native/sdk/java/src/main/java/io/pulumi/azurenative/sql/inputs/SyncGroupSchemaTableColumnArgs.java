@@ -23,7 +23,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataSize")
-        private final @Nullable Input<String> dataSize;
+      private final @Nullable Input<String> dataSize;
 
     public Input<String> getDataSize() {
         return this.dataSize == null ? Input.empty() : this.dataSize;
@@ -34,7 +34,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataType")
-        private final @Nullable Input<String> dataType;
+      private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -45,7 +45,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="quotedName")
-        private final @Nullable Input<String> quotedName;
+      private final @Nullable Input<String> quotedName;
 
     public Input<String> getQuotedName() {
         return this.quotedName == null ? Input.empty() : this.quotedName;

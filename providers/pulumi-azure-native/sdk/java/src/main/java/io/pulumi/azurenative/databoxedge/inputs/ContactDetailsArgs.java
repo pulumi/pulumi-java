@@ -23,7 +23,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName", required=true)
-        private final Input<String> companyName;
+      private final Input<String> companyName;
 
     public Input<String> getCompanyName() {
         return this.companyName;
@@ -34,7 +34,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPerson", required=true)
-        private final Input<String> contactPerson;
+      private final Input<String> contactPerson;
 
     public Input<String> getContactPerson() {
         return this.contactPerson;
@@ -45,7 +45,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailList", required=true)
-        private final Input<List<String>> emailList;
+      private final Input<List<String>> emailList;
 
     public Input<List<String>> getEmailList() {
         return this.emailList;
@@ -56,7 +56,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-        private final Input<String> phone;
+      private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;

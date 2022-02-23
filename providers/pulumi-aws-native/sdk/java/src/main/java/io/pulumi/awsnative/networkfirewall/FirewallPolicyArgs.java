@@ -17,28 +17,28 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="firewallPolicy", required=true)
-        private final Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy;
+      private final Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy;
 
     public Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> getFirewallPolicy() {
         return this.firewallPolicy;
     }
 
     @InputImport(name="firewallPolicyName")
-        private final @Nullable Input<String> firewallPolicyName;
+      private final @Nullable Input<String> firewallPolicyName;
 
     public Input<String> getFirewallPolicyName() {
         return this.firewallPolicyName == null ? Input.empty() : this.firewallPolicyName;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<FirewallPolicyTagArgs>> tags;
+      private final @Nullable Input<List<FirewallPolicyTagArgs>> tags;
 
     public Input<List<FirewallPolicyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

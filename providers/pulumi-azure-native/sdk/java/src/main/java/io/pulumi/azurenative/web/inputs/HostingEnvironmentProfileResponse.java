@@ -23,7 +23,7 @@ public final class HostingEnvironmentProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class HostingEnvironmentProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class HostingEnvironmentProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

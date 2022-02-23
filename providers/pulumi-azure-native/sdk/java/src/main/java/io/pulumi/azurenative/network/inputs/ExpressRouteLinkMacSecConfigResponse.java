@@ -23,7 +23,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="cakSecretIdentifier")
-        private final @Nullable String cakSecretIdentifier;
+      private final @Nullable String cakSecretIdentifier;
 
     public Optional<String> getCakSecretIdentifier() {
         return this.cakSecretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.cakSecretIdentifier);
@@ -34,7 +34,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="cipher")
-        private final @Nullable String cipher;
+      private final @Nullable String cipher;
 
     public Optional<String> getCipher() {
         return this.cipher == null ? Optional.empty() : Optional.ofNullable(this.cipher);
@@ -45,7 +45,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="cknSecretIdentifier")
-        private final @Nullable String cknSecretIdentifier;
+      private final @Nullable String cknSecretIdentifier;
 
     public Optional<String> getCknSecretIdentifier() {
         return this.cknSecretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.cknSecretIdentifier);
@@ -56,7 +56,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sciState")
-        private final @Nullable String sciState;
+      private final @Nullable String sciState;
 
     public Optional<String> getSciState() {
         return this.sciState == null ? Optional.empty() : Optional.ofNullable(this.sciState);

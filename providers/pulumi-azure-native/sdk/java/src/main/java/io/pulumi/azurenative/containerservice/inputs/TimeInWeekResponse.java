@@ -25,7 +25,7 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="day")
-        private final @Nullable String day;
+      private final @Nullable String day;
 
     public Optional<String> getDay() {
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
@@ -36,7 +36,7 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hourSlots")
-        private final @Nullable List<Integer> hourSlots;
+      private final @Nullable List<Integer> hourSlots;
 
     public List<Integer> getHourSlots() {
         return this.hourSlots == null ? List.of() : this.hourSlots;

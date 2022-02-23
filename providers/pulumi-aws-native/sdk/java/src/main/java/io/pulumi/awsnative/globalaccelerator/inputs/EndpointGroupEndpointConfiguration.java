@@ -25,7 +25,7 @@ public final class EndpointGroupEndpointConfiguration extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientIPPreservationEnabled")
-        private final @Nullable Boolean clientIPPreservationEnabled;
+      private final @Nullable Boolean clientIPPreservationEnabled;
 
     public Optional<Boolean> getClientIPPreservationEnabled() {
         return this.clientIPPreservationEnabled == null ? Optional.empty() : Optional.ofNullable(this.clientIPPreservationEnabled);
@@ -36,7 +36,7 @@ public final class EndpointGroupEndpointConfiguration extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpointId", required=true)
-        private final String endpointId;
+      private final String endpointId;
 
     public String getEndpointId() {
         return this.endpointId;
@@ -47,7 +47,7 @@ public final class EndpointGroupEndpointConfiguration extends io.pulumi.resource
      * 
      */
     @InputImport(name="weight")
-        private final @Nullable Integer weight;
+      private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);

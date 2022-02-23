@@ -25,7 +25,7 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
+      private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
 
     public List<HttpRouteMatchHeaderResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
@@ -36,7 +36,7 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="path", required=true)
-        private final HttpRouteMatchPathResponse path;
+      private final HttpRouteMatchPathResponse path;
 
     public HttpRouteMatchPathResponse getPath() {
         return this.path;

@@ -20,7 +20,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalAuthenticatedData")
-        private final @Nullable Input<String> additionalAuthenticatedData;
+      private final @Nullable Input<String> additionalAuthenticatedData;
 
     public Input<String> getAdditionalAuthenticatedData() {
         return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
@@ -32,7 +32,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-        private final Input<String> cryptoKey;
+      private final Input<String> cryptoKey;
 
     public Input<String> getCryptoKey() {
         return this.cryptoKey;
@@ -44,7 +44,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="plaintext", required=true)
-        private final Input<String> plaintext;
+      private final Input<String> plaintext;
 
     public Input<String> getPlaintext() {
         return this.plaintext;

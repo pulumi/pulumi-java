@@ -25,7 +25,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -36,7 +36,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="reasonForLogsStatus")
-        private final @Nullable String reasonForLogsStatus;
+      private final @Nullable String reasonForLogsStatus;
 
     public Optional<String> getReasonForLogsStatus() {
         return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
@@ -47,7 +47,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="reasonForMetricsStatus")
-        private final @Nullable String reasonForMetricsStatus;
+      private final @Nullable String reasonForMetricsStatus;
 
     public Optional<String> getReasonForMetricsStatus() {
         return this.reasonForMetricsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForMetricsStatus);
@@ -58,7 +58,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sendingLogs")
-        private final @Nullable Boolean sendingLogs;
+      private final @Nullable Boolean sendingLogs;
 
     public Optional<Boolean> getSendingLogs() {
         return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
@@ -69,7 +69,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sendingMetrics")
-        private final @Nullable Boolean sendingMetrics;
+      private final @Nullable Boolean sendingMetrics;
 
     public Optional<Boolean> getSendingMetrics() {
         return this.sendingMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendingMetrics);
@@ -80,7 +80,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="systemData", required=true)
-        private final SystemDataResponse systemData;
+      private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {
         return this.systemData;

@@ -26,7 +26,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hanaSids")
-        private final @Nullable List<SAPSystemIDResponse> hanaSids;
+      private final @Nullable List<SAPSystemIDResponse> hanaSids;
 
     public List<SAPSystemIDResponse> getHanaSids() {
         return this.hanaSids == null ? List.of() : this.hanaSids;
@@ -37,7 +37,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="nfsIpAddress", required=true)
-        private final String nfsIpAddress;
+      private final String nfsIpAddress;
 
     public String getNfsIpAddress() {
         return this.nfsIpAddress;
@@ -48,7 +48,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="osDisks")
-        private final @Nullable List<DiskResponse> osDisks;
+      private final @Nullable List<DiskResponse> osDisks;
 
     public List<DiskResponse> getOsDisks() {
         return this.osDisks == null ? List.of() : this.osDisks;

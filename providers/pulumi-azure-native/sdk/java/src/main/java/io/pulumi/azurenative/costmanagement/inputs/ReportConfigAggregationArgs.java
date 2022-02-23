@@ -24,7 +24,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="function", required=true)
-        private final Input<Either<String,FunctionType>> function;
+      private final Input<Either<String,FunctionType>> function;
 
     public Input<Either<String,FunctionType>> getFunction() {
         return this.function;
@@ -35,7 +35,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

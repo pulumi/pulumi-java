@@ -17,14 +17,14 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     public static final SubscriptionStateOverrideActionArgs Empty = new SubscriptionStateOverrideActionArgs();
 
     @InputImport(name="action", required=true)
-        private final Input<Either<String,SubscriptionNotificationOperation>> action;
+      private final Input<Either<String,SubscriptionNotificationOperation>> action;
 
     public Input<Either<String,SubscriptionNotificationOperation>> getAction() {
         return this.action;
     }
 
     @InputImport(name="state", required=true)
-        private final Input<Either<String,SubscriptionTransitioningState>> state;
+      private final Input<Either<String,SubscriptionTransitioningState>> state;
 
     public Input<Either<String,SubscriptionTransitioningState>> getState() {
         return this.state;

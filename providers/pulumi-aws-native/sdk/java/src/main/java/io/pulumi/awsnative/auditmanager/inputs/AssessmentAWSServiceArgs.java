@@ -19,7 +19,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     public static final AssessmentAWSServiceArgs Empty = new AssessmentAWSServiceArgs();
 
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;

@@ -24,7 +24,7 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="concurrentExecutions", required=true)
-        private final Input<Integer> concurrentExecutions;
+      private final Input<Integer> concurrentExecutions;
 
     public Input<Integer> getConcurrentExecutions() {
         return this.concurrentExecutions;
@@ -39,7 +39,7 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="launchPath", required=true)
-        private final Input<String> launchPath;
+      private final Input<String> launchPath;
 
     public Input<String> getLaunchPath() {
         return this.launchPath;
@@ -50,7 +50,7 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

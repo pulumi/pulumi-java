@@ -24,7 +24,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="attributes")
-        private final @Nullable Input<SecretAttributesArgs> attributes;
+      private final @Nullable Input<SecretAttributesArgs> attributes;
 
     public Input<SecretAttributesArgs> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -35,7 +35,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentType")
-        private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -46,7 +46,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

@@ -23,7 +23,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceQuota", required=true)
-        private final Input<Integer> deviceQuota;
+      private final Input<Integer> deviceQuota;
 
     public Input<Integer> getDeviceQuota() {
         return this.deviceQuota;
@@ -34,7 +34,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mdeIntegration", required=true)
-        private final Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
+      private final Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
     public Input<DefenderSettingsPropertiesMdeIntegrationArgs> getMdeIntegration() {
         return this.mdeIntegration;
@@ -45,7 +45,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onboardingKind", required=true)
-        private final Input<Either<String,OnboardingKind>> onboardingKind;
+      private final Input<Either<String,OnboardingKind>> onboardingKind;
 
     public Input<Either<String,OnboardingKind>> getOnboardingKind() {
         return this.onboardingKind;
@@ -56,7 +56,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sentinelWorkspaceResourceIds", required=true)
-        private final Input<List<String>> sentinelWorkspaceResourceIds;
+      private final Input<List<String>> sentinelWorkspaceResourceIds;
 
     public Input<List<String>> getSentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;

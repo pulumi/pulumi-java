@@ -23,7 +23,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="offer")
-        private final @Nullable Input<String> offer;
+      private final @Nullable Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer == null ? Input.empty() : this.offer;
@@ -45,7 +45,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publisher")
-        private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;

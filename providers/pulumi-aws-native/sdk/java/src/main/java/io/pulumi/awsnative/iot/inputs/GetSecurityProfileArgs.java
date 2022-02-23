@@ -17,7 +17,7 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="securityProfileName", required=true)
-        private final String securityProfileName;
+      private final String securityProfileName;
 
     public String getSecurityProfileName() {
         return this.securityProfileName;

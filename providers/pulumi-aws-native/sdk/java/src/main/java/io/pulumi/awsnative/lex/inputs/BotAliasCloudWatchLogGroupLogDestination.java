@@ -17,7 +17,7 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
      * 
      */
     @InputImport(name="cloudWatchLogGroupArn", required=true)
-        private final String cloudWatchLogGroupArn;
+      private final String cloudWatchLogGroupArn;
 
     public String getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
@@ -28,7 +28,7 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
      * 
      */
     @InputImport(name="logPrefix", required=true)
-        private final String logPrefix;
+      private final String logPrefix;
 
     public String getLogPrefix() {
         return this.logPrefix;

@@ -22,7 +22,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="voiceId", required=true)
-        private final Input<String> voiceId;
+      private final Input<String> voiceId;
 
     public Input<String> getVoiceId() {
         return this.voiceId;

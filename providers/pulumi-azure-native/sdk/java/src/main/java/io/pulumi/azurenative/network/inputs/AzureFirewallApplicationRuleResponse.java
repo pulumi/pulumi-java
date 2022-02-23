@@ -25,7 +25,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -36,7 +36,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="fqdnTags")
-        private final @Nullable List<String> fqdnTags;
+      private final @Nullable List<String> fqdnTags;
 
     public List<String> getFqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
@@ -47,7 +47,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -58,7 +58,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="protocols")
-        private final @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols;
+      private final @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols;
 
     public List<AzureFirewallApplicationRuleProtocolResponse> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
@@ -69,7 +69,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceAddresses")
-        private final @Nullable List<String> sourceAddresses;
+      private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -80,7 +80,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceIpGroups")
-        private final @Nullable List<String> sourceIpGroups;
+      private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -91,7 +91,7 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetFqdns")
-        private final @Nullable List<String> targetFqdns;
+      private final @Nullable List<String> targetFqdns;
 
     public List<String> getTargetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;

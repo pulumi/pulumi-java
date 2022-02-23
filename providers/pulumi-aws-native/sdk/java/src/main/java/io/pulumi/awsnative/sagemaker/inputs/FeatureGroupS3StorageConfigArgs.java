@@ -15,14 +15,14 @@ public final class FeatureGroupS3StorageConfigArgs extends io.pulumi.resources.R
     public static final FeatureGroupS3StorageConfigArgs Empty = new FeatureGroupS3StorageConfigArgs();
 
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="s3Uri", required=true)
-        private final Input<String> s3Uri;
+      private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;

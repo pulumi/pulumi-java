@@ -26,7 +26,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code")
-        private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -37,7 +37,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details")
-        private final @Nullable List<ApiErrorBaseResponse> details;
+      private final @Nullable List<ApiErrorBaseResponse> details;
 
     public List<ApiErrorBaseResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -48,7 +48,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="innererror")
-        private final @Nullable InnerErrorResponse innererror;
+      private final @Nullable InnerErrorResponse innererror;
 
     public Optional<InnerErrorResponse> getInnererror() {
         return this.innererror == null ? Optional.empty() : Optional.ofNullable(this.innererror);
@@ -59,7 +59,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -70,7 +70,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target")
-        private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);

@@ -17,7 +17,7 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetGroupArn", required=true)
-        private final String targetGroupArn;
+      private final String targetGroupArn;
 
     public String getTargetGroupArn() {
         return this.targetGroupArn;

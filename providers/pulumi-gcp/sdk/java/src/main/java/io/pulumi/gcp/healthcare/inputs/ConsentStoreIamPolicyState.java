@@ -19,7 +19,7 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consentStoreId")
-        private final @Nullable Input<String> consentStoreId;
+      private final @Nullable Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
@@ -32,7 +32,7 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataset")
-        private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -43,7 +43,7 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -55,7 +55,7 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;

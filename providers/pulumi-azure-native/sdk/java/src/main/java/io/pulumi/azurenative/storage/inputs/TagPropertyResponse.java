@@ -21,7 +21,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectIdentifier", required=true)
-        private final String objectIdentifier;
+      private final String objectIdentifier;
 
     public String getObjectIdentifier() {
         return this.objectIdentifier;
@@ -32,7 +32,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag", required=true)
-        private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -43,7 +43,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -54,7 +54,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestamp", required=true)
-        private final String timestamp;
+      private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -65,7 +65,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="upn", required=true)
-        private final String upn;
+      private final String upn;
 
     public String getUpn() {
         return this.upn;

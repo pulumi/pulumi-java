@@ -21,7 +21,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="customData")
-        private final @Nullable Input<String> customData;
+      private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -43,7 +43,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="databaseName")
-        private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -54,7 +54,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mechanisms")
-        private final @Nullable Input<String> mechanisms;
+      private final @Nullable Input<String> mechanisms;
 
     public Input<String> getMechanisms() {
         return this.mechanisms == null ? Input.empty() : this.mechanisms;
@@ -65,7 +65,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mongoUserDefinitionId")
-        private final @Nullable Input<String> mongoUserDefinitionId;
+      private final @Nullable Input<String> mongoUserDefinitionId;
 
     public Input<String> getMongoUserDefinitionId() {
         return this.mongoUserDefinitionId == null ? Input.empty() : this.mongoUserDefinitionId;
@@ -76,7 +76,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -87,7 +87,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="roles")
-        private final @Nullable Input<List<RoleArgs>> roles;
+      private final @Nullable Input<List<RoleArgs>> roles;
 
     public Input<List<RoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -109,7 +109,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

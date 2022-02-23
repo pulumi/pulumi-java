@@ -15,14 +15,14 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     public static final BudgetsActionSubscriberArgs Empty = new BudgetsActionSubscriberArgs();
 
     @InputImport(name="address", required=true)
-        private final Input<String> address;
+      private final Input<String> address;
 
     public Input<String> getAddress() {
         return this.address;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<BudgetsActionSubscriberType> type;
+      private final Input<BudgetsActionSubscriberType> type;
 
     public Input<BudgetsActionSubscriberType> getType() {
         return this.type;

@@ -22,7 +22,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="canFailover", required=true)
-        private final Boolean canFailover;
+      private final Boolean canFailover;
 
     public Boolean getCanFailover() {
         return this.canFailover;
@@ -33,7 +33,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="lastSyncTime", required=true)
-        private final String lastSyncTime;
+      private final String lastSyncTime;
 
     public String getLastSyncTime() {
         return this.lastSyncTime;
@@ -44,7 +44,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

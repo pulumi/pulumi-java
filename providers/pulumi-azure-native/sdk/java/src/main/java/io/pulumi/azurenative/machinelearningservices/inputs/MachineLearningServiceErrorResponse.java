@@ -21,7 +21,7 @@ public final class MachineLearningServiceErrorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="error", required=true)
-        private final ErrorResponseResponse error;
+      private final ErrorResponseResponse error;
 
     public ErrorResponseResponse getError() {
         return this.error;

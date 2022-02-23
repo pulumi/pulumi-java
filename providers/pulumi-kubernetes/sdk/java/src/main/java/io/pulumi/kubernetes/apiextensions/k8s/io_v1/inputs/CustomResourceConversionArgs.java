@@ -25,7 +25,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="strategy", required=true)
-        private final Input<String> strategy;
+      private final Input<String> strategy;
 
     public Input<String> getStrategy() {
         return this.strategy;
@@ -36,7 +36,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="webhook")
-        private final @Nullable Input<WebhookConversionArgs> webhook;
+      private final @Nullable Input<WebhookConversionArgs> webhook;
 
     public Input<WebhookConversionArgs> getWebhook() {
         return this.webhook == null ? Input.empty() : this.webhook;

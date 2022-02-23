@@ -23,7 +23,7 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -34,7 +34,7 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -56,7 +56,7 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

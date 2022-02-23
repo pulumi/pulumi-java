@@ -192,6 +192,21 @@ public class SqlDWTableDataSetMapping extends io.pulumi.resources.CustomResource
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public SqlDWTableDataSetMapping(String name) {
+        this(name, SqlDWTableDataSetMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SqlDWTableDataSetMapping(String name, SqlDWTableDataSetMappingArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

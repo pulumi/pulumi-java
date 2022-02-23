@@ -17,14 +17,14 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     public static final ExperimentOnlineAbConfigObjectArgs Empty = new ExperimentOnlineAbConfigObjectArgs();
 
     @InputImport(name="controlTreatmentName")
-        private final @Nullable Input<String> controlTreatmentName;
+      private final @Nullable Input<String> controlTreatmentName;
 
     public Input<String> getControlTreatmentName() {
         return this.controlTreatmentName == null ? Input.empty() : this.controlTreatmentName;
     }
 
     @InputImport(name="treatmentWeights")
-        private final @Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
+      private final @Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
     public Input<List<ExperimentTreatmentToWeightArgs>> getTreatmentWeights() {
         return this.treatmentWeights == null ? Input.empty() : this.treatmentWeights;

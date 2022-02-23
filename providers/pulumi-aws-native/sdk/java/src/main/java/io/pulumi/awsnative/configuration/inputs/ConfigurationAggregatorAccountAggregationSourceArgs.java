@@ -17,21 +17,21 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     public static final ConfigurationAggregatorAccountAggregationSourceArgs Empty = new ConfigurationAggregatorAccountAggregationSourceArgs();
 
     @InputImport(name="accountIds", required=true)
-        private final Input<List<String>> accountIds;
+      private final Input<List<String>> accountIds;
 
     public Input<List<String>> getAccountIds() {
         return this.accountIds;
     }
 
     @InputImport(name="allAwsRegions")
-        private final @Nullable Input<Boolean> allAwsRegions;
+      private final @Nullable Input<Boolean> allAwsRegions;
 
     public Input<Boolean> getAllAwsRegions() {
         return this.allAwsRegions == null ? Input.empty() : this.allAwsRegions;
     }
 
     @InputImport(name="awsRegions")
-        private final @Nullable Input<List<String>> awsRegions;
+      private final @Nullable Input<List<String>> awsRegions;
 
     public Input<List<String>> getAwsRegions() {
         return this.awsRegions == null ? Input.empty() : this.awsRegions;

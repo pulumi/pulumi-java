@@ -14,7 +14,7 @@ public final class FlowGoogleAnalyticsSourcePropertiesArgs extends io.pulumi.res
     public static final FlowGoogleAnalyticsSourcePropertiesArgs Empty = new FlowGoogleAnalyticsSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

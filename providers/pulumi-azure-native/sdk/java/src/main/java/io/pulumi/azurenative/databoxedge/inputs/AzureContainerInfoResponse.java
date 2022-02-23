@@ -21,7 +21,7 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="containerName", required=true)
-        private final String containerName;
+      private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -32,7 +32,7 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataFormat", required=true)
-        private final String dataFormat;
+      private final String dataFormat;
 
     public String getDataFormat() {
         return this.dataFormat;
@@ -43,7 +43,7 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="storageAccountCredentialId", required=true)
-        private final String storageAccountCredentialId;
+      private final String storageAccountCredentialId;
 
     public String getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;

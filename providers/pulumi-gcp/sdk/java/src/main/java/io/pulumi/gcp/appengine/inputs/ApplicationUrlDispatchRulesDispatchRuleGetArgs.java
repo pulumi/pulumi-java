@@ -20,7 +20,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
      * 
      */
     @InputImport(name="domain")
-        private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -32,7 +32,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -44,7 +44,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;

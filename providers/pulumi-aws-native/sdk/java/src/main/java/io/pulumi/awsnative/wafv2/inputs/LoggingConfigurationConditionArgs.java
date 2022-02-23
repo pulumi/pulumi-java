@@ -20,7 +20,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="actionCondition")
-        private final @Nullable Input<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
+      private final @Nullable Input<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
 
     public Input<LoggingConfigurationConditionActionConditionPropertiesArgs> getActionCondition() {
         return this.actionCondition == null ? Input.empty() : this.actionCondition;
@@ -31,7 +31,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="labelNameCondition")
-        private final @Nullable Input<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
+      private final @Nullable Input<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
 
     public Input<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> getLabelNameCondition() {
         return this.labelNameCondition == null ? Input.empty() : this.labelNameCondition;

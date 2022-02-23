@@ -16,14 +16,14 @@ public final class InstanceFromMachineImageReservationAffinityArgs extends io.pu
     public static final InstanceFromMachineImageReservationAffinityArgs Empty = new InstanceFromMachineImageReservationAffinityArgs();
 
     @InputImport(name="specificReservation")
-        private final @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
+      private final @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

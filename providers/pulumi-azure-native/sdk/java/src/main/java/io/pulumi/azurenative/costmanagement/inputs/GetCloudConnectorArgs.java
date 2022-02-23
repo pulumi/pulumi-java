@@ -19,7 +19,7 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectorName", required=true)
-        private final String connectorName;
+      private final String connectorName;
 
     public String getConnectorName() {
         return this.connectorName;
@@ -30,7 +30,7 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);

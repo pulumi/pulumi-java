@@ -24,7 +24,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * 
      */
     @InputImport(name="issue")
-        private final @Nullable String issue;
+      private final @Nullable String issue;
 
     public Optional<String> getIssue() {
         return this.issue == null ? Optional.empty() : Optional.ofNullable(this.issue);
@@ -35,7 +35,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * 
      */
     @InputImport(name="numberOfVms")
-        private final @Nullable Double numberOfVms;
+      private final @Nullable Double numberOfVms;
 
     public Optional<Double> getNumberOfVms() {
         return this.numberOfVms == null ? Optional.empty() : Optional.ofNullable(this.numberOfVms);

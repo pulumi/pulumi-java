@@ -24,7 +24,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -35,7 +35,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<Object> path;
+      private final @Nullable Input<Object> path;
 
     public Input<Object> getPath() {
         return this.path == null ? Input.empty() : this.path;

@@ -26,7 +26,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="goodBadMetricFilter")
-        private final @Nullable Input<String> goodBadMetricFilter;
+      private final @Nullable Input<String> goodBadMetricFilter;
 
     public Input<String> getGoodBadMetricFilter() {
         return this.goodBadMetricFilter == null ? Input.empty() : this.goodBadMetricFilter;
@@ -41,7 +41,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="goodTotalRatioThreshold")
-        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdArgs> getGoodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold == null ? Input.empty() : this.goodTotalRatioThreshold;
@@ -59,7 +59,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metricMeanInRange")
-        private final @Nullable Input<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
+      private final @Nullable Input<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
 
     public Input<SloWindowsBasedSliMetricMeanInRangeArgs> getMetricMeanInRange() {
         return this.metricMeanInRange == null ? Input.empty() : this.metricMeanInRange;
@@ -77,7 +77,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metricSumInRange")
-        private final @Nullable Input<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
+      private final @Nullable Input<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
 
     public Input<SloWindowsBasedSliMetricSumInRangeArgs> getMetricSumInRange() {
         return this.metricSumInRange == null ? Input.empty() : this.metricSumInRange;
@@ -90,7 +90,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="windowPeriod")
-        private final @Nullable Input<String> windowPeriod;
+      private final @Nullable Input<String> windowPeriod;
 
     public Input<String> getWindowPeriod() {
         return this.windowPeriod == null ? Input.empty() : this.windowPeriod;

@@ -23,7 +23,7 @@ public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final HttpVersionMatchConditionParametersResponse parameters;
+      private final HttpVersionMatchConditionParametersResponse parameters;
 
     public HttpVersionMatchConditionParametersResponse getParameters() {
         return this.parameters;

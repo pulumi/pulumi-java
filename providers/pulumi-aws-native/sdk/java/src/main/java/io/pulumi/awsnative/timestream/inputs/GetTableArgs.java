@@ -17,7 +17,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

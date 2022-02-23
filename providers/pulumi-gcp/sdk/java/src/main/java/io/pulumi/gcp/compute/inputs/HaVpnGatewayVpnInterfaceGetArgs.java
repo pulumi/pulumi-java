@@ -20,7 +20,7 @@ public final class HaVpnGatewayVpnInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<Integer> id;
+      private final @Nullable Input<Integer> id;
 
     public Input<Integer> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -36,7 +36,7 @@ public final class HaVpnGatewayVpnInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="interconnectAttachment")
-        private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Input<String> interconnectAttachment;
 
     public Input<String> getInterconnectAttachment() {
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
@@ -48,7 +48,7 @@ public final class HaVpnGatewayVpnInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;

@@ -16,7 +16,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     public static final InstanceIamMemberState Empty = new InstanceIamMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<InstanceIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<InstanceIamMemberConditionGetArgs> condition;
 
     public Input<InstanceIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -38,7 +38,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceName")
-        private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -49,14 +49,14 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -68,7 +68,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -81,7 +81,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

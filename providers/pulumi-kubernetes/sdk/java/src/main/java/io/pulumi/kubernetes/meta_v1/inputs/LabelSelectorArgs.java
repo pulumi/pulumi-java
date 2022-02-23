@@ -26,7 +26,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchExpressions")
-        private final @Nullable Input<List<LabelSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Input<List<LabelSelectorRequirementArgs>> matchExpressions;
 
     public Input<List<LabelSelectorRequirementArgs>> getMatchExpressions() {
         return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
@@ -37,7 +37,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchLabels")
-        private final @Nullable Input<Map<String,String>> matchLabels;
+      private final @Nullable Input<Map<String,String>> matchLabels;
 
     public Input<Map<String,String>> getMatchLabels() {
         return this.matchLabels == null ? Input.empty() : this.matchLabels;

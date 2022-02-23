@@ -13,7 +13,7 @@ public final class DatasetContentVersionValue extends io.pulumi.resources.Invoke
     public static final DatasetContentVersionValue Empty = new DatasetContentVersionValue();
 
     @InputImport(name="datasetName", required=true)
-        private final String datasetName;
+      private final String datasetName;
 
     public String getDatasetName() {
         return this.datasetName;

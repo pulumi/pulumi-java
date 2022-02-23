@@ -22,7 +22,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * 
      */
     @InputImport(name="count", required=true)
-        private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -34,7 +34,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * 
      */
     @InputImport(name="highKey", required=true)
-        private final String highKey;
+      private final String highKey;
 
     public String getHighKey() {
         return this.highKey;
@@ -46,7 +46,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * 
      */
     @InputImport(name="lowKey", required=true)
-        private final String lowKey;
+      private final String lowKey;
 
     public String getLowKey() {
         return this.lowKey;
@@ -58,7 +58,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-        private final String partitionScheme;
+      private final String partitionScheme;
 
     public String getPartitionScheme() {
         return this.partitionScheme;

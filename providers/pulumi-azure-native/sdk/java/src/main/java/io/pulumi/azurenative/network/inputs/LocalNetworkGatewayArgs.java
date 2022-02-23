@@ -26,7 +26,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bgpSettings")
-        private final @Nullable Input<BgpSettingsArgs> bgpSettings;
+      private final @Nullable Input<BgpSettingsArgs> bgpSettings;
 
     public Input<BgpSettingsArgs> getBgpSettings() {
         return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
@@ -37,7 +37,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fqdn")
-        private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -48,7 +48,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayIpAddress")
-        private final @Nullable Input<String> gatewayIpAddress;
+      private final @Nullable Input<String> gatewayIpAddress;
 
     public Input<String> getGatewayIpAddress() {
         return this.gatewayIpAddress == null ? Input.empty() : this.gatewayIpAddress;
@@ -59,7 +59,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -70,7 +70,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="localNetworkAddressSpace")
-        private final @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace;
+      private final @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace;
 
     public Input<AddressSpaceArgs> getLocalNetworkAddressSpace() {
         return this.localNetworkAddressSpace == null ? Input.empty() : this.localNetworkAddressSpace;
@@ -81,7 +81,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

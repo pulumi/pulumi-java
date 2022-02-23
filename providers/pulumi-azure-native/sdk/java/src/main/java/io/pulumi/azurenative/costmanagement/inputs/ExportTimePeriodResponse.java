@@ -21,7 +21,7 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="from", required=true)
-        private final String from;
+      private final String from;
 
     public String getFrom() {
         return this.from;
@@ -32,7 +32,7 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="to", required=true)
-        private final String to;
+      private final String to;
 
     public String getTo() {
         return this.to;

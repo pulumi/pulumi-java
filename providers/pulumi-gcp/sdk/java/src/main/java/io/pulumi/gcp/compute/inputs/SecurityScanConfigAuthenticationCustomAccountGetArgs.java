@@ -18,7 +18,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="loginUrl", required=true)
-        private final Input<String> loginUrl;
+      private final Input<String> loginUrl;
 
     public Input<String> getLoginUrl() {
         return this.loginUrl;
@@ -31,7 +31,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -42,7 +42,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

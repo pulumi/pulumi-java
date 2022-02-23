@@ -24,7 +24,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="componentName", required=true)
-        private final String componentName;
+      private final String componentName;
 
     public String getComponentName() {
         return this.componentName;
@@ -35,7 +35,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="licenseKey")
-        private final @Nullable SecureStringResponse licenseKey;
+      private final @Nullable SecureStringResponse licenseKey;
 
     public Optional<SecureStringResponse> getLicenseKey() {
         return this.licenseKey == null ? Optional.empty() : Optional.ofNullable(this.licenseKey);
@@ -47,7 +47,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

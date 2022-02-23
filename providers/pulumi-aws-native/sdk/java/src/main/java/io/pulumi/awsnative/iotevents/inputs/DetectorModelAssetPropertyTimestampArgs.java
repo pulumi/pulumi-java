@@ -23,7 +23,7 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="offsetInNanos")
-        private final @Nullable Input<String> offsetInNanos;
+      private final @Nullable Input<String> offsetInNanos;
 
     public Input<String> getOffsetInNanos() {
         return this.offsetInNanos == null ? Input.empty() : this.offsetInNanos;
@@ -34,7 +34,7 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeInSeconds", required=true)
-        private final Input<String> timeInSeconds;
+      private final Input<String> timeInSeconds;
 
     public Input<String> getTimeInSeconds() {
         return this.timeInSeconds;

@@ -24,7 +24,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * 
      */
     @InputImport(name="dataType")
-        private final @Nullable String dataType;
+      private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
@@ -35,7 +35,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * 
      */
     @InputImport(name="mapTo")
-        private final @Nullable Integer mapTo;
+      private final @Nullable Integer mapTo;
 
     public Optional<Integer> getMapTo() {
         return this.mapTo == null ? Optional.empty() : Optional.ofNullable(this.mapTo);
@@ -46,7 +46,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);

@@ -24,14 +24,14 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="bucketKeyEnabled")
-        private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Input<Boolean> bucketKeyEnabled;
 
     public Input<Boolean> getBucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
     }
 
     @InputImport(name="serverSideEncryptionByDefault")
-        private final @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
+      private final @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
 
     public Input<BucketServerSideEncryptionByDefaultArgs> getServerSideEncryptionByDefault() {
         return this.serverSideEncryptionByDefault == null ? Input.empty() : this.serverSideEncryptionByDefault;

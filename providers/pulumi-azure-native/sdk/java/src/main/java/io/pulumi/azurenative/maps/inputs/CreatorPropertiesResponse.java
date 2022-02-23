@@ -23,7 +23,7 @@ public final class CreatorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);

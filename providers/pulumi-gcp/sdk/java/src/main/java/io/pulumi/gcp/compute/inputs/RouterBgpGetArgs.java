@@ -24,7 +24,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-        private final @Nullable Input<String> advertiseMode;
+      private final @Nullable Input<String> advertiseMode;
 
     public Input<String> getAdvertiseMode() {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
@@ -40,7 +40,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-        private final @Nullable Input<List<String>> advertisedGroups;
+      private final @Nullable Input<List<String>> advertisedGroups;
 
     public Input<List<String>> getAdvertisedGroups() {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
@@ -56,7 +56,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-        private final @Nullable Input<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
+      private final @Nullable Input<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
     public Input<List<RouterBgpAdvertisedIpRangeGetArgs>> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
@@ -70,7 +70,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn", required=true)
-        private final Input<Integer> asn;
+      private final Input<Integer> asn;
 
     public Input<Integer> getAsn() {
         return this.asn;

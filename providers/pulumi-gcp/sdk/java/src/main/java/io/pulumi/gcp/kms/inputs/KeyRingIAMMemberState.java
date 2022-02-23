@@ -21,7 +21,7 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<KeyRingIAMMemberConditionGetArgs> condition;
+      private final @Nullable Input<KeyRingIAMMemberConditionGetArgs> condition;
 
     public Input<KeyRingIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,7 +32,7 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -46,14 +46,14 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRingId")
-        private final @Nullable Input<String> keyRingId;
+      private final @Nullable Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId == null ? Input.empty() : this.keyRingId;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -66,7 +66,7 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

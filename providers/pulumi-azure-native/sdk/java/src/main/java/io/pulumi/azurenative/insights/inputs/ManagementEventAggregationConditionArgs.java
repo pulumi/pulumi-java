@@ -25,7 +25,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable Input<ConditionOperator> operator;
+      private final @Nullable Input<ConditionOperator> operator;
 
     public Input<ConditionOperator> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -36,7 +36,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="threshold")
-        private final @Nullable Input<Double> threshold;
+      private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -47,7 +47,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="windowSize")
-        private final @Nullable Input<String> windowSize;
+      private final @Nullable Input<String> windowSize;
 
     public Input<String> getWindowSize() {
         return this.windowSize == null ? Input.empty() : this.windowSize;

@@ -19,7 +19,7 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deliveryRequirement", required=true)
-        private final Input<String> deliveryRequirement;
+      private final Input<String> deliveryRequirement;
 
     public Input<String> getDeliveryRequirement() {
         return this.deliveryRequirement;

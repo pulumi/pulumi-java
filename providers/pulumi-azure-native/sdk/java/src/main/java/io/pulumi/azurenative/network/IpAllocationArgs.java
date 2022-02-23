@@ -24,7 +24,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationTags")
-        private final @Nullable Input<Map<String,String>> allocationTags;
+      private final @Nullable Input<Map<String,String>> allocationTags;
 
     public Input<Map<String,String>> getAllocationTags() {
         return this.allocationTags == null ? Input.empty() : this.allocationTags;
@@ -35,7 +35,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocationName")
-        private final @Nullable Input<String> ipAllocationName;
+      private final @Nullable Input<String> ipAllocationName;
 
     public Input<String> getIpAllocationName() {
         return this.ipAllocationName == null ? Input.empty() : this.ipAllocationName;
@@ -57,7 +57,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamAllocationId")
-        private final @Nullable Input<String> ipamAllocationId;
+      private final @Nullable Input<String> ipamAllocationId;
 
     public Input<String> getIpamAllocationId() {
         return this.ipamAllocationId == null ? Input.empty() : this.ipamAllocationId;
@@ -68,7 +68,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -90,7 +90,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixLength")
-        private final @Nullable Input<Integer> prefixLength;
+      private final @Nullable Input<Integer> prefixLength;
 
     public Input<Integer> getPrefixLength() {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
@@ -101,7 +101,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixType")
-        private final @Nullable Input<Either<String,IPVersion>> prefixType;
+      private final @Nullable Input<Either<String,IPVersion>> prefixType;
 
     public Input<Either<String,IPVersion>> getPrefixType() {
         return this.prefixType == null ? Input.empty() : this.prefixType;
@@ -112,7 +112,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -134,7 +134,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,IpAllocationType>> type;
+      private final @Nullable Input<Either<String,IpAllocationType>> type;
 
     public Input<Either<String,IpAllocationType>> getType() {
         return this.type == null ? Input.empty() : this.type;

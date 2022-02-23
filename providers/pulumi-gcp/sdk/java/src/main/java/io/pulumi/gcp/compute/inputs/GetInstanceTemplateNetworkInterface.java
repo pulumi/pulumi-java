@@ -27,7 +27,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessConfigs", required=true)
-        private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
+      private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs;
@@ -40,21 +40,21 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="aliasIpRanges", required=true)
-        private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
+      private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
 
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
 
     @InputImport(name="ipv6AccessConfigs", required=true)
-        private final List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
+      private final List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
     @InputImport(name="ipv6AccessType", required=true)
-        private final String ipv6AccessType;
+      private final String ipv6AccessType;
 
     public String getIpv6AccessType() {
         return this.ipv6AccessType;
@@ -65,7 +65,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="network", required=true)
-        private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -90,28 +90,28 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkIp", required=true)
-        private final String networkIp;
+      private final String networkIp;
 
     public String getNetworkIp() {
         return this.networkIp;
     }
 
     @InputImport(name="nicType", required=true)
-        private final String nicType;
+      private final String nicType;
 
     public String getNicType() {
         return this.nicType;
     }
 
     @InputImport(name="queueCount", required=true)
-        private final Integer queueCount;
+      private final Integer queueCount;
 
     public Integer getQueueCount() {
         return this.queueCount;
     }
 
     @InputImport(name="stackType", required=true)
-        private final String stackType;
+      private final String stackType;
 
     public String getStackType() {
         return this.stackType;
@@ -124,7 +124,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnetwork", required=true)
-        private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -136,7 +136,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnetworkProject", required=true)
-        private final String subnetworkProject;
+      private final String subnetworkProject;
 
     public String getSubnetworkProject() {
         return this.subnetworkProject;

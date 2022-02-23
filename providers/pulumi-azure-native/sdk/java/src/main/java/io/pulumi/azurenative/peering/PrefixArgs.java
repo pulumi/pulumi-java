@@ -19,7 +19,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-        private final Input<String> peeringServiceName;
+      private final Input<String> peeringServiceName;
 
     public Input<String> getPeeringServiceName() {
         return this.peeringServiceName;
@@ -30,7 +30,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServicePrefixKey")
-        private final @Nullable Input<String> peeringServicePrefixKey;
+      private final @Nullable Input<String> peeringServicePrefixKey;
 
     public Input<String> getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey == null ? Input.empty() : this.peeringServicePrefixKey;
@@ -41,7 +41,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -52,7 +52,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixName")
-        private final @Nullable Input<String> prefixName;
+      private final @Nullable Input<String> prefixName;
 
     public Input<String> getPrefixName() {
         return this.prefixName == null ? Input.empty() : this.prefixName;
@@ -63,7 +63,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

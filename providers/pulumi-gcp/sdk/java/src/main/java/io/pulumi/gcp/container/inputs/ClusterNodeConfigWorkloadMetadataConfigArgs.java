@@ -22,7 +22,7 @@ public final class ClusterNodeConfigWorkloadMetadataConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="mode", required=true)
-        private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;

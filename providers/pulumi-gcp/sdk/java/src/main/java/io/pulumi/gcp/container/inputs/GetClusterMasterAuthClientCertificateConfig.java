@@ -13,7 +13,7 @@ public final class GetClusterMasterAuthClientCertificateConfig extends io.pulumi
     public static final GetClusterMasterAuthClientCertificateConfig Empty = new GetClusterMasterAuthClientCertificateConfig();
 
     @InputImport(name="issueClientCertificate", required=true)
-        private final Boolean issueClientCertificate;
+      private final Boolean issueClientCertificate;
 
     public Boolean getIssueClientCertificate() {
         return this.issueClientCertificate;

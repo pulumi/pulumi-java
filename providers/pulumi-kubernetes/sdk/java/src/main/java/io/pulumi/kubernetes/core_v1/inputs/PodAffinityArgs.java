@@ -25,7 +25,7 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredDuringSchedulingIgnoredDuringExecution")
-        private final @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
     public Input<List<WeightedPodAffinityTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
         return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
@@ -36,7 +36,7 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiredDuringSchedulingIgnoredDuringExecution")
-        private final @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
 
     public Input<List<PodAffinityTermArgs>> getRequiredDuringSchedulingIgnoredDuringExecution() {
         return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;

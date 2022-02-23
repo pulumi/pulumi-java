@@ -23,7 +23,7 @@ public final class ModelBiasJobDefinitionConstraintsResourceArgs extends io.pulu
      * 
      */
     @InputImport(name="s3Uri")
-        private final @Nullable Input<String> s3Uri;
+      private final @Nullable Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri == null ? Input.empty() : this.s3Uri;

@@ -19,7 +19,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

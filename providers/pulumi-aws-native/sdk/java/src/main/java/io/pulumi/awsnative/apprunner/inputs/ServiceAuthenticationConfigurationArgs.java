@@ -23,7 +23,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessRoleArn")
-        private final @Nullable Input<String> accessRoleArn;
+      private final @Nullable Input<String> accessRoleArn;
 
     public Input<String> getAccessRoleArn() {
         return this.accessRoleArn == null ? Input.empty() : this.accessRoleArn;
@@ -34,7 +34,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectionArn")
-        private final @Nullable Input<String> connectionArn;
+      private final @Nullable Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn == null ? Input.empty() : this.connectionArn;

@@ -25,7 +25,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDnsServers")
-        private final @Nullable Input<List<String>> customDnsServers;
+      private final @Nullable Input<List<String>> customDnsServers;
 
     public Input<List<String>> getCustomDnsServers() {
         return this.customDnsServers == null ? Input.empty() : this.customDnsServers;
@@ -36,7 +36,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-        private final @Nullable Input<String> gatewayName;
+      private final @Nullable Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
@@ -47,7 +47,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isRoutingPreferenceInternet")
-        private final @Nullable Input<Boolean> isRoutingPreferenceInternet;
+      private final @Nullable Input<Boolean> isRoutingPreferenceInternet;
 
     public Input<Boolean> getIsRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet == null ? Input.empty() : this.isRoutingPreferenceInternet;
@@ -69,7 +69,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -80,7 +80,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="p2SConnectionConfigurations")
-        private final @Nullable Input<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
+      private final @Nullable Input<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
 
     public Input<List<P2SConnectionConfigurationArgs>> getP2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations == null ? Input.empty() : this.p2SConnectionConfigurations;
@@ -91,7 +91,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -113,7 +113,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHub")
-        private final @Nullable Input<SubResourceArgs> virtualHub;
+      private final @Nullable Input<SubResourceArgs> virtualHub;
 
     public Input<SubResourceArgs> getVirtualHub() {
         return this.virtualHub == null ? Input.empty() : this.virtualHub;
@@ -124,7 +124,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGatewayScaleUnit")
-        private final @Nullable Input<Integer> vpnGatewayScaleUnit;
+      private final @Nullable Input<Integer> vpnGatewayScaleUnit;
 
     public Input<Integer> getVpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit == null ? Input.empty() : this.vpnGatewayScaleUnit;
@@ -135,7 +135,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnServerConfiguration")
-        private final @Nullable Input<SubResourceArgs> vpnServerConfiguration;
+      private final @Nullable Input<SubResourceArgs> vpnServerConfiguration;
 
     public Input<SubResourceArgs> getVpnServerConfiguration() {
         return this.vpnServerConfiguration == null ? Input.empty() : this.vpnServerConfiguration;

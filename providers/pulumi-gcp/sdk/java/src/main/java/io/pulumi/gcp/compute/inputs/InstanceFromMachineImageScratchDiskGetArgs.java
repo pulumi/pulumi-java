@@ -14,7 +14,7 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
     public static final InstanceFromMachineImageScratchDiskGetArgs Empty = new InstanceFromMachineImageScratchDiskGetArgs();
 
     @InputImport(name="interface", required=true)
-        private final Input<String> $interface;
+      private final Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface;

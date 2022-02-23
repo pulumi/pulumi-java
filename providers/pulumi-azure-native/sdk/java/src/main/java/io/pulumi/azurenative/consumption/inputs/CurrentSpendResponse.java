@@ -22,7 +22,7 @@ public final class CurrentSpendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-        private final Double amount;
+      private final Double amount;
 
     public Double getAmount() {
         return this.amount;
@@ -33,7 +33,7 @@ public final class CurrentSpendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="unit", required=true)
-        private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;

@@ -23,14 +23,14 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3BucketArn", required=true)
-        private final Input<String> s3BucketArn;
+      private final Input<String> s3BucketArn;
 
     public Input<String> getS3BucketArn() {
         return this.s3BucketArn;
     }
 
     @InputImport(name="s3Config", required=true)
-        private final Input<LocationS3S3ConfigArgs> s3Config;
+      private final Input<LocationS3S3ConfigArgs> s3Config;
 
     public Input<LocationS3S3ConfigArgs> getS3Config() {
         return this.s3Config;
@@ -41,7 +41,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3StorageClass")
-        private final @Nullable Input<LocationS3S3StorageClass> s3StorageClass;
+      private final @Nullable Input<LocationS3S3StorageClass> s3StorageClass;
 
     public Input<LocationS3S3StorageClass> getS3StorageClass() {
         return this.s3StorageClass == null ? Input.empty() : this.s3StorageClass;
@@ -52,7 +52,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-        private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -63,7 +63,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<LocationS3TagArgs>> tags;
+      private final @Nullable Input<List<LocationS3TagArgs>> tags;
 
     public Input<List<LocationS3TagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

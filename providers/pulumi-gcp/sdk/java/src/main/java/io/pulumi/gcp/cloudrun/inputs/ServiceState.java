@@ -29,7 +29,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autogenerateRevisionName")
-        private final @Nullable Input<Boolean> autogenerateRevisionName;
+      private final @Nullable Input<Boolean> autogenerateRevisionName;
 
     public Input<Boolean> getAutogenerateRevisionName() {
         return this.autogenerateRevisionName == null ? Input.empty() : this.autogenerateRevisionName;
@@ -40,7 +40,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ServiceMetadataGetArgs> metadata;
+      private final @Nullable Input<ServiceMetadataGetArgs> metadata;
 
     public Input<ServiceMetadataGetArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -64,7 +64,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -87,7 +87,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statuses")
-        private final @Nullable Input<List<ServiceStatusGetArgs>> statuses;
+      private final @Nullable Input<List<ServiceStatusGetArgs>> statuses;
 
     public Input<List<ServiceStatusGetArgs>> getStatuses() {
         return this.statuses == null ? Input.empty() : this.statuses;
@@ -107,7 +107,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-        private final @Nullable Input<ServiceTemplateGetArgs> template;
+      private final @Nullable Input<ServiceTemplateGetArgs> template;
 
     public Input<ServiceTemplateGetArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -120,7 +120,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffics")
-        private final @Nullable Input<List<ServiceTrafficGetArgs>> traffics;
+      private final @Nullable Input<List<ServiceTrafficGetArgs>> traffics;
 
     public Input<List<ServiceTrafficGetArgs>> getTraffics() {
         return this.traffics == null ? Input.empty() : this.traffics;

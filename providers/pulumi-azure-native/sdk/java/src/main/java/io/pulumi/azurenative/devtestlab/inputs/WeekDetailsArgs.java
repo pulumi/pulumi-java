@@ -24,7 +24,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-        private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -35,7 +35,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weekdays")
-        private final @Nullable Input<List<String>> weekdays;
+      private final @Nullable Input<List<String>> weekdays;
 
     public Input<List<String>> getWeekdays() {
         return this.weekdays == null ? Input.empty() : this.weekdays;

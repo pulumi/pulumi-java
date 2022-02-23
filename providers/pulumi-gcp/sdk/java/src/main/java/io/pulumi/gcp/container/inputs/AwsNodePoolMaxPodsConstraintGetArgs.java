@@ -18,7 +18,7 @@ public final class AwsNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxPodsPerNode", required=true)
-        private final Input<Integer> maxPodsPerNode;
+      private final Input<Integer> maxPodsPerNode;
 
     public Input<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode;

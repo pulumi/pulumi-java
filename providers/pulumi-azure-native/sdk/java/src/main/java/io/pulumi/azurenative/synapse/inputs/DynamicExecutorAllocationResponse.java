@@ -23,7 +23,7 @@ public final class DynamicExecutorAllocationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);

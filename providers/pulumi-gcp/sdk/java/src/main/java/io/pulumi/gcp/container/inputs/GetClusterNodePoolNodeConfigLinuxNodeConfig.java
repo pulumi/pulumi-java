@@ -14,7 +14,7 @@ public final class GetClusterNodePoolNodeConfigLinuxNodeConfig extends io.pulumi
     public static final GetClusterNodePoolNodeConfigLinuxNodeConfig Empty = new GetClusterNodePoolNodeConfigLinuxNodeConfig();
 
     @InputImport(name="sysctls", required=true)
-        private final Map<String,String> sysctls;
+      private final Map<String,String> sysctls;
 
     public Map<String,String> getSysctls() {
         return this.sysctls;

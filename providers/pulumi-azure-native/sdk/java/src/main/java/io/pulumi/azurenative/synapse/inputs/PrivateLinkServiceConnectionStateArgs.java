@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

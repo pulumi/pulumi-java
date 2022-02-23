@@ -21,7 +21,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
      * 
      */
     @InputImport(name="maxScaledDownReplicas")
-        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> maxScaledDownReplicas;
+      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> maxScaledDownReplicas;
 
     public Input<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> getMaxScaledDownReplicas() {
         return this.maxScaledDownReplicas == null ? Input.empty() : this.maxScaledDownReplicas;
@@ -33,7 +33,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
      * 
      */
     @InputImport(name="timeWindowSec")
-        private final @Nullable Input<Integer> timeWindowSec;
+      private final @Nullable Input<Integer> timeWindowSec;
 
     public Input<Integer> getTimeWindowSec() {
         return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;

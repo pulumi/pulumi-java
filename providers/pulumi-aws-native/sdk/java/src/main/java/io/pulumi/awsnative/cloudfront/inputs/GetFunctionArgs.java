@@ -13,7 +13,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
     @InputImport(name="functionARN", required=true)
-        private final String functionARN;
+      private final String functionARN;
 
     public String getFunctionARN() {
         return this.functionARN;

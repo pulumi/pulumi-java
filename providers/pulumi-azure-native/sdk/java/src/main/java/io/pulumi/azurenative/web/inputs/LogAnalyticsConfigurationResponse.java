@@ -15,7 +15,7 @@ public final class LogAnalyticsConfigurationResponse extends io.pulumi.resources
     public static final LogAnalyticsConfigurationResponse Empty = new LogAnalyticsConfigurationResponse();
 
     @InputImport(name="customerId")
-        private final @Nullable String customerId;
+      private final @Nullable String customerId;
 
     public Optional<String> getCustomerId() {
         return this.customerId == null ? Optional.empty() : Optional.ofNullable(this.customerId);

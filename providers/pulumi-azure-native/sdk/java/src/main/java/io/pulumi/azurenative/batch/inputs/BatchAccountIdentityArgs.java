@@ -26,7 +26,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ResourceIdentityType> type;
+      private final Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type;
@@ -37,7 +37,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;

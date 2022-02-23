@@ -14,14 +14,14 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
     public static final TopicRuleCloudwatchLogsActionArgs Empty = new TopicRuleCloudwatchLogsActionArgs();
 
     @InputImport(name="logGroupName", required=true)
-        private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

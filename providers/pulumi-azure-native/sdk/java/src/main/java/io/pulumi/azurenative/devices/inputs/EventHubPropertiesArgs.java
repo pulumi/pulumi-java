@@ -24,7 +24,7 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="partitionCount")
-        private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Input<Integer> partitionCount;
 
     public Input<Integer> getPartitionCount() {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
@@ -35,7 +35,7 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retentionTimeInDays")
-        private final @Nullable Input<Double> retentionTimeInDays;
+      private final @Nullable Input<Double> retentionTimeInDays;
 
     public Input<Double> getRetentionTimeInDays() {
         return this.retentionTimeInDays == null ? Input.empty() : this.retentionTimeInDays;

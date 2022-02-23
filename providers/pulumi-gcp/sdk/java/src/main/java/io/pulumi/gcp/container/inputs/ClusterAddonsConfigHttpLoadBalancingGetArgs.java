@@ -19,7 +19,7 @@ public final class ClusterAddonsConfigHttpLoadBalancingGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="disabled", required=true)
-        private final Input<Boolean> disabled;
+      private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;

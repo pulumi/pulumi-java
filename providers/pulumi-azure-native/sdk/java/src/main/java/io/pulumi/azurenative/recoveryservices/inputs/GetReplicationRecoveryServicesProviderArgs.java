@@ -17,7 +17,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final String fabricName;
+      private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="providerName", required=true)
-        private final String providerName;
+      private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

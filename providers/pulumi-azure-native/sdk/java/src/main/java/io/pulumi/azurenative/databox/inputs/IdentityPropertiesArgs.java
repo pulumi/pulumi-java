@@ -24,7 +24,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -35,7 +35,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userAssigned")
-        private final @Nullable Input<UserAssignedPropertiesArgs> userAssigned;
+      private final @Nullable Input<UserAssignedPropertiesArgs> userAssigned;
 
     public Input<UserAssignedPropertiesArgs> getUserAssigned() {
         return this.userAssigned == null ? Input.empty() : this.userAssigned;

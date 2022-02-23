@@ -22,7 +22,7 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<BucketSseKmsEncryptedObjectsStatus> status;
+      private final Input<BucketSseKmsEncryptedObjectsStatus> status;
 
     public Input<BucketSseKmsEncryptedObjectsStatus> getStatus() {
         return this.status;

@@ -17,7 +17,7 @@ public final class GetFarmBeatsModelArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="farmBeatsResourceName", required=true)
-        private final String farmBeatsResourceName;
+      private final String farmBeatsResourceName;
 
     public String getFarmBeatsResourceName() {
         return this.farmBeatsResourceName;
@@ -28,7 +28,7 @@ public final class GetFarmBeatsModelArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

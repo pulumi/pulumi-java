@@ -24,7 +24,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpu")
-        private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -35,7 +35,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memory")
-        private final @Nullable Input<String> memory;
+      private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;

@@ -26,7 +26,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort")
-        private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort == null ? Input.empty() : this.backendPort;
@@ -37,7 +37,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-        private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+      private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
 
     public Input<Either<String,TransportProtocol>> getTransportProtocol() {
         return this.transportProtocol == null ? Input.empty() : this.transportProtocol;

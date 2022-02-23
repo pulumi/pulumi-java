@@ -16,14 +16,14 @@ public final class DataflowEndpointGroupEndpointDetails extends io.pulumi.resour
     public static final DataflowEndpointGroupEndpointDetails Empty = new DataflowEndpointGroupEndpointDetails();
 
     @InputImport(name="endpoint")
-        private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
+      private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
 
     public Optional<DataflowEndpointGroupDataflowEndpoint> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
     @InputImport(name="securityDetails")
-        private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
+      private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
 
     public Optional<DataflowEndpointGroupSecurityDetails> getSecurityDetails() {
         return this.securityDetails == null ? Optional.empty() : Optional.ofNullable(this.securityDetails);

@@ -24,7 +24,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-        private final Input<Integer> maxNodeCount;
+      private final Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount;
@@ -35,7 +35,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minNodeCount")
-        private final @Nullable Input<Integer> minNodeCount;
+      private final @Nullable Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount == null ? Input.empty() : this.minNodeCount;
@@ -46,7 +46,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeIdleTimeBeforeScaleDown")
-        private final @Nullable Input<String> nodeIdleTimeBeforeScaleDown;
+      private final @Nullable Input<String> nodeIdleTimeBeforeScaleDown;
 
     public Input<String> getNodeIdleTimeBeforeScaleDown() {
         return this.nodeIdleTimeBeforeScaleDown == null ? Input.empty() : this.nodeIdleTimeBeforeScaleDown;

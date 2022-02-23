@@ -15,14 +15,14 @@ public final class ServiceKeyValuePair extends io.pulumi.resources.InvokeArgs {
     public static final ServiceKeyValuePair Empty = new ServiceKeyValuePair();
 
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

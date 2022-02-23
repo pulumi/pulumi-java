@@ -26,7 +26,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hostServerName")
-        private final @Nullable Input<String> hostServerName;
+      private final @Nullable Input<String> hostServerName;
 
     public Input<String> getHostServerName() {
         return this.hostServerName == null ? Input.empty() : this.hostServerName;
@@ -37,7 +37,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inquiryInfo")
-        private final @Nullable Input<InquiryInfoArgs> inquiryInfo;
+      private final @Nullable Input<InquiryInfoArgs> inquiryInfo;
 
     public Input<InquiryInfoArgs> getInquiryInfo() {
         return this.inquiryInfo == null ? Input.empty() : this.inquiryInfo;
@@ -48,7 +48,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodesList")
-        private final @Nullable Input<List<DistributedNodesInfoArgs>> nodesList;
+      private final @Nullable Input<List<DistributedNodesInfoArgs>> nodesList;
 
     public Input<List<DistributedNodesInfoArgs>> getNodesList() {
         return this.nodesList == null ? Input.empty() : this.nodesList;

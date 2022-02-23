@@ -23,7 +23,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assetFileId", required=true)
-        private final String assetFileId;
+      private final String assetFileId;
 
     public String getAssetFileId() {
         return this.assetFileId;
@@ -34,7 +34,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assetFileName")
-        private final @Nullable String assetFileName;
+      private final @Nullable String assetFileName;
 
     public Optional<String> getAssetFileName() {
         return this.assetFileName == null ? Optional.empty() : Optional.ofNullable(this.assetFileName);
@@ -45,7 +45,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="initializationVector")
-        private final @Nullable String initializationVector;
+      private final @Nullable String initializationVector;
 
     public Optional<String> getInitializationVector() {
         return this.initializationVector == null ? Optional.empty() : Optional.ofNullable(this.initializationVector);

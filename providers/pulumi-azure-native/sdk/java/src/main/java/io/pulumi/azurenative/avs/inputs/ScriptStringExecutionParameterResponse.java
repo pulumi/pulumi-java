@@ -23,7 +23,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -46,7 +46,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

@@ -23,7 +23,7 @@ public final class DicomStoreNotificationConfigGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-        private final Input<String> pubsubTopic;
+      private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;

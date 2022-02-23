@@ -23,7 +23,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dailyQuotaGb")
-        private final @Nullable Input<Double> dailyQuotaGb;
+      private final @Nullable Input<Double> dailyQuotaGb;
 
     public Input<Double> getDailyQuotaGb() {
         return this.dailyQuotaGb == null ? Input.empty() : this.dailyQuotaGb;

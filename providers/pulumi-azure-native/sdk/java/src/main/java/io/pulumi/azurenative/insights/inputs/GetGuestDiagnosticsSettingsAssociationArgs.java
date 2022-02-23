@@ -17,7 +17,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="associationName", required=true)
-        private final String associationName;
+      private final String associationName;
 
     public String getAssociationName() {
         return this.associationName;
@@ -28,7 +28,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;

@@ -26,7 +26,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accessEndpoint")
-        private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
+      private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
 
     public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> getAccessEndpoint() {
         return this.accessEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accessEndpoint);
@@ -37,7 +37,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnets")
-        private final @Nullable List<ResourceReferenceResponse> subnets;
+      private final @Nullable List<ResourceReferenceResponse> subnets;
 
     public List<ResourceReferenceResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -48,7 +48,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="virtualNetworkAddressSpace")
-        private final @Nullable String virtualNetworkAddressSpace;
+      private final @Nullable String virtualNetworkAddressSpace;
 
     public Optional<String> getVirtualNetworkAddressSpace() {
         return this.virtualNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkAddressSpace);

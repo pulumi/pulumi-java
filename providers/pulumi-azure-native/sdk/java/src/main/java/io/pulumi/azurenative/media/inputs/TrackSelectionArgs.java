@@ -24,7 +24,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trackSelections")
-        private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
+      private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
 
     public Input<List<TrackPropertyConditionArgs>> getTrackSelections() {
         return this.trackSelections == null ? Input.empty() : this.trackSelections;

@@ -19,7 +19,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format")
-        private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -30,7 +30,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyId", required=true)
-        private final String policyId;
+      private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -41,7 +41,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

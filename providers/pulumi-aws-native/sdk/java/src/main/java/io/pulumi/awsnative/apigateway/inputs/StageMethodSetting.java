@@ -26,7 +26,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-        private final @Nullable Boolean cacheDataEncrypted;
+      private final @Nullable Boolean cacheDataEncrypted;
 
     public Optional<Boolean> getCacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Optional.empty() : Optional.ofNullable(this.cacheDataEncrypted);
@@ -37,7 +37,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-        private final @Nullable Integer cacheTtlInSeconds;
+      private final @Nullable Integer cacheTtlInSeconds;
 
     public Optional<Integer> getCacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Optional.empty() : Optional.ofNullable(this.cacheTtlInSeconds);
@@ -48,7 +48,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cachingEnabled")
-        private final @Nullable Boolean cachingEnabled;
+      private final @Nullable Boolean cachingEnabled;
 
     public Optional<Boolean> getCachingEnabled() {
         return this.cachingEnabled == null ? Optional.empty() : Optional.ofNullable(this.cachingEnabled);
@@ -59,7 +59,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataTraceEnabled")
-        private final @Nullable Boolean dataTraceEnabled;
+      private final @Nullable Boolean dataTraceEnabled;
 
     public Optional<Boolean> getDataTraceEnabled() {
         return this.dataTraceEnabled == null ? Optional.empty() : Optional.ofNullable(this.dataTraceEnabled);
@@ -70,7 +70,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpMethod")
-        private final @Nullable String httpMethod;
+      private final @Nullable String httpMethod;
 
     public Optional<String> getHttpMethod() {
         return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
@@ -81,7 +81,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loggingLevel")
-        private final @Nullable String loggingLevel;
+      private final @Nullable String loggingLevel;
 
     public Optional<String> getLoggingLevel() {
         return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
@@ -92,7 +92,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metricsEnabled")
-        private final @Nullable Boolean metricsEnabled;
+      private final @Nullable Boolean metricsEnabled;
 
     public Optional<Boolean> getMetricsEnabled() {
         return this.metricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.metricsEnabled);
@@ -103,7 +103,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourcePath")
-        private final @Nullable String resourcePath;
+      private final @Nullable String resourcePath;
 
     public Optional<String> getResourcePath() {
         return this.resourcePath == null ? Optional.empty() : Optional.ofNullable(this.resourcePath);
@@ -114,7 +114,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-        private final @Nullable Integer throttlingBurstLimit;
+      private final @Nullable Integer throttlingBurstLimit;
 
     public Optional<Integer> getThrottlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Optional.empty() : Optional.ofNullable(this.throttlingBurstLimit);
@@ -125,7 +125,7 @@ public final class StageMethodSetting extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="throttlingRateLimit")
-        private final @Nullable Double throttlingRateLimit;
+      private final @Nullable Double throttlingRateLimit;
 
     public Optional<Double> getThrottlingRateLimit() {
         return this.throttlingRateLimit == null ? Optional.empty() : Optional.ofNullable(this.throttlingRateLimit);

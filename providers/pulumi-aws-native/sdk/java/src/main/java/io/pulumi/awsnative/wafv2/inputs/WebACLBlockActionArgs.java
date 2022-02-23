@@ -19,7 +19,7 @@ public final class WebACLBlockActionArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLBlockActionArgs Empty = new WebACLBlockActionArgs();
 
     @InputImport(name="customResponse")
-        private final @Nullable Input<WebACLCustomResponseArgs> customResponse;
+      private final @Nullable Input<WebACLCustomResponseArgs> customResponse;
 
     public Input<WebACLCustomResponseArgs> getCustomResponse() {
         return this.customResponse == null ? Input.empty() : this.customResponse;

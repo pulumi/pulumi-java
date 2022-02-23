@@ -21,7 +21,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="config", required=true)
-        private final Input<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
+      private final Input<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
 
     public Input<OrganizationSecurityPolicyRuleMatchConfigArgs> getConfig() {
         return this.config;
@@ -32,7 +32,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="versionedExpr")
-        private final @Nullable Input<String> versionedExpr;
+      private final @Nullable Input<String> versionedExpr;
 
     public Input<String> getVersionedExpr() {
         return this.versionedExpr == null ? Input.empty() : this.versionedExpr;

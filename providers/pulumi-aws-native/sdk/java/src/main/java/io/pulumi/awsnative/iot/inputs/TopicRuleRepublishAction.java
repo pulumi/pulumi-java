@@ -16,21 +16,21 @@ public final class TopicRuleRepublishAction extends io.pulumi.resources.InvokeAr
     public static final TopicRuleRepublishAction Empty = new TopicRuleRepublishAction();
 
     @InputImport(name="qos")
-        private final @Nullable Integer qos;
+      private final @Nullable Integer qos;
 
     public Optional<Integer> getQos() {
         return this.qos == null ? Optional.empty() : Optional.ofNullable(this.qos);
     }
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="topic", required=true)
-        private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;

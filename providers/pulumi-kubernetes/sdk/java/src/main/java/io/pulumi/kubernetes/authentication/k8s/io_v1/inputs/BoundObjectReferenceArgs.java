@@ -23,7 +23,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -45,7 +45,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;

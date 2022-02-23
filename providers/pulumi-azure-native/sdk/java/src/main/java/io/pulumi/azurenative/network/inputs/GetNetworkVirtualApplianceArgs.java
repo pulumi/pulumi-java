@@ -19,7 +19,7 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="networkVirtualApplianceName", required=true)
-        private final String networkVirtualApplianceName;
+      private final String networkVirtualApplianceName;
 
     public String getNetworkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
@@ -41,7 +41,7 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

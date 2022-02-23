@@ -14,14 +14,14 @@ public final class LightHouseAuthorizationArgs extends io.pulumi.resources.Resou
     public static final LightHouseAuthorizationArgs Empty = new LightHouseAuthorizationArgs();
 
     @InputImport(name="principalId", required=true)
-        private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
     }
 
     @InputImport(name="roleDefinitionId", required=true)
-        private final Input<String> roleDefinitionId;
+      private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;

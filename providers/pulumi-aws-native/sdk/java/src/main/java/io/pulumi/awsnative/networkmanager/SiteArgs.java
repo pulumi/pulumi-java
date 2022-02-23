@@ -22,7 +22,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-        private final Input<String> globalNetworkId;
+      private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -44,7 +44,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<SiteLocationArgs> location;
+      private final @Nullable Input<SiteLocationArgs> location;
 
     public Input<SiteLocationArgs> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<SiteTagArgs>> tags;
+      private final @Nullable Input<List<SiteTagArgs>> tags;
 
     public Input<List<SiteTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

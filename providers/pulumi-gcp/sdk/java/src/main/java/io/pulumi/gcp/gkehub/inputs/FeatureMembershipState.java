@@ -20,7 +20,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configmanagement")
-        private final @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement;
+      private final @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement;
 
     public Input<FeatureMembershipConfigmanagementGetArgs> getConfigmanagement() {
         return this.configmanagement == null ? Input.empty() : this.configmanagement;
@@ -31,7 +31,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="feature")
-        private final @Nullable Input<String> feature;
+      private final @Nullable Input<String> feature;
 
     public Input<String> getFeature() {
         return this.feature == null ? Input.empty() : this.feature;
@@ -42,7 +42,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="membership")
-        private final @Nullable Input<String> membership;
+      private final @Nullable Input<String> membership;
 
     public Input<String> getMembership() {
         return this.membership == null ? Input.empty() : this.membership;
@@ -64,7 +64,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

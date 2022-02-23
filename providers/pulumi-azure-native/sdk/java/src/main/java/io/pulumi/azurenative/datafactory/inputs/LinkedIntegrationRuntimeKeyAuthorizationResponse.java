@@ -23,7 +23,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
      * 
      */
     @InputImport(name="authorizationType", required=true)
-        private final String authorizationType;
+      private final String authorizationType;
 
     public String getAuthorizationType() {
         return this.authorizationType;
@@ -34,7 +34,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
      * 
      */
     @InputImport(name="key", required=true)
-        private final SecureStringResponse key;
+      private final SecureStringResponse key;
 
     public SecureStringResponse getKey() {
         return this.key;

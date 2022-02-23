@@ -19,7 +19,7 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deleteRule")
-        private final @Nullable Input<String> deleteRule;
+      private final @Nullable Input<String> deleteRule;
 
     public Input<String> getDeleteRule() {
         return this.deleteRule == null ? Input.empty() : this.deleteRule;
@@ -30,7 +30,7 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;

@@ -25,7 +25,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Either<String,EnableStatus>> enabled;
+      private final @Nullable Input<Either<String,EnableStatus>> enabled;
 
     public Input<Either<String,EnableStatus>> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="markdown")
-        private final @Nullable Input<String> markdown;
+      private final @Nullable Input<String> markdown;
 
     public Input<String> getMarkdown() {
         return this.markdown == null ? Input.empty() : this.markdown;

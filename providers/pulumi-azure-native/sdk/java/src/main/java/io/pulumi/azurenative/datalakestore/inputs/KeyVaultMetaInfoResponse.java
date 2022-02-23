@@ -21,7 +21,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="encryptionKeyName", required=true)
-        private final String encryptionKeyName;
+      private final String encryptionKeyName;
 
     public String getEncryptionKeyName() {
         return this.encryptionKeyName;
@@ -32,7 +32,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="encryptionKeyVersion", required=true)
-        private final String encryptionKeyVersion;
+      private final String encryptionKeyVersion;
 
     public String getEncryptionKeyVersion() {
         return this.encryptionKeyVersion;
@@ -43,7 +43,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="keyVaultResourceId", required=true)
-        private final String keyVaultResourceId;
+      private final String keyVaultResourceId;
 
     public String getKeyVaultResourceId() {
         return this.keyVaultResourceId;

@@ -20,7 +20,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="locationId")
-        private final @Nullable Input<String> locationId;
+      private final @Nullable Input<String> locationId;
 
     public Input<String> getLocationId() {
         return this.locationId == null ? Input.empty() : this.locationId;
@@ -32,7 +32,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

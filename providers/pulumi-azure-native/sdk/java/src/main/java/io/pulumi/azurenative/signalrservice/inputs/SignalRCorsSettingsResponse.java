@@ -24,7 +24,7 @@ public final class SignalRCorsSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="allowedOrigins")
-        private final @Nullable List<String> allowedOrigins;
+      private final @Nullable List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;

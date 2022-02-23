@@ -22,7 +22,7 @@ public final class AzPowerShellSetupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -33,7 +33,7 @@ public final class AzPowerShellSetupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

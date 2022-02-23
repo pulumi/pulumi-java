@@ -17,7 +17,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     public static final FhirStoreIamBindingArgs Empty = new FhirStoreIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
+      private final @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
 
     public Input<FhirStoreIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -31,14 +31,14 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-        private final Input<String> fhirStoreId;
+      private final Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -51,7 +51,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

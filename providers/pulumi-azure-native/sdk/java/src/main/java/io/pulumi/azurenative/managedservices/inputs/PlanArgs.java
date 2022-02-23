@@ -22,7 +22,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="product", required=true)
-        private final Input<String> product;
+      private final Input<String> product;
 
     public Input<String> getProduct() {
         return this.product;
@@ -44,7 +44,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-        private final Input<String> publisher;
+      private final Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher;
@@ -55,7 +55,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-        private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

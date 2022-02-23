@@ -16,7 +16,7 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
     public static final EnvironmentIamMemberArgs Empty = new EnvironmentIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<EnvironmentIamMemberConditionArgs> condition;
+      private final @Nullable Input<EnvironmentIamMemberConditionArgs> condition;
 
     public Input<EnvironmentIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,21 +27,21 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="envId", required=true)
-        private final Input<String> envId;
+      private final Input<String> envId;
 
     public Input<String> getEnvId() {
         return this.envId;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="orgId", required=true)
-        private final Input<String> orgId;
+      private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -54,7 +54,7 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

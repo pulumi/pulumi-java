@@ -23,7 +23,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentName", required=true)
-        private final Input<String> environmentName;
+      private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -34,7 +34,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceName")
-        private final @Nullable Input<String> eventSourceName;
+      private final @Nullable Input<String> eventSourceName;
 
     public Input<String> getEventSourceName() {
         return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
@@ -45,7 +45,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<Either<String,EventSourceKind>> kind;
+      private final Input<Either<String,EventSourceKind>> kind;
 
     public Input<Either<String,EventSourceKind>> getKind() {
         return this.kind;
@@ -56,7 +56,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localTimestamp")
-        private final @Nullable Input<LocalTimestampArgs> localTimestamp;
+      private final @Nullable Input<LocalTimestampArgs> localTimestamp;
 
     public Input<LocalTimestampArgs> getLocalTimestamp() {
         return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
@@ -67,7 +67,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -21,7 +21,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="azureSubscriptionId", required=true)
-        private final String azureSubscriptionId;
+      private final String azureSubscriptionId;
 
     public String getAzureSubscriptionId() {
         return this.azureSubscriptionId;
@@ -32,7 +32,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="deploymentId", required=true)
-        private final String deploymentId;
+      private final String deploymentId;
 
     public String getDeploymentId() {
         return this.deploymentId;
@@ -43,7 +43,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="elasticsearchRegion", required=true)
-        private final String elasticsearchRegion;
+      private final String elasticsearchRegion;
 
     public String getElasticsearchRegion() {
         return this.elasticsearchRegion;
@@ -54,7 +54,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="elasticsearchServiceUrl", required=true)
-        private final String elasticsearchServiceUrl;
+      private final String elasticsearchServiceUrl;
 
     public String getElasticsearchServiceUrl() {
         return this.elasticsearchServiceUrl;
@@ -65,7 +65,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kibanaServiceUrl", required=true)
-        private final String kibanaServiceUrl;
+      private final String kibanaServiceUrl;
 
     public String getKibanaServiceUrl() {
         return this.kibanaServiceUrl;
@@ -76,7 +76,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kibanaSsoUrl", required=true)
-        private final String kibanaSsoUrl;
+      private final String kibanaSsoUrl;
 
     public String getKibanaSsoUrl() {
         return this.kibanaSsoUrl;
@@ -87,7 +87,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

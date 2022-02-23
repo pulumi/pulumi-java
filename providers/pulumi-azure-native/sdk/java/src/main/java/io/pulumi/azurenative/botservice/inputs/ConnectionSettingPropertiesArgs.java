@@ -25,7 +25,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -36,7 +36,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -47,7 +47,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<ConnectionSettingParameterArgs>> parameters;
+      private final @Nullable Input<List<ConnectionSettingParameterArgs>> parameters;
 
     public Input<List<ConnectionSettingParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -80,7 +80,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -91,7 +91,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scopes")
-        private final @Nullable Input<String> scopes;
+      private final @Nullable Input<String> scopes;
 
     public Input<String> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -102,7 +102,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceProviderDisplayName")
-        private final @Nullable Input<String> serviceProviderDisplayName;
+      private final @Nullable Input<String> serviceProviderDisplayName;
 
     public Input<String> getServiceProviderDisplayName() {
         return this.serviceProviderDisplayName == null ? Input.empty() : this.serviceProviderDisplayName;
@@ -113,7 +113,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceProviderId")
-        private final @Nullable Input<String> serviceProviderId;
+      private final @Nullable Input<String> serviceProviderId;
 
     public Input<String> getServiceProviderId() {
         return this.serviceProviderId == null ? Input.empty() : this.serviceProviderId;

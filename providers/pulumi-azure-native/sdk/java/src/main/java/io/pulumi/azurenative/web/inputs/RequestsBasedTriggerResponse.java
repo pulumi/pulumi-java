@@ -24,7 +24,7 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="timeInterval")
-        private final @Nullable String timeInterval;
+      private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);

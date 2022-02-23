@@ -25,14 +25,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="elasticProperties")
-        private final @Nullable ElasticPropertiesResponse elasticProperties;
+      private final @Nullable ElasticPropertiesResponse elasticProperties;
 
     public Optional<ElasticPropertiesResponse> getElasticProperties() {
         return this.elasticProperties == null ? Optional.empty() : Optional.ofNullable(this.elasticProperties);
     }
 
     @InputImport(name="liftrResourceCategory", required=true)
-        private final String liftrResourceCategory;
+      private final String liftrResourceCategory;
 
     public String getLiftrResourceCategory() {
         return this.liftrResourceCategory;
@@ -43,7 +43,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="liftrResourcePreference", required=true)
-        private final Integer liftrResourcePreference;
+      private final Integer liftrResourcePreference;
 
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
@@ -54,7 +54,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="monitoringStatus")
-        private final @Nullable String monitoringStatus;
+      private final @Nullable String monitoringStatus;
 
     public Optional<String> getMonitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
@@ -65,7 +65,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);

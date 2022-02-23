@@ -21,7 +21,7 @@ public final class IpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

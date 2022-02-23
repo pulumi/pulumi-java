@@ -26,7 +26,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="auth")
-        private final @Nullable List<ScaleRuleAuthResponse> auth;
+      private final @Nullable List<ScaleRuleAuthResponse> auth;
 
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
@@ -37,7 +37,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Map<String,String> metadata;
+      private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -49,7 +49,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

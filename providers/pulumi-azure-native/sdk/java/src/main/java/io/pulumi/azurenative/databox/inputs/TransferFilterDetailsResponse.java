@@ -27,7 +27,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureFileFilterDetails")
-        private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
+      private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
 
     public Optional<AzureFileFilterDetailsResponse> getAzureFileFilterDetails() {
         return this.azureFileFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.azureFileFilterDetails);
@@ -38,7 +38,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="blobFilterDetails")
-        private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
+      private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
 
     public Optional<BlobFilterDetailsResponse> getBlobFilterDetails() {
         return this.blobFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.blobFilterDetails);
@@ -49,7 +49,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-        private final String dataAccountType;
+      private final String dataAccountType;
 
     public String getDataAccountType() {
         return this.dataAccountType;
@@ -60,7 +60,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filterFileDetails")
-        private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
+      private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
     public List<FilterFileDetailsResponse> getFilterFileDetails() {
         return this.filterFileDetails == null ? List.of() : this.filterFileDetails;

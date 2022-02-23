@@ -18,21 +18,21 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobStatusGetArgs Empty = new JobStatusGetArgs();
 
     @InputImport(name="errorResults")
-        private final @Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults;
+      private final @Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults;
 
     public Input<List<JobStatusErrorResultGetArgs>> getErrorResults() {
         return this.errorResults == null ? Input.empty() : this.errorResults;
     }
 
     @InputImport(name="errors")
-        private final @Nullable Input<List<JobStatusErrorGetArgs>> errors;
+      private final @Nullable Input<List<JobStatusErrorGetArgs>> errors;
 
     public Input<List<JobStatusErrorGetArgs>> getErrors() {
         return this.errors == null ? Input.empty() : this.errors;
     }
 
     @InputImport(name="state")
-        private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;

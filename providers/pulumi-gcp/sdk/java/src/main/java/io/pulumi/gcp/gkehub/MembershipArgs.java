@@ -25,7 +25,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authority")
-        private final @Nullable Input<MembershipAuthorityArgs> authority;
+      private final @Nullable Input<MembershipAuthorityArgs> authority;
 
     public Input<MembershipAuthorityArgs> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -40,7 +40,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     public Input<String> getDescription() {
@@ -53,7 +53,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable Input<MembershipEndpointArgs> endpoint;
+      private final @Nullable Input<MembershipEndpointArgs> endpoint;
 
     public Input<MembershipEndpointArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -64,7 +64,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -75,7 +75,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipId", required=true)
-        private final Input<String> membershipId;
+      private final Input<String> membershipId;
 
     public Input<String> getMembershipId() {
         return this.membershipId;
@@ -87,7 +87,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

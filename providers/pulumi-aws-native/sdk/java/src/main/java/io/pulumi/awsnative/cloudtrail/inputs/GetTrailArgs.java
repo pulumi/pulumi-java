@@ -13,7 +13,7 @@ public final class GetTrailArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTrailArgs Empty = new GetTrailArgs();
 
     @InputImport(name="trailName", required=true)
-        private final String trailName;
+      private final String trailName;
 
     public String getTrailName() {
         return this.trailName;

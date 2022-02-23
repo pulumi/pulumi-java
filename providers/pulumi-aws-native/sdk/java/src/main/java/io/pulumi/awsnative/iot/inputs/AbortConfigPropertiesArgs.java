@@ -19,7 +19,7 @@ public final class AbortConfigPropertiesArgs extends io.pulumi.resources.Resourc
     public static final AbortConfigPropertiesArgs Empty = new AbortConfigPropertiesArgs();
 
     @InputImport(name="criteriaList", required=true)
-        private final Input<List<JobTemplateAbortCriteriaArgs>> criteriaList;
+      private final Input<List<JobTemplateAbortCriteriaArgs>> criteriaList;
 
     public Input<List<JobTemplateAbortCriteriaArgs>> getCriteriaList() {
         return this.criteriaList;

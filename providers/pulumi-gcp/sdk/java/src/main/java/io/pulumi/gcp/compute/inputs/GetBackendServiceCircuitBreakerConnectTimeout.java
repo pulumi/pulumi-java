@@ -13,14 +13,14 @@ public final class GetBackendServiceCircuitBreakerConnectTimeout extends io.pulu
     public static final GetBackendServiceCircuitBreakerConnectTimeout Empty = new GetBackendServiceCircuitBreakerConnectTimeout();
 
     @InputImport(name="nanos", required=true)
-        private final Integer nanos;
+      private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
     }
 
     @InputImport(name="seconds", required=true)
-        private final Integer seconds;
+      private final Integer seconds;
 
     public Integer getSeconds() {
         return this.seconds;

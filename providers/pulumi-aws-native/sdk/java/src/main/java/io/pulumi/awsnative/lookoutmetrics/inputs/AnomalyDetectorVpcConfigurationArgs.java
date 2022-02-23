@@ -15,14 +15,14 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     public static final AnomalyDetectorVpcConfigurationArgs Empty = new AnomalyDetectorVpcConfigurationArgs();
 
     @InputImport(name="securityGroupIdList", required=true)
-        private final Input<List<String>> securityGroupIdList;
+      private final Input<List<String>> securityGroupIdList;
 
     public Input<List<String>> getSecurityGroupIdList() {
         return this.securityGroupIdList;
     }
 
     @InputImport(name="subnetIdList", required=true)
-        private final Input<List<String>> subnetIdList;
+      private final Input<List<String>> subnetIdList;
 
     public Input<List<String>> getSubnetIdList() {
         return this.subnetIdList;

@@ -20,7 +20,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configStoreName", required=true)
-        private final Input<String> configStoreName;
+      private final Input<String> configStoreName;
 
     public Input<String> getConfigStoreName() {
         return this.configStoreName;
@@ -32,7 +32,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-        private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -43,7 +43,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyValueName")
-        private final @Nullable Input<String> keyValueName;
+      private final @Nullable Input<String> keyValueName;
 
     public Input<String> getKeyValueName() {
         return this.keyValueName == null ? Input.empty() : this.keyValueName;
@@ -54,7 +54,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

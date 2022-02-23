@@ -18,28 +18,28 @@ public final class WebACLRateBasedStatement extends io.pulumi.resources.InvokeAr
     public static final WebACLRateBasedStatement Empty = new WebACLRateBasedStatement();
 
     @InputImport(name="aggregateKeyType", required=true)
-        private final WebACLRateBasedStatementAggregateKeyType aggregateKeyType;
+      private final WebACLRateBasedStatementAggregateKeyType aggregateKeyType;
 
     public WebACLRateBasedStatementAggregateKeyType getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-        private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
+      private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
     }
 
     @InputImport(name="limit", required=true)
-        private final Integer limit;
+      private final Integer limit;
 
     public Integer getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-        private final @Nullable WebACLStatement scopeDownStatement;
+      private final @Nullable WebACLStatement scopeDownStatement;
 
     public Optional<WebACLStatement> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);

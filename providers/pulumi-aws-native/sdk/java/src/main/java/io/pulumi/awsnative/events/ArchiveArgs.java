@@ -17,28 +17,28 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArchiveArgs Empty = new ArchiveArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="eventPattern")
-        private final @Nullable Input<Object> eventPattern;
+      private final @Nullable Input<Object> eventPattern;
 
     public Input<Object> getEventPattern() {
         return this.eventPattern == null ? Input.empty() : this.eventPattern;
     }
 
     @InputImport(name="retentionDays")
-        private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
     }
 
     @InputImport(name="sourceArn", required=true)
-        private final Input<String> sourceArn;
+      private final Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn;

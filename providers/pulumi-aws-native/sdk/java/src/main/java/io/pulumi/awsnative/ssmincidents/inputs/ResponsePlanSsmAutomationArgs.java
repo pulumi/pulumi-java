@@ -26,7 +26,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="documentName", required=true)
-        private final Input<String> documentName;
+      private final Input<String> documentName;
 
     public Input<String> getDocumentName() {
         return this.documentName;
@@ -37,7 +37,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="documentVersion")
-        private final @Nullable Input<String> documentVersion;
+      private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -48,7 +48,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters;
+      private final @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters;
 
     public Input<List<ResponsePlanSsmParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -59,7 +59,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -70,7 +70,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetAccount")
-        private final @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount;
+      private final @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
     public Input<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
         return this.targetAccount == null ? Input.empty() : this.targetAccount;

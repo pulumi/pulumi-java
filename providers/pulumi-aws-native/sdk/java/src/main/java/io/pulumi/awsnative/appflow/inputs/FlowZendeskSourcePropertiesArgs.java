@@ -14,7 +14,7 @@ public final class FlowZendeskSourcePropertiesArgs extends io.pulumi.resources.R
     public static final FlowZendeskSourcePropertiesArgs Empty = new FlowZendeskSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

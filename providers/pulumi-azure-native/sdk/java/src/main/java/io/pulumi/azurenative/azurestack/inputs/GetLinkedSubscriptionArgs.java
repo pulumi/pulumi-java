@@ -17,7 +17,7 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="linkedSubscriptionName", required=true)
-        private final String linkedSubscriptionName;
+      private final String linkedSubscriptionName;
 
     public String getLinkedSubscriptionName() {
         return this.linkedSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final String resourceGroup;
+      private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;

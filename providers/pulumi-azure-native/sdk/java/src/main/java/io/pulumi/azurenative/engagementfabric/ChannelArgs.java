@@ -21,7 +21,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelFunctions")
-        private final @Nullable Input<List<String>> channelFunctions;
+      private final @Nullable Input<List<String>> channelFunctions;
 
     public Input<List<String>> getChannelFunctions() {
         return this.channelFunctions == null ? Input.empty() : this.channelFunctions;
@@ -43,7 +43,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName")
-        private final @Nullable Input<String> channelName;
+      private final @Nullable Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName == null ? Input.empty() : this.channelName;
@@ -54,7 +54,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelType", required=true)
-        private final Input<String> channelType;
+      private final Input<String> channelType;
 
     public Input<String> getChannelType() {
         return this.channelType;
@@ -65,7 +65,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable Input<Map<String,String>> credentials;
+      private final @Nullable Input<Map<String,String>> credentials;
 
     public Input<Map<String,String>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -76,7 +76,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

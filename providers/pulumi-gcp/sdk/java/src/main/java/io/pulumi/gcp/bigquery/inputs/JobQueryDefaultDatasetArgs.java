@@ -19,7 +19,7 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datasetId", required=true)
-        private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -30,7 +30,7 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="projectId")
-        private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;

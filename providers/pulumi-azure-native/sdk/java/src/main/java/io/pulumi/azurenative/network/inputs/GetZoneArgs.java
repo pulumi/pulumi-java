@@ -17,7 +17,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zoneName", required=true)
-        private final String zoneName;
+      private final String zoneName;
 
     public String getZoneName() {
         return this.zoneName;

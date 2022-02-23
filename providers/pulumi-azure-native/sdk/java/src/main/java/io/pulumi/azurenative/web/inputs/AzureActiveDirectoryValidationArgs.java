@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedAudiences")
-        private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
@@ -36,7 +36,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="jwtClaimChecks")
-        private final @Nullable Input<JwtClaimChecksArgs> jwtClaimChecks;
+      private final @Nullable Input<JwtClaimChecksArgs> jwtClaimChecks;
 
     public Input<JwtClaimChecksArgs> getJwtClaimChecks() {
         return this.jwtClaimChecks == null ? Input.empty() : this.jwtClaimChecks;

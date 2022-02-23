@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromGetArgs extends io.pu
      * 
      */
     @InputImport(name="secretKeyRef", required=true)
-        private final Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> secretKeyRef;
+      private final Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> secretKeyRef;
 
     public Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> getSecretKeyRef() {
         return this.secretKeyRef;

@@ -25,7 +25,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-        private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Input<String> diskEncryptionSetId;
 
     public Input<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
@@ -36,7 +36,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,EncryptionType>> type;
+      private final @Nullable Input<Either<String,EncryptionType>> type;
 
     public Input<Either<String,EncryptionType>> getType() {
         return this.type == null ? Input.empty() : this.type;

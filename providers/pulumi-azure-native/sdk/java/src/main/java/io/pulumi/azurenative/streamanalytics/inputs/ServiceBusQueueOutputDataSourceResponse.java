@@ -24,7 +24,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="propertyColumns")
-        private final @Nullable List<String> propertyColumns;
+      private final @Nullable List<String> propertyColumns;
 
     public List<String> getPropertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
@@ -35,7 +35,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="queueName")
-        private final @Nullable String queueName;
+      private final @Nullable String queueName;
 
     public Optional<String> getQueueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
@@ -46,7 +46,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="serviceBusNamespace")
-        private final @Nullable String serviceBusNamespace;
+      private final @Nullable String serviceBusNamespace;
 
     public Optional<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
@@ -57,7 +57,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-        private final @Nullable String sharedAccessPolicyKey;
+      private final @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
@@ -68,7 +68,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-        private final @Nullable String sharedAccessPolicyName;
+      private final @Nullable String sharedAccessPolicyName;
 
     public Optional<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
@@ -80,7 +80,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

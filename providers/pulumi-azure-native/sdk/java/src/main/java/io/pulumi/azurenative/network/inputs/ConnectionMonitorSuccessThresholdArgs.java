@@ -24,7 +24,7 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="checksFailedPercent")
-        private final @Nullable Input<Integer> checksFailedPercent;
+      private final @Nullable Input<Integer> checksFailedPercent;
 
     public Input<Integer> getChecksFailedPercent() {
         return this.checksFailedPercent == null ? Input.empty() : this.checksFailedPercent;
@@ -35,7 +35,7 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="roundTripTimeMs")
-        private final @Nullable Input<Double> roundTripTimeMs;
+      private final @Nullable Input<Double> roundTripTimeMs;
 
     public Input<Double> getRoundTripTimeMs() {
         return this.roundTripTimeMs == null ? Input.empty() : this.roundTripTimeMs;

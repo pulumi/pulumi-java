@@ -24,7 +24,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="offer")
-        private final @Nullable String offer;
+      private final @Nullable String offer;
 
     public Optional<String> getOffer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
@@ -35,7 +35,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="planInfo")
-        private final @Nullable PlatformImagePurchasePlanResponse planInfo;
+      private final @Nullable PlatformImagePurchasePlanResponse planInfo;
 
     public Optional<PlatformImagePurchasePlanResponse> getPlanInfo() {
         return this.planInfo == null ? Optional.empty() : Optional.ofNullable(this.planInfo);
@@ -46,7 +46,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="publisher")
-        private final @Nullable String publisher;
+      private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
@@ -57,7 +57,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable String sku;
+      private final @Nullable String sku;
 
     public Optional<String> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -69,7 +69,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="version")
-        private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

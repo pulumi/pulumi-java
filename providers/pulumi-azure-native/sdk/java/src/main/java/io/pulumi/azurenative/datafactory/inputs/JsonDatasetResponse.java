@@ -43,7 +43,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -54,7 +54,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compression")
-        private final @Nullable DatasetCompressionResponse compression;
+      private final @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> getCompression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
@@ -65,7 +65,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -76,7 +76,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encodingName")
-        private final @Nullable Object encodingName;
+      private final @Nullable Object encodingName;
 
     public Optional<Object> getEncodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
@@ -87,7 +87,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folder")
-        private final @Nullable DatasetResponseFolder folder;
+      private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -98,7 +98,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -109,7 +109,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-        private final Object location;
+      private final Object location;
 
     public Object getLocation() {
         return this.location;
@@ -120,7 +120,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -131,7 +131,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="schema")
-        private final @Nullable Object schema;
+      private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -142,7 +142,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="structure")
-        private final @Nullable Object structure;
+      private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -154,7 +154,7 @@ public final class JsonDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

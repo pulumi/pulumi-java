@@ -14,7 +14,7 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     public static final DistributionRestrictionsArgs Empty = new DistributionRestrictionsArgs();
 
     @InputImport(name="geoRestriction", required=true)
-        private final Input<DistributionGeoRestrictionArgs> geoRestriction;
+      private final Input<DistributionGeoRestrictionArgs> geoRestriction;
 
     public Input<DistributionGeoRestrictionArgs> getGeoRestriction() {
         return this.geoRestriction;

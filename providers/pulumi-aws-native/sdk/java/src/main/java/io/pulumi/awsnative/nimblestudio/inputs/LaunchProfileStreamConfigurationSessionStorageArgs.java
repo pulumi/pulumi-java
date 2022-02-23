@@ -26,14 +26,14 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode;
+      private final @Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode;
 
     public Input<List<LaunchProfileStreamingSessionStorageMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="root")
-        private final @Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root;
+      private final @Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root;
 
     public Input<LaunchProfileStreamingSessionStorageRootArgs> getRoot() {
         return this.root == null ? Input.empty() : this.root;

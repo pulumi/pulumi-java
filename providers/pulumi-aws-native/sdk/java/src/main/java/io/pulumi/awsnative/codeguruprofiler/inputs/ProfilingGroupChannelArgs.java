@@ -19,14 +19,14 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     public static final ProfilingGroupChannelArgs Empty = new ProfilingGroupChannelArgs();
 
     @InputImport(name="channelId")
-        private final @Nullable Input<String> channelId;
+      private final @Nullable Input<String> channelId;
 
     public Input<String> getChannelId() {
         return this.channelId == null ? Input.empty() : this.channelId;
     }
 
     @InputImport(name="channelUri", required=true)
-        private final Input<String> channelUri;
+      private final Input<String> channelUri;
 
     public Input<String> getChannelUri() {
         return this.channelUri;

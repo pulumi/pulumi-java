@@ -23,7 +23,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends io.
      * 
      */
     @InputImport(name="verifyClientCertIssuerDN")
-        private final @Nullable Boolean verifyClientCertIssuerDN;
+      private final @Nullable Boolean verifyClientCertIssuerDN;
 
     public Optional<Boolean> getVerifyClientCertIssuerDN() {
         return this.verifyClientCertIssuerDN == null ? Optional.empty() : Optional.ofNullable(this.verifyClientCertIssuerDN);

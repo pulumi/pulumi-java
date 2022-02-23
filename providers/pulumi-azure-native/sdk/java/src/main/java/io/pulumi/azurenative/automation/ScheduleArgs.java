@@ -23,7 +23,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedSchedule")
-        private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
+      private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
 
     public Input<AdvancedScheduleArgs> getAdvancedSchedule() {
         return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
@@ -34,7 +34,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -45,7 +45,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryTime")
-        private final @Nullable Input<String> expiryTime;
+      private final @Nullable Input<String> expiryTime;
 
     public Input<String> getExpiryTime() {
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
@@ -67,7 +67,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-        private final Input<Either<String,ScheduleFrequency>> frequency;
+      private final Input<Either<String,ScheduleFrequency>> frequency;
 
     public Input<Either<String,ScheduleFrequency>> getFrequency() {
         return this.frequency;
@@ -78,7 +78,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-        private final @Nullable Input<Object> interval;
+      private final @Nullable Input<Object> interval;
 
     public Input<Object> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -89,7 +89,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -100,7 +100,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleName")
-        private final @Nullable Input<String> scheduleName;
+      private final @Nullable Input<String> scheduleName;
 
     public Input<String> getScheduleName() {
         return this.scheduleName == null ? Input.empty() : this.scheduleName;
@@ -122,7 +122,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -133,7 +133,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

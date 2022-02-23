@@ -21,7 +21,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -32,7 +32,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-        private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Input<Map<String,String>> customAttributes;
 
     public Input<Map<String,String>> getCustomAttributes() {
         return this.customAttributes == null ? Input.empty() : this.customAttributes;
@@ -43,7 +43,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTypes")
-        private final @Nullable Input<List<String>> eventTypes;
+      private final @Nullable Input<List<String>> eventTypes;
 
     public Input<List<String>> getEventTypes() {
         return this.eventTypes == null ? Input.empty() : this.eventTypes;
@@ -54,7 +54,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationId")
-        private final @Nullable Input<String> notificationId;
+      private final @Nullable Input<String> notificationId;
 
     public Input<String> getNotificationId() {
         return this.notificationId == null ? Input.empty() : this.notificationId;
@@ -65,7 +65,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectNamePrefix")
-        private final @Nullable Input<String> objectNamePrefix;
+      private final @Nullable Input<String> objectNamePrefix;
 
     public Input<String> getObjectNamePrefix() {
         return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
@@ -76,7 +76,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadFormat")
-        private final @Nullable Input<String> payloadFormat;
+      private final @Nullable Input<String> payloadFormat;
 
     public Input<String> getPayloadFormat() {
         return this.payloadFormat == null ? Input.empty() : this.payloadFormat;
@@ -87,7 +87,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -101,7 +101,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-        private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;

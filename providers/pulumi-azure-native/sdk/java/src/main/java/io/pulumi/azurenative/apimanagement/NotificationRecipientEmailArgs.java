@@ -19,7 +19,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -30,7 +30,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notificationName", required=true)
-        private final Input<String> notificationName;
+      private final Input<String> notificationName;
 
     public Input<String> getNotificationName() {
         return this.notificationName;
@@ -41,7 +41,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

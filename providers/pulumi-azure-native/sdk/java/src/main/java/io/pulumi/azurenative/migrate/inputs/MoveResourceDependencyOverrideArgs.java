@@ -23,7 +23,7 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetId")
-        private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;

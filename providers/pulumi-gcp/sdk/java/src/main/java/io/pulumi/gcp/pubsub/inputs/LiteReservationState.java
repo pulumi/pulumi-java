@@ -20,7 +20,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -43,7 +43,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -56,7 +56,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="throughputCapacity")
-        private final @Nullable Input<Integer> throughputCapacity;
+      private final @Nullable Input<Integer> throughputCapacity;
 
     public Input<Integer> getThroughputCapacity() {
         return this.throughputCapacity == null ? Input.empty() : this.throughputCapacity;

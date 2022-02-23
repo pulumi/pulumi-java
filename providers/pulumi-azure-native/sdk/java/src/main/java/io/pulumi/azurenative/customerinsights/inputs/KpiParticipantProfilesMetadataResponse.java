@@ -21,7 +21,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="typeName", required=true)
-        private final String typeName;
+      private final String typeName;
 
     public String getTypeName() {
         return this.typeName;

@@ -26,7 +26,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fieldRef")
-        private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
+      private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
 
     public Input<ObjectFieldSelectorArgs> getFieldRef() {
         return this.fieldRef == null ? Input.empty() : this.fieldRef;
@@ -37,7 +37,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<Integer> mode;
+      private final @Nullable Input<Integer> mode;
 
     public Input<Integer> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -48,7 +48,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -59,7 +59,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceFieldRef")
-        private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
+      private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
 
     public Input<ResourceFieldSelectorArgs> getResourceFieldRef() {
         return this.resourceFieldRef == null ? Input.empty() : this.resourceFieldRef;

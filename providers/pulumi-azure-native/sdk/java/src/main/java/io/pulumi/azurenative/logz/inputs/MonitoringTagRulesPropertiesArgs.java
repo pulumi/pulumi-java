@@ -23,7 +23,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRules")
-        private final @Nullable Input<LogRulesArgs> logRules;
+      private final @Nullable Input<LogRulesArgs> logRules;
 
     public Input<LogRulesArgs> getLogRules() {
         return this.logRules == null ? Input.empty() : this.logRules;

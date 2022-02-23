@@ -23,7 +23,7 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final String messageId;
+      private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
@@ -34,7 +34,7 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="schemaName", required=true)
-        private final String schemaName;
+      private final String schemaName;
 
     public String getSchemaName() {
         return this.schemaName;
@@ -45,7 +45,7 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="schemaVersion", required=true)
-        private final String schemaVersion;
+      private final String schemaVersion;
 
     public String getSchemaVersion() {
         return this.schemaVersion;
@@ -56,7 +56,7 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="senderApplicationId")
-        private final @Nullable String senderApplicationId;
+      private final @Nullable String senderApplicationId;
 
     public Optional<String> getSenderApplicationId() {
         return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);

@@ -17,7 +17,7 @@ public final class GetHookDefaultVersionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

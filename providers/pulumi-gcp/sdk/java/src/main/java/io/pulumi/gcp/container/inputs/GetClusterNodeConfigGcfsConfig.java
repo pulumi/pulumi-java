@@ -13,7 +13,7 @@ public final class GetClusterNodeConfigGcfsConfig extends io.pulumi.resources.In
     public static final GetClusterNodeConfigGcfsConfig Empty = new GetClusterNodeConfigGcfsConfig();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

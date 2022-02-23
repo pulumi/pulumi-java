@@ -18,7 +18,7 @@ public final class GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs extends
      * 
      */
     @InputImport(name="artifactId", required=true)
-        private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;

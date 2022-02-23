@@ -26,7 +26,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operation", required=true)
-        private final Input<Either<String,TrackPropertyCompareOperation>> operation;
+      private final Input<Either<String,TrackPropertyCompareOperation>> operation;
 
     public Input<Either<String,TrackPropertyCompareOperation>> getOperation() {
         return this.operation;
@@ -37,7 +37,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="property", required=true)
-        private final Input<Either<String,TrackPropertyType>> property;
+      private final Input<Either<String,TrackPropertyType>> property;
 
     public Input<Either<String,TrackPropertyType>> getProperty() {
         return this.property;
@@ -48,7 +48,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

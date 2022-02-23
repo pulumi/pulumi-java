@@ -23,7 +23,7 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="primaryKey")
-        private final @Nullable Input<String> primaryKey;
+      private final @Nullable Input<String> primaryKey;
 
     public Input<String> getPrimaryKey() {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
@@ -34,7 +34,7 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secondaryKey")
-        private final @Nullable Input<String> secondaryKey;
+      private final @Nullable Input<String> secondaryKey;
 
     public Input<String> getSecondaryKey() {
         return this.secondaryKey == null ? Input.empty() : this.secondaryKey;

@@ -23,7 +23,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datastoreId")
-        private final @Nullable Input<String> datastoreId;
+      private final @Nullable Input<String> datastoreId;
 
     public Input<String> getDatastoreId() {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
@@ -34,7 +34,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="referenceType", required=true)
-        private final Input<String> referenceType;
+      private final Input<String> referenceType;
 
     public Input<String> getReferenceType() {
         return this.referenceType;

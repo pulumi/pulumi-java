@@ -19,7 +19,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -30,7 +30,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -53,7 +53,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-        private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -64,7 +64,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

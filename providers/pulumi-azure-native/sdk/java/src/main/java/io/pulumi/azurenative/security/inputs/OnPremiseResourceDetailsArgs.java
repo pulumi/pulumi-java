@@ -22,7 +22,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="machineName", required=true)
-        private final Input<String> machineName;
+      private final Input<String> machineName;
 
     public Input<String> getMachineName() {
         return this.machineName;
@@ -34,7 +34,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -45,7 +45,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceComputerId", required=true)
-        private final Input<String> sourceComputerId;
+      private final Input<String> sourceComputerId;
 
     public Input<String> getSourceComputerId() {
         return this.sourceComputerId;
@@ -56,7 +56,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmuuid", required=true)
-        private final Input<String> vmuuid;
+      private final Input<String> vmuuid;
 
     public Input<String> getVmuuid() {
         return this.vmuuid;
@@ -67,7 +67,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="workspaceId", required=true)
-        private final Input<String> workspaceId;
+      private final Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId;

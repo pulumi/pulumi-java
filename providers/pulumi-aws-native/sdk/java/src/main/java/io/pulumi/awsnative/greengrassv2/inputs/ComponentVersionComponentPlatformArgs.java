@@ -16,14 +16,14 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     public static final ComponentVersionComponentPlatformArgs Empty = new ComponentVersionComponentPlatformArgs();
 
     @InputImport(name="attributes")
-        private final @Nullable Input<Object> attributes;
+      private final @Nullable Input<Object> attributes;
 
     public Input<Object> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

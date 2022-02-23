@@ -18,7 +18,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="databaseCount", required=true)
-        private final Integer databaseCount;
+      private final Integer databaseCount;
 
     public Integer getDatabaseCount() {
         return this.databaseCount;
@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="databaseErrorCount", required=true)
-        private final Integer databaseErrorCount;
+      private final Integer databaseErrorCount;
 
     public Integer getDatabaseErrorCount() {
         return this.databaseErrorCount;
@@ -40,7 +40,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="endedOn", required=true)
-        private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -63,7 +63,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="resultType", required=true)
-        private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -74,7 +74,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="sourceServerBrandVersion", required=true)
-        private final String sourceServerBrandVersion;
+      private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -85,7 +85,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="sourceServerName", required=true)
-        private final String sourceServerName;
+      private final String sourceServerName;
 
     public String getSourceServerName() {
         return this.sourceServerName;
@@ -96,7 +96,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-        private final String sourceServerVersion;
+      private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -107,7 +107,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="startedOn", required=true)
-        private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -118,7 +118,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -129,7 +129,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-        private final String targetServerBrandVersion;
+      private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -140,7 +140,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="targetServerName", required=true)
-        private final String targetServerName;
+      private final String targetServerName;
 
     public String getTargetServerName() {
         return this.targetServerName;
@@ -151,7 +151,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-        private final String targetServerVersion;
+      private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;

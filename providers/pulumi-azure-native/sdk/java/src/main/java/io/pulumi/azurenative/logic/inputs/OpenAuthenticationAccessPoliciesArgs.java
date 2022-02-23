@@ -25,7 +25,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policies")
-        private final @Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
+      private final @Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
     public Input<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;

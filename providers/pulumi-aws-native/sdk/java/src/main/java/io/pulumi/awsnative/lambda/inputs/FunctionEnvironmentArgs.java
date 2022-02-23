@@ -23,7 +23,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="variables")
-        private final @Nullable Input<Object> variables;
+      private final @Nullable Input<Object> variables;
 
     public Input<Object> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;

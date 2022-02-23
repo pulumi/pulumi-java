@@ -26,7 +26,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cakSecretIdentifier")
-        private final @Nullable Input<String> cakSecretIdentifier;
+      private final @Nullable Input<String> cakSecretIdentifier;
 
     public Input<String> getCakSecretIdentifier() {
         return this.cakSecretIdentifier == null ? Input.empty() : this.cakSecretIdentifier;
@@ -37,7 +37,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cipher")
-        private final @Nullable Input<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
+      private final @Nullable Input<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
     public Input<Either<String,ExpressRouteLinkMacSecCipher>> getCipher() {
         return this.cipher == null ? Input.empty() : this.cipher;
@@ -48,7 +48,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cknSecretIdentifier")
-        private final @Nullable Input<String> cknSecretIdentifier;
+      private final @Nullable Input<String> cknSecretIdentifier;
 
     public Input<String> getCknSecretIdentifier() {
         return this.cknSecretIdentifier == null ? Input.empty() : this.cknSecretIdentifier;
@@ -59,7 +59,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sciState")
-        private final @Nullable Input<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
+      private final @Nullable Input<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 
     public Input<Either<String,ExpressRouteLinkMacSecSciState>> getSciState() {
         return this.sciState == null ? Input.empty() : this.sciState;

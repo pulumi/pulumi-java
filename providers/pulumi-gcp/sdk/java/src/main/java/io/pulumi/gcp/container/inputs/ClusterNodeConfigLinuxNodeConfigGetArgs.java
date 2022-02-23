@@ -21,7 +21,7 @@ public final class ClusterNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sysctls", required=true)
-        private final Input<Map<String,String>> sysctls;
+      private final Input<Map<String,String>> sysctls;
 
     public Input<Map<String,String>> getSysctls() {
         return this.sysctls;

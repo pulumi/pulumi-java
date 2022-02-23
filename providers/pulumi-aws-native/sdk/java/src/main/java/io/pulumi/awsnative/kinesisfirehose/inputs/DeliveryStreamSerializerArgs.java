@@ -16,14 +16,14 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
     public static final DeliveryStreamSerializerArgs Empty = new DeliveryStreamSerializerArgs();
 
     @InputImport(name="orcSerDe")
-        private final @Nullable Input<DeliveryStreamOrcSerDeArgs> orcSerDe;
+      private final @Nullable Input<DeliveryStreamOrcSerDeArgs> orcSerDe;
 
     public Input<DeliveryStreamOrcSerDeArgs> getOrcSerDe() {
         return this.orcSerDe == null ? Input.empty() : this.orcSerDe;
     }
 
     @InputImport(name="parquetSerDe")
-        private final @Nullable Input<DeliveryStreamParquetSerDeArgs> parquetSerDe;
+      private final @Nullable Input<DeliveryStreamParquetSerDeArgs> parquetSerDe;
 
     public Input<DeliveryStreamParquetSerDeArgs> getParquetSerDe() {
         return this.parquetSerDe == null ? Input.empty() : this.parquetSerDe;

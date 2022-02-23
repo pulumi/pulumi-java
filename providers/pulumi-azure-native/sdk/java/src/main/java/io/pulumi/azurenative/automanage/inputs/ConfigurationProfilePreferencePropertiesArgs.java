@@ -24,7 +24,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="antiMalware")
-        private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
+      private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
     public Input<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
         return this.antiMalware == null ? Input.empty() : this.antiMalware;
@@ -35,7 +35,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="vmBackup")
-        private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
+      private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
     public Input<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
         return this.vmBackup == null ? Input.empty() : this.vmBackup;

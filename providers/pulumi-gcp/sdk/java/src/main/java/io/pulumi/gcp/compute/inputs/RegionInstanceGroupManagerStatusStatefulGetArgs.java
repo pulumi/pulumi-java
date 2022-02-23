@@ -21,7 +21,7 @@ public final class RegionInstanceGroupManagerStatusStatefulGetArgs extends io.pu
      * 
      */
     @InputImport(name="hasStatefulConfig")
-        private final @Nullable Input<Boolean> hasStatefulConfig;
+      private final @Nullable Input<Boolean> hasStatefulConfig;
 
     public Input<Boolean> getHasStatefulConfig() {
         return this.hasStatefulConfig == null ? Input.empty() : this.hasStatefulConfig;
@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerStatusStatefulGetArgs extends io.pu
      * 
      */
     @InputImport(name="perInstanceConfigs")
-        private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
 
     public Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> getPerInstanceConfigs() {
         return this.perInstanceConfigs == null ? Input.empty() : this.perInstanceConfigs;

@@ -17,7 +17,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="localNetworkGatewayName", required=true)
-        private final String localNetworkGatewayName;
+      private final String localNetworkGatewayName;
 
     public String getLocalNetworkGatewayName() {
         return this.localNetworkGatewayName;
@@ -28,7 +28,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -17,7 +17,7 @@ public final class DetectorModelClearTimer extends io.pulumi.resources.InvokeArg
     public static final DetectorModelClearTimer Empty = new DetectorModelClearTimer();
 
     @InputImport(name="timerName", required=true)
-        private final String timerName;
+      private final String timerName;
 
     public String getTimerName() {
         return this.timerName;

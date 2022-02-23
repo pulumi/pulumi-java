@@ -23,7 +23,7 @@ public final class MonitoringScheduleStatisticsResource extends io.pulumi.resour
      * 
      */
     @InputImport(name="s3Uri")
-        private final @Nullable String s3Uri;
+      private final @Nullable String s3Uri;
 
     public Optional<String> getS3Uri() {
         return this.s3Uri == null ? Optional.empty() : Optional.ofNullable(this.s3Uri);

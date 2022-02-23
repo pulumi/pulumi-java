@@ -24,7 +24,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="alternateKeyName")
-        private final @Nullable Object alternateKeyName;
+      private final @Nullable Object alternateKeyName;
 
     public Optional<Object> getAlternateKeyName() {
         return this.alternateKeyName == null ? Optional.empty() : Optional.ofNullable(this.alternateKeyName);
@@ -35,7 +35,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -46,7 +46,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ignoreNullValues")
-        private final @Nullable Object ignoreNullValues;
+      private final @Nullable Object ignoreNullValues;
 
     public Optional<Object> getIgnoreNullValues() {
         return this.ignoreNullValues == null ? Optional.empty() : Optional.ofNullable(this.ignoreNullValues);
@@ -57,7 +57,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -68,7 +68,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Object sinkRetryCount;
+      private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -79,7 +79,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Object sinkRetryWait;
+      private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -91,7 +91,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Object writeBatchSize;
+      private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -113,7 +113,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Object writeBatchTimeout;
+      private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -124,7 +124,7 @@ public final class DynamicsCrmSinkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="writeBehavior", required=true)
-        private final String writeBehavior;
+      private final String writeBehavior;
 
     public String getWriteBehavior() {
         return this.writeBehavior;

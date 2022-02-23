@@ -23,7 +23,7 @@ public final class IpAddressOrRangeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipAddressOrRange")
-        private final @Nullable String ipAddressOrRange;
+      private final @Nullable String ipAddressOrRange;
 
     public Optional<String> getIpAddressOrRange() {
         return this.ipAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.ipAddressOrRange);

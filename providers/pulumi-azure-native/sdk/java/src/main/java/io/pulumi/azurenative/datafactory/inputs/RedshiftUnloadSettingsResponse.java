@@ -22,7 +22,7 @@ public final class RedshiftUnloadSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bucketName", required=true)
-        private final Object bucketName;
+      private final Object bucketName;
 
     public Object getBucketName() {
         return this.bucketName;
@@ -33,7 +33,7 @@ public final class RedshiftUnloadSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="s3LinkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse s3LinkedServiceName;
+      private final LinkedServiceReferenceResponse s3LinkedServiceName;
 
     public LinkedServiceReferenceResponse getS3LinkedServiceName() {
         return this.s3LinkedServiceName;

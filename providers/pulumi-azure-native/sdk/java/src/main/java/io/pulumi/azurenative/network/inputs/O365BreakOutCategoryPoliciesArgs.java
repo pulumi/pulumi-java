@@ -23,7 +23,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable Input<Boolean> allow;
+      private final @Nullable Input<Boolean> allow;
 
     public Input<Boolean> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -34,7 +34,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="default")
-        private final @Nullable Input<Boolean> $default;
+      private final @Nullable Input<Boolean> $default;
 
     public Input<Boolean> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -45,7 +45,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="optimize")
-        private final @Nullable Input<Boolean> optimize;
+      private final @Nullable Input<Boolean> optimize;
 
     public Input<Boolean> getOptimize() {
         return this.optimize == null ? Input.empty() : this.optimize;

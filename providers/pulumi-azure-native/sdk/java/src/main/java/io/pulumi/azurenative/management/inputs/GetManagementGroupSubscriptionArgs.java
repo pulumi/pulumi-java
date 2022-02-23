@@ -19,7 +19,7 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="groupId", required=true)
-        private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -30,7 +30,7 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subscriptionId")
-        private final @Nullable String subscriptionId;
+      private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);

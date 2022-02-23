@@ -26,7 +26,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-        private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -37,7 +37,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-        private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -48,7 +48,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -59,7 +59,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedSettings")
-        private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -70,7 +70,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionAfterExtensions")
-        private final @Nullable Input<List<String>> provisionAfterExtensions;
+      private final @Nullable Input<List<String>> provisionAfterExtensions;
 
     public Input<List<String>> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? Input.empty() : this.provisionAfterExtensions;
@@ -81,7 +81,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-        private final Input<String> publisher;
+      private final Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher;
@@ -92,7 +92,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<Object> settings;
+      private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -103,7 +103,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -114,7 +114,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeHandlerVersion", required=true)
-        private final Input<String> typeHandlerVersion;
+      private final Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion;

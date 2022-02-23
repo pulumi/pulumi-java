@@ -21,7 +21,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyRingId", required=true)
-        private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
@@ -33,7 +33,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;

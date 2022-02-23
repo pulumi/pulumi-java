@@ -21,7 +21,7 @@ public final class ManagerIntrinsicSettingsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

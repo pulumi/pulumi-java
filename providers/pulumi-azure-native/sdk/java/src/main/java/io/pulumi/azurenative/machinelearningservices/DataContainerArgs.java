@@ -19,7 +19,7 @@ public final class DataContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class DataContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<io.pulumi.azurenative.machinelearningservices.inputs.DataContainerArgs> properties;
+      private final Input<io.pulumi.azurenative.machinelearningservices.inputs.DataContainerArgs> properties;
 
     public Input<io.pulumi.azurenative.machinelearningservices.inputs.DataContainerArgs> getProperties() {
         return this.properties;
@@ -41,7 +41,7 @@ public final class DataContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class DataContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

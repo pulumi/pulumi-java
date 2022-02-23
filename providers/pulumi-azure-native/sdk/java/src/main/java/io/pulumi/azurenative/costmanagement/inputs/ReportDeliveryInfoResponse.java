@@ -21,7 +21,7 @@ public final class ReportDeliveryInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="destination", required=true)
-        private final ReportDeliveryDestinationResponse destination;
+      private final ReportDeliveryDestinationResponse destination;
 
     public ReportDeliveryDestinationResponse getDestination() {
         return this.destination;

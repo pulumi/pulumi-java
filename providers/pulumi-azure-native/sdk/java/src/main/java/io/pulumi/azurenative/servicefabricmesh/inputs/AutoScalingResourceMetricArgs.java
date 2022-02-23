@@ -25,7 +25,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -36,7 +36,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,AutoScalingResourceMetricName>> name;
+      private final Input<Either<String,AutoScalingResourceMetricName>> name;
 
     public Input<Either<String,AutoScalingResourceMetricName>> getName() {
         return this.name;

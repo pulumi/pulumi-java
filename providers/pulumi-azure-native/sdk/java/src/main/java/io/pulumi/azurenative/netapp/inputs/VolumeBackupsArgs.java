@@ -25,7 +25,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupsCount")
-        private final @Nullable Input<Integer> backupsCount;
+      private final @Nullable Input<Integer> backupsCount;
 
     public Input<Integer> getBackupsCount() {
         return this.backupsCount == null ? Input.empty() : this.backupsCount;
@@ -36,7 +36,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyEnabled")
-        private final @Nullable Input<Boolean> policyEnabled;
+      private final @Nullable Input<Boolean> policyEnabled;
 
     public Input<Boolean> getPolicyEnabled() {
         return this.policyEnabled == null ? Input.empty() : this.policyEnabled;
@@ -47,7 +47,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName")
-        private final @Nullable Input<String> volumeName;
+      private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;

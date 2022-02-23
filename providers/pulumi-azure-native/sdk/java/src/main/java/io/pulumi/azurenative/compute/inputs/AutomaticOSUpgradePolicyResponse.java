@@ -23,7 +23,7 @@ public final class AutomaticOSUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disableAutomaticRollback")
-        private final @Nullable Boolean disableAutomaticRollback;
+      private final @Nullable Boolean disableAutomaticRollback;
 
     public Optional<Boolean> getDisableAutomaticRollback() {
         return this.disableAutomaticRollback == null ? Optional.empty() : Optional.ofNullable(this.disableAutomaticRollback);
@@ -34,7 +34,7 @@ public final class AutomaticOSUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableAutomaticOSUpgrade")
-        private final @Nullable Boolean enableAutomaticOSUpgrade;
+      private final @Nullable Boolean enableAutomaticOSUpgrade;
 
     public Optional<Boolean> getEnableAutomaticOSUpgrade() {
         return this.enableAutomaticOSUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticOSUpgrade);

@@ -26,7 +26,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-        private final AssetModelDataType dataType;
+      private final AssetModelDataType dataType;
 
     public AssetModelDataType getDataType() {
         return this.dataType;
@@ -37,7 +37,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataTypeSpec")
-        private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
+      private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
 
     public Optional<AssetModelDataTypeSpec> getDataTypeSpec() {
         return this.dataTypeSpec == null ? Optional.empty() : Optional.ofNullable(this.dataTypeSpec);
@@ -48,7 +48,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-        private final String logicalId;
+      private final String logicalId;
 
     public String getLogicalId() {
         return this.logicalId;
@@ -59,7 +59,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final AssetModelPropertyType type;
+      private final AssetModelPropertyType type;
 
     public AssetModelPropertyType getType() {
         return this.type;
@@ -81,7 +81,7 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="unit")
-        private final @Nullable String unit;
+      private final @Nullable String unit;
 
     public Optional<String> getUnit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);

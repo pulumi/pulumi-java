@@ -15,14 +15,14 @@ public final class CertificateAuthorityTagArgs extends io.pulumi.resources.Resou
     public static final CertificateAuthorityTagArgs Empty = new CertificateAuthorityTagArgs();
 
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

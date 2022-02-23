@@ -24,7 +24,7 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath")
-        private final @Nullable Input<String> mountPath;
+      private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -35,7 +35,7 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGB")
-        private final @Nullable Input<Integer> sizeInGB;
+      private final @Nullable Input<Integer> sizeInGB;
 
     public Input<Integer> getSizeInGB() {
         return this.sizeInGB == null ? Input.empty() : this.sizeInGB;

@@ -24,7 +24,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cmk")
-        private final @Nullable CustomerManagedKeyDetailsResponse cmk;
+      private final @Nullable CustomerManagedKeyDetailsResponse cmk;
 
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
         return this.cmk == null ? Optional.empty() : Optional.ofNullable(this.cmk);
@@ -35,7 +35,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="doubleEncryptionEnabled", required=true)
-        private final Boolean doubleEncryptionEnabled;
+      private final Boolean doubleEncryptionEnabled;
 
     public Boolean getDoubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;

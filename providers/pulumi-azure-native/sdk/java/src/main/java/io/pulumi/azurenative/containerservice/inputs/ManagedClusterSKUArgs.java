@@ -22,7 +22,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<Either<String,ManagedClusterSKUName>> name;
+      private final @Nullable Input<Either<String,ManagedClusterSKUName>> name;
 
     public Input<Either<String,ManagedClusterSKUName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -33,7 +33,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,ManagedClusterSKUTier>> tier;
+      private final @Nullable Input<Either<String,ManagedClusterSKUTier>> tier;
 
     public Input<Either<String,ManagedClusterSKUTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

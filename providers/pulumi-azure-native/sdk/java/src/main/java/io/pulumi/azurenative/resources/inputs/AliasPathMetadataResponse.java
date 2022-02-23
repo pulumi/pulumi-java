@@ -17,7 +17,7 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="attributes", required=true)
-        private final String attributes;
+      private final String attributes;
 
     public String getAttributes() {
         return this.attributes;
@@ -28,7 +28,7 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

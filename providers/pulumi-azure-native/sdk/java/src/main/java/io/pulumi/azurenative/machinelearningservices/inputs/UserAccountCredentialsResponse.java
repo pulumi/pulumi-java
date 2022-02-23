@@ -23,7 +23,7 @@ public final class UserAccountCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="adminUserName", required=true)
-        private final String adminUserName;
+      private final String adminUserName;
 
     public String getAdminUserName() {
         return this.adminUserName;
@@ -34,7 +34,7 @@ public final class UserAccountCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="adminUserPassword")
-        private final @Nullable String adminUserPassword;
+      private final @Nullable String adminUserPassword;
 
     public Optional<String> getAdminUserPassword() {
         return this.adminUserPassword == null ? Optional.empty() : Optional.ofNullable(this.adminUserPassword);
@@ -45,7 +45,7 @@ public final class UserAccountCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="adminUserSshPublicKey")
-        private final @Nullable String adminUserSshPublicKey;
+      private final @Nullable String adminUserSshPublicKey;
 
     public Optional<String> getAdminUserSshPublicKey() {
         return this.adminUserSshPublicKey == null ? Optional.empty() : Optional.ofNullable(this.adminUserSshPublicKey);

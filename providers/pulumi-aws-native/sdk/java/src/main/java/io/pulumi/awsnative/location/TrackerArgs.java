@@ -17,42 +17,42 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     public static final TrackerArgs Empty = new TrackerArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="positionFiltering")
-        private final @Nullable Input<TrackerPositionFiltering> positionFiltering;
+      private final @Nullable Input<TrackerPositionFiltering> positionFiltering;
 
     public Input<TrackerPositionFiltering> getPositionFiltering() {
         return this.positionFiltering == null ? Input.empty() : this.positionFiltering;
     }
 
     @InputImport(name="pricingPlan")
-        private final @Nullable Input<TrackerPricingPlan> pricingPlan;
+      private final @Nullable Input<TrackerPricingPlan> pricingPlan;
 
     public Input<TrackerPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
     }
 
     @InputImport(name="pricingPlanDataSource")
-        private final @Nullable Input<String> pricingPlanDataSource;
+      private final @Nullable Input<String> pricingPlanDataSource;
 
     public Input<String> getPricingPlanDataSource() {
         return this.pricingPlanDataSource == null ? Input.empty() : this.pricingPlanDataSource;
     }
 
     @InputImport(name="trackerName")
-        private final @Nullable Input<String> trackerName;
+      private final @Nullable Input<String> trackerName;
 
     public Input<String> getTrackerName() {
         return this.trackerName == null ? Input.empty() : this.trackerName;

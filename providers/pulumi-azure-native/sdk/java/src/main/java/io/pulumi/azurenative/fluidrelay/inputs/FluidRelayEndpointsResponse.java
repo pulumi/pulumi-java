@@ -22,7 +22,7 @@ public final class FluidRelayEndpointsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ordererEndpoints", required=true)
-        private final List<String> ordererEndpoints;
+      private final List<String> ordererEndpoints;
 
     public List<String> getOrdererEndpoints() {
         return this.ordererEndpoints;
@@ -33,7 +33,7 @@ public final class FluidRelayEndpointsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="storageEndpoints", required=true)
-        private final List<String> storageEndpoints;
+      private final List<String> storageEndpoints;
 
     public List<String> getStorageEndpoints() {
         return this.storageEndpoints;

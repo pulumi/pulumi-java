@@ -15,21 +15,21 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     public static final DeliveryStreamCopyCommandArgs Empty = new DeliveryStreamCopyCommandArgs();
 
     @InputImport(name="copyOptions")
-        private final @Nullable Input<String> copyOptions;
+      private final @Nullable Input<String> copyOptions;
 
     public Input<String> getCopyOptions() {
         return this.copyOptions == null ? Input.empty() : this.copyOptions;
     }
 
     @InputImport(name="dataTableColumns")
-        private final @Nullable Input<String> dataTableColumns;
+      private final @Nullable Input<String> dataTableColumns;
 
     public Input<String> getDataTableColumns() {
         return this.dataTableColumns == null ? Input.empty() : this.dataTableColumns;
     }
 
     @InputImport(name="dataTableName", required=true)
-        private final Input<String> dataTableName;
+      private final Input<String> dataTableName;
 
     public Input<String> getDataTableName() {
         return this.dataTableName;

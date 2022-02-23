@@ -24,7 +24,7 @@ public final class ContainerExecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-        private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;

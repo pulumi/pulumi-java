@@ -25,7 +25,7 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-        private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Input<String> diskEncryptionSetId;
 
     public Input<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
@@ -36,7 +36,7 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskId")
-        private final @Nullable Input<String> diskId;
+      private final @Nullable Input<String> diskId;
 
     public Input<String> getDiskId() {
         return this.diskId == null ? Input.empty() : this.diskId;
@@ -47,7 +47,7 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskType")
-        private final @Nullable Input<Either<String,DiskAccountType>> diskType;
+      private final @Nullable Input<Either<String,DiskAccountType>> diskType;
 
     public Input<Either<String,DiskAccountType>> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -58,7 +58,7 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logStorageAccountId")
-        private final @Nullable Input<String> logStorageAccountId;
+      private final @Nullable Input<String> logStorageAccountId;
 
     public Input<String> getLogStorageAccountId() {
         return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;

@@ -24,7 +24,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -35,7 +35,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -46,7 +46,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recursive")
-        private final @Nullable Input<Object> recursive;
+      private final @Nullable Input<Object> recursive;
 
     public Input<Object> getRecursive() {
         return this.recursive == null ? Input.empty() : this.recursive;
@@ -57,7 +57,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="skipHeaderLineCount")
-        private final @Nullable Input<Object> skipHeaderLineCount;
+      private final @Nullable Input<Object> skipHeaderLineCount;
 
     public Input<Object> getSkipHeaderLineCount() {
         return this.skipHeaderLineCount == null ? Input.empty() : this.skipHeaderLineCount;
@@ -68,7 +68,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceRetryCount")
-        private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -79,7 +79,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceRetryWait")
-        private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -90,7 +90,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="treatEmptyAsNull")
-        private final @Nullable Input<Object> treatEmptyAsNull;
+      private final @Nullable Input<Object> treatEmptyAsNull;
 
     public Input<Object> getTreatEmptyAsNull() {
         return this.treatEmptyAsNull == null ? Input.empty() : this.treatEmptyAsNull;
@@ -102,7 +102,7 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

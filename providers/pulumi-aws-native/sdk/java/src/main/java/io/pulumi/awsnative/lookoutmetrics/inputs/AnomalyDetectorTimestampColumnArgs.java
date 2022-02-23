@@ -19,14 +19,14 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columnFormat")
-        private final @Nullable Input<String> columnFormat;
+      private final @Nullable Input<String> columnFormat;
 
     public Input<String> getColumnFormat() {
         return this.columnFormat == null ? Input.empty() : this.columnFormat;
     }
 
     @InputImport(name="columnName")
-        private final @Nullable Input<String> columnName;
+      private final @Nullable Input<String> columnName;
 
     public Input<String> getColumnName() {
         return this.columnName == null ? Input.empty() : this.columnName;

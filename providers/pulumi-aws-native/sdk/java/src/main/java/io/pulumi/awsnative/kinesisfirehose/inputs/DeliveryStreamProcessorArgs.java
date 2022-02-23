@@ -17,14 +17,14 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     public static final DeliveryStreamProcessorArgs Empty = new DeliveryStreamProcessorArgs();
 
     @InputImport(name="parameters")
-        private final @Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters;
+      private final @Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters;
 
     public Input<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<DeliveryStreamProcessorType> type;
+      private final Input<DeliveryStreamProcessorType> type;
 
     public Input<DeliveryStreamProcessorType> getType() {
         return this.type;

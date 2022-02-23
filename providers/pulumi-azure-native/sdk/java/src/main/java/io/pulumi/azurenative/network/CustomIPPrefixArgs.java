@@ -24,7 +24,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidr")
-        private final @Nullable Input<String> cidr;
+      private final @Nullable Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr == null ? Input.empty() : this.cidr;
@@ -35,7 +35,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commissionedState")
-        private final @Nullable Input<Either<String,CommissionedState>> commissionedState;
+      private final @Nullable Input<Either<String,CommissionedState>> commissionedState;
 
     public Input<Either<String,CommissionedState>> getCommissionedState() {
         return this.commissionedState == null ? Input.empty() : this.commissionedState;
@@ -46,7 +46,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customIpPrefixName")
-        private final @Nullable Input<String> customIpPrefixName;
+      private final @Nullable Input<String> customIpPrefixName;
 
     public Input<String> getCustomIpPrefixName() {
         return this.customIpPrefixName == null ? Input.empty() : this.customIpPrefixName;
@@ -57,7 +57,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -68,7 +68,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -79,7 +79,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

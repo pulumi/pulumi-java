@@ -19,7 +19,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="namespace", required=true)
-        private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -41,7 +41,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="podLabels", required=true)
-        private final Input<Map<String,String>> podLabels;
+      private final Input<Map<String,String>> podLabels;
 
     public Input<Map<String,String>> getPodLabels() {
         return this.podLabels;

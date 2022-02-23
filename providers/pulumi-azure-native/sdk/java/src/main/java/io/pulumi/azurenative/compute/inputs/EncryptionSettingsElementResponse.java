@@ -24,7 +24,7 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskEncryptionKey")
-        private final @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
+      private final @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
 
     public Optional<KeyVaultAndSecretReferenceResponse> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
@@ -35,7 +35,7 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="keyEncryptionKey")
-        private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
+      private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultAndKeyReferenceResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);

@@ -23,7 +23,7 @@ public final class TransferConfigurationResponseTransferFilterDetails extends io
      * 
      */
     @InputImport(name="include")
-        private final @Nullable TransferFilterDetailsResponse include;
+      private final @Nullable TransferFilterDetailsResponse include;
 
     public Optional<TransferFilterDetailsResponse> getInclude() {
         return this.include == null ? Optional.empty() : Optional.ofNullable(this.include);

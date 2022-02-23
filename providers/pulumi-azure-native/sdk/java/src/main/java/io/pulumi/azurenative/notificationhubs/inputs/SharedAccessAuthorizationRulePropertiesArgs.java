@@ -24,7 +24,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="rights")
-        private final @Nullable Input<List<AccessRights>> rights;
+      private final @Nullable Input<List<AccessRights>> rights;
 
     public Input<List<AccessRights>> getRights() {
         return this.rights == null ? Input.empty() : this.rights;

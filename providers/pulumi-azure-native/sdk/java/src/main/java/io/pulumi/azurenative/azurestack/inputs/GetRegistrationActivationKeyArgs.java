@@ -17,7 +17,7 @@ public final class GetRegistrationActivationKeyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="registrationName", required=true)
-        private final String registrationName;
+      private final String registrationName;
 
     public String getRegistrationName() {
         return this.registrationName;
@@ -28,7 +28,7 @@ public final class GetRegistrationActivationKeyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final String resourceGroup;
+      private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;

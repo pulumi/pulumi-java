@@ -19,7 +19,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="context")
-        private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -30,7 +30,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -41,7 +41,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -52,7 +52,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="importance")
-        private final @Nullable Input<String> importance;
+      private final @Nullable Input<String> importance;
 
     public Input<String> getImportance() {
         return this.importance == null ? Input.empty() : this.importance;
@@ -63,7 +63,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="label")
-        private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -74,7 +74,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memberName", required=true)
-        private final Input<String> memberName;
+      private final Input<String> memberName;
 
     public Input<String> getMemberName() {
         return this.memberName;
@@ -85,7 +85,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -96,7 +96,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -107,7 +107,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -118,7 +118,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workloadClassifierName")
-        private final @Nullable Input<String> workloadClassifierName;
+      private final @Nullable Input<String> workloadClassifierName;
 
     public Input<String> getWorkloadClassifierName() {
         return this.workloadClassifierName == null ? Input.empty() : this.workloadClassifierName;
@@ -129,7 +129,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workloadGroupName", required=true)
-        private final Input<String> workloadGroupName;
+      private final Input<String> workloadGroupName;
 
     public Input<String> getWorkloadGroupName() {
         return this.workloadGroupName;

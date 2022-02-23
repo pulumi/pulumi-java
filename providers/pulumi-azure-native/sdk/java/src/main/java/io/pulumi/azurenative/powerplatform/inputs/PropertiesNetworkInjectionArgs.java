@@ -23,7 +23,7 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="virtualNetworks")
-        private final @Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks;
+      private final @Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
     public Input<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {
         return this.virtualNetworks == null ? Input.empty() : this.virtualNetworks;

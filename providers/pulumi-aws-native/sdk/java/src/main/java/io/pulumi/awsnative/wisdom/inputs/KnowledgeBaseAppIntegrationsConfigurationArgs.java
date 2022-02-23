@@ -15,14 +15,14 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
     public static final KnowledgeBaseAppIntegrationsConfigurationArgs Empty = new KnowledgeBaseAppIntegrationsConfigurationArgs();
 
     @InputImport(name="appIntegrationArn", required=true)
-        private final Input<String> appIntegrationArn;
+      private final Input<String> appIntegrationArn;
 
     public Input<String> getAppIntegrationArn() {
         return this.appIntegrationArn;
     }
 
     @InputImport(name="objectFields", required=true)
-        private final Input<List<String>> objectFields;
+      private final Input<List<String>> objectFields;
 
     public Input<List<String>> getObjectFields() {
         return this.objectFields;

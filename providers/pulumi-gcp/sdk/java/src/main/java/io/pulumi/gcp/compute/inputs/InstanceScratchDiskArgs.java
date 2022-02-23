@@ -18,7 +18,7 @@ public final class InstanceScratchDiskArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interface", required=true)
-        private final Input<String> $interface;
+      private final Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface;

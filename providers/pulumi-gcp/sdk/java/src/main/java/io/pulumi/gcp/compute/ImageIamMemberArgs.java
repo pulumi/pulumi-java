@@ -21,7 +21,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<ImageIamMemberConditionArgs> condition;
+      private final @Nullable Input<ImageIamMemberConditionArgs> condition;
 
     public Input<ImageIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,14 +32,14 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image", required=true)
-        private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

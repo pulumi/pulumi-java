@@ -20,7 +20,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -31,7 +31,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespacedName")
-        private final @Nullable Input<String> namespacedName;
+      private final @Nullable Input<String> namespacedName;
 
     public Input<String> getNamespacedName() {
         return this.namespacedName == null ? Input.empty() : this.namespacedName;
@@ -64,7 +64,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -76,7 +76,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-        private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -88,7 +88,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

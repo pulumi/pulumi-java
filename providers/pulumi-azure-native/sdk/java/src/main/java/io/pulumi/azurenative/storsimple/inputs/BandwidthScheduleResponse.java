@@ -24,7 +24,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="days", required=true)
-        private final List<String> days;
+      private final List<String> days;
 
     public List<String> getDays() {
         return this.days;
@@ -35,7 +35,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rateInMbps", required=true)
-        private final Integer rateInMbps;
+      private final Integer rateInMbps;
 
     public Integer getRateInMbps() {
         return this.rateInMbps;
@@ -46,7 +46,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="start", required=true)
-        private final TimeResponse start;
+      private final TimeResponse start;
 
     public TimeResponse getStart() {
         return this.start;
@@ -57,7 +57,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="stop", required=true)
-        private final TimeResponse stop;
+      private final TimeResponse stop;
 
     public TimeResponse getStop() {
         return this.stop;

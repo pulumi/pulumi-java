@@ -23,7 +23,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="passwordSecretRef")
-        private final @Nullable String passwordSecretRef;
+      private final @Nullable String passwordSecretRef;
 
     public Optional<String> getPasswordSecretRef() {
         return this.passwordSecretRef == null ? Optional.empty() : Optional.ofNullable(this.passwordSecretRef);
@@ -34,7 +34,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="server")
-        private final @Nullable String server;
+      private final @Nullable String server;
 
     public Optional<String> getServer() {
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
@@ -45,7 +45,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="username")
-        private final @Nullable String username;
+      private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);

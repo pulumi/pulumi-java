@@ -25,7 +25,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizedIPRanges")
-        private final @Nullable Input<List<String>> authorizedIPRanges;
+      private final @Nullable Input<List<String>> authorizedIPRanges;
 
     public Input<List<String>> getAuthorizedIPRanges() {
         return this.authorizedIPRanges == null ? Input.empty() : this.authorizedIPRanges;
@@ -36,7 +36,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enablePrivateCluster")
-        private final @Nullable Input<Boolean> enablePrivateCluster;
+      private final @Nullable Input<Boolean> enablePrivateCluster;
 
     public Input<Boolean> getEnablePrivateCluster() {
         return this.enablePrivateCluster == null ? Input.empty() : this.enablePrivateCluster;
@@ -47,7 +47,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateDNSZone")
-        private final @Nullable Input<String> privateDNSZone;
+      private final @Nullable Input<String> privateDNSZone;
 
     public Input<String> getPrivateDNSZone() {
         return this.privateDNSZone == null ? Input.empty() : this.privateDNSZone;

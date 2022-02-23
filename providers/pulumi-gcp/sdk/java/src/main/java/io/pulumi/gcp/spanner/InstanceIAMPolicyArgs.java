@@ -19,7 +19,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instance", required=true)
-        private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -31,7 +31,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

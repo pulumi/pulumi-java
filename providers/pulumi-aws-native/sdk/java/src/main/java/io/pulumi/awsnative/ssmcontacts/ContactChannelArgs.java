@@ -21,7 +21,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelAddress")
-        private final @Nullable Input<String> channelAddress;
+      private final @Nullable Input<String> channelAddress;
 
     public Input<String> getChannelAddress() {
         return this.channelAddress == null ? Input.empty() : this.channelAddress;
@@ -32,7 +32,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName")
-        private final @Nullable Input<String> channelName;
+      private final @Nullable Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName == null ? Input.empty() : this.channelName;
@@ -43,7 +43,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelType")
-        private final @Nullable Input<ContactChannelChannelType> channelType;
+      private final @Nullable Input<ContactChannelChannelType> channelType;
 
     public Input<ContactChannelChannelType> getChannelType() {
         return this.channelType == null ? Input.empty() : this.channelType;
@@ -54,7 +54,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactId")
-        private final @Nullable Input<String> contactId;
+      private final @Nullable Input<String> contactId;
 
     public Input<String> getContactId() {
         return this.contactId == null ? Input.empty() : this.contactId;
@@ -65,7 +65,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferActivation")
-        private final @Nullable Input<Boolean> deferActivation;
+      private final @Nullable Input<Boolean> deferActivation;
 
     public Input<Boolean> getDeferActivation() {
         return this.deferActivation == null ? Input.empty() : this.deferActivation;

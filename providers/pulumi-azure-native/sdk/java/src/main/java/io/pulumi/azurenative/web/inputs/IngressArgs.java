@@ -29,7 +29,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowInsecure")
-        private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -40,7 +40,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="external")
-        private final @Nullable Input<Boolean> external;
+      private final @Nullable Input<Boolean> external;
 
     public Input<Boolean> getExternal() {
         return this.external == null ? Input.empty() : this.external;
@@ -51,14 +51,14 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPort")
-        private final @Nullable Input<Integer> targetPort;
+      private final @Nullable Input<Integer> targetPort;
 
     public Input<Integer> getTargetPort() {
         return this.targetPort == null ? Input.empty() : this.targetPort;
     }
 
     @InputImport(name="traffic")
-        private final @Nullable Input<List<TrafficWeightArgs>> traffic;
+      private final @Nullable Input<List<TrafficWeightArgs>> traffic;
 
     public Input<List<TrafficWeightArgs>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
@@ -69,7 +69,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transport")
-        private final @Nullable Input<Either<String,IngressTransportMethod>> transport;
+      private final @Nullable Input<Either<String,IngressTransportMethod>> transport;
 
     public Input<Either<String,IngressTransportMethod>> getTransport() {
         return this.transport == null ? Input.empty() : this.transport;

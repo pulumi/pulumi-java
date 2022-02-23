@@ -15,7 +15,7 @@ public final class WebACLAndStatementArgs extends io.pulumi.resources.ResourceAr
     public static final WebACLAndStatementArgs Empty = new WebACLAndStatementArgs();
 
     @InputImport(name="statements", required=true)
-        private final Input<List<WebACLStatementArgs>> statements;
+      private final Input<List<WebACLStatementArgs>> statements;
 
     public Input<List<WebACLStatementArgs>> getStatements() {
         return this.statements;

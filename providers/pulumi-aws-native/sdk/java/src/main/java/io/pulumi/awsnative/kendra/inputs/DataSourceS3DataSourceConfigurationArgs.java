@@ -22,42 +22,42 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     public static final DataSourceS3DataSourceConfigurationArgs Empty = new DataSourceS3DataSourceConfigurationArgs();
 
     @InputImport(name="accessControlListConfiguration")
-        private final @Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
+      private final @Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
 
     public Input<DataSourceAccessControlListConfigurationArgs> getAccessControlListConfiguration() {
         return this.accessControlListConfiguration == null ? Input.empty() : this.accessControlListConfiguration;
     }
 
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="documentsMetadataConfiguration")
-        private final @Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
+      private final @Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
 
     public Input<DataSourceDocumentsMetadataConfigurationArgs> getDocumentsMetadataConfiguration() {
         return this.documentsMetadataConfiguration == null ? Input.empty() : this.documentsMetadataConfiguration;
     }
 
     @InputImport(name="exclusionPatterns")
-        private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Input<List<String>> exclusionPatterns;
 
     public Input<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="inclusionPatterns")
-        private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Input<List<String>> inclusionPatterns;
 
     public Input<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="inclusionPrefixes")
-        private final @Nullable Input<List<String>> inclusionPrefixes;
+      private final @Nullable Input<List<String>> inclusionPrefixes;
 
     public Input<List<String>> getInclusionPrefixes() {
         return this.inclusionPrefixes == null ? Input.empty() : this.inclusionPrefixes;

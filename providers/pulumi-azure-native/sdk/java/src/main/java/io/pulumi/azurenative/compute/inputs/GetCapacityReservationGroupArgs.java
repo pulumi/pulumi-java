@@ -19,7 +19,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="capacityReservationGroupName", required=true)
-        private final String capacityReservationGroupName;
+      private final String capacityReservationGroupName;
 
     public String getCapacityReservationGroupName() {
         return this.capacityReservationGroupName;
@@ -30,7 +30,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -41,7 +41,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

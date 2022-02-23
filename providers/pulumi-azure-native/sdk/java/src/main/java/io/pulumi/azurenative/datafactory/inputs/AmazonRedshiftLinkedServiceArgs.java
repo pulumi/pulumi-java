@@ -31,7 +31,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="database", required=true)
-        private final Input<Object> database;
+      private final Input<Object> database;
 
     public Input<Object> getDatabase() {
         return this.database;
@@ -64,7 +64,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -86,7 +86,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -97,7 +97,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -108,7 +108,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Object> port;
+      private final @Nullable Input<Object> port;
 
     public Input<Object> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -119,7 +119,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="server", required=true)
-        private final Input<Object> server;
+      private final Input<Object> server;
 
     public Input<Object> getServer() {
         return this.server;
@@ -131,7 +131,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;

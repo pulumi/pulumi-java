@@ -18,42 +18,42 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     public static final StreamArgs Empty = new StreamArgs();
 
     @InputImport(name="exclusiveEndTime")
-        private final @Nullable Input<String> exclusiveEndTime;
+      private final @Nullable Input<String> exclusiveEndTime;
 
     public Input<String> getExclusiveEndTime() {
         return this.exclusiveEndTime == null ? Input.empty() : this.exclusiveEndTime;
     }
 
     @InputImport(name="inclusiveStartTime", required=true)
-        private final Input<String> inclusiveStartTime;
+      private final Input<String> inclusiveStartTime;
 
     public Input<String> getInclusiveStartTime() {
         return this.inclusiveStartTime;
     }
 
     @InputImport(name="kinesisConfiguration", required=true)
-        private final Input<StreamKinesisConfigurationArgs> kinesisConfiguration;
+      private final Input<StreamKinesisConfigurationArgs> kinesisConfiguration;
 
     public Input<StreamKinesisConfigurationArgs> getKinesisConfiguration() {
         return this.kinesisConfiguration;
     }
 
     @InputImport(name="ledgerName", required=true)
-        private final Input<String> ledgerName;
+      private final Input<String> ledgerName;
 
     public Input<String> getLedgerName() {
         return this.ledgerName;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamName")
-        private final @Nullable Input<String> streamName;
+      private final @Nullable Input<String> streamName;
 
     public Input<String> getStreamName() {
         return this.streamName == null ? Input.empty() : this.streamName;
@@ -64,7 +64,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<StreamTagArgs>> tags;
+      private final @Nullable Input<List<StreamTagArgs>> tags;
 
     public Input<List<StreamTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

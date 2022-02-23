@@ -24,7 +24,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<Object> options;
+      private final @Nullable Input<Object> options;
 
     public Input<Object> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -35,7 +35,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="uiDefinition")
-        private final @Nullable Input<Object> uiDefinition;
+      private final @Nullable Input<Object> uiDefinition;
 
     public Input<Object> getUiDefinition() {
         return this.uiDefinition == null ? Input.empty() : this.uiDefinition;
@@ -46,7 +46,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

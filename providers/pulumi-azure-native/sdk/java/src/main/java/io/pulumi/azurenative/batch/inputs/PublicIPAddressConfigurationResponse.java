@@ -24,7 +24,7 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipAddressIds")
-        private final @Nullable List<String> ipAddressIds;
+      private final @Nullable List<String> ipAddressIds;
 
     public List<String> getIpAddressIds() {
         return this.ipAddressIds == null ? List.of() : this.ipAddressIds;
@@ -35,7 +35,7 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provision")
-        private final @Nullable String provision;
+      private final @Nullable String provision;
 
     public Optional<String> getProvision() {
         return this.provision == null ? Optional.empty() : Optional.ofNullable(this.provision);

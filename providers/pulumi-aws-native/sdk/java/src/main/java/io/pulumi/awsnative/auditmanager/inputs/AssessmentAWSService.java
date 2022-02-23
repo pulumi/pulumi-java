@@ -19,7 +19,7 @@ public final class AssessmentAWSService extends io.pulumi.resources.InvokeArgs {
     public static final AssessmentAWSService Empty = new AssessmentAWSService();
 
     @InputImport(name="serviceName")
-        private final @Nullable String serviceName;
+      private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);

@@ -23,7 +23,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -34,7 +34,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upn")
-        private final @Nullable Input<String> upn;
+      private final @Nullable Input<String> upn;
 
     public Input<String> getUpn() {
         return this.upn == null ? Input.empty() : this.upn;

@@ -27,7 +27,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxReplicas")
-        private final @Nullable Input<Integer> maxReplicas;
+      private final @Nullable Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
@@ -38,7 +38,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="minReplicas")
-        private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -49,7 +49,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="refreshPeriodInSeconds")
-        private final @Nullable Input<Integer> refreshPeriodInSeconds;
+      private final @Nullable Input<Integer> refreshPeriodInSeconds;
 
     public Input<Integer> getRefreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Input.empty() : this.refreshPeriodInSeconds;
@@ -60,7 +60,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,Status>> status;
+      private final @Nullable Input<Either<String,Status>> status;
 
     public Input<Either<String,Status>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -71,7 +71,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetUtilization")
-        private final @Nullable Input<Double> targetUtilization;
+      private final @Nullable Input<Double> targetUtilization;
 
     public Input<Double> getTargetUtilization() {
         return this.targetUtilization == null ? Input.empty() : this.targetUtilization;

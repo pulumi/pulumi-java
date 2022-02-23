@@ -27,7 +27,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="action")
-        private final @Nullable AzureFirewallRCActionResponse action;
+      private final @Nullable AzureFirewallRCActionResponse action;
 
     public Optional<AzureFirewallRCActionResponse> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -38,7 +38,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -49,7 +49,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -60,7 +60,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -71,7 +71,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Integer priority;
+      private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -82,7 +82,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -93,7 +93,7 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
+      private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
 
     public List<AzureFirewallApplicationRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

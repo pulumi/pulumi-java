@@ -17,7 +17,7 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="connectionMonitorTestName", required=true)
-        private final String connectionMonitorTestName;
+      private final String connectionMonitorTestName;
 
     public String getConnectionMonitorTestName() {
         return this.connectionMonitorTestName;
@@ -28,7 +28,7 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-        private final String peeringServiceName;
+      private final String peeringServiceName;
 
     public String getPeeringServiceName() {
         return this.peeringServiceName;
@@ -39,7 +39,7 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

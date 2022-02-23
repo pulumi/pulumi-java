@@ -14,14 +14,14 @@ public final class FirewallPolicyStatelessRuleGroupReference extends io.pulumi.r
     public static final FirewallPolicyStatelessRuleGroupReference Empty = new FirewallPolicyStatelessRuleGroupReference();
 
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
     }
 
     @InputImport(name="resourceArn", required=true)
-        private final String resourceArn;
+      private final String resourceArn;
 
     public String getResourceArn() {
         return this.resourceArn;

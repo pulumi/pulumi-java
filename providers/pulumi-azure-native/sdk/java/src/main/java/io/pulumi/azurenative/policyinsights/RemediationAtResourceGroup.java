@@ -177,6 +177,21 @@ public class RemediationAtResourceGroup extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public RemediationAtResourceGroup(String name) {
+        this(name, RemediationAtResourceGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RemediationAtResourceGroup(String name, RemediationAtResourceGroupArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

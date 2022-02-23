@@ -30,7 +30,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accumulated")
-        private final @Nullable Input<Either<String,AccumulatedType>> accumulated;
+      private final @Nullable Input<Either<String,AccumulatedType>> accumulated;
 
     public Input<Either<String,AccumulatedType>> getAccumulated() {
         return this.accumulated == null ? Input.empty() : this.accumulated;
@@ -41,7 +41,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chart")
-        private final @Nullable Input<Either<String,ChartType>> chart;
+      private final @Nullable Input<Either<String,ChartType>> chart;
 
     public Input<Either<String,ChartType>> getChart() {
         return this.chart == null ? Input.empty() : this.chart;
@@ -52,7 +52,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSet")
-        private final @Nullable Input<ReportConfigDatasetArgs> dataSet;
+      private final @Nullable Input<ReportConfigDatasetArgs> dataSet;
 
     public Input<ReportConfigDatasetArgs> getDataSet() {
         return this.dataSet == null ? Input.empty() : this.dataSet;
@@ -63,7 +63,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -74,7 +74,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-        private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -85,7 +85,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kpis")
-        private final @Nullable Input<List<KpiPropertiesArgs>> kpis;
+      private final @Nullable Input<List<KpiPropertiesArgs>> kpis;
 
     public Input<List<KpiPropertiesArgs>> getKpis() {
         return this.kpis == null ? Input.empty() : this.kpis;
@@ -96,7 +96,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metric")
-        private final @Nullable Input<Either<String,MetricType>> metric;
+      private final @Nullable Input<Either<String,MetricType>> metric;
 
     public Input<Either<String,MetricType>> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -107,7 +107,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pivots")
-        private final @Nullable Input<List<PivotPropertiesArgs>> pivots;
+      private final @Nullable Input<List<PivotPropertiesArgs>> pivots;
 
     public Input<List<PivotPropertiesArgs>> getPivots() {
         return this.pivots == null ? Input.empty() : this.pivots;
@@ -118,7 +118,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-        private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -129,7 +129,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriod")
-        private final @Nullable Input<ReportConfigTimePeriodArgs> timePeriod;
+      private final @Nullable Input<ReportConfigTimePeriodArgs> timePeriod;
 
     public Input<ReportConfigTimePeriodArgs> getTimePeriod() {
         return this.timePeriod == null ? Input.empty() : this.timePeriod;
@@ -140,7 +140,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeframe", required=true)
-        private final Input<Either<String,ReportTimeframeType>> timeframe;
+      private final Input<Either<String,ReportTimeframeType>> timeframe;
 
     public Input<Either<String,ReportTimeframeType>> getTimeframe() {
         return this.timeframe;
@@ -151,7 +151,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ReportType>> type;
+      private final Input<Either<String,ReportType>> type;
 
     public Input<Either<String,ReportType>> getType() {
         return this.type;
@@ -162,7 +162,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewName")
-        private final @Nullable Input<String> viewName;
+      private final @Nullable Input<String> viewName;
 
     public Input<String> getViewName() {
         return this.viewName == null ? Input.empty() : this.viewName;

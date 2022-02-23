@@ -16,28 +16,28 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
     public static final LoggingRuleResponse Empty = new LoggingRuleResponse();
 
     @InputImport(name="action", required=true)
-        private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
     }
 
     @InputImport(name="detailLevel", required=true)
-        private final String detailLevel;
+      private final String detailLevel;
 
     public String getDetailLevel() {
         return this.detailLevel;
     }
 
     @InputImport(name="direction", required=true)
-        private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
     }
 
     @InputImport(name="hiddenPropertyPaths")
-        private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
+      private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 
     public Optional<LoggingRuleResponseHiddenPropertyPaths> getHiddenPropertyPaths() {
         return this.hiddenPropertyPaths == null ? Optional.empty() : Optional.ofNullable(this.hiddenPropertyPaths);

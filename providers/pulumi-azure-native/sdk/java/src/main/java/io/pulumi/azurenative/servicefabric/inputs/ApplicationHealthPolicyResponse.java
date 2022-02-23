@@ -25,7 +25,7 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="defaultServiceTypeHealthPolicy")
-        private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
+      private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
     public Optional<ServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
@@ -36,7 +36,7 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serviceTypeHealthPolicies")
-        private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
+      private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
     public Map<String,ServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicies() {
         return this.serviceTypeHealthPolicies == null ? Map.of() : this.serviceTypeHealthPolicies;

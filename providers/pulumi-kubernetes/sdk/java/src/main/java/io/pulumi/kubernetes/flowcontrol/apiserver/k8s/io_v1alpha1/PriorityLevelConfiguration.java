@@ -97,6 +97,21 @@ public class PriorityLevelConfiguration extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PriorityLevelConfiguration(String name) {
+        this(name, PriorityLevelConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PriorityLevelConfiguration(String name, @Nullable PriorityLevelConfigurationArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

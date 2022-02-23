@@ -23,7 +23,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="blobStorageEventType")
-        private final @Nullable Input<Either<String,BlobStorageEventType>> blobStorageEventType;
+      private final @Nullable Input<Either<String,BlobStorageEventType>> blobStorageEventType;
 
     public Input<Either<String,BlobStorageEventType>> getBlobStorageEventType() {
         return this.blobStorageEventType == null ? Input.empty() : this.blobStorageEventType;
@@ -34,7 +34,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -45,7 +45,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-        private final Input<String> consumerGroup;
+      private final Input<String> consumerGroup;
 
     public Input<String> getConsumerGroup() {
         return this.consumerGroup;
@@ -56,7 +56,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataConnectionName")
-        private final @Nullable Input<String> dataConnectionName;
+      private final @Nullable Input<String> dataConnectionName;
 
     public Input<String> getDataConnectionName() {
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
@@ -67,7 +67,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataFormat")
-        private final @Nullable Input<Either<String,EventGridDataFormat>> dataFormat;
+      private final @Nullable Input<Either<String,EventGridDataFormat>> dataFormat;
 
     public Input<Either<String,EventGridDataFormat>> getDataFormat() {
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
@@ -78,7 +78,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -89,7 +89,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventHubResourceId", required=true)
-        private final Input<String> eventHubResourceId;
+      private final Input<String> eventHubResourceId;
 
     public Input<String> getEventHubResourceId() {
         return this.eventHubResourceId;
@@ -100,7 +100,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ignoreFirstRecord")
-        private final @Nullable Input<Boolean> ignoreFirstRecord;
+      private final @Nullable Input<Boolean> ignoreFirstRecord;
 
     public Input<Boolean> getIgnoreFirstRecord() {
         return this.ignoreFirstRecord == null ? Input.empty() : this.ignoreFirstRecord;
@@ -112,7 +112,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -123,7 +123,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -134,7 +134,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mappingRuleName")
-        private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Input<String> mappingRuleName;
 
     public Input<String> getMappingRuleName() {
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
@@ -145,7 +145,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -156,7 +156,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storageAccountResourceId", required=true)
-        private final Input<String> storageAccountResourceId;
+      private final Input<String> storageAccountResourceId;
 
     public Input<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId;
@@ -167,7 +167,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

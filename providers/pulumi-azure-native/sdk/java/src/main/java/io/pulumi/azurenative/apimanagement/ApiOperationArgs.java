@@ -23,7 +23,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -34,7 +34,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-        private final Input<String> method;
+      private final Input<String> method;
 
     public Input<String> getMethod() {
         return this.method;
@@ -67,7 +67,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationId")
-        private final @Nullable Input<String> operationId;
+      private final @Nullable Input<String> operationId;
 
     public Input<String> getOperationId() {
         return this.operationId == null ? Input.empty() : this.operationId;
@@ -78,7 +78,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-        private final @Nullable Input<String> policies;
+      private final @Nullable Input<String> policies;
 
     public Input<String> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
@@ -89,7 +89,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-        private final @Nullable Input<RequestContractArgs> request;
+      private final @Nullable Input<RequestContractArgs> request;
 
     public Input<RequestContractArgs> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -100,7 +100,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responses")
-        private final @Nullable Input<List<ResponseContractArgs>> responses;
+      private final @Nullable Input<List<ResponseContractArgs>> responses;
 
     public Input<List<ResponseContractArgs>> getResponses() {
         return this.responses == null ? Input.empty() : this.responses;
@@ -122,7 +122,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -133,7 +133,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateParameters")
-        private final @Nullable Input<List<ParameterContractArgs>> templateParameters;
+      private final @Nullable Input<List<ParameterContractArgs>> templateParameters;
 
     public Input<List<ParameterContractArgs>> getTemplateParameters() {
         return this.templateParameters == null ? Input.empty() : this.templateParameters;
@@ -144,7 +144,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-        private final Input<String> urlTemplate;
+      private final Input<String> urlTemplate;
 
     public Input<String> getUrlTemplate() {
         return this.urlTemplate;

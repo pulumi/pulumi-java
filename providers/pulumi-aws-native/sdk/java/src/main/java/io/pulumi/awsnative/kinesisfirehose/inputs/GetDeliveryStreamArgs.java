@@ -13,7 +13,7 @@ public final class GetDeliveryStreamArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetDeliveryStreamArgs Empty = new GetDeliveryStreamArgs();
 
     @InputImport(name="deliveryStreamName", required=true)
-        private final String deliveryStreamName;
+      private final String deliveryStreamName;
 
     public String getDeliveryStreamName() {
         return this.deliveryStreamName;

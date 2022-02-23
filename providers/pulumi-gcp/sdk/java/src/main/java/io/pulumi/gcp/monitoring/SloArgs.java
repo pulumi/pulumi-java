@@ -30,7 +30,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicSli")
-        private final @Nullable Input<SloBasicSliArgs> basicSli;
+      private final @Nullable Input<SloBasicSliArgs> basicSli;
 
     public Input<SloBasicSliArgs> getBasicSli() {
         return this.basicSli == null ? Input.empty() : this.basicSli;
@@ -43,7 +43,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calendarPeriod")
-        private final @Nullable Input<String> calendarPeriod;
+      private final @Nullable Input<String> calendarPeriod;
 
     public Input<String> getCalendarPeriod() {
         return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
@@ -54,7 +54,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,7 +66,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="goal", required=true)
-        private final Input<Double> goal;
+      private final Input<Double> goal;
 
     public Input<Double> getGoal() {
         return this.goal;
@@ -78,7 +78,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestBasedSli")
-        private final @Nullable Input<SloRequestBasedSliArgs> requestBasedSli;
+      private final @Nullable Input<SloRequestBasedSliArgs> requestBasedSli;
 
     public Input<SloRequestBasedSliArgs> getRequestBasedSli() {
         return this.requestBasedSli == null ? Input.empty() : this.requestBasedSli;
@@ -108,7 +108,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollingPeriodDays")
-        private final @Nullable Input<Integer> rollingPeriodDays;
+      private final @Nullable Input<Integer> rollingPeriodDays;
 
     public Input<Integer> getRollingPeriodDays() {
         return this.rollingPeriodDays == null ? Input.empty() : this.rollingPeriodDays;
@@ -119,7 +119,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -130,7 +130,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sloId")
-        private final @Nullable Input<String> sloId;
+      private final @Nullable Input<String> sloId;
 
     public Input<String> getSloId() {
         return this.sloId == null ? Input.empty() : this.sloId;
@@ -149,7 +149,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsBasedSli")
-        private final @Nullable Input<SloWindowsBasedSliArgs> windowsBasedSli;
+      private final @Nullable Input<SloWindowsBasedSliArgs> windowsBasedSli;
 
     public Input<SloWindowsBasedSliArgs> getWindowsBasedSli() {
         return this.windowsBasedSli == null ? Input.empty() : this.windowsBasedSli;

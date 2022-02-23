@@ -20,7 +20,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="event")
-        private final @Nullable Input<String> event;
+      private final @Nullable Input<String> event;
 
     public Input<String> getEvent() {
         return this.event == null ? Input.empty() : this.event;
@@ -32,7 +32,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetFlow")
-        private final @Nullable Input<String> targetFlow;
+      private final @Nullable Input<String> targetFlow;
 
     public Input<String> getTargetFlow() {
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
@@ -56,7 +56,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetPage")
-        private final @Nullable Input<String> targetPage;
+      private final @Nullable Input<String> targetPage;
 
     public Input<String> getTargetPage() {
         return this.targetPage == null ? Input.empty() : this.targetPage;
@@ -68,7 +68,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="triggerFulfillment")
-        private final @Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
+      private final @Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
     public Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {
         return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;

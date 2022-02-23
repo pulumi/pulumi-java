@@ -23,7 +23,7 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="booleanValue")
-        private final @Nullable Input<String> booleanValue;
+      private final @Nullable Input<String> booleanValue;
 
     public Input<String> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
@@ -34,7 +34,7 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="doubleValue")
-        private final @Nullable Input<String> doubleValue;
+      private final @Nullable Input<String> doubleValue;
 
     public Input<String> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
@@ -45,7 +45,7 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="integerValue")
-        private final @Nullable Input<String> integerValue;
+      private final @Nullable Input<String> integerValue;
 
     public Input<String> getIntegerValue() {
         return this.integerValue == null ? Input.empty() : this.integerValue;
@@ -56,7 +56,7 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="stringValue")
-        private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;

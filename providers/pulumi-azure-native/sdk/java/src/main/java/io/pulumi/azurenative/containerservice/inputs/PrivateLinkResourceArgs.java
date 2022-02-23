@@ -24,7 +24,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -35,7 +35,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requiredMembers")
-        private final @Nullable Input<List<String>> requiredMembers;
+      private final @Nullable Input<List<String>> requiredMembers;
 
     public Input<List<String>> getRequiredMembers() {
         return this.requiredMembers == null ? Input.empty() : this.requiredMembers;
@@ -68,7 +68,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

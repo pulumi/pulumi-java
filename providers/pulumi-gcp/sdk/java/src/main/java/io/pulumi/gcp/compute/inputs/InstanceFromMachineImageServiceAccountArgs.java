@@ -16,14 +16,14 @@ public final class InstanceFromMachineImageServiceAccountArgs extends io.pulumi.
     public static final InstanceFromMachineImageServiceAccountArgs Empty = new InstanceFromMachineImageServiceAccountArgs();
 
     @InputImport(name="email")
-        private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
     }
 
     @InputImport(name="scopes", required=true)
-        private final Input<List<String>> scopes;
+      private final Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes;

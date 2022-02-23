@@ -26,14 +26,14 @@ public final class LaunchProfileStreamConfigurationSessionStorage extends io.pul
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
+      private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
 
     public List<LaunchProfileStreamingSessionStorageMode> getMode() {
         return this.mode == null ? List.of() : this.mode;
     }
 
     @InputImport(name="root")
-        private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
+      private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
     public Optional<LaunchProfileStreamingSessionStorageRoot> getRoot() {
         return this.root == null ? Optional.empty() : Optional.ofNullable(this.root);

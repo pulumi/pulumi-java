@@ -23,7 +23,7 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="columnName")
-        private final @Nullable Input<Object> columnName;
+      private final @Nullable Input<Object> columnName;
 
     public Input<Object> getColumnName() {
         return this.columnName == null ? Input.empty() : this.columnName;
@@ -34,7 +34,7 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultValue")
-        private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;

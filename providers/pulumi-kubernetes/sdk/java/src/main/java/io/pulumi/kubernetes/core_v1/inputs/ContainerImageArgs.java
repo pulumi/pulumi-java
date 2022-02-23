@@ -25,7 +25,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="names", required=true)
-        private final Input<List<String>> names;
+      private final Input<List<String>> names;
 
     public Input<List<String>> getNames() {
         return this.names;
@@ -36,7 +36,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-        private final @Nullable Input<Integer> sizeBytes;
+      private final @Nullable Input<Integer> sizeBytes;
 
     public Input<Integer> getSizeBytes() {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;

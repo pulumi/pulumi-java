@@ -23,7 +23,7 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="currentRevisionId")
-        private final @Nullable Input<String> currentRevisionId;
+      private final @Nullable Input<String> currentRevisionId;
 
     public Input<String> getCurrentRevisionId() {
         return this.currentRevisionId == null ? Input.empty() : this.currentRevisionId;
@@ -34,7 +34,7 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable Input<String> environment;
+      private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -45,14 +45,14 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="robotSoftwareSuite", required=true)
-        private final Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
+      private final Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
     public Input<RobotApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
         return this.robotSoftwareSuite;
@@ -63,14 +63,14 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sources")
-        private final @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources;
+      private final @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources;
 
     public Input<List<RobotApplicationSourceConfigArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<RobotApplicationTagsArgs> tags;
+      private final @Nullable Input<RobotApplicationTagsArgs> tags;
 
     public Input<RobotApplicationTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

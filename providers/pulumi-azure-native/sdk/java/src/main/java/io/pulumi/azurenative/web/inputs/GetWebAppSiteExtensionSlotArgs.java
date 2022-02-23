@@ -17,7 +17,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="siteExtensionId", required=true)
-        private final String siteExtensionId;
+      private final String siteExtensionId;
 
     public String getSiteExtensionId() {
         return this.siteExtensionId;
@@ -50,7 +50,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="slot", required=true)
-        private final String slot;
+      private final String slot;
 
     public String getSlot() {
         return this.slot;

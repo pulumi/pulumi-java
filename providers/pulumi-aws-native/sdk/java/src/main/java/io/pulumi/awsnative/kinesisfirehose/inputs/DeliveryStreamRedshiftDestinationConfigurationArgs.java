@@ -21,77 +21,77 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     public static final DeliveryStreamRedshiftDestinationConfigurationArgs Empty = new DeliveryStreamRedshiftDestinationConfigurationArgs();
 
     @InputImport(name="cloudWatchLoggingOptions")
-        private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+      private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Input<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Input.empty() : this.cloudWatchLoggingOptions;
     }
 
     @InputImport(name="clusterJDBCURL", required=true)
-        private final Input<String> clusterJDBCURL;
+      private final Input<String> clusterJDBCURL;
 
     public Input<String> getClusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
     @InputImport(name="copyCommand", required=true)
-        private final Input<DeliveryStreamCopyCommandArgs> copyCommand;
+      private final Input<DeliveryStreamCopyCommandArgs> copyCommand;
 
     public Input<DeliveryStreamCopyCommandArgs> getCopyCommand() {
         return this.copyCommand;
     }
 
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
     }
 
     @InputImport(name="processingConfiguration")
-        private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Input<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
     }
 
     @InputImport(name="retryOptions")
-        private final @Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
+      private final @Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
 
     public Input<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Input.empty() : this.retryOptions;
     }
 
     @InputImport(name="roleARN", required=true)
-        private final Input<String> roleARN;
+      private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="s3BackupConfiguration")
-        private final @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
+      private final @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
     public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Input.empty() : this.s3BackupConfiguration;
     }
 
     @InputImport(name="s3BackupMode")
-        private final @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
+      private final @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
     }
 
     @InputImport(name="s3Configuration", required=true)
-        private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+      private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

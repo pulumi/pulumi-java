@@ -19,7 +19,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     public static final RecordingConfigurationArgs Empty = new RecordingConfigurationArgs();
 
     @InputImport(name="destinationConfiguration", required=true)
-        private final Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
+      private final Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
 
     public Input<RecordingConfigurationDestinationConfigurationArgs> getDestinationConfiguration() {
         return this.destinationConfiguration;
@@ -30,7 +30,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,14 +41,14 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<RecordingConfigurationTagArgs>> tags;
+      private final @Nullable Input<List<RecordingConfigurationTagArgs>> tags;
 
     public Input<List<RecordingConfigurationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="thumbnailConfiguration")
-        private final @Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
+      private final @Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
     public Input<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {
         return this.thumbnailConfiguration == null ? Input.empty() : this.thumbnailConfiguration;

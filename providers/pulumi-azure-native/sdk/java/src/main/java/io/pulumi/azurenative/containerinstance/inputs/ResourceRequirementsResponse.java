@@ -24,7 +24,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="limits")
-        private final @Nullable ResourceLimitsResponse limits;
+      private final @Nullable ResourceLimitsResponse limits;
 
     public Optional<ResourceLimitsResponse> getLimits() {
         return this.limits == null ? Optional.empty() : Optional.ofNullable(this.limits);
@@ -35,7 +35,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="requests", required=true)
-        private final ResourceRequestsResponse requests;
+      private final ResourceRequestsResponse requests;
 
     public ResourceRequestsResponse getRequests() {
         return this.requests;

@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * 
      */
     @InputImport(name="executableFile")
-        private final @Nullable Input<String> executableFile;
+      private final @Nullable Input<String> executableFile;
 
     public Input<String> getExecutableFile() {
         return this.executableFile == null ? Input.empty() : this.executableFile;
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * 
      */
     @InputImport(name="executionTimeout")
-        private final @Nullable Input<String> executionTimeout;
+      private final @Nullable Input<String> executionTimeout;
 
     public Input<String> getExecutionTimeout() {
         return this.executionTimeout == null ? Input.empty() : this.executionTimeout;

@@ -23,7 +23,7 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<Object> value;
+      private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;

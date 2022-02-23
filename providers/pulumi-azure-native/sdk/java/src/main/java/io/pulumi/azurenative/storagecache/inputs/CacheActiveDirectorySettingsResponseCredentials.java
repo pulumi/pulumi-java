@@ -21,7 +21,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * 
      */
     @InputImport(name="password", required=true)
-        private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * 
      */
     @InputImport(name="username", required=true)
-        private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;

@@ -25,7 +25,7 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -36,7 +36,7 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * 
      */
     @InputImport(name="rules", required=true)
-        private final List<DeliveryRuleResponse> rules;
+      private final List<DeliveryRuleResponse> rules;
 
     public List<DeliveryRuleResponse> getRules() {
         return this.rules;

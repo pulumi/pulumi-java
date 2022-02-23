@@ -26,7 +26,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-        private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -37,7 +37,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-        private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -48,7 +48,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-        private final @Nullable Input<List<EnvironmentVarArgs>> env;
+      private final @Nullable Input<List<EnvironmentVarArgs>> env;
 
     public Input<List<EnvironmentVarArgs>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -59,7 +59,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-        private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -70,7 +70,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-        private final @Nullable Input<ContainerResourcesArgs> resources;
+      private final @Nullable Input<ContainerResourcesArgs> resources;
 
     public Input<ContainerResourcesArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;

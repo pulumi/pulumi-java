@@ -23,7 +23,7 @@ public final class DataQualityJobDefinitionConstraintsResourceArgs extends io.pu
      * 
      */
     @InputImport(name="s3Uri")
-        private final @Nullable Input<String> s3Uri;
+      private final @Nullable Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri == null ? Input.empty() : this.s3Uri;

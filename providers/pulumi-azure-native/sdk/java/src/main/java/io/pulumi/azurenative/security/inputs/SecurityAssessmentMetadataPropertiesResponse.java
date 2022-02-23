@@ -26,14 +26,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="assessmentType", required=true)
-        private final String assessmentType;
+      private final String assessmentType;
 
     public String getAssessmentType() {
         return this.assessmentType;
     }
 
     @InputImport(name="categories")
-        private final @Nullable List<String> categories;
+      private final @Nullable List<String> categories;
 
     public List<String> getCategories() {
         return this.categories == null ? List.of() : this.categories;
@@ -44,7 +44,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -55,7 +55,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -66,7 +66,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="implementationEffort")
-        private final @Nullable String implementationEffort;
+      private final @Nullable String implementationEffort;
 
     public Optional<String> getImplementationEffort() {
         return this.implementationEffort == null ? Optional.empty() : Optional.ofNullable(this.implementationEffort);
@@ -77,7 +77,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="partnerData")
-        private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
+      private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
 
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
         return this.partnerData == null ? Optional.empty() : Optional.ofNullable(this.partnerData);
@@ -88,7 +88,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="policyDefinitionId", required=true)
-        private final String policyDefinitionId;
+      private final String policyDefinitionId;
 
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
@@ -99,7 +99,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="preview")
-        private final @Nullable Boolean preview;
+      private final @Nullable Boolean preview;
 
     public Optional<Boolean> getPreview() {
         return this.preview == null ? Optional.empty() : Optional.ofNullable(this.preview);
@@ -110,7 +110,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="remediationDescription")
-        private final @Nullable String remediationDescription;
+      private final @Nullable String remediationDescription;
 
     public Optional<String> getRemediationDescription() {
         return this.remediationDescription == null ? Optional.empty() : Optional.ofNullable(this.remediationDescription);
@@ -121,14 +121,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="severity", required=true)
-        private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
     }
 
     @InputImport(name="threats")
-        private final @Nullable List<String> threats;
+      private final @Nullable List<String> threats;
 
     public List<String> getThreats() {
         return this.threats == null ? List.of() : this.threats;
@@ -139,7 +139,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="userImpact")
-        private final @Nullable String userImpact;
+      private final @Nullable String userImpact;
 
     public Optional<String> getUserImpact() {
         return this.userImpact == null ? Optional.empty() : Optional.ofNullable(this.userImpact);

@@ -23,7 +23,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -34,7 +34,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * 
      */
     @InputImport(name="valueType")
-        private final @Nullable Input<String> valueType;
+      private final @Nullable Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType == null ? Input.empty() : this.valueType;

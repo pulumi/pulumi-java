@@ -25,7 +25,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="authorizedIPRanges")
-        private final @Nullable List<String> authorizedIPRanges;
+      private final @Nullable List<String> authorizedIPRanges;
 
     public List<String> getAuthorizedIPRanges() {
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
@@ -36,7 +36,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="enablePrivateCluster")
-        private final @Nullable Boolean enablePrivateCluster;
+      private final @Nullable Boolean enablePrivateCluster;
 
     public Optional<Boolean> getEnablePrivateCluster() {
         return this.enablePrivateCluster == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateCluster);
@@ -47,7 +47,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="privateDNSZone")
-        private final @Nullable String privateDNSZone;
+      private final @Nullable String privateDNSZone;
 
     public Optional<String> getPrivateDNSZone() {
         return this.privateDNSZone == null ? Optional.empty() : Optional.ofNullable(this.privateDNSZone);

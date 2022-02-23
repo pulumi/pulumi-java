@@ -21,7 +21,7 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataStoreType", required=true)
-        private final String dataStoreType;
+      private final String dataStoreType;
 
     public String getDataStoreType() {
         return this.dataStoreType;
@@ -32,7 +32,7 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;

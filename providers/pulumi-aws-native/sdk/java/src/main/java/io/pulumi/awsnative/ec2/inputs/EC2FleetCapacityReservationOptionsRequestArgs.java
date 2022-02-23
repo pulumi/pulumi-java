@@ -15,7 +15,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     public static final EC2FleetCapacityReservationOptionsRequestArgs Empty = new EC2FleetCapacityReservationOptionsRequestArgs();
 
     @InputImport(name="usageStrategy")
-        private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+      private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
     public Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
         return this.usageStrategy == null ? Input.empty() : this.usageStrategy;

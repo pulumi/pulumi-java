@@ -20,7 +20,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<SharedPrivateLinkResourcePropertiesArgs> properties;
+      private final @Nullable Input<SharedPrivateLinkResourcePropertiesArgs> properties;
 
     public Input<SharedPrivateLinkResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="searchServiceName", required=true)
-        private final Input<String> searchServiceName;
+      private final Input<String> searchServiceName;
 
     public Input<String> getSearchServiceName() {
         return this.searchServiceName;
@@ -53,7 +53,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sharedPrivateLinkResourceName")
-        private final @Nullable Input<String> sharedPrivateLinkResourceName;
+      private final @Nullable Input<String> sharedPrivateLinkResourceName;
 
     public Input<String> getSharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName == null ? Input.empty() : this.sharedPrivateLinkResourceName;

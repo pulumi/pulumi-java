@@ -23,7 +23,7 @@ public final class IotMappingPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="content")
-        private final @Nullable Object content;
+      private final @Nullable Object content;
 
     public Optional<Object> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);

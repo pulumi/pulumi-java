@@ -24,7 +24,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostCaching")
-        private final @Nullable Input<HostCaching> hostCaching;
+      private final @Nullable Input<HostCaching> hostCaching;
 
     public Input<HostCaching> getHostCaching() {
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
@@ -35,7 +35,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
+      private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 
     public Input<GalleryArtifactVersionSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;

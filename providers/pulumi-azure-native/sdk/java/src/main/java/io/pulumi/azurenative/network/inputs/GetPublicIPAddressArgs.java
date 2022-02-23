@@ -19,7 +19,7 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="publicIpAddressName", required=true)
-        private final String publicIpAddressName;
+      private final String publicIpAddressName;
 
     public String getPublicIpAddressName() {
         return this.publicIpAddressName;
@@ -41,7 +41,7 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

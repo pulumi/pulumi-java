@@ -27,7 +27,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-        private final @Nullable Input<Either<String,Category>> category;
+      private final @Nullable Input<Either<String,Category>> category;
 
     public Input<Either<String,Category>> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -38,7 +38,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -49,7 +49,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
 
     public Input<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;

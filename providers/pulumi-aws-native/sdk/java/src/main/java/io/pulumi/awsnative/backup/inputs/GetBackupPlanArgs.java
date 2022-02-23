@@ -13,7 +13,7 @@ public final class GetBackupPlanArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBackupPlanArgs Empty = new GetBackupPlanArgs();
 
     @InputImport(name="backupPlanId", required=true)
-        private final String backupPlanId;
+      private final String backupPlanId;
 
     public String getBackupPlanId() {
         return this.backupPlanId;

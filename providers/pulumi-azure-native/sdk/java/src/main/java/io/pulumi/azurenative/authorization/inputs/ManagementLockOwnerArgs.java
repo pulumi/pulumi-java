@@ -23,7 +23,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId")
-        private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;

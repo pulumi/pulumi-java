@@ -17,21 +17,21 @@ public final class FlowS3OutputFormatConfig extends io.pulumi.resources.InvokeAr
     public static final FlowS3OutputFormatConfig Empty = new FlowS3OutputFormatConfig();
 
     @InputImport(name="aggregationConfig")
-        private final @Nullable FlowAggregationConfig aggregationConfig;
+      private final @Nullable FlowAggregationConfig aggregationConfig;
 
     public Optional<FlowAggregationConfig> getAggregationConfig() {
         return this.aggregationConfig == null ? Optional.empty() : Optional.ofNullable(this.aggregationConfig);
     }
 
     @InputImport(name="fileType")
-        private final @Nullable FlowFileType fileType;
+      private final @Nullable FlowFileType fileType;
 
     public Optional<FlowFileType> getFileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
     @InputImport(name="prefixConfig")
-        private final @Nullable FlowPrefixConfig prefixConfig;
+      private final @Nullable FlowPrefixConfig prefixConfig;
 
     public Optional<FlowPrefixConfig> getPrefixConfig() {
         return this.prefixConfig == null ? Optional.empty() : Optional.ofNullable(this.prefixConfig);

@@ -17,7 +17,7 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="algorithm", required=true)
-        private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -28,7 +28,7 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pem", required=true)
-        private final String pem;
+      private final String pem;
 
     public String getPem() {
         return this.pem;

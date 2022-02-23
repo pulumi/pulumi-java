@@ -22,7 +22,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
      * 
      */
     @InputImport(name="s3Uri", required=true)
-        private final Input<String> s3Uri;
+      private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;

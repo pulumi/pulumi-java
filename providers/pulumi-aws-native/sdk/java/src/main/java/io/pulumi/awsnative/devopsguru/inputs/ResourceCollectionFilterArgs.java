@@ -19,7 +19,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     public static final ResourceCollectionFilterArgs Empty = new ResourceCollectionFilterArgs();
 
     @InputImport(name="cloudFormation")
-        private final @Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
+      private final @Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
     public Input<ResourceCollectionCloudFormationCollectionFilterArgs> getCloudFormation() {
         return this.cloudFormation == null ? Input.empty() : this.cloudFormation;

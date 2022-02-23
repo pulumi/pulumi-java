@@ -17,7 +17,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * 
      */
     @InputImport(name="authenticationName", required=true)
-        private final String authenticationName;
+      private final String authenticationName;
 
     public String getAuthenticationName() {
         return this.authenticationName;
@@ -28,7 +28,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-        private final String managedInstanceName;
+      private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -39,7 +39,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

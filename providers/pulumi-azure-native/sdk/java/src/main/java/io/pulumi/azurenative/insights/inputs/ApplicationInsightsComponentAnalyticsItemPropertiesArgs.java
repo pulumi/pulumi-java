@@ -23,7 +23,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
      * 
      */
     @InputImport(name="functionAlias")
-        private final @Nullable Input<String> functionAlias;
+      private final @Nullable Input<String> functionAlias;
 
     public Input<String> getFunctionAlias() {
         return this.functionAlias == null ? Input.empty() : this.functionAlias;

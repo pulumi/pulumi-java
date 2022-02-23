@@ -18,35 +18,35 @@ public final class SuiteDefinitionConfigurationProperties extends io.pulumi.reso
     public static final SuiteDefinitionConfigurationProperties Empty = new SuiteDefinitionConfigurationProperties();
 
     @InputImport(name="devicePermissionRoleArn", required=true)
-        private final String devicePermissionRoleArn;
+      private final String devicePermissionRoleArn;
 
     public String getDevicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
 
     @InputImport(name="devices")
-        private final @Nullable List<SuiteDefinitionDeviceUnderTest> devices;
+      private final @Nullable List<SuiteDefinitionDeviceUnderTest> devices;
 
     public List<SuiteDefinitionDeviceUnderTest> getDevices() {
         return this.devices == null ? List.of() : this.devices;
     }
 
     @InputImport(name="intendedForQualification")
-        private final @Nullable Boolean intendedForQualification;
+      private final @Nullable Boolean intendedForQualification;
 
     public Optional<Boolean> getIntendedForQualification() {
         return this.intendedForQualification == null ? Optional.empty() : Optional.ofNullable(this.intendedForQualification);
     }
 
     @InputImport(name="rootGroup", required=true)
-        private final String rootGroup;
+      private final String rootGroup;
 
     public String getRootGroup() {
         return this.rootGroup;
     }
 
     @InputImport(name="suiteDefinitionName")
-        private final @Nullable String suiteDefinitionName;
+      private final @Nullable String suiteDefinitionName;
 
     public Optional<String> getSuiteDefinitionName() {
         return this.suiteDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.suiteDefinitionName);

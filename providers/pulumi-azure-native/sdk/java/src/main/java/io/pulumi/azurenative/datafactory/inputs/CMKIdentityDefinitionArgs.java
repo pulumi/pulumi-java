@@ -23,7 +23,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userAssignedIdentity")
-        private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;

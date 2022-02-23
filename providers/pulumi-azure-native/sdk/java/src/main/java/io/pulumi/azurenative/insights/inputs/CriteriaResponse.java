@@ -25,7 +25,7 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dimensions")
-        private final @Nullable List<DimensionResponse> dimensions;
+      private final @Nullable List<DimensionResponse> dimensions;
 
     public List<DimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
@@ -36,7 +36,7 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-        private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;

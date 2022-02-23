@@ -14,7 +14,7 @@ public final class FlowInforNexusSourcePropertiesArgs extends io.pulumi.resource
     public static final FlowInforNexusSourcePropertiesArgs Empty = new FlowInforNexusSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

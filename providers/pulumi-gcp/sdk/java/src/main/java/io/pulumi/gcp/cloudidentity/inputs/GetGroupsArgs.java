@@ -17,7 +17,7 @@ public final class GetGroupsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final String parent;
+      private final String parent;
 
     public String getParent() {
         return this.parent;

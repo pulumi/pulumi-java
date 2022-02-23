@@ -24,7 +24,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

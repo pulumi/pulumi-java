@@ -18,14 +18,14 @@ public final class WebACLTextTransformation extends io.pulumi.resources.InvokeAr
     public static final WebACLTextTransformation Empty = new WebACLTextTransformation();
 
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
     }
 
     @InputImport(name="type", required=true)
-        private final WebACLTextTransformationType type;
+      private final WebACLTextTransformationType type;
 
     public WebACLTextTransformationType getType() {
         return this.type;

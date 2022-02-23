@@ -15,14 +15,14 @@ public final class InstanceFromMachineImageReservationAffinitySpecificReservatio
     public static final InstanceFromMachineImageReservationAffinitySpecificReservationArgs Empty = new InstanceFromMachineImageReservationAffinitySpecificReservationArgs();
 
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

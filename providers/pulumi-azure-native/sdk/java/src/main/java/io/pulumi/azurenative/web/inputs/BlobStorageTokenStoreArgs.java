@@ -23,7 +23,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sasUrlSettingName")
-        private final @Nullable Input<String> sasUrlSettingName;
+      private final @Nullable Input<String> sasUrlSettingName;
 
     public Input<String> getSasUrlSettingName() {
         return this.sasUrlSettingName == null ? Input.empty() : this.sasUrlSettingName;

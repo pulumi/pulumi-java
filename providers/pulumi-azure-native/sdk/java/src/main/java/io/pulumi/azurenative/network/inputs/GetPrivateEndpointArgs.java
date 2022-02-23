@@ -19,7 +19,7 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="privateEndpointName", required=true)
-        private final String privateEndpointName;
+      private final String privateEndpointName;
 
     public String getPrivateEndpointName() {
         return this.privateEndpointName;
@@ -41,7 +41,7 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

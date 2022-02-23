@@ -20,7 +20,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
+      private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
 
     public Input<List<DataMaskingEntityArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -31,7 +31,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryParams")
-        private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
+      private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
 
     public Input<List<DataMaskingEntityArgs>> getQueryParams() {
         return this.queryParams == null ? Input.empty() : this.queryParams;

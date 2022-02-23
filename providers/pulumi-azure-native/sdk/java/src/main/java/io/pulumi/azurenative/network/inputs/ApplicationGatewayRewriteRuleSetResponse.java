@@ -25,7 +25,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -58,7 +58,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -69,7 +69,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="rewriteRules")
-        private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
+      private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
     public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {
         return this.rewriteRules == null ? List.of() : this.rewriteRules;

@@ -23,7 +23,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-        private final Input<List<String>> destinations;
+      private final Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations;
@@ -34,7 +34,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-        private final Input<String> nextHop;
+      private final Input<String> nextHop;
 
     public Input<String> getNextHop() {
         return this.nextHop;

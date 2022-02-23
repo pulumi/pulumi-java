@@ -17,7 +17,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="securityAlertPolicyName", required=true)
-        private final String securityAlertPolicyName;
+      private final String securityAlertPolicyName;
 
     public String getSecurityAlertPolicyName() {
         return this.securityAlertPolicyName;
@@ -39,7 +39,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

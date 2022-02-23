@@ -25,7 +25,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cmafPackage")
-        private final @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage;
+      private final @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
     public Input<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
         return this.cmafPackage == null ? Input.empty() : this.cmafPackage;
@@ -36,7 +36,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dashPackage")
-        private final @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage;
+      private final @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage;
 
     public Input<PackagingConfigurationDashPackageArgs> getDashPackage() {
         return this.dashPackage == null ? Input.empty() : this.dashPackage;
@@ -47,7 +47,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hlsPackage")
-        private final @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage;
+      private final @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
     public Input<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
         return this.hlsPackage == null ? Input.empty() : this.hlsPackage;
@@ -58,7 +58,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mssPackage")
-        private final @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage;
+      private final @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage;
 
     public Input<PackagingConfigurationMssPackageArgs> getMssPackage() {
         return this.mssPackage == null ? Input.empty() : this.mssPackage;
@@ -69,7 +69,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="packagingGroupId", required=true)
-        private final Input<String> packagingGroupId;
+      private final Input<String> packagingGroupId;
 
     public Input<String> getPackagingGroupId() {
         return this.packagingGroupId;
@@ -80,7 +80,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<PackagingConfigurationTagArgs>> tags;
+      private final @Nullable Input<List<PackagingConfigurationTagArgs>> tags;
 
     public Input<List<PackagingConfigurationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -20,14 +20,14 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="expression", required=true)
-        private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
     }
 
     @InputImport(name="valuesMap", required=true)
-        private final Input<List<DatasetFilterValueArgs>> valuesMap;
+      private final Input<List<DatasetFilterValueArgs>> valuesMap;
 
     public Input<List<DatasetFilterValueArgs>> getValuesMap() {
         return this.valuesMap;

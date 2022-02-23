@@ -19,28 +19,28 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @InputImport(name="channelName")
-        private final @Nullable Input<String> channelName;
+      private final @Nullable Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName == null ? Input.empty() : this.channelName;
     }
 
     @InputImport(name="channelStorage")
-        private final @Nullable Input<ChannelStorageArgs> channelStorage;
+      private final @Nullable Input<ChannelStorageArgs> channelStorage;
 
     public Input<ChannelStorageArgs> getChannelStorage() {
         return this.channelStorage == null ? Input.empty() : this.channelStorage;
     }
 
     @InputImport(name="retentionPeriod")
-        private final @Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod;
+      private final @Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod;
 
     public Input<ChannelRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<ChannelTagArgs>> tags;
+      private final @Nullable Input<List<ChannelTagArgs>> tags;
 
     public Input<List<ChannelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

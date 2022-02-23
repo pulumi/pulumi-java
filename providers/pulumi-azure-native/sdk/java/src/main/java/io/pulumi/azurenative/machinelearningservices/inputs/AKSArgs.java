@@ -24,7 +24,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeLocation")
-        private final @Nullable Input<String> computeLocation;
+      private final @Nullable Input<String> computeLocation;
 
     public Input<String> getComputeLocation() {
         return this.computeLocation == null ? Input.empty() : this.computeLocation;
@@ -36,7 +36,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeType", required=true)
-        private final Input<String> computeType;
+      private final Input<String> computeType;
 
     public Input<String> getComputeType() {
         return this.computeType;
@@ -47,7 +47,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<AKSPropertiesArgs> properties;
+      private final @Nullable Input<AKSPropertiesArgs> properties;
 
     public Input<AKSPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -69,7 +69,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

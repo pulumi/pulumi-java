@@ -21,7 +21,7 @@ public final class GatewayDestinationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="applicationName", required=true)
-        private final String applicationName;
+      private final String applicationName;
 
     public String getApplicationName() {
         return this.applicationName;
@@ -32,7 +32,7 @@ public final class GatewayDestinationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="endpointName", required=true)
-        private final String endpointName;
+      private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -43,7 +43,7 @@ public final class GatewayDestinationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

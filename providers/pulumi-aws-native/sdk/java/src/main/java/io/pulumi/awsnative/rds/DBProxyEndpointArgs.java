@@ -22,7 +22,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dBProxyEndpointName")
-        private final @Nullable Input<String> dBProxyEndpointName;
+      private final @Nullable Input<String> dBProxyEndpointName;
 
     public Input<String> getDBProxyEndpointName() {
         return this.dBProxyEndpointName == null ? Input.empty() : this.dBProxyEndpointName;
@@ -33,7 +33,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dBProxyName", required=true)
-        private final Input<String> dBProxyName;
+      private final Input<String> dBProxyName;
 
     public Input<String> getDBProxyName() {
         return this.dBProxyName;
@@ -44,7 +44,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags;
+      private final @Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags;
 
     public Input<List<DBProxyEndpointTagFormatArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -55,7 +55,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRole")
-        private final @Nullable Input<DBProxyEndpointTargetRole> targetRole;
+      private final @Nullable Input<DBProxyEndpointTargetRole> targetRole;
 
     public Input<DBProxyEndpointTargetRole> getTargetRole() {
         return this.targetRole == null ? Input.empty() : this.targetRole;
@@ -66,7 +66,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-        private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -77,7 +77,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-        private final Input<List<String>> vpcSubnetIds;
+      private final Input<List<String>> vpcSubnetIds;
 
     public Input<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;

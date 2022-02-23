@@ -24,7 +24,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="csrExtensions")
-        private final @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
+      private final @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
     public Input<CertificateAuthorityCsrExtensionsArgs> getCsrExtensions() {
         return this.csrExtensions == null ? Input.empty() : this.csrExtensions;
@@ -35,7 +35,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyAlgorithm", required=true)
-        private final Input<String> keyAlgorithm;
+      private final Input<String> keyAlgorithm;
 
     public Input<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
@@ -46,7 +46,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyStorageSecurityStandard")
-        private final @Nullable Input<String> keyStorageSecurityStandard;
+      private final @Nullable Input<String> keyStorageSecurityStandard;
 
     public Input<String> getKeyStorageSecurityStandard() {
         return this.keyStorageSecurityStandard == null ? Input.empty() : this.keyStorageSecurityStandard;
@@ -57,7 +57,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="revocationConfiguration")
-        private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+      private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     public Input<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
         return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
@@ -68,7 +68,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-        private final Input<String> signingAlgorithm;
+      private final Input<String> signingAlgorithm;
 
     public Input<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
@@ -79,14 +79,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subject", required=true)
-        private final Input<CertificateAuthoritySubjectArgs> subject;
+      private final Input<CertificateAuthoritySubjectArgs> subject;
 
     public Input<CertificateAuthoritySubjectArgs> getSubject() {
         return this.subject;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<CertificateAuthorityTagArgs>> tags;
+      private final @Nullable Input<List<CertificateAuthorityTagArgs>> tags;
 
     public Input<List<CertificateAuthorityTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -97,7 +97,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

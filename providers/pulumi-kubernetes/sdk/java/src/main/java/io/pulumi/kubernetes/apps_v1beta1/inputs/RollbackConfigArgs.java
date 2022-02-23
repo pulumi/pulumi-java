@@ -23,7 +23,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-        private final @Nullable Input<Integer> revision;
+      private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;

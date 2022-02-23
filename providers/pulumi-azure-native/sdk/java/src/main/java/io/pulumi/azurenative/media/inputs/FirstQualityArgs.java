@@ -22,7 +22,7 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-        private final Input<Integer> bitrate;
+      private final Input<Integer> bitrate;
 
     public Input<Integer> getBitrate() {
         return this.bitrate;

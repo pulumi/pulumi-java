@@ -33,7 +33,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-        private final @Nullable Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
+      private final @Nullable Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
 
     public Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
@@ -45,7 +45,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="canIpForward")
-        private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Input<Boolean> canIpForward;
 
     public Input<Boolean> getCanIpForward() {
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
@@ -56,7 +56,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-        private final @Nullable Input<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
+      private final @Nullable Input<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
 
     public Input<InstanceTemplateConfidentialInstanceConfigGetArgs> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
@@ -67,7 +67,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disks")
-        private final @Nullable Input<List<InstanceTemplateDiskGetArgs>> disks;
+      private final @Nullable Input<List<InstanceTemplateDiskGetArgs>> disks;
 
     public Input<List<InstanceTemplateDiskGetArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -92,7 +92,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableDisplay")
-        private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Input<Boolean> enableDisplay;
 
     public Input<Boolean> getEnableDisplay() {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
@@ -103,7 +103,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="guestAccelerators")
-        private final @Nullable Input<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators;
+      private final @Nullable Input<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators;
 
     public Input<List<InstanceTemplateGuestAcceleratorGetArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -115,7 +115,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceDescription")
-        private final @Nullable Input<String> instanceDescription;
+      private final @Nullable Input<String> instanceDescription;
 
     public Input<String> getInstanceDescription() {
         return this.instanceDescription == null ? Input.empty() : this.instanceDescription;
@@ -127,7 +127,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -138,7 +138,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="machineType")
-        private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -150,7 +150,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Input<Map<String,Object>> metadata;
 
     public Input<Map<String,Object>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -161,7 +161,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadataFingerprint")
-        private final @Nullable Input<String> metadataFingerprint;
+      private final @Nullable Input<String> metadataFingerprint;
 
     public Input<String> getMetadataFingerprint() {
         return this.metadataFingerprint == null ? Input.empty() : this.metadataFingerprint;
@@ -175,7 +175,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadataStartupScript")
-        private final @Nullable Input<String> metadataStartupScript;
+      private final @Nullable Input<String> metadataStartupScript;
 
     public Input<String> getMetadataStartupScript() {
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
@@ -187,7 +187,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minCpuPlatform")
-        private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -199,7 +199,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -211,7 +211,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-        private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -224,7 +224,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaces")
-        private final @Nullable Input<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Input<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Input<List<InstanceTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -240,7 +240,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-        private final @Nullable Input<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
+      private final @Nullable Input<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
 
     public Input<InstanceTemplateNetworkPerformanceConfigGetArgs> getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
@@ -252,7 +252,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -268,7 +268,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -280,7 +280,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reservationAffinity")
-        private final @Nullable Input<InstanceTemplateReservationAffinityGetArgs> reservationAffinity;
+      private final @Nullable Input<InstanceTemplateReservationAffinityGetArgs> reservationAffinity;
 
     public Input<InstanceTemplateReservationAffinityGetArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -292,7 +292,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduling")
-        private final @Nullable Input<InstanceTemplateSchedulingGetArgs> scheduling;
+      private final @Nullable Input<InstanceTemplateSchedulingGetArgs> scheduling;
 
     public Input<InstanceTemplateSchedulingGetArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -303,7 +303,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -314,7 +314,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceAccount")
-        private final @Nullable Input<InstanceTemplateServiceAccountGetArgs> serviceAccount;
+      private final @Nullable Input<InstanceTemplateServiceAccountGetArgs> serviceAccount;
 
     public Input<InstanceTemplateServiceAccountGetArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -326,7 +326,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-        private final @Nullable Input<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+      private final @Nullable Input<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Input<InstanceTemplateShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -337,7 +337,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -348,7 +348,7 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsFingerprint")
-        private final @Nullable Input<String> tagsFingerprint;
+      private final @Nullable Input<String> tagsFingerprint;
 
     public Input<String> getTagsFingerprint() {
         return this.tagsFingerprint == null ? Input.empty() : this.tagsFingerprint;

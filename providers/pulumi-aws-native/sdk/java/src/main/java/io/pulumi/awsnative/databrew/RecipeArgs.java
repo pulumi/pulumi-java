@@ -22,7 +22,7 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,21 +33,21 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="steps", required=true)
-        private final Input<List<RecipeStepArgs>> steps;
+      private final Input<List<RecipeStepArgs>> steps;
 
     public Input<List<RecipeStepArgs>> getSteps() {
         return this.steps;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<RecipeTagArgs>> tags;
+      private final @Nullable Input<List<RecipeTagArgs>> tags;
 
     public Input<List<RecipeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

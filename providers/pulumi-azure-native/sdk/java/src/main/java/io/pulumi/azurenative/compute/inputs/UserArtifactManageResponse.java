@@ -19,7 +19,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="install", required=true)
-        private final String install;
+      private final String install;
 
     public String getInstall() {
         return this.install;
@@ -30,7 +30,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="remove", required=true)
-        private final String remove;
+      private final String remove;
 
     public String getRemove() {
         return this.remove;
@@ -41,7 +41,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="update")
-        private final @Nullable String update;
+      private final @Nullable String update;
 
     public Optional<String> getUpdate() {
         return this.update == null ? Optional.empty() : Optional.ofNullable(this.update);

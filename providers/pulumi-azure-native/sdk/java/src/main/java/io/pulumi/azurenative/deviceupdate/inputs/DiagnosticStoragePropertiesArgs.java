@@ -25,7 +25,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<Either<String,AuthenticationType>> authenticationType;
+      private final Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
@@ -36,7 +36,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionString")
-        private final @Nullable Input<String> connectionString;
+      private final @Nullable Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -47,7 +47,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;

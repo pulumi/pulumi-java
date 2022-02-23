@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="destIpRanges")
-        private final @Nullable Input<List<String>> destIpRanges;
+      private final @Nullable Input<List<String>> destIpRanges;
 
     public Input<List<String>> getDestIpRanges() {
         return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
@@ -34,7 +34,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-        private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs;
+      private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs;
 
     public Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> getLayer4Configs() {
         return this.layer4Configs;
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="srcIpRanges")
-        private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;

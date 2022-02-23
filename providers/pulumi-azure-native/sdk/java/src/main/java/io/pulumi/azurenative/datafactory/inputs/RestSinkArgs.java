@@ -24,7 +24,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalHeaders")
-        private final @Nullable Input<Object> additionalHeaders;
+      private final @Nullable Input<Object> additionalHeaders;
 
     public Input<Object> getAdditionalHeaders() {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
@@ -35,7 +35,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -46,7 +46,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpCompressionType")
-        private final @Nullable Input<Object> httpCompressionType;
+      private final @Nullable Input<Object> httpCompressionType;
 
     public Input<Object> getHttpCompressionType() {
         return this.httpCompressionType == null ? Input.empty() : this.httpCompressionType;
@@ -57,7 +57,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpRequestTimeout")
-        private final @Nullable Input<Object> httpRequestTimeout;
+      private final @Nullable Input<Object> httpRequestTimeout;
 
     public Input<Object> getHttpRequestTimeout() {
         return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
@@ -68,7 +68,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -79,7 +79,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestInterval")
-        private final @Nullable Input<Object> requestInterval;
+      private final @Nullable Input<Object> requestInterval;
 
     public Input<Object> getRequestInterval() {
         return this.requestInterval == null ? Input.empty() : this.requestInterval;
@@ -90,7 +90,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMethod")
-        private final @Nullable Input<Object> requestMethod;
+      private final @Nullable Input<Object> requestMethod;
 
     public Input<Object> getRequestMethod() {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
@@ -101,7 +101,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Input<Object> sinkRetryCount;
 
     public Input<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
@@ -112,7 +112,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Input<Object> sinkRetryWait;
 
     public Input<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
@@ -124,7 +124,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -135,7 +135,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Input<Object> writeBatchSize;
 
     public Input<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
@@ -146,7 +146,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Input<Object> writeBatchTimeout;
 
     public Input<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;

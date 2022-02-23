@@ -17,7 +17,7 @@ public final class GetStageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-        private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;
@@ -28,7 +28,7 @@ public final class GetStageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-        private final String stageName;
+      private final String stageName;
 
     public String getStageName() {
         return this.stageName;

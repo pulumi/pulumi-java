@@ -22,7 +22,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2SubnetIds", required=true)
-        private final Input<List<String>> ec2SubnetIds;
+      private final Input<List<String>> ec2SubnetIds;
 
     public Input<List<String>> getEc2SubnetIds() {
         return this.ec2SubnetIds;
@@ -46,7 +46,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchProfileProtocolVersions", required=true)
-        private final Input<List<String>> launchProfileProtocolVersions;
+      private final Input<List<String>> launchProfileProtocolVersions;
 
     public Input<List<String>> getLaunchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
@@ -57,14 +57,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="streamConfiguration", required=true)
-        private final Input<LaunchProfileStreamConfigurationArgs> streamConfiguration;
+      private final Input<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
     public Input<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
         return this.streamConfiguration;
@@ -76,7 +76,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioComponentIds", required=true)
-        private final Input<List<String>> studioComponentIds;
+      private final Input<List<String>> studioComponentIds;
 
     public Input<List<String>> getStudioComponentIds() {
         return this.studioComponentIds;
@@ -87,14 +87,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioId", required=true)
-        private final Input<String> studioId;
+      private final Input<String> studioId;
 
     public Input<String> getStudioId() {
         return this.studioId;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<LaunchProfileTagsArgs> tags;
+      private final @Nullable Input<LaunchProfileTagsArgs> tags;
 
     public Input<LaunchProfileTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

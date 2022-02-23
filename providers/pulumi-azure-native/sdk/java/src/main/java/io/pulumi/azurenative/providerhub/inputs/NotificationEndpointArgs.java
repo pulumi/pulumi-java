@@ -16,14 +16,14 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
     public static final NotificationEndpointArgs Empty = new NotificationEndpointArgs();
 
     @InputImport(name="locations")
-        private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
     @InputImport(name="notificationDestination")
-        private final @Nullable Input<String> notificationDestination;
+      private final @Nullable Input<String> notificationDestination;
 
     public Input<String> getNotificationDestination() {
         return this.notificationDestination == null ? Input.empty() : this.notificationDestination;

@@ -22,7 +22,7 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
      * 
      */
     @InputImport(name="mode", required=true)
-        private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;

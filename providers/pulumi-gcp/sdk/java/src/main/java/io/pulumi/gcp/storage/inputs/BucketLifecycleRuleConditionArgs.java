@@ -21,7 +21,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="age")
-        private final @Nullable Input<Integer> age;
+      private final @Nullable Input<Integer> age;
 
     public Input<Integer> getAge() {
         return this.age == null ? Input.empty() : this.age;
@@ -32,7 +32,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createdBefore")
-        private final @Nullable Input<String> createdBefore;
+      private final @Nullable Input<String> createdBefore;
 
     public Input<String> getCreatedBefore() {
         return this.createdBefore == null ? Input.empty() : this.createdBefore;
@@ -43,7 +43,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="customTimeBefore")
-        private final @Nullable Input<String> customTimeBefore;
+      private final @Nullable Input<String> customTimeBefore;
 
     public Input<String> getCustomTimeBefore() {
         return this.customTimeBefore == null ? Input.empty() : this.customTimeBefore;
@@ -54,7 +54,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="daysSinceCustomTime")
-        private final @Nullable Input<Integer> daysSinceCustomTime;
+      private final @Nullable Input<Integer> daysSinceCustomTime;
 
     public Input<Integer> getDaysSinceCustomTime() {
         return this.daysSinceCustomTime == null ? Input.empty() : this.daysSinceCustomTime;
@@ -65,7 +65,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="daysSinceNoncurrentTime")
-        private final @Nullable Input<Integer> daysSinceNoncurrentTime;
+      private final @Nullable Input<Integer> daysSinceNoncurrentTime;
 
     public Input<Integer> getDaysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime == null ? Input.empty() : this.daysSinceNoncurrentTime;
@@ -76,7 +76,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="matchesStorageClasses")
-        private final @Nullable Input<List<String>> matchesStorageClasses;
+      private final @Nullable Input<List<String>> matchesStorageClasses;
 
     public Input<List<String>> getMatchesStorageClasses() {
         return this.matchesStorageClasses == null ? Input.empty() : this.matchesStorageClasses;
@@ -87,7 +87,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="noncurrentTimeBefore")
-        private final @Nullable Input<String> noncurrentTimeBefore;
+      private final @Nullable Input<String> noncurrentTimeBefore;
 
     public Input<String> getNoncurrentTimeBefore() {
         return this.noncurrentTimeBefore == null ? Input.empty() : this.noncurrentTimeBefore;
@@ -98,7 +98,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="numNewerVersions")
-        private final @Nullable Input<Integer> numNewerVersions;
+      private final @Nullable Input<Integer> numNewerVersions;
 
     public Input<Integer> getNumNewerVersions() {
         return this.numNewerVersions == null ? Input.empty() : this.numNewerVersions;
@@ -109,7 +109,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="withState")
-        private final @Nullable Input<String> withState;
+      private final @Nullable Input<String> withState;
 
     public Input<String> getWithState() {
         return this.withState == null ? Input.empty() : this.withState;

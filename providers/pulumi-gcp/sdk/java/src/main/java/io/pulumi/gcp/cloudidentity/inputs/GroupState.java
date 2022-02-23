@@ -21,7 +21,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -56,7 +56,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupKey")
-        private final @Nullable Input<GroupGroupKeyGetArgs> groupKey;
+      private final @Nullable Input<GroupGroupKeyGetArgs> groupKey;
 
     public Input<GroupGroupKeyGetArgs> getGroupKey() {
         return this.groupKey == null ? Input.empty() : this.groupKey;
@@ -72,7 +72,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialGroupConfig")
-        private final @Nullable Input<String> initialGroupConfig;
+      private final @Nullable Input<String> initialGroupConfig;
 
     public Input<String> getInitialGroupConfig() {
         return this.initialGroupConfig == null ? Input.empty() : this.initialGroupConfig;
@@ -86,7 +86,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -97,7 +97,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -111,7 +111,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -122,7 +122,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

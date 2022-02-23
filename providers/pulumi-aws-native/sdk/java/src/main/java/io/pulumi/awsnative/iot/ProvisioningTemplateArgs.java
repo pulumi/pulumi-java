@@ -19,49 +19,49 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
     public static final ProvisioningTemplateArgs Empty = new ProvisioningTemplateArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="preProvisioningHook")
-        private final @Nullable Input<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
+      private final @Nullable Input<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
 
     public Input<ProvisioningTemplateProvisioningHookArgs> getPreProvisioningHook() {
         return this.preProvisioningHook == null ? Input.empty() : this.preProvisioningHook;
     }
 
     @InputImport(name="provisioningRoleArn", required=true)
-        private final Input<String> provisioningRoleArn;
+      private final Input<String> provisioningRoleArn;
 
     public Input<String> getProvisioningRoleArn() {
         return this.provisioningRoleArn;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<ProvisioningTemplateTagArgs>> tags;
+      private final @Nullable Input<List<ProvisioningTemplateTagArgs>> tags;
 
     public Input<List<ProvisioningTemplateTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="templateBody", required=true)
-        private final Input<String> templateBody;
+      private final Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody;
     }
 
     @InputImport(name="templateName")
-        private final @Nullable Input<String> templateName;
+      private final @Nullable Input<String> templateName;
 
     public Input<String> getTemplateName() {
         return this.templateName == null ? Input.empty() : this.templateName;

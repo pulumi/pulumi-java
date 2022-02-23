@@ -20,7 +20,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     public static final ClusterArgs Empty = new ClusterArgs();
 
     @InputImport(name="capacityProviders")
-        private final @Nullable Input<List<String>> capacityProviders;
+      private final @Nullable Input<List<String>> capacityProviders;
 
     public Input<List<String>> getCapacityProviders() {
         return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
@@ -31,35 +31,35 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-        private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
     @InputImport(name="clusterSettings")
-        private final @Nullable Input<List<ClusterSettingsArgs>> clusterSettings;
+      private final @Nullable Input<List<ClusterSettingsArgs>> clusterSettings;
 
     public Input<List<ClusterSettingsArgs>> getClusterSettings() {
         return this.clusterSettings == null ? Input.empty() : this.clusterSettings;
     }
 
     @InputImport(name="configuration")
-        private final @Nullable Input<ClusterConfigurationArgs> configuration;
+      private final @Nullable Input<ClusterConfigurationArgs> configuration;
 
     public Input<ClusterConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
     @InputImport(name="defaultCapacityProviderStrategy")
-        private final @Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
+      private final @Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
 
     public Input<List<ClusterCapacityProviderStrategyItemArgs>> getDefaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy == null ? Input.empty() : this.defaultCapacityProviderStrategy;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<ClusterTagArgs>> tags;
+      private final @Nullable Input<List<ClusterTagArgs>> tags;
 
     public Input<List<ClusterTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

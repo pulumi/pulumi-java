@@ -13,7 +13,7 @@ public final class GetCapacityReservationFleetArgs extends io.pulumi.resources.I
     public static final GetCapacityReservationFleetArgs Empty = new GetCapacityReservationFleetArgs();
 
     @InputImport(name="capacityReservationFleetId", required=true)
-        private final String capacityReservationFleetId;
+      private final String capacityReservationFleetId;
 
     public String getCapacityReservationFleetId() {
         return this.capacityReservationFleetId;

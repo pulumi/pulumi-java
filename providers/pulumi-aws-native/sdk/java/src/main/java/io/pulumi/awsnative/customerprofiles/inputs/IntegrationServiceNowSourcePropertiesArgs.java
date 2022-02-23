@@ -14,7 +14,7 @@ public final class IntegrationServiceNowSourcePropertiesArgs extends io.pulumi.r
     public static final IntegrationServiceNowSourcePropertiesArgs Empty = new IntegrationServiceNowSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

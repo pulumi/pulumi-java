@@ -15,14 +15,14 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     public static final EnvironmentSettingArgs Empty = new EnvironmentSettingArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

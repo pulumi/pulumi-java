@@ -19,7 +19,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-        private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -42,7 +42,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -54,7 +54,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);

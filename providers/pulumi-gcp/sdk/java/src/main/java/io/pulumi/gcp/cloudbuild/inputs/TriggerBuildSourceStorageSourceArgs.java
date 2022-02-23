@@ -19,7 +19,7 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -31,7 +31,7 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="generation")
-        private final @Nullable Input<String> generation;
+      private final @Nullable Input<String> generation;
 
     public Input<String> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -43,7 +43,7 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

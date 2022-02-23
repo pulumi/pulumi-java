@@ -24,7 +24,7 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="periodicModeProperties")
-        private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
+      private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
 
     public Optional<PeriodicModePropertiesResponse> getPeriodicModeProperties() {
         return this.periodicModeProperties == null ? Optional.empty() : Optional.ofNullable(this.periodicModeProperties);
@@ -36,7 +36,7 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

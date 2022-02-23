@@ -24,7 +24,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final String endpointType;
+      private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);

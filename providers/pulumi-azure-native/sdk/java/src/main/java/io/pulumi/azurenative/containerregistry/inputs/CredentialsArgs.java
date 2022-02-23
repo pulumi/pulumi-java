@@ -28,7 +28,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRegistries")
-        private final @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
+      private final @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
     public Input<Map<String,CustomRegistryCredentialsArgs>> getCustomRegistries() {
         return this.customRegistries == null ? Input.empty() : this.customRegistries;
@@ -39,7 +39,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegistry")
-        private final @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
+      private final @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
 
     public Input<SourceRegistryCredentialsArgs> getSourceRegistry() {
         return this.sourceRegistry == null ? Input.empty() : this.sourceRegistry;

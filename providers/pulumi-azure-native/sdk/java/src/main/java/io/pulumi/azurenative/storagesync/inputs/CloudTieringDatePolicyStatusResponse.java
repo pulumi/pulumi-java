@@ -21,7 +21,7 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastUpdatedTimestamp", required=true)
-        private final String lastUpdatedTimestamp;
+      private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -32,7 +32,7 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="tieredFilesMostRecentAccessTimestamp", required=true)
-        private final String tieredFilesMostRecentAccessTimestamp;
+      private final String tieredFilesMostRecentAccessTimestamp;
 
     public String getTieredFilesMostRecentAccessTimestamp() {
         return this.tieredFilesMostRecentAccessTimestamp;

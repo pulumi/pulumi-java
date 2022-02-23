@@ -18,7 +18,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="certificateArn", required=true)
-        private final Input<String> certificateArn;
+      private final Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn;
@@ -29,7 +29,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

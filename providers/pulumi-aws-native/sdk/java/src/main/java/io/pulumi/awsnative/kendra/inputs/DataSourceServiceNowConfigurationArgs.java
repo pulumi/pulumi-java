@@ -19,42 +19,42 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
     public static final DataSourceServiceNowConfigurationArgs Empty = new DataSourceServiceNowConfigurationArgs();
 
     @InputImport(name="authenticationType")
-        private final @Nullable Input<DataSourceServiceNowAuthenticationType> authenticationType;
+      private final @Nullable Input<DataSourceServiceNowAuthenticationType> authenticationType;
 
     public Input<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
     @InputImport(name="hostUrl", required=true)
-        private final Input<String> hostUrl;
+      private final Input<String> hostUrl;
 
     public Input<String> getHostUrl() {
         return this.hostUrl;
     }
 
     @InputImport(name="knowledgeArticleConfiguration")
-        private final @Nullable Input<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
+      private final @Nullable Input<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
     public Input<DataSourceServiceNowKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Input.empty() : this.knowledgeArticleConfiguration;
     }
 
     @InputImport(name="secretArn", required=true)
-        private final Input<String> secretArn;
+      private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="serviceCatalogConfiguration")
-        private final @Nullable Input<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
+      private final @Nullable Input<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
 
     public Input<DataSourceServiceNowServiceCatalogConfigurationArgs> getServiceCatalogConfiguration() {
         return this.serviceCatalogConfiguration == null ? Input.empty() : this.serviceCatalogConfiguration;
     }
 
     @InputImport(name="serviceNowBuildVersion", required=true)
-        private final Input<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
+      private final Input<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
 
     public Input<DataSourceServiceNowBuildVersionType> getServiceNowBuildVersion() {
         return this.serviceNowBuildVersion;

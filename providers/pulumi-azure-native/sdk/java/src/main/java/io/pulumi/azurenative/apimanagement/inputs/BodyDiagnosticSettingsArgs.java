@@ -23,7 +23,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bytes")
-        private final @Nullable Input<Integer> bytes;
+      private final @Nullable Input<Integer> bytes;
 
     public Input<Integer> getBytes() {
         return this.bytes == null ? Input.empty() : this.bytes;

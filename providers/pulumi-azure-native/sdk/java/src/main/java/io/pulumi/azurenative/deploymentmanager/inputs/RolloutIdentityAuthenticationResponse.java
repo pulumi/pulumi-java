@@ -22,7 +22,7 @@ public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

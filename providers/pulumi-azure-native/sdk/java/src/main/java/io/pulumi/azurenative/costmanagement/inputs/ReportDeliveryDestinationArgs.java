@@ -23,7 +23,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="container", required=true)
-        private final Input<String> container;
+      private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -45,7 +45,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rootFolderPath")
-        private final @Nullable Input<String> rootFolderPath;
+      private final @Nullable Input<String> rootFolderPath;
 
     public Input<String> getRootFolderPath() {
         return this.rootFolderPath == null ? Input.empty() : this.rootFolderPath;

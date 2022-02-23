@@ -21,7 +21,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkSettings")
-        private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+      private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
     public Input<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
         return this.networkSettings == null ? Input.empty() : this.networkSettings;
@@ -33,7 +33,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;

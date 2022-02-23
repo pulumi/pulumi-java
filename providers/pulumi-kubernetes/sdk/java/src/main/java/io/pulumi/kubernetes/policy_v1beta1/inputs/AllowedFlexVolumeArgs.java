@@ -22,7 +22,7 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="driver", required=true)
-        private final Input<String> driver;
+      private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;

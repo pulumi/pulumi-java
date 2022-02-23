@@ -24,21 +24,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
 
     @InputImport(name="checkExpression", required=true)
-        private final Input<String> checkExpression;
+      private final Input<String> checkExpression;
 
     public Input<String> getCheckExpression() {
         return this.checkExpression;
     }
 
     @InputImport(name="columnSelectors")
-        private final @Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors;
+      private final @Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors;
 
     public Input<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
         return this.columnSelectors == null ? Input.empty() : this.columnSelectors;
     }
 
     @InputImport(name="disabled")
-        private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -49,21 +49,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="substitutionMap")
-        private final @Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap;
+      private final @Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
     public Input<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
         return this.substitutionMap == null ? Input.empty() : this.substitutionMap;
     }
 
     @InputImport(name="threshold")
-        private final @Nullable Input<RulesetThresholdArgs> threshold;
+      private final @Nullable Input<RulesetThresholdArgs> threshold;
 
     public Input<RulesetThresholdArgs> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;

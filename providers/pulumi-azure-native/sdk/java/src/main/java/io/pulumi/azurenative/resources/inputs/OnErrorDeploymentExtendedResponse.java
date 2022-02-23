@@ -23,7 +23,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="deploymentName")
-        private final @Nullable String deploymentName;
+      private final @Nullable String deploymentName;
 
     public Optional<String> getDeploymentName() {
         return this.deploymentName == null ? Optional.empty() : Optional.ofNullable(this.deploymentName);
@@ -34,7 +34,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -45,7 +45,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

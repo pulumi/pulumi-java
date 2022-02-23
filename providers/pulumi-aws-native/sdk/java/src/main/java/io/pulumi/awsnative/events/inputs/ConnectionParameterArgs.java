@@ -16,21 +16,21 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 
     @InputImport(name="isValueSecret")
-        private final @Nullable Input<Boolean> isValueSecret;
+      private final @Nullable Input<Boolean> isValueSecret;
 
     public Input<Boolean> getIsValueSecret() {
         return this.isValueSecret == null ? Input.empty() : this.isValueSecret;
     }
 
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

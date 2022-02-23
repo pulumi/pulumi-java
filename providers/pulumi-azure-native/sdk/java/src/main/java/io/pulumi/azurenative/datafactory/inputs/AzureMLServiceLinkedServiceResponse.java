@@ -31,7 +31,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -53,7 +53,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -64,7 +64,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -75,7 +75,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mlWorkspaceName", required=true)
-        private final Object mlWorkspaceName;
+      private final Object mlWorkspaceName;
 
     public Object getMlWorkspaceName() {
         return this.mlWorkspaceName;
@@ -86,7 +86,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -97,7 +97,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Object resourceGroupName;
+      private final Object resourceGroupName;
 
     public Object getResourceGroupName() {
         return this.resourceGroupName;
@@ -108,7 +108,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalId")
-        private final @Nullable Object servicePrincipalId;
+      private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -119,7 +119,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalKey")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
@@ -130,7 +130,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-        private final Object subscriptionId;
+      private final Object subscriptionId;
 
     public Object getSubscriptionId() {
         return this.subscriptionId;
@@ -141,7 +141,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tenant")
-        private final @Nullable Object tenant;
+      private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -153,7 +153,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

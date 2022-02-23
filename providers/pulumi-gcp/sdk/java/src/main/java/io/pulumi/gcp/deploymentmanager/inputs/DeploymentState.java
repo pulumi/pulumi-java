@@ -29,7 +29,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createPolicy")
-        private final @Nullable Input<String> createPolicy;
+      private final @Nullable Input<String> createPolicy;
 
     public Input<String> getCreatePolicy() {
         return this.createPolicy == null ? Input.empty() : this.createPolicy;
@@ -47,7 +47,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletePolicy")
-        private final @Nullable Input<String> deletePolicy;
+      private final @Nullable Input<String> deletePolicy;
 
     public Input<String> getDeletePolicy() {
         return this.deletePolicy == null ? Input.empty() : this.deletePolicy;
@@ -58,7 +58,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentId")
-        private final @Nullable Input<String> deploymentId;
+      private final @Nullable Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
@@ -69,7 +69,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<List<DeploymentLabelGetArgs>> labels;
+      private final @Nullable Input<List<DeploymentLabelGetArgs>> labels;
 
     public Input<List<DeploymentLabelGetArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -92,7 +92,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifest")
-        private final @Nullable Input<String> manifest;
+      private final @Nullable Input<String> manifest;
 
     public Input<String> getManifest() {
         return this.manifest == null ? Input.empty() : this.manifest;
@@ -104,7 +104,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -122,7 +122,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-        private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -134,7 +134,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -158,7 +158,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<DeploymentTargetGetArgs> target;
+      private final @Nullable Input<DeploymentTargetGetArgs> target;
 
     public Input<DeploymentTargetGetArgs> getTarget() {
         return this.target == null ? Input.empty() : this.target;

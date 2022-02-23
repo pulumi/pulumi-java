@@ -16,14 +16,14 @@ public final class GroupConfigurationParameter extends io.pulumi.resources.Invok
     public static final GroupConfigurationParameter Empty = new GroupConfigurationParameter();
 
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="values")
-        private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

@@ -14,14 +14,14 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     public static final DeliveryStreamKinesisStreamSourceConfigurationArgs Empty = new DeliveryStreamKinesisStreamSourceConfigurationArgs();
 
     @InputImport(name="kinesisStreamARN", required=true)
-        private final Input<String> kinesisStreamARN;
+      private final Input<String> kinesisStreamARN;
 
     public Input<String> getKinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
     @InputImport(name="roleARN", required=true)
-        private final Input<String> roleARN;
+      private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;

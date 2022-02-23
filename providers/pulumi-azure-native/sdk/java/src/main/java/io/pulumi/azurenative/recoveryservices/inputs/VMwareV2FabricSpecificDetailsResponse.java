@@ -22,7 +22,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -33,7 +33,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="migrationSolutionId", required=true)
-        private final String migrationSolutionId;
+      private final String migrationSolutionId;
 
     public String getMigrationSolutionId() {
         return this.migrationSolutionId;
@@ -44,7 +44,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="serviceEndpoint", required=true)
-        private final String serviceEndpoint;
+      private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
@@ -55,7 +55,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="serviceResourceId", required=true)
-        private final String serviceResourceId;
+      private final String serviceResourceId;
 
     public String getServiceResourceId() {
         return this.serviceResourceId;
@@ -66,7 +66,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmwareSiteId", required=true)
-        private final String vmwareSiteId;
+      private final String vmwareSiteId;
 
     public String getVmwareSiteId() {
         return this.vmwareSiteId;

@@ -23,7 +23,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cert")
-        private final @Nullable String cert;
+      private final @Nullable String cert;
 
     public Optional<String> getCert() {
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
@@ -34,7 +34,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cname")
-        private final @Nullable String cname;
+      private final @Nullable String cname;
 
     public Optional<String> getCname() {
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
@@ -45,7 +45,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -56,7 +56,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

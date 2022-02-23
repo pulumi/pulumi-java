@@ -23,7 +23,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldPath", required=true)
-        private final Input<String> fieldPath;
+      private final Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath;

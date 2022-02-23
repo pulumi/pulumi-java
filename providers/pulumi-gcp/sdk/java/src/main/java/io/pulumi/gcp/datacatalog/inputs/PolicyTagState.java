@@ -20,7 +20,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childPolicyTags")
-        private final @Nullable Input<List<String>> childPolicyTags;
+      private final @Nullable Input<List<String>> childPolicyTags;
 
     public Input<List<String>> getChildPolicyTags() {
         return this.childPolicyTags == null ? Input.empty() : this.childPolicyTags;
@@ -34,7 +34,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -59,7 +59,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentPolicyTag")
-        private final @Nullable Input<String> parentPolicyTag;
+      private final @Nullable Input<String> parentPolicyTag;
 
     public Input<String> getParentPolicyTag() {
         return this.parentPolicyTag == null ? Input.empty() : this.parentPolicyTag;
@@ -83,7 +83,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taxonomy")
-        private final @Nullable Input<String> taxonomy;
+      private final @Nullable Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy == null ? Input.empty() : this.taxonomy;

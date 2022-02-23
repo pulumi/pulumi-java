@@ -18,7 +18,7 @@ public final class AwsNodePoolConfigSshConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ec2KeyPair", required=true)
-        private final Input<String> ec2KeyPair;
+      private final Input<String> ec2KeyPair;
 
     public Input<String> getEc2KeyPair() {
         return this.ec2KeyPair;

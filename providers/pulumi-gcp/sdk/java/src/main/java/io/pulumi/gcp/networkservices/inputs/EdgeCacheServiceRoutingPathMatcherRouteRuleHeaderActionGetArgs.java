@@ -24,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="requestHeaderToAdds")
-        private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> getRequestHeaderToAdds() {
         return this.requestHeaderToAdds == null ? Input.empty() : this.requestHeaderToAdds;
@@ -36,7 +36,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="requestHeaderToRemoves")
-        private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> getRequestHeaderToRemoves() {
         return this.requestHeaderToRemoves == null ? Input.empty() : this.requestHeaderToRemoves;
@@ -49,7 +49,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="responseHeaderToAdds")
-        private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> getResponseHeaderToAdds() {
         return this.responseHeaderToAdds == null ? Input.empty() : this.responseHeaderToAdds;
@@ -61,7 +61,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="responseHeaderToRemoves")
-        private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> getResponseHeaderToRemoves() {
         return this.responseHeaderToRemoves == null ? Input.empty() : this.responseHeaderToRemoves;

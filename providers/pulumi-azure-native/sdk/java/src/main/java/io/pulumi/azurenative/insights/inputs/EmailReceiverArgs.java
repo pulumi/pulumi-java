@@ -24,7 +24,7 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress", required=true)
-        private final Input<String> emailAddress;
+      private final Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress;
@@ -35,7 +35,7 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-        private final @Nullable Input<Boolean> useCommonAlertSchema;
+      private final @Nullable Input<Boolean> useCommonAlertSchema;
 
     public Input<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;

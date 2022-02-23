@@ -21,7 +21,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminRoleArn", required=true)
-        private final Input<String> adminRoleArn;
+      private final Input<String> adminRoleArn;
 
     public Input<String> getAdminRoleArn() {
         return this.adminRoleArn;
@@ -32,14 +32,14 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="studioEncryptionConfiguration")
-        private final @Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
+      private final @Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
     public Input<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
         return this.studioEncryptionConfiguration == null ? Input.empty() : this.studioEncryptionConfiguration;
@@ -50,14 +50,14 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioName")
-        private final @Nullable Input<String> studioName;
+      private final @Nullable Input<String> studioName;
 
     public Input<String> getStudioName() {
         return this.studioName == null ? Input.empty() : this.studioName;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<StudioTagsArgs> tags;
+      private final @Nullable Input<StudioTagsArgs> tags;
 
     public Input<StudioTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -68,7 +68,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRoleArn", required=true)
-        private final Input<String> userRoleArn;
+      private final Input<String> userRoleArn;
 
     public Input<String> getUserRoleArn() {
         return this.userRoleArn;

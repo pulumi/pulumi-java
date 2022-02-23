@@ -23,7 +23,7 @@ public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -35,7 +35,7 @@ public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

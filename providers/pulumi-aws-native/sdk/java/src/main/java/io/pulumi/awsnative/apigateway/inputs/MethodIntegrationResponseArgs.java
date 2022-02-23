@@ -21,7 +21,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="contentHandling")
-        private final @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling;
+      private final @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling;
 
     public Input<MethodIntegrationResponseContentHandling> getContentHandling() {
         return this.contentHandling == null ? Input.empty() : this.contentHandling;
@@ -32,7 +32,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseParameters")
-        private final @Nullable Input<Object> responseParameters;
+      private final @Nullable Input<Object> responseParameters;
 
     public Input<Object> getResponseParameters() {
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
@@ -43,7 +43,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseTemplates")
-        private final @Nullable Input<Object> responseTemplates;
+      private final @Nullable Input<Object> responseTemplates;
 
     public Input<Object> getResponseTemplates() {
         return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
@@ -54,7 +54,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selectionPattern")
-        private final @Nullable Input<String> selectionPattern;
+      private final @Nullable Input<String> selectionPattern;
 
     public Input<String> getSelectionPattern() {
         return this.selectionPattern == null ? Input.empty() : this.selectionPattern;
@@ -65,7 +65,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statusCode", required=true)
-        private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

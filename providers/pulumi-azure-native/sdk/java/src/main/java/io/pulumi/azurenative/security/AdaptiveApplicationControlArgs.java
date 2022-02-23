@@ -23,7 +23,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ascLocation", required=true)
-        private final Input<String> ascLocation;
+      private final Input<String> ascLocation;
 
     public Input<String> getAscLocation() {
         return this.ascLocation;
@@ -34,7 +34,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enforcementMode")
-        private final @Nullable Input<String> enforcementMode;
+      private final @Nullable Input<String> enforcementMode;
 
     public Input<String> getEnforcementMode() {
         return this.enforcementMode == null ? Input.empty() : this.enforcementMode;
@@ -45,14 +45,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="groupName")
-        private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
     }
 
     @InputImport(name="pathRecommendations")
-        private final @Nullable Input<List<PathRecommendationArgs>> pathRecommendations;
+      private final @Nullable Input<List<PathRecommendationArgs>> pathRecommendations;
 
     public Input<List<PathRecommendationArgs>> getPathRecommendations() {
         return this.pathRecommendations == null ? Input.empty() : this.pathRecommendations;
@@ -63,14 +63,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="protectionMode")
-        private final @Nullable Input<ProtectionModeArgs> protectionMode;
+      private final @Nullable Input<ProtectionModeArgs> protectionMode;
 
     public Input<ProtectionModeArgs> getProtectionMode() {
         return this.protectionMode == null ? Input.empty() : this.protectionMode;
     }
 
     @InputImport(name="vmRecommendations")
-        private final @Nullable Input<List<VmRecommendationArgs>> vmRecommendations;
+      private final @Nullable Input<List<VmRecommendationArgs>> vmRecommendations;
 
     public Input<List<VmRecommendationArgs>> getVmRecommendations() {
         return this.vmRecommendations == null ? Input.empty() : this.vmRecommendations;

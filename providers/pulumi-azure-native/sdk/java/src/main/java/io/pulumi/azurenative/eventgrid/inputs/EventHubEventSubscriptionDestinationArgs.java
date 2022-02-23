@@ -24,7 +24,7 @@ public final class EventHubEventSubscriptionDestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class EventHubEventSubscriptionDestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

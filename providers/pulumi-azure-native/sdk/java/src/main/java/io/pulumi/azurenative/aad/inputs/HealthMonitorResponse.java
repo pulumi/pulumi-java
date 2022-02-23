@@ -21,7 +21,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="details", required=true)
-        private final String details;
+      private final String details;
 
     public String getDetails() {
         return this.details;
@@ -32,7 +32,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

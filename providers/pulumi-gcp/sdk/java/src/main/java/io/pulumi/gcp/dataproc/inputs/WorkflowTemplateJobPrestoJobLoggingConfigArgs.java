@@ -20,7 +20,7 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="driverLogLevels")
-        private final @Nullable Input<Map<String,String>> driverLogLevels;
+      private final @Nullable Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels == null ? Input.empty() : this.driverLogLevels;

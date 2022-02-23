@@ -18,7 +18,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authorizedKey", required=true)
-        private final Input<String> authorizedKey;
+      private final Input<String> authorizedKey;
 
     public Input<String> getAuthorizedKey() {
         return this.authorizedKey;

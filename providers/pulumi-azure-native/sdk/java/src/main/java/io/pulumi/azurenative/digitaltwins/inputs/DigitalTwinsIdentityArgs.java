@@ -25,7 +25,7 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,DigitalTwinsIdentityType>> type;
+      private final @Nullable Input<Either<String,DigitalTwinsIdentityType>> type;
 
     public Input<Either<String,DigitalTwinsIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;

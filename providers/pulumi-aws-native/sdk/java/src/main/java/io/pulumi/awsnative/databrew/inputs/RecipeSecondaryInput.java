@@ -20,14 +20,14 @@ public final class RecipeSecondaryInput extends io.pulumi.resources.InvokeArgs {
     public static final RecipeSecondaryInput Empty = new RecipeSecondaryInput();
 
     @InputImport(name="dataCatalogInputDefinition")
-        private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
+      private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
 
     public Optional<RecipeDataCatalogInputDefinition> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @InputImport(name="s3InputDefinition")
-        private final @Nullable RecipeS3Location s3InputDefinition;
+      private final @Nullable RecipeS3Location s3InputDefinition;
 
     public Optional<RecipeS3Location> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Optional.empty() : Optional.ofNullable(this.s3InputDefinition);

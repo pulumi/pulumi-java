@@ -20,14 +20,14 @@ public final class DatasetCsvOptions extends io.pulumi.resources.InvokeArgs {
     public static final DatasetCsvOptions Empty = new DatasetCsvOptions();
 
     @InputImport(name="delimiter")
-        private final @Nullable String delimiter;
+      private final @Nullable String delimiter;
 
     public Optional<String> getDelimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
     @InputImport(name="headerRow")
-        private final @Nullable Boolean headerRow;
+      private final @Nullable Boolean headerRow;
 
     public Optional<Boolean> getHeaderRow() {
         return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);

@@ -23,7 +23,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
      * 
      */
     @InputImport(name="confidenceLevel")
-        private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+      private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
     public Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
         return this.confidenceLevel == null ? Input.empty() : this.confidenceLevel;

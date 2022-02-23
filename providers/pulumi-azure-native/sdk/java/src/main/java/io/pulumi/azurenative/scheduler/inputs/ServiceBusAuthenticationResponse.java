@@ -19,7 +19,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sasKey")
-        private final @Nullable String sasKey;
+      private final @Nullable String sasKey;
 
     public Optional<String> getSasKey() {
         return this.sasKey == null ? Optional.empty() : Optional.ofNullable(this.sasKey);
@@ -30,7 +30,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sasKeyName")
-        private final @Nullable String sasKeyName;
+      private final @Nullable String sasKeyName;
 
     public Optional<String> getSasKeyName() {
         return this.sasKeyName == null ? Optional.empty() : Optional.ofNullable(this.sasKeyName);
@@ -41,7 +41,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

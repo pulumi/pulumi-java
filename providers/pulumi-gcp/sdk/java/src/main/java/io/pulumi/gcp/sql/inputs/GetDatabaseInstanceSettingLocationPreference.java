@@ -13,14 +13,14 @@ public final class GetDatabaseInstanceSettingLocationPreference extends io.pulum
     public static final GetDatabaseInstanceSettingLocationPreference Empty = new GetDatabaseInstanceSettingLocationPreference();
 
     @InputImport(name="followGaeApplication", required=true)
-        private final String followGaeApplication;
+      private final String followGaeApplication;
 
     public String getFollowGaeApplication() {
         return this.followGaeApplication;
     }
 
     @InputImport(name="zone", required=true)
-        private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;

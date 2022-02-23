@@ -24,7 +24,7 @@ public final class CorsRulesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="corsRules")
-        private final @Nullable List<CorsRuleResponse> corsRules;
+      private final @Nullable List<CorsRuleResponse> corsRules;
 
     public List<CorsRuleResponse> getCorsRules() {
         return this.corsRules == null ? List.of() : this.corsRules;

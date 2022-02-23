@@ -17,14 +17,14 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 
     @InputImport(name="endpointDetails", required=true)
-        private final Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
+      private final Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
     public Input<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
         return this.endpointDetails;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
+      private final @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
 
     public Input<List<DataflowEndpointGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

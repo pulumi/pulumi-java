@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
      * 
      */
     @InputImport(name="enforce")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> enforce;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> enforce;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
      * 
      */
     @InputImport(name="validate", required=true)
-        private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate;
+      private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> getValidate() {
         return this.validate;

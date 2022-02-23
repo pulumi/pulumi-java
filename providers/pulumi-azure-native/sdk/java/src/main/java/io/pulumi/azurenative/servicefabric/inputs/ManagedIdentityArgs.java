@@ -26,7 +26,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<ManagedIdentityType> type;
+      private final @Nullable Input<ManagedIdentityType> type;
 
     public Input<ManagedIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -38,7 +38,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;

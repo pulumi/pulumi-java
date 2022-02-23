@@ -17,7 +17,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectorName", required=true)
-        private final String connectorName;
+      private final String connectorName;
 
     public String getConnectorName() {
         return this.connectorName;
@@ -28,7 +28,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-        private final String hubName;
+      private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -39,7 +39,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

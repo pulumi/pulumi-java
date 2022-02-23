@@ -17,7 +17,7 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-        private final String authorizationRuleName;
+      private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

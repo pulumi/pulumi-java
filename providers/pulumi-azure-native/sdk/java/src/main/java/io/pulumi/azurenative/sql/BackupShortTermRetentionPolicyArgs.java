@@ -20,7 +20,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -31,7 +31,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -42,7 +42,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionDays")
-        private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -64,7 +64,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;

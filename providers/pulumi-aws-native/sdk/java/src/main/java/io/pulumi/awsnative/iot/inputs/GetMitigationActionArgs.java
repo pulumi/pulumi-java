@@ -17,7 +17,7 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="actionName", required=true)
-        private final String actionName;
+      private final String actionName;
 
     public String getActionName() {
         return this.actionName;

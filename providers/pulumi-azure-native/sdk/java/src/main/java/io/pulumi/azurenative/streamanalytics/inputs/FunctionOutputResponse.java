@@ -23,7 +23,7 @@ public final class FunctionOutputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataType")
-        private final @Nullable String dataType;
+      private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);

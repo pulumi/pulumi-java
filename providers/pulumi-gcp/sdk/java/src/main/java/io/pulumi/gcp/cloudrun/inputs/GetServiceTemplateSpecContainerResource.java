@@ -14,14 +14,14 @@ public final class GetServiceTemplateSpecContainerResource extends io.pulumi.res
     public static final GetServiceTemplateSpecContainerResource Empty = new GetServiceTemplateSpecContainerResource();
 
     @InputImport(name="limits", required=true)
-        private final Map<String,String> limits;
+      private final Map<String,String> limits;
 
     public Map<String,String> getLimits() {
         return this.limits;
     }
 
     @InputImport(name="requests", required=true)
-        private final Map<String,String> requests;
+      private final Map<String,String> requests;
 
     public Map<String,String> getRequests() {
         return this.requests;

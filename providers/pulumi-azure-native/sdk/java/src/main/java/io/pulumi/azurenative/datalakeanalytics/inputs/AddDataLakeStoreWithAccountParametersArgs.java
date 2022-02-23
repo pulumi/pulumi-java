@@ -23,7 +23,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="suffix")
-        private final @Nullable Input<String> suffix;
+      private final @Nullable Input<String> suffix;
 
     public Input<String> getSuffix() {
         return this.suffix == null ? Input.empty() : this.suffix;

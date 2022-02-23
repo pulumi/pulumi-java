@@ -16,28 +16,28 @@ public final class BudgetsActionIamActionDefinition extends io.pulumi.resources.
     public static final BudgetsActionIamActionDefinition Empty = new BudgetsActionIamActionDefinition();
 
     @InputImport(name="groups")
-        private final @Nullable List<String> groups;
+      private final @Nullable List<String> groups;
 
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
 
     @InputImport(name="policyArn", required=true)
-        private final String policyArn;
+      private final String policyArn;
 
     public String getPolicyArn() {
         return this.policyArn;
     }
 
     @InputImport(name="roles")
-        private final @Nullable List<String> roles;
+      private final @Nullable List<String> roles;
 
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
 
     @InputImport(name="users")
-        private final @Nullable List<String> users;
+      private final @Nullable List<String> users;
 
     public List<String> getUsers() {
         return this.users == null ? List.of() : this.users;

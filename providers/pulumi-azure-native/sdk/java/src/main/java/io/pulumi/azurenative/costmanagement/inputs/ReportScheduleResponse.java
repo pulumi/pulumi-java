@@ -24,7 +24,7 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="recurrence", required=true)
-        private final String recurrence;
+      private final String recurrence;
 
     public String getRecurrence() {
         return this.recurrence;
@@ -35,7 +35,7 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="recurrencePeriod")
-        private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
+      private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
 
     public Optional<ReportRecurrencePeriodResponse> getRecurrencePeriod() {
         return this.recurrencePeriod == null ? Optional.empty() : Optional.ofNullable(this.recurrencePeriod);
@@ -46,7 +46,7 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

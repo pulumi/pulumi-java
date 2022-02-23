@@ -23,7 +23,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactInformation", required=true)
-        private final Input<ContactDetailsArgs> contactInformation;
+      private final Input<ContactDetailsArgs> contactInformation;
 
     public Input<ContactDetailsArgs> getContactInformation() {
         return this.contactInformation;
@@ -34,7 +34,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -45,7 +45,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shipmentType")
-        private final @Nullable Input<Either<String,ShipmentType>> shipmentType;
+      private final @Nullable Input<Either<String,ShipmentType>> shipmentType;
 
     public Input<Either<String,ShipmentType>> getShipmentType() {
         return this.shipmentType == null ? Input.empty() : this.shipmentType;
@@ -67,7 +67,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shippingAddress")
-        private final @Nullable Input<AddressArgs> shippingAddress;
+      private final @Nullable Input<AddressArgs> shippingAddress;
 
     public Input<AddressArgs> getShippingAddress() {
         return this.shippingAddress == null ? Input.empty() : this.shippingAddress;

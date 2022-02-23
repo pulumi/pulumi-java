@@ -14,14 +14,14 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     public static final ServiceDeploymentCircuitBreakerArgs Empty = new ServiceDeploymentCircuitBreakerArgs();
 
     @InputImport(name="enable", required=true)
-        private final Input<Boolean> enable;
+      private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
     }
 
     @InputImport(name="rollback", required=true)
-        private final Input<Boolean> rollback;
+      private final Input<Boolean> rollback;
 
     public Input<Boolean> getRollback() {
         return this.rollback;

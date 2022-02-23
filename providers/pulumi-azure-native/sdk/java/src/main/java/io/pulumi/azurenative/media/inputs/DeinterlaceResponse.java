@@ -23,7 +23,7 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -34,7 +34,7 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parity")
-        private final @Nullable String parity;
+      private final @Nullable String parity;
 
     public Optional<String> getParity() {
         return this.parity == null ? Optional.empty() : Optional.ofNullable(this.parity);

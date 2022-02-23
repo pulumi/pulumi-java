@@ -19,35 +19,35 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
     public static final IntegrationTaskArgs Empty = new IntegrationTaskArgs();
 
     @InputImport(name="connectorOperator")
-        private final @Nullable Input<IntegrationConnectorOperatorArgs> connectorOperator;
+      private final @Nullable Input<IntegrationConnectorOperatorArgs> connectorOperator;
 
     public Input<IntegrationConnectorOperatorArgs> getConnectorOperator() {
         return this.connectorOperator == null ? Input.empty() : this.connectorOperator;
     }
 
     @InputImport(name="destinationField")
-        private final @Nullable Input<String> destinationField;
+      private final @Nullable Input<String> destinationField;
 
     public Input<String> getDestinationField() {
         return this.destinationField == null ? Input.empty() : this.destinationField;
     }
 
     @InputImport(name="sourceFields", required=true)
-        private final Input<List<String>> sourceFields;
+      private final Input<List<String>> sourceFields;
 
     public Input<List<String>> getSourceFields() {
         return this.sourceFields;
     }
 
     @InputImport(name="taskProperties")
-        private final @Nullable Input<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
+      private final @Nullable Input<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
 
     public Input<List<IntegrationTaskPropertiesMapArgs>> getTaskProperties() {
         return this.taskProperties == null ? Input.empty() : this.taskProperties;
     }
 
     @InputImport(name="taskType", required=true)
-        private final Input<IntegrationTaskType> taskType;
+      private final Input<IntegrationTaskType> taskType;
 
     public Input<IntegrationTaskType> getTaskType() {
         return this.taskType;

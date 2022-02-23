@@ -14,7 +14,7 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     public static final ResourceCollectionArgs Empty = new ResourceCollectionArgs();
 
     @InputImport(name="resourceCollectionFilter", required=true)
-        private final Input<ResourceCollectionFilterArgs> resourceCollectionFilter;
+      private final Input<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
     public Input<ResourceCollectionFilterArgs> getResourceCollectionFilter() {
         return this.resourceCollectionFilter;

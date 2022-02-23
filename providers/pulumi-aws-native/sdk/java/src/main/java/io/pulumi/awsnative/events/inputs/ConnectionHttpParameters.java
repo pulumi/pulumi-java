@@ -16,21 +16,21 @@ public final class ConnectionHttpParameters extends io.pulumi.resources.InvokeAr
     public static final ConnectionHttpParameters Empty = new ConnectionHttpParameters();
 
     @InputImport(name="bodyParameters")
-        private final @Nullable List<ConnectionParameter> bodyParameters;
+      private final @Nullable List<ConnectionParameter> bodyParameters;
 
     public List<ConnectionParameter> getBodyParameters() {
         return this.bodyParameters == null ? List.of() : this.bodyParameters;
     }
 
     @InputImport(name="headerParameters")
-        private final @Nullable List<ConnectionParameter> headerParameters;
+      private final @Nullable List<ConnectionParameter> headerParameters;
 
     public List<ConnectionParameter> getHeaderParameters() {
         return this.headerParameters == null ? List.of() : this.headerParameters;
     }
 
     @InputImport(name="queryStringParameters")
-        private final @Nullable List<ConnectionParameter> queryStringParameters;
+      private final @Nullable List<ConnectionParameter> queryStringParameters;
 
     public List<ConnectionParameter> getQueryStringParameters() {
         return this.queryStringParameters == null ? List.of() : this.queryStringParameters;

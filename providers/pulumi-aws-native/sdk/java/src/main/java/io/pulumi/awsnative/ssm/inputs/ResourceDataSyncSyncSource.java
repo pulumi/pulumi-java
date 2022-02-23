@@ -18,28 +18,28 @@ public final class ResourceDataSyncSyncSource extends io.pulumi.resources.Invoke
     public static final ResourceDataSyncSyncSource Empty = new ResourceDataSyncSyncSource();
 
     @InputImport(name="awsOrganizationsSource")
-        private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
+      private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
 
     public Optional<ResourceDataSyncAwsOrganizationsSource> getAwsOrganizationsSource() {
         return this.awsOrganizationsSource == null ? Optional.empty() : Optional.ofNullable(this.awsOrganizationsSource);
     }
 
     @InputImport(name="includeFutureRegions")
-        private final @Nullable Boolean includeFutureRegions;
+      private final @Nullable Boolean includeFutureRegions;
 
     public Optional<Boolean> getIncludeFutureRegions() {
         return this.includeFutureRegions == null ? Optional.empty() : Optional.ofNullable(this.includeFutureRegions);
     }
 
     @InputImport(name="sourceRegions", required=true)
-        private final List<String> sourceRegions;
+      private final List<String> sourceRegions;
 
     public List<String> getSourceRegions() {
         return this.sourceRegions;
     }
 
     @InputImport(name="sourceType", required=true)
-        private final String sourceType;
+      private final String sourceType;
 
     public String getSourceType() {
         return this.sourceType;

@@ -24,7 +24,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="blockSizeInMB")
-        private final @Nullable Input<Object> blockSizeInMB;
+      private final @Nullable Input<Object> blockSizeInMB;
 
     public Input<Object> getBlockSizeInMB() {
         return this.blockSizeInMB == null ? Input.empty() : this.blockSizeInMB;
@@ -35,7 +35,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="copyBehavior")
-        private final @Nullable Input<Object> copyBehavior;
+      private final @Nullable Input<Object> copyBehavior;
 
     public Input<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
@@ -46,7 +46,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -57,7 +57,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -69,7 +69,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

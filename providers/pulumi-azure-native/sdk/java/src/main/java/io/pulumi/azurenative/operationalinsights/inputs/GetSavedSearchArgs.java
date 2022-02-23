@@ -17,7 +17,7 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="savedSearchId", required=true)
-        private final String savedSearchId;
+      private final String savedSearchId;
 
     public String getSavedSearchId() {
         return this.savedSearchId;
@@ -39,7 +39,7 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

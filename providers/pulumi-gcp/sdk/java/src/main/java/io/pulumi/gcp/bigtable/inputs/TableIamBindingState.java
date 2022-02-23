@@ -17,7 +17,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     public static final TableIamBindingState Empty = new TableIamBindingState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TableIamBindingConditionGetArgs> condition;
+      private final @Nullable Input<TableIamBindingConditionGetArgs> condition;
 
     public Input<TableIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -39,14 +39,14 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instance")
-        private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="members")
-        private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -58,7 +58,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,7 +71,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -82,7 +82,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="table")
-        private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;

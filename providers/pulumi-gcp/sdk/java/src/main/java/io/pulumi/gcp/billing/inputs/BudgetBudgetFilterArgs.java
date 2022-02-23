@@ -26,7 +26,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creditTypes")
-        private final @Nullable Input<List<String>> creditTypes;
+      private final @Nullable Input<List<String>> creditTypes;
 
     public Input<List<String>> getCreditTypes() {
         return this.creditTypes == null ? Input.empty() : this.creditTypes;
@@ -40,7 +40,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creditTypesTreatment")
-        private final @Nullable Input<String> creditTypesTreatment;
+      private final @Nullable Input<String> creditTypesTreatment;
 
     public Input<String> getCreditTypesTreatment() {
         return this.creditTypesTreatment == null ? Input.empty() : this.creditTypesTreatment;
@@ -52,7 +52,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="projects")
-        private final @Nullable Input<List<String>> projects;
+      private final @Nullable Input<List<String>> projects;
 
     public Input<List<String>> getProjects() {
         return this.projects == null ? Input.empty() : this.projects;
@@ -83,7 +83,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="services")
-        private final @Nullable Input<List<String>> services;
+      private final @Nullable Input<List<String>> services;
 
     public Input<List<String>> getServices() {
         return this.services == null ? Input.empty() : this.services;
@@ -99,7 +99,7 @@ public final class BudgetBudgetFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subaccounts")
-        private final @Nullable Input<List<String>> subaccounts;
+      private final @Nullable Input<List<String>> subaccounts;
 
     public Input<List<String>> getSubaccounts() {
         return this.subaccounts == null ? Input.empty() : this.subaccounts;

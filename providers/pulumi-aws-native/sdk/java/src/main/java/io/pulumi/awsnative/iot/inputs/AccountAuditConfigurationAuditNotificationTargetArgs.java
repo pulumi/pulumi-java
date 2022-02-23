@@ -20,7 +20,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="roleArn")
-        private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="targetArn")
-        private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;

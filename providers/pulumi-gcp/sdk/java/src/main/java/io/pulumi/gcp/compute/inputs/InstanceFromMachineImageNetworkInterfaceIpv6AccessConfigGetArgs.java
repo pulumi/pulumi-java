@@ -15,28 +15,28 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
     public static final InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs Empty = new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs();
 
     @InputImport(name="externalIpv6")
-        private final @Nullable Input<String> externalIpv6;
+      private final @Nullable Input<String> externalIpv6;
 
     public Input<String> getExternalIpv6() {
         return this.externalIpv6 == null ? Input.empty() : this.externalIpv6;
     }
 
     @InputImport(name="externalIpv6PrefixLength")
-        private final @Nullable Input<String> externalIpv6PrefixLength;
+      private final @Nullable Input<String> externalIpv6PrefixLength;
 
     public Input<String> getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
     }
 
     @InputImport(name="networkTier", required=true)
-        private final Input<String> networkTier;
+      private final Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName")
-        private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;

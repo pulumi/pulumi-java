@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-        private final String privateEndpointConnectionName;
+      private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

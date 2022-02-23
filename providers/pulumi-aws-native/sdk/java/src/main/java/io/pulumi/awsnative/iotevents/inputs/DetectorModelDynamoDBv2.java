@@ -22,7 +22,7 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
     public static final DetectorModelDynamoDBv2 Empty = new DetectorModelDynamoDBv2();
 
     @InputImport(name="payload")
-        private final @Nullable DetectorModelPayload payload;
+      private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -33,7 +33,7 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

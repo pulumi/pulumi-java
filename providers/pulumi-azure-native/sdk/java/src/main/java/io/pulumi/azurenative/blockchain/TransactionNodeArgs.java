@@ -21,7 +21,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="blockchainMemberName", required=true)
-        private final Input<String> blockchainMemberName;
+      private final Input<String> blockchainMemberName;
 
     public Input<String> getBlockchainMemberName() {
         return this.blockchainMemberName;
@@ -32,7 +32,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="firewallRules")
-        private final @Nullable Input<List<FirewallRuleArgs>> firewallRules;
+      private final @Nullable Input<List<FirewallRuleArgs>> firewallRules;
 
     public Input<List<FirewallRuleArgs>> getFirewallRules() {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
@@ -43,7 +43,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -65,7 +65,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="transactionNodeName")
-        private final @Nullable Input<String> transactionNodeName;
+      private final @Nullable Input<String> transactionNodeName;
 
     public Input<String> getTransactionNodeName() {
         return this.transactionNodeName == null ? Input.empty() : this.transactionNodeName;

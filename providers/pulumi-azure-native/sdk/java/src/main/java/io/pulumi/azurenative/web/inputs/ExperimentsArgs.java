@@ -24,7 +24,7 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rampUpRules")
-        private final @Nullable Input<List<RampUpRuleArgs>> rampUpRules;
+      private final @Nullable Input<List<RampUpRuleArgs>> rampUpRules;
 
     public Input<List<RampUpRuleArgs>> getRampUpRules() {
         return this.rampUpRules == null ? Input.empty() : this.rampUpRules;

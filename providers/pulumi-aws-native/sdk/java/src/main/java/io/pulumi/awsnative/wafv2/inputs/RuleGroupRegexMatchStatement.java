@@ -16,21 +16,21 @@ public final class RuleGroupRegexMatchStatement extends io.pulumi.resources.Invo
     public static final RuleGroupRegexMatchStatement Empty = new RuleGroupRegexMatchStatement();
 
     @InputImport(name="fieldToMatch", required=true)
-        private final RuleGroupFieldToMatch fieldToMatch;
+      private final RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="regexString", required=true)
-        private final String regexString;
+      private final String regexString;
 
     public String getRegexString() {
         return this.regexString;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final List<RuleGroupTextTransformation> textTransformations;
+      private final List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> getTextTransformations() {
         return this.textTransformations;

@@ -23,7 +23,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-        private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -47,7 +47,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullRequest")
-        private final @Nullable Input<TriggerGithubPullRequestArgs> pullRequest;
+      private final @Nullable Input<TriggerGithubPullRequestArgs> pullRequest;
 
     public Input<TriggerGithubPullRequestArgs> getPullRequest() {
         return this.pullRequest == null ? Input.empty() : this.pullRequest;
@@ -59,7 +59,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="push")
-        private final @Nullable Input<TriggerGithubPushArgs> push;
+      private final @Nullable Input<TriggerGithubPushArgs> push;
 
     public Input<TriggerGithubPushArgs> getPush() {
         return this.push == null ? Input.empty() : this.push;

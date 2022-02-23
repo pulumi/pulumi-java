@@ -15,14 +15,14 @@ public final class ExperimentTemplateStopCondition extends io.pulumi.resources.I
     public static final ExperimentTemplateStopCondition Empty = new ExperimentTemplateStopCondition();
 
     @InputImport(name="source", required=true)
-        private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
     }
 
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

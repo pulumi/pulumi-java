@@ -17,14 +17,14 @@ public final class ListenerRuleForwardConfig extends io.pulumi.resources.InvokeA
     public static final ListenerRuleForwardConfig Empty = new ListenerRuleForwardConfig();
 
     @InputImport(name="targetGroupStickinessConfig")
-        private final @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
+      private final @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
 
     public Optional<ListenerRuleTargetGroupStickinessConfig> getTargetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupStickinessConfig);
     }
 
     @InputImport(name="targetGroups")
-        private final @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
+      private final @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
 
     public List<ListenerRuleTargetGroupTuple> getTargetGroups() {
         return this.targetGroups == null ? List.of() : this.targetGroups;

@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMITaskInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;

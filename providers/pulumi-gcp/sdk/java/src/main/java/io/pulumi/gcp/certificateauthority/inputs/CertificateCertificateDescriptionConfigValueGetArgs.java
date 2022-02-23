@@ -21,7 +21,7 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
      * 
      */
     @InputImport(name="keyUsages")
-        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> getKeyUsages() {
         return this.keyUsages == null ? Input.empty() : this.keyUsages;

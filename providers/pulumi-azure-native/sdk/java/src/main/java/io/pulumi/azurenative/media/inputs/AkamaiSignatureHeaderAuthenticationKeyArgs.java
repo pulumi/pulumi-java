@@ -23,7 +23,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="base64Key")
-        private final @Nullable Input<String> base64Key;
+      private final @Nullable Input<String> base64Key;
 
     public Input<String> getBase64Key() {
         return this.base64Key == null ? Input.empty() : this.base64Key;
@@ -34,7 +34,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="expiration")
-        private final @Nullable Input<String> expiration;
+      private final @Nullable Input<String> expiration;
 
     public Input<String> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -45,7 +45,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="identifier")
-        private final @Nullable Input<String> identifier;
+      private final @Nullable Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier == null ? Input.empty() : this.identifier;

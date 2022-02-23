@@ -22,7 +22,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="formulaContent")
-        private final @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent;
+      private final @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent;
 
     public Input<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
         return this.formulaContent == null ? Input.empty() : this.formulaContent;
@@ -44,7 +44,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-        private final Input<String> labName;
+      private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -55,7 +55,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<String> osType;
+      private final @Nullable Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -88,7 +88,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vm")
-        private final @Nullable Input<FormulaPropertiesFromVmArgs> vm;
+      private final @Nullable Input<FormulaPropertiesFromVmArgs> vm;
 
     public Input<FormulaPropertiesFromVmArgs> getVm() {
         return this.vm == null ? Input.empty() : this.vm;

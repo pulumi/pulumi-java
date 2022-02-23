@@ -17,7 +17,7 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataManagerName", required=true)
-        private final String dataManagerName;
+      private final String dataManagerName;
 
     public String getDataManagerName() {
         return this.dataManagerName;
@@ -28,7 +28,7 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataStoreName", required=true)
-        private final String dataStoreName;
+      private final String dataStoreName;
 
     public String getDataStoreName() {
         return this.dataStoreName;
@@ -39,7 +39,7 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

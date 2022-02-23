@@ -15,7 +15,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     public static final RuleGroupCaptchaConfigArgs Empty = new RuleGroupCaptchaConfigArgs();
 
     @InputImport(name="immunityTimeProperty")
-        private final @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+      private final @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
     public Input<RuleGroupImmunityTimePropertyArgs> getImmunityTimeProperty() {
         return this.immunityTimeProperty == null ? Input.empty() : this.immunityTimeProperty;

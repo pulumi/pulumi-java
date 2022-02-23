@@ -13,7 +13,7 @@ public final class GetCapacityProviderArgs extends io.pulumi.resources.InvokeArg
     public static final GetCapacityProviderArgs Empty = new GetCapacityProviderArgs();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

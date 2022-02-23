@@ -23,7 +23,7 @@ public final class CmkKeyVaultPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyUri")
-        private final @Nullable Input<String> keyUri;
+      private final @Nullable Input<String> keyUri;
 
     public Input<String> getKeyUri() {
         return this.keyUri == null ? Input.empty() : this.keyUri;

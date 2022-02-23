@@ -17,7 +17,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="firewallRuleName", required=true)
-        private final String firewallRuleName;
+      private final String firewallRuleName;
 
     public String getFirewallRuleName() {
         return this.firewallRuleName;
@@ -28,7 +28,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

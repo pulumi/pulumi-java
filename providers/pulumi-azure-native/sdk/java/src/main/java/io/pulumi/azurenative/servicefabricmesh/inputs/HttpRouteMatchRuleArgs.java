@@ -25,7 +25,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<List<HttpRouteMatchHeaderArgs>> headers;
+      private final @Nullable Input<List<HttpRouteMatchHeaderArgs>> headers;
 
     public Input<List<HttpRouteMatchHeaderArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -36,7 +36,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<HttpRouteMatchPathArgs> path;
+      private final Input<HttpRouteMatchPathArgs> path;
 
     public Input<HttpRouteMatchPathArgs> getPath() {
         return this.path;

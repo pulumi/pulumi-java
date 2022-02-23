@@ -23,7 +23,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostPort")
-        private final @Nullable Input<String> hostPort;
+      private final @Nullable Input<String> hostPort;
 
     public Input<String> getHostPort() {
         return this.hostPort == null ? Input.empty() : this.hostPort;
@@ -34,7 +34,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jMXURL")
-        private final @Nullable Input<String> jMXURL;
+      private final @Nullable Input<String> jMXURL;
 
     public Input<String> getJMXURL() {
         return this.jMXURL == null ? Input.empty() : this.jMXURL;
@@ -45,7 +45,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="prometheusPort")
-        private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Input<String> prometheusPort;
 
     public Input<String> getPrometheusPort() {
         return this.prometheusPort == null ? Input.empty() : this.prometheusPort;

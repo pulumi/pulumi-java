@@ -24,7 +24,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-        private final @Nullable Input<List<JSONWebKeyArgs>> keys;
+      private final @Nullable Input<List<JSONWebKeyArgs>> keys;
 
     public Input<List<JSONWebKeyArgs>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;

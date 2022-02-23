@@ -24,7 +24,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iPAddressOrRange")
-        private final @Nullable String iPAddressOrRange;
+      private final @Nullable String iPAddressOrRange;
 
     public Optional<String> getIPAddressOrRange() {
         return this.iPAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.iPAddressOrRange);
@@ -46,7 +46,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyToSign")
-        private final @Nullable String keyToSign;
+      private final @Nullable String keyToSign;
 
     public Optional<String> getKeyToSign() {
         return this.keyToSign == null ? Optional.empty() : Optional.ofNullable(this.keyToSign);
@@ -57,7 +57,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="permissions", required=true)
-        private final Either<String,Permissions> permissions;
+      private final Either<String,Permissions> permissions;
 
     public Either<String,Permissions> getPermissions() {
         return this.permissions;
@@ -68,7 +68,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="protocols")
-        private final @Nullable HttpProtocol protocols;
+      private final @Nullable HttpProtocol protocols;
 
     public Optional<HttpProtocol> getProtocols() {
         return this.protocols == null ? Optional.empty() : Optional.ofNullable(this.protocols);
@@ -79,7 +79,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceTypes", required=true)
-        private final Either<String,SignedResourceTypes> resourceTypes;
+      private final Either<String,SignedResourceTypes> resourceTypes;
 
     public Either<String,SignedResourceTypes> getResourceTypes() {
         return this.resourceTypes;
@@ -101,7 +101,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="services", required=true)
-        private final Either<String,Services> services;
+      private final Either<String,Services> services;
 
     public Either<String,Services> getServices() {
         return this.services;
@@ -112,7 +112,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sharedAccessExpiryTime", required=true)
-        private final String sharedAccessExpiryTime;
+      private final String sharedAccessExpiryTime;
 
     public String getSharedAccessExpiryTime() {
         return this.sharedAccessExpiryTime;
@@ -123,7 +123,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sharedAccessStartTime")
-        private final @Nullable String sharedAccessStartTime;
+      private final @Nullable String sharedAccessStartTime;
 
     public Optional<String> getSharedAccessStartTime() {
         return this.sharedAccessStartTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessStartTime);

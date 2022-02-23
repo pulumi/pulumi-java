@@ -23,7 +23,7 @@ public final class DataLakeStorageAccountDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountUrl")
-        private final @Nullable String accountUrl;
+      private final @Nullable String accountUrl;
 
     public Optional<String> getAccountUrl() {
         return this.accountUrl == null ? Optional.empty() : Optional.ofNullable(this.accountUrl);
@@ -34,7 +34,7 @@ public final class DataLakeStorageAccountDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="filesystem")
-        private final @Nullable String filesystem;
+      private final @Nullable String filesystem;
 
     public Optional<String> getFilesystem() {
         return this.filesystem == null ? Optional.empty() : Optional.ofNullable(this.filesystem);

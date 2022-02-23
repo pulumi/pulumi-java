@@ -21,7 +21,7 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configurationDisplayName", required=true)
-        private final String configurationDisplayName;
+      private final String configurationDisplayName;
 
     public String getConfigurationDisplayName() {
         return this.configurationDisplayName;
@@ -32,7 +32,7 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productFamilyDisplayName", required=true)
-        private final String productFamilyDisplayName;
+      private final String productFamilyDisplayName;
 
     public String getProductFamilyDisplayName() {
         return this.productFamilyDisplayName;

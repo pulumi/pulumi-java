@@ -21,7 +21,7 @@ public final class CanaryTag extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -32,7 +32,7 @@ public final class CanaryTag extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

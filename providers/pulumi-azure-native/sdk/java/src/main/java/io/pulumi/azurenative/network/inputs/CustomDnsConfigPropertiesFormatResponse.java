@@ -24,7 +24,7 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="fqdn")
-        private final @Nullable String fqdn;
+      private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -35,7 +35,7 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipAddresses")
-        private final @Nullable List<String> ipAddresses;
+      private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;

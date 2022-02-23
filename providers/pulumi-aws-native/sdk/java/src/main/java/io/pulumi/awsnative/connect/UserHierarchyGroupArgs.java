@@ -19,7 +19,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceArn", required=true)
-        private final Input<String> instanceArn;
+      private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -30,7 +30,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentGroupArn")
-        private final @Nullable Input<String> parentGroupArn;
+      private final @Nullable Input<String> parentGroupArn;
 
     public Input<String> getParentGroupArn() {
         return this.parentGroupArn == null ? Input.empty() : this.parentGroupArn;

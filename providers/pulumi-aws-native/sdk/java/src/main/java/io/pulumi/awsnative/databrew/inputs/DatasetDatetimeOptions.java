@@ -19,7 +19,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="format", required=true)
-        private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -30,7 +30,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="localeCode")
-        private final @Nullable String localeCode;
+      private final @Nullable String localeCode;
 
     public Optional<String> getLocaleCode() {
         return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
@@ -41,7 +41,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timezoneOffset")
-        private final @Nullable String timezoneOffset;
+      private final @Nullable String timezoneOffset;
 
     public Optional<String> getTimezoneOffset() {
         return this.timezoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timezoneOffset);

@@ -23,7 +23,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable String keyName;
+      private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -34,7 +34,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

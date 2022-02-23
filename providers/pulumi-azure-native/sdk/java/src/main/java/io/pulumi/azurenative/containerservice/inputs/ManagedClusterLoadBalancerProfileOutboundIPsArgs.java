@@ -24,7 +24,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
      * 
      */
     @InputImport(name="publicIPs")
-        private final @Nullable Input<List<ResourceReferenceArgs>> publicIPs;
+      private final @Nullable Input<List<ResourceReferenceArgs>> publicIPs;
 
     public Input<List<ResourceReferenceArgs>> getPublicIPs() {
         return this.publicIPs == null ? Input.empty() : this.publicIPs;

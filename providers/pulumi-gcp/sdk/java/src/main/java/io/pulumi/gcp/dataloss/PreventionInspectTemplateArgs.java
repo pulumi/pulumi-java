@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inspectConfig")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
     public Input<PreventionInspectTemplateInspectConfigArgs> getInspectConfig() {
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
@@ -58,7 +58,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;

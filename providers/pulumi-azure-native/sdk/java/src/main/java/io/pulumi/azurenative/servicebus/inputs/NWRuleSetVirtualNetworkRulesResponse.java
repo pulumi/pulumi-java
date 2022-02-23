@@ -24,7 +24,7 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-        private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
+      private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
@@ -35,7 +35,7 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable SubnetResponse subnet;
+      private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);

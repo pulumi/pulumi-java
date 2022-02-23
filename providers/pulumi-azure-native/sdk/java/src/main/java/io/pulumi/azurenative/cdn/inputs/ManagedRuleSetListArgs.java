@@ -24,7 +24,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="managedRuleSets")
-        private final @Nullable Input<List<ManagedRuleSetArgs>> managedRuleSets;
+      private final @Nullable Input<List<ManagedRuleSetArgs>> managedRuleSets;
 
     public Input<List<ManagedRuleSetArgs>> getManagedRuleSets() {
         return this.managedRuleSets == null ? Input.empty() : this.managedRuleSets;

@@ -16,7 +16,7 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     public static final ProviderRegistrationArgs Empty = new ProviderRegistrationArgs();
 
     @InputImport(name="properties")
-        private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
+      private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
 
     public Input<ProviderRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -27,7 +27,7 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="providerNamespace")
-        private final @Nullable Input<String> providerNamespace;
+      private final @Nullable Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace == null ? Input.empty() : this.providerNamespace;

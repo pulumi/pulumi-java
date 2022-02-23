@@ -23,7 +23,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branches", required=true)
-        private final List<BranchResponse> branches;
+      private final List<BranchResponse> branches;
 
     public List<BranchResponse> getBranches() {
         return this.branches;
@@ -34,7 +34,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

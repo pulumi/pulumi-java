@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
      * 
      */
     @InputImport(name="mountPath", required=true)
-        private final Input<String> mountPath;
+      private final Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath;
@@ -30,7 +30,7 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

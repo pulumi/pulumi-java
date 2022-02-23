@@ -23,7 +23,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetStorageClassificationId")
-        private final @Nullable Input<String> targetStorageClassificationId;
+      private final @Nullable Input<String> targetStorageClassificationId;
 
     public Input<String> getTargetStorageClassificationId() {
         return this.targetStorageClassificationId == null ? Input.empty() : this.targetStorageClassificationId;

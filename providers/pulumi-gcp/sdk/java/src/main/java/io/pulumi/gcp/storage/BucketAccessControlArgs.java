@@ -19,7 +19,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -44,7 +44,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity", required=true)
-        private final Input<String> entity;
+      private final Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity;
@@ -56,7 +56,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

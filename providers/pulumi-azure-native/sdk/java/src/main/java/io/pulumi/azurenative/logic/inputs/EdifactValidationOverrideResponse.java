@@ -22,7 +22,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
+      private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -33,7 +33,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enforceCharacterSet", required=true)
-        private final Boolean enforceCharacterSet;
+      private final Boolean enforceCharacterSet;
 
     public Boolean getEnforceCharacterSet() {
         return this.enforceCharacterSet;
@@ -44,7 +44,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final String messageId;
+      private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
@@ -55,7 +55,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="trailingSeparatorPolicy", required=true)
-        private final String trailingSeparatorPolicy;
+      private final String trailingSeparatorPolicy;
 
     public String getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -66,7 +66,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
+      private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -77,7 +77,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="validateEDITypes", required=true)
-        private final Boolean validateEDITypes;
+      private final Boolean validateEDITypes;
 
     public Boolean getValidateEDITypes() {
         return this.validateEDITypes;
@@ -88,7 +88,7 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="validateXSDTypes", required=true)
-        private final Boolean validateXSDTypes;
+      private final Boolean validateXSDTypes;
 
     public Boolean getValidateXSDTypes() {
         return this.validateXSDTypes;

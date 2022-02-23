@@ -17,7 +17,7 @@ public final class GetSubnetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetGroupName", required=true)
-        private final String subnetGroupName;
+      private final String subnetGroupName;
 
     public String getSubnetGroupName() {
         return this.subnetGroupName;

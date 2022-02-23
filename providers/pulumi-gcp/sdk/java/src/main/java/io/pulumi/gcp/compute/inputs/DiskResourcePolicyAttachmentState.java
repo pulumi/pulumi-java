@@ -19,7 +19,7 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="disk")
-        private final @Nullable Input<String> disk;
+      private final @Nullable Input<String> disk;
 
     public Input<String> getDisk() {
         return this.disk == null ? Input.empty() : this.disk;
@@ -31,7 +31,7 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

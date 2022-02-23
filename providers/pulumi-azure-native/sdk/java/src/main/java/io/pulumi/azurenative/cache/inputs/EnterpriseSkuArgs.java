@@ -26,7 +26,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,SkuName>> name;
+      private final Input<Either<String,SkuName>> name;
 
     public Input<Either<String,SkuName>> getName() {
         return this.name;

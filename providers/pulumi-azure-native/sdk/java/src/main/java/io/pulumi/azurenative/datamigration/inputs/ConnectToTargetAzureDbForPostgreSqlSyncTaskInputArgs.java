@@ -22,7 +22,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs extends 
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-        private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -33,7 +33,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs extends 
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<PostgreSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;

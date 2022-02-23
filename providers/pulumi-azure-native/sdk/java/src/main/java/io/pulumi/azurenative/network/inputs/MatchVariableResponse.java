@@ -23,7 +23,7 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable String selector;
+      private final @Nullable String selector;
 
     public Optional<String> getSelector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
@@ -34,7 +34,7 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="variableName", required=true)
-        private final String variableName;
+      private final String variableName;
 
     public String getVariableName() {
         return this.variableName;

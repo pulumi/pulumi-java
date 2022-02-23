@@ -25,7 +25,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="destinations", required=true)
-        private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
+      private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
     public Input<List<ReplicationConfigurationReplicationDestinationArgs>> getDestinations() {
         return this.destinations;
@@ -36,7 +36,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="repositoryFilters")
-        private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+      private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
     public Input<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
         return this.repositoryFilters == null ? Input.empty() : this.repositoryFilters;

@@ -32,7 +32,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaleConfiguration")
-        private final @Nullable Input<AutoscaleArgs> autoscaleConfiguration;
+      private final @Nullable Input<AutoscaleArgs> autoscaleConfiguration;
 
     public Input<AutoscaleArgs> getAutoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Input.empty() : this.autoscaleConfiguration;
@@ -43,7 +43,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisksGroups")
-        private final @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups;
+      private final @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups;
 
     public Input<List<DataDisksGroupsArgs>> getDataDisksGroups() {
         return this.dataDisksGroups == null ? Input.empty() : this.dataDisksGroups;
@@ -54,7 +54,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptDataDisks")
-        private final @Nullable Input<Boolean> encryptDataDisks;
+      private final @Nullable Input<Boolean> encryptDataDisks;
 
     public Input<Boolean> getEncryptDataDisks() {
         return this.encryptDataDisks == null ? Input.empty() : this.encryptDataDisks;
@@ -65,7 +65,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hardwareProfile")
-        private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
+      private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
 
     public Input<HardwareProfileArgs> getHardwareProfile() {
         return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
@@ -76,7 +76,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstanceCount")
-        private final @Nullable Input<Integer> minInstanceCount;
+      private final @Nullable Input<Integer> minInstanceCount;
 
     public Input<Integer> getMinInstanceCount() {
         return this.minInstanceCount == null ? Input.empty() : this.minInstanceCount;
@@ -87,7 +87,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -98,7 +98,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-        private final @Nullable Input<OsProfileArgs> osProfile;
+      private final @Nullable Input<OsProfileArgs> osProfile;
 
     public Input<OsProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -109,7 +109,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptActions")
-        private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
+      private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
 
     public Input<List<ScriptActionArgs>> getScriptActions() {
         return this.scriptActions == null ? Input.empty() : this.scriptActions;
@@ -120,7 +120,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetInstanceCount")
-        private final @Nullable Input<Integer> targetInstanceCount;
+      private final @Nullable Input<Integer> targetInstanceCount;
 
     public Input<Integer> getTargetInstanceCount() {
         return this.targetInstanceCount == null ? Input.empty() : this.targetInstanceCount;
@@ -131,7 +131,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vMGroupName")
-        private final @Nullable Input<String> vMGroupName;
+      private final @Nullable Input<String> vMGroupName;
 
     public Input<String> getVMGroupName() {
         return this.vMGroupName == null ? Input.empty() : this.vMGroupName;
@@ -142,7 +142,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkProfile")
-        private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
+      private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
     public Input<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Input.empty() : this.virtualNetworkProfile;

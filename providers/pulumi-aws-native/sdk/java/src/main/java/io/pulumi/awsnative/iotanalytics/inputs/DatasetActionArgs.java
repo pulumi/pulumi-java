@@ -17,21 +17,21 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetActionArgs Empty = new DatasetActionArgs();
 
     @InputImport(name="actionName", required=true)
-        private final Input<String> actionName;
+      private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;
     }
 
     @InputImport(name="containerAction")
-        private final @Nullable Input<DatasetContainerActionArgs> containerAction;
+      private final @Nullable Input<DatasetContainerActionArgs> containerAction;
 
     public Input<DatasetContainerActionArgs> getContainerAction() {
         return this.containerAction == null ? Input.empty() : this.containerAction;
     }
 
     @InputImport(name="queryAction")
-        private final @Nullable Input<DatasetQueryActionArgs> queryAction;
+      private final @Nullable Input<DatasetQueryActionArgs> queryAction;
 
     public Input<DatasetQueryActionArgs> getQueryAction() {
         return this.queryAction == null ? Input.empty() : this.queryAction;

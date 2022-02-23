@@ -23,7 +23,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeSubnetId")
-        private final @Nullable Input<String> computeSubnetId;
+      private final @Nullable Input<String> computeSubnetId;
 
     public Input<String> getComputeSubnetId() {
         return this.computeSubnetId == null ? Input.empty() : this.computeSubnetId;

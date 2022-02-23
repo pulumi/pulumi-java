@@ -14,14 +14,14 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     public static final NotificationRuleTargetArgs Empty = new NotificationRuleTargetArgs();
 
     @InputImport(name="targetAddress", required=true)
-        private final Input<String> targetAddress;
+      private final Input<String> targetAddress;
 
     public Input<String> getTargetAddress() {
         return this.targetAddress;
     }
 
     @InputImport(name="targetType", required=true)
-        private final Input<String> targetType;
+      private final Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType;

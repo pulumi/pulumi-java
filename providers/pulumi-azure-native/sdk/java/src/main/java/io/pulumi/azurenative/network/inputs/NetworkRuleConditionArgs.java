@@ -26,7 +26,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationAddresses")
-        private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
@@ -48,7 +48,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationIpGroups")
-        private final @Nullable Input<List<String>> destinationIpGroups;
+      private final @Nullable Input<List<String>> destinationIpGroups;
 
     public Input<List<String>> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? Input.empty() : this.destinationIpGroups;
@@ -59,7 +59,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationPorts")
-        private final @Nullable Input<List<String>> destinationPorts;
+      private final @Nullable Input<List<String>> destinationPorts;
 
     public Input<List<String>> getDestinationPorts() {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
@@ -70,7 +70,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipProtocols")
-        private final @Nullable Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
+      private final @Nullable Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
 
     public Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> getIpProtocols() {
         return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
@@ -81,7 +81,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ruleConditionType", required=true)
-        private final Input<String> ruleConditionType;
+      private final Input<String> ruleConditionType;
 
     public Input<String> getRuleConditionType() {
         return this.ruleConditionType;
@@ -104,7 +104,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceAddresses")
-        private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -115,7 +115,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceIpGroups")
-        private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;

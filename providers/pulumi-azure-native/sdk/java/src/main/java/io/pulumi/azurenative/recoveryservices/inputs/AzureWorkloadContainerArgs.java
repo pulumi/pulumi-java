@@ -28,7 +28,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -43,7 +43,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerType", required=true)
-        private final Input<String> containerType;
+      private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -54,7 +54,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedInfo")
-        private final @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
     public Input<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -65,7 +65,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -76,7 +76,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="healthStatus")
-        private final @Nullable Input<String> healthStatus;
+      private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -87,7 +87,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastUpdatedTime")
-        private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
@@ -98,7 +98,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operationType")
-        private final @Nullable Input<Either<String,OperationType>> operationType;
+      private final @Nullable Input<Either<String,OperationType>> operationType;
 
     public Input<Either<String,OperationType>> getOperationType() {
         return this.operationType == null ? Input.empty() : this.operationType;
@@ -109,7 +109,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationStatus")
-        private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -120,7 +120,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -131,7 +131,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadType")
-        private final @Nullable Input<Either<String,WorkloadType>> workloadType;
+      private final @Nullable Input<Either<String,WorkloadType>> workloadType;
 
     public Input<Either<String,WorkloadType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;

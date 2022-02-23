@@ -13,7 +13,7 @@ public final class GetSamplingRuleArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSamplingRuleArgs Empty = new GetSamplingRuleArgs();
 
     @InputImport(name="ruleARN", required=true)
-        private final String ruleARN;
+      private final String ruleARN;
 
     public String getRuleARN() {
         return this.ruleARN;

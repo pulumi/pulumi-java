@@ -24,7 +24,7 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="triggerProperties")
-        private final @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties;
+      private final @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
     public Input<FlowScheduledTriggerPropertiesArgs> getTriggerProperties() {
         return this.triggerProperties == null ? Input.empty() : this.triggerProperties;
@@ -35,7 +35,7 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="triggerType", required=true)
-        private final Input<FlowTriggerType> triggerType;
+      private final Input<FlowTriggerType> triggerType;
 
     public Input<FlowTriggerType> getTriggerType() {
         return this.triggerType;

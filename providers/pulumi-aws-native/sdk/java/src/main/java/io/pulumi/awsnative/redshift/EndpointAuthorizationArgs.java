@@ -21,7 +21,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="account", required=true)
-        private final Input<String> account;
+      private final Input<String> account;
 
     public Input<String> getAccount() {
         return this.account;
@@ -32,7 +32,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-        private final Input<String> clusterIdentifier;
+      private final Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -43,7 +43,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="force")
-        private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -54,7 +54,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpcIds")
-        private final @Nullable Input<List<String>> vpcIds;
+      private final @Nullable Input<List<String>> vpcIds;
 
     public Input<List<String>> getVpcIds() {
         return this.vpcIds == null ? Input.empty() : this.vpcIds;

@@ -18,28 +18,28 @@ public final class DatasetContainerAction extends io.pulumi.resources.InvokeArgs
     public static final DatasetContainerAction Empty = new DatasetContainerAction();
 
     @InputImport(name="executionRoleArn", required=true)
-        private final String executionRoleArn;
+      private final String executionRoleArn;
 
     public String getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
     @InputImport(name="image", required=true)
-        private final String image;
+      private final String image;
 
     public String getImage() {
         return this.image;
     }
 
     @InputImport(name="resourceConfiguration", required=true)
-        private final DatasetResourceConfiguration resourceConfiguration;
+      private final DatasetResourceConfiguration resourceConfiguration;
 
     public DatasetResourceConfiguration getResourceConfiguration() {
         return this.resourceConfiguration;
     }
 
     @InputImport(name="variables")
-        private final @Nullable List<DatasetVariable> variables;
+      private final @Nullable List<DatasetVariable> variables;
 
     public List<DatasetVariable> getVariables() {
         return this.variables == null ? List.of() : this.variables;

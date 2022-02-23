@@ -24,7 +24,7 @@ public final class ScaleInPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<String> rules;
+      private final @Nullable List<String> rules;
 
     public List<String> getRules() {
         return this.rules == null ? List.of() : this.rules;

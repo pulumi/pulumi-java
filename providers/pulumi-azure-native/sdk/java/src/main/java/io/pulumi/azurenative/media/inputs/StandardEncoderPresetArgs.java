@@ -42,7 +42,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="codecs", required=true)
-        private final Input<List<Object>> codecs;
+      private final Input<List<Object>> codecs;
 
     public Input<List<Object>> getCodecs() {
         return this.codecs;
@@ -53,7 +53,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filters")
-        private final @Nullable Input<FiltersArgs> filters;
+      private final @Nullable Input<FiltersArgs> filters;
 
     public Input<FiltersArgs> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -64,7 +64,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="formats", required=true)
-        private final Input<List<Object>> formats;
+      private final Input<List<Object>> formats;
 
     public Input<List<Object>> getFormats() {
         return this.formats;
@@ -76,7 +76,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

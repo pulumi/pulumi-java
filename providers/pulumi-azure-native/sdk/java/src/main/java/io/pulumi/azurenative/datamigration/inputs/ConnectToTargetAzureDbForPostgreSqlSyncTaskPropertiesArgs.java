@@ -24,7 +24,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
+      private final @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
     public Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

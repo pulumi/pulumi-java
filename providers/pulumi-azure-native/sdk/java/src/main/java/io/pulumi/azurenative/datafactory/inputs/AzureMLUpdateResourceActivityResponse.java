@@ -29,7 +29,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -40,7 +40,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -51,7 +51,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -62,7 +62,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -73,7 +73,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -84,7 +84,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="trainedModelFilePath", required=true)
-        private final Object trainedModelFilePath;
+      private final Object trainedModelFilePath;
 
     public Object getTrainedModelFilePath() {
         return this.trainedModelFilePath;
@@ -95,7 +95,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="trainedModelLinkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
+      private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
 
     public LinkedServiceReferenceResponse getTrainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
@@ -106,7 +106,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="trainedModelName", required=true)
-        private final Object trainedModelName;
+      private final Object trainedModelName;
 
     public Object getTrainedModelName() {
         return this.trainedModelName;
@@ -118,7 +118,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -129,7 +129,7 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

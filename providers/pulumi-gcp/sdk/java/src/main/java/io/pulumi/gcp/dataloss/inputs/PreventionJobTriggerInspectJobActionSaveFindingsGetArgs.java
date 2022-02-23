@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
      * 
      */
     @InputImport(name="outputConfig", required=true)
-        private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
+      private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
 
     public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> getOutputConfig() {
         return this.outputConfig;

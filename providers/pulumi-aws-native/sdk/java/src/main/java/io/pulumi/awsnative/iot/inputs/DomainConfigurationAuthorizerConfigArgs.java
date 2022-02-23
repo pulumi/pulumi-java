@@ -16,14 +16,14 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
     public static final DomainConfigurationAuthorizerConfigArgs Empty = new DomainConfigurationAuthorizerConfigArgs();
 
     @InputImport(name="allowAuthorizerOverride")
-        private final @Nullable Input<Boolean> allowAuthorizerOverride;
+      private final @Nullable Input<Boolean> allowAuthorizerOverride;
 
     public Input<Boolean> getAllowAuthorizerOverride() {
         return this.allowAuthorizerOverride == null ? Input.empty() : this.allowAuthorizerOverride;
     }
 
     @InputImport(name="defaultAuthorizerName")
-        private final @Nullable Input<String> defaultAuthorizerName;
+      private final @Nullable Input<String> defaultAuthorizerName;
 
     public Input<String> getDefaultAuthorizerName() {
         return this.defaultAuthorizerName == null ? Input.empty() : this.defaultAuthorizerName;

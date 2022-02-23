@@ -26,7 +26,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultService")
-        private final @Nullable Input<String> defaultService;
+      private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -40,7 +40,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-        private final @Nullable Input<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect;
+      private final @Nullable Input<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     public Input<RegionUrlMapDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -51,7 +51,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -63,7 +63,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRules")
-        private final @Nullable Input<List<RegionUrlMapHostRuleArgs>> hostRules;
+      private final @Nullable Input<List<RegionUrlMapHostRuleArgs>> hostRules;
 
     public Input<List<RegionUrlMapHostRuleArgs>> getHostRules() {
         return this.hostRules == null ? Input.empty() : this.hostRules;
@@ -75,7 +75,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatchers")
-        private final @Nullable Input<List<RegionUrlMapPathMatcherArgs>> pathMatchers;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherArgs>> pathMatchers;
 
     public Input<List<RegionUrlMapPathMatcherArgs>> getPathMatchers() {
         return this.pathMatchers == null ? Input.empty() : this.pathMatchers;
@@ -99,7 +99,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -124,7 +124,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tests")
-        private final @Nullable Input<List<RegionUrlMapTestArgs>> tests;
+      private final @Nullable Input<List<RegionUrlMapTestArgs>> tests;
 
     public Input<List<RegionUrlMapTestArgs>> getTests() {
         return this.tests == null ? Input.empty() : this.tests;

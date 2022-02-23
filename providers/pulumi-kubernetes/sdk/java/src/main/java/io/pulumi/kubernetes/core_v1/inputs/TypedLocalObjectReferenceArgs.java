@@ -23,7 +23,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiGroup")
-        private final @Nullable Input<String> apiGroup;
+      private final @Nullable Input<String> apiGroup;
 
     public Input<String> getApiGroup() {
         return this.apiGroup == null ? Input.empty() : this.apiGroup;
@@ -34,7 +34,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

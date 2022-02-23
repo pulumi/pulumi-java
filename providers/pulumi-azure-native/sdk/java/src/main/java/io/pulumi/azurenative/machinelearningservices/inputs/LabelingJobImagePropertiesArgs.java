@@ -22,7 +22,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotationType")
-        private final @Nullable Input<Either<String,ImageAnnotationType>> annotationType;
+      private final @Nullable Input<Either<String,ImageAnnotationType>> annotationType;
 
     public Input<Either<String,ImageAnnotationType>> getAnnotationType() {
         return this.annotationType == null ? Input.empty() : this.annotationType;
@@ -33,7 +33,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mediaType", required=true)
-        private final Input<Either<String,MediaType>> mediaType;
+      private final Input<Either<String,MediaType>> mediaType;
 
     public Input<Either<String,MediaType>> getMediaType() {
         return this.mediaType;

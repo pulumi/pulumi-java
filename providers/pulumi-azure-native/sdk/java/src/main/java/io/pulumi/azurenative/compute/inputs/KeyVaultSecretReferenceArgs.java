@@ -23,7 +23,7 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretUrl", required=true)
-        private final Input<String> secretUrl;
+      private final Input<String> secretUrl;
 
     public Input<String> getSecretUrl() {
         return this.secretUrl;
@@ -34,7 +34,7 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceVault", required=true)
-        private final Input<SubResourceArgs> sourceVault;
+      private final Input<SubResourceArgs> sourceVault;
 
     public Input<SubResourceArgs> getSourceVault() {
         return this.sourceVault;

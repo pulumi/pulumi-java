@@ -23,7 +23,7 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assignedUser")
-        private final @Nullable Input<AssignedUserArgs> assignedUser;
+      private final @Nullable Input<AssignedUserArgs> assignedUser;
 
     public Input<AssignedUserArgs> getAssignedUser() {
         return this.assignedUser == null ? Input.empty() : this.assignedUser;

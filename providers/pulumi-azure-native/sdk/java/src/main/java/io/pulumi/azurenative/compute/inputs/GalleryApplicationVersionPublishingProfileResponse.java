@@ -29,7 +29,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="enableHealthCheck")
-        private final @Nullable Boolean enableHealthCheck;
+      private final @Nullable Boolean enableHealthCheck;
 
     public Optional<Boolean> getEnableHealthCheck() {
         return this.enableHealthCheck == null ? Optional.empty() : Optional.ofNullable(this.enableHealthCheck);
@@ -40,7 +40,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="endOfLifeDate")
-        private final @Nullable String endOfLifeDate;
+      private final @Nullable String endOfLifeDate;
 
     public Optional<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Optional.empty() : Optional.ofNullable(this.endOfLifeDate);
@@ -51,14 +51,14 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="excludeFromLatest")
-        private final @Nullable Boolean excludeFromLatest;
+      private final @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
     }
 
     @InputImport(name="manageActions")
-        private final @Nullable UserArtifactManageResponse manageActions;
+      private final @Nullable UserArtifactManageResponse manageActions;
 
     public Optional<UserArtifactManageResponse> getManageActions() {
         return this.manageActions == null ? Optional.empty() : Optional.ofNullable(this.manageActions);
@@ -69,7 +69,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="publishedDate", required=true)
-        private final String publishedDate;
+      private final String publishedDate;
 
     public String getPublishedDate() {
         return this.publishedDate;
@@ -80,7 +80,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="replicaCount")
-        private final @Nullable Integer replicaCount;
+      private final @Nullable Integer replicaCount;
 
     public Optional<Integer> getReplicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
@@ -91,7 +91,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="source", required=true)
-        private final UserArtifactSourceResponse source;
+      private final UserArtifactSourceResponse source;
 
     public UserArtifactSourceResponse getSource() {
         return this.source;
@@ -102,7 +102,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable String storageAccountType;
+      private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
@@ -113,7 +113,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * 
      */
     @InputImport(name="targetRegions")
-        private final @Nullable List<TargetRegionResponse> targetRegions;
+      private final @Nullable List<TargetRegionResponse> targetRegions;
 
     public List<TargetRegionResponse> getTargetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;

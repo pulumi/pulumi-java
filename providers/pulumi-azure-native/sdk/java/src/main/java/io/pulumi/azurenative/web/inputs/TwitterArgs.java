@@ -24,7 +24,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-        private final @Nullable Input<TwitterRegistrationArgs> registration;
+      private final @Nullable Input<TwitterRegistrationArgs> registration;
 
     public Input<TwitterRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;

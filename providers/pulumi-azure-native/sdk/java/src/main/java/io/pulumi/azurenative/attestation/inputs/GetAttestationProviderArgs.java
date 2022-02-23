@@ -17,7 +17,7 @@ public final class GetAttestationProviderArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="providerName", required=true)
-        private final String providerName;
+      private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -28,7 +28,7 @@ public final class GetAttestationProviderArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

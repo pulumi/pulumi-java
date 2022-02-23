@@ -17,7 +17,7 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningServiceName", required=true)
-        private final String provisioningServiceName;
+      private final String provisioningServiceName;
 
     public String getProvisioningServiceName() {
         return this.provisioningServiceName;
@@ -28,7 +28,7 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

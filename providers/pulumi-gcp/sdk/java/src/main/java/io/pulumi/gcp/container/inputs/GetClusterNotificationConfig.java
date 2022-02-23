@@ -14,7 +14,7 @@ public final class GetClusterNotificationConfig extends io.pulumi.resources.Invo
     public static final GetClusterNotificationConfig Empty = new GetClusterNotificationConfig();
 
     @InputImport(name="pubsubs", required=true)
-        private final List<GetClusterNotificationConfigPubsub> pubsubs;
+      private final List<GetClusterNotificationConfigPubsub> pubsubs;
 
     public List<GetClusterNotificationConfigPubsub> getPubsubs() {
         return this.pubsubs;

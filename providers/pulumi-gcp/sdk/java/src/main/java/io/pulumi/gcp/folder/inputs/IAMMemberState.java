@@ -16,35 +16,35 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     public static final IAMMemberState Empty = new IAMMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<IAMMemberConditionGetArgs> condition;
+      private final @Nullable Input<IAMMemberConditionGetArgs> condition;
 
     public Input<IAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="folder")
-        private final @Nullable Input<String> folder;
+      private final @Nullable Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
     }
 
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

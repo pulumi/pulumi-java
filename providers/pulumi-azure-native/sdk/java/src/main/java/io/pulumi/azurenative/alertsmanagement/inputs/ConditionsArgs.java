@@ -23,7 +23,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertContext")
-        private final @Nullable Input<ConditionArgs> alertContext;
+      private final @Nullable Input<ConditionArgs> alertContext;
 
     public Input<ConditionArgs> getAlertContext() {
         return this.alertContext == null ? Input.empty() : this.alertContext;
@@ -34,7 +34,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertRuleId")
-        private final @Nullable Input<ConditionArgs> alertRuleId;
+      private final @Nullable Input<ConditionArgs> alertRuleId;
 
     public Input<ConditionArgs> getAlertRuleId() {
         return this.alertRuleId == null ? Input.empty() : this.alertRuleId;
@@ -45,7 +45,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<ConditionArgs> description;
+      private final @Nullable Input<ConditionArgs> description;
 
     public Input<ConditionArgs> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorCondition")
-        private final @Nullable Input<ConditionArgs> monitorCondition;
+      private final @Nullable Input<ConditionArgs> monitorCondition;
 
     public Input<ConditionArgs> getMonitorCondition() {
         return this.monitorCondition == null ? Input.empty() : this.monitorCondition;
@@ -67,7 +67,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorService")
-        private final @Nullable Input<ConditionArgs> monitorService;
+      private final @Nullable Input<ConditionArgs> monitorService;
 
     public Input<ConditionArgs> getMonitorService() {
         return this.monitorService == null ? Input.empty() : this.monitorService;
@@ -78,7 +78,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-        private final @Nullable Input<ConditionArgs> severity;
+      private final @Nullable Input<ConditionArgs> severity;
 
     public Input<ConditionArgs> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -89,7 +89,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceType")
-        private final @Nullable Input<ConditionArgs> targetResourceType;
+      private final @Nullable Input<ConditionArgs> targetResourceType;
 
     public Input<ConditionArgs> getTargetResourceType() {
         return this.targetResourceType == null ? Input.empty() : this.targetResourceType;

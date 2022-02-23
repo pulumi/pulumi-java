@@ -15,7 +15,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     public static final KnowledgeBaseRenderingConfigurationArgs Empty = new KnowledgeBaseRenderingConfigurationArgs();
 
     @InputImport(name="templateUri")
-        private final @Nullable Input<String> templateUri;
+      private final @Nullable Input<String> templateUri;
 
     public Input<String> getTemplateUri() {
         return this.templateUri == null ? Input.empty() : this.templateUri;

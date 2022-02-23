@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+      private final @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

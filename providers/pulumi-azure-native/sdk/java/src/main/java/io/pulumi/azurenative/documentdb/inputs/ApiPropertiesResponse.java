@@ -19,7 +19,7 @@ public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverVersion")
-        private final @Nullable String serverVersion;
+      private final @Nullable String serverVersion;
 
     public Optional<String> getServerVersion() {
         return this.serverVersion == null ? Optional.empty() : Optional.ofNullable(this.serverVersion);

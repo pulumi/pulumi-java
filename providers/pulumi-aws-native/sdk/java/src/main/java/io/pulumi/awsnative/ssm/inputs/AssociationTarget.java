@@ -14,14 +14,14 @@ public final class AssociationTarget extends io.pulumi.resources.InvokeArgs {
     public static final AssociationTarget Empty = new AssociationTarget();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

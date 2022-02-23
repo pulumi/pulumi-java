@@ -17,7 +17,7 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="historyDefinitionId", required=true)
-        private final String historyDefinitionId;
+      private final String historyDefinitionId;
 
     public String getHistoryDefinitionId() {
         return this.historyDefinitionId;

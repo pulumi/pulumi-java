@@ -18,21 +18,21 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="defaultJobTimeoutMinutes")
-        private final @Nullable Input<Integer> defaultJobTimeoutMinutes;
+      private final @Nullable Input<Integer> defaultJobTimeoutMinutes;
 
     public Input<Integer> getDefaultJobTimeoutMinutes() {
         return this.defaultJobTimeoutMinutes == null ? Input.empty() : this.defaultJobTimeoutMinutes;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Input<List<ProjectTagArgs>> tags;
 
     public Input<List<ProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -20,7 +20,7 @@ public final class ThemeTypography extends io.pulumi.resources.InvokeArgs {
     public static final ThemeTypography Empty = new ThemeTypography();
 
     @InputImport(name="fontFamilies")
-        private final @Nullable List<ThemeFont> fontFamilies;
+      private final @Nullable List<ThemeFont> fontFamilies;
 
     public List<ThemeFont> getFontFamilies() {
         return this.fontFamilies == null ? List.of() : this.fontFamilies;

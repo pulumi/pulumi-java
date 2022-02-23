@@ -13,7 +13,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule extends io.pulumi.re
     public static final ResourceTypeEndpointResponseFeaturesRule Empty = new ResourceTypeEndpointResponseFeaturesRule();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-        private final String requiredFeaturesPolicy;
+      private final String requiredFeaturesPolicy;
 
     public String getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;

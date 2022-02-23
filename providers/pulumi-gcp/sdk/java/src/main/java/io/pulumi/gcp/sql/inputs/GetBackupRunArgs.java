@@ -22,7 +22,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupId")
-        private final @Nullable Integer backupId;
+      private final @Nullable Integer backupId;
 
     public Optional<Integer> getBackupId() {
         return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
@@ -33,7 +33,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-        private final String instance;
+      private final String instance;
 
     public String getInstance() {
         return this.instance;
@@ -45,7 +45,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mostRecent")
-        private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);

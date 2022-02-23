@@ -22,7 +22,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="coreCount", required=true)
-        private final Double coreCount;
+      private final Double coreCount;
 
     public Double getCoreCount() {
         return this.coreCount;
@@ -33,7 +33,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final Double id;
+      private final Double id;
 
     public Double getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manufacturer", required=true)
-        private final String manufacturer;
+      private final String manufacturer;
 
     public String getManufacturer() {
         return this.manufacturer;
@@ -55,7 +55,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memoryInGiB", required=true)
-        private final Double memoryInGiB;
+      private final Double memoryInGiB;
 
     public Double getMemoryInGiB() {
         return this.memoryInGiB;
@@ -66,7 +66,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="model", required=true)
-        private final String model;
+      private final String model;
 
     public String getModel() {
         return this.model;
@@ -77,7 +77,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -88,7 +88,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osName", required=true)
-        private final String osName;
+      private final String osName;
 
     public String getOsName() {
         return this.osName;
@@ -99,7 +99,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osVersion", required=true)
-        private final String osVersion;
+      private final String osVersion;
 
     public String getOsVersion() {
         return this.osVersion;
@@ -110,7 +110,7 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialNumber", required=true)
-        private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;

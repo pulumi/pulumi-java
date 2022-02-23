@@ -13,7 +13,7 @@ public final class RuleGroupAddress extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupAddress Empty = new RuleGroupAddress();
 
     @InputImport(name="addressDefinition", required=true)
-        private final String addressDefinition;
+      private final String addressDefinition;
 
     public String getAddressDefinition() {
         return this.addressDefinition;

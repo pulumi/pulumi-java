@@ -31,7 +31,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="aadAuthenticationParameters")
-        private final @Nullable Input<AadAuthenticationParametersArgs> aadAuthenticationParameters;
+      private final @Nullable Input<AadAuthenticationParametersArgs> aadAuthenticationParameters;
 
     public Input<AadAuthenticationParametersArgs> getAadAuthenticationParameters() {
         return this.aadAuthenticationParameters == null ? Input.empty() : this.aadAuthenticationParameters;
@@ -42,7 +42,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -53,7 +53,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="radiusClientRootCertificates")
-        private final @Nullable Input<List<VpnServerConfigRadiusClientRootCertificateArgs>> radiusClientRootCertificates;
+      private final @Nullable Input<List<VpnServerConfigRadiusClientRootCertificateArgs>> radiusClientRootCertificates;
 
     public Input<List<VpnServerConfigRadiusClientRootCertificateArgs>> getRadiusClientRootCertificates() {
         return this.radiusClientRootCertificates == null ? Input.empty() : this.radiusClientRootCertificates;
@@ -86,7 +86,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="radiusServerAddress")
-        private final @Nullable Input<String> radiusServerAddress;
+      private final @Nullable Input<String> radiusServerAddress;
 
     public Input<String> getRadiusServerAddress() {
         return this.radiusServerAddress == null ? Input.empty() : this.radiusServerAddress;
@@ -97,7 +97,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="radiusServerRootCertificates")
-        private final @Nullable Input<List<VpnServerConfigRadiusServerRootCertificateArgs>> radiusServerRootCertificates;
+      private final @Nullable Input<List<VpnServerConfigRadiusServerRootCertificateArgs>> radiusServerRootCertificates;
 
     public Input<List<VpnServerConfigRadiusServerRootCertificateArgs>> getRadiusServerRootCertificates() {
         return this.radiusServerRootCertificates == null ? Input.empty() : this.radiusServerRootCertificates;
@@ -108,7 +108,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="radiusServerSecret")
-        private final @Nullable Input<String> radiusServerSecret;
+      private final @Nullable Input<String> radiusServerSecret;
 
     public Input<String> getRadiusServerSecret() {
         return this.radiusServerSecret == null ? Input.empty() : this.radiusServerSecret;
@@ -119,7 +119,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="radiusServers")
-        private final @Nullable Input<List<RadiusServerArgs>> radiusServers;
+      private final @Nullable Input<List<RadiusServerArgs>> radiusServers;
 
     public Input<List<RadiusServerArgs>> getRadiusServers() {
         return this.radiusServers == null ? Input.empty() : this.radiusServers;
@@ -130,7 +130,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -141,7 +141,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -152,7 +152,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnAuthenticationTypes")
-        private final @Nullable Input<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
+      private final @Nullable Input<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
 
     public Input<List<Either<String,VpnAuthenticationType>>> getVpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? Input.empty() : this.vpnAuthenticationTypes;
@@ -163,7 +163,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnClientIpsecPolicies")
-        private final @Nullable Input<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
+      private final @Nullable Input<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
     public Input<List<IpsecPolicyArgs>> getVpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? Input.empty() : this.vpnClientIpsecPolicies;
@@ -174,7 +174,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnClientRevokedCertificates")
-        private final @Nullable Input<List<VpnServerConfigVpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
+      private final @Nullable Input<List<VpnServerConfigVpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
 
     public Input<List<VpnServerConfigVpnClientRevokedCertificateArgs>> getVpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? Input.empty() : this.vpnClientRevokedCertificates;
@@ -185,7 +185,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnClientRootCertificates")
-        private final @Nullable Input<List<VpnServerConfigVpnClientRootCertificateArgs>> vpnClientRootCertificates;
+      private final @Nullable Input<List<VpnServerConfigVpnClientRootCertificateArgs>> vpnClientRootCertificates;
 
     public Input<List<VpnServerConfigVpnClientRootCertificateArgs>> getVpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? Input.empty() : this.vpnClientRootCertificates;
@@ -196,7 +196,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnProtocols")
-        private final @Nullable Input<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
+      private final @Nullable Input<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 
     public Input<List<Either<String,VpnGatewayTunnelingProtocol>>> getVpnProtocols() {
         return this.vpnProtocols == null ? Input.empty() : this.vpnProtocols;
@@ -207,7 +207,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpnServerConfigurationName")
-        private final @Nullable Input<String> vpnServerConfigurationName;
+      private final @Nullable Input<String> vpnServerConfigurationName;
 
     public Input<String> getVpnServerConfigurationName() {
         return this.vpnServerConfigurationName == null ? Input.empty() : this.vpnServerConfigurationName;

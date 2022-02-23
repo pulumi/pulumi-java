@@ -19,7 +19,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 
     @InputImport(name="additionalProperties")
-        private final @Nullable Input<String> additionalProperties;
+      private final @Nullable Input<String> additionalProperties;
 
     public Input<String> getAdditionalProperties() {
         return this.additionalProperties == null ? Input.empty() : this.additionalProperties;

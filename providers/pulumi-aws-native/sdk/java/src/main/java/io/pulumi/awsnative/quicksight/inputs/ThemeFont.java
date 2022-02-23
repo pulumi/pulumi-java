@@ -15,7 +15,7 @@ public final class ThemeFont extends io.pulumi.resources.InvokeArgs {
     public static final ThemeFont Empty = new ThemeFont();
 
     @InputImport(name="fontFamily")
-        private final @Nullable String fontFamily;
+      private final @Nullable String fontFamily;
 
     public Optional<String> getFontFamily() {
         return this.fontFamily == null ? Optional.empty() : Optional.ofNullable(this.fontFamily);

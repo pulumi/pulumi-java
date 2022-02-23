@@ -48,7 +48,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-        private final Input<List<Object>> actions;
+      private final Input<List<Object>> actions;
 
     public Input<List<Object>> getActions() {
         return this.actions;
@@ -59,7 +59,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-        private final @Nullable Input<List<Object>> conditions;
+      private final @Nullable Input<List<Object>> conditions;
 
     public Input<List<Object>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -70,7 +70,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order", required=true)
-        private final Input<Integer> order;
+      private final Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order;

@@ -13,7 +13,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @InputImport(name="projectName", required=true)
-        private final String projectName;
+      private final String projectName;
 
     public String getProjectName() {
         return this.projectName;

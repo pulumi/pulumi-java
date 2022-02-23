@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
      * 
      */
     @InputImport(name="tableReference", required=true)
-        private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
+      private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> getTableReference() {
         return this.tableReference;

@@ -16,7 +16,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     public static final FhirStoreIamMemberState Empty = new FhirStoreIamMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<FhirStoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<FhirStoreIamMemberConditionGetArgs> condition;
 
     public Input<FhirStoreIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -41,14 +41,14 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fhirStoreId")
-        private final @Nullable Input<String> fhirStoreId;
+      private final @Nullable Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId == null ? Input.empty() : this.fhirStoreId;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -61,7 +61,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

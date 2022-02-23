@@ -23,7 +23,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arcSettingName", required=true)
-        private final Input<String> arcSettingName;
+      private final Input<String> arcSettingName;
 
     public Input<String> getArcSettingName() {
         return this.arcSettingName;
@@ -34,7 +34,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-        private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -45,7 +45,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -56,7 +56,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-        private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -67,7 +67,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-        private final @Nullable Input<String> createdBy;
+      private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -78,7 +78,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-        private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
     public Input<Either<String,CreatedByType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -89,7 +89,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionName")
-        private final @Nullable Input<String> extensionName;
+      private final @Nullable Input<String> extensionName;
 
     public Input<String> getExtensionName() {
         return this.extensionName == null ? Input.empty() : this.extensionName;
@@ -100,7 +100,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-        private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -111,7 +111,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-        private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -122,7 +122,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-        private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -133,7 +133,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-        private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
     public Input<Either<String,CreatedByType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -144,7 +144,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedSettings")
-        private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -155,7 +155,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher")
-        private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -166,7 +166,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -177,7 +177,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<Object> settings;
+      private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -188,7 +188,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -199,7 +199,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeHandlerVersion")
-        private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;

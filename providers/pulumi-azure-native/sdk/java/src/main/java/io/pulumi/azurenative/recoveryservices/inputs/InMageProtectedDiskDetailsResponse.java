@@ -25,7 +25,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskCapacityInBytes")
-        private final @Nullable Double diskCapacityInBytes;
+      private final @Nullable Double diskCapacityInBytes;
 
     public Optional<Double> getDiskCapacityInBytes() {
         return this.diskCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskCapacityInBytes);
@@ -36,7 +36,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskId")
-        private final @Nullable String diskId;
+      private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
@@ -47,7 +47,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskName")
-        private final @Nullable String diskName;
+      private final @Nullable String diskName;
 
     public Optional<String> getDiskName() {
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
@@ -58,7 +58,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskResized")
-        private final @Nullable String diskResized;
+      private final @Nullable String diskResized;
 
     public Optional<String> getDiskResized() {
         return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
@@ -69,7 +69,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileSystemCapacityInBytes")
-        private final @Nullable Double fileSystemCapacityInBytes;
+      private final @Nullable Double fileSystemCapacityInBytes;
 
     public Optional<Double> getFileSystemCapacityInBytes() {
         return this.fileSystemCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.fileSystemCapacityInBytes);
@@ -80,7 +80,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="healthErrorCode")
-        private final @Nullable String healthErrorCode;
+      private final @Nullable String healthErrorCode;
 
     public Optional<String> getHealthErrorCode() {
         return this.healthErrorCode == null ? Optional.empty() : Optional.ofNullable(this.healthErrorCode);
@@ -91,7 +91,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="lastRpoCalculatedTime")
-        private final @Nullable String lastRpoCalculatedTime;
+      private final @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> getLastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
@@ -102,7 +102,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="protectionStage")
-        private final @Nullable String protectionStage;
+      private final @Nullable String protectionStage;
 
     public Optional<String> getProtectionStage() {
         return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
@@ -113,7 +113,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="psDataInMB")
-        private final @Nullable Double psDataInMB;
+      private final @Nullable Double psDataInMB;
 
     public Optional<Double> getPsDataInMB() {
         return this.psDataInMB == null ? Optional.empty() : Optional.ofNullable(this.psDataInMB);
@@ -124,7 +124,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resyncDurationInSeconds")
-        private final @Nullable Double resyncDurationInSeconds;
+      private final @Nullable Double resyncDurationInSeconds;
 
     public Optional<Double> getResyncDurationInSeconds() {
         return this.resyncDurationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.resyncDurationInSeconds);
@@ -135,7 +135,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resyncProgressPercentage")
-        private final @Nullable Integer resyncProgressPercentage;
+      private final @Nullable Integer resyncProgressPercentage;
 
     public Optional<Integer> getResyncProgressPercentage() {
         return this.resyncProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.resyncProgressPercentage);
@@ -146,7 +146,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resyncRequired")
-        private final @Nullable String resyncRequired;
+      private final @Nullable String resyncRequired;
 
     public Optional<String> getResyncRequired() {
         return this.resyncRequired == null ? Optional.empty() : Optional.ofNullable(this.resyncRequired);
@@ -157,7 +157,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="rpoInSeconds")
-        private final @Nullable Double rpoInSeconds;
+      private final @Nullable Double rpoInSeconds;
 
     public Optional<Double> getRpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
@@ -168,7 +168,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceDataInMB")
-        private final @Nullable Double sourceDataInMB;
+      private final @Nullable Double sourceDataInMB;
 
     public Optional<Double> getSourceDataInMB() {
         return this.sourceDataInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceDataInMB);
@@ -179,7 +179,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetDataInMB")
-        private final @Nullable Double targetDataInMB;
+      private final @Nullable Double targetDataInMB;
 
     public Optional<Double> getTargetDataInMB() {
         return this.targetDataInMB == null ? Optional.empty() : Optional.ofNullable(this.targetDataInMB);

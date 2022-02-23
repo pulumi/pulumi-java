@@ -25,7 +25,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-        private final @Nullable Input<String> adminPassword;
+      private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -36,7 +36,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-        private final @Nullable Input<String> adminUsername;
+      private final @Nullable Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername == null ? Input.empty() : this.adminUsername;
@@ -47,7 +47,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-        private final @Nullable Input<String> computerName;
+      private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -58,7 +58,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Input<Either<String,OsType>> osType;
 
     public Input<Either<String,OsType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;

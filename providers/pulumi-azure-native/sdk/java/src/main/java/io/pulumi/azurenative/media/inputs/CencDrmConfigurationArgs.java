@@ -24,7 +24,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="playReady")
-        private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
+      private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
     public Input<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
         return this.playReady == null ? Input.empty() : this.playReady;
@@ -35,7 +35,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="widevine")
-        private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
+      private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
 
     public Input<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
         return this.widevine == null ? Input.empty() : this.widevine;

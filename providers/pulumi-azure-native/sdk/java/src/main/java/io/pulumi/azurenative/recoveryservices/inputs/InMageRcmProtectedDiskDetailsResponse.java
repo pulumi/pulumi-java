@@ -22,7 +22,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="capacityInBytes", required=true)
-        private final Double capacityInBytes;
+      private final Double capacityInBytes;
 
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
@@ -33,7 +33,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskEncryptionSetId", required=true)
-        private final String diskEncryptionSetId;
+      private final String diskEncryptionSetId;
 
     public String getDiskEncryptionSetId() {
         return this.diskEncryptionSetId;
@@ -44,7 +44,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskId", required=true)
-        private final String diskId;
+      private final String diskId;
 
     public String getDiskId() {
         return this.diskId;
@@ -55,7 +55,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskName", required=true)
-        private final String diskName;
+      private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -66,7 +66,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskType", required=true)
-        private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -77,7 +77,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isOSDisk", required=true)
-        private final String isOSDisk;
+      private final String isOSDisk;
 
     public String getIsOSDisk() {
         return this.isOSDisk;
@@ -88,7 +88,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="logStorageAccountId", required=true)
-        private final String logStorageAccountId;
+      private final String logStorageAccountId;
 
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
@@ -99,7 +99,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="seedManagedDiskId", required=true)
-        private final String seedManagedDiskId;
+      private final String seedManagedDiskId;
 
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
@@ -110,7 +110,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetManagedDiskId", required=true)
-        private final String targetManagedDiskId;
+      private final String targetManagedDiskId;
 
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;

@@ -26,7 +26,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="base64EncodedCassandraYamlFragment")
-        private final @Nullable Input<String> base64EncodedCassandraYamlFragment;
+      private final @Nullable Input<String> base64EncodedCassandraYamlFragment;
 
     public Input<String> getBase64EncodedCassandraYamlFragment() {
         return this.base64EncodedCassandraYamlFragment == null ? Input.empty() : this.base64EncodedCassandraYamlFragment;
@@ -37,7 +37,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataCenterLocation")
-        private final @Nullable Input<String> dataCenterLocation;
+      private final @Nullable Input<String> dataCenterLocation;
 
     public Input<String> getDataCenterLocation() {
         return this.dataCenterLocation == null ? Input.empty() : this.dataCenterLocation;
@@ -48,7 +48,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="delegatedSubnetId")
-        private final @Nullable Input<String> delegatedSubnetId;
+      private final @Nullable Input<String> delegatedSubnetId;
 
     public Input<String> getDelegatedSubnetId() {
         return this.delegatedSubnetId == null ? Input.empty() : this.delegatedSubnetId;
@@ -59,7 +59,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nodeCount")
-        private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -70,7 +70,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
     public Input<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;

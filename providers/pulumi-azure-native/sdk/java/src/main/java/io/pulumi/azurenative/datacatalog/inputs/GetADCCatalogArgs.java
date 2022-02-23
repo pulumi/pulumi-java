@@ -17,7 +17,7 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="catalogName", required=true)
-        private final String catalogName;
+      private final String catalogName;
 
     public String getCatalogName() {
         return this.catalogName;
@@ -28,7 +28,7 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

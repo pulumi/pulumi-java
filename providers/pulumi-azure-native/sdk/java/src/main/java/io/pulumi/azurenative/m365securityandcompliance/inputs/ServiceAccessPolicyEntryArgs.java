@@ -22,7 +22,7 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objectId", required=true)
-        private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;

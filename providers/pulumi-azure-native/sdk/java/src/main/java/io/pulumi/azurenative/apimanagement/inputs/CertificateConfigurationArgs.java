@@ -24,7 +24,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificate")
-        private final @Nullable Input<CertificateInformationArgs> certificate;
+      private final @Nullable Input<CertificateInformationArgs> certificate;
 
     public Input<CertificateInformationArgs> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -35,7 +35,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificatePassword")
-        private final @Nullable Input<String> certificatePassword;
+      private final @Nullable Input<String> certificatePassword;
 
     public Input<String> getCertificatePassword() {
         return this.certificatePassword == null ? Input.empty() : this.certificatePassword;
@@ -46,7 +46,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encodedCertificate")
-        private final @Nullable Input<String> encodedCertificate;
+      private final @Nullable Input<String> encodedCertificate;
 
     public Input<String> getEncodedCertificate() {
         return this.encodedCertificate == null ? Input.empty() : this.encodedCertificate;
@@ -57,7 +57,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storeName", required=true)
-        private final Input<String> storeName;
+      private final Input<String> storeName;
 
     public Input<String> getStoreName() {
         return this.storeName;

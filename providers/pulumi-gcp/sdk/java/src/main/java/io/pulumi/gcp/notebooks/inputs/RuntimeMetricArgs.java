@@ -16,7 +16,7 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuntimeMetricArgs Empty = new RuntimeMetricArgs();
 
     @InputImport(name="systemMetrics")
-        private final @Nullable Input<Map<String,String>> systemMetrics;
+      private final @Nullable Input<Map<String,String>> systemMetrics;
 
     public Input<Map<String,String>> getSystemMetrics() {
         return this.systemMetrics == null ? Input.empty() : this.systemMetrics;

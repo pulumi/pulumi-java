@@ -24,7 +24,7 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="delayEvaluation")
-        private final @Nullable Input<Integer> delayEvaluation;
+      private final @Nullable Input<Integer> delayEvaluation;
 
     public Input<Integer> getDelayEvaluation() {
         return this.delayEvaluation == null ? Input.empty() : this.delayEvaluation;
@@ -35,7 +35,7 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="evaluationInterval")
-        private final @Nullable Input<Integer> evaluationInterval;
+      private final @Nullable Input<Integer> evaluationInterval;
 
     public Input<Integer> getEvaluationInterval() {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
@@ -46,7 +46,7 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyType", required=true)
-        private final Input<String> policyType;
+      private final Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType;
@@ -57,7 +57,7 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="truncationPercentage")
-        private final @Nullable Input<Integer> truncationPercentage;
+      private final @Nullable Input<Integer> truncationPercentage;
 
     public Input<Integer> getTruncationPercentage() {
         return this.truncationPercentage == null ? Input.empty() : this.truncationPercentage;

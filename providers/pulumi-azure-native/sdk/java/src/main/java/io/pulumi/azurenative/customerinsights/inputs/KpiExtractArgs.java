@@ -22,7 +22,7 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-        private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -33,7 +33,7 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extractName", required=true)
-        private final Input<String> extractName;
+      private final Input<String> extractName;
 
     public Input<String> getExtractName() {
         return this.extractName;

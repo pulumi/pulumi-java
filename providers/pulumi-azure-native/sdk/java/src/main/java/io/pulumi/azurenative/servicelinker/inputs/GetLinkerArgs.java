@@ -17,7 +17,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkerName", required=true)
-        private final String linkerName;
+      private final String linkerName;
 
     public String getLinkerName() {
         return this.linkerName;
@@ -28,7 +28,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;

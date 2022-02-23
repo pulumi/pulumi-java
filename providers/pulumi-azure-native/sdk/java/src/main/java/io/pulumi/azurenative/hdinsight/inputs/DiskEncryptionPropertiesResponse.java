@@ -24,7 +24,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionAlgorithm")
-        private final @Nullable String encryptionAlgorithm;
+      private final @Nullable String encryptionAlgorithm;
 
     public Optional<String> getEncryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.encryptionAlgorithm);
@@ -35,7 +35,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionAtHost")
-        private final @Nullable Boolean encryptionAtHost;
+      private final @Nullable Boolean encryptionAtHost;
 
     public Optional<Boolean> getEncryptionAtHost() {
         return this.encryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.encryptionAtHost);
@@ -46,7 +46,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable String keyName;
+      private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -57,7 +57,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyVersion")
-        private final @Nullable String keyVersion;
+      private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -68,7 +68,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="msiResourceId")
-        private final @Nullable String msiResourceId;
+      private final @Nullable String msiResourceId;
 
     public Optional<String> getMsiResourceId() {
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
@@ -79,7 +79,7 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vaultUri")
-        private final @Nullable String vaultUri;
+      private final @Nullable String vaultUri;
 
     public Optional<String> getVaultUri() {
         return this.vaultUri == null ? Optional.empty() : Optional.ofNullable(this.vaultUri);

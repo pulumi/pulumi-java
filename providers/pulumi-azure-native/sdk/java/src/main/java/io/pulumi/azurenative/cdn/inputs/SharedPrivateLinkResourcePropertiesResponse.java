@@ -24,7 +24,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable String groupId;
+      private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -35,7 +35,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateLink")
-        private final @Nullable ResourceReferenceResponse privateLink;
+      private final @Nullable ResourceReferenceResponse privateLink;
 
     public Optional<ResourceReferenceResponse> getPrivateLink() {
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
@@ -46,7 +46,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateLinkLocation")
-        private final @Nullable String privateLinkLocation;
+      private final @Nullable String privateLinkLocation;
 
     public Optional<String> getPrivateLinkLocation() {
         return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
@@ -57,7 +57,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="requestMessage")
-        private final @Nullable String requestMessage;
+      private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
@@ -68,7 +68,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

@@ -21,7 +21,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<RouteTableTagArgs>> tags;
+      private final @Nullable Input<List<RouteTableTagArgs>> tags;
 
     public Input<List<RouteTableTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -32,7 +32,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-        private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

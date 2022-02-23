@@ -24,7 +24,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deploymentSettings")
-        private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
+      private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
 
     public Input<DeploymentSettingsArgs> getDeploymentSettings() {
         return this.deploymentSettings == null ? Input.empty() : this.deploymentSettings;
@@ -35,7 +35,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<UserSourceInfoArgs> source;
+      private final @Nullable Input<UserSourceInfoArgs> source;
 
     public Input<UserSourceInfoArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;

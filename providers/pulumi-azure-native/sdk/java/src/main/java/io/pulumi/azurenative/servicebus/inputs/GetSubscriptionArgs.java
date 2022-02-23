@@ -17,7 +17,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-        private final String subscriptionName;
+      private final String subscriptionName;
 
     public String getSubscriptionName() {
         return this.subscriptionName;
@@ -50,7 +50,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-        private final String topicName;
+      private final String topicName;
 
     public String getTopicName() {
         return this.topicName;

@@ -26,7 +26,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontSize")
-        private final @Nullable Input<Either<String,FontSize>> fontSize;
+      private final @Nullable Input<Either<String,FontSize>> fontSize;
 
     public Input<Either<String,FontSize>> getFontSize() {
         return this.fontSize == null ? Input.empty() : this.fontSize;
@@ -37,7 +37,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontStyle")
-        private final @Nullable Input<Either<String,FontStyle>> fontStyle;
+      private final @Nullable Input<Either<String,FontStyle>> fontStyle;
 
     public Input<Either<String,FontStyle>> getFontStyle() {
         return this.fontStyle == null ? Input.empty() : this.fontStyle;

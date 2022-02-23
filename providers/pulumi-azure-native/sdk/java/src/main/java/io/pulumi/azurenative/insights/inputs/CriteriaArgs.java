@@ -25,7 +25,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-        private final @Nullable Input<List<DimensionArgs>> dimensions;
+      private final @Nullable Input<List<DimensionArgs>> dimensions;
 
     public Input<List<DimensionArgs>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -36,7 +36,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-        private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;

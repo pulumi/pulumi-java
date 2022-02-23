@@ -24,7 +24,7 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="delete")
-        private final @Nullable DateAfterModificationResponse delete;
+      private final @Nullable DateAfterModificationResponse delete;
 
     public Optional<DateAfterModificationResponse> getDelete() {
         return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
@@ -35,7 +35,7 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableAutoTierToHotFromCool")
-        private final @Nullable Boolean enableAutoTierToHotFromCool;
+      private final @Nullable Boolean enableAutoTierToHotFromCool;
 
     public Optional<Boolean> getEnableAutoTierToHotFromCool() {
         return this.enableAutoTierToHotFromCool == null ? Optional.empty() : Optional.ofNullable(this.enableAutoTierToHotFromCool);
@@ -46,7 +46,7 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tierToArchive")
-        private final @Nullable DateAfterModificationResponse tierToArchive;
+      private final @Nullable DateAfterModificationResponse tierToArchive;
 
     public Optional<DateAfterModificationResponse> getTierToArchive() {
         return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
@@ -57,7 +57,7 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tierToCool")
-        private final @Nullable DateAfterModificationResponse tierToCool;
+      private final @Nullable DateAfterModificationResponse tierToCool;
 
     public Optional<DateAfterModificationResponse> getTierToCool() {
         return this.tierToCool == null ? Optional.empty() : Optional.ofNullable(this.tierToCool);

@@ -22,7 +22,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authorizationRuleName")
-        private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Input<String> authorizationRuleName;
 
     public Input<String> getAuthorizationRuleName() {
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
@@ -33,7 +33,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="eventHubName", required=true)
-        private final Input<String> eventHubName;
+      private final Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName;
@@ -44,7 +44,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -55,7 +55,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rights", required=true)
-        private final Input<List<Either<String,AccessRights>>> rights;
+      private final Input<List<Either<String,AccessRights>>> rights;
 
     public Input<List<Either<String,AccessRights>>> getRights() {
         return this.rights;

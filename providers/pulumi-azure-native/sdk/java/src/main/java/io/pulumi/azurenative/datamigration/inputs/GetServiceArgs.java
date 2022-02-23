@@ -17,7 +17,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-        private final String groupName;
+      private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
@@ -28,7 +28,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

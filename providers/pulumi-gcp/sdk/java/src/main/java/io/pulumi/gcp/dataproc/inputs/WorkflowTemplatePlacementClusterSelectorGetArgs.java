@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-        private final Input<Map<String,String>> clusterLabels;
+      private final Input<Map<String,String>> clusterLabels;
 
     public Input<Map<String,String>> getClusterLabels() {
         return this.clusterLabels;
@@ -31,7 +31,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

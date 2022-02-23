@@ -17,7 +17,7 @@ public final class ListSaasResourceAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;

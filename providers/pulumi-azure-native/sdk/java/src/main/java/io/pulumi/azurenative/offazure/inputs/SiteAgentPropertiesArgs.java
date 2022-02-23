@@ -23,7 +23,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultId")
-        private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -34,7 +34,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultUri")
-        private final @Nullable Input<String> keyVaultUri;
+      private final @Nullable Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;

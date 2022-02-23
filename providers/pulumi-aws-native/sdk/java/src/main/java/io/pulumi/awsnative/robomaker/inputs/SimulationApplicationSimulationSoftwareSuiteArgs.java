@@ -24,7 +24,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<SimulationApplicationSimulationSoftwareSuiteName> name;
+      private final Input<SimulationApplicationSimulationSoftwareSuiteName> name;
 
     public Input<SimulationApplicationSimulationSoftwareSuiteName> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version;
+      private final @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
     public Input<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;

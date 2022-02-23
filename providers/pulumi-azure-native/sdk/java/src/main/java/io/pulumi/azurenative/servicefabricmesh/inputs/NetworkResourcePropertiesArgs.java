@@ -23,7 +23,7 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;

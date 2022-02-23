@@ -16,14 +16,14 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     public static final ApplicationApiGatewayProxyInputArgs Empty = new ApplicationApiGatewayProxyInputArgs();
 
     @InputImport(name="endpointType")
-        private final @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
+      private final @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
 
     public Input<ApplicationApiGatewayEndpointType> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
     }
 
     @InputImport(name="stageName")
-        private final @Nullable Input<String> stageName;
+      private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;

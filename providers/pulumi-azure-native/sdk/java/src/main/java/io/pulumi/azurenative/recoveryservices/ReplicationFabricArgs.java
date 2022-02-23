@@ -20,7 +20,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fabricName")
-        private final @Nullable Input<String> fabricName;
+      private final @Nullable Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName == null ? Input.empty() : this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<FabricCreationInputPropertiesArgs> properties;
+      private final @Nullable Input<FabricCreationInputPropertiesArgs> properties;
 
     public Input<FabricCreationInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

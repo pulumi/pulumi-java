@@ -25,7 +25,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ids")
-        private final @Nullable Input<List<SubResourceArgs>> ids;
+      private final @Nullable Input<List<SubResourceArgs>> ids;
 
     public Input<List<SubResourceArgs>> getIds() {
         return this.ids == null ? Input.empty() : this.ids;
@@ -36,7 +36,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<List<String>> labels;
+      private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;

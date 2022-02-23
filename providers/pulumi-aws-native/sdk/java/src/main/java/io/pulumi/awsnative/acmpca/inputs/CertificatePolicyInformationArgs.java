@@ -21,14 +21,14 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
     public static final CertificatePolicyInformationArgs Empty = new CertificatePolicyInformationArgs();
 
     @InputImport(name="certPolicyId", required=true)
-        private final Input<String> certPolicyId;
+      private final Input<String> certPolicyId;
 
     public Input<String> getCertPolicyId() {
         return this.certPolicyId;
     }
 
     @InputImport(name="policyQualifiers")
-        private final @Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
+      private final @Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
     public Input<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {
         return this.policyQualifiers == null ? Input.empty() : this.policyQualifiers;

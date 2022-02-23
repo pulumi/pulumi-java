@@ -18,7 +18,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="application", required=true)
-        private final Input<String> application;
+      private final Input<String> application;
 
     public Input<String> getApplication() {
         return this.application;
@@ -29,7 +29,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attributeGroup", required=true)
-        private final Input<String> attributeGroup;
+      private final Input<String> attributeGroup;
 
     public Input<String> getAttributeGroup() {
         return this.attributeGroup;

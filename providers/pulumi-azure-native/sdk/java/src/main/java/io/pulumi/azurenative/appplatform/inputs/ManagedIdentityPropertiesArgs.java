@@ -25,7 +25,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -36,7 +36,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -47,7 +47,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,ManagedIdentityType>> type;
+      private final @Nullable Input<Either<String,ManagedIdentityType>> type;
 
     public Input<Either<String,ManagedIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -24,7 +24,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationArns")
-        private final @Nullable Input<List<String>> organizationArns;
+      private final @Nullable Input<List<String>> organizationArns;
 
     public Input<List<String>> getOrganizationArns() {
         return this.organizationArns == null ? Input.empty() : this.organizationArns;
@@ -35,7 +35,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationalUnitArns")
-        private final @Nullable Input<List<String>> organizationalUnitArns;
+      private final @Nullable Input<List<String>> organizationalUnitArns;
 
     public Input<List<String>> getOrganizationalUnitArns() {
         return this.organizationalUnitArns == null ? Input.empty() : this.organizationalUnitArns;
@@ -46,7 +46,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-        private final @Nullable Input<List<String>> userGroups;
+      private final @Nullable Input<List<String>> userGroups;
 
     public Input<List<String>> getUserGroups() {
         return this.userGroups == null ? Input.empty() : this.userGroups;
@@ -57,7 +57,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-        private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;

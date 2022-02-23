@@ -23,7 +23,7 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<Object> value;
+      private final Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value;

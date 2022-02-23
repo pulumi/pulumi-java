@@ -23,7 +23,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="paths")
-        private final @Nullable Input<List<String>> paths;
+      private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;
@@ -47,7 +47,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timings")
-        private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
+      private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
     public Input<List<TriggerBuildArtifactsObjectsTimingArgs>> getTimings() {
         return this.timings == null ? Input.empty() : this.timings;

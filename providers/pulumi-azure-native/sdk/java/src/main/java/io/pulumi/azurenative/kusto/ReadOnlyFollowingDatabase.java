@@ -192,6 +192,21 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ReadOnlyFollowingDatabase(String name) {
+        this(name, ReadOnlyFollowingDatabaseArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReadOnlyFollowingDatabase(String name, ReadOnlyFollowingDatabaseArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

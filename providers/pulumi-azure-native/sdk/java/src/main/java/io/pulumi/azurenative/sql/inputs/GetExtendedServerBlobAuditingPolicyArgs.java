@@ -17,7 +17,7 @@ public final class GetExtendedServerBlobAuditingPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="blobAuditingPolicyName", required=true)
-        private final String blobAuditingPolicyName;
+      private final String blobAuditingPolicyName;
 
     public String getBlobAuditingPolicyName() {
         return this.blobAuditingPolicyName;
@@ -28,7 +28,7 @@ public final class GetExtendedServerBlobAuditingPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetExtendedServerBlobAuditingPolicyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

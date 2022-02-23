@@ -16,21 +16,21 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final RegistryPolicyArgs Empty = new RegistryPolicyArgs();
 
     @InputImport(name="policy", required=true)
-        private final Input<Object> policy;
+      private final Input<Object> policy;
 
     public Input<Object> getPolicy() {
         return this.policy;
     }
 
     @InputImport(name="registryName", required=true)
-        private final Input<String> registryName;
+      private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
     }
 
     @InputImport(name="revisionId")
-        private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;

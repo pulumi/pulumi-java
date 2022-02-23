@@ -25,7 +25,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="container")
-        private final @Nullable Input<String> container;
+      private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -36,7 +36,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dateFormat")
-        private final @Nullable Input<String> dateFormat;
+      private final @Nullable Input<String> dateFormat;
 
     public Input<String> getDateFormat() {
         return this.dateFormat == null ? Input.empty() : this.dateFormat;
@@ -47,7 +47,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pathPattern")
-        private final @Nullable Input<String> pathPattern;
+      private final @Nullable Input<String> pathPattern;
 
     public Input<String> getPathPattern() {
         return this.pathPattern == null ? Input.empty() : this.pathPattern;
@@ -58,7 +58,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageAccounts")
-        private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
+      private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
 
     public Input<List<StorageAccountArgs>> getStorageAccounts() {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
@@ -69,7 +69,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeFormat")
-        private final @Nullable Input<String> timeFormat;
+      private final @Nullable Input<String> timeFormat;
 
     public Input<String> getTimeFormat() {
         return this.timeFormat == null ? Input.empty() : this.timeFormat;
@@ -81,7 +81,7 @@ public final class BlobReferenceInputDataSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

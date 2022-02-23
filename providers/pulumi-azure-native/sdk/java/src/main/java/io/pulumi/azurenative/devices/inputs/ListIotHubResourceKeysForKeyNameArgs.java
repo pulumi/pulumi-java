@@ -17,7 +17,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="keyName", required=true)
-        private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

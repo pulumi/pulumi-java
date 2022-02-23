@@ -23,7 +23,7 @@ public final class WebACLCustomRequestHandlingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-        private final Input<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
+      private final Input<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
 
     public Input<List<WebACLCustomHTTPHeaderArgs>> getInsertHeaders() {
         return this.insertHeaders;

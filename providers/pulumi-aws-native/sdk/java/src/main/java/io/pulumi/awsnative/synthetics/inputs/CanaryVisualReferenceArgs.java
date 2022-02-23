@@ -21,7 +21,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseCanaryRunId", required=true)
-        private final Input<String> baseCanaryRunId;
+      private final Input<String> baseCanaryRunId;
 
     public Input<String> getBaseCanaryRunId() {
         return this.baseCanaryRunId;
@@ -32,7 +32,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseScreenshots")
-        private final @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
+      private final @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
     public Input<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {
         return this.baseScreenshots == null ? Input.empty() : this.baseScreenshots;

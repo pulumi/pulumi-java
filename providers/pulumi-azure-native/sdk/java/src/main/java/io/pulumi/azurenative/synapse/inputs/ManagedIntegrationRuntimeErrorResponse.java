@@ -22,7 +22,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="code", required=true)
-        private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -33,7 +33,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -44,7 +44,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final List<String> parameters;
+      private final List<String> parameters;
 
     public List<String> getParameters() {
         return this.parameters;
@@ -55,7 +55,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="time", required=true)
-        private final String time;
+      private final String time;
 
     public String getTime() {
         return this.time;

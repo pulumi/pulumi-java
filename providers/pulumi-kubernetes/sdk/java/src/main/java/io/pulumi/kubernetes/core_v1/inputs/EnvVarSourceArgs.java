@@ -26,7 +26,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configMapKeyRef")
-        private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
+      private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
 
     public Input<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
         return this.configMapKeyRef == null ? Input.empty() : this.configMapKeyRef;
@@ -37,7 +37,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldRef")
-        private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
+      private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
 
     public Input<ObjectFieldSelectorArgs> getFieldRef() {
         return this.fieldRef == null ? Input.empty() : this.fieldRef;
@@ -48,7 +48,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceFieldRef")
-        private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
+      private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
 
     public Input<ResourceFieldSelectorArgs> getResourceFieldRef() {
         return this.resourceFieldRef == null ? Input.empty() : this.resourceFieldRef;
@@ -59,7 +59,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretKeyRef")
-        private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
 
     public Input<SecretKeySelectorArgs> getSecretKeyRef() {
         return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;

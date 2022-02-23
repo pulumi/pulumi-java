@@ -16,42 +16,42 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final PackageVersionArgs Empty = new PackageVersionArgs();
 
     @InputImport(name="markLatest")
-        private final @Nullable Input<Boolean> markLatest;
+      private final @Nullable Input<Boolean> markLatest;
 
     public Input<Boolean> getMarkLatest() {
         return this.markLatest == null ? Input.empty() : this.markLatest;
     }
 
     @InputImport(name="ownerAccount")
-        private final @Nullable Input<String> ownerAccount;
+      private final @Nullable Input<String> ownerAccount;
 
     public Input<String> getOwnerAccount() {
         return this.ownerAccount == null ? Input.empty() : this.ownerAccount;
     }
 
     @InputImport(name="packageId", required=true)
-        private final Input<String> packageId;
+      private final Input<String> packageId;
 
     public Input<String> getPackageId() {
         return this.packageId;
     }
 
     @InputImport(name="packageVersion", required=true)
-        private final Input<String> packageVersion;
+      private final Input<String> packageVersion;
 
     public Input<String> getPackageVersion() {
         return this.packageVersion;
     }
 
     @InputImport(name="patchVersion", required=true)
-        private final Input<String> patchVersion;
+      private final Input<String> patchVersion;
 
     public Input<String> getPatchVersion() {
         return this.patchVersion;
     }
 
     @InputImport(name="updatedLatestPatchVersion")
-        private final @Nullable Input<String> updatedLatestPatchVersion;
+      private final @Nullable Input<String> updatedLatestPatchVersion;
 
     public Input<String> getUpdatedLatestPatchVersion() {
         return this.updatedLatestPatchVersion == null ? Input.empty() : this.updatedLatestPatchVersion;

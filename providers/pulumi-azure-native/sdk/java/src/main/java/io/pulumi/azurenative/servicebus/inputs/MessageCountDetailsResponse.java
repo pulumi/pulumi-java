@@ -21,7 +21,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="activeMessageCount", required=true)
-        private final Double activeMessageCount;
+      private final Double activeMessageCount;
 
     public Double getActiveMessageCount() {
         return this.activeMessageCount;
@@ -32,7 +32,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="deadLetterMessageCount", required=true)
-        private final Double deadLetterMessageCount;
+      private final Double deadLetterMessageCount;
 
     public Double getDeadLetterMessageCount() {
         return this.deadLetterMessageCount;
@@ -43,7 +43,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="scheduledMessageCount", required=true)
-        private final Double scheduledMessageCount;
+      private final Double scheduledMessageCount;
 
     public Double getScheduledMessageCount() {
         return this.scheduledMessageCount;
@@ -54,7 +54,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="transferDeadLetterMessageCount", required=true)
-        private final Double transferDeadLetterMessageCount;
+      private final Double transferDeadLetterMessageCount;
 
     public Double getTransferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
@@ -65,7 +65,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="transferMessageCount", required=true)
-        private final Double transferMessageCount;
+      private final Double transferMessageCount;
 
     public Double getTransferMessageCount() {
         return this.transferMessageCount;

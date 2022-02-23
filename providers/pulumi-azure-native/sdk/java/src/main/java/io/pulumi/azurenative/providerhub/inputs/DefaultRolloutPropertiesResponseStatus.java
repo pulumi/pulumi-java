@@ -18,35 +18,35 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
     public static final DefaultRolloutPropertiesResponseStatus Empty = new DefaultRolloutPropertiesResponseStatus();
 
     @InputImport(name="completedRegions")
-        private final @Nullable List<String> completedRegions;
+      private final @Nullable List<String> completedRegions;
 
     public List<String> getCompletedRegions() {
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
 
     @InputImport(name="failedOrSkippedRegions")
-        private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
+      private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
 
     public Map<String,ExtendedErrorInfoResponse> getFailedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
 
     @InputImport(name="nextTrafficRegion")
-        private final @Nullable String nextTrafficRegion;
+      private final @Nullable String nextTrafficRegion;
 
     public Optional<String> getNextTrafficRegion() {
         return this.nextTrafficRegion == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegion);
     }
 
     @InputImport(name="nextTrafficRegionScheduledTime")
-        private final @Nullable String nextTrafficRegionScheduledTime;
+      private final @Nullable String nextTrafficRegionScheduledTime;
 
     public Optional<String> getNextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
 
     @InputImport(name="subscriptionReregistrationResult")
-        private final @Nullable String subscriptionReregistrationResult;
+      private final @Nullable String subscriptionReregistrationResult;
 
     public Optional<String> getSubscriptionReregistrationResult() {
         return this.subscriptionReregistrationResult == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReregistrationResult);

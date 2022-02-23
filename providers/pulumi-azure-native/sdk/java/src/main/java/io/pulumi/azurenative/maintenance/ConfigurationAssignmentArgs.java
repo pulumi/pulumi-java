@@ -19,7 +19,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="configurationAssignmentName")
-        private final @Nullable Input<String> configurationAssignmentName;
+      private final @Nullable Input<String> configurationAssignmentName;
 
     public Input<String> getConfigurationAssignmentName() {
         return this.configurationAssignmentName == null ? Input.empty() : this.configurationAssignmentName;
@@ -30,7 +30,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,7 +41,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-        private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Input<String> maintenanceConfigurationId;
 
     public Input<String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
@@ -52,7 +52,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="providerName", required=true)
-        private final Input<String> providerName;
+      private final Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName;
@@ -63,7 +63,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -85,7 +85,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -96,7 +96,7 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;

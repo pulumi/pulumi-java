@@ -26,7 +26,7 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="containerArguments")
-        private final @Nullable Input<List<String>> containerArguments;
+      private final @Nullable Input<List<String>> containerArguments;
 
     public Input<List<String>> getContainerArguments() {
         return this.containerArguments == null ? Input.empty() : this.containerArguments;
@@ -37,7 +37,7 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="containerEntrypoint")
-        private final @Nullable Input<List<String>> containerEntrypoint;
+      private final @Nullable Input<List<String>> containerEntrypoint;
 
     public Input<List<String>> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? Input.empty() : this.containerEntrypoint;
@@ -48,7 +48,7 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable Input<Object> environment;
+      private final @Nullable Input<Object> environment;
 
     public Input<Object> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -59,7 +59,7 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="imageUri", required=true)
-        private final Input<String> imageUri;
+      private final Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri;
@@ -70,14 +70,14 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="postAnalyticsProcessorSourceUri")
-        private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
+      private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
 
     public Input<String> getPostAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Input.empty() : this.postAnalyticsProcessorSourceUri;
     }
 
     @InputImport(name="problemType", required=true)
-        private final Input<ModelQualityJobDefinitionProblemType> problemType;
+      private final Input<ModelQualityJobDefinitionProblemType> problemType;
 
     public Input<ModelQualityJobDefinitionProblemType> getProblemType() {
         return this.problemType;
@@ -88,7 +88,7 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs ext
      * 
      */
     @InputImport(name="recordPreprocessorSourceUri")
-        private final @Nullable Input<String> recordPreprocessorSourceUri;
+      private final @Nullable Input<String> recordPreprocessorSourceUri;
 
     public Input<String> getRecordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Input.empty() : this.recordPreprocessorSourceUri;

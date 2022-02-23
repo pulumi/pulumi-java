@@ -23,7 +23,7 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final RequestMethodMatchConditionParametersResponse parameters;
+      private final RequestMethodMatchConditionParametersResponse parameters;
 
     public RequestMethodMatchConditionParametersResponse getParameters() {
         return this.parameters;

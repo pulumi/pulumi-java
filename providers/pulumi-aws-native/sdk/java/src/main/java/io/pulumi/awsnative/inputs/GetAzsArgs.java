@@ -15,7 +15,7 @@ public final class GetAzsArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAzsArgs Empty = new GetAzsArgs();
 
     @InputImport(name="region")
-        private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);

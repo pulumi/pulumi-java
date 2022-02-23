@@ -19,7 +19,7 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -31,7 +31,7 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userProject")
-        private final @Nullable String userProject;
+      private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);

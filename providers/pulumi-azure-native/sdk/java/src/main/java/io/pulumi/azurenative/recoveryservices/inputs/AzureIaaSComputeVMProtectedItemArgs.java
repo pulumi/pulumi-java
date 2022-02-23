@@ -34,7 +34,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -45,7 +45,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="backupSetName")
-        private final @Nullable Input<String> backupSetName;
+      private final @Nullable Input<String> backupSetName;
 
     public Input<String> getBackupSetName() {
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
@@ -56,7 +56,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerName")
-        private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -67,7 +67,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="createMode")
-        private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -78,7 +78,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-        private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
     public Input<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
@@ -89,7 +89,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-        private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
     public Input<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
@@ -100,7 +100,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="extendedInfo")
-        private final @Nullable Input<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Input<AzureIaaSVMProtectedItemExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -111,7 +111,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="extendedProperties")
-        private final @Nullable Input<ExtendedPropertiesArgs> extendedProperties;
+      private final @Nullable Input<ExtendedPropertiesArgs> extendedProperties;
 
     public Input<ExtendedPropertiesArgs> getExtendedProperties() {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
@@ -122,7 +122,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -133,7 +133,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="healthStatus")
-        private final @Nullable Input<Either<String,HealthStatus>> healthStatus;
+      private final @Nullable Input<Either<String,HealthStatus>> healthStatus;
 
     public Input<Either<String,HealthStatus>> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -144,7 +144,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-        private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
@@ -155,7 +155,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isRehydrate")
-        private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Input<Boolean> isRehydrate;
 
     public Input<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
@@ -166,7 +166,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-        private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
     public Input<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
@@ -177,7 +177,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kpisHealths")
-        private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
+      private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
     public Input<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
@@ -188,7 +188,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastBackupStatus")
-        private final @Nullable Input<String> lastBackupStatus;
+      private final @Nullable Input<String> lastBackupStatus;
 
     public Input<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -199,7 +199,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastBackupTime")
-        private final @Nullable Input<String> lastBackupTime;
+      private final @Nullable Input<String> lastBackupTime;
 
     public Input<String> getLastBackupTime() {
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
@@ -210,7 +210,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-        private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Input<String> lastRecoveryPoint;
 
     public Input<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
@@ -221,7 +221,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -232,7 +232,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedItemDataId")
-        private final @Nullable Input<String> protectedItemDataId;
+      private final @Nullable Input<String> protectedItemDataId;
 
     public Input<String> getProtectedItemDataId() {
         return this.protectedItemDataId == null ? Input.empty() : this.protectedItemDataId;
@@ -244,7 +244,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-        private final Input<String> protectedItemType;
+      private final Input<String> protectedItemType;
 
     public Input<String> getProtectedItemType() {
         return this.protectedItemType;
@@ -255,7 +255,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectionState")
-        private final @Nullable Input<Either<String,ProtectionState>> protectionState;
+      private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
     public Input<Either<String,ProtectionState>> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -266,7 +266,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectionStatus")
-        private final @Nullable Input<String> protectionStatus;
+      private final @Nullable Input<String> protectionStatus;
 
     public Input<String> getProtectionStatus() {
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
@@ -277,7 +277,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -288,7 +288,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualMachineId")
-        private final @Nullable Input<String> virtualMachineId;
+      private final @Nullable Input<String> virtualMachineId;
 
     public Input<String> getVirtualMachineId() {
         return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
@@ -299,7 +299,7 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workloadType")
-        private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 
     public Input<Either<String,DataSourceType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;

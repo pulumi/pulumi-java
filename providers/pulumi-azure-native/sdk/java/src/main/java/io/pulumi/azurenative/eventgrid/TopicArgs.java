@@ -26,7 +26,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inboundIpRules")
-        private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
+      private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Input<List<InboundIpRuleArgs>> getInboundIpRules() {
         return this.inboundIpRules == null ? Input.empty() : this.inboundIpRules;
@@ -37,7 +37,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputSchema")
-        private final @Nullable Input<Either<String,InputSchema>> inputSchema;
+      private final @Nullable Input<Either<String,InputSchema>> inputSchema;
 
     public Input<Either<String,InputSchema>> getInputSchema() {
         return this.inputSchema == null ? Input.empty() : this.inputSchema;
@@ -48,7 +48,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputSchemaMapping")
-        private final @Nullable Input<JsonInputSchemaMappingArgs> inputSchemaMapping;
+      private final @Nullable Input<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
     public Input<JsonInputSchemaMappingArgs> getInputSchemaMapping() {
         return this.inputSchemaMapping == null ? Input.empty() : this.inputSchemaMapping;
@@ -59,7 +59,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -71,7 +71,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -82,7 +82,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -93,7 +93,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -104,7 +104,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName")
-        private final @Nullable Input<String> topicName;
+      private final @Nullable Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName == null ? Input.empty() : this.topicName;

@@ -16,14 +16,14 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
     public static final DistributionOriginShieldArgs Empty = new DistributionOriginShieldArgs();
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="originShieldRegion")
-        private final @Nullable Input<String> originShieldRegion;
+      private final @Nullable Input<String> originShieldRegion;
 
     public Input<String> getOriginShieldRegion() {
         return this.originShieldRegion == null ? Input.empty() : this.originShieldRegion;

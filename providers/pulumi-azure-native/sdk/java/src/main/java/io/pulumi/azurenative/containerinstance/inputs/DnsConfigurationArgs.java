@@ -24,7 +24,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nameServers", required=true)
-        private final Input<List<String>> nameServers;
+      private final Input<List<String>> nameServers;
 
     public Input<List<String>> getNameServers() {
         return this.nameServers;
@@ -35,7 +35,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<String> options;
+      private final @Nullable Input<String> options;
 
     public Input<String> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -46,7 +46,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="searchDomains")
-        private final @Nullable Input<String> searchDomains;
+      private final @Nullable Input<String> searchDomains;
 
     public Input<String> getSearchDomains() {
         return this.searchDomains == null ? Input.empty() : this.searchDomains;

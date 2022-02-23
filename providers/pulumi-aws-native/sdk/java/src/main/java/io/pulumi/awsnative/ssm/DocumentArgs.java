@@ -26,7 +26,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachments")
-        private final @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments;
+      private final @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments;
 
     public Input<List<DocumentAttachmentsSourceArgs>> getAttachments() {
         return this.attachments == null ? Input.empty() : this.attachments;
@@ -37,7 +37,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-        private final Input<Object> content;
+      private final Input<Object> content;
 
     public Input<Object> getContent() {
         return this.content;
@@ -48,7 +48,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentFormat")
-        private final @Nullable Input<DocumentFormat> documentFormat;
+      private final @Nullable Input<DocumentFormat> documentFormat;
 
     public Input<DocumentFormat> getDocumentFormat() {
         return this.documentFormat == null ? Input.empty() : this.documentFormat;
@@ -59,7 +59,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentType")
-        private final @Nullable Input<DocumentType> documentType;
+      private final @Nullable Input<DocumentType> documentType;
 
     public Input<DocumentType> getDocumentType() {
         return this.documentType == null ? Input.empty() : this.documentType;
@@ -70,7 +70,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requires")
-        private final @Nullable Input<List<DocumentRequiresArgs>> requires;
+      private final @Nullable Input<List<DocumentRequiresArgs>> requires;
 
     public Input<List<DocumentRequiresArgs>> getRequires() {
         return this.requires == null ? Input.empty() : this.requires;
@@ -92,7 +92,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<DocumentTagArgs>> tags;
+      private final @Nullable Input<List<DocumentTagArgs>> tags;
 
     public Input<List<DocumentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -103,7 +103,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-        private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;
@@ -114,7 +114,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-        private final @Nullable Input<String> versionName;
+      private final @Nullable Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName == null ? Input.empty() : this.versionName;

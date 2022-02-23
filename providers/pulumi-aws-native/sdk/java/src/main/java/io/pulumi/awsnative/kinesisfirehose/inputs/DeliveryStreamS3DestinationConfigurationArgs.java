@@ -19,56 +19,56 @@ public final class DeliveryStreamS3DestinationConfigurationArgs extends io.pulum
     public static final DeliveryStreamS3DestinationConfigurationArgs Empty = new DeliveryStreamS3DestinationConfigurationArgs();
 
     @InputImport(name="bucketARN", required=true)
-        private final Input<String> bucketARN;
+      private final Input<String> bucketARN;
 
     public Input<String> getBucketARN() {
         return this.bucketARN;
     }
 
     @InputImport(name="bufferingHints")
-        private final @Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints;
+      private final @Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
     public Input<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
         return this.bufferingHints == null ? Input.empty() : this.bufferingHints;
     }
 
     @InputImport(name="cloudWatchLoggingOptions")
-        private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+      private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Input<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Input.empty() : this.cloudWatchLoggingOptions;
     }
 
     @InputImport(name="compressionFormat")
-        private final @Nullable Input<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat;
+      private final @Nullable Input<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat;
 
     public Input<DeliveryStreamS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Input.empty() : this.compressionFormat;
     }
 
     @InputImport(name="encryptionConfiguration")
-        private final @Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<DeliveryStreamEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="errorOutputPrefix")
-        private final @Nullable Input<String> errorOutputPrefix;
+      private final @Nullable Input<String> errorOutputPrefix;
 
     public Input<String> getErrorOutputPrefix() {
         return this.errorOutputPrefix == null ? Input.empty() : this.errorOutputPrefix;
     }
 
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
     @InputImport(name="roleARN", required=true)
-        private final Input<String> roleARN;
+      private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;

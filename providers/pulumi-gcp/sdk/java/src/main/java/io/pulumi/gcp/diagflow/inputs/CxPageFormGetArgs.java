@@ -21,7 +21,7 @@ public final class CxPageFormGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<CxPageFormParameterGetArgs>> parameters;
+      private final @Nullable Input<List<CxPageFormParameterGetArgs>> parameters;
 
     public Input<List<CxPageFormParameterGetArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

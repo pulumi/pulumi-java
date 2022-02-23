@@ -24,7 +24,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeId")
-        private final @Nullable Input<String> computeId;
+      private final @Nullable Input<String> computeId;
 
     public Input<String> getComputeId() {
         return this.computeId == null ? Input.empty() : this.computeId;
@@ -35,7 +35,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount")
-        private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;

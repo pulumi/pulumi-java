@@ -24,7 +24,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -39,7 +39,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="containerType", required=true)
-        private final String containerType;
+      private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -50,7 +50,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="extendedInformation")
-        private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
+      private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
 
     public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
         return this.extendedInformation == null ? Optional.empty() : Optional.ofNullable(this.extendedInformation);
@@ -61,7 +61,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fabricName")
-        private final @Nullable String fabricName;
+      private final @Nullable String fabricName;
 
     public Optional<String> getFabricName() {
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
@@ -72,7 +72,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -83,7 +83,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="healthStatus")
-        private final @Nullable String healthStatus;
+      private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
@@ -94,7 +94,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="registrationStatus")
-        private final @Nullable String registrationStatus;
+      private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);

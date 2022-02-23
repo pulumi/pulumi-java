@@ -24,7 +24,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="aadClientId")
-        private final @Nullable String aadClientId;
+      private final @Nullable String aadClientId;
 
     public Optional<String> getAadClientId() {
         return this.aadClientId == null ? Optional.empty() : Optional.ofNullable(this.aadClientId);
@@ -35,7 +35,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="aadTenantId")
-        private final @Nullable String aadTenantId;
+      private final @Nullable String aadTenantId;
 
     public Optional<String> getAadTenantId() {
         return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
@@ -46,7 +46,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="eventHubConnectionString")
-        private final @Nullable String eventHubConnectionString;
+      private final @Nullable String eventHubConnectionString;
 
     public Optional<String> getEventHubConnectionString() {
         return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
@@ -57,7 +57,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="qnaAzureSearchEndpointId")
-        private final @Nullable String qnaAzureSearchEndpointId;
+      private final @Nullable String qnaAzureSearchEndpointId;
 
     public Optional<String> getQnaAzureSearchEndpointId() {
         return this.qnaAzureSearchEndpointId == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointId);
@@ -68,7 +68,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="qnaAzureSearchEndpointKey")
-        private final @Nullable String qnaAzureSearchEndpointKey;
+      private final @Nullable String qnaAzureSearchEndpointKey;
 
     public Optional<String> getQnaAzureSearchEndpointKey() {
         return this.qnaAzureSearchEndpointKey == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointKey);
@@ -79,7 +79,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="qnaRuntimeEndpoint")
-        private final @Nullable String qnaRuntimeEndpoint;
+      private final @Nullable String qnaRuntimeEndpoint;
 
     public Optional<String> getQnaRuntimeEndpoint() {
         return this.qnaRuntimeEndpoint == null ? Optional.empty() : Optional.ofNullable(this.qnaRuntimeEndpoint);
@@ -90,7 +90,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="statisticsEnabled")
-        private final @Nullable Boolean statisticsEnabled;
+      private final @Nullable Boolean statisticsEnabled;
 
     public Optional<Boolean> getStatisticsEnabled() {
         return this.statisticsEnabled == null ? Optional.empty() : Optional.ofNullable(this.statisticsEnabled);
@@ -101,7 +101,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="storageAccountConnectionString")
-        private final @Nullable String storageAccountConnectionString;
+      private final @Nullable String storageAccountConnectionString;
 
     public Optional<String> getStorageAccountConnectionString() {
         return this.storageAccountConnectionString == null ? Optional.empty() : Optional.ofNullable(this.storageAccountConnectionString);
@@ -112,7 +112,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="superUser")
-        private final @Nullable String superUser;
+      private final @Nullable String superUser;
 
     public Optional<String> getSuperUser() {
         return this.superUser == null ? Optional.empty() : Optional.ofNullable(this.superUser);
@@ -123,7 +123,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="websiteName")
-        private final @Nullable String websiteName;
+      private final @Nullable String websiteName;
 
     public Optional<String> getWebsiteName() {
         return this.websiteName == null ? Optional.empty() : Optional.ofNullable(this.websiteName);

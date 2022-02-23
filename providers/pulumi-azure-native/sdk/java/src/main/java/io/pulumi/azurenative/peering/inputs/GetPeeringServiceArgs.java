@@ -17,7 +17,7 @@ public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-        private final String peeringServiceName;
+      private final String peeringServiceName;
 
     public String getPeeringServiceName() {
         return this.peeringServiceName;
@@ -28,7 +28,7 @@ public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

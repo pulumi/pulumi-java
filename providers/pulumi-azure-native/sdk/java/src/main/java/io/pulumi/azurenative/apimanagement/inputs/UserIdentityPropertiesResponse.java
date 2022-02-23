@@ -19,7 +19,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable String clientId;
+      private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -30,7 +30,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable String principalId;
+      private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);

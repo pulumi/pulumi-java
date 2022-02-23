@@ -23,7 +23,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * 
      */
     @InputImport(name="level")
-        private final @Nullable String level;
+      private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -34,7 +34,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * 
      */
     @InputImport(name="sasUrl", required=true)
-        private final String sasUrl;
+      private final String sasUrl;
 
     public String getSasUrl() {
         return this.sasUrl;

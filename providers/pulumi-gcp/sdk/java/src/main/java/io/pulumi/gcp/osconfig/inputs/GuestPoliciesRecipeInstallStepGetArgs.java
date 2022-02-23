@@ -26,7 +26,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="archiveExtraction")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction;
 
     public Input<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> getArchiveExtraction() {
         return this.archiveExtraction == null ? Input.empty() : this.archiveExtraction;
@@ -38,7 +38,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dpkgInstallation")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> getDpkgInstallation() {
         return this.dpkgInstallation == null ? Input.empty() : this.dpkgInstallation;
@@ -50,7 +50,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="fileCopy")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy;
 
     public Input<GuestPoliciesRecipeInstallStepFileCopyGetArgs> getFileCopy() {
         return this.fileCopy == null ? Input.empty() : this.fileCopy;
@@ -62,7 +62,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="fileExec")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec;
 
     public Input<GuestPoliciesRecipeInstallStepFileExecGetArgs> getFileExec() {
         return this.fileExec == null ? Input.empty() : this.fileExec;
@@ -74,7 +74,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="msiInstallation")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> getMsiInstallation() {
         return this.msiInstallation == null ? Input.empty() : this.msiInstallation;
@@ -86,7 +86,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rpmInstallation")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> getRpmInstallation() {
         return this.rpmInstallation == null ? Input.empty() : this.rpmInstallation;
@@ -98,7 +98,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scriptRun")
-        private final @Nullable Input<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun;
+      private final @Nullable Input<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun;
 
     public Input<GuestPoliciesRecipeInstallStepScriptRunGetArgs> getScriptRun() {
         return this.scriptRun == null ? Input.empty() : this.scriptRun;

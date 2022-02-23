@@ -27,7 +27,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -38,7 +38,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<Either<String,ApplicationGatewaySkuName>> name;
+      private final @Nullable Input<Either<String,ApplicationGatewaySkuName>> name;
 
     public Input<Either<String,ApplicationGatewaySkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,ApplicationGatewayTier>> tier;
+      private final @Nullable Input<Either<String,ApplicationGatewayTier>> tier;
 
     public Input<Either<String,ApplicationGatewayTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

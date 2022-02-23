@@ -20,7 +20,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      * 
      */
     @InputImport(name="realms")
-        private final @Nullable Input<List<String>> realms;
+      private final @Nullable Input<List<String>> realms;
 
     public Input<List<String>> getRealms() {
         return this.realms == null ? Input.empty() : this.realms;

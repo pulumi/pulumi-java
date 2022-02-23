@@ -13,14 +13,14 @@ public final class AppEnvironmentVariable extends io.pulumi.resources.InvokeArgs
     public static final AppEnvironmentVariable Empty = new AppEnvironmentVariable();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

@@ -24,7 +24,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxNodeCount")
-        private final @Nullable Input<Integer> maxNodeCount;
+      private final @Nullable Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount == null ? Input.empty() : this.maxNodeCount;
@@ -46,7 +46,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minNodeCount")
-        private final @Nullable Input<Integer> minNodeCount;
+      private final @Nullable Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount == null ? Input.empty() : this.minNodeCount;

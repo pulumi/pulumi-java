@@ -24,7 +24,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-        private final @Nullable Input<ApplicationLogEncoding> encoding;
+      private final @Nullable Input<ApplicationLogEncoding> encoding;
 
     public Input<ApplicationLogEncoding> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -35,7 +35,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-        private final @Nullable Input<String> logGroupName;
+      private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -46,7 +46,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPath")
-        private final @Nullable Input<String> logPath;
+      private final @Nullable Input<String> logPath;
 
     public Input<String> getLogPath() {
         return this.logPath == null ? Input.empty() : this.logPath;
@@ -57,7 +57,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logType", required=true)
-        private final Input<String> logType;
+      private final Input<String> logType;
 
     public Input<String> getLogType() {
         return this.logType;
@@ -68,7 +68,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternSet")
-        private final @Nullable Input<String> patternSet;
+      private final @Nullable Input<String> patternSet;
 
     public Input<String> getPatternSet() {
         return this.patternSet == null ? Input.empty() : this.patternSet;

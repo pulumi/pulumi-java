@@ -19,7 +19,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="artifactId", required=true)
-        private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -30,7 +30,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="destination")
-        private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -42,7 +42,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

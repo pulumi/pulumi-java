@@ -14,7 +14,7 @@ public final class WebACLOrStatement extends io.pulumi.resources.InvokeArgs {
     public static final WebACLOrStatement Empty = new WebACLOrStatement();
 
     @InputImport(name="statements", required=true)
-        private final List<WebACLStatement> statements;
+      private final List<WebACLStatement> statements;
 
     public List<WebACLStatement> getStatements() {
         return this.statements;

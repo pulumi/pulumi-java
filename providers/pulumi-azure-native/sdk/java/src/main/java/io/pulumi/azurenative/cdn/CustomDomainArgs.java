@@ -19,7 +19,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomainName")
-        private final @Nullable Input<String> customDomainName;
+      private final @Nullable Input<String> customDomainName;
 
     public Input<String> getCustomDomainName() {
         return this.customDomainName == null ? Input.empty() : this.customDomainName;
@@ -30,7 +30,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-        private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -41,7 +41,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-        private final Input<String> hostName;
+      private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -52,7 +52,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -63,7 +63,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

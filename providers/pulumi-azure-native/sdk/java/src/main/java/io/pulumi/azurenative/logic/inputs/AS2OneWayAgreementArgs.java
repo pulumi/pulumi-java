@@ -23,7 +23,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-        private final Input<AS2ProtocolSettingsArgs> protocolSettings;
+      private final Input<AS2ProtocolSettingsArgs> protocolSettings;
 
     public Input<AS2ProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings;
@@ -34,7 +34,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-        private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
+      private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -45,7 +45,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-        private final Input<BusinessIdentityArgs> senderBusinessIdentity;
+      private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;

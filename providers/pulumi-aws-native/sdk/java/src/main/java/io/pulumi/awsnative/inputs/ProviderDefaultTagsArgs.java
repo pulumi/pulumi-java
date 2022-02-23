@@ -24,7 +24,7 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

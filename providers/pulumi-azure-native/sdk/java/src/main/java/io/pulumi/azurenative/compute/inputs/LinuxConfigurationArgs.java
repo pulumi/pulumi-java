@@ -25,7 +25,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disablePasswordAuthentication")
-        private final @Nullable Input<Boolean> disablePasswordAuthentication;
+      private final @Nullable Input<Boolean> disablePasswordAuthentication;
 
     public Input<Boolean> getDisablePasswordAuthentication() {
         return this.disablePasswordAuthentication == null ? Input.empty() : this.disablePasswordAuthentication;
@@ -36,7 +36,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="patchSettings")
-        private final @Nullable Input<LinuxPatchSettingsArgs> patchSettings;
+      private final @Nullable Input<LinuxPatchSettingsArgs> patchSettings;
 
     public Input<LinuxPatchSettingsArgs> getPatchSettings() {
         return this.patchSettings == null ? Input.empty() : this.patchSettings;
@@ -47,7 +47,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisionVMAgent")
-        private final @Nullable Input<Boolean> provisionVMAgent;
+      private final @Nullable Input<Boolean> provisionVMAgent;
 
     public Input<Boolean> getProvisionVMAgent() {
         return this.provisionVMAgent == null ? Input.empty() : this.provisionVMAgent;
@@ -58,7 +58,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ssh")
-        private final @Nullable Input<SshConfigurationArgs> ssh;
+      private final @Nullable Input<SshConfigurationArgs> ssh;
 
     public Input<SshConfigurationArgs> getSsh() {
         return this.ssh == null ? Input.empty() : this.ssh;

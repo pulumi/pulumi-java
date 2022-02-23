@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-        private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
+      private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-        private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -59,7 +59,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="validationOptions")
-        private final @Nullable Input<MigrationValidationOptionsArgs> validationOptions;
+      private final @Nullable Input<MigrationValidationOptionsArgs> validationOptions;
 
     public Input<MigrationValidationOptionsArgs> getValidationOptions() {
         return this.validationOptions == null ? Input.empty() : this.validationOptions;

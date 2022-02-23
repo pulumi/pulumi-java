@@ -22,7 +22,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="cpu", required=true)
-        private final String cpu;
+      private final String cpu;
 
     public String getCpu() {
         return this.cpu;
@@ -33,7 +33,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceCount", required=true)
-        private final Integer instanceCount;
+      private final Integer instanceCount;
 
     public Integer getInstanceCount() {
         return this.instanceCount;
@@ -44,7 +44,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="memory", required=true)
-        private final String memory;
+      private final String memory;
 
     public String getMemory() {
         return this.memory;

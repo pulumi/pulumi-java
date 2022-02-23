@@ -14,14 +14,14 @@ public final class TypedErrorInfoResponse extends io.pulumi.resources.InvokeArgs
     public static final TypedErrorInfoResponse Empty = new TypedErrorInfoResponse();
 
     @InputImport(name="info", required=true)
-        private final Object info;
+      private final Object info;
 
     public Object getInfo() {
         return this.info;
     }
 
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

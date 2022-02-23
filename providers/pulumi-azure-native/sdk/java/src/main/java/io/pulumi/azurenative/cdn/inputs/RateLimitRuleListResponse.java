@@ -24,7 +24,7 @@ public final class RateLimitRuleListResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<RateLimitRuleResponse> rules;
+      private final @Nullable List<RateLimitRuleResponse> rules;
 
     public List<RateLimitRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

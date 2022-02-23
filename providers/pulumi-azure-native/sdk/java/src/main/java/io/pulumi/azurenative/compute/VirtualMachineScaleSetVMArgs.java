@@ -31,7 +31,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="additionalCapabilities")
-        private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
+      private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
 
     public Input<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
@@ -42,7 +42,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="availabilitySet")
-        private final @Nullable Input<SubResourceArgs> availabilitySet;
+      private final @Nullable Input<SubResourceArgs> availabilitySet;
 
     public Input<SubResourceArgs> getAvailabilitySet() {
         return this.availabilitySet == null ? Input.empty() : this.availabilitySet;
@@ -53,7 +53,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diagnosticsProfile")
-        private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
+      private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
 
     public Input<DiagnosticsProfileArgs> getDiagnosticsProfile() {
         return this.diagnosticsProfile == null ? Input.empty() : this.diagnosticsProfile;
@@ -64,7 +64,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hardwareProfile")
-        private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
+      private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
 
     public Input<HardwareProfileArgs> getHardwareProfile() {
         return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
@@ -75,7 +75,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceId")
-        private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -86,7 +86,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable Input<String> licenseType;
+      private final @Nullable Input<String> licenseType;
 
     public Input<String> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -97,7 +97,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -108,7 +108,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkProfile")
-        private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -119,7 +119,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkProfileConfiguration")
-        private final @Nullable Input<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
+      private final @Nullable Input<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
 
     public Input<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> getNetworkProfileConfiguration() {
         return this.networkProfileConfiguration == null ? Input.empty() : this.networkProfileConfiguration;
@@ -130,7 +130,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="osProfile")
-        private final @Nullable Input<OSProfileArgs> osProfile;
+      private final @Nullable Input<OSProfileArgs> osProfile;
 
     public Input<OSProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -141,7 +141,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="plan")
-        private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Input<PlanArgs> plan;
 
     public Input<PlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -152,7 +152,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionPolicy")
-        private final @Nullable Input<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
+      private final @Nullable Input<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
 
     public Input<VirtualMachineScaleSetVMProtectionPolicyArgs> getProtectionPolicy() {
         return this.protectionPolicy == null ? Input.empty() : this.protectionPolicy;
@@ -163,7 +163,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -174,7 +174,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityProfile")
-        private final @Nullable Input<SecurityProfileArgs> securityProfile;
+      private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
     public Input<SecurityProfileArgs> getSecurityProfile() {
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
@@ -185,7 +185,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageProfile")
-        private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -196,7 +196,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -207,7 +207,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userData")
-        private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -218,7 +218,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-        private final Input<String> vmScaleSetName;
+      private final Input<String> vmScaleSetName;
 
     public Input<String> getVmScaleSetName() {
         return this.vmScaleSetName;

@@ -25,7 +25,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxUnavailable")
-        private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+      private final @Nullable Input<Either<Integer,String>> maxUnavailable;
 
     public Input<Either<Integer,String>> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;

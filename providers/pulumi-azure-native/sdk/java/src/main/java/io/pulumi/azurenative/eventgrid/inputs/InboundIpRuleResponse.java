@@ -19,7 +19,7 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="action")
-        private final @Nullable String action;
+      private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -30,7 +30,7 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipMask")
-        private final @Nullable String ipMask;
+      private final @Nullable String ipMask;
 
     public Optional<String> getIpMask() {
         return this.ipMask == null ? Optional.empty() : Optional.ofNullable(this.ipMask);

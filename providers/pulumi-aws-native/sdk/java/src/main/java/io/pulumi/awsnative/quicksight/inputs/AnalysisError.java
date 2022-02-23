@@ -24,14 +24,14 @@ public final class AnalysisError extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
     @InputImport(name="type")
-        private final @Nullable AnalysisErrorType type;
+      private final @Nullable AnalysisErrorType type;
 
     public Optional<AnalysisErrorType> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

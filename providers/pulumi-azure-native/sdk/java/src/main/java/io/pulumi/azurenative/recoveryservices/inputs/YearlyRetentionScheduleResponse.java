@@ -27,7 +27,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="monthsOfYear")
-        private final @Nullable List<String> monthsOfYear;
+      private final @Nullable List<String> monthsOfYear;
 
     public List<String> getMonthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
@@ -38,7 +38,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionDuration")
-        private final @Nullable RetentionDurationResponse retentionDuration;
+      private final @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
@@ -49,7 +49,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionScheduleDaily")
-        private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
+      private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
 
     public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
         return this.retentionScheduleDaily == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleDaily);
@@ -60,7 +60,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionScheduleFormatType")
-        private final @Nullable String retentionScheduleFormatType;
+      private final @Nullable String retentionScheduleFormatType;
 
     public Optional<String> getRetentionScheduleFormatType() {
         return this.retentionScheduleFormatType == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleFormatType);
@@ -71,7 +71,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionScheduleWeekly")
-        private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
+      private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
 
     public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
         return this.retentionScheduleWeekly == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleWeekly);
@@ -82,7 +82,7 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionTimes")
-        private final @Nullable List<String> retentionTimes;
+      private final @Nullable List<String> retentionTimes;
 
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;

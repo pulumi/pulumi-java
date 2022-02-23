@@ -23,7 +23,7 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<EncryptionArgs> value;
+      private final @Nullable Input<EncryptionArgs> value;
 
     public Input<EncryptionArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;

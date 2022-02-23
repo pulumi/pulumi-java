@@ -20,7 +20,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyInfoArgs Empty = new PolicyInfoArgs();
 
     @InputImport(name="policyId", required=true)
-        private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -31,7 +31,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyParameters")
-        private final @Nullable Input<PolicyParametersArgs> policyParameters;
+      private final @Nullable Input<PolicyParametersArgs> policyParameters;
 
     public Input<PolicyParametersArgs> getPolicyParameters() {
         return this.policyParameters == null ? Input.empty() : this.policyParameters;

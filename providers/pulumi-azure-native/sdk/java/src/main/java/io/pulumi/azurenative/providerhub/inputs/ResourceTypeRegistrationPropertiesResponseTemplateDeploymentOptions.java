@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     public static final ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions Empty = new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions();
 
     @InputImport(name="preflightOptions")
-        private final @Nullable List<String> preflightOptions;
+      private final @Nullable List<String> preflightOptions;
 
     public List<String> getPreflightOptions() {
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
 
     @InputImport(name="preflightSupported")
-        private final @Nullable Boolean preflightSupported;
+      private final @Nullable Boolean preflightSupported;
 
     public Optional<Boolean> getPreflightSupported() {
         return this.preflightSupported == null ? Optional.empty() : Optional.ofNullable(this.preflightSupported);

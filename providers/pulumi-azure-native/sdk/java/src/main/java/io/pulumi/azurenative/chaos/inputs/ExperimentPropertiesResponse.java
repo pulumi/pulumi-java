@@ -26,7 +26,7 @@ public final class ExperimentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="selectors", required=true)
-        private final List<SelectorResponse> selectors;
+      private final List<SelectorResponse> selectors;
 
     public List<SelectorResponse> getSelectors() {
         return this.selectors;
@@ -37,7 +37,7 @@ public final class ExperimentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="startOnCreation")
-        private final @Nullable Boolean startOnCreation;
+      private final @Nullable Boolean startOnCreation;
 
     public Optional<Boolean> getStartOnCreation() {
         return this.startOnCreation == null ? Optional.empty() : Optional.ofNullable(this.startOnCreation);
@@ -48,7 +48,7 @@ public final class ExperimentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="steps", required=true)
-        private final List<StepResponse> steps;
+      private final List<StepResponse> steps;
 
     public List<StepResponse> getSteps() {
         return this.steps;

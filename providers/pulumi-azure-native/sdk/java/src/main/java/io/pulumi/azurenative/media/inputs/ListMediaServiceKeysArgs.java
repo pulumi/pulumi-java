@@ -17,7 +17,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="mediaServiceName", required=true)
-        private final String mediaServiceName;
+      private final String mediaServiceName;
 
     public String getMediaServiceName() {
         return this.mediaServiceName;
@@ -28,7 +28,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -18,7 +18,7 @@ public final class InstanceConfidentialInstanceConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enableConfidentialCompute", required=true)
-        private final Input<Boolean> enableConfidentialCompute;
+      private final Input<Boolean> enableConfidentialCompute;
 
     public Input<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;

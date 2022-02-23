@@ -26,7 +26,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelector")
-        private final @Nullable Input<Map<String,String>> nodeSelector;
+      private final @Nullable Input<Map<String,String>> nodeSelector;
 
     public Input<Map<String,String>> getNodeSelector() {
         return this.nodeSelector == null ? Input.empty() : this.nodeSelector;
@@ -37,7 +37,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerations")
-        private final @Nullable Input<List<TolerationArgs>> tolerations;
+      private final @Nullable Input<List<TolerationArgs>> tolerations;
 
     public Input<List<TolerationArgs>> getTolerations() {
         return this.tolerations == null ? Input.empty() : this.tolerations;

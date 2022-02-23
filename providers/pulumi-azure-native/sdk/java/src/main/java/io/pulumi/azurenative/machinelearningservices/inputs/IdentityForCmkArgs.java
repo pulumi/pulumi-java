@@ -22,7 +22,7 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-        private final Input<String> userAssignedIdentity;
+      private final Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity;

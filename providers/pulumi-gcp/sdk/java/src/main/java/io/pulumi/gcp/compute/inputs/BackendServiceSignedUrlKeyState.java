@@ -19,7 +19,7 @@ public final class BackendServiceSignedUrlKeyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="backendService")
-        private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -32,7 +32,7 @@ public final class BackendServiceSignedUrlKeyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyValue")
-        private final @Nullable Input<String> keyValue;
+      private final @Nullable Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue == null ? Input.empty() : this.keyValue;
@@ -43,7 +43,7 @@ public final class BackendServiceSignedUrlKeyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class BackendServiceSignedUrlKeyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

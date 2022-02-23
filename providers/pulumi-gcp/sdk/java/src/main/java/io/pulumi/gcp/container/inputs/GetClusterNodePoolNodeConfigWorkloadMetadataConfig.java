@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig extends io
     public static final GetClusterNodePoolNodeConfigWorkloadMetadataConfig Empty = new GetClusterNodePoolNodeConfigWorkloadMetadataConfig();
 
     @InputImport(name="mode", required=true)
-        private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;

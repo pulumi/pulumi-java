@@ -25,7 +25,7 @@ public final class PodSecurityPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -36,7 +36,7 @@ public final class PodSecurityPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -47,7 +47,7 @@ public final class PodSecurityPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -58,7 +58,7 @@ public final class PodSecurityPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="spec")
-        private final @Nullable Input<PodSecurityPolicySpecArgs> spec;
+      private final @Nullable Input<PodSecurityPolicySpecArgs> spec;
 
     public Input<PodSecurityPolicySpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;

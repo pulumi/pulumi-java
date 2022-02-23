@@ -27,7 +27,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allocatedOutboundPorts")
-        private final @Nullable Integer allocatedOutboundPorts;
+      private final @Nullable Integer allocatedOutboundPorts;
 
     public Optional<Integer> getAllocatedOutboundPorts() {
         return this.allocatedOutboundPorts == null ? Optional.empty() : Optional.ofNullable(this.allocatedOutboundPorts);
@@ -38,7 +38,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backendAddressPool", required=true)
-        private final SubResourceResponse backendAddressPool;
+      private final SubResourceResponse backendAddressPool;
 
     public SubResourceResponse getBackendAddressPool() {
         return this.backendAddressPool;
@@ -49,7 +49,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-        private final @Nullable Boolean enableTcpReset;
+      private final @Nullable Boolean enableTcpReset;
 
     public Optional<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
@@ -60,7 +60,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -71,7 +71,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-        private final List<SubResourceResponse> frontendIPConfigurations;
+      private final List<SubResourceResponse> frontendIPConfigurations;
 
     public List<SubResourceResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
@@ -82,7 +82,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -93,7 +93,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Integer idleTimeoutInMinutes;
+      private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -104,7 +104,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -115,7 +115,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-        private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -126,7 +126,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -137,7 +137,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

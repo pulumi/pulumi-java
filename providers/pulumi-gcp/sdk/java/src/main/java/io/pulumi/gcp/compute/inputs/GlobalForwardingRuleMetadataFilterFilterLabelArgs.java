@@ -19,7 +19,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends io.
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

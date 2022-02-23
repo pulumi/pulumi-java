@@ -19,7 +19,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoStorageContainerName")
-        private final @Nullable Input<String> autoStorageContainerName;
+      private final @Nullable Input<String> autoStorageContainerName;
 
     public Input<String> getAutoStorageContainerName() {
         return this.autoStorageContainerName == null ? Input.empty() : this.autoStorageContainerName;
@@ -30,7 +30,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPrefix")
-        private final @Nullable Input<String> blobPrefix;
+      private final @Nullable Input<String> blobPrefix;
 
     public Input<String> getBlobPrefix() {
         return this.blobPrefix == null ? Input.empty() : this.blobPrefix;
@@ -41,7 +41,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileMode")
-        private final @Nullable Input<String> fileMode;
+      private final @Nullable Input<String> fileMode;
 
     public Input<String> getFileMode() {
         return this.fileMode == null ? Input.empty() : this.fileMode;
@@ -52,7 +52,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePath")
-        private final @Nullable Input<String> filePath;
+      private final @Nullable Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath == null ? Input.empty() : this.filePath;
@@ -63,7 +63,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpUrl")
-        private final @Nullable Input<String> httpUrl;
+      private final @Nullable Input<String> httpUrl;
 
     public Input<String> getHttpUrl() {
         return this.httpUrl == null ? Input.empty() : this.httpUrl;
@@ -74,7 +74,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageContainerUrl")
-        private final @Nullable Input<String> storageContainerUrl;
+      private final @Nullable Input<String> storageContainerUrl;
 
     public Input<String> getStorageContainerUrl() {
         return this.storageContainerUrl == null ? Input.empty() : this.storageContainerUrl;

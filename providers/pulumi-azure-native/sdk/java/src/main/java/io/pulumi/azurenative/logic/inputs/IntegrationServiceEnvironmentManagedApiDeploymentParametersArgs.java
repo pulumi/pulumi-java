@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
      * 
      */
     @InputImport(name="contentLinkDefinition")
-        private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
+      private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
 
     public Input<ContentLinkArgs> getContentLinkDefinition() {
         return this.contentLinkDefinition == null ? Input.empty() : this.contentLinkDefinition;

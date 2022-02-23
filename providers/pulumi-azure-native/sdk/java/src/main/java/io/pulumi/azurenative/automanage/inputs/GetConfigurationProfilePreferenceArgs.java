@@ -17,7 +17,7 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configurationProfilePreferenceName", required=true)
-        private final String configurationProfilePreferenceName;
+      private final String configurationProfilePreferenceName;
 
     public String getConfigurationProfilePreferenceName() {
         return this.configurationProfilePreferenceName;
@@ -28,7 +28,7 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

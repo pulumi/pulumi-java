@@ -15,7 +15,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     public static final RobotApplicationVersionArgs Empty = new RobotApplicationVersionArgs();
 
     @InputImport(name="application", required=true)
-        private final Input<String> application;
+      private final Input<String> application;
 
     public Input<String> getApplication() {
         return this.application;
@@ -26,7 +26,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="currentRevisionId")
-        private final @Nullable Input<String> currentRevisionId;
+      private final @Nullable Input<String> currentRevisionId;
 
     public Input<String> getCurrentRevisionId() {
         return this.currentRevisionId == null ? Input.empty() : this.currentRevisionId;

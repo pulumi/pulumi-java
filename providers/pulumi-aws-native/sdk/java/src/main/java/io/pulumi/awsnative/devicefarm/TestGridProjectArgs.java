@@ -18,28 +18,28 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     public static final TestGridProjectArgs Empty = new TestGridProjectArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<TestGridProjectTagArgs>> tags;
+      private final @Nullable Input<List<TestGridProjectTagArgs>> tags;
 
     public Input<List<TestGridProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="vpcConfig")
-        private final @Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig;
+      private final @Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig;
 
     public Input<TestGridProjectVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

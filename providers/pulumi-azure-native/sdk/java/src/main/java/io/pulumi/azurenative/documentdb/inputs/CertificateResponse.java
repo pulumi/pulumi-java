@@ -19,7 +19,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pem")
-        private final @Nullable String pem;
+      private final @Nullable String pem;
 
     public Optional<String> getPem() {
         return this.pem == null ? Optional.empty() : Optional.ofNullable(this.pem);

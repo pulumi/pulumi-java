@@ -19,7 +19,7 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();
 
     @InputImport(name="dataExport")
-        private final @Nullable Input<BucketDataExportArgs> dataExport;
+      private final @Nullable Input<BucketDataExportArgs> dataExport;
 
     public Input<BucketDataExportArgs> getDataExport() {
         return this.dataExport == null ? Input.empty() : this.dataExport;

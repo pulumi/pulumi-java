@@ -22,7 +22,7 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="Port", required=true)
-        private final Input<Integer> Port;
+      private final Input<Integer> Port;
 
     public Input<Integer> getPort() {
         return this.Port;

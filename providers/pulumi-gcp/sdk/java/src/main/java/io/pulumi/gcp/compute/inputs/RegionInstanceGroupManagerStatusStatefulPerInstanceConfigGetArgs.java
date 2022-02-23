@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
      * 
      */
     @InputImport(name="allEffective")
-        private final @Nullable Input<Boolean> allEffective;
+      private final @Nullable Input<Boolean> allEffective;
 
     public Input<Boolean> getAllEffective() {
         return this.allEffective == null ? Input.empty() : this.allEffective;

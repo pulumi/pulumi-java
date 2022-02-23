@@ -26,7 +26,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cacheDuration")
-        private final @Nullable Input<String> cacheDuration;
+      private final @Nullable Input<String> cacheDuration;
 
     public Input<String> getCacheDuration() {
         return this.cacheDuration == null ? Input.empty() : this.cacheDuration;
@@ -37,7 +37,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dynamicCompression")
-        private final @Nullable Input<Either<String,DynamicCompressionEnabled>> dynamicCompression;
+      private final @Nullable Input<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
     public Input<Either<String,DynamicCompressionEnabled>> getDynamicCompression() {
         return this.dynamicCompression == null ? Input.empty() : this.dynamicCompression;
@@ -48,7 +48,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryParameterStripDirective")
-        private final @Nullable Input<Either<String,FrontDoorQuery>> queryParameterStripDirective;
+      private final @Nullable Input<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
     public Input<Either<String,FrontDoorQuery>> getQueryParameterStripDirective() {
         return this.queryParameterStripDirective == null ? Input.empty() : this.queryParameterStripDirective;
@@ -59,7 +59,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryParameters")
-        private final @Nullable Input<String> queryParameters;
+      private final @Nullable Input<String> queryParameters;
 
     public Input<String> getQueryParameters() {
         return this.queryParameters == null ? Input.empty() : this.queryParameters;

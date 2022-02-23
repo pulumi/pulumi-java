@@ -25,7 +25,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="admin")
-        private final @Nullable Input<String> admin;
+      private final @Nullable Input<String> admin;
 
     public Input<String> getAdmin() {
         return this.admin == null ? Input.empty() : this.admin;
@@ -36,7 +36,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="basicLoginInformation")
-        private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
+      private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
 
     public Input<BasicLoginInformationArgs> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
@@ -47,7 +47,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataControllerId")
-        private final @Nullable Input<String> dataControllerId;
+      private final @Nullable Input<String> dataControllerId;
 
     public Input<String> getDataControllerId() {
         return this.dataControllerId == null ? Input.empty() : this.dataControllerId;
@@ -58,7 +58,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -69,7 +69,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="k8sRaw")
-        private final @Nullable Input<Object> k8sRaw;
+      private final @Nullable Input<Object> k8sRaw;
 
     public Input<Object> getK8sRaw() {
         return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
@@ -80,7 +80,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastUploadedDate")
-        private final @Nullable Input<String> lastUploadedDate;
+      private final @Nullable Input<String> lastUploadedDate;
 
     public Input<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Input.empty() : this.lastUploadedDate;
@@ -91,7 +91,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;

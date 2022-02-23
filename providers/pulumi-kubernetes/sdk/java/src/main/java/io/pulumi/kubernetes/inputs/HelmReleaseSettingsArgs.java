@@ -24,7 +24,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="driver")
-        private final @Nullable Input<String> driver;
+      private final @Nullable Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver == null ? Input.empty() : this.driver;
@@ -35,7 +35,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pluginsPath")
-        private final @Nullable Input<String> pluginsPath;
+      private final @Nullable Input<String> pluginsPath;
 
     public Input<String> getPluginsPath() {
         return this.pluginsPath == null ? Input.empty() : this.pluginsPath;
@@ -46,7 +46,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registryConfigPath")
-        private final @Nullable Input<String> registryConfigPath;
+      private final @Nullable Input<String> registryConfigPath;
 
     public Input<String> getRegistryConfigPath() {
         return this.registryConfigPath == null ? Input.empty() : this.registryConfigPath;
@@ -57,7 +57,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="repositoryCache")
-        private final @Nullable Input<String> repositoryCache;
+      private final @Nullable Input<String> repositoryCache;
 
     public Input<String> getRepositoryCache() {
         return this.repositoryCache == null ? Input.empty() : this.repositoryCache;
@@ -68,7 +68,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="repositoryConfigPath")
-        private final @Nullable Input<String> repositoryConfigPath;
+      private final @Nullable Input<String> repositoryConfigPath;
 
     public Input<String> getRepositoryConfigPath() {
         return this.repositoryConfigPath == null ? Input.empty() : this.repositoryConfigPath;

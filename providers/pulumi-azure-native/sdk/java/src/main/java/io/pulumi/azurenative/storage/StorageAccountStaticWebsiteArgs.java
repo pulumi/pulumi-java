@@ -19,7 +19,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="error404Document")
-        private final @Nullable Input<String> error404Document;
+      private final @Nullable Input<String> error404Document;
 
     public Input<String> getError404Document() {
         return this.error404Document == null ? Input.empty() : this.error404Document;
@@ -41,7 +41,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="indexDocument")
-        private final @Nullable Input<String> indexDocument;
+      private final @Nullable Input<String> indexDocument;
 
     public Input<String> getIndexDocument() {
         return this.indexDocument == null ? Input.empty() : this.indexDocument;
@@ -52,7 +52,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

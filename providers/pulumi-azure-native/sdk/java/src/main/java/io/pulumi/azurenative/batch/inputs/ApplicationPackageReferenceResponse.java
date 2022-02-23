@@ -15,7 +15,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
     public static final ApplicationPackageReferenceResponse Empty = new ApplicationPackageReferenceResponse();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -26,7 +26,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-        private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

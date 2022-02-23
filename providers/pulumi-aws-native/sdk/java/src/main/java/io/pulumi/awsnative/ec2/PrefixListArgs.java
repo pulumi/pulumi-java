@@ -24,7 +24,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressFamily", required=true)
-        private final Input<PrefixListAddressFamily> addressFamily;
+      private final Input<PrefixListAddressFamily> addressFamily;
 
     public Input<PrefixListAddressFamily> getAddressFamily() {
         return this.addressFamily;
@@ -35,7 +35,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entries")
-        private final @Nullable Input<List<PrefixListEntryArgs>> entries;
+      private final @Nullable Input<List<PrefixListEntryArgs>> entries;
 
     public Input<List<PrefixListEntryArgs>> getEntries() {
         return this.entries == null ? Input.empty() : this.entries;
@@ -46,7 +46,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxEntries", required=true)
-        private final Input<Integer> maxEntries;
+      private final Input<Integer> maxEntries;
 
     public Input<Integer> getMaxEntries() {
         return this.maxEntries;
@@ -57,7 +57,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixListName")
-        private final @Nullable Input<String> prefixListName;
+      private final @Nullable Input<String> prefixListName;
 
     public Input<String> getPrefixListName() {
         return this.prefixListName == null ? Input.empty() : this.prefixListName;
@@ -68,7 +68,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<PrefixListTagArgs>> tags;
+      private final @Nullable Input<List<PrefixListTagArgs>> tags;
 
     public Input<List<PrefixListTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

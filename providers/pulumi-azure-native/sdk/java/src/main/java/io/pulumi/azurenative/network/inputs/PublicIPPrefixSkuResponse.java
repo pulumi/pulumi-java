@@ -23,7 +23,7 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);

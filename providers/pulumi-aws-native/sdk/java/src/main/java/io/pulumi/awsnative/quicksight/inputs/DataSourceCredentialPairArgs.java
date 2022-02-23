@@ -33,7 +33,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="alternateDataSourceParameters")
-        private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
+      private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
     public Input<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? Input.empty() : this.alternateDataSourceParameters;
@@ -44,7 +44,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -55,7 +55,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

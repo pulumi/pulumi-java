@@ -20,7 +20,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultIdentifierId")
-        private final @Nullable Input<String> keyVaultIdentifierId;
+      private final @Nullable Input<String> keyVaultIdentifierId;
 
     public Input<String> getKeyVaultIdentifierId() {
         return this.keyVaultIdentifierId == null ? Input.empty() : this.keyVaultIdentifierId;
@@ -31,7 +31,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerEmail", required=true)
-        private final Input<String> ownerEmail;
+      private final Input<String> ownerEmail;
 
     public Input<String> getOwnerEmail() {
         return this.ownerEmail;
@@ -53,7 +53,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -75,7 +75,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userStorageAccountId", required=true)
-        private final Input<String> userStorageAccountId;
+      private final Input<String> userStorageAccountId;
 
     public Input<String> getUserStorageAccountId() {
         return this.userStorageAccountId;
@@ -86,7 +86,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-        private final @Nullable Input<String> workspaceName;
+      private final @Nullable Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName == null ? Input.empty() : this.workspaceName;

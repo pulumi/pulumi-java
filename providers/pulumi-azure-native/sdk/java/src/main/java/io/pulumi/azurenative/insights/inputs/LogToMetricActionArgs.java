@@ -24,7 +24,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="criteria", required=true)
-        private final Input<List<CriteriaArgs>> criteria;
+      private final Input<List<CriteriaArgs>> criteria;
 
     public Input<List<CriteriaArgs>> getCriteria() {
         return this.criteria;
@@ -36,7 +36,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

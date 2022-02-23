@@ -25,77 +25,77 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     public static final GlobalTableArgs Empty = new GlobalTableArgs();
 
     @InputImport(name="attributeDefinitions", required=true)
-        private final Input<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
+      private final Input<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
 
     public Input<List<GlobalTableAttributeDefinitionArgs>> getAttributeDefinitions() {
         return this.attributeDefinitions;
     }
 
     @InputImport(name="billingMode")
-        private final @Nullable Input<String> billingMode;
+      private final @Nullable Input<String> billingMode;
 
     public Input<String> getBillingMode() {
         return this.billingMode == null ? Input.empty() : this.billingMode;
     }
 
     @InputImport(name="globalSecondaryIndexes")
-        private final @Nullable Input<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
+      private final @Nullable Input<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
     public Input<List<GlobalTableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Input.empty() : this.globalSecondaryIndexes;
     }
 
     @InputImport(name="keySchema", required=true)
-        private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
+      private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
 
     public Input<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="localSecondaryIndexes")
-        private final @Nullable Input<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
+      private final @Nullable Input<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
     public Input<List<GlobalTableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
         return this.localSecondaryIndexes == null ? Input.empty() : this.localSecondaryIndexes;
     }
 
     @InputImport(name="replicas", required=true)
-        private final Input<List<GlobalTableReplicaSpecificationArgs>> replicas;
+      private final Input<List<GlobalTableReplicaSpecificationArgs>> replicas;
 
     public Input<List<GlobalTableReplicaSpecificationArgs>> getReplicas() {
         return this.replicas;
     }
 
     @InputImport(name="sSESpecification")
-        private final @Nullable Input<GlobalTableSSESpecificationArgs> sSESpecification;
+      private final @Nullable Input<GlobalTableSSESpecificationArgs> sSESpecification;
 
     public Input<GlobalTableSSESpecificationArgs> getSSESpecification() {
         return this.sSESpecification == null ? Input.empty() : this.sSESpecification;
     }
 
     @InputImport(name="streamSpecification")
-        private final @Nullable Input<GlobalTableStreamSpecificationArgs> streamSpecification;
+      private final @Nullable Input<GlobalTableStreamSpecificationArgs> streamSpecification;
 
     public Input<GlobalTableStreamSpecificationArgs> getStreamSpecification() {
         return this.streamSpecification == null ? Input.empty() : this.streamSpecification;
     }
 
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
     @InputImport(name="timeToLiveSpecification")
-        private final @Nullable Input<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
+      private final @Nullable Input<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
 
     public Input<GlobalTableTimeToLiveSpecificationArgs> getTimeToLiveSpecification() {
         return this.timeToLiveSpecification == null ? Input.empty() : this.timeToLiveSpecification;
     }
 
     @InputImport(name="writeProvisionedThroughputSettings")
-        private final @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+      private final @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
     public Input<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Input.empty() : this.writeProvisionedThroughputSettings;

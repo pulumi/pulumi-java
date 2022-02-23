@@ -22,7 +22,7 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-        private final Input<Boolean> authentication;
+      private final Input<Boolean> authentication;
 
     public Input<Boolean> getAuthentication() {
         return this.authentication;
@@ -33,7 +33,7 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prodModeWriteProtect", required=true)
-        private final Input<Boolean> prodModeWriteProtect;
+      private final Input<Boolean> prodModeWriteProtect;
 
     public Input<Boolean> getProdModeWriteProtect() {
         return this.prodModeWriteProtect;

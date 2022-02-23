@@ -25,7 +25,7 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="defaultValue")
-        private final @Nullable String defaultValue;
+      private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
@@ -36,7 +36,7 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="isMandatory")
-        private final @Nullable Boolean isMandatory;
+      private final @Nullable Boolean isMandatory;
 
     public Optional<Boolean> getIsMandatory() {
         return this.isMandatory == null ? Optional.empty() : Optional.ofNullable(this.isMandatory);
@@ -47,7 +47,7 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="position")
-        private final @Nullable Integer position;
+      private final @Nullable Integer position;
 
     public Optional<Integer> getPosition() {
         return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
@@ -58,7 +58,7 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

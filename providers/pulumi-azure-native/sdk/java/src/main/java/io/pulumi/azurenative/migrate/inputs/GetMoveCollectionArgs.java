@@ -17,7 +17,7 @@ public final class GetMoveCollectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="moveCollectionName", required=true)
-        private final String moveCollectionName;
+      private final String moveCollectionName;
 
     public String getMoveCollectionName() {
         return this.moveCollectionName;
@@ -28,7 +28,7 @@ public final class GetMoveCollectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

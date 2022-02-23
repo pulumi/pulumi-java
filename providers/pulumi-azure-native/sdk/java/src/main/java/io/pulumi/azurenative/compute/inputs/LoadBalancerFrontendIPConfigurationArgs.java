@@ -19,7 +19,7 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
+      private final Input<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
 
     public Input<LoadBalancerFrontendIPConfigurationPropertiesArgs> getProperties() {
         return this.properties;

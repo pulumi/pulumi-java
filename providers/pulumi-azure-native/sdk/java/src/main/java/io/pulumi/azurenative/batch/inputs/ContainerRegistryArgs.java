@@ -15,7 +15,7 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     public static final ContainerRegistryArgs Empty = new ContainerRegistryArgs();
 
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -26,14 +26,14 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryServer")
-        private final @Nullable Input<String> registryServer;
+      private final @Nullable Input<String> registryServer;
 
     public Input<String> getRegistryServer() {
         return this.registryServer == null ? Input.empty() : this.registryServer;
     }
 
     @InputImport(name="userName", required=true)
-        private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;

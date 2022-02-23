@@ -15,14 +15,14 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
     public static final AlertPolicyCreationRecordArgs Empty = new AlertPolicyCreationRecordArgs();
 
     @InputImport(name="mutateTime")
-        private final @Nullable Input<String> mutateTime;
+      private final @Nullable Input<String> mutateTime;
 
     public Input<String> getMutateTime() {
         return this.mutateTime == null ? Input.empty() : this.mutateTime;
     }
 
     @InputImport(name="mutatedBy")
-        private final @Nullable Input<String> mutatedBy;
+      private final @Nullable Input<String> mutatedBy;
 
     public Input<String> getMutatedBy() {
         return this.mutatedBy == null ? Input.empty() : this.mutatedBy;

@@ -20,7 +20,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateEndpointName")
-        private final @Nullable Input<String> privateEndpointName;
+      private final @Nullable Input<String> privateEndpointName;
 
     public Input<String> getPrivateEndpointName() {
         return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
@@ -42,7 +42,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<PrivateEndpointPropertiesArgs> properties;
+      private final @Nullable Input<PrivateEndpointPropertiesArgs> properties;
 
     public Input<PrivateEndpointPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

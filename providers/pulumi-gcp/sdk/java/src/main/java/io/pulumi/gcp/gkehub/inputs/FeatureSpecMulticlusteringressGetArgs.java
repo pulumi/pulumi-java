@@ -18,7 +18,7 @@ public final class FeatureSpecMulticlusteringressGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configMembership", required=true)
-        private final Input<String> configMembership;
+      private final Input<String> configMembership;
 
     public Input<String> getConfigMembership() {
         return this.configMembership;

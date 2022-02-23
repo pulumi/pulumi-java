@@ -26,7 +26,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enum")
-        private final @Nullable List<Object> $enum;
+      private final @Nullable List<Object> $enum;
 
     public List<Object> get$enum() {
         return this.$enum == null ? List.of() : this.$enum;
@@ -37,7 +37,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="format")
-        private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -48,7 +48,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="xMsIsnullable")
-        private final @Nullable Boolean xMsIsnullable;
+      private final @Nullable Boolean xMsIsnullable;
 
     public Optional<Boolean> getXMsIsnullable() {
         return this.xMsIsnullable == null ? Optional.empty() : Optional.ofNullable(this.xMsIsnullable);
@@ -70,7 +70,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="xMsIsordered")
-        private final @Nullable Boolean xMsIsordered;
+      private final @Nullable Boolean xMsIsordered;
 
     public Optional<Boolean> getXMsIsordered() {
         return this.xMsIsordered == null ? Optional.empty() : Optional.ofNullable(this.xMsIsordered);

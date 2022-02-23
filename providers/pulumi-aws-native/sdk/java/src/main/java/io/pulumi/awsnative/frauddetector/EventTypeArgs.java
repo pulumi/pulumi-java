@@ -24,28 +24,28 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="entityTypes", required=true)
-        private final Input<List<EventTypeEntityTypeArgs>> entityTypes;
+      private final Input<List<EventTypeEntityTypeArgs>> entityTypes;
 
     public Input<List<EventTypeEntityTypeArgs>> getEntityTypes() {
         return this.entityTypes;
     }
 
     @InputImport(name="eventVariables", required=true)
-        private final Input<List<EventTypeEventVariableArgs>> eventVariables;
+      private final Input<List<EventTypeEventVariableArgs>> eventVariables;
 
     public Input<List<EventTypeEventVariableArgs>> getEventVariables() {
         return this.eventVariables;
     }
 
     @InputImport(name="labels", required=true)
-        private final Input<List<EventTypeLabelArgs>> labels;
+      private final Input<List<EventTypeLabelArgs>> labels;
 
     public Input<List<EventTypeLabelArgs>> getLabels() {
         return this.labels;
@@ -56,7 +56,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<EventTypeTagArgs>> tags;
+      private final @Nullable Input<List<EventTypeTagArgs>> tags;
 
     public Input<List<EventTypeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable PrivateEndpointConnectionPropertiesResponse properties;
+      private final @Nullable PrivateEndpointConnectionPropertiesResponse properties;
 
     public Optional<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -79,7 +79,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

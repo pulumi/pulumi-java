@@ -19,7 +19,7 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edgeModuleName")
-        private final @Nullable Input<String> edgeModuleName;
+      private final @Nullable Input<String> edgeModuleName;
 
     public Input<String> getEdgeModuleName() {
         return this.edgeModuleName == null ? Input.empty() : this.edgeModuleName;
@@ -41,7 +41,7 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

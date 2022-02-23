@@ -20,7 +20,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs
      * 
      */
     @InputImport(name="publicKeyPem")
-        private final @Nullable Input<String> publicKeyPem;
+      private final @Nullable Input<String> publicKeyPem;
 
     public Input<String> getPublicKeyPem() {
         return this.publicKeyPem == null ? Input.empty() : this.publicKeyPem;
@@ -35,7 +35,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs
      * 
      */
     @InputImport(name="signatureAlgorithm")
-        private final @Nullable Input<String> signatureAlgorithm;
+      private final @Nullable Input<String> signatureAlgorithm;
 
     public Input<String> getSignatureAlgorithm() {
         return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;

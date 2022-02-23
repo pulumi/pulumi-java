@@ -15,14 +15,14 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
     public static final DistributionLegacyS3OriginArgs Empty = new DistributionLegacyS3OriginArgs();
 
     @InputImport(name="dNSName", required=true)
-        private final Input<String> dNSName;
+      private final Input<String> dNSName;
 
     public Input<String> getDNSName() {
         return this.dNSName;
     }
 
     @InputImport(name="originAccessIdentity")
-        private final @Nullable Input<String> originAccessIdentity;
+      private final @Nullable Input<String> originAccessIdentity;
 
     public Input<String> getOriginAccessIdentity() {
         return this.originAccessIdentity == null ? Input.empty() : this.originAccessIdentity;

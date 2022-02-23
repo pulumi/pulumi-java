@@ -28,7 +28,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="allowedScenarios")
-        private final @Nullable List<String> allowedScenarios;
+      private final @Nullable List<String> allowedScenarios;
 
     public List<String> getAllowedScenarios() {
         return this.allowedScenarios == null ? List.of() : this.allowedScenarios;
@@ -39,7 +39,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="authenticationIdentityDetails")
-        private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
+      private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> getAuthenticationIdentityDetails() {
         return this.authenticationIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.authenticationIdentityDetails);
@@ -50,7 +50,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="connectionStatus")
-        private final @Nullable String connectionStatus;
+      private final @Nullable String connectionStatus;
 
     public Optional<String> getConnectionStatus() {
         return this.connectionStatus == null ? Optional.empty() : Optional.ofNullable(this.connectionStatus);
@@ -61,7 +61,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="draIdentifier")
-        private final @Nullable String draIdentifier;
+      private final @Nullable String draIdentifier;
 
     public Optional<String> getDraIdentifier() {
         return this.draIdentifier == null ? Optional.empty() : Optional.ofNullable(this.draIdentifier);
@@ -72,7 +72,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="fabricFriendlyName")
-        private final @Nullable String fabricFriendlyName;
+      private final @Nullable String fabricFriendlyName;
 
     public Optional<String> getFabricFriendlyName() {
         return this.fabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.fabricFriendlyName);
@@ -83,7 +83,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="fabricType")
-        private final @Nullable String fabricType;
+      private final @Nullable String fabricType;
 
     public Optional<String> getFabricType() {
         return this.fabricType == null ? Optional.empty() : Optional.ofNullable(this.fabricType);
@@ -94,7 +94,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -105,7 +105,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="healthErrorDetails")
-        private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+      private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
@@ -116,7 +116,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="lastHeartBeat")
-        private final @Nullable String lastHeartBeat;
+      private final @Nullable String lastHeartBeat;
 
     public Optional<String> getLastHeartBeat() {
         return this.lastHeartBeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartBeat);
@@ -127,7 +127,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="protectedItemCount")
-        private final @Nullable Integer protectedItemCount;
+      private final @Nullable Integer protectedItemCount;
 
     public Optional<Integer> getProtectedItemCount() {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
@@ -138,7 +138,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="providerVersion")
-        private final @Nullable String providerVersion;
+      private final @Nullable String providerVersion;
 
     public Optional<String> getProviderVersion() {
         return this.providerVersion == null ? Optional.empty() : Optional.ofNullable(this.providerVersion);
@@ -149,7 +149,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="providerVersionDetails")
-        private final @Nullable VersionDetailsResponse providerVersionDetails;
+      private final @Nullable VersionDetailsResponse providerVersionDetails;
 
     public Optional<VersionDetailsResponse> getProviderVersionDetails() {
         return this.providerVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.providerVersionDetails);
@@ -160,7 +160,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="providerVersionExpiryDate")
-        private final @Nullable String providerVersionExpiryDate;
+      private final @Nullable String providerVersionExpiryDate;
 
     public Optional<String> getProviderVersionExpiryDate() {
         return this.providerVersionExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.providerVersionExpiryDate);
@@ -171,7 +171,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="providerVersionState")
-        private final @Nullable String providerVersionState;
+      private final @Nullable String providerVersionState;
 
     public Optional<String> getProviderVersionState() {
         return this.providerVersionState == null ? Optional.empty() : Optional.ofNullable(this.providerVersionState);
@@ -182,7 +182,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="resourceAccessIdentityDetails")
-        private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
+      private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> getResourceAccessIdentityDetails() {
         return this.resourceAccessIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessIdentityDetails);
@@ -193,7 +193,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="serverVersion")
-        private final @Nullable String serverVersion;
+      private final @Nullable String serverVersion;
 
     public Optional<String> getServerVersion() {
         return this.serverVersion == null ? Optional.empty() : Optional.ofNullable(this.serverVersion);

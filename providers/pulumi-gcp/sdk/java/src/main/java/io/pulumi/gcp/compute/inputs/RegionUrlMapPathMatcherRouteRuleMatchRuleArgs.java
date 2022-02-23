@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="fullPathMatch")
-        private final @Nullable Input<String> fullPathMatch;
+      private final @Nullable Input<String> fullPathMatch;
 
     public Input<String> getFullPathMatch() {
         return this.fullPathMatch == null ? Input.empty() : this.fullPathMatch;
@@ -41,7 +41,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="headerMatches")
-        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> getHeaderMatches() {
         return this.headerMatches == null ? Input.empty() : this.headerMatches;
@@ -53,7 +53,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="ignoreCase")
-        private final @Nullable Input<Boolean> ignoreCase;
+      private final @Nullable Input<Boolean> ignoreCase;
 
     public Input<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
@@ -75,7 +75,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="metadataFilters")
-        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> getMetadataFilters() {
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
@@ -88,7 +88,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="prefixMatch")
-        private final @Nullable Input<String> prefixMatch;
+      private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -101,7 +101,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="queryParameterMatches")
-        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? Input.empty() : this.queryParameterMatches;
@@ -115,7 +115,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="regexMatch")
-        private final @Nullable Input<String> regexMatch;
+      private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;

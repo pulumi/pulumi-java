@@ -22,28 +22,28 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();
 
     @InputImport(name="activeDirectoryConfiguration")
-        private final @Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
+      private final @Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
     public Input<StudioComponentActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Input.empty() : this.activeDirectoryConfiguration;
     }
 
     @InputImport(name="computeFarmConfiguration")
-        private final @Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
+      private final @Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
 
     public Input<StudioComponentComputeFarmConfigurationArgs> getComputeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Input.empty() : this.computeFarmConfiguration;
     }
 
     @InputImport(name="licenseServiceConfiguration")
-        private final @Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
+      private final @Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
 
     public Input<StudioComponentLicenseServiceConfigurationArgs> getLicenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Input.empty() : this.licenseServiceConfiguration;
     }
 
     @InputImport(name="sharedFileSystemConfiguration")
-        private final @Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
+      private final @Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
     public Input<StudioComponentSharedFileSystemConfigurationArgs> getSharedFileSystemConfiguration() {
         return this.sharedFileSystemConfiguration == null ? Input.empty() : this.sharedFileSystemConfiguration;

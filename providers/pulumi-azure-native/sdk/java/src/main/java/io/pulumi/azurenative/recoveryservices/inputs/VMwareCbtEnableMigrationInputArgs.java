@@ -27,7 +27,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
-        private final Input<String> dataMoverRunAsAccountId;
+      private final Input<String> dataMoverRunAsAccountId;
 
     public Input<String> getDataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
@@ -38,7 +38,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="disksToInclude", required=true)
-        private final Input<List<VMwareCbtDiskInputArgs>> disksToInclude;
+      private final Input<List<VMwareCbtDiskInputArgs>> disksToInclude;
 
     public Input<List<VMwareCbtDiskInputArgs>> getDisksToInclude() {
         return this.disksToInclude;
@@ -50,7 +50,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -61,7 +61,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable Input<Either<String,LicenseType>> licenseType;
+      private final @Nullable Input<Either<String,LicenseType>> licenseType;
 
     public Input<Either<String,LicenseType>> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -72,7 +72,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="snapshotRunAsAccountId", required=true)
-        private final Input<String> snapshotRunAsAccountId;
+      private final Input<String> snapshotRunAsAccountId;
 
     public Input<String> getSnapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
@@ -83,7 +83,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-        private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Input<String> targetAvailabilitySetId;
 
     public Input<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
@@ -94,7 +94,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
-        private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
+      private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
 
     public Input<String> getTargetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId == null ? Input.empty() : this.targetBootDiagnosticsStorageAccountId;
@@ -105,7 +105,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetNetworkId", required=true)
-        private final Input<String> targetNetworkId;
+      private final Input<String> targetNetworkId;
 
     public Input<String> getTargetNetworkId() {
         return this.targetNetworkId;
@@ -116,7 +116,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetResourceGroupId", required=true)
-        private final Input<String> targetResourceGroupId;
+      private final Input<String> targetResourceGroupId;
 
     public Input<String> getTargetResourceGroupId() {
         return this.targetResourceGroupId;
@@ -127,7 +127,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetSubnetName")
-        private final @Nullable Input<String> targetSubnetName;
+      private final @Nullable Input<String> targetSubnetName;
 
     public Input<String> getTargetSubnetName() {
         return this.targetSubnetName == null ? Input.empty() : this.targetSubnetName;
@@ -138,7 +138,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmName")
-        private final @Nullable Input<String> targetVmName;
+      private final @Nullable Input<String> targetVmName;
 
     public Input<String> getTargetVmName() {
         return this.targetVmName == null ? Input.empty() : this.targetVmName;
@@ -149,7 +149,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmSize")
-        private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Input<String> targetVmSize;
 
     public Input<String> getTargetVmSize() {
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
@@ -160,7 +160,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmwareMachineId", required=true)
-        private final Input<String> vmwareMachineId;
+      private final Input<String> vmwareMachineId;
 
     public Input<String> getVmwareMachineId() {
         return this.vmwareMachineId;

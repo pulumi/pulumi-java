@@ -24,7 +24,7 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="members")
-        private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;

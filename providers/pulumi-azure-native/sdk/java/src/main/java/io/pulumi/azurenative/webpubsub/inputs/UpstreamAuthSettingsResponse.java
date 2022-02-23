@@ -24,7 +24,7 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="managedIdentity")
-        private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
+      private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
 
     public Optional<ManagedIdentitySettingsResponse> getManagedIdentity() {
         return this.managedIdentity == null ? Optional.empty() : Optional.ofNullable(this.managedIdentity);
@@ -35,7 +35,7 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

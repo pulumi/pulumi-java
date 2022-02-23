@@ -23,7 +23,7 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="byoaSecretAkvUrl")
-        private final @Nullable String byoaSecretAkvUrl;
+      private final @Nullable String byoaSecretAkvUrl;
 
     public Optional<String> getByoaSecretAkvUrl() {
         return this.byoaSecretAkvUrl == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretAkvUrl);
@@ -34,7 +34,7 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="byoaSecretName")
-        private final @Nullable String byoaSecretName;
+      private final @Nullable String byoaSecretName;
 
     public Optional<String> getByoaSecretName() {
         return this.byoaSecretName == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretName);

@@ -23,7 +23,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="actionsRequired")
-        private final @Nullable String actionsRequired;
+      private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
@@ -34,7 +34,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -45,7 +45,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

@@ -25,7 +25,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sites")
-        private final @Nullable List<WebChatSiteResponse> sites;
+      private final @Nullable List<WebChatSiteResponse> sites;
 
     public List<WebChatSiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
@@ -36,7 +36,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="webChatEmbedCode", required=true)
-        private final String webChatEmbedCode;
+      private final String webChatEmbedCode;
 
     public String getWebChatEmbedCode() {
         return this.webChatEmbedCode;

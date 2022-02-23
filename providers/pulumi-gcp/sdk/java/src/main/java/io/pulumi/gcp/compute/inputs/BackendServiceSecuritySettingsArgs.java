@@ -21,7 +21,7 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientTlsPolicy", required=true)
-        private final Input<String> clientTlsPolicy;
+      private final Input<String> clientTlsPolicy;
 
     public Input<String> getClientTlsPolicy() {
         return this.clientTlsPolicy;
@@ -34,7 +34,7 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subjectAltNames", required=true)
-        private final Input<List<String>> subjectAltNames;
+      private final Input<List<String>> subjectAltNames;
 
     public Input<List<String>> getSubjectAltNames() {
         return this.subjectAltNames;

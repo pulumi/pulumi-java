@@ -23,7 +23,7 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicSigningKey", required=true)
-        private final String publicSigningKey;
+      private final String publicSigningKey;
 
     public String getPublicSigningKey() {
         return this.publicSigningKey;
@@ -45,7 +45,7 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="signingCertificateThumbprint")
-        private final @Nullable String signingCertificateThumbprint;
+      private final @Nullable String signingCertificateThumbprint;
 
     public Optional<String> getSigningCertificateThumbprint() {
         return this.signingCertificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.signingCertificateThumbprint);

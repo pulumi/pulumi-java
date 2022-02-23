@@ -21,14 +21,14 @@ public final class CdnCertificateSourceParametersResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="certificateType", required=true)
-        private final String certificateType;
+      private final String certificateType;
 
     public String getCertificateType() {
         return this.certificateType;
     }
 
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

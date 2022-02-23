@@ -20,7 +20,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-        private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -31,7 +31,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-        private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -42,7 +42,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isVerified")
-        private final @Nullable Input<Boolean> isVerified;
+      private final @Nullable Input<Boolean> isVerified;
 
     public Input<Boolean> getIsVerified() {
         return this.isVerified == null ? Input.empty() : this.isVerified;
@@ -53,7 +53,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningServiceName", required=true)
-        private final Input<String> provisioningServiceName;
+      private final Input<String> provisioningServiceName;
 
     public Input<String> getProvisioningServiceName() {
         return this.provisioningServiceName;
@@ -64,7 +64,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

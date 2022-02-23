@@ -23,7 +23,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-        private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -34,7 +34,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;

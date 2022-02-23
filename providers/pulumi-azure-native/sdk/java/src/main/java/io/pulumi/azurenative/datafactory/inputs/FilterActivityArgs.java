@@ -27,7 +27,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition", required=true)
-        private final Input<ExpressionArgs> condition;
+      private final Input<ExpressionArgs> condition;
 
     public Input<ExpressionArgs> getCondition() {
         return this.condition;
@@ -38,7 +38,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -49,7 +49,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items", required=true)
-        private final Input<ExpressionArgs> items;
+      private final Input<ExpressionArgs> items;
 
     public Input<ExpressionArgs> getItems() {
         return this.items;
@@ -71,7 +71,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -83,7 +83,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

@@ -28,7 +28,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="currentProtectionState", required=true)
-        private final String currentProtectionState;
+      private final String currentProtectionState;
 
     public String getCurrentProtectionState() {
         return this.currentProtectionState;
@@ -39,7 +39,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataSourceInfo", required=true)
-        private final DatasourceResponse dataSourceInfo;
+      private final DatasourceResponse dataSourceInfo;
 
     public DatasourceResponse getDataSourceInfo() {
         return this.dataSourceInfo;
@@ -50,7 +50,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataSourceSetInfo")
-        private final @Nullable DatasourceSetResponse dataSourceSetInfo;
+      private final @Nullable DatasourceSetResponse dataSourceSetInfo;
 
     public Optional<DatasourceSetResponse> getDataSourceSetInfo() {
         return this.dataSourceSetInfo == null ? Optional.empty() : Optional.ofNullable(this.dataSourceSetInfo);
@@ -61,14 +61,14 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -79,7 +79,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="policyInfo", required=true)
-        private final PolicyInfoResponse policyInfo;
+      private final PolicyInfoResponse policyInfo;
 
     public PolicyInfoResponse getPolicyInfo() {
         return this.policyInfo;
@@ -90,7 +90,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="protectionErrorDetails", required=true)
-        private final UserFacingErrorResponse protectionErrorDetails;
+      private final UserFacingErrorResponse protectionErrorDetails;
 
     public UserFacingErrorResponse getProtectionErrorDetails() {
         return this.protectionErrorDetails;
@@ -101,7 +101,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="protectionStatus", required=true)
-        private final ProtectionStatusDetailsResponse protectionStatus;
+      private final ProtectionStatusDetailsResponse protectionStatus;
 
     public ProtectionStatusDetailsResponse getProtectionStatus() {
         return this.protectionStatus;
@@ -112,7 +112,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

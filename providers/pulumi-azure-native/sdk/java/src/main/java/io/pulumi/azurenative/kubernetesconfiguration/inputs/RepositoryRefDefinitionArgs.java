@@ -23,7 +23,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="branch")
-        private final @Nullable Input<String> branch;
+      private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -34,7 +34,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="commit")
-        private final @Nullable Input<String> commit;
+      private final @Nullable Input<String> commit;
 
     public Input<String> getCommit() {
         return this.commit == null ? Input.empty() : this.commit;
@@ -45,7 +45,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="semver")
-        private final @Nullable Input<String> semver;
+      private final @Nullable Input<String> semver;
 
     public Input<String> getSemver() {
         return this.semver == null ? Input.empty() : this.semver;
@@ -56,7 +56,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;

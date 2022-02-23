@@ -23,7 +23,7 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

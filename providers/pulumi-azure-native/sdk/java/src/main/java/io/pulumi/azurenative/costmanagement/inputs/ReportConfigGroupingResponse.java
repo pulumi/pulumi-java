@@ -21,7 +21,7 @@ public final class ReportConfigGroupingResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ReportConfigGroupingResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -17,7 +17,7 @@ public final class AnomalyDetectorConfig extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="anomalyDetectorFrequency", required=true)
-        private final AnomalyDetectorFrequency anomalyDetectorFrequency;
+      private final AnomalyDetectorFrequency anomalyDetectorFrequency;
 
     public AnomalyDetectorFrequency getAnomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;

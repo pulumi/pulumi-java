@@ -17,7 +17,7 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="migrateProjectName", required=true)
-        private final String migrateProjectName;
+      private final String migrateProjectName;
 
     public String getMigrateProjectName() {
         return this.migrateProjectName;
@@ -28,7 +28,7 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

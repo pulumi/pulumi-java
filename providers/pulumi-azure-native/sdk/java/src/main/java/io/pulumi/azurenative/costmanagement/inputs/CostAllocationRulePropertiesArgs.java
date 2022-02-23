@@ -26,7 +26,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="details", required=true)
-        private final Input<CostAllocationRuleDetailsArgs> details;
+      private final Input<CostAllocationRuleDetailsArgs> details;
 
     public Input<CostAllocationRuleDetailsArgs> getDetails() {
         return this.details;
@@ -48,7 +48,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<Either<String,RuleStatus>> status;
+      private final Input<Either<String,RuleStatus>> status;
 
     public Input<Either<String,RuleStatus>> getStatus() {
         return this.status;

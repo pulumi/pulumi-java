@@ -24,7 +24,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable Input<List<IPRangeArgs>> allow;
+      private final @Nullable Input<List<IPRangeArgs>> allow;
 
     public Input<List<IPRangeArgs>> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;

@@ -22,7 +22,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-        private final String certificateCommonName;
+      private final String certificateCommonName;
 
     public String getCertificateCommonName() {
         return this.certificateCommonName;
@@ -33,7 +33,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-        private final String certificateIssuerThumbprint;
+      private final String certificateIssuerThumbprint;
 
     public String getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
@@ -44,7 +44,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isAdmin", required=true)
-        private final Boolean isAdmin;
+      private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {
         return this.isAdmin;

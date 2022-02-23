@@ -24,7 +24,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="booleanValue")
-        private final @Nullable Input<Boolean> booleanValue;
+      private final @Nullable Input<Boolean> booleanValue;
 
     public Input<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
@@ -36,7 +36,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="dateValue")
-        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> dateValue;
+      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> dateValue;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> getDateValue() {
         return this.dateValue == null ? Input.empty() : this.dateValue;
@@ -48,7 +48,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="dayOfWeekValue")
-        private final @Nullable Input<String> dayOfWeekValue;
+      private final @Nullable Input<String> dayOfWeekValue;
 
     public Input<String> getDayOfWeekValue() {
         return this.dayOfWeekValue == null ? Input.empty() : this.dayOfWeekValue;
@@ -59,7 +59,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="floatValue")
-        private final @Nullable Input<Double> floatValue;
+      private final @Nullable Input<Double> floatValue;
 
     public Input<Double> getFloatValue() {
         return this.floatValue == null ? Input.empty() : this.floatValue;
@@ -70,7 +70,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="integerValue")
-        private final @Nullable Input<Integer> integerValue;
+      private final @Nullable Input<Integer> integerValue;
 
     public Input<Integer> getIntegerValue() {
         return this.integerValue == null ? Input.empty() : this.integerValue;
@@ -81,7 +81,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="stringValue")
-        private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -93,7 +93,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="timeValue")
-        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> timeValue;
+      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> timeValue;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> getTimeValue() {
         return this.timeValue == null ? Input.empty() : this.timeValue;
@@ -105,7 +105,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="timestampValue")
-        private final @Nullable Input<String> timestampValue;
+      private final @Nullable Input<String> timestampValue;
 
     public Input<String> getTimestampValue() {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;

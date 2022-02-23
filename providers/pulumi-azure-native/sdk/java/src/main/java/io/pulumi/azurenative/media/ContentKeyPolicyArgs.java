@@ -21,7 +21,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentKeyPolicyName")
-        private final @Nullable Input<String> contentKeyPolicyName;
+      private final @Nullable Input<String> contentKeyPolicyName;
 
     public Input<String> getContentKeyPolicyName() {
         return this.contentKeyPolicyName == null ? Input.empty() : this.contentKeyPolicyName;
@@ -43,7 +43,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="options", required=true)
-        private final Input<List<ContentKeyPolicyOptionArgs>> options;
+      private final Input<List<ContentKeyPolicyOptionArgs>> options;
 
     public Input<List<ContentKeyPolicyOptionArgs>> getOptions() {
         return this.options;
@@ -65,7 +65,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

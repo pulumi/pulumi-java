@@ -19,7 +19,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-        private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
+      private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
     public List<GetIAMPolicyAuditConfigAuditLogConfig> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -30,7 +30,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="service", required=true)
-        private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;

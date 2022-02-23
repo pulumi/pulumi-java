@@ -24,7 +24,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hard")
-        private final @Nullable Input<Map<String,String>> hard;
+      private final @Nullable Input<Map<String,String>> hard;
 
     public Input<Map<String,String>> getHard() {
         return this.hard == null ? Input.empty() : this.hard;
@@ -35,7 +35,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="used")
-        private final @Nullable Input<Map<String,String>> used;
+      private final @Nullable Input<Map<String,String>> used;
 
     public Input<Map<String,String>> getUsed() {
         return this.used == null ? Input.empty() : this.used;

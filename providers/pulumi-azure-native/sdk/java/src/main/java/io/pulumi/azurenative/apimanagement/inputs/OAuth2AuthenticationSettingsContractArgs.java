@@ -23,7 +23,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizationServerId")
-        private final @Nullable Input<String> authorizationServerId;
+      private final @Nullable Input<String> authorizationServerId;
 
     public Input<String> getAuthorizationServerId() {
         return this.authorizationServerId == null ? Input.empty() : this.authorizationServerId;
@@ -34,7 +34,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;

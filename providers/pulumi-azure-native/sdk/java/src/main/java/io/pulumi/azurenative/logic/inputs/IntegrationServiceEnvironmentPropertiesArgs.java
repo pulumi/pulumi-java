@@ -29,7 +29,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="encryptionConfiguration")
-        private final @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -40,7 +40,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="endpointsConfiguration")
-        private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+      private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
     public Input<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
         return this.endpointsConfiguration == null ? Input.empty() : this.endpointsConfiguration;
@@ -51,7 +51,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironmentId")
-        private final @Nullable Input<String> integrationServiceEnvironmentId;
+      private final @Nullable Input<String> integrationServiceEnvironmentId;
 
     public Input<String> getIntegrationServiceEnvironmentId() {
         return this.integrationServiceEnvironmentId == null ? Input.empty() : this.integrationServiceEnvironmentId;
@@ -62,7 +62,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkConfiguration")
-        private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
 
     public Input<NetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -73,7 +73,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState;
 
     public Input<Either<String,WorkflowProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -84,7 +84,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,WorkflowState>> state;
+      private final @Nullable Input<Either<String,WorkflowState>> state;
 
     public Input<Either<String,WorkflowState>> getState() {
         return this.state == null ? Input.empty() : this.state;

@@ -21,7 +21,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="branch")
-        private final @Nullable Input<String> branch;
+      private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -32,7 +32,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deploymentRollbackEnabled")
-        private final @Nullable Input<Boolean> deploymentRollbackEnabled;
+      private final @Nullable Input<Boolean> deploymentRollbackEnabled;
 
     public Input<Boolean> getDeploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled == null ? Input.empty() : this.deploymentRollbackEnabled;
@@ -43,7 +43,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gitHubActionConfiguration")
-        private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
+      private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
     public Input<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
         return this.gitHubActionConfiguration == null ? Input.empty() : this.gitHubActionConfiguration;
@@ -54,7 +54,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isGitHubAction")
-        private final @Nullable Input<Boolean> isGitHubAction;
+      private final @Nullable Input<Boolean> isGitHubAction;
 
     public Input<Boolean> getIsGitHubAction() {
         return this.isGitHubAction == null ? Input.empty() : this.isGitHubAction;
@@ -65,7 +65,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isManualIntegration")
-        private final @Nullable Input<Boolean> isManualIntegration;
+      private final @Nullable Input<Boolean> isManualIntegration;
 
     public Input<Boolean> getIsManualIntegration() {
         return this.isManualIntegration == null ? Input.empty() : this.isManualIntegration;
@@ -76,7 +76,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isMercurial")
-        private final @Nullable Input<Boolean> isMercurial;
+      private final @Nullable Input<Boolean> isMercurial;
 
     public Input<Boolean> getIsMercurial() {
         return this.isMercurial == null ? Input.empty() : this.isMercurial;
@@ -87,7 +87,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -98,7 +98,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -109,7 +109,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="repoUrl")
-        private final @Nullable Input<String> repoUrl;
+      private final @Nullable Input<String> repoUrl;
 
     public Input<String> getRepoUrl() {
         return this.repoUrl == null ? Input.empty() : this.repoUrl;
@@ -120,7 +120,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

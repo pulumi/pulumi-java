@@ -34,7 +34,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dnsSettings")
-        private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
+      private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
 
     public Optional<NetworkInterfaceDnsSettingsResponse> getDnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
@@ -45,7 +45,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dscpConfiguration", required=true)
-        private final SubResourceResponse dscpConfiguration;
+      private final SubResourceResponse dscpConfiguration;
 
     public SubResourceResponse getDscpConfiguration() {
         return this.dscpConfiguration;
@@ -56,7 +56,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-        private final @Nullable Boolean enableAcceleratedNetworking;
+      private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
@@ -67,7 +67,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableIPForwarding")
-        private final @Nullable Boolean enableIPForwarding;
+      private final @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
@@ -78,7 +78,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -89,7 +89,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable ExtendedLocationResponse extendedLocation;
+      private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
@@ -100,7 +100,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hostedWorkloads", required=true)
-        private final List<String> hostedWorkloads;
+      private final List<String> hostedWorkloads;
 
     public List<String> getHostedWorkloads() {
         return this.hostedWorkloads;
@@ -111,7 +111,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -122,7 +122,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipConfigurations")
-        private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
+      private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -133,7 +133,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -144,7 +144,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="macAddress", required=true)
-        private final String macAddress;
+      private final String macAddress;
 
     public String getMacAddress() {
         return this.macAddress;
@@ -155,7 +155,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="migrationPhase")
-        private final @Nullable String migrationPhase;
+      private final @Nullable String migrationPhase;
 
     public Optional<String> getMigrationPhase() {
         return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
@@ -166,7 +166,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -177,7 +177,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkSecurityGroup")
-        private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
+      private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
     public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
@@ -188,7 +188,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable String nicType;
+      private final @Nullable String nicType;
 
     public Optional<String> getNicType() {
         return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
@@ -199,7 +199,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="primary", required=true)
-        private final Boolean primary;
+      private final Boolean primary;
 
     public Boolean getPrimary() {
         return this.primary;
@@ -210,7 +210,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateEndpoint", required=true)
-        private final PrivateEndpointResponse privateEndpoint;
+      private final PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
@@ -221,7 +221,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateLinkService")
-        private final @Nullable PrivateLinkServiceResponse privateLinkService;
+      private final @Nullable PrivateLinkServiceResponse privateLinkService;
 
     public Optional<PrivateLinkServiceResponse> getPrivateLinkService() {
         return this.privateLinkService == null ? Optional.empty() : Optional.ofNullable(this.privateLinkService);
@@ -232,7 +232,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -243,7 +243,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-        private final String resourceGuid;
+      private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -254,7 +254,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -265,7 +265,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tapConfigurations", required=true)
-        private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
+      private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
 
     public List<NetworkInterfaceTapConfigurationResponse> getTapConfigurations() {
         return this.tapConfigurations;
@@ -276,7 +276,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -287,7 +287,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="virtualMachine", required=true)
-        private final SubResourceResponse virtualMachine;
+      private final SubResourceResponse virtualMachine;
 
     public SubResourceResponse getVirtualMachine() {
         return this.virtualMachine;

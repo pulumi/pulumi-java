@@ -22,7 +22,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyLogDetailsType", required=true)
-        private final String copyLogDetailsType;
+      private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -45,7 +45,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyLogLink", required=true)
-        private final List<String> copyLogLink;
+      private final List<String> copyLogLink;
 
     public List<String> getCopyLogLink() {
         return this.copyLogLink;
@@ -56,7 +56,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyVerboseLogLink", required=true)
-        private final List<String> copyVerboseLogLink;
+      private final List<String> copyVerboseLogLink;
 
     public List<String> getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;

@@ -24,7 +24,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreMissingVNetServiceEndpoint")
-        private final @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint;
+      private final @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint;
 
     public Input<Boolean> getIgnoreMissingVNetServiceEndpoint() {
         return this.ignoreMissingVNetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVNetServiceEndpoint;

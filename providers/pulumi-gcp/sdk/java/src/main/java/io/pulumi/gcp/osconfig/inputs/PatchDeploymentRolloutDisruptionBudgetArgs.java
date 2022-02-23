@@ -19,7 +19,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fixed")
-        private final @Nullable Input<Integer> fixed;
+      private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -30,7 +30,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="percentage")
-        private final @Nullable Input<Integer> percentage;
+      private final @Nullable Input<Integer> percentage;
 
     public Input<Integer> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;

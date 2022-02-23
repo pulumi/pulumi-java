@@ -23,7 +23,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labelReferenceInStreamingPolicy")
-        private final @Nullable Input<String> labelReferenceInStreamingPolicy;
+      private final @Nullable Input<String> labelReferenceInStreamingPolicy;
 
     public Input<String> getLabelReferenceInStreamingPolicy() {
         return this.labelReferenceInStreamingPolicy == null ? Input.empty() : this.labelReferenceInStreamingPolicy;
@@ -45,7 +45,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

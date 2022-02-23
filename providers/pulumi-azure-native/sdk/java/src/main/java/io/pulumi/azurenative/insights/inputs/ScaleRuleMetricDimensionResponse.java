@@ -22,7 +22,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dimensionName", required=true)
-        private final String dimensionName;
+      private final String dimensionName;
 
     public String getDimensionName() {
         return this.dimensionName;
@@ -33,7 +33,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

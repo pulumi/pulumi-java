@@ -17,7 +17,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeTableId", required=true)
-        private final String routeTableId;
+      private final String routeTableId;
 
     public String getRouteTableId() {
         return this.routeTableId;

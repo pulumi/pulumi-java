@@ -19,7 +19,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerGroupName")
-        private final @Nullable Input<String> consumerGroupName;
+      private final @Nullable Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
@@ -30,7 +30,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName", required=true)
-        private final Input<String> eventHubName;
+      private final Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName;
@@ -41,7 +41,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -52,7 +52,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userMetadata")
-        private final @Nullable Input<String> userMetadata;
+      private final @Nullable Input<String> userMetadata;
 
     public Input<String> getUserMetadata() {
         return this.userMetadata == null ? Input.empty() : this.userMetadata;

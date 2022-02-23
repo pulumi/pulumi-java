@@ -25,7 +25,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-        private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -41,7 +41,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableReferentialIntegrity")
-        private final @Nullable Input<Boolean> disableReferentialIntegrity;
+      private final @Nullable Input<Boolean> disableReferentialIntegrity;
 
     public Input<Boolean> getDisableReferentialIntegrity() {
         return this.disableReferentialIntegrity == null ? Input.empty() : this.disableReferentialIntegrity;
@@ -57,7 +57,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableResourceVersioning")
-        private final @Nullable Input<Boolean> disableResourceVersioning;
+      private final @Nullable Input<Boolean> disableResourceVersioning;
 
     public Input<Boolean> getDisableResourceVersioning() {
         return this.disableResourceVersioning == null ? Input.empty() : this.disableResourceVersioning;
@@ -73,7 +73,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHistoryImport")
-        private final @Nullable Input<Boolean> enableHistoryImport;
+      private final @Nullable Input<Boolean> enableHistoryImport;
 
     public Input<Boolean> getEnableHistoryImport() {
         return this.enableHistoryImport == null ? Input.empty() : this.enableHistoryImport;
@@ -89,7 +89,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableUpdateCreate")
-        private final @Nullable Input<Boolean> enableUpdateCreate;
+      private final @Nullable Input<Boolean> enableUpdateCreate;
 
     public Input<Boolean> getEnableUpdateCreate() {
         return this.enableUpdateCreate == null ? Input.empty() : this.enableUpdateCreate;
@@ -107,7 +107,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -119,7 +119,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -131,7 +131,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-        private final @Nullable Input<FhirStoreNotificationConfigGetArgs> notificationConfig;
+      private final @Nullable Input<FhirStoreNotificationConfigGetArgs> notificationConfig;
 
     public Input<FhirStoreNotificationConfigGetArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -142,7 +142,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -159,7 +159,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-        private final @Nullable Input<List<FhirStoreStreamConfigGetArgs>> streamConfigs;
+      private final @Nullable Input<List<FhirStoreStreamConfigGetArgs>> streamConfigs;
 
     public Input<List<FhirStoreStreamConfigGetArgs>> getStreamConfigs() {
         return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
@@ -172,7 +172,7 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

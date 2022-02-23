@@ -24,7 +24,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -46,7 +46,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<GitHubClientSecretArgs> clientSecret;
+      private final @Nullable Input<GitHubClientSecretArgs> clientSecret;
 
     public Input<GitHubClientSecretArgs> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -57,7 +57,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="collaborationBranch", required=true)
-        private final Input<String> collaborationBranch;
+      private final Input<String> collaborationBranch;
 
     public Input<String> getCollaborationBranch() {
         return this.collaborationBranch;
@@ -68,7 +68,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostName")
-        private final @Nullable Input<String> hostName;
+      private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -79,7 +79,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastCommitId")
-        private final @Nullable Input<String> lastCommitId;
+      private final @Nullable Input<String> lastCommitId;
 
     public Input<String> getLastCommitId() {
         return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
@@ -90,7 +90,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="repositoryName", required=true)
-        private final Input<String> repositoryName;
+      private final Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName;
@@ -101,7 +101,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rootFolder", required=true)
-        private final Input<String> rootFolder;
+      private final Input<String> rootFolder;
 
     public Input<String> getRootFolder() {
         return this.rootFolder;
@@ -113,7 +113,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

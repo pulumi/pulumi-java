@@ -22,7 +22,7 @@ public final class MongoDBDatabaseResourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;

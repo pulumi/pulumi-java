@@ -20,7 +20,7 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
      * 
      */
     @InputImport(name="catalogId")
-        private final @Nullable String catalogId;
+      private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
@@ -31,7 +31,7 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
      * 
      */
     @InputImport(name="databaseName")
-        private final @Nullable String databaseName;
+      private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -42,14 +42,14 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable String tableName;
+      private final @Nullable String tableName;
 
     public Optional<String> getTableName() {
         return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
     }
 
     @InputImport(name="tempDirectory")
-        private final @Nullable DatasetS3Location tempDirectory;
+      private final @Nullable DatasetS3Location tempDirectory;
 
     public Optional<DatasetS3Location> getTempDirectory() {
         return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);

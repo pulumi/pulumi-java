@@ -31,7 +31,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Object clientId;
+      private final Object clientId;
 
     public Object getClientId() {
         return this.clientId;
@@ -53,7 +53,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
         return this.clientSecret == null ? null : this.clientSecret;
@@ -64,7 +64,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -75,7 +75,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -86,7 +86,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -97,7 +97,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="host", required=true)
-        private final Object host;
+      private final Object host;
 
     public Object getHost() {
         return this.host;
@@ -108,7 +108,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -120,7 +120,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -131,7 +131,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-        private final @Nullable Object useEncryptedEndpoints;
+      private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
@@ -142,7 +142,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="useHostVerification")
-        private final @Nullable Object useHostVerification;
+      private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
@@ -153,7 +153,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="usePeerVerification")
-        private final @Nullable Object usePeerVerification;
+      private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);

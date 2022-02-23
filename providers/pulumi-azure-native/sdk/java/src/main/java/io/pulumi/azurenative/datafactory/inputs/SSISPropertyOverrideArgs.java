@@ -24,7 +24,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isSensitive")
-        private final @Nullable Input<Boolean> isSensitive;
+      private final @Nullable Input<Boolean> isSensitive;
 
     public Input<Boolean> getIsSensitive() {
         return this.isSensitive == null ? Input.empty() : this.isSensitive;
@@ -35,7 +35,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<Object> value;
+      private final Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value;

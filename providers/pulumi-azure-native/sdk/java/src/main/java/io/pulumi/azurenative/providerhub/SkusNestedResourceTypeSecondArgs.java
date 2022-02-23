@@ -20,7 +20,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nestedResourceTypeFirst", required=true)
-        private final Input<String> nestedResourceTypeFirst;
+      private final Input<String> nestedResourceTypeFirst;
 
     public Input<String> getNestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
@@ -31,14 +31,14 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nestedResourceTypeSecond", required=true)
-        private final Input<String> nestedResourceTypeSecond;
+      private final Input<String> nestedResourceTypeSecond;
 
     public Input<String> getNestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
 
     @InputImport(name="properties")
-        private final @Nullable Input<SkuResourcePropertiesArgs> properties;
+      private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
     public Input<SkuResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -49,7 +49,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-        private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -60,7 +60,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -71,7 +71,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<String> sku;
+      private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;

@@ -27,7 +27,7 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="asn")
-        private final @Nullable Double asn;
+      private final @Nullable Double asn;
 
     public Optional<Double> getAsn() {
         return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
@@ -38,7 +38,7 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-        private final @Nullable String bgpPeeringAddress;
+      private final @Nullable String bgpPeeringAddress;
 
     public Optional<String> getBgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
@@ -49,7 +49,7 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddresses")
-        private final @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
+      private final @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
 
     public List<IPConfigurationBgpPeeringAddressResponse> getBgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
@@ -60,7 +60,7 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peerWeight")
-        private final @Nullable Integer peerWeight;
+      private final @Nullable Integer peerWeight;
 
     public Optional<Integer> getPeerWeight() {
         return this.peerWeight == null ? Optional.empty() : Optional.ofNullable(this.peerWeight);

@@ -22,7 +22,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text", required=true)
-        private final Input<String> text;
+      private final Input<String> text;
 
     public Input<String> getText() {
         return this.text;
@@ -33,7 +33,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

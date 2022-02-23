@@ -26,7 +26,7 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins")
-        private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
@@ -39,7 +39,7 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportCredentials")
-        private final @Nullable Input<Boolean> supportCredentials;
+      private final @Nullable Input<Boolean> supportCredentials;
 
     public Input<Boolean> getSupportCredentials() {
         return this.supportCredentials == null ? Input.empty() : this.supportCredentials;

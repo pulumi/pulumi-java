@@ -17,7 +17,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentName", required=true)
-        private final String environmentName;
+      private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventSourceName", required=true)
-        private final String eventSourceName;
+      private final String eventSourceName;
 
     public String getEventSourceName() {
         return this.eventSourceName;
@@ -39,7 +39,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

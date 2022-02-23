@@ -29,7 +29,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultMode")
-        private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -40,7 +40,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="items")
-        private final @Nullable Input<List<KeyToPathArgs>> items;
+      private final @Nullable Input<List<KeyToPathArgs>> items;
 
     public Input<List<KeyToPathArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -51,7 +51,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="optional")
-        private final @Nullable Input<Boolean> optional;
+      private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -62,7 +62,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secretName")
-        private final @Nullable Input<String> secretName;
+      private final @Nullable Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName == null ? Input.empty() : this.secretName;

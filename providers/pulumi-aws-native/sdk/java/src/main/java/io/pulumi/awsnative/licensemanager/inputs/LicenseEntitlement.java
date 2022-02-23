@@ -17,42 +17,42 @@ public final class LicenseEntitlement extends io.pulumi.resources.InvokeArgs {
     public static final LicenseEntitlement Empty = new LicenseEntitlement();
 
     @InputImport(name="allowCheckIn")
-        private final @Nullable Boolean allowCheckIn;
+      private final @Nullable Boolean allowCheckIn;
 
     public Optional<Boolean> getAllowCheckIn() {
         return this.allowCheckIn == null ? Optional.empty() : Optional.ofNullable(this.allowCheckIn);
     }
 
     @InputImport(name="maxCount")
-        private final @Nullable Integer maxCount;
+      private final @Nullable Integer maxCount;
 
     public Optional<Integer> getMaxCount() {
         return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="overage")
-        private final @Nullable Boolean overage;
+      private final @Nullable Boolean overage;
 
     public Optional<Boolean> getOverage() {
         return this.overage == null ? Optional.empty() : Optional.ofNullable(this.overage);
     }
 
     @InputImport(name="unit", required=true)
-        private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;
     }
 
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

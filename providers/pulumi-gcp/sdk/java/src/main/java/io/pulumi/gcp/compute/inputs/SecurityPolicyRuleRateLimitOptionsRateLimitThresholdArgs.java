@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
      * 
      */
     @InputImport(name="intervalSec", required=true)
-        private final Input<Integer> intervalSec;
+      private final Input<Integer> intervalSec;
 
     public Input<Integer> getIntervalSec() {
         return this.intervalSec;

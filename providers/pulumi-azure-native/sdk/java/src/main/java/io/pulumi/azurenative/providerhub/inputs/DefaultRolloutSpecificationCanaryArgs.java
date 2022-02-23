@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     public static final DefaultRolloutSpecificationCanaryArgs Empty = new DefaultRolloutSpecificationCanaryArgs();
 
     @InputImport(name="regions")
-        private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
     }
 
     @InputImport(name="skipRegions")
-        private final @Nullable Input<List<String>> skipRegions;
+      private final @Nullable Input<List<String>> skipRegions;
 
     public Input<List<String>> getSkipRegions() {
         return this.skipRegions == null ? Input.empty() : this.skipRegions;

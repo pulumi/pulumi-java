@@ -32,7 +32,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="apiProperties")
-        private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
+      private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
 
     public Optional<CognitiveServicesAccountApiPropertiesResponse> getApiProperties() {
         return this.apiProperties == null ? Optional.empty() : Optional.ofNullable(this.apiProperties);
@@ -43,7 +43,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="capabilities", required=true)
-        private final List<SkuCapabilityResponse> capabilities;
+      private final List<SkuCapabilityResponse> capabilities;
 
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities;
@@ -54,7 +54,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="customSubDomainName")
-        private final @Nullable String customSubDomainName;
+      private final @Nullable String customSubDomainName;
 
     public Optional<String> getCustomSubDomainName() {
         return this.customSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.customSubDomainName);
@@ -65,7 +65,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="dateCreated", required=true)
-        private final String dateCreated;
+      private final String dateCreated;
 
     public String getDateCreated() {
         return this.dateCreated;
@@ -76,7 +76,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable EncryptionResponse encryption;
+      private final @Nullable EncryptionResponse encryption;
 
     public Optional<EncryptionResponse> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -87,7 +87,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final String endpoint;
+      private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -98,7 +98,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="internalId", required=true)
-        private final String internalId;
+      private final String internalId;
 
     public String getInternalId() {
         return this.internalId;
@@ -109,7 +109,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="isMigrated", required=true)
-        private final Boolean isMigrated;
+      private final Boolean isMigrated;
 
     public Boolean getIsMigrated() {
         return this.isMigrated;
@@ -120,7 +120,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="networkAcls")
-        private final @Nullable NetworkRuleSetResponse networkAcls;
+      private final @Nullable NetworkRuleSetResponse networkAcls;
 
     public Optional<NetworkRuleSetResponse> getNetworkAcls() {
         return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
@@ -131,7 +131,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="privateEndpointConnections")
-        private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+      private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
@@ -142,7 +142,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -153,7 +153,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="publicNetworkAccess")
-        private final @Nullable String publicNetworkAccess;
+      private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
@@ -164,7 +164,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="skuChangeInfo", required=true)
-        private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
+      private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
 
     public CognitiveServicesAccountSkuChangeInfoResponse getSkuChangeInfo() {
         return this.skuChangeInfo;
@@ -175,7 +175,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="userOwnedStorage")
-        private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
+      private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
     public List<UserOwnedStorageResponse> getUserOwnedStorage() {
         return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;

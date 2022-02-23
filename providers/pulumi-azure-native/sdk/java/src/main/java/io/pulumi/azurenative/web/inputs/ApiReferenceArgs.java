@@ -20,7 +20,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brandColor")
-        private final @Nullable Input<String> brandColor;
+      private final @Nullable Input<String> brandColor;
 
     public Input<String> getBrandColor() {
         return this.brandColor == null ? Input.empty() : this.brandColor;
@@ -31,7 +31,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -53,7 +53,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconUri")
-        private final @Nullable Input<String> iconUri;
+      private final @Nullable Input<String> iconUri;
 
     public Input<String> getIconUri() {
         return this.iconUri == null ? Input.empty() : this.iconUri;
@@ -64,7 +64,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -75,7 +75,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="swagger")
-        private final @Nullable Input<Object> swagger;
+      private final @Nullable Input<Object> swagger;
 
     public Input<Object> getSwagger() {
         return this.swagger == null ? Input.empty() : this.swagger;
@@ -97,7 +97,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

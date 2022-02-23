@@ -24,7 +24,7 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="exe")
-        private final @Nullable String exe;
+      private final @Nullable String exe;
 
     public Optional<String> getExe() {
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
@@ -35,7 +35,7 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable String parameters;
+      private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);

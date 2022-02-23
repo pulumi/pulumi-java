@@ -17,7 +17,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="associationName", required=true)
-        private final String associationName;
+      private final String associationName;
 
     public String getAssociationName() {
         return this.associationName;
@@ -28,7 +28,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-        private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;

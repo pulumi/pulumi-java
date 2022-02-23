@@ -22,7 +22,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rootVolume")
-        private final @Nullable Input<AzureNodePoolConfigRootVolumeGetArgs> rootVolume;
+      private final @Nullable Input<AzureNodePoolConfigRootVolumeGetArgs> rootVolume;
 
     public Input<AzureNodePoolConfigRootVolumeGetArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -33,7 +33,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sshConfig", required=true)
-        private final Input<AzureNodePoolConfigSshConfigGetArgs> sshConfig;
+      private final Input<AzureNodePoolConfigSshConfigGetArgs> sshConfig;
 
     public Input<AzureNodePoolConfigSshConfigGetArgs> getSshConfig() {
         return this.sshConfig;
@@ -44,7 +44,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -55,7 +55,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;

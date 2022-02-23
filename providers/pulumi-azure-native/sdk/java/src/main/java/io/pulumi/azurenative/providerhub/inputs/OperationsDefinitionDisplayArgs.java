@@ -18,28 +18,28 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();
 
     @InputImport(name="description", required=true)
-        private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
     }
 
     @InputImport(name="operation", required=true)
-        private final Input<String> operation;
+      private final Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="provider", required=true)
-        private final Input<String> provider;
+      private final Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider;
     }
 
     @InputImport(name="resource", required=true)
-        private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;

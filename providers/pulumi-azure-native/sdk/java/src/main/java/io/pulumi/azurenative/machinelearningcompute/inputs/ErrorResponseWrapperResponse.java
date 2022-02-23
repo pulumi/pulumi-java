@@ -23,7 +23,7 @@ public final class ErrorResponseWrapperResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="error")
-        private final @Nullable ErrorResponseResponse error;
+      private final @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);

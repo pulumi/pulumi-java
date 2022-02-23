@@ -26,7 +26,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="actionName", required=true)
-        private final Input<String> actionName;
+      private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;
@@ -37,7 +37,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverDirections", required=true)
-        private final Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
+      private final Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
     public Input<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
         return this.failoverDirections;
@@ -48,7 +48,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverTypes", required=true)
-        private final Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+      private final Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
     public Input<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {
         return this.failoverTypes;

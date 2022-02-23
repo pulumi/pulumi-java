@@ -22,7 +22,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bandWidthRateInMbps")
-        private final @Nullable Input<Integer> bandWidthRateInMbps;
+      private final @Nullable Input<Integer> bandWidthRateInMbps;
 
     public Input<Integer> getBandWidthRateInMbps() {
         return this.bandWidthRateInMbps == null ? Input.empty() : this.bandWidthRateInMbps;
@@ -33,7 +33,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bandwidthSettingId")
-        private final @Nullable Input<String> bandwidthSettingId;
+      private final @Nullable Input<String> bandwidthSettingId;
 
     public Input<String> getBandwidthSettingId() {
         return this.bandwidthSettingId == null ? Input.empty() : this.bandwidthSettingId;
@@ -44,7 +44,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -55,7 +55,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryptionKey")
-        private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptionKey;
+      private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptionKey;
 
     public Input<AsymmetricEncryptedSecretArgs> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -66,7 +66,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<Kind> kind;
+      private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -77,7 +77,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managerName", required=true)
-        private final Input<String> managerName;
+      private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -88,7 +88,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageAccountCredentialId", required=true)
-        private final Input<String> storageAccountCredentialId;
+      private final Input<String> storageAccountCredentialId;
 
     public Input<String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
@@ -110,7 +110,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumeContainerName")
-        private final @Nullable Input<String> volumeContainerName;
+      private final @Nullable Input<String> volumeContainerName;
 
     public Input<String> getVolumeContainerName() {
         return this.volumeContainerName == null ? Input.empty() : this.volumeContainerName;

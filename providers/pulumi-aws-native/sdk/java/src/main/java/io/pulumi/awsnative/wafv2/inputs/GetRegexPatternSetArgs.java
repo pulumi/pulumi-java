@@ -18,7 +18,7 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -29,7 +29,7 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -40,7 +40,7 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scope", required=true)
-        private final RegexPatternSetScope scope;
+      private final RegexPatternSetScope scope;
 
     public RegexPatternSetScope getScope() {
         return this.scope;

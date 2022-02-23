@@ -32,7 +32,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="additionalProjects")
-        private final @Nullable Input<Object> additionalProjects;
+      private final @Nullable Input<Object> additionalProjects;
 
     public Input<Object> getAdditionalProjects() {
         return this.additionalProjects == null ? Input.empty() : this.additionalProjects;
@@ -43,7 +43,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -54,7 +54,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<Either<String,GoogleBigQueryAuthenticationType>> authenticationType;
+      private final Input<Either<String,GoogleBigQueryAuthenticationType>> authenticationType;
 
     public Input<Either<String,GoogleBigQueryAuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
@@ -65,7 +65,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<Object> clientId;
+      private final @Nullable Input<Object> clientId;
 
     public Input<Object> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -76,7 +76,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -87,7 +87,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -98,7 +98,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -109,7 +109,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Input<Object> email;
+      private final @Nullable Input<Object> email;
 
     public Input<Object> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -120,7 +120,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -131,7 +131,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyFilePath")
-        private final @Nullable Input<Object> keyFilePath;
+      private final @Nullable Input<Object> keyFilePath;
 
     public Input<Object> getKeyFilePath() {
         return this.keyFilePath == null ? Input.empty() : this.keyFilePath;
@@ -142,7 +142,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -153,7 +153,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project", required=true)
-        private final Input<Object> project;
+      private final Input<Object> project;
 
     public Input<Object> getProject() {
         return this.project;
@@ -164,7 +164,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="refreshToken")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -175,7 +175,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="requestGoogleDriveScope")
-        private final @Nullable Input<Object> requestGoogleDriveScope;
+      private final @Nullable Input<Object> requestGoogleDriveScope;
 
     public Input<Object> getRequestGoogleDriveScope() {
         return this.requestGoogleDriveScope == null ? Input.empty() : this.requestGoogleDriveScope;
@@ -186,7 +186,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="trustedCertPath")
-        private final @Nullable Input<Object> trustedCertPath;
+      private final @Nullable Input<Object> trustedCertPath;
 
     public Input<Object> getTrustedCertPath() {
         return this.trustedCertPath == null ? Input.empty() : this.trustedCertPath;
@@ -198,7 +198,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -209,7 +209,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="useSystemTrustStore")
-        private final @Nullable Input<Object> useSystemTrustStore;
+      private final @Nullable Input<Object> useSystemTrustStore;
 
     public Input<Object> getUseSystemTrustStore() {
         return this.useSystemTrustStore == null ? Input.empty() : this.useSystemTrustStore;

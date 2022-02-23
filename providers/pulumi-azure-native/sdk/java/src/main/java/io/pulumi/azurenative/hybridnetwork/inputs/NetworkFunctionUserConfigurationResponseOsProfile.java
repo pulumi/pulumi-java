@@ -23,7 +23,7 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile extends io.
      * 
      */
     @InputImport(name="customData")
-        private final @Nullable String customData;
+      private final @Nullable String customData;
 
     public Optional<String> getCustomData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);

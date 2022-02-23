@@ -20,14 +20,14 @@ public final class RuleGroupXssMatchStatementArgs extends io.pulumi.resources.Re
     public static final RuleGroupXssMatchStatementArgs Empty = new RuleGroupXssMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-        private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+      private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+      private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;

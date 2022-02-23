@@ -14,14 +14,14 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     public static final DomainSubDomainSettingArgs Empty = new DomainSubDomainSettingArgs();
 
     @InputImport(name="branchName", required=true)
-        private final Input<String> branchName;
+      private final Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName;
     }
 
     @InputImport(name="prefix", required=true)
-        private final Input<String> prefix;
+      private final Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix;

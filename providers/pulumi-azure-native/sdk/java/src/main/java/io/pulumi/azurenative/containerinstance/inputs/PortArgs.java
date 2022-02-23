@@ -26,7 +26,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -37,7 +37,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
+      private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
     public Input<Either<String,ContainerGroupNetworkProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

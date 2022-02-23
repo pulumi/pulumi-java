@@ -18,7 +18,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="end", required=true)
-        private final Input<Integer> end;
+      private final Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end;
@@ -29,7 +29,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="interval", required=true)
-        private final Input<Integer> interval;
+      private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -40,7 +40,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="start", required=true)
-        private final Input<Integer> start;
+      private final Input<Integer> start;
 
     public Input<Integer> getStart() {
         return this.start;

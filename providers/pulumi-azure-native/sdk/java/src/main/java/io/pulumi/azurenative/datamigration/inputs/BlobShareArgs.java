@@ -22,7 +22,7 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasUri", required=true)
-        private final Input<String> sasUri;
+      private final Input<String> sasUri;
 
     public Input<String> getSasUri() {
         return this.sasUri;

@@ -17,7 +17,7 @@ public final class MitigationActionUpdateDeviceCertificateParams extends io.pulu
     public static final MitigationActionUpdateDeviceCertificateParams Empty = new MitigationActionUpdateDeviceCertificateParams();
 
     @InputImport(name="action", required=true)
-        private final MitigationActionUpdateDeviceCertificateParamsAction action;
+      private final MitigationActionUpdateDeviceCertificateParamsAction action;
 
     public MitigationActionUpdateDeviceCertificateParamsAction getAction() {
         return this.action;

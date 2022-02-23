@@ -21,7 +21,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * 
      */
     @InputImport(name="actionsRequired", required=true)
-        private final String actionsRequired;
+      private final String actionsRequired;
 
     public String getActionsRequired() {
         return this.actionsRequired;
@@ -32,7 +32,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * 
      */
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -43,7 +43,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

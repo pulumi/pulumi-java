@@ -17,7 +17,7 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="partnerNamespaceName", required=true)
-        private final String partnerNamespaceName;
+      private final String partnerNamespaceName;
 
     public String getPartnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -28,7 +28,7 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

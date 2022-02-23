@@ -22,7 +22,7 @@ public final class KeyVaultAndKeyReferenceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyUrl", required=true)
-        private final String keyUrl;
+      private final String keyUrl;
 
     public String getKeyUrl() {
         return this.keyUrl;
@@ -33,7 +33,7 @@ public final class KeyVaultAndKeyReferenceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceVault", required=true)
-        private final SourceVaultResponse sourceVault;
+      private final SourceVaultResponse sourceVault;
 
     public SourceVaultResponse getSourceVault() {
         return this.sourceVault;

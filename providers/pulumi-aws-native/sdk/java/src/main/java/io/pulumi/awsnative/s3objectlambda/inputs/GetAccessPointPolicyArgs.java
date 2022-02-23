@@ -17,7 +17,7 @@ public final class GetAccessPointPolicyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="objectLambdaAccessPoint", required=true)
-        private final String objectLambdaAccessPoint;
+      private final String objectLambdaAccessPoint;
 
     public String getObjectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;

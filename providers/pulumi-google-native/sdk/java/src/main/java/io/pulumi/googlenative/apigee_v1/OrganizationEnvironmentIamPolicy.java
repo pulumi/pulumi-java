@@ -84,6 +84,21 @@ public class OrganizationEnvironmentIamPolicy extends io.pulumi.resources.Custom
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationEnvironmentIamPolicy(String name) {
+        this(name, OrganizationEnvironmentIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationEnvironmentIamPolicy(String name, OrganizationEnvironmentIamPolicyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

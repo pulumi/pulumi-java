@@ -19,7 +19,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="externalDocsDescription")
-        private final @Nullable Input<String> externalDocsDescription;
+      private final @Nullable Input<String> externalDocsDescription;
 
     public Input<String> getExternalDocsDescription() {
         return this.externalDocsDescription == null ? Input.empty() : this.externalDocsDescription;
@@ -52,7 +52,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="externalDocsUrl")
-        private final @Nullable Input<String> externalDocsUrl;
+      private final @Nullable Input<String> externalDocsUrl;
 
     public Input<String> getExternalDocsUrl() {
         return this.externalDocsUrl == null ? Input.empty() : this.externalDocsUrl;
@@ -63,7 +63,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -85,7 +85,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagDescriptionId")
-        private final @Nullable Input<String> tagDescriptionId;
+      private final @Nullable Input<String> tagDescriptionId;
 
     public Input<String> getTagDescriptionId() {
         return this.tagDescriptionId == null ? Input.empty() : this.tagDescriptionId;

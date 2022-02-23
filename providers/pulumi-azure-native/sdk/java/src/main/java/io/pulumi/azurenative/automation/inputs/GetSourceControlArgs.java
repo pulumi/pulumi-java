@@ -17,7 +17,7 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final String automationAccountName;
+      private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceControlName", required=true)
-        private final String sourceControlName;
+      private final String sourceControlName;
 
     public String getSourceControlName() {
         return this.sourceControlName;

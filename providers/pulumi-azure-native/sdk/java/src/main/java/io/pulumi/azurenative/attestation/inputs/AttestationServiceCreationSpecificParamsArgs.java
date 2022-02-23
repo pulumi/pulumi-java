@@ -23,7 +23,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
      * 
      */
     @InputImport(name="policySigningCertificates")
-        private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
+      private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
 
     public Input<JSONWebKeySetArgs> getPolicySigningCertificates() {
         return this.policySigningCertificates == null ? Input.empty() : this.policySigningCertificates;

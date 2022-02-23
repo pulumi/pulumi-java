@@ -23,7 +23,7 @@ public final class MoveCollectionPropertiesResponseErrors extends io.pulumi.reso
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable MoveResourceErrorBodyResponse properties;
+      private final @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);

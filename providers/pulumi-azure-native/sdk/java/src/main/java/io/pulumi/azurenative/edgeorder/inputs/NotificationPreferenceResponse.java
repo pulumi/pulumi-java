@@ -22,7 +22,7 @@ public final class NotificationPreferenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sendNotification", required=true)
-        private final Boolean sendNotification;
+      private final Boolean sendNotification;
 
     public Boolean getSendNotification() {
         return this.sendNotification;
@@ -33,7 +33,7 @@ public final class NotificationPreferenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="stageName", required=true)
-        private final String stageName;
+      private final String stageName;
 
     public String getStageName() {
         return this.stageName;

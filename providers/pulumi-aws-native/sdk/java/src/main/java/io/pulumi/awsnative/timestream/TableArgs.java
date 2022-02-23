@@ -23,7 +23,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -34,7 +34,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="magneticStoreWriteProperties")
-        private final @Nullable Input<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
+      private final @Nullable Input<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
 
     public Input<MagneticStoreWritePropertiesPropertiesArgs> getMagneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Input.empty() : this.magneticStoreWriteProperties;
@@ -45,7 +45,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionProperties")
-        private final @Nullable Input<RetentionPropertiesPropertiesArgs> retentionProperties;
+      private final @Nullable Input<RetentionPropertiesPropertiesArgs> retentionProperties;
 
     public Input<RetentionPropertiesPropertiesArgs> getRetentionProperties() {
         return this.retentionProperties == null ? Input.empty() : this.retentionProperties;
@@ -56,7 +56,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -67,7 +67,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<TableTagArgs>> tags;
+      private final @Nullable Input<List<TableTagArgs>> tags;
 
     public Input<List<TableTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

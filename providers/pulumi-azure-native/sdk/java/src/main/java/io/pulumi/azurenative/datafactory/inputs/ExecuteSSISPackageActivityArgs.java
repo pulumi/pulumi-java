@@ -36,7 +36,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectVia", required=true)
-        private final Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia;
@@ -47,7 +47,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -58,7 +58,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -69,7 +69,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="environmentPath")
-        private final @Nullable Input<Object> environmentPath;
+      private final @Nullable Input<Object> environmentPath;
 
     public Input<Object> getEnvironmentPath() {
         return this.environmentPath == null ? Input.empty() : this.environmentPath;
@@ -80,7 +80,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="executionCredential")
-        private final @Nullable Input<SSISExecutionCredentialArgs> executionCredential;
+      private final @Nullable Input<SSISExecutionCredentialArgs> executionCredential;
 
     public Input<SSISExecutionCredentialArgs> getExecutionCredential() {
         return this.executionCredential == null ? Input.empty() : this.executionCredential;
@@ -91,7 +91,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -102,7 +102,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logLocation")
-        private final @Nullable Input<SSISLogLocationArgs> logLocation;
+      private final @Nullable Input<SSISLogLocationArgs> logLocation;
 
     public Input<SSISLogLocationArgs> getLogLocation() {
         return this.logLocation == null ? Input.empty() : this.logLocation;
@@ -113,7 +113,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loggingLevel")
-        private final @Nullable Input<Object> loggingLevel;
+      private final @Nullable Input<Object> loggingLevel;
 
     public Input<Object> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -124,7 +124,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -135,7 +135,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageConnectionManagers")
-        private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
+      private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
 
     public Input<Map<String,Map<String,SSISExecutionParameterArgs>>> getPackageConnectionManagers() {
         return this.packageConnectionManagers == null ? Input.empty() : this.packageConnectionManagers;
@@ -146,7 +146,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageLocation", required=true)
-        private final Input<SSISPackageLocationArgs> packageLocation;
+      private final Input<SSISPackageLocationArgs> packageLocation;
 
     public Input<SSISPackageLocationArgs> getPackageLocation() {
         return this.packageLocation;
@@ -157,7 +157,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageParameters")
-        private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters;
+      private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters;
 
     public Input<Map<String,SSISExecutionParameterArgs>> getPackageParameters() {
         return this.packageParameters == null ? Input.empty() : this.packageParameters;
@@ -168,7 +168,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -179,7 +179,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="projectConnectionManagers")
-        private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
+      private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
 
     public Input<Map<String,Map<String,SSISExecutionParameterArgs>>> getProjectConnectionManagers() {
         return this.projectConnectionManagers == null ? Input.empty() : this.projectConnectionManagers;
@@ -190,7 +190,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="projectParameters")
-        private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters;
+      private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters;
 
     public Input<Map<String,SSISExecutionParameterArgs>> getProjectParameters() {
         return this.projectParameters == null ? Input.empty() : this.projectParameters;
@@ -201,7 +201,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="propertyOverrides")
-        private final @Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
+      private final @Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
 
     public Input<Map<String,SSISPropertyOverrideArgs>> getPropertyOverrides() {
         return this.propertyOverrides == null ? Input.empty() : this.propertyOverrides;
@@ -212,7 +212,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="runtime")
-        private final @Nullable Input<Object> runtime;
+      private final @Nullable Input<Object> runtime;
 
     public Input<Object> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -224,7 +224,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -235,7 +235,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

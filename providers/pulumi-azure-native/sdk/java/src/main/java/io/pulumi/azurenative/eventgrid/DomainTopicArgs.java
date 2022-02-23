@@ -19,7 +19,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-        private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -30,7 +30,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainTopicName")
-        private final @Nullable Input<String> domainTopicName;
+      private final @Nullable Input<String> domainTopicName;
 
     public Input<String> getDomainTopicName() {
         return this.domainTopicName == null ? Input.empty() : this.domainTopicName;
@@ -41,7 +41,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

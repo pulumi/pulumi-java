@@ -15,14 +15,14 @@ public final class GetOrganizationPolicyListPolicyDeny extends io.pulumi.resourc
     public static final GetOrganizationPolicyListPolicyDeny Empty = new GetOrganizationPolicyListPolicyDeny();
 
     @InputImport(name="all", required=true)
-        private final Boolean all;
+      private final Boolean all;
 
     public Boolean getAll() {
         return this.all;
     }
 
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

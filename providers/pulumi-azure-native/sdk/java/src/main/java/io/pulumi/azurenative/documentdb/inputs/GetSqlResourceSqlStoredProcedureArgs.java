@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="containerName", required=true)
-        private final String containerName;
+      private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedProcedureName", required=true)
-        private final String storedProcedureName;
+      private final String storedProcedureName;
 
     public String getStoredProcedureName() {
         return this.storedProcedureName;

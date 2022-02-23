@@ -26,7 +26,7 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encodingType")
-        private final @Nullable Input<Either<String,LiveEventEncodingType>> encodingType;
+      private final @Nullable Input<Either<String,LiveEventEncodingType>> encodingType;
 
     public Input<Either<String,LiveEventEncodingType>> getEncodingType() {
         return this.encodingType == null ? Input.empty() : this.encodingType;
@@ -37,7 +37,7 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyFrameInterval")
-        private final @Nullable Input<String> keyFrameInterval;
+      private final @Nullable Input<String> keyFrameInterval;
 
     public Input<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
@@ -48,7 +48,7 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="presetName")
-        private final @Nullable Input<String> presetName;
+      private final @Nullable Input<String> presetName;
 
     public Input<String> getPresetName() {
         return this.presetName == null ? Input.empty() : this.presetName;
@@ -59,7 +59,7 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stretchMode")
-        private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+      private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
     public Input<Either<String,StretchMode>> getStretchMode() {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;

@@ -24,7 +24,7 @@ public final class CacheSecuritySettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accessPolicies")
-        private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
+      private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
     public List<NfsAccessPolicyResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;

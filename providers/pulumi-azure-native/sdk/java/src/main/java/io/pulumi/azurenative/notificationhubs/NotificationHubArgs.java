@@ -29,7 +29,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="admCredential")
-        private final @Nullable Input<AdmCredentialArgs> admCredential;
+      private final @Nullable Input<AdmCredentialArgs> admCredential;
 
     public Input<AdmCredentialArgs> getAdmCredential() {
         return this.admCredential == null ? Input.empty() : this.admCredential;
@@ -40,7 +40,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apnsCredential")
-        private final @Nullable Input<ApnsCredentialArgs> apnsCredential;
+      private final @Nullable Input<ApnsCredentialArgs> apnsCredential;
 
     public Input<ApnsCredentialArgs> getApnsCredential() {
         return this.apnsCredential == null ? Input.empty() : this.apnsCredential;
@@ -51,7 +51,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authorizationRules")
-        private final @Nullable Input<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
+      private final @Nullable Input<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
     public Input<List<SharedAccessAuthorizationRulePropertiesArgs>> getAuthorizationRules() {
         return this.authorizationRules == null ? Input.empty() : this.authorizationRules;
@@ -62,7 +62,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduCredential")
-        private final @Nullable Input<BaiduCredentialArgs> baiduCredential;
+      private final @Nullable Input<BaiduCredentialArgs> baiduCredential;
 
     public Input<BaiduCredentialArgs> getBaiduCredential() {
         return this.baiduCredential == null ? Input.empty() : this.baiduCredential;
@@ -73,7 +73,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gcmCredential")
-        private final @Nullable Input<GcmCredentialArgs> gcmCredential;
+      private final @Nullable Input<GcmCredentialArgs> gcmCredential;
 
     public Input<GcmCredentialArgs> getGcmCredential() {
         return this.gcmCredential == null ? Input.empty() : this.gcmCredential;
@@ -84,7 +84,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -95,7 +95,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mpnsCredential")
-        private final @Nullable Input<MpnsCredentialArgs> mpnsCredential;
+      private final @Nullable Input<MpnsCredentialArgs> mpnsCredential;
 
     public Input<MpnsCredentialArgs> getMpnsCredential() {
         return this.mpnsCredential == null ? Input.empty() : this.mpnsCredential;
@@ -106,7 +106,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -128,7 +128,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="notificationHubName")
-        private final @Nullable Input<String> notificationHubName;
+      private final @Nullable Input<String> notificationHubName;
 
     public Input<String> getNotificationHubName() {
         return this.notificationHubName == null ? Input.empty() : this.notificationHubName;
@@ -139,7 +139,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="registrationTtl")
-        private final @Nullable Input<String> registrationTtl;
+      private final @Nullable Input<String> registrationTtl;
 
     public Input<String> getRegistrationTtl() {
         return this.registrationTtl == null ? Input.empty() : this.registrationTtl;
@@ -150,7 +150,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -161,7 +161,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -172,7 +172,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -183,7 +183,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="wnsCredential")
-        private final @Nullable Input<WnsCredentialArgs> wnsCredential;
+      private final @Nullable Input<WnsCredentialArgs> wnsCredential;
 
     public Input<WnsCredentialArgs> getWnsCredential() {
         return this.wnsCredential == null ? Input.empty() : this.wnsCredential;

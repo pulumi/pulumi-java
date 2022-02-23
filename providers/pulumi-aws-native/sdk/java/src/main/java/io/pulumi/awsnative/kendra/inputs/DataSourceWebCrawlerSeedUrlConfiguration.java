@@ -17,14 +17,14 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration extends io.pulumi.re
     public static final DataSourceWebCrawlerSeedUrlConfiguration Empty = new DataSourceWebCrawlerSeedUrlConfiguration();
 
     @InputImport(name="seedUrls", required=true)
-        private final List<String> seedUrls;
+      private final List<String> seedUrls;
 
     public List<String> getSeedUrls() {
         return this.seedUrls;
     }
 
     @InputImport(name="webCrawlerMode")
-        private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
+      private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
 
     public Optional<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
         return this.webCrawlerMode == null ? Optional.empty() : Optional.ofNullable(this.webCrawlerMode);

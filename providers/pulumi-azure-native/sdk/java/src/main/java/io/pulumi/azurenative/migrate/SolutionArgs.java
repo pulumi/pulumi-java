@@ -20,7 +20,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrateProjectName", required=true)
-        private final Input<String> migrateProjectName;
+      private final Input<String> migrateProjectName;
 
     public Input<String> getMigrateProjectName() {
         return this.migrateProjectName;
@@ -31,7 +31,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<SolutionPropertiesArgs> properties;
+      private final @Nullable Input<SolutionPropertiesArgs> properties;
 
     public Input<SolutionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionName")
-        private final @Nullable Input<String> solutionName;
+      private final @Nullable Input<String> solutionName;
 
     public Input<String> getSolutionName() {
         return this.solutionName == null ? Input.empty() : this.solutionName;

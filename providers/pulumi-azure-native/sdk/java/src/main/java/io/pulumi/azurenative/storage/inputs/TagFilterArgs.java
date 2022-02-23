@@ -22,7 +22,7 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="op", required=true)
-        private final Input<String> op;
+      private final Input<String> op;
 
     public Input<String> getOp() {
         return this.op;
@@ -44,7 +44,7 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

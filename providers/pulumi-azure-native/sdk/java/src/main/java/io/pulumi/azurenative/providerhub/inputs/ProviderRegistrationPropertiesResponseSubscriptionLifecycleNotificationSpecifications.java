@@ -17,14 +17,14 @@ public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNo
     public static final ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications Empty = new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications();
 
     @InputImport(name="softDeleteTTL")
-        private final @Nullable String softDeleteTTL;
+      private final @Nullable String softDeleteTTL;
 
     public Optional<String> getSoftDeleteTTL() {
         return this.softDeleteTTL == null ? Optional.empty() : Optional.ofNullable(this.softDeleteTTL);
     }
 
     @InputImport(name="subscriptionStateOverrideActions")
-        private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
+      private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
     public List<SubscriptionStateOverrideActionResponse> getSubscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;

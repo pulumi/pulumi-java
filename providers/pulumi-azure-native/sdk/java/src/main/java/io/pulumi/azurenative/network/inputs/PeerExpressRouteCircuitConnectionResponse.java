@@ -24,7 +24,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="addressPrefix")
-        private final @Nullable String addressPrefix;
+      private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
@@ -35,7 +35,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="authResourceGuid")
-        private final @Nullable String authResourceGuid;
+      private final @Nullable String authResourceGuid;
 
     public Optional<String> getAuthResourceGuid() {
         return this.authResourceGuid == null ? Optional.empty() : Optional.ofNullable(this.authResourceGuid);
@@ -46,7 +46,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="circuitConnectionStatus", required=true)
-        private final String circuitConnectionStatus;
+      private final String circuitConnectionStatus;
 
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
@@ -57,7 +57,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionName")
-        private final @Nullable String connectionName;
+      private final @Nullable String connectionName;
 
     public Optional<String> getConnectionName() {
         return this.connectionName == null ? Optional.empty() : Optional.ofNullable(this.connectionName);
@@ -68,7 +68,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -79,7 +79,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="expressRouteCircuitPeering")
-        private final @Nullable SubResourceResponse expressRouteCircuitPeering;
+      private final @Nullable SubResourceResponse expressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.expressRouteCircuitPeering);
@@ -90,7 +90,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -101,7 +101,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -112,7 +112,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="peerExpressRouteCircuitPeering")
-        private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
+      private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.peerExpressRouteCircuitPeering);
@@ -123,7 +123,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -134,7 +134,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

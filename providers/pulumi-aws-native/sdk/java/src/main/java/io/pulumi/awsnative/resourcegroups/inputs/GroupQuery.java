@@ -17,21 +17,21 @@ public final class GroupQuery extends io.pulumi.resources.InvokeArgs {
     public static final GroupQuery Empty = new GroupQuery();
 
     @InputImport(name="resourceTypeFilters")
-        private final @Nullable List<String> resourceTypeFilters;
+      private final @Nullable List<String> resourceTypeFilters;
 
     public List<String> getResourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
     }
 
     @InputImport(name="stackIdentifier")
-        private final @Nullable String stackIdentifier;
+      private final @Nullable String stackIdentifier;
 
     public Optional<String> getStackIdentifier() {
         return this.stackIdentifier == null ? Optional.empty() : Optional.ofNullable(this.stackIdentifier);
     }
 
     @InputImport(name="tagFilters")
-        private final @Nullable List<GroupTagFilter> tagFilters;
+      private final @Nullable List<GroupTagFilter> tagFilters;
 
     public List<GroupTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;

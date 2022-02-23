@@ -18,21 +18,21 @@ public final class WebACLVisibilityConfig extends io.pulumi.resources.InvokeArgs
     public static final WebACLVisibilityConfig Empty = new WebACLVisibilityConfig();
 
     @InputImport(name="cloudWatchMetricsEnabled", required=true)
-        private final Boolean cloudWatchMetricsEnabled;
+      private final Boolean cloudWatchMetricsEnabled;
 
     public Boolean getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @InputImport(name="metricName", required=true)
-        private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="sampledRequestsEnabled", required=true)
-        private final Boolean sampledRequestsEnabled;
+      private final Boolean sampledRequestsEnabled;
 
     public Boolean getSampledRequestsEnabled() {
         return this.sampledRequestsEnabled;

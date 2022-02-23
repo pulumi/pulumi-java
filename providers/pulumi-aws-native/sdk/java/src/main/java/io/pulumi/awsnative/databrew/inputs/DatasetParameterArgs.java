@@ -23,28 +23,28 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createColumn")
-        private final @Nullable Input<Boolean> createColumn;
+      private final @Nullable Input<Boolean> createColumn;
 
     public Input<Boolean> getCreateColumn() {
         return this.createColumn == null ? Input.empty() : this.createColumn;
     }
 
     @InputImport(name="datetimeOptions")
-        private final @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
+      private final @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
 
     public Input<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
         return this.datetimeOptions == null ? Input.empty() : this.datetimeOptions;
     }
 
     @InputImport(name="filter")
-        private final @Nullable Input<DatasetFilterExpressionArgs> filter;
+      private final @Nullable Input<DatasetFilterExpressionArgs> filter;
 
     public Input<DatasetFilterExpressionArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<DatasetParameterType> type;
+      private final Input<DatasetParameterType> type;
 
     public Input<DatasetParameterType> getType() {
         return this.type;

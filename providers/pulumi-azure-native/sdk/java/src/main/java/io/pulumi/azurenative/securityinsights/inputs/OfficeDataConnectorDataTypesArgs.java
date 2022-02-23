@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exchange")
-        private final @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange;
+      private final @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange;
 
     public Input<OfficeDataConnectorDataTypesExchangeArgs> getExchange() {
         return this.exchange == null ? Input.empty() : this.exchange;
@@ -36,7 +36,7 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sharePoint")
-        private final @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
+      private final @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
 
     public Input<OfficeDataConnectorDataTypesSharePointArgs> getSharePoint() {
         return this.sharePoint == null ? Input.empty() : this.sharePoint;
@@ -47,7 +47,7 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="teams")
-        private final @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams;
+      private final @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams;
 
     public Input<OfficeDataConnectorDataTypesTeamsArgs> getTeams() {
         return this.teams == null ? Input.empty() : this.teams;

@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-        private final String roleDefinitionId;
+      private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;

@@ -19,14 +19,14 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
     public static final ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs Empty = new ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs();
 
     @InputImport(name="preflightOptions")
-        private final @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions;
+      private final @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions;
 
     public Input<List<Either<String,PreflightOption>>> getPreflightOptions() {
         return this.preflightOptions == null ? Input.empty() : this.preflightOptions;
     }
 
     @InputImport(name="preflightSupported")
-        private final @Nullable Input<Boolean> preflightSupported;
+      private final @Nullable Input<Boolean> preflightSupported;
 
     public Input<Boolean> getPreflightSupported() {
         return this.preflightSupported == null ? Input.empty() : this.preflightSupported;

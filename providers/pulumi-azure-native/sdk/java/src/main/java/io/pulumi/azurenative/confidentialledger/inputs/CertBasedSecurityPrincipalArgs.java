@@ -25,7 +25,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cert")
-        private final @Nullable Input<String> cert;
+      private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
@@ -36,7 +36,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ledgerRoleName")
-        private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
+      private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Input<Either<String,LedgerRoleName>> getLedgerRoleName() {
         return this.ledgerRoleName == null ? Input.empty() : this.ledgerRoleName;

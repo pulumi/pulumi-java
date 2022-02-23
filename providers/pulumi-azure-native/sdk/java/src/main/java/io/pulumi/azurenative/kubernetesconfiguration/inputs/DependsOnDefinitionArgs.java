@@ -23,7 +23,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kustomizationName")
-        private final @Nullable Input<String> kustomizationName;
+      private final @Nullable Input<String> kustomizationName;
 
     public Input<String> getKustomizationName() {
         return this.kustomizationName == null ? Input.empty() : this.kustomizationName;

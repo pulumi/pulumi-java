@@ -22,7 +22,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -44,7 +44,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="graphName")
-        private final @Nullable Input<String> graphName;
+      private final @Nullable Input<String> graphName;
 
     public Input<String> getGraphName() {
         return this.graphName == null ? Input.empty() : this.graphName;
@@ -55,7 +55,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -77,7 +77,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resource", required=true)
-        private final Input<GremlinGraphResourceArgs> resource;
+      private final Input<GremlinGraphResourceArgs> resource;
 
     public Input<GremlinGraphResourceArgs> getResource() {
         return this.resource;
@@ -88,7 +88,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class GremlinResourceGremlinGraphArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -21,7 +21,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataFactoryLocation", required=true)
-        private final String dataFactoryLocation;
+      private final String dataFactoryLocation;
 
     public String getDataFactoryLocation() {
         return this.dataFactoryLocation;
@@ -43,7 +43,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataFactoryName", required=true)
-        private final String dataFactoryName;
+      private final String dataFactoryName;
 
     public String getDataFactoryName() {
         return this.dataFactoryName;
@@ -54,7 +54,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -65,7 +65,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-        private final String subscriptionId;
+      private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;

@@ -15,7 +15,7 @@ public final class ConfigAntennaDownlinkConfig extends io.pulumi.resources.Invok
     public static final ConfigAntennaDownlinkConfig Empty = new ConfigAntennaDownlinkConfig();
 
     @InputImport(name="spectrumConfig")
-        private final @Nullable ConfigSpectrumConfig spectrumConfig;
+      private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
     public Optional<ConfigSpectrumConfig> getSpectrumConfig() {
         return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);

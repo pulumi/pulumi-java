@@ -17,14 +17,14 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     public static final FargateProfileSelectorArgs Empty = new FargateProfileSelectorArgs();
 
     @InputImport(name="labels")
-        private final @Nullable Input<List<FargateProfileLabelArgs>> labels;
+      private final @Nullable Input<List<FargateProfileLabelArgs>> labels;
 
     public Input<List<FargateProfileLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="namespace", required=true)
-        private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;

@@ -27,7 +27,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appInsights")
-        private final @Nullable Input<AppInsightsPropertiesArgs> appInsights;
+      private final @Nullable Input<AppInsightsPropertiesArgs> appInsights;
 
     public Input<AppInsightsPropertiesArgs> getAppInsights() {
         return this.appInsights == null ? Input.empty() : this.appInsights;
@@ -38,7 +38,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterName")
-        private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -49,7 +49,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterType", required=true)
-        private final Input<Either<String,ClusterType>> clusterType;
+      private final Input<Either<String,ClusterType>> clusterType;
 
     public Input<Either<String,ClusterType>> getClusterType() {
         return this.clusterType;
@@ -60,7 +60,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerRegistry")
-        private final @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry;
+      private final @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry;
 
     public Input<ContainerRegistryPropertiesArgs> getContainerRegistry() {
         return this.containerRegistry == null ? Input.empty() : this.containerRegistry;
@@ -71,7 +71,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerService")
-        private final @Nullable Input<AcsClusterPropertiesArgs> containerService;
+      private final @Nullable Input<AcsClusterPropertiesArgs> containerService;
 
     public Input<AcsClusterPropertiesArgs> getContainerService() {
         return this.containerService == null ? Input.empty() : this.containerService;
@@ -82,7 +82,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -93,7 +93,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="globalServiceConfiguration")
-        private final @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration;
+      private final @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
     public Input<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
         return this.globalServiceConfiguration == null ? Input.empty() : this.globalServiceConfiguration;
@@ -104,7 +104,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -115,7 +115,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -126,7 +126,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccount")
-        private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
+      private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
 
     public Input<StorageAccountPropertiesArgs> getStorageAccount() {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
@@ -137,7 +137,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

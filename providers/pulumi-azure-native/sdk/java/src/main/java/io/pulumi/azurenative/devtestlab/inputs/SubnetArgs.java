@@ -25,7 +25,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowPublicIp")
-        private final @Nullable Input<Either<String,UsagePermissionType>> allowPublicIp;
+      private final @Nullable Input<Either<String,UsagePermissionType>> allowPublicIp;
 
     public Input<Either<String,UsagePermissionType>> getAllowPublicIp() {
         return this.allowPublicIp == null ? Input.empty() : this.allowPublicIp;
@@ -36,7 +36,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labSubnetName")
-        private final @Nullable Input<String> labSubnetName;
+      private final @Nullable Input<String> labSubnetName;
 
     public Input<String> getLabSubnetName() {
         return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
@@ -47,7 +47,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

@@ -22,7 +22,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaGraphName")
-        private final @Nullable Input<String> mediaGraphName;
+      private final @Nullable Input<String> mediaGraphName;
 
     public Input<String> getMediaGraphName() {
         return this.mediaGraphName == null ? Input.empty() : this.mediaGraphName;
@@ -55,7 +55,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinks", required=true)
-        private final Input<List<MediaGraphAssetSinkArgs>> sinks;
+      private final Input<List<MediaGraphAssetSinkArgs>> sinks;
 
     public Input<List<MediaGraphAssetSinkArgs>> getSinks() {
         return this.sinks;
@@ -77,7 +77,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources", required=true)
-        private final Input<List<MediaGraphRtspSourceArgs>> sources;
+      private final Input<List<MediaGraphRtspSourceArgs>> sources;
 
     public Input<List<MediaGraphRtspSourceArgs>> getSources() {
         return this.sources;

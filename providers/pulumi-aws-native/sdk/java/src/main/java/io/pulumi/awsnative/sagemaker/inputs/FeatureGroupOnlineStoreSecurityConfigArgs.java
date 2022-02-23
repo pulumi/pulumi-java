@@ -15,7 +15,7 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
     public static final FeatureGroupOnlineStoreSecurityConfigArgs Empty = new FeatureGroupOnlineStoreSecurityConfigArgs();
 
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;

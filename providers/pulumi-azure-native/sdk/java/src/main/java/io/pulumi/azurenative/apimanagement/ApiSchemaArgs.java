@@ -20,7 +20,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -31,7 +31,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType", required=true)
-        private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -42,7 +42,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definitions")
-        private final @Nullable Input<Object> definitions;
+      private final @Nullable Input<Object> definitions;
 
     public Input<Object> getDefinitions() {
         return this.definitions == null ? Input.empty() : this.definitions;
@@ -53,7 +53,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaId")
-        private final @Nullable Input<String> schemaId;
+      private final @Nullable Input<String> schemaId;
 
     public Input<String> getSchemaId() {
         return this.schemaId == null ? Input.empty() : this.schemaId;
@@ -75,7 +75,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -86,7 +86,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

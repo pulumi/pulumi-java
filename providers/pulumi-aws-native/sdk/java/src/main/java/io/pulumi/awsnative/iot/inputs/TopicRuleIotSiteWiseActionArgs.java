@@ -16,14 +16,14 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     public static final TopicRuleIotSiteWiseActionArgs Empty = new TopicRuleIotSiteWiseActionArgs();
 
     @InputImport(name="putAssetPropertyValueEntries", required=true)
-        private final Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
+      private final Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
 
     public Input<List<TopicRulePutAssetPropertyValueEntryArgs>> getPutAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

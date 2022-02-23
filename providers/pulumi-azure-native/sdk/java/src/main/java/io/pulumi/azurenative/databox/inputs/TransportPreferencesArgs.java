@@ -24,7 +24,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredShipmentType", required=true)
-        private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
+      private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
     public Input<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
         return this.preferredShipmentType;

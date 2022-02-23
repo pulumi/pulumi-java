@@ -21,7 +21,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     public static final DataSetColumnGroupArgs Empty = new DataSetColumnGroupArgs();
 
     @InputImport(name="geoSpatialColumnGroup")
-        private final @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+      private final @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
     public Input<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
         return this.geoSpatialColumnGroup == null ? Input.empty() : this.geoSpatialColumnGroup;

@@ -21,7 +21,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * 
      */
     @InputImport(name="objectName", required=true)
-        private final String objectName;
+      private final String objectName;
 
     public String getObjectName() {
         return this.objectName;
@@ -32,7 +32,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -43,7 +43,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * 
      */
     @InputImport(name="updateAction", required=true)
-        private final String updateAction;
+      private final String updateAction;
 
     public String getUpdateAction() {
         return this.updateAction;

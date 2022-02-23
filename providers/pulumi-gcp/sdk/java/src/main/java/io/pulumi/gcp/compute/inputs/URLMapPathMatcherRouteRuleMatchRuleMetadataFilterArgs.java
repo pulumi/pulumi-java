@@ -23,7 +23,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs extends
      * 
      */
     @InputImport(name="filterLabels", required=true)
-        private final Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
+      private final Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
     public Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
         return this.filterLabels;
@@ -40,7 +40,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs extends
      * 
      */
     @InputImport(name="filterMatchCriteria", required=true)
-        private final Input<String> filterMatchCriteria;
+      private final Input<String> filterMatchCriteria;
 
     public Input<String> getFilterMatchCriteria() {
         return this.filterMatchCriteria;

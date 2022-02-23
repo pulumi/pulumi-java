@@ -25,7 +25,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attribute")
-        private final @Nullable Input<DevicePoolRuleAttribute> attribute;
+      private final @Nullable Input<DevicePoolRuleAttribute> attribute;
 
     public Input<DevicePoolRuleAttribute> getAttribute() {
         return this.attribute == null ? Input.empty() : this.attribute;
@@ -36,7 +36,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable Input<DevicePoolRuleOperator> operator;
+      private final @Nullable Input<DevicePoolRuleOperator> operator;
 
     public Input<DevicePoolRuleOperator> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -47,7 +47,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

@@ -22,7 +22,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="count", required=true)
-        private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;

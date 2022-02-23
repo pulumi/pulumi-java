@@ -25,7 +25,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eligibilityResult")
-        private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
+      private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
     public Optional<FailoverSetEligibilityResultResponse> getEligibilityResult() {
         return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
@@ -36,7 +36,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeContainers")
-        private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
+      private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
     public List<VolumeContainerFailoverMetadataResponse> getVolumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;

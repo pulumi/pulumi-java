@@ -17,14 +17,14 @@ public final class RegionDiskIamBindingArgs extends io.pulumi.resources.Resource
     public static final RegionDiskIamBindingArgs Empty = new RegionDiskIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<RegionDiskIamBindingConditionArgs> condition;
+      private final @Nullable Input<RegionDiskIamBindingConditionArgs> condition;
 
     public Input<RegionDiskIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -35,7 +35,7 @@ public final class RegionDiskIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,14 +47,14 @@ public final class RegionDiskIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -67,7 +67,7 @@ public final class RegionDiskIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

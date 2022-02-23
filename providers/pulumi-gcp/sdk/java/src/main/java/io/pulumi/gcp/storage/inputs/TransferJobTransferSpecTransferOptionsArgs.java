@@ -19,7 +19,7 @@ public final class TransferJobTransferSpecTransferOptionsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer")
-        private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
+      private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
 
     public Input<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer == null ? Input.empty() : this.deleteObjectsFromSourceAfterTransfer;
@@ -31,7 +31,7 @@ public final class TransferJobTransferSpecTransferOptionsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deleteObjectsUniqueInSink")
-        private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
+      private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
 
     public Input<Boolean> getDeleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink == null ? Input.empty() : this.deleteObjectsUniqueInSink;
@@ -42,7 +42,7 @@ public final class TransferJobTransferSpecTransferOptionsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink")
-        private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
+      private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
 
     public Input<Boolean> getOverwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink == null ? Input.empty() : this.overwriteObjectsAlreadyExistingInSink;

@@ -26,7 +26,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheBehavior", required=true)
-        private final Input<Either<String,CacheBehavior>> cacheBehavior;
+      private final Input<Either<String,CacheBehavior>> cacheBehavior;
 
     public Input<Either<String,CacheBehavior>> getCacheBehavior() {
         return this.cacheBehavior;
@@ -37,7 +37,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheDuration")
-        private final @Nullable Input<String> cacheDuration;
+      private final @Nullable Input<String> cacheDuration;
 
     public Input<String> getCacheDuration() {
         return this.cacheDuration == null ? Input.empty() : this.cacheDuration;
@@ -48,14 +48,14 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheType", required=true)
-        private final Input<Either<String,CacheType>> cacheType;
+      private final Input<Either<String,CacheType>> cacheType;
 
     public Input<Either<String,CacheType>> getCacheType() {
         return this.cacheType;
     }
 
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

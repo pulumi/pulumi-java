@@ -25,7 +25,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dagTimeout")
-        private final @Nullable Input<String> dagTimeout;
+      private final @Nullable Input<String> dagTimeout;
 
     public Input<String> getDagTimeout() {
         return this.dagTimeout == null ? Input.empty() : this.dagTimeout;
@@ -36,7 +36,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jobs", required=true)
-        private final Input<List<WorkflowTemplateJobArgs>> jobs;
+      private final Input<List<WorkflowTemplateJobArgs>> jobs;
 
     public Input<List<WorkflowTemplateJobArgs>> getJobs() {
         return this.jobs;
@@ -47,7 +47,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -58,7 +58,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -69,7 +69,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<WorkflowTemplateParameterArgs>> parameters;
+      private final @Nullable Input<List<WorkflowTemplateParameterArgs>> parameters;
 
     public Input<List<WorkflowTemplateParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -91,7 +91,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="placement", required=true)
-        private final Input<WorkflowTemplatePlacementArgs> placement;
+      private final Input<WorkflowTemplatePlacementArgs> placement;
 
     public Input<WorkflowTemplatePlacementArgs> getPlacement() {
         return this.placement;
@@ -102,7 +102,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @InputImport(name="version")
-        private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     public Input<Integer> getVersion() {

@@ -21,21 +21,21 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
     public static final RuleGroupJsonBodyArgs Empty = new RuleGroupJsonBodyArgs();
 
     @InputImport(name="invalidFallbackBehavior")
-        private final @Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
+      private final @Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
     public Input<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
     }
 
     @InputImport(name="matchPattern", required=true)
-        private final Input<RuleGroupJsonMatchPatternArgs> matchPattern;
+      private final Input<RuleGroupJsonMatchPatternArgs> matchPattern;
 
     public Input<RuleGroupJsonMatchPatternArgs> getMatchPattern() {
         return this.matchPattern;
     }
 
     @InputImport(name="matchScope", required=true)
-        private final Input<RuleGroupJsonMatchScope> matchScope;
+      private final Input<RuleGroupJsonMatchScope> matchScope;
 
     public Input<RuleGroupJsonMatchScope> getMatchScope() {
         return this.matchScope;

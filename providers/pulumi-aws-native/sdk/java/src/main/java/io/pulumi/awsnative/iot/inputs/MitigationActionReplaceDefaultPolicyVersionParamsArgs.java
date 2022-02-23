@@ -18,7 +18,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
 
     @InputImport(name="templateName", required=true)
-        private final Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
+      private final Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
     public Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {
         return this.templateName;

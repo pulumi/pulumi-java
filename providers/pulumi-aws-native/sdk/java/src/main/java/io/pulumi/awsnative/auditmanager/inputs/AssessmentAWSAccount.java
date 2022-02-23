@@ -19,21 +19,21 @@ public final class AssessmentAWSAccount extends io.pulumi.resources.InvokeArgs {
     public static final AssessmentAWSAccount Empty = new AssessmentAWSAccount();
 
     @InputImport(name="emailAddress")
-        private final @Nullable String emailAddress;
+      private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);

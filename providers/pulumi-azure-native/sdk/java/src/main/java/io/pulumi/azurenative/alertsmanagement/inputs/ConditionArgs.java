@@ -26,7 +26,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable Input<Either<String,Operator>> operator;
+      private final @Nullable Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -37,7 +37,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigInfoTypeArgs extends io
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

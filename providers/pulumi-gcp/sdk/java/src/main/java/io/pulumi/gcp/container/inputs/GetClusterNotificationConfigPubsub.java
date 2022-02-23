@@ -14,14 +14,14 @@ public final class GetClusterNotificationConfigPubsub extends io.pulumi.resource
     public static final GetClusterNotificationConfigPubsub Empty = new GetClusterNotificationConfigPubsub();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="topic", required=true)
-        private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;

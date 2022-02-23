@@ -17,14 +17,14 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     public static final PackageArgs Empty = new PackageArgs();
 
     @InputImport(name="packageName")
-        private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<PackageTagArgs>> tags;
+      private final @Nullable Input<List<PackageTagArgs>> tags;
 
     public Input<List<PackageTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -22,7 +22,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destRange", required=true)
-        private final Input<String> destRange;
+      private final Input<String> destRange;
 
     public Input<String> getDestRange() {
         return this.destRange;
@@ -51,7 +51,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-        private final Input<String> network;
+      private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -79,7 +79,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopGateway")
-        private final @Nullable Input<String> nextHopGateway;
+      private final @Nullable Input<String> nextHopGateway;
 
     public Input<String> getNextHopGateway() {
         return this.nextHopGateway == null ? Input.empty() : this.nextHopGateway;
@@ -102,7 +102,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIlb")
-        private final @Nullable Input<String> nextHopIlb;
+      private final @Nullable Input<String> nextHopIlb;
 
     public Input<String> getNextHopIlb() {
         return this.nextHopIlb == null ? Input.empty() : this.nextHopIlb;
@@ -118,7 +118,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopInstance")
-        private final @Nullable Input<String> nextHopInstance;
+      private final @Nullable Input<String> nextHopInstance;
 
     public Input<String> getNextHopInstance() {
         return this.nextHopInstance == null ? Input.empty() : this.nextHopInstance;
@@ -132,7 +132,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopInstanceZone")
-        private final @Nullable Input<String> nextHopInstanceZone;
+      private final @Nullable Input<String> nextHopInstanceZone;
 
     public Input<String> getNextHopInstanceZone() {
         return this.nextHopInstanceZone == null ? Input.empty() : this.nextHopInstanceZone;
@@ -143,7 +143,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIp")
-        private final @Nullable Input<String> nextHopIp;
+      private final @Nullable Input<String> nextHopIp;
 
     public Input<String> getNextHopIp() {
         return this.nextHopIp == null ? Input.empty() : this.nextHopIp;
@@ -154,7 +154,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopVpnTunnel")
-        private final @Nullable Input<String> nextHopVpnTunnel;
+      private final @Nullable Input<String> nextHopVpnTunnel;
 
     public Input<String> getNextHopVpnTunnel() {
         return this.nextHopVpnTunnel == null ? Input.empty() : this.nextHopVpnTunnel;
@@ -169,7 +169,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -181,7 +181,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -192,7 +192,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

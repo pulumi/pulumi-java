@@ -19,7 +19,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -31,7 +31,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType")
-        private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;

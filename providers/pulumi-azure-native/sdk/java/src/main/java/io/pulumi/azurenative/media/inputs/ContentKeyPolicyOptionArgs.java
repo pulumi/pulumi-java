@@ -32,7 +32,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration", required=true)
-        private final Input<Object> configuration;
+      private final Input<Object> configuration;
 
     public Input<Object> getConfiguration() {
         return this.configuration;
@@ -43,7 +43,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="restriction", required=true)
-        private final Input<Object> restriction;
+      private final Input<Object> restriction;
 
     public Input<Object> getRestriction() {
         return this.restriction;

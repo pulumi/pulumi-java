@@ -17,7 +17,7 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ddosProtectionPlanName", required=true)
-        private final String ddosProtectionPlanName;
+      private final String ddosProtectionPlanName;
 
     public String getDdosProtectionPlanName() {
         return this.ddosProtectionPlanName;
@@ -28,7 +28,7 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

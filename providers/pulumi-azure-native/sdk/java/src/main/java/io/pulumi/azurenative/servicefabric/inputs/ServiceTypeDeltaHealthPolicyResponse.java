@@ -25,7 +25,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyServices")
-        private final @Nullable Integer maxPercentDeltaUnhealthyServices;
+      private final @Nullable Integer maxPercentDeltaUnhealthyServices;
 
     public Optional<Integer> getMaxPercentDeltaUnhealthyServices() {
         return this.maxPercentDeltaUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);

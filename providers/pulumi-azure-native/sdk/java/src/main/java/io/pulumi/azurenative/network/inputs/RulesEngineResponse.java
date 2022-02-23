@@ -25,7 +25,7 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceState", required=true)
-        private final String resourceState;
+      private final String resourceState;
 
     public String getResourceState() {
         return this.resourceState;
@@ -58,7 +58,7 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<RulesEngineRuleResponse> rules;
+      private final @Nullable List<RulesEngineRuleResponse> rules;
 
     public List<RulesEngineRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -69,7 +69,7 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

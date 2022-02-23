@@ -23,7 +23,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="header")
-        private final @Nullable Input<String> header;
+      private final @Nullable Input<String> header;
 
     public Input<String> getHeader() {
         return this.header == null ? Input.empty() : this.header;
@@ -34,7 +34,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="query")
-        private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;

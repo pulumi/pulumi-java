@@ -23,7 +23,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="alertType", required=true)
-        private final String alertType;
+      private final String alertType;
 
     public String getAlertType() {
         return this.alertType;
@@ -34,7 +34,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="azureResourceId", required=true)
-        private final String azureResourceId;
+      private final String azureResourceId;
 
     public String getAzureResourceId() {
         return this.azureResourceId;
@@ -45,7 +45,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -56,7 +56,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -67,7 +67,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="endTimeUtc", required=true)
-        private final String endTimeUtc;
+      private final String endTimeUtc;
 
     public String getEndTimeUtc() {
         return this.endTimeUtc;
@@ -79,7 +79,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -90,7 +90,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="productName")
-        private final @Nullable String productName;
+      private final @Nullable String productName;
 
     public Optional<String> getProductName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
@@ -101,7 +101,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="severity", required=true)
-        private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -112,7 +112,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="startTimeUtc", required=true)
-        private final String startTimeUtc;
+      private final String startTimeUtc;
 
     public String getStartTimeUtc() {
         return this.startTimeUtc;
@@ -123,7 +123,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="timeGenerated", required=true)
-        private final String timeGenerated;
+      private final String timeGenerated;
 
     public String getTimeGenerated() {
         return this.timeGenerated;

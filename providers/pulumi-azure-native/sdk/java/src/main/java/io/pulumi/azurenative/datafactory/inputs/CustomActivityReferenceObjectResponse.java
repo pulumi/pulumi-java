@@ -25,7 +25,7 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="datasets")
-        private final @Nullable List<DatasetReferenceResponse> datasets;
+      private final @Nullable List<DatasetReferenceResponse> datasets;
 
     public List<DatasetReferenceResponse> getDatasets() {
         return this.datasets == null ? List.of() : this.datasets;
@@ -36,7 +36,7 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="linkedServices")
-        private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
+      private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
     public List<LinkedServiceReferenceResponse> getLinkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;

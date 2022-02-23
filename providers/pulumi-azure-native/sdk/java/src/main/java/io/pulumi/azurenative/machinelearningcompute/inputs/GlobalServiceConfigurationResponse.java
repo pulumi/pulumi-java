@@ -26,7 +26,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoScale")
-        private final @Nullable AutoScaleConfigurationResponse autoScale;
+      private final @Nullable AutoScaleConfigurationResponse autoScale;
 
     public Optional<AutoScaleConfigurationResponse> getAutoScale() {
         return this.autoScale == null ? Optional.empty() : Optional.ofNullable(this.autoScale);
@@ -37,7 +37,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable String etag;
+      private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -48,7 +48,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceAuth")
-        private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
+      private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
 
     public Optional<ServiceAuthConfigurationResponse> getServiceAuth() {
         return this.serviceAuth == null ? Optional.empty() : Optional.ofNullable(this.serviceAuth);
@@ -59,7 +59,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="ssl")
-        private final @Nullable SslConfigurationResponse ssl;
+      private final @Nullable SslConfigurationResponse ssl;
 
     public Optional<SslConfigurationResponse> getSsl() {
         return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);

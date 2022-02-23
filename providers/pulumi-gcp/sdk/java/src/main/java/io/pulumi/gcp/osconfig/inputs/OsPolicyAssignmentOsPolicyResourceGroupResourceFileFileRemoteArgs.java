@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote
      * 
      */
     @InputImport(name="sha256Checksum")
-        private final @Nullable Input<String> sha256Checksum;
+      private final @Nullable Input<String> sha256Checksum;
 
     public Input<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

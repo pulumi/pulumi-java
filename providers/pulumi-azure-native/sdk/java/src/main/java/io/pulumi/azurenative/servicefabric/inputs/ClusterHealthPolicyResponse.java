@@ -26,7 +26,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="applicationHealthPolicies")
-        private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
+      private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
 
     public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;
@@ -42,7 +42,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxPercentUnhealthyApplications")
-        private final @Nullable Integer maxPercentUnhealthyApplications;
+      private final @Nullable Integer maxPercentUnhealthyApplications;
 
     public Optional<Integer> getMaxPercentUnhealthyApplications() {
         return this.maxPercentUnhealthyApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyApplications);
@@ -60,7 +60,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxPercentUnhealthyNodes")
-        private final @Nullable Integer maxPercentUnhealthyNodes;
+      private final @Nullable Integer maxPercentUnhealthyNodes;
 
     public Optional<Integer> getMaxPercentUnhealthyNodes() {
         return this.maxPercentUnhealthyNodes == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyNodes);

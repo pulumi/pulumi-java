@@ -28,7 +28,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -41,7 +41,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="avatarUri")
-        private final @Nullable Input<String> avatarUri;
+      private final @Nullable Input<String> avatarUri;
 
     public Input<String> getAvatarUri() {
         return this.avatarUri == null ? Input.empty() : this.avatarUri;
@@ -53,7 +53,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="avatarUriBackend")
-        private final @Nullable Input<String> avatarUriBackend;
+      private final @Nullable Input<String> avatarUriBackend;
 
     public Input<String> getAvatarUriBackend() {
         return this.avatarUriBackend == null ? Input.empty() : this.avatarUriBackend;
@@ -68,7 +68,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationThreshold")
-        private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Input<Double> classificationThreshold;
 
     public Input<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
@@ -80,7 +80,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLanguageCode")
-        private final @Nullable Input<String> defaultLanguageCode;
+      private final @Nullable Input<String> defaultLanguageCode;
 
     public Input<String> getDefaultLanguageCode() {
         return this.defaultLanguageCode == null ? Input.empty() : this.defaultLanguageCode;
@@ -91,7 +91,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -102,7 +102,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -113,7 +113,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-        private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -129,7 +129,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchMode")
-        private final @Nullable Input<String> matchMode;
+      private final @Nullable Input<String> matchMode;
 
     public Input<String> getMatchMode() {
         return this.matchMode == null ? Input.empty() : this.matchMode;
@@ -141,7 +141,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -152,7 +152,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedLanguageCodes")
-        private final @Nullable Input<List<String>> supportedLanguageCodes;
+      private final @Nullable Input<List<String>> supportedLanguageCodes;
 
     public Input<List<String>> getSupportedLanguageCodes() {
         return this.supportedLanguageCodes == null ? Input.empty() : this.supportedLanguageCodes;
@@ -168,7 +168,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -180,7 +180,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

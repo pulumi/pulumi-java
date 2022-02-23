@@ -19,7 +19,7 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="operatingSystemType")
-        private final @Nullable String operatingSystemType;
+      private final @Nullable String operatingSystemType;
 
     public Optional<String> getOperatingSystemType() {
         return this.operatingSystemType == null ? Optional.empty() : Optional.ofNullable(this.operatingSystemType);

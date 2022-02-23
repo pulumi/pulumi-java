@@ -25,7 +25,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableLocalAuth")
-        private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Input<Boolean> disableLocalAuth;
 
     public Input<Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
@@ -36,7 +36,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inboundIpRules")
-        private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
+      private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Input<List<InboundIpRuleArgs>> getInboundIpRules() {
         return this.inboundIpRules == null ? Input.empty() : this.inboundIpRules;
@@ -47,7 +47,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,7 +58,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partnerNamespaceName")
-        private final @Nullable Input<String> partnerNamespaceName;
+      private final @Nullable Input<String> partnerNamespaceName;
 
     public Input<String> getPartnerNamespaceName() {
         return this.partnerNamespaceName == null ? Input.empty() : this.partnerNamespaceName;
@@ -70,7 +70,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partnerRegistrationFullyQualifiedId")
-        private final @Nullable Input<String> partnerRegistrationFullyQualifiedId;
+      private final @Nullable Input<String> partnerRegistrationFullyQualifiedId;
 
     public Input<String> getPartnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId == null ? Input.empty() : this.partnerRegistrationFullyQualifiedId;
@@ -82,7 +82,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicNetworkAccess")
-        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -93,7 +93,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -104,7 +104,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

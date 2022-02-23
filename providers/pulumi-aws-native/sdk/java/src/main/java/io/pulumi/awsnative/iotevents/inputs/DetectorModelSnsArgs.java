@@ -20,7 +20,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     public static final DetectorModelSnsArgs Empty = new DetectorModelSnsArgs();
 
     @InputImport(name="payload")
-        private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Input<DetectorModelPayloadArgs> payload;
 
     public Input<DetectorModelPayloadArgs> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -31,7 +31,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetArn", required=true)
-        private final Input<String> targetArn;
+      private final Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn;

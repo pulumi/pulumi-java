@@ -15,21 +15,21 @@ public final class FeatureStateStateArgs extends io.pulumi.resources.ResourceArg
     public static final FeatureStateStateArgs Empty = new FeatureStateStateArgs();
 
     @InputImport(name="code")
-        private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

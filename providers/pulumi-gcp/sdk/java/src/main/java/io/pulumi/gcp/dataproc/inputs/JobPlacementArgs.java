@@ -15,14 +15,14 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobPlacementArgs Empty = new JobPlacementArgs();
 
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
     }
 
     @InputImport(name="clusterUuid")
-        private final @Nullable Input<String> clusterUuid;
+      private final @Nullable Input<String> clusterUuid;
 
     public Input<String> getClusterUuid() {
         return this.clusterUuid == null ? Input.empty() : this.clusterUuid;

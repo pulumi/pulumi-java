@@ -22,7 +22,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -45,7 +45,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idpConfig", required=true)
-        private final Input<InboundSamlConfigIdpConfigArgs> idpConfig;
+      private final Input<InboundSamlConfigIdpConfigArgs> idpConfig;
 
     public Input<InboundSamlConfigIdpConfigArgs> getIdpConfig() {
         return this.idpConfig;
@@ -58,7 +58,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="spConfig", required=true)
-        private final Input<InboundSamlConfigSpConfigArgs> spConfig;
+      private final Input<InboundSamlConfigSpConfigArgs> spConfig;
 
     public Input<InboundSamlConfigSpConfigArgs> getSpConfig() {
         return this.spConfig;

@@ -21,7 +21,7 @@ public final class VideoMediaInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="segmentLength", required=true)
-        private final String segmentLength;
+      private final String segmentLength;
 
     public String getSegmentLength() {
         return this.segmentLength;

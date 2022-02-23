@@ -30,7 +30,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="disabledRuleGroups")
-        private final @Nullable Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
+      private final @Nullable Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
 
     public Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> getDisabledRuleGroups() {
         return this.disabledRuleGroups == null ? Input.empty() : this.disabledRuleGroups;
@@ -41,7 +41,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -52,7 +52,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="exclusions")
-        private final @Nullable Input<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
+      private final @Nullable Input<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
 
     public Input<List<ApplicationGatewayFirewallExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -63,7 +63,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="fileUploadLimitInMb")
-        private final @Nullable Input<Integer> fileUploadLimitInMb;
+      private final @Nullable Input<Integer> fileUploadLimitInMb;
 
     public Input<Integer> getFileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Input.empty() : this.fileUploadLimitInMb;
@@ -74,7 +74,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="firewallMode", required=true)
-        private final Input<Either<String,ApplicationGatewayFirewallMode>> firewallMode;
+      private final Input<Either<String,ApplicationGatewayFirewallMode>> firewallMode;
 
     public Input<Either<String,ApplicationGatewayFirewallMode>> getFirewallMode() {
         return this.firewallMode;
@@ -85,7 +85,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="maxRequestBodySize")
-        private final @Nullable Input<Integer> maxRequestBodySize;
+      private final @Nullable Input<Integer> maxRequestBodySize;
 
     public Input<Integer> getMaxRequestBodySize() {
         return this.maxRequestBodySize == null ? Input.empty() : this.maxRequestBodySize;
@@ -96,7 +96,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="maxRequestBodySizeInKb")
-        private final @Nullable Input<Integer> maxRequestBodySizeInKb;
+      private final @Nullable Input<Integer> maxRequestBodySizeInKb;
 
     public Input<Integer> getMaxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Input.empty() : this.maxRequestBodySizeInKb;
@@ -107,7 +107,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="requestBodyCheck")
-        private final @Nullable Input<Boolean> requestBodyCheck;
+      private final @Nullable Input<Boolean> requestBodyCheck;
 
     public Input<Boolean> getRequestBodyCheck() {
         return this.requestBodyCheck == null ? Input.empty() : this.requestBodyCheck;
@@ -118,7 +118,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-        private final Input<String> ruleSetType;
+      private final Input<String> ruleSetType;
 
     public Input<String> getRuleSetType() {
         return this.ruleSetType;
@@ -129,7 +129,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-        private final Input<String> ruleSetVersion;
+      private final Input<String> ruleSetVersion;
 
     public Input<String> getRuleSetVersion() {
         return this.ruleSetVersion;

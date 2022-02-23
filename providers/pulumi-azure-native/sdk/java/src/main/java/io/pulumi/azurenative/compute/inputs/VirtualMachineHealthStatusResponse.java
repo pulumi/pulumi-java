@@ -21,7 +21,7 @@ public final class VirtualMachineHealthStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="status", required=true)
-        private final InstanceViewStatusResponse status;
+      private final InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse getStatus() {
         return this.status;

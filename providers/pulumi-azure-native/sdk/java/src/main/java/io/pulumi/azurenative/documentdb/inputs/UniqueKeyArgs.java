@@ -24,7 +24,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paths")
-        private final @Nullable Input<List<String>> paths;
+      private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;

@@ -25,7 +25,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="billingScope")
-        private final @Nullable Input<String> billingScope;
+      private final @Nullable Input<String> billingScope;
 
     public Input<String> getBillingScope() {
         return this.billingScope == null ? Input.empty() : this.billingScope;
@@ -36,7 +36,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -47,7 +47,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resellerId")
-        private final @Nullable Input<String> resellerId;
+      private final @Nullable Input<String> resellerId;
 
     public Input<String> getResellerId() {
         return this.resellerId == null ? Input.empty() : this.resellerId;
@@ -58,7 +58,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-        private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -69,7 +69,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workload")
-        private final @Nullable Input<Either<String,Workload>> workload;
+      private final @Nullable Input<Either<String,Workload>> workload;
 
     public Input<Either<String,Workload>> getWorkload() {
         return this.workload == null ? Input.empty() : this.workload;

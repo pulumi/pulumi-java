@@ -18,7 +18,7 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountId", required=true)
-        private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;

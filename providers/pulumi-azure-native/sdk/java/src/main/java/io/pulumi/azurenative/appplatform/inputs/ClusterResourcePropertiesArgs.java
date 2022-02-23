@@ -23,7 +23,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkProfile")
-        private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
