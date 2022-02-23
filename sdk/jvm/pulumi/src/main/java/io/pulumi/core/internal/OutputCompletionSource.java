@@ -6,7 +6,7 @@ import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Converter;

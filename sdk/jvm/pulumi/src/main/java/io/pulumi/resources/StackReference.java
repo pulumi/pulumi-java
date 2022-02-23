@@ -5,10 +5,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;

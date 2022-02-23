@@ -8,12 +8,12 @@ import com.google.common.reflect.ClassPath;
 import io.pulumi.core.Input;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.SemanticVersion;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
 
