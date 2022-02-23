@@ -14,7 +14,7 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     public static final SpotFleetInstanceIpv6AddressArgs Empty = new SpotFleetInstanceIpv6AddressArgs();
 
     @InputImport(name="ipv6Address", required=true)
-        private final Input<String> ipv6Address;
+      private final Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address;

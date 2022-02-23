@@ -17,7 +17,7 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
     public static final GetGroupMembershipsMembership Empty = new GetGroupMembershipsMembership();
 
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -28,14 +28,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="group", required=true)
-        private final String group;
+      private final String group;
 
     public String getGroup() {
         return this.group;
     }
 
     @InputImport(name="memberKeys", required=true)
-        private final List<GetGroupMembershipsMembershipMemberKey> memberKeys;
+      private final List<GetGroupMembershipsMembershipMemberKey> memberKeys;
 
     public List<GetGroupMembershipsMembershipMemberKey> getMemberKeys() {
         return this.memberKeys;
@@ -46,14 +46,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="preferredMemberKeys", required=true)
-        private final List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys;
+      private final List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys;
 
     public List<GetGroupMembershipsMembershipPreferredMemberKey> getPreferredMemberKeys() {
         return this.preferredMemberKeys;
@@ -64,21 +64,21 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="roles", required=true)
-        private final List<GetGroupMembershipsMembershipRole> roles;
+      private final List<GetGroupMembershipsMembershipRole> roles;
 
     public List<GetGroupMembershipsMembershipRole> getRoles() {
         return this.roles;
     }
 
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
     }
 
     @InputImport(name="updateTime", required=true)
-        private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;

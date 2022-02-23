@@ -23,7 +23,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errordetail")
-        private final @Nullable String errordetail;
+      private final @Nullable String errordetail;
 
     public Optional<String> getErrordetail() {
         return this.errordetail == null ? Optional.empty() : Optional.ofNullable(this.errordetail);
@@ -34,7 +34,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exceptiontype")
-        private final @Nullable String exceptiontype;
+      private final @Nullable String exceptiontype;
 
     public Optional<String> getExceptiontype() {
         return this.exceptiontype == null ? Optional.empty() : Optional.ofNullable(this.exceptiontype);

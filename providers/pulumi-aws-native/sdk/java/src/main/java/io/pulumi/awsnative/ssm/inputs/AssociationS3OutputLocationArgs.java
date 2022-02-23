@@ -15,21 +15,21 @@ public final class AssociationS3OutputLocationArgs extends io.pulumi.resources.R
     public static final AssociationS3OutputLocationArgs Empty = new AssociationS3OutputLocationArgs();
 
     @InputImport(name="outputS3BucketName")
-        private final @Nullable Input<String> outputS3BucketName;
+      private final @Nullable Input<String> outputS3BucketName;
 
     public Input<String> getOutputS3BucketName() {
         return this.outputS3BucketName == null ? Input.empty() : this.outputS3BucketName;
     }
 
     @InputImport(name="outputS3KeyPrefix")
-        private final @Nullable Input<String> outputS3KeyPrefix;
+      private final @Nullable Input<String> outputS3KeyPrefix;
 
     public Input<String> getOutputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Input.empty() : this.outputS3KeyPrefix;
     }
 
     @InputImport(name="outputS3Region")
-        private final @Nullable Input<String> outputS3Region;
+      private final @Nullable Input<String> outputS3Region;
 
     public Input<String> getOutputS3Region() {
         return this.outputS3Region == null ? Input.empty() : this.outputS3Region;

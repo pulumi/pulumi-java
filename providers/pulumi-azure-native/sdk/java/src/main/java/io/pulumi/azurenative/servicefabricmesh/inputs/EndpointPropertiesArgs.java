@@ -24,7 +24,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;

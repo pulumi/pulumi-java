@@ -24,7 +24,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-        private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts == null ? Input.empty() : this.hosts;
@@ -35,7 +35,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-        private final @Nullable Input<String> secretName;
+      private final @Nullable Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName == null ? Input.empty() : this.secretName;

@@ -21,7 +21,7 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="authorizationRuleName")
-        private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Input<String> authorizationRuleName;
 
     public Input<String> getAuthorizationRuleName() {
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
@@ -32,7 +32,7 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hybridConnectionName", required=true)
-        private final Input<String> hybridConnectionName;
+      private final Input<String> hybridConnectionName;
 
     public Input<String> getHybridConnectionName() {
         return this.hybridConnectionName;
@@ -43,7 +43,7 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -54,7 +54,7 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rights", required=true)
-        private final Input<List<AccessRights>> rights;
+      private final Input<List<AccessRights>> rights;
 
     public Input<List<AccessRights>> getRights() {
         return this.rights;

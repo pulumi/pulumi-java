@@ -17,7 +17,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
-        private final String integrationServiceEnvironmentName;
+      private final String integrationServiceEnvironmentName;
 
     public String getIntegrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
@@ -28,7 +28,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final String resourceGroup;
+      private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;

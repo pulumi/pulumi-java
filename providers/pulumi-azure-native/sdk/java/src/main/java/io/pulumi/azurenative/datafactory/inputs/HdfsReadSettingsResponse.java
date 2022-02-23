@@ -26,7 +26,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deleteFilesAfterCompletion")
-        private final @Nullable Object deleteFilesAfterCompletion;
+      private final @Nullable Object deleteFilesAfterCompletion;
 
     public Optional<Object> getDeleteFilesAfterCompletion() {
         return this.deleteFilesAfterCompletion == null ? Optional.empty() : Optional.ofNullable(this.deleteFilesAfterCompletion);
@@ -37,7 +37,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -48,7 +48,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="distcpSettings")
-        private final @Nullable DistcpSettingsResponse distcpSettings;
+      private final @Nullable DistcpSettingsResponse distcpSettings;
 
     public Optional<DistcpSettingsResponse> getDistcpSettings() {
         return this.distcpSettings == null ? Optional.empty() : Optional.ofNullable(this.distcpSettings);
@@ -59,7 +59,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-        private final @Nullable Boolean enablePartitionDiscovery;
+      private final @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> getEnablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
@@ -70,7 +70,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fileListPath")
-        private final @Nullable Object fileListPath;
+      private final @Nullable Object fileListPath;
 
     public Optional<Object> getFileListPath() {
         return this.fileListPath == null ? Optional.empty() : Optional.ofNullable(this.fileListPath);
@@ -81,7 +81,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -92,7 +92,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-        private final @Nullable Object modifiedDatetimeEnd;
+      private final @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> getModifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
@@ -103,7 +103,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-        private final @Nullable Object modifiedDatetimeStart;
+      private final @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> getModifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
@@ -114,7 +114,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="partitionRootPath")
-        private final @Nullable Object partitionRootPath;
+      private final @Nullable Object partitionRootPath;
 
     public Optional<Object> getPartitionRootPath() {
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
@@ -125,7 +125,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recursive")
-        private final @Nullable Object recursive;
+      private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
@@ -137,7 +137,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="wildcardFileName")
-        private final @Nullable Object wildcardFileName;
+      private final @Nullable Object wildcardFileName;
 
     public Optional<Object> getWildcardFileName() {
         return this.wildcardFileName == null ? Optional.empty() : Optional.ofNullable(this.wildcardFileName);
@@ -159,7 +159,7 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="wildcardFolderPath")
-        private final @Nullable Object wildcardFolderPath;
+      private final @Nullable Object wildcardFolderPath;
 
     public Optional<Object> getWildcardFolderPath() {
         return this.wildcardFolderPath == null ? Optional.empty() : Optional.ofNullable(this.wildcardFolderPath);

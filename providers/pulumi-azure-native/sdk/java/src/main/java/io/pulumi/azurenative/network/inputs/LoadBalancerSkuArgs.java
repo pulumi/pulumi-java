@@ -26,7 +26,7 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<Either<String,LoadBalancerSkuName>> name;
+      private final @Nullable Input<Either<String,LoadBalancerSkuName>> name;
 
     public Input<Either<String,LoadBalancerSkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,LoadBalancerSkuTier>> tier;
+      private final @Nullable Input<Either<String,LoadBalancerSkuTier>> tier;
 
     public Input<Either<String,LoadBalancerSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

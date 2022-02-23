@@ -27,7 +27,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupConnectivityInformation")
-        private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
+      private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
     public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
@@ -38,7 +38,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -49,7 +49,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="remotePrivateEndpointConnection")
-        private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
+      private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
         return this.remotePrivateEndpointConnection == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateEndpointConnection);
@@ -60,7 +60,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="remotePrivateLinkServiceConnectionState")
-        private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {
         return this.remotePrivateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);

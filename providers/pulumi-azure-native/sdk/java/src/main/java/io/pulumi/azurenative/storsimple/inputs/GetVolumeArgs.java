@@ -17,7 +17,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-        private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -39,7 +39,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeContainerName", required=true)
-        private final String volumeContainerName;
+      private final String volumeContainerName;
 
     public String getVolumeContainerName() {
         return this.volumeContainerName;
@@ -61,7 +61,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeName", required=true)
-        private final String volumeName;
+      private final String volumeName;
 
     public String getVolumeName() {
         return this.volumeName;

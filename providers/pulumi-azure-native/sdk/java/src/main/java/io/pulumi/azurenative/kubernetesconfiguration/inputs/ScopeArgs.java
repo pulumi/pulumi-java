@@ -24,7 +24,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-        private final @Nullable Input<ScopeClusterArgs> cluster;
+      private final @Nullable Input<ScopeClusterArgs> cluster;
 
     public Input<ScopeClusterArgs> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -35,7 +35,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-        private final @Nullable Input<ScopeNamespaceArgs> namespace;
+      private final @Nullable Input<ScopeNamespaceArgs> namespace;
 
     public Input<ScopeNamespaceArgs> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;

@@ -21,7 +21,7 @@ public final class ServiceResponseBaseResponseError extends io.pulumi.resources.
      * 
      */
     @InputImport(name="error", required=true)
-        private final ErrorResponseResponse error;
+      private final ErrorResponseResponse error;
 
     public ErrorResponseResponse getError() {
         return this.error;

@@ -19,7 +19,7 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="databricksAccessToken")
-        private final @Nullable String databricksAccessToken;
+      private final @Nullable String databricksAccessToken;
 
     public Optional<String> getDatabricksAccessToken() {
         return this.databricksAccessToken == null ? Optional.empty() : Optional.ofNullable(this.databricksAccessToken);
@@ -30,7 +30,7 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="workspaceUrl")
-        private final @Nullable String workspaceUrl;
+      private final @Nullable String workspaceUrl;
 
     public Optional<String> getWorkspaceUrl() {
         return this.workspaceUrl == null ? Optional.empty() : Optional.ofNullable(this.workspaceUrl);

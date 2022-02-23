@@ -23,7 +23,7 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="thumbprint")
-        private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;

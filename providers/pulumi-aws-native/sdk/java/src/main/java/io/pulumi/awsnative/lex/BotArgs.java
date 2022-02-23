@@ -26,14 +26,14 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBuildBotLocales")
-        private final @Nullable Input<Boolean> autoBuildBotLocales;
+      private final @Nullable Input<Boolean> autoBuildBotLocales;
 
     public Input<Boolean> getAutoBuildBotLocales() {
         return this.autoBuildBotLocales == null ? Input.empty() : this.autoBuildBotLocales;
     }
 
     @InputImport(name="botFileS3Location")
-        private final @Nullable Input<BotS3LocationArgs> botFileS3Location;
+      private final @Nullable Input<BotS3LocationArgs> botFileS3Location;
 
     public Input<BotS3LocationArgs> getBotFileS3Location() {
         return this.botFileS3Location == null ? Input.empty() : this.botFileS3Location;
@@ -44,7 +44,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botLocales")
-        private final @Nullable Input<List<BotLocaleArgs>> botLocales;
+      private final @Nullable Input<List<BotLocaleArgs>> botLocales;
 
     public Input<List<BotLocaleArgs>> getBotLocales() {
         return this.botLocales == null ? Input.empty() : this.botLocales;
@@ -55,7 +55,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botTags")
-        private final @Nullable Input<List<BotTagArgs>> botTags;
+      private final @Nullable Input<List<BotTagArgs>> botTags;
 
     public Input<List<BotTagArgs>> getBotTags() {
         return this.botTags == null ? Input.empty() : this.botTags;
@@ -66,14 +66,14 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPrivacy", required=true)
-        private final Input<DataPrivacyPropertiesArgs> dataPrivacy;
+      private final Input<DataPrivacyPropertiesArgs> dataPrivacy;
 
     public Input<DataPrivacyPropertiesArgs> getDataPrivacy() {
         return this.dataPrivacy;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,21 +84,21 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleSessionTTLInSeconds", required=true)
-        private final Input<Integer> idleSessionTTLInSeconds;
+      private final Input<Integer> idleSessionTTLInSeconds;
 
     public Input<Integer> getIdleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -109,7 +109,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBotAliasTags")
-        private final @Nullable Input<List<BotTagArgs>> testBotAliasTags;
+      private final @Nullable Input<List<BotTagArgs>> testBotAliasTags;
 
     public Input<List<BotTagArgs>> getTestBotAliasTags() {
         return this.testBotAliasTags == null ? Input.empty() : this.testBotAliasTags;

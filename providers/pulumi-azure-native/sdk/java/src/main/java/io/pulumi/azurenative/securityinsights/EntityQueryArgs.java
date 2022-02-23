@@ -21,7 +21,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityQueryId")
-        private final @Nullable Input<String> entityQueryId;
+      private final @Nullable Input<String> entityQueryId;
 
     public Input<String> getEntityQueryId() {
         return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
@@ -32,7 +32,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<Either<String,CustomEntityQueryKind>> kind;
+      private final Input<Either<String,CustomEntityQueryKind>> kind;
 
     public Input<Either<String,CustomEntityQueryKind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-        private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -54,7 +54,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

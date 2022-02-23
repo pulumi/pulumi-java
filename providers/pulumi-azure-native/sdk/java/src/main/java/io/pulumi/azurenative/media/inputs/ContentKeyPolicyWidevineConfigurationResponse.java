@@ -22,7 +22,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="widevineTemplate", required=true)
-        private final String widevineTemplate;
+      private final String widevineTemplate;
 
     public String getWidevineTemplate() {
         return this.widevineTemplate;

@@ -27,7 +27,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -38,7 +38,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="documentLocale")
-        private final @Nullable Input<String> documentLocale;
+      private final @Nullable Input<String> documentLocale;
 
     public Input<String> getDocumentLocale() {
         return this.documentLocale == null ? Input.empty() : this.documentLocale;
@@ -60,7 +60,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="folder")
-        private final @Nullable Input<DataFlowFolderArgs> folder;
+      private final @Nullable Input<DataFlowFolderArgs> folder;
 
     public Input<DataFlowFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -71,7 +71,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="script")
-        private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -82,7 +82,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sources")
-        private final @Nullable Input<List<PowerQuerySourceArgs>> sources;
+      private final @Nullable Input<List<PowerQuerySourceArgs>> sources;
 
     public Input<List<PowerQuerySourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -94,7 +94,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -14,14 +14,14 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
     public static final ConnectionApiKeyAuthParametersArgs Empty = new ConnectionApiKeyAuthParametersArgs();
 
     @InputImport(name="apiKeyName", required=true)
-        private final Input<String> apiKeyName;
+      private final Input<String> apiKeyName;
 
     public Input<String> getApiKeyName() {
         return this.apiKeyName;
     }
 
     @InputImport(name="apiKeyValue", required=true)
-        private final Input<String> apiKeyValue;
+      private final Input<String> apiKeyValue;
 
     public Input<String> getApiKeyValue() {
         return this.apiKeyValue;

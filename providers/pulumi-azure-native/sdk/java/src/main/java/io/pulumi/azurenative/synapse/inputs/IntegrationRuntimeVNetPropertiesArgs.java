@@ -24,7 +24,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicIPs")
-        private final @Nullable Input<List<String>> publicIPs;
+      private final @Nullable Input<List<String>> publicIPs;
 
     public Input<List<String>> getPublicIPs() {
         return this.publicIPs == null ? Input.empty() : this.publicIPs;
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<String> subnet;
+      private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnetId")
-        private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -57,7 +57,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="vNetId")
-        private final @Nullable Input<String> vNetId;
+      private final @Nullable Input<String> vNetId;
 
     public Input<String> getVNetId() {
         return this.vNetId == null ? Input.empty() : this.vNetId;

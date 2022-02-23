@@ -19,21 +19,21 @@ public final class JobOutputLocation extends io.pulumi.resources.InvokeArgs {
     public static final JobOutputLocation Empty = new JobOutputLocation();
 
     @InputImport(name="bucket", required=true)
-        private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="bucketOwner")
-        private final @Nullable String bucketOwner;
+      private final @Nullable String bucketOwner;
 
     public Optional<String> getBucketOwner() {
         return this.bucketOwner == null ? Optional.empty() : Optional.ofNullable(this.bucketOwner);
     }
 
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);

@@ -22,7 +22,7 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-        private final List<DiagnosticConditionResponse> conditions;
+      private final List<DiagnosticConditionResponse> conditions;
 
     public List<DiagnosticConditionResponse> getConditions() {
         return this.conditions;

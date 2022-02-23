@@ -23,7 +23,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="preferredLocation", required=true)
-        private final String preferredLocation;
+      private final String preferredLocation;
 
     public String getPreferredLocation() {
         return this.preferredLocation;
@@ -34,7 +34,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="preferredOsType", required=true)
-        private final String preferredOsType;
+      private final String preferredOsType;
 
     public String getPreferredOsType() {
         return this.preferredOsType;
@@ -45,7 +45,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="preferredShellType", required=true)
-        private final String preferredShellType;
+      private final String preferredShellType;
 
     public String getPreferredShellType() {
         return this.preferredShellType;
@@ -56,7 +56,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageProfile", required=true)
-        private final StorageProfileResponse storageProfile;
+      private final StorageProfileResponse storageProfile;
 
     public StorageProfileResponse getStorageProfile() {
         return this.storageProfile;
@@ -67,7 +67,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="terminalSettings", required=true)
-        private final TerminalSettingsResponse terminalSettings;
+      private final TerminalSettingsResponse terminalSettings;
 
     public TerminalSettingsResponse getTerminalSettings() {
         return this.terminalSettings;

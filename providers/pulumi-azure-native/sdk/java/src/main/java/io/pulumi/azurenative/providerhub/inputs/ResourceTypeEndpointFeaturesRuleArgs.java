@@ -16,7 +16,7 @@ public final class ResourceTypeEndpointFeaturesRuleArgs extends io.pulumi.resour
     public static final ResourceTypeEndpointFeaturesRuleArgs Empty = new ResourceTypeEndpointFeaturesRuleArgs();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-        private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+      private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
     public Input<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;

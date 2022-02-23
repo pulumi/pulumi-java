@@ -23,7 +23,7 @@ public final class BackendTlsPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="validateCertificateChain")
-        private final @Nullable Boolean validateCertificateChain;
+      private final @Nullable Boolean validateCertificateChain;
 
     public Optional<Boolean> getValidateCertificateChain() {
         return this.validateCertificateChain == null ? Optional.empty() : Optional.ofNullable(this.validateCertificateChain);
@@ -34,7 +34,7 @@ public final class BackendTlsPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="validateCertificateName")
-        private final @Nullable Boolean validateCertificateName;
+      private final @Nullable Boolean validateCertificateName;
 
     public Optional<Boolean> getValidateCertificateName() {
         return this.validateCertificateName == null ? Optional.empty() : Optional.ofNullable(this.validateCertificateName);

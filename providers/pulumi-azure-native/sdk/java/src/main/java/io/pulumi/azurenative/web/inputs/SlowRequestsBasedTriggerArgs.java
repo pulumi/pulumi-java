@@ -24,7 +24,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeInterval")
-        private final @Nullable Input<String> timeInterval;
+      private final @Nullable Input<String> timeInterval;
 
     public Input<String> getTimeInterval() {
         return this.timeInterval == null ? Input.empty() : this.timeInterval;
@@ -57,7 +57,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeTaken")
-        private final @Nullable Input<String> timeTaken;
+      private final @Nullable Input<String> timeTaken;
 
     public Input<String> getTimeTaken() {
         return this.timeTaken == null ? Input.empty() : this.timeTaken;

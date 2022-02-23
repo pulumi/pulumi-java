@@ -23,7 +23,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="codeVersion")
-        private final @Nullable String codeVersion;
+      private final @Nullable String codeVersion;
 
     public Optional<String> getCodeVersion() {
         return this.codeVersion == null ? Optional.empty() : Optional.ofNullable(this.codeVersion);
@@ -34,7 +34,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable String environment;
+      private final @Nullable String environment;
 
     public Optional<String> getEnvironment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
@@ -45,7 +45,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="supportExpiryUtc")
-        private final @Nullable String supportExpiryUtc;
+      private final @Nullable String supportExpiryUtc;
 
     public Optional<String> getSupportExpiryUtc() {
         return this.supportExpiryUtc == null ? Optional.empty() : Optional.ofNullable(this.supportExpiryUtc);

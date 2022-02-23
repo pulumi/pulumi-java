@@ -17,7 +17,7 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="bastionHostName", required=true)
-        private final String bastionHostName;
+      private final String bastionHostName;
 
     public String getBastionHostName() {
         return this.bastionHostName;
@@ -28,7 +28,7 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

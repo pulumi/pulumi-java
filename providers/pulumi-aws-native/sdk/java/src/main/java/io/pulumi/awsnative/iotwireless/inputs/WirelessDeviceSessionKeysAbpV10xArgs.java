@@ -14,14 +14,14 @@ public final class WirelessDeviceSessionKeysAbpV10xArgs extends io.pulumi.resour
     public static final WirelessDeviceSessionKeysAbpV10xArgs Empty = new WirelessDeviceSessionKeysAbpV10xArgs();
 
     @InputImport(name="appSKey", required=true)
-        private final Input<String> appSKey;
+      private final Input<String> appSKey;
 
     public Input<String> getAppSKey() {
         return this.appSKey;
     }
 
     @InputImport(name="nwkSKey", required=true)
-        private final Input<String> nwkSKey;
+      private final Input<String> nwkSKey;
 
     public Input<String> getNwkSKey() {
         return this.nwkSKey;

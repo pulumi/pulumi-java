@@ -22,14 +22,14 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="properties", required=true)
-        private final Input<CreateTenantRequestBodyPropertiesArgs> properties;
+      private final Input<CreateTenantRequestBodyPropertiesArgs> properties;
 
     public Input<CreateTenantRequestBodyPropertiesArgs> getProperties() {
         return this.properties;
@@ -40,7 +40,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -51,7 +51,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-        private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -62,7 +62,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<B2CResourceSKUArgs> sku;
+      private final Input<B2CResourceSKUArgs> sku;
 
     public Input<B2CResourceSKUArgs> getSku() {
         return this.sku;
@@ -73,7 +73,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

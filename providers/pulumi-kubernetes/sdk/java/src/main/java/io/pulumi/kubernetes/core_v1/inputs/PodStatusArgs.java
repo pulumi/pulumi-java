@@ -27,7 +27,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-        private final @Nullable Input<List<PodConditionArgs>> conditions;
+      private final @Nullable Input<List<PodConditionArgs>> conditions;
 
     public Input<List<PodConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -38,7 +38,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerStatuses")
-        private final @Nullable Input<List<ContainerStatusArgs>> containerStatuses;
+      private final @Nullable Input<List<ContainerStatusArgs>> containerStatuses;
 
     public Input<List<ContainerStatusArgs>> getContainerStatuses() {
         return this.containerStatuses == null ? Input.empty() : this.containerStatuses;
@@ -49,7 +49,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralContainerStatuses")
-        private final @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses;
+      private final @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses;
 
     public Input<List<ContainerStatusArgs>> getEphemeralContainerStatuses() {
         return this.ephemeralContainerStatuses == null ? Input.empty() : this.ephemeralContainerStatuses;
@@ -60,7 +60,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIP")
-        private final @Nullable Input<String> hostIP;
+      private final @Nullable Input<String> hostIP;
 
     public Input<String> getHostIP() {
         return this.hostIP == null ? Input.empty() : this.hostIP;
@@ -71,7 +71,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initContainerStatuses")
-        private final @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses;
+      private final @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses;
 
     public Input<List<ContainerStatusArgs>> getInitContainerStatuses() {
         return this.initContainerStatuses == null ? Input.empty() : this.initContainerStatuses;
@@ -82,7 +82,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -93,7 +93,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nominatedNodeName")
-        private final @Nullable Input<String> nominatedNodeName;
+      private final @Nullable Input<String> nominatedNodeName;
 
     public Input<String> getNominatedNodeName() {
         return this.nominatedNodeName == null ? Input.empty() : this.nominatedNodeName;
@@ -115,7 +115,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phase")
-        private final @Nullable Input<String> phase;
+      private final @Nullable Input<String> phase;
 
     public Input<String> getPhase() {
         return this.phase == null ? Input.empty() : this.phase;
@@ -126,7 +126,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIP")
-        private final @Nullable Input<String> podIP;
+      private final @Nullable Input<String> podIP;
 
     public Input<String> getPodIP() {
         return this.podIP == null ? Input.empty() : this.podIP;
@@ -137,7 +137,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIPs")
-        private final @Nullable Input<List<PodIPArgs>> podIPs;
+      private final @Nullable Input<List<PodIPArgs>> podIPs;
 
     public Input<List<PodIPArgs>> getPodIPs() {
         return this.podIPs == null ? Input.empty() : this.podIPs;
@@ -153,7 +153,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qosClass")
-        private final @Nullable Input<String> qosClass;
+      private final @Nullable Input<String> qosClass;
 
     public Input<String> getQosClass() {
         return this.qosClass == null ? Input.empty() : this.qosClass;
@@ -164,7 +164,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-        private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -175,7 +175,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;

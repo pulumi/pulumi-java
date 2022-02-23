@@ -19,7 +19,7 @@ public final class BotAliasTextLogDestination extends io.pulumi.resources.Invoke
     public static final BotAliasTextLogDestination Empty = new BotAliasTextLogDestination();
 
     @InputImport(name="cloudWatch")
-        private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
+      private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
     public Optional<BotAliasCloudWatchLogGroupLogDestination> getCloudWatch() {
         return this.cloudWatch == null ? Optional.empty() : Optional.ofNullable(this.cloudWatch);

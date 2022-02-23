@@ -15,14 +15,14 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceTreeInfoArgs Empty = new ServiceTreeInfoArgs();
 
     @InputImport(name="componentId")
-        private final @Nullable Input<String> componentId;
+      private final @Nullable Input<String> componentId;
 
     public Input<String> getComponentId() {
         return this.componentId == null ? Input.empty() : this.componentId;
     }
 
     @InputImport(name="serviceId")
-        private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;

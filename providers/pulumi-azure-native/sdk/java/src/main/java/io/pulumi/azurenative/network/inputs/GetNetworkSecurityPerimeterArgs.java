@@ -17,7 +17,7 @@ public final class GetNetworkSecurityPerimeterArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="networkSecurityPerimeterName", required=true)
-        private final String networkSecurityPerimeterName;
+      private final String networkSecurityPerimeterName;
 
     public String getNetworkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName;
@@ -28,7 +28,7 @@ public final class GetNetworkSecurityPerimeterArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

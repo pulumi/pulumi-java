@@ -188,6 +188,21 @@ public class VirtualMachineScaleSetExtension extends io.pulumi.resources.CustomR
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualMachineScaleSetExtension(String name) {
+        this(name, VirtualMachineScaleSetExtensionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualMachineScaleSetExtension(String name, VirtualMachineScaleSetExtensionArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

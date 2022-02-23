@@ -21,7 +21,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<SqlServerInstancePropertiesArgs> properties;
+      private final @Nullable Input<SqlServerInstancePropertiesArgs> properties;
 
     public Input<SqlServerInstancePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -43,7 +43,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServerInstanceName")
-        private final @Nullable Input<String> sqlServerInstanceName;
+      private final @Nullable Input<String> sqlServerInstanceName;
 
     public Input<String> getSqlServerInstanceName() {
         return this.sqlServerInstanceName == null ? Input.empty() : this.sqlServerInstanceName;
@@ -65,7 +65,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -17,7 +17,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="botName", required=true)
-        private final String botName;
+      private final String botName;
 
     public String getBotName() {
         return this.botName;
@@ -28,7 +28,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

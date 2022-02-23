@@ -23,7 +23,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="endpointType")
-        private final @Nullable String endpointType;
+      private final @Nullable String endpointType;
 
     public Optional<String> getEndpointType() {
         return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);
@@ -34,7 +34,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="remoteVolumeRegion")
-        private final @Nullable String remoteVolumeRegion;
+      private final @Nullable String remoteVolumeRegion;
 
     public Optional<String> getRemoteVolumeRegion() {
         return this.remoteVolumeRegion == null ? Optional.empty() : Optional.ofNullable(this.remoteVolumeRegion);
@@ -45,7 +45,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="remoteVolumeResourceId", required=true)
-        private final String remoteVolumeResourceId;
+      private final String remoteVolumeResourceId;
 
     public String getRemoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
@@ -56,7 +56,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="replicationId")
-        private final @Nullable String replicationId;
+      private final @Nullable String replicationId;
 
     public Optional<String> getReplicationId() {
         return this.replicationId == null ? Optional.empty() : Optional.ofNullable(this.replicationId);
@@ -67,7 +67,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="replicationSchedule", required=true)
-        private final String replicationSchedule;
+      private final String replicationSchedule;
 
     public String getReplicationSchedule() {
         return this.replicationSchedule;

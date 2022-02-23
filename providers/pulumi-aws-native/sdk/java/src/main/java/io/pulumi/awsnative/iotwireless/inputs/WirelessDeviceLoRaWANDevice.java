@@ -19,49 +19,49 @@ public final class WirelessDeviceLoRaWANDevice extends io.pulumi.resources.Invok
     public static final WirelessDeviceLoRaWANDevice Empty = new WirelessDeviceLoRaWANDevice();
 
     @InputImport(name="abpV10x")
-        private final @Nullable WirelessDeviceAbpV10x abpV10x;
+      private final @Nullable WirelessDeviceAbpV10x abpV10x;
 
     public Optional<WirelessDeviceAbpV10x> getAbpV10x() {
         return this.abpV10x == null ? Optional.empty() : Optional.ofNullable(this.abpV10x);
     }
 
     @InputImport(name="abpV11")
-        private final @Nullable WirelessDeviceAbpV11 abpV11;
+      private final @Nullable WirelessDeviceAbpV11 abpV11;
 
     public Optional<WirelessDeviceAbpV11> getAbpV11() {
         return this.abpV11 == null ? Optional.empty() : Optional.ofNullable(this.abpV11);
     }
 
     @InputImport(name="devEui")
-        private final @Nullable String devEui;
+      private final @Nullable String devEui;
 
     public Optional<String> getDevEui() {
         return this.devEui == null ? Optional.empty() : Optional.ofNullable(this.devEui);
     }
 
     @InputImport(name="deviceProfileId")
-        private final @Nullable String deviceProfileId;
+      private final @Nullable String deviceProfileId;
 
     public Optional<String> getDeviceProfileId() {
         return this.deviceProfileId == null ? Optional.empty() : Optional.ofNullable(this.deviceProfileId);
     }
 
     @InputImport(name="otaaV10x")
-        private final @Nullable WirelessDeviceOtaaV10x otaaV10x;
+      private final @Nullable WirelessDeviceOtaaV10x otaaV10x;
 
     public Optional<WirelessDeviceOtaaV10x> getOtaaV10x() {
         return this.otaaV10x == null ? Optional.empty() : Optional.ofNullable(this.otaaV10x);
     }
 
     @InputImport(name="otaaV11")
-        private final @Nullable WirelessDeviceOtaaV11 otaaV11;
+      private final @Nullable WirelessDeviceOtaaV11 otaaV11;
 
     public Optional<WirelessDeviceOtaaV11> getOtaaV11() {
         return this.otaaV11 == null ? Optional.empty() : Optional.ofNullable(this.otaaV11);
     }
 
     @InputImport(name="serviceProfileId")
-        private final @Nullable String serviceProfileId;
+      private final @Nullable String serviceProfileId;
 
     public Optional<String> getServiceProfileId() {
         return this.serviceProfileId == null ? Optional.empty() : Optional.ofNullable(this.serviceProfileId);

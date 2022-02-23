@@ -13,7 +13,7 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @InputImport(name="keyId", required=true)
-        private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;

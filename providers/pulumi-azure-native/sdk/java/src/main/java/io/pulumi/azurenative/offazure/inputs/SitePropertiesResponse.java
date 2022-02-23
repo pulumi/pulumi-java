@@ -25,7 +25,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="agentDetails")
-        private final @Nullable SiteAgentPropertiesResponse agentDetails;
+      private final @Nullable SiteAgentPropertiesResponse agentDetails;
 
     public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
         return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
@@ -36,7 +36,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="applianceName")
-        private final @Nullable String applianceName;
+      private final @Nullable String applianceName;
 
     public Optional<String> getApplianceName() {
         return this.applianceName == null ? Optional.empty() : Optional.ofNullable(this.applianceName);
@@ -47,7 +47,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="discoverySolutionId")
-        private final @Nullable String discoverySolutionId;
+      private final @Nullable String discoverySolutionId;
 
     public Optional<String> getDiscoverySolutionId() {
         return this.discoverySolutionId == null ? Optional.empty() : Optional.ofNullable(this.discoverySolutionId);
@@ -58,7 +58,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceEndpoint", required=true)
-        private final String serviceEndpoint;
+      private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
@@ -69,7 +69,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="servicePrincipalIdentityDetails")
-        private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
+      private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
     public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {
         return this.servicePrincipalIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalIdentityDetails);

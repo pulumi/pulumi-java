@@ -16,14 +16,14 @@ public final class CachePolicyCookiesConfig extends io.pulumi.resources.InvokeAr
     public static final CachePolicyCookiesConfig Empty = new CachePolicyCookiesConfig();
 
     @InputImport(name="cookieBehavior", required=true)
-        private final String cookieBehavior;
+      private final String cookieBehavior;
 
     public String getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-        private final @Nullable List<String> cookies;
+      private final @Nullable List<String> cookies;
 
     public List<String> getCookies() {
         return this.cookies == null ? List.of() : this.cookies;

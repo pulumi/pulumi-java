@@ -20,7 +20,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brand", required=true)
-        private final Input<String> brand;
+      private final Input<String> brand;
 
     public Input<String> getBrand() {
         return this.brand;
@@ -31,7 +31,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;

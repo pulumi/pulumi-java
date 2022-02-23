@@ -24,7 +24,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableMagneticStoreWrites", required=true)
-        private final Input<Boolean> enableMagneticStoreWrites;
+      private final Input<Boolean> enableMagneticStoreWrites;
 
     public Input<Boolean> getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
@@ -35,7 +35,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="magneticStoreRejectedDataLocation")
-        private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
+      private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
     public Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> getMagneticStoreRejectedDataLocation() {
         return this.magneticStoreRejectedDataLocation == null ? Input.empty() : this.magneticStoreRejectedDataLocation;

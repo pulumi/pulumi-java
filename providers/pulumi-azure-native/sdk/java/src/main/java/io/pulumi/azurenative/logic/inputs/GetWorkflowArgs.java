@@ -17,7 +17,7 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workflowName", required=true)
-        private final String workflowName;
+      private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;

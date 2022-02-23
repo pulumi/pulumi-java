@@ -13,7 +13,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServerArgs Empty = new GetServerArgs();
 
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

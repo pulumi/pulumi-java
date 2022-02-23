@@ -20,7 +20,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
     public static final TagsResponse Empty = new TagsResponse();
 
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

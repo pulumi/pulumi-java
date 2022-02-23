@@ -18,7 +18,7 @@ public final class WorkerPoolNetworkConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-        private final Input<String> peeredNetwork;
+      private final Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork;

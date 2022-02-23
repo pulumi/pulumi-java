@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyAccessControlAllowMethodsArgs extends io
     public static final ResponseHeadersPolicyAccessControlAllowMethodsArgs Empty = new ResponseHeadersPolicyAccessControlAllowMethodsArgs();
 
     @InputImport(name="items", required=true)
-        private final Input<List<String>> items;
+      private final Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items;

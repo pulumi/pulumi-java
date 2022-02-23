@@ -23,7 +23,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="commitTimeStamp")
-        private final @Nullable String commitTimeStamp;
+      private final @Nullable String commitTimeStamp;
 
     public Optional<String> getCommitTimeStamp() {
         return this.commitTimeStamp == null ? Optional.empty() : Optional.ofNullable(this.commitTimeStamp);
@@ -34,7 +34,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;

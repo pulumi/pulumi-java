@@ -15,7 +15,7 @@ public final class SpotFleetIamInstanceProfileSpecificationArgs extends io.pulum
     public static final SpotFleetIamInstanceProfileSpecificationArgs Empty = new SpotFleetIamInstanceProfileSpecificationArgs();
 
     @InputImport(name="arn")
-        private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;

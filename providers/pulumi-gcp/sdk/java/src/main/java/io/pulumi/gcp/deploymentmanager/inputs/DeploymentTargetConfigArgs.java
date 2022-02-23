@@ -18,7 +18,7 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="content", required=true)
-        private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;

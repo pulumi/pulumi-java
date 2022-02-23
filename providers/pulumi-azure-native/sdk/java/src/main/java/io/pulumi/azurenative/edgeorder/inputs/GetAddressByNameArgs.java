@@ -17,7 +17,7 @@ public final class GetAddressByNameArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressName", required=true)
-        private final String addressName;
+      private final String addressName;
 
     public String getAddressName() {
         return this.addressName;
@@ -28,7 +28,7 @@ public final class GetAddressByNameArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

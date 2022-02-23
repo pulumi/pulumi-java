@@ -24,7 +24,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @InputImport(name="servicePrincipalSecretMetadata")
-        private final @Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
+      private final @Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 
     public Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> getServicePrincipalSecretMetadata() {
         return this.servicePrincipalSecretMetadata == null ? Input.empty() : this.servicePrincipalSecretMetadata;

@@ -23,7 +23,7 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isEnabled")
-        private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;

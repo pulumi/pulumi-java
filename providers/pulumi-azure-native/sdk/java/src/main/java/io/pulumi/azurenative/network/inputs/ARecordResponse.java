@@ -23,7 +23,7 @@ public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv4Address")
-        private final @Nullable String ipv4Address;
+      private final @Nullable String ipv4Address;
 
     public Optional<String> getIpv4Address() {
         return this.ipv4Address == null ? Optional.empty() : Optional.ofNullable(this.ipv4Address);

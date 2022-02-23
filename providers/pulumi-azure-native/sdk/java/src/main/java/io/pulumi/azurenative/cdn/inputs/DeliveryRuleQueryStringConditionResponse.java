@@ -23,7 +23,7 @@ public final class DeliveryRuleQueryStringConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleQueryStringConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final QueryStringMatchConditionParametersResponse parameters;
+      private final QueryStringMatchConditionParametersResponse parameters;
 
     public QueryStringMatchConditionParametersResponse getParameters() {
         return this.parameters;

@@ -19,7 +19,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="certSign")
-        private final @Nullable Input<Boolean> certSign;
+      private final @Nullable Input<Boolean> certSign;
 
     public Input<Boolean> getCertSign() {
         return this.certSign == null ? Input.empty() : this.certSign;
@@ -30,7 +30,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="contentCommitment")
-        private final @Nullable Input<Boolean> contentCommitment;
+      private final @Nullable Input<Boolean> contentCommitment;
 
     public Input<Boolean> getContentCommitment() {
         return this.contentCommitment == null ? Input.empty() : this.contentCommitment;
@@ -41,7 +41,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="crlSign")
-        private final @Nullable Input<Boolean> crlSign;
+      private final @Nullable Input<Boolean> crlSign;
 
     public Input<Boolean> getCrlSign() {
         return this.crlSign == null ? Input.empty() : this.crlSign;
@@ -52,7 +52,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="dataEncipherment")
-        private final @Nullable Input<Boolean> dataEncipherment;
+      private final @Nullable Input<Boolean> dataEncipherment;
 
     public Input<Boolean> getDataEncipherment() {
         return this.dataEncipherment == null ? Input.empty() : this.dataEncipherment;
@@ -63,7 +63,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="decipherOnly")
-        private final @Nullable Input<Boolean> decipherOnly;
+      private final @Nullable Input<Boolean> decipherOnly;
 
     public Input<Boolean> getDecipherOnly() {
         return this.decipherOnly == null ? Input.empty() : this.decipherOnly;
@@ -74,7 +74,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="digitalSignature")
-        private final @Nullable Input<Boolean> digitalSignature;
+      private final @Nullable Input<Boolean> digitalSignature;
 
     public Input<Boolean> getDigitalSignature() {
         return this.digitalSignature == null ? Input.empty() : this.digitalSignature;
@@ -85,7 +85,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="encipherOnly")
-        private final @Nullable Input<Boolean> encipherOnly;
+      private final @Nullable Input<Boolean> encipherOnly;
 
     public Input<Boolean> getEncipherOnly() {
         return this.encipherOnly == null ? Input.empty() : this.encipherOnly;
@@ -96,7 +96,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="keyAgreement")
-        private final @Nullable Input<Boolean> keyAgreement;
+      private final @Nullable Input<Boolean> keyAgreement;
 
     public Input<Boolean> getKeyAgreement() {
         return this.keyAgreement == null ? Input.empty() : this.keyAgreement;
@@ -107,7 +107,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @InputImport(name="keyEncipherment")
-        private final @Nullable Input<Boolean> keyEncipherment;
+      private final @Nullable Input<Boolean> keyEncipherment;
 
     public Input<Boolean> getKeyEncipherment() {
         return this.keyEncipherment == null ? Input.empty() : this.keyEncipherment;

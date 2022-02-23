@@ -26,7 +26,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="badServiceFilter")
-        private final @Nullable Input<String> badServiceFilter;
+      private final @Nullable Input<String> badServiceFilter;
 
     public Input<String> getBadServiceFilter() {
         return this.badServiceFilter == null ? Input.empty() : this.badServiceFilter;
@@ -42,7 +42,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="goodServiceFilter")
-        private final @Nullable Input<String> goodServiceFilter;
+      private final @Nullable Input<String> goodServiceFilter;
 
     public Input<String> getGoodServiceFilter() {
         return this.goodServiceFilter == null ? Input.empty() : this.goodServiceFilter;
@@ -58,7 +58,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="totalServiceFilter")
-        private final @Nullable Input<String> totalServiceFilter;
+      private final @Nullable Input<String> totalServiceFilter;
 
     public Input<String> getTotalServiceFilter() {
         return this.totalServiceFilter == null ? Input.empty() : this.totalServiceFilter;

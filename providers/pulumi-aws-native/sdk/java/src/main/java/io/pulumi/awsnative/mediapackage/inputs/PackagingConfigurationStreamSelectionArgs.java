@@ -24,7 +24,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxVideoBitsPerSecond")
-        private final @Nullable Input<Integer> maxVideoBitsPerSecond;
+      private final @Nullable Input<Integer> maxVideoBitsPerSecond;
 
     public Input<Integer> getMaxVideoBitsPerSecond() {
         return this.maxVideoBitsPerSecond == null ? Input.empty() : this.maxVideoBitsPerSecond;
@@ -35,7 +35,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minVideoBitsPerSecond")
-        private final @Nullable Input<Integer> minVideoBitsPerSecond;
+      private final @Nullable Input<Integer> minVideoBitsPerSecond;
 
     public Input<Integer> getMinVideoBitsPerSecond() {
         return this.minVideoBitsPerSecond == null ? Input.empty() : this.minVideoBitsPerSecond;
@@ -46,7 +46,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="streamOrder")
-        private final @Nullable Input<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
+      private final @Nullable Input<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
 
     public Input<PackagingConfigurationStreamSelectionStreamOrder> getStreamOrder() {
         return this.streamOrder == null ? Input.empty() : this.streamOrder;

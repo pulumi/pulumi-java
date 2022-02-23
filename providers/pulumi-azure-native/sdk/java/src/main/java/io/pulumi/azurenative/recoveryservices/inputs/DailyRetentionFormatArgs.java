@@ -24,7 +24,7 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="daysOfTheMonth")
-        private final @Nullable Input<List<DayArgs>> daysOfTheMonth;
+      private final @Nullable Input<List<DayArgs>> daysOfTheMonth;
 
     public Input<List<DayArgs>> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? Input.empty() : this.daysOfTheMonth;

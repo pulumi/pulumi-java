@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="baseline")
-        private final @Nullable Input<Boolean> baseline;
+      private final @Nullable Input<Boolean> baseline;
 
     public Input<Boolean> getBaseline() {
         return this.baseline == null ? Input.empty() : this.baseline;
@@ -37,7 +37,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deleted")
-        private final @Nullable Input<Boolean> deleted;
+      private final @Nullable Input<Boolean> deleted;
 
     public Input<Boolean> getDeleted() {
         return this.deleted == null ? Input.empty() : this.deleted;
@@ -48,7 +48,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -70,7 +70,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceFilter")
-        private final @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
+      private final @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
     public Input<OsPolicyAssignmentInstanceFilterGetArgs> getInstanceFilter() {
         return this.instanceFilter == null ? Input.empty() : this.instanceFilter;
@@ -81,7 +81,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -103,7 +103,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="osPolicies")
-        private final @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
+      private final @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
     public Input<List<OsPolicyAssignmentOsPolicyGetArgs>> getOsPolicies() {
         return this.osPolicies == null ? Input.empty() : this.osPolicies;
@@ -114,7 +114,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -126,7 +126,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="reconciling")
-        private final @Nullable Input<Boolean> reconciling;
+      private final @Nullable Input<Boolean> reconciling;
 
     public Input<Boolean> getReconciling() {
         return this.reconciling == null ? Input.empty() : this.reconciling;
@@ -137,7 +137,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revisionCreateTime")
-        private final @Nullable Input<String> revisionCreateTime;
+      private final @Nullable Input<String> revisionCreateTime;
 
     public Input<String> getRevisionCreateTime() {
         return this.revisionCreateTime == null ? Input.empty() : this.revisionCreateTime;
@@ -149,7 +149,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revisionId")
-        private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -160,7 +160,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rollout")
-        private final @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout;
+      private final @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout;
 
     public Input<OsPolicyAssignmentRolloutGetArgs> getRollout() {
         return this.rollout == null ? Input.empty() : this.rollout;
@@ -172,7 +172,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloutState")
-        private final @Nullable Input<String> rolloutState;
+      private final @Nullable Input<String> rolloutState;
 
     public Input<String> getRolloutState() {
         return this.rolloutState == null ? Input.empty() : this.rolloutState;
@@ -183,7 +183,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;

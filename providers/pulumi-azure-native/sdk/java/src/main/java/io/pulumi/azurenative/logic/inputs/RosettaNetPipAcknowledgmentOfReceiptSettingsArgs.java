@@ -23,7 +23,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
      * 
      */
     @InputImport(name="isNonRepudiationRequired", required=true)
-        private final Input<Boolean> isNonRepudiationRequired;
+      private final Input<Boolean> isNonRepudiationRequired;
 
     public Input<Boolean> getIsNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
@@ -34,7 +34,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
      * 
      */
     @InputImport(name="timeToAcknowledgeInSeconds", required=true)
-        private final Input<Integer> timeToAcknowledgeInSeconds;
+      private final Input<Integer> timeToAcknowledgeInSeconds;
 
     public Input<Integer> getTimeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;

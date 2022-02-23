@@ -23,7 +23,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountKey")
-        private final @Nullable Input<String> accountKey;
+      private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -34,7 +34,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="shareName", required=true)
-        private final Input<String> shareName;
+      private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;

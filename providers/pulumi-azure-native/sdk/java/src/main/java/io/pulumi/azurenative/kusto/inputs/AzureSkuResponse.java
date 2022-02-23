@@ -24,7 +24,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Integer capacity;
+      private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -35,7 +35,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-        private final String tier;
+      private final String tier;
 
     public String getTier() {
         return this.tier;

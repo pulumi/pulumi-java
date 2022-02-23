@@ -25,7 +25,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * 
      */
     @InputImport(name="domains")
-        private final @Nullable Input<List<ResourceReferenceArgs>> domains;
+      private final @Nullable Input<List<ResourceReferenceArgs>> domains;
 
     public Input<List<ResourceReferenceArgs>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -36,7 +36,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * 
      */
     @InputImport(name="patternsToMatch")
-        private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Input<List<String>> patternsToMatch;
 
     public Input<List<String>> getPatternsToMatch() {
         return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;

@@ -23,7 +23,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-        private final @Nullable String keyFrameInterval;
+      private final @Nullable String keyFrameInterval;
 
     public Optional<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
@@ -34,7 +34,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -46,7 +46,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stretchMode")
-        private final @Nullable String stretchMode;
+      private final @Nullable String stretchMode;
 
     public Optional<String> getStretchMode() {
         return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
@@ -68,7 +68,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncMode")
-        private final @Nullable String syncMode;
+      private final @Nullable String syncMode;
 
     public Optional<String> getSyncMode() {
         return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);

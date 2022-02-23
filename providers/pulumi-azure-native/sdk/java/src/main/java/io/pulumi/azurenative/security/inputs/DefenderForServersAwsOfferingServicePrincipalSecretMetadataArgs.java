@@ -23,7 +23,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="expiryDate")
-        private final @Nullable Input<String> expiryDate;
+      private final @Nullable Input<String> expiryDate;
 
     public Input<String> getExpiryDate() {
         return this.expiryDate == null ? Input.empty() : this.expiryDate;
@@ -34,7 +34,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="parameterNameInStore")
-        private final @Nullable Input<String> parameterNameInStore;
+      private final @Nullable Input<String> parameterNameInStore;
 
     public Input<String> getParameterNameInStore() {
         return this.parameterNameInStore == null ? Input.empty() : this.parameterNameInStore;
@@ -45,7 +45,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="parameterStoreRegion")
-        private final @Nullable Input<String> parameterStoreRegion;
+      private final @Nullable Input<String> parameterStoreRegion;
 
     public Input<String> getParameterStoreRegion() {
         return this.parameterStoreRegion == null ? Input.empty() : this.parameterStoreRegion;

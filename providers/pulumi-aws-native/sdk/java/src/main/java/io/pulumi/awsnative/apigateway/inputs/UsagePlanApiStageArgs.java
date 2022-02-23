@@ -20,7 +20,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiId")
-        private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -31,7 +31,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stage")
-        private final @Nullable Input<String> stage;
+      private final @Nullable Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage == null ? Input.empty() : this.stage;
@@ -42,7 +42,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="throttle")
-        private final @Nullable Input<Object> throttle;
+      private final @Nullable Input<Object> throttle;
 
     public Input<Object> getThrottle() {
         return this.throttle == null ? Input.empty() : this.throttle;

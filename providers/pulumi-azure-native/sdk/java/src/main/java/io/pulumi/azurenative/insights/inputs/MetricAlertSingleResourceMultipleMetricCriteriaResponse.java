@@ -25,7 +25,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
      * 
      */
     @InputImport(name="allOf")
-        private final @Nullable List<MetricCriteriaResponse> allOf;
+      private final @Nullable List<MetricCriteriaResponse> allOf;
 
     public List<MetricCriteriaResponse> getAllOf() {
         return this.allOf == null ? List.of() : this.allOf;
@@ -37,7 +37,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

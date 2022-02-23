@@ -24,7 +24,7 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<String> authenticationType;
+      private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -35,7 +35,7 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<Object> url;
+      private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;

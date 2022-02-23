@@ -19,21 +19,21 @@ public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobS3LocationArgs Empty = new JobS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="bucketOwner")
-        private final @Nullable Input<String> bucketOwner;
+      private final @Nullable Input<String> bucketOwner;
 
     public Input<String> getBucketOwner() {
         return this.bucketOwner == null ? Input.empty() : this.bucketOwner;
     }
 
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;

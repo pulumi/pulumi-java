@@ -18,7 +18,7 @@ public final class ClusterNodeConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="effect", required=true)
-        private final Input<String> effect;
+      private final Input<String> effect;
 
     public Input<String> getEffect() {
         return this.effect;
@@ -29,7 +29,7 @@ public final class ClusterNodeConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -40,7 +40,7 @@ public final class ClusterNodeConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

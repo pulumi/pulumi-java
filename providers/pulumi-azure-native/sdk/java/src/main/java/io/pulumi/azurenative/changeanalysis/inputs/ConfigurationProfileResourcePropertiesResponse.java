@@ -23,7 +23,7 @@ public final class ConfigurationProfileResourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="notifications")
-        private final @Nullable NotificationSettingsResponse notifications;
+      private final @Nullable NotificationSettingsResponse notifications;
 
     public Optional<NotificationSettingsResponse> getNotifications() {
         return this.notifications == null ? Optional.empty() : Optional.ofNullable(this.notifications);

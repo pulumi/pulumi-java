@@ -22,7 +22,7 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterSize", required=true)
-        private final Input<Integer> clusterSize;
+      private final Input<Integer> clusterSize;
 
     public Input<Integer> getClusterSize() {
         return this.clusterSize;

@@ -15,7 +15,7 @@ public final class RegionInstanceGroupManagerStatusVersionTargetArgs extends io.
     public static final RegionInstanceGroupManagerStatusVersionTargetArgs Empty = new RegionInstanceGroupManagerStatusVersionTargetArgs();
 
     @InputImport(name="isReached")
-        private final @Nullable Input<Boolean> isReached;
+      private final @Nullable Input<Boolean> isReached;
 
     public Input<Boolean> getIsReached() {
         return this.isReached == null ? Input.empty() : this.isReached;

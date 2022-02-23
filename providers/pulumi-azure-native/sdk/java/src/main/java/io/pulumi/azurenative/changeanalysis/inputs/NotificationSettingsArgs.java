@@ -26,7 +26,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="activationState")
-        private final @Nullable Input<Either<String,NotificationsState>> activationState;
+      private final @Nullable Input<Either<String,NotificationsState>> activationState;
 
     public Input<Either<String,NotificationsState>> getActivationState() {
         return this.activationState == null ? Input.empty() : this.activationState;
@@ -37,7 +37,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureMonitorWorkspaceProperties")
-        private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+      private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
     public Input<AzureMonitorWorkspacePropertiesArgs> getAzureMonitorWorkspaceProperties() {
         return this.azureMonitorWorkspaceProperties == null ? Input.empty() : this.azureMonitorWorkspaceProperties;

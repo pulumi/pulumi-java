@@ -23,7 +23,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyData")
-        private final @Nullable Input<String> keyData;
+      private final @Nullable Input<String> keyData;
 
     public Input<String> getKeyData() {
         return this.keyData == null ? Input.empty() : this.keyData;
@@ -34,7 +34,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

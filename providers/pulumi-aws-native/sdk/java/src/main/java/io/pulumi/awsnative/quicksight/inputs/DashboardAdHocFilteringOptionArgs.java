@@ -19,7 +19,7 @@ public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources
     public static final DashboardAdHocFilteringOptionArgs Empty = new DashboardAdHocFilteringOptionArgs();
 
     @InputImport(name="availabilityStatus")
-        private final @Nullable Input<DashboardBehavior> availabilityStatus;
+      private final @Nullable Input<DashboardBehavior> availabilityStatus;
 
     public Input<DashboardBehavior> getAvailabilityStatus() {
         return this.availabilityStatus == null ? Input.empty() : this.availabilityStatus;

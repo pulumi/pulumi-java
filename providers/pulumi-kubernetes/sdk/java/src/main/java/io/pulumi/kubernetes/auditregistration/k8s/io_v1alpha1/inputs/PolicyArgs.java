@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level", required=true)
-        private final Input<String> level;
+      private final Input<String> level;
 
     public Input<String> getLevel() {
         return this.level;
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-        private final @Nullable Input<List<String>> stages;
+      private final @Nullable Input<List<String>> stages;
 
     public Input<List<String>> getStages() {
         return this.stages == null ? Input.empty() : this.stages;

@@ -29,7 +29,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="controlStandardsId", required=true)
-        private final Input<Integer> controlStandardsId;
+      private final Input<Integer> controlStandardsId;
 
     public Input<Integer> getControlStandardsId() {
         return this.controlStandardsId;
@@ -40,7 +40,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="controlVersionNumber", required=true)
-        private final Input<String> controlVersionNumber;
+      private final Input<String> controlVersionNumber;
 
     public Input<String> getControlVersionNumber() {
         return this.controlVersionNumber;
@@ -51,7 +51,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableDefaultGroupHeaders", required=true)
-        private final Input<Boolean> enableDefaultGroupHeaders;
+      private final Input<Boolean> enableDefaultGroupHeaders;
 
     public Input<Boolean> getEnableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
@@ -62,7 +62,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="functionalGroupId")
-        private final @Nullable Input<String> functionalGroupId;
+      private final @Nullable Input<String> functionalGroupId;
 
     public Input<String> getFunctionalGroupId() {
         return this.functionalGroupId == null ? Input.empty() : this.functionalGroupId;
@@ -73,7 +73,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupControlNumberLowerBound", required=true)
-        private final Input<Integer> groupControlNumberLowerBound;
+      private final Input<Integer> groupControlNumberLowerBound;
 
     public Input<Integer> getGroupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
@@ -84,7 +84,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupControlNumberUpperBound", required=true)
-        private final Input<Integer> groupControlNumberUpperBound;
+      private final Input<Integer> groupControlNumberUpperBound;
 
     public Input<Integer> getGroupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
@@ -95,7 +95,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderAgencyCode", required=true)
-        private final Input<String> groupHeaderAgencyCode;
+      private final Input<String> groupHeaderAgencyCode;
 
     public Input<String> getGroupHeaderAgencyCode() {
         return this.groupHeaderAgencyCode;
@@ -106,7 +106,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderDateFormat", required=true)
-        private final Input<Either<String,X12DateFormat>> groupHeaderDateFormat;
+      private final Input<Either<String,X12DateFormat>> groupHeaderDateFormat;
 
     public Input<Either<String,X12DateFormat>> getGroupHeaderDateFormat() {
         return this.groupHeaderDateFormat;
@@ -117,7 +117,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderTimeFormat", required=true)
-        private final Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
+      private final Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
 
     public Input<Either<String,X12TimeFormat>> getGroupHeaderTimeFormat() {
         return this.groupHeaderTimeFormat;
@@ -128,7 +128,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderVersion", required=true)
-        private final Input<String> groupHeaderVersion;
+      private final Input<String> groupHeaderVersion;
 
     public Input<String> getGroupHeaderVersion() {
         return this.groupHeaderVersion;
@@ -139,7 +139,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interchangeControlNumberLowerBound", required=true)
-        private final Input<Integer> interchangeControlNumberLowerBound;
+      private final Input<Integer> interchangeControlNumberLowerBound;
 
     public Input<Integer> getInterchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
@@ -150,7 +150,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interchangeControlNumberUpperBound", required=true)
-        private final Input<Integer> interchangeControlNumberUpperBound;
+      private final Input<Integer> interchangeControlNumberUpperBound;
 
     public Input<Integer> getInterchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
@@ -161,7 +161,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="overwriteExistingTransactionSetControlNumber", required=true)
-        private final Input<Boolean> overwriteExistingTransactionSetControlNumber;
+      private final Input<Boolean> overwriteExistingTransactionSetControlNumber;
 
     public Input<Boolean> getOverwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
@@ -172,7 +172,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiverApplicationId", required=true)
-        private final Input<String> receiverApplicationId;
+      private final Input<String> receiverApplicationId;
 
     public Input<String> getReceiverApplicationId() {
         return this.receiverApplicationId;
@@ -183,7 +183,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverGroupControlNumber", required=true)
-        private final Input<Boolean> rolloverGroupControlNumber;
+      private final Input<Boolean> rolloverGroupControlNumber;
 
     public Input<Boolean> getRolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
@@ -194,7 +194,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverInterchangeControlNumber", required=true)
-        private final Input<Boolean> rolloverInterchangeControlNumber;
+      private final Input<Boolean> rolloverInterchangeControlNumber;
 
     public Input<Boolean> getRolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
@@ -205,7 +205,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverTransactionSetControlNumber", required=true)
-        private final Input<Boolean> rolloverTransactionSetControlNumber;
+      private final Input<Boolean> rolloverTransactionSetControlNumber;
 
     public Input<Boolean> getRolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
@@ -216,7 +216,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="senderApplicationId", required=true)
-        private final Input<String> senderApplicationId;
+      private final Input<String> senderApplicationId;
 
     public Input<String> getSenderApplicationId() {
         return this.senderApplicationId;
@@ -227,7 +227,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberLowerBound", required=true)
-        private final Input<Integer> transactionSetControlNumberLowerBound;
+      private final Input<Integer> transactionSetControlNumberLowerBound;
 
     public Input<Integer> getTransactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
@@ -238,7 +238,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberPrefix")
-        private final @Nullable Input<String> transactionSetControlNumberPrefix;
+      private final @Nullable Input<String> transactionSetControlNumberPrefix;
 
     public Input<String> getTransactionSetControlNumberPrefix() {
         return this.transactionSetControlNumberPrefix == null ? Input.empty() : this.transactionSetControlNumberPrefix;
@@ -249,7 +249,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberSuffix")
-        private final @Nullable Input<String> transactionSetControlNumberSuffix;
+      private final @Nullable Input<String> transactionSetControlNumberSuffix;
 
     public Input<String> getTransactionSetControlNumberSuffix() {
         return this.transactionSetControlNumberSuffix == null ? Input.empty() : this.transactionSetControlNumberSuffix;
@@ -260,7 +260,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberUpperBound", required=true)
-        private final Input<Integer> transactionSetControlNumberUpperBound;
+      private final Input<Integer> transactionSetControlNumberUpperBound;
 
     public Input<Integer> getTransactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
@@ -271,7 +271,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="usageIndicator", required=true)
-        private final Input<Either<String,UsageIndicator>> usageIndicator;
+      private final Input<Either<String,UsageIndicator>> usageIndicator;
 
     public Input<Either<String,UsageIndicator>> getUsageIndicator() {
         return this.usageIndicator;
@@ -282,7 +282,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="useControlStandardsIdAsRepetitionCharacter", required=true)
-        private final Input<Boolean> useControlStandardsIdAsRepetitionCharacter;
+      private final Input<Boolean> useControlStandardsIdAsRepetitionCharacter;
 
     public Input<Boolean> getUseControlStandardsIdAsRepetitionCharacter() {
         return this.useControlStandardsIdAsRepetitionCharacter;

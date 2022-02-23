@@ -18,7 +18,7 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();
 
     @InputImport(name="utterance", required=true)
-        private final Input<String> utterance;
+      private final Input<String> utterance;
 
     public Input<String> getUtterance() {
         return this.utterance;

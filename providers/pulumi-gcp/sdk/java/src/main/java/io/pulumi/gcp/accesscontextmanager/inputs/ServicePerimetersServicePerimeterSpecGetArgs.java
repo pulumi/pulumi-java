@@ -31,7 +31,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="accessLevels")
-        private final @Nullable Input<List<String>> accessLevels;
+      private final @Nullable Input<List<String>> accessLevels;
 
     public Input<List<String>> getAccessLevels() {
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
@@ -46,7 +46,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="egressPolicies")
-        private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
 
     public Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> getEgressPolicies() {
         return this.egressPolicies == null ? Input.empty() : this.egressPolicies;
@@ -61,7 +61,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ingressPolicies")
-        private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
 
     public Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> getIngressPolicies() {
         return this.ingressPolicies == null ? Input.empty() : this.ingressPolicies;
@@ -76,7 +76,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="resources")
-        private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -91,7 +91,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="restrictedServices")
-        private final @Nullable Input<List<String>> restrictedServices;
+      private final @Nullable Input<List<String>> restrictedServices;
 
     public Input<List<String>> getRestrictedServices() {
         return this.restrictedServices == null ? Input.empty() : this.restrictedServices;
@@ -104,7 +104,7 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="vpcAccessibleServices")
-        private final @Nullable Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
+      private final @Nullable Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
     public Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {
         return this.vpcAccessibleServices == null ? Input.empty() : this.vpcAccessibleServices;

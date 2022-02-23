@@ -19,7 +19,7 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     public static final JobOutputFormatOptionsArgs Empty = new JobOutputFormatOptionsArgs();
 
     @InputImport(name="csv")
-        private final @Nullable Input<JobCsvOutputOptionsArgs> csv;
+      private final @Nullable Input<JobCsvOutputOptionsArgs> csv;
 
     public Input<JobCsvOutputOptionsArgs> getCsv() {
         return this.csv == null ? Input.empty() : this.csv;

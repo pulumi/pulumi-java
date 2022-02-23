@@ -23,7 +23,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
      * 
      */
     @InputImport(name="protectFromScaleIn")
-        private final @Nullable Input<Boolean> protectFromScaleIn;
+      private final @Nullable Input<Boolean> protectFromScaleIn;
 
     public Input<Boolean> getProtectFromScaleIn() {
         return this.protectFromScaleIn == null ? Input.empty() : this.protectFromScaleIn;
@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
      * 
      */
     @InputImport(name="protectFromScaleSetActions")
-        private final @Nullable Input<Boolean> protectFromScaleSetActions;
+      private final @Nullable Input<Boolean> protectFromScaleSetActions;
 
     public Input<Boolean> getProtectFromScaleSetActions() {
         return this.protectFromScaleSetActions == null ? Input.empty() : this.protectFromScaleSetActions;

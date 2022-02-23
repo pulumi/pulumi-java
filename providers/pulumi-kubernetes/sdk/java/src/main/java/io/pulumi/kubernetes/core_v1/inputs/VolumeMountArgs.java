@@ -24,7 +24,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath", required=true)
-        private final Input<String> mountPath;
+      private final Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath;
@@ -35,7 +35,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPropagation")
-        private final @Nullable Input<String> mountPropagation;
+      private final @Nullable Input<String> mountPropagation;
 
     public Input<String> getMountPropagation() {
         return this.mountPropagation == null ? Input.empty() : this.mountPropagation;
@@ -46,7 +46,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -57,7 +57,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -68,7 +68,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subPath")
-        private final @Nullable Input<String> subPath;
+      private final @Nullable Input<String> subPath;
 
     public Input<String> getSubPath() {
         return this.subPath == null ? Input.empty() : this.subPath;
@@ -79,7 +79,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subPathExpr")
-        private final @Nullable Input<String> subPathExpr;
+      private final @Nullable Input<String> subPathExpr;
 
     public Input<String> getSubPathExpr() {
         return this.subPathExpr == null ? Input.empty() : this.subPathExpr;

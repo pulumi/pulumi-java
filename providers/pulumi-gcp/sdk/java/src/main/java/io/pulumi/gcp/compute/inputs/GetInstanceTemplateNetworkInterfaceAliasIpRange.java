@@ -21,7 +21,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-        private final String ipCidrRange;
+      private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -34,7 +34,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
      * 
      */
     @InputImport(name="subnetworkRangeName", required=true)
-        private final String subnetworkRangeName;
+      private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;

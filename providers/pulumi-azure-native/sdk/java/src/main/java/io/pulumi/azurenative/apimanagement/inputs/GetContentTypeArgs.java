@@ -17,7 +17,7 @@ public final class GetContentTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentTypeId", required=true)
-        private final String contentTypeId;
+      private final String contentTypeId;
 
     public String getContentTypeId() {
         return this.contentTypeId;
@@ -28,7 +28,7 @@ public final class GetContentTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetContentTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

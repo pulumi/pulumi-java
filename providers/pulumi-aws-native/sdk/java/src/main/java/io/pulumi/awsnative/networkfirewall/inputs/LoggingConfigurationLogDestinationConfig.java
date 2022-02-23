@@ -19,21 +19,21 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
      * 
      */
     @InputImport(name="logDestination", required=true)
-        private final Object logDestination;
+      private final Object logDestination;
 
     public Object getLogDestination() {
         return this.logDestination;
     }
 
     @InputImport(name="logDestinationType", required=true)
-        private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
+      private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
 
     public LoggingConfigurationLogDestinationConfigLogDestinationType getLogDestinationType() {
         return this.logDestinationType;
     }
 
     @InputImport(name="logType", required=true)
-        private final LoggingConfigurationLogDestinationConfigLogType logType;
+      private final LoggingConfigurationLogDestinationConfigLogType logType;
 
     public LoggingConfigurationLogDestinationConfigLogType getLogType() {
         return this.logType;

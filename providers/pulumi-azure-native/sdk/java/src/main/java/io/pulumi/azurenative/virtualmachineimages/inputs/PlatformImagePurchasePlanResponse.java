@@ -21,7 +21,7 @@ public final class PlatformImagePurchasePlanResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="planName", required=true)
-        private final String planName;
+      private final String planName;
 
     public String getPlanName() {
         return this.planName;
@@ -32,7 +32,7 @@ public final class PlatformImagePurchasePlanResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="planProduct", required=true)
-        private final String planProduct;
+      private final String planProduct;
 
     public String getPlanProduct() {
         return this.planProduct;
@@ -43,7 +43,7 @@ public final class PlatformImagePurchasePlanResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="planPublisher", required=true)
-        private final String planPublisher;
+      private final String planPublisher;
 
     public String getPlanPublisher() {
         return this.planPublisher;

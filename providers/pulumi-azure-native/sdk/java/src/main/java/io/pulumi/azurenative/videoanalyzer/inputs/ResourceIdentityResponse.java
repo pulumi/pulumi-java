@@ -21,7 +21,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-        private final String userAssignedIdentity;
+      private final String userAssignedIdentity;
 
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;

@@ -14,7 +14,7 @@ public final class FlowMarketoSourcePropertiesArgs extends io.pulumi.resources.R
     public static final FlowMarketoSourcePropertiesArgs Empty = new FlowMarketoSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

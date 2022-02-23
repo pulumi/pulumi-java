@@ -16,21 +16,21 @@ public final class EtwEventConfigurationResponse extends io.pulumi.resources.Inv
     public static final EtwEventConfigurationResponse Empty = new EtwEventConfigurationResponse();
 
     @InputImport(name="filter")
-        private final @Nullable String filter;
+      private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
     @InputImport(name="id", required=true)
-        private final Integer id;
+      private final Integer id;
 
     public Integer getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

@@ -19,7 +19,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable String filter;
+      private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -41,7 +41,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="orderby")
-        private final @Nullable String orderby;
+      private final @Nullable String orderby;
 
     public Optional<String> getOrderby() {
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
@@ -52,7 +52,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-        private final String shareSubscriptionName;
+      private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -74,7 +74,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="skipToken")
-        private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -85,7 +85,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="synchronizationId", required=true)
-        private final String synchronizationId;
+      private final String synchronizationId;
 
     public String getSynchronizationId() {
         return this.synchronizationId;

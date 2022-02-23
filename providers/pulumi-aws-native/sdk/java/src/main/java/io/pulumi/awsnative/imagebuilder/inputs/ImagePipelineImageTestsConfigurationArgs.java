@@ -24,7 +24,7 @@ public final class ImagePipelineImageTestsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="imageTestsEnabled")
-        private final @Nullable Input<Boolean> imageTestsEnabled;
+      private final @Nullable Input<Boolean> imageTestsEnabled;
 
     public Input<Boolean> getImageTestsEnabled() {
         return this.imageTestsEnabled == null ? Input.empty() : this.imageTestsEnabled;
@@ -35,7 +35,7 @@ public final class ImagePipelineImageTestsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeoutMinutes")
-        private final @Nullable Input<Integer> timeoutMinutes;
+      private final @Nullable Input<Integer> timeoutMinutes;
 
     public Input<Integer> getTimeoutMinutes() {
         return this.timeoutMinutes == null ? Input.empty() : this.timeoutMinutes;

@@ -24,7 +24,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationAccountName")
-        private final @Nullable Input<String> integrationAccountName;
+      private final @Nullable Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName == null ? Input.empty() : this.integrationAccountName;
@@ -35,7 +35,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationServiceEnvironment")
-        private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
+      private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
 
     public Input<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
@@ -46,7 +46,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<IntegrationAccountSkuArgs> sku;
+      private final @Nullable Input<IntegrationAccountSkuArgs> sku;
 
     public Input<IntegrationAccountSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -79,7 +79,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,WorkflowState>> state;
+      private final @Nullable Input<Either<String,WorkflowState>> state;
 
     public Input<Either<String,WorkflowState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -90,7 +90,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

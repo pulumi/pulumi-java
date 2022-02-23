@@ -25,7 +25,7 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @InputImport(name="privateEndpoint")
-        private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
+      private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
 
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -36,7 +36,7 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-        private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
+      private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -47,7 +47,7 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

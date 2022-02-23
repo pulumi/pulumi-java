@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * 
      */
     @InputImport(name="infoType", required=true)
-        private final Input<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs> infoType;
+      private final Input<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs> infoType;
 
     public Input<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs> getInfoType() {
         return this.infoType;
@@ -34,7 +34,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * 
      */
     @InputImport(name="maxFindings", required=true)
-        private final Input<Integer> maxFindings;
+      private final Input<Integer> maxFindings;
 
     public Input<Integer> getMaxFindings() {
         return this.maxFindings;

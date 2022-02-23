@@ -18,7 +18,7 @@ public final class FlexibleAppVersionVpcAccessConnectorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

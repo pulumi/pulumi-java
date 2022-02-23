@@ -23,7 +23,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="rawBody", required=true)
-        private final Input<String> rawBody;
+      private final Input<String> rawBody;
 
     public Input<String> getRawBody() {
         return this.rawBody;

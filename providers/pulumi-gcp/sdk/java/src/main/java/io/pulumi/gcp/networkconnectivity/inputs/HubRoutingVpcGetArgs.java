@@ -15,7 +15,7 @@ public final class HubRoutingVpcGetArgs extends io.pulumi.resources.ResourceArgs
     public static final HubRoutingVpcGetArgs Empty = new HubRoutingVpcGetArgs();
 
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

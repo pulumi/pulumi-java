@@ -24,7 +24,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSubDomainName")
-        private final @Nullable Input<Boolean> useSubDomainName;
+      private final @Nullable Input<Boolean> useSubDomainName;
 
     public Input<Boolean> getUseSubDomainName() {
         return this.useSubDomainName == null ? Input.empty() : this.useSubDomainName;

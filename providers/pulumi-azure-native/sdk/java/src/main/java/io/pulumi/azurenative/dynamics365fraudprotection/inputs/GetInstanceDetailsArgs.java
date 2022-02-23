@@ -17,7 +17,7 @@ public final class GetInstanceDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="instanceName", required=true)
-        private final String instanceName;
+      private final String instanceName;
 
     public String getInstanceName() {
         return this.instanceName;
@@ -28,7 +28,7 @@ public final class GetInstanceDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

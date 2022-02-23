@@ -23,7 +23,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="podAffinityTerm", required=true)
-        private final Input<PodAffinityTermArgs> podAffinityTerm;
+      private final Input<PodAffinityTermArgs> podAffinityTerm;
 
     public Input<PodAffinityTermArgs> getPodAffinityTerm() {
         return this.podAffinityTerm;
@@ -34,7 +34,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weight", required=true)
-        private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;

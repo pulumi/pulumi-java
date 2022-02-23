@@ -17,14 +17,14 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
     public static final SpotFleetTagSpecificationArgs Empty = new SpotFleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-        private final @Nullable Input<SpotFleetTagSpecificationResourceType> resourceType;
+      private final @Nullable Input<SpotFleetTagSpecificationResourceType> resourceType;
 
     public Input<SpotFleetTagSpecificationResourceType> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<SpotFleetTagArgs>> tags;
+      private final @Nullable Input<List<SpotFleetTagArgs>> tags;
 
     public Input<List<SpotFleetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

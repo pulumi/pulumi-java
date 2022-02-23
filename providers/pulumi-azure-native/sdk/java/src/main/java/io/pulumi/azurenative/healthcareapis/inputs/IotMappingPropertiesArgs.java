@@ -23,7 +23,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="content")
-        private final @Nullable Input<Object> content;
+      private final @Nullable Input<Object> content;
 
     public Input<Object> getContent() {
         return this.content == null ? Input.empty() : this.content;

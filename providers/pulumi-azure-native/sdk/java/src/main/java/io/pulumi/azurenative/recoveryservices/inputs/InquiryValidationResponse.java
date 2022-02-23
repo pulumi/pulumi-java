@@ -24,7 +24,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="additionalDetail", required=true)
-        private final String additionalDetail;
+      private final String additionalDetail;
 
     public String getAdditionalDetail() {
         return this.additionalDetail;
@@ -35,7 +35,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="errorDetail")
-        private final @Nullable ErrorDetailResponse errorDetail;
+      private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
@@ -46,7 +46,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

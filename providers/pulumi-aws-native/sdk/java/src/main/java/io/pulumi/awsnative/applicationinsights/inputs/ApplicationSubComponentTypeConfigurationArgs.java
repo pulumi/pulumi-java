@@ -23,7 +23,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentConfigurationDetails", required=true)
-        private final Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
+      private final Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
     public Input<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
@@ -34,7 +34,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentType", required=true)
-        private final Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+      private final Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
     public Input<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {
         return this.subComponentType;

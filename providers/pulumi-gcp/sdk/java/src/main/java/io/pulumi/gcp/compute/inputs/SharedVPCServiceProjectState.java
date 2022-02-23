@@ -19,7 +19,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostProject")
-        private final @Nullable Input<String> hostProject;
+      private final @Nullable Input<String> hostProject;
 
     public Input<String> getHostProject() {
         return this.hostProject == null ? Input.empty() : this.hostProject;
@@ -30,7 +30,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceProject")
-        private final @Nullable Input<String> serviceProject;
+      private final @Nullable Input<String> serviceProject;
 
     public Input<String> getServiceProject() {
         return this.serviceProject == null ? Input.empty() : this.serviceProject;

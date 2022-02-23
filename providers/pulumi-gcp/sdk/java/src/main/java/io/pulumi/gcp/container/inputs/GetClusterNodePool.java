@@ -20,42 +20,42 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
     public static final GetClusterNodePool Empty = new GetClusterNodePool();
 
     @InputImport(name="autoscalings", required=true)
-        private final List<GetClusterNodePoolAutoscaling> autoscalings;
+      private final List<GetClusterNodePoolAutoscaling> autoscalings;
 
     public List<GetClusterNodePoolAutoscaling> getAutoscalings() {
         return this.autoscalings;
     }
 
     @InputImport(name="initialNodeCount", required=true)
-        private final Integer initialNodeCount;
+      private final Integer initialNodeCount;
 
     public Integer getInitialNodeCount() {
         return this.initialNodeCount;
     }
 
     @InputImport(name="instanceGroupUrls", required=true)
-        private final List<String> instanceGroupUrls;
+      private final List<String> instanceGroupUrls;
 
     public List<String> getInstanceGroupUrls() {
         return this.instanceGroupUrls;
     }
 
     @InputImport(name="managedInstanceGroupUrls", required=true)
-        private final List<String> managedInstanceGroupUrls;
+      private final List<String> managedInstanceGroupUrls;
 
     public List<String> getManagedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
 
     @InputImport(name="managements", required=true)
-        private final List<GetClusterNodePoolManagement> managements;
+      private final List<GetClusterNodePoolManagement> managements;
 
     public List<GetClusterNodePoolManagement> getManagements() {
         return this.managements;
     }
 
     @InputImport(name="maxPodsPerNode", required=true)
-        private final Integer maxPodsPerNode;
+      private final Integer maxPodsPerNode;
 
     public Integer getMaxPodsPerNode() {
         return this.maxPodsPerNode;
@@ -66,56 +66,56 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="namePrefix", required=true)
-        private final String namePrefix;
+      private final String namePrefix;
 
     public String getNamePrefix() {
         return this.namePrefix;
     }
 
     @InputImport(name="networkConfigs", required=true)
-        private final List<GetClusterNodePoolNetworkConfig> networkConfigs;
+      private final List<GetClusterNodePoolNetworkConfig> networkConfigs;
 
     public List<GetClusterNodePoolNetworkConfig> getNetworkConfigs() {
         return this.networkConfigs;
     }
 
     @InputImport(name="nodeConfigs", required=true)
-        private final List<GetClusterNodePoolNodeConfig> nodeConfigs;
+      private final List<GetClusterNodePoolNodeConfig> nodeConfigs;
 
     public List<GetClusterNodePoolNodeConfig> getNodeConfigs() {
         return this.nodeConfigs;
     }
 
     @InputImport(name="nodeCount", required=true)
-        private final Integer nodeCount;
+      private final Integer nodeCount;
 
     public Integer getNodeCount() {
         return this.nodeCount;
     }
 
     @InputImport(name="nodeLocations", required=true)
-        private final List<String> nodeLocations;
+      private final List<String> nodeLocations;
 
     public List<String> getNodeLocations() {
         return this.nodeLocations;
     }
 
     @InputImport(name="upgradeSettings", required=true)
-        private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
+      private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
 
     public List<GetClusterNodePoolUpgradeSetting> getUpgradeSettings() {
         return this.upgradeSettings;
     }
 
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

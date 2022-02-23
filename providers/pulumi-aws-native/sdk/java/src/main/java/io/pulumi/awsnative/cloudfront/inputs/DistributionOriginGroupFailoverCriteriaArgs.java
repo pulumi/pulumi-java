@@ -14,7 +14,7 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     public static final DistributionOriginGroupFailoverCriteriaArgs Empty = new DistributionOriginGroupFailoverCriteriaArgs();
 
     @InputImport(name="statusCodes", required=true)
-        private final Input<DistributionStatusCodesArgs> statusCodes;
+      private final Input<DistributionStatusCodesArgs> statusCodes;
 
     public Input<DistributionStatusCodesArgs> getStatusCodes() {
         return this.statusCodes;

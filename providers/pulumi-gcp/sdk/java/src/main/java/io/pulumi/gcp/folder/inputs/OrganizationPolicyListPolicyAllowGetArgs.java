@@ -21,7 +21,7 @@ public final class OrganizationPolicyListPolicyAllowGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="all")
-        private final @Nullable Input<Boolean> all;
+      private final @Nullable Input<Boolean> all;
 
     public Input<Boolean> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -32,7 +32,7 @@ public final class OrganizationPolicyListPolicyAllowGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

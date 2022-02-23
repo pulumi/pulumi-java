@@ -19,7 +19,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="appId")
-        private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -30,7 +30,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -42,7 +42,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,7 +54,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -76,7 +76,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="versionId")
-        private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;

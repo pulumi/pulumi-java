@@ -25,7 +25,7 @@ public final class PackagingConfigurationHlsEncryption extends io.pulumi.resourc
      * 
      */
     @InputImport(name="constantInitializationVector")
-        private final @Nullable String constantInitializationVector;
+      private final @Nullable String constantInitializationVector;
 
     public Optional<String> getConstantInitializationVector() {
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
@@ -36,14 +36,14 @@ public final class PackagingConfigurationHlsEncryption extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptionMethod")
-        private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
+      private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
 
     public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return this.encryptionMethod == null ? Optional.empty() : Optional.ofNullable(this.encryptionMethod);
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+      private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;

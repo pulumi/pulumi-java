@@ -22,7 +22,7 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDiskAzureResourceId", required=true)
-        private final Input<String> managedDiskAzureResourceId;
+      private final Input<String> managedDiskAzureResourceId;
 
     public Input<String> getManagedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
@@ -33,7 +33,7 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

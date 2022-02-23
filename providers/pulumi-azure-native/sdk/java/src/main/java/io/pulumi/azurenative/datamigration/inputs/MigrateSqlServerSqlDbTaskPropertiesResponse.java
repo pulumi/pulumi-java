@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="commands", required=true)
-        private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<ODataErrorResponse> errors;
+      private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="input")
-        private final @Nullable MigrateSqlServerSqlDbTaskInputResponse input;
+      private final @Nullable MigrateSqlServerSqlDbTaskInputResponse input;
 
     public Optional<MigrateSqlServerSqlDbTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -69,7 +69,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="output", required=true)
-        private final List<Object> output;
+      private final List<Object> output;
 
     public List<Object> getOutput() {
         return this.output;
@@ -80,7 +80,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -92,7 +92,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final String taskType;
+      private final String taskType;
 
     public String getTaskType() {
         return this.taskType;

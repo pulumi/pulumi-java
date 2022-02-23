@@ -31,7 +31,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocateLoadBalancerNodePorts")
-        private final @Nullable Input<Boolean> allocateLoadBalancerNodePorts;
+      private final @Nullable Input<Boolean> allocateLoadBalancerNodePorts;
 
     public Input<Boolean> getAllocateLoadBalancerNodePorts() {
         return this.allocateLoadBalancerNodePorts == null ? Input.empty() : this.allocateLoadBalancerNodePorts;
@@ -42,7 +42,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIP")
-        private final @Nullable Input<String> clusterIP;
+      private final @Nullable Input<String> clusterIP;
 
     public Input<String> getClusterIP() {
         return this.clusterIP == null ? Input.empty() : this.clusterIP;
@@ -55,7 +55,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIPs")
-        private final @Nullable Input<List<String>> clusterIPs;
+      private final @Nullable Input<List<String>> clusterIPs;
 
     public Input<List<String>> getClusterIPs() {
         return this.clusterIPs == null ? Input.empty() : this.clusterIPs;
@@ -66,7 +66,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalIPs")
-        private final @Nullable Input<List<String>> externalIPs;
+      private final @Nullable Input<List<String>> externalIPs;
 
     public Input<List<String>> getExternalIPs() {
         return this.externalIPs == null ? Input.empty() : this.externalIPs;
@@ -77,7 +77,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalName")
-        private final @Nullable Input<String> externalName;
+      private final @Nullable Input<String> externalName;
 
     public Input<String> getExternalName() {
         return this.externalName == null ? Input.empty() : this.externalName;
@@ -92,7 +92,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalTrafficPolicy")
-        private final @Nullable Input<String> externalTrafficPolicy;
+      private final @Nullable Input<String> externalTrafficPolicy;
 
     public Input<String> getExternalTrafficPolicy() {
         return this.externalTrafficPolicy == null ? Input.empty() : this.externalTrafficPolicy;
@@ -103,7 +103,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckNodePort")
-        private final @Nullable Input<Integer> healthCheckNodePort;
+      private final @Nullable Input<Integer> healthCheckNodePort;
 
     public Input<Integer> getHealthCheckNodePort() {
         return this.healthCheckNodePort == null ? Input.empty() : this.healthCheckNodePort;
@@ -114,7 +114,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalTrafficPolicy")
-        private final @Nullable Input<String> internalTrafficPolicy;
+      private final @Nullable Input<String> internalTrafficPolicy;
 
     public Input<String> getInternalTrafficPolicy() {
         return this.internalTrafficPolicy == null ? Input.empty() : this.internalTrafficPolicy;
@@ -127,7 +127,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamilies")
-        private final @Nullable Input<List<String>> ipFamilies;
+      private final @Nullable Input<List<String>> ipFamilies;
 
     public Input<List<String>> getIpFamilies() {
         return this.ipFamilies == null ? Input.empty() : this.ipFamilies;
@@ -138,7 +138,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamily")
-        private final @Nullable Input<String> ipFamily;
+      private final @Nullable Input<String> ipFamily;
 
     public Input<String> getIpFamily() {
         return this.ipFamily == null ? Input.empty() : this.ipFamily;
@@ -149,7 +149,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamilyPolicy")
-        private final @Nullable Input<String> ipFamilyPolicy;
+      private final @Nullable Input<String> ipFamilyPolicy;
 
     public Input<String> getIpFamilyPolicy() {
         return this.ipFamilyPolicy == null ? Input.empty() : this.ipFamilyPolicy;
@@ -160,7 +160,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerClass")
-        private final @Nullable Input<String> loadBalancerClass;
+      private final @Nullable Input<String> loadBalancerClass;
 
     public Input<String> getLoadBalancerClass() {
         return this.loadBalancerClass == null ? Input.empty() : this.loadBalancerClass;
@@ -171,7 +171,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerIP")
-        private final @Nullable Input<String> loadBalancerIP;
+      private final @Nullable Input<String> loadBalancerIP;
 
     public Input<String> getLoadBalancerIP() {
         return this.loadBalancerIP == null ? Input.empty() : this.loadBalancerIP;
@@ -182,7 +182,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerSourceRanges")
-        private final @Nullable Input<List<String>> loadBalancerSourceRanges;
+      private final @Nullable Input<List<String>> loadBalancerSourceRanges;
 
     public Input<List<String>> getLoadBalancerSourceRanges() {
         return this.loadBalancerSourceRanges == null ? Input.empty() : this.loadBalancerSourceRanges;
@@ -193,7 +193,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-        private final @Nullable Input<List<ServicePortArgs>> ports;
+      private final @Nullable Input<List<ServicePortArgs>> ports;
 
     public Input<List<ServicePortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -204,7 +204,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishNotReadyAddresses")
-        private final @Nullable Input<Boolean> publishNotReadyAddresses;
+      private final @Nullable Input<Boolean> publishNotReadyAddresses;
 
     public Input<Boolean> getPublishNotReadyAddresses() {
         return this.publishNotReadyAddresses == null ? Input.empty() : this.publishNotReadyAddresses;
@@ -215,7 +215,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<Map<String,String>> selector;
+      private final @Nullable Input<Map<String,String>> selector;
 
     public Input<Map<String,String>> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -230,7 +230,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-        private final @Nullable Input<String> sessionAffinity;
+      private final @Nullable Input<String> sessionAffinity;
 
     public Input<String> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -241,7 +241,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinityConfig")
-        private final @Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig;
+      private final @Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig;
 
     public Input<SessionAffinityConfigArgs> getSessionAffinityConfig() {
         return this.sessionAffinityConfig == null ? Input.empty() : this.sessionAffinityConfig;
@@ -252,7 +252,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyKeys")
-        private final @Nullable Input<List<String>> topologyKeys;
+      private final @Nullable Input<List<String>> topologyKeys;
 
     public Input<List<String>> getTopologyKeys() {
         return this.topologyKeys == null ? Input.empty() : this.topologyKeys;
@@ -269,7 +269,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,ServiceSpecType>> type;
+      private final @Nullable Input<Either<String,ServiceSpecType>> type;
 
     public Input<Either<String,ServiceSpecType>> getType() {
         return this.type == null ? Input.empty() : this.type;

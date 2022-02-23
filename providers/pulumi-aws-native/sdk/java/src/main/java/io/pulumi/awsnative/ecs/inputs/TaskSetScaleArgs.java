@@ -20,7 +20,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-        private final @Nullable Input<TaskSetScaleUnit> unit;
+      private final @Nullable Input<TaskSetScaleUnit> unit;
 
     public Input<TaskSetScaleUnit> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -31,7 +31,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<Double> value;
+      private final @Nullable Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value == null ? Input.empty() : this.value;

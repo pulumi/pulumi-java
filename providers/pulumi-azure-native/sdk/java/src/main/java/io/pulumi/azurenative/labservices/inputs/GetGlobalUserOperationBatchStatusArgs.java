@@ -18,7 +18,7 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="urls", required=true)
-        private final List<String> urls;
+      private final List<String> urls;
 
     public List<String> getUrls() {
         return this.urls;
@@ -29,7 +29,7 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="userName", required=true)
-        private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;

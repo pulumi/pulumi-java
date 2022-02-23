@@ -26,7 +26,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificateAuthority")
-        private final @Nullable Input<String> certificateAuthority;
+      private final @Nullable Input<String> certificateAuthority;
 
     public Input<String> getCertificateAuthority() {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
@@ -37,7 +37,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secretSource", required=true)
-        private final Input<ResourceReferenceArgs> secretSource;
+      private final Input<ResourceReferenceArgs> secretSource;
 
     public Input<ResourceReferenceArgs> getSecretSource() {
         return this.secretSource;
@@ -48,7 +48,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secretVersion")
-        private final @Nullable Input<String> secretVersion;
+      private final @Nullable Input<String> secretVersion;
 
     public Input<String> getSecretVersion() {
         return this.secretVersion == null ? Input.empty() : this.secretVersion;
@@ -59,7 +59,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-        private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Input<List<String>> subjectAlternativeNames;
 
     public Input<List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -71,7 +71,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -82,7 +82,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="useLatestVersion")
-        private final @Nullable Input<Boolean> useLatestVersion;
+      private final @Nullable Input<Boolean> useLatestVersion;
 
     public Input<Boolean> getUseLatestVersion() {
         return this.useLatestVersion == null ? Input.empty() : this.useLatestVersion;

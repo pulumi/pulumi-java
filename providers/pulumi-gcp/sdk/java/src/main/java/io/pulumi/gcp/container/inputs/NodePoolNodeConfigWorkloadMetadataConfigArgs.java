@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
     public static final NodePoolNodeConfigWorkloadMetadataConfigArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigArgs();
 
     @InputImport(name="mode", required=true)
-        private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;

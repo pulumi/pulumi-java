@@ -24,7 +24,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -35,7 +35,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -46,7 +46,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Object sinkRetryCount;
+      private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -57,7 +57,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Object sinkRetryWait;
+      private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -69,7 +69,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Object writeBatchSize;
+      private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -91,7 +91,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Object writeBatchTimeout;
+      private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -102,7 +102,7 @@ public final class CosmosDbMongoDbApiSinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="writeBehavior")
-        private final @Nullable Object writeBehavior;
+      private final @Nullable Object writeBehavior;
 
     public Optional<Object> getWriteBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);

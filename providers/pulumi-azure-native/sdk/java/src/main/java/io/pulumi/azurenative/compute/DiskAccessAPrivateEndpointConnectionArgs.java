@@ -20,7 +20,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="diskAccessName", required=true)
-        private final Input<String> diskAccessName;
+      private final Input<String> diskAccessName;
 
     public Input<String> getDiskAccessName() {
         return this.diskAccessName;
@@ -31,7 +31,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-        private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -42,7 +42,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-        private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -53,7 +53,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

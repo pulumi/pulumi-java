@@ -21,7 +21,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceGet
      * 
      */
     @InputImport(name="backendService", required=true)
-        private final Input<String> backendService;
+      private final Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService;
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceGet
      * 
      */
     @InputImport(name="headerAction")
-        private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+      private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceGet
      * 
      */
     @InputImport(name="weight", required=true)
-        private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;

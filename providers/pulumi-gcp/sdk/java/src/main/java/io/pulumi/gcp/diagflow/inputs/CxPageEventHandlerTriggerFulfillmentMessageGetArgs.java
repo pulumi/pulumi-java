@@ -19,7 +19,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
      * 
      */
     @InputImport(name="text")
-        private final @Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
+      private final @Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
 
     public Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> getText() {
         return this.text == null ? Input.empty() : this.text;

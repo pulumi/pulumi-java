@@ -23,7 +23,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -34,7 +34,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="customerAdminGroupId")
-        private final @Nullable Input<String> customerAdminGroupId;
+      private final @Nullable Input<String> customerAdminGroupId;
 
     public Input<String> getCustomerAdminGroupId() {
         return this.customerAdminGroupId == null ? Input.empty() : this.customerAdminGroupId;
@@ -46,7 +46,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -57,7 +57,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="secret")
-        private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -68,7 +68,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

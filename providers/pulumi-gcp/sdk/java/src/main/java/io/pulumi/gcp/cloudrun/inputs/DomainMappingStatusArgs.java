@@ -19,28 +19,28 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     public static final DomainMappingStatusArgs Empty = new DomainMappingStatusArgs();
 
     @InputImport(name="conditions")
-        private final @Nullable Input<List<DomainMappingStatusConditionArgs>> conditions;
+      private final @Nullable Input<List<DomainMappingStatusConditionArgs>> conditions;
 
     public Input<List<DomainMappingStatusConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
     @InputImport(name="mappedRouteName")
-        private final @Nullable Input<String> mappedRouteName;
+      private final @Nullable Input<String> mappedRouteName;
 
     public Input<String> getMappedRouteName() {
         return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
     }
 
     @InputImport(name="observedGeneration")
-        private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
     @InputImport(name="resourceRecords")
-        private final @Nullable Input<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
+      private final @Nullable Input<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
 
     public Input<List<DomainMappingStatusResourceRecordArgs>> getResourceRecords() {
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;

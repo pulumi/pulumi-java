@@ -27,7 +27,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultMetadata", required=true)
-        private final AliasPathMetadataResponse defaultMetadata;
+      private final AliasPathMetadataResponse defaultMetadata;
 
     public AliasPathMetadataResponse getDefaultMetadata() {
         return this.defaultMetadata;
@@ -38,7 +38,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultPath")
-        private final @Nullable String defaultPath;
+      private final @Nullable String defaultPath;
 
     public Optional<String> getDefaultPath() {
         return this.defaultPath == null ? Optional.empty() : Optional.ofNullable(this.defaultPath);
@@ -49,7 +49,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultPattern")
-        private final @Nullable AliasPatternResponse defaultPattern;
+      private final @Nullable AliasPatternResponse defaultPattern;
 
     public Optional<AliasPatternResponse> getDefaultPattern() {
         return this.defaultPattern == null ? Optional.empty() : Optional.ofNullable(this.defaultPattern);
@@ -60,7 +60,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -71,7 +71,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="paths")
-        private final @Nullable List<AliasPathResponse> paths;
+      private final @Nullable List<AliasPathResponse> paths;
 
     public List<AliasPathResponse> getPaths() {
         return this.paths == null ? List.of() : this.paths;
@@ -82,7 +82,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

@@ -19,7 +19,7 @@ public final class BotAliasAudioLogDestination extends io.pulumi.resources.Invok
     public static final BotAliasAudioLogDestination Empty = new BotAliasAudioLogDestination();
 
     @InputImport(name="s3Bucket")
-        private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
+      private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
     public Optional<BotAliasS3BucketLogDestination> getS3Bucket() {
         return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);

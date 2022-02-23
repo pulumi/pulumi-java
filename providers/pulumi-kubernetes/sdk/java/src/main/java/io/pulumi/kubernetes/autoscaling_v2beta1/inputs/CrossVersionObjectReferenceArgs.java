@@ -23,7 +23,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

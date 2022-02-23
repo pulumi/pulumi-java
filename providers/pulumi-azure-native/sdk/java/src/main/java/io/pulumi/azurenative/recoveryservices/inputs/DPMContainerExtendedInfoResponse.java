@@ -23,7 +23,7 @@ public final class DPMContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-        private final @Nullable String lastRefreshedAt;
+      private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);

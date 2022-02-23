@@ -24,7 +24,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<FilesNotTieringErrorResponse> errors;
+      private final List<FilesNotTieringErrorResponse> errors;
 
     public List<FilesNotTieringErrorResponse> getErrors() {
         return this.errors;
@@ -35,7 +35,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastUpdatedTimestamp", required=true)
-        private final String lastUpdatedTimestamp;
+      private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -46,7 +46,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="totalFileCount", required=true)
-        private final Double totalFileCount;
+      private final Double totalFileCount;
 
     public Double getTotalFileCount() {
         return this.totalFileCount;

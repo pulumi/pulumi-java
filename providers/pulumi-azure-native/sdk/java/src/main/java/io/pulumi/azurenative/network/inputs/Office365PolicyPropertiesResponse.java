@@ -23,7 +23,7 @@ public final class Office365PolicyPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="breakOutCategories")
-        private final @Nullable BreakOutCategoryPoliciesResponse breakOutCategories;
+      private final @Nullable BreakOutCategoryPoliciesResponse breakOutCategories;
 
     public Optional<BreakOutCategoryPoliciesResponse> getBreakOutCategories() {
         return this.breakOutCategories == null ? Optional.empty() : Optional.ofNullable(this.breakOutCategories);

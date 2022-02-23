@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      * 
      */
     @InputImport(name="gcePdKmsKeyName")
-        private final @Nullable Input<String> gcePdKmsKeyName;
+      private final @Nullable Input<String> gcePdKmsKeyName;
 
     public Input<String> getGcePdKmsKeyName() {
         return this.gcePdKmsKeyName == null ? Input.empty() : this.gcePdKmsKeyName;

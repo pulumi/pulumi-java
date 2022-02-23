@@ -28,7 +28,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceKey")
-        private final @Nullable Input<Integer> deviceKey;
+      private final @Nullable Input<Integer> deviceKey;
 
     public Input<Integer> getDeviceKey() {
         return this.deviceKey == null ? Input.empty() : this.deviceKey;
@@ -39,7 +39,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipSettings")
-        private final @Nullable Input<NicIPSettingsArgs> ipSettings;
+      private final @Nullable Input<NicIPSettingsArgs> ipSettings;
 
     public Input<NicIPSettingsArgs> getIpSettings() {
         return this.ipSettings == null ? Input.empty() : this.ipSettings;
@@ -50,7 +50,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,7 +61,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkId")
-        private final @Nullable Input<String> networkId;
+      private final @Nullable Input<String> networkId;
 
     public Input<String> getNetworkId() {
         return this.networkId == null ? Input.empty() : this.networkId;
@@ -72,7 +72,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable Input<Either<String,NICType>> nicType;
+      private final @Nullable Input<Either<String,NICType>> nicType;
 
     public Input<Either<String,NICType>> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -83,7 +83,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="powerOnBoot")
-        private final @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot;
+      private final @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot;
 
     public Input<Either<String,PowerOnBootOption>> getPowerOnBoot() {
         return this.powerOnBoot == null ? Input.empty() : this.powerOnBoot;

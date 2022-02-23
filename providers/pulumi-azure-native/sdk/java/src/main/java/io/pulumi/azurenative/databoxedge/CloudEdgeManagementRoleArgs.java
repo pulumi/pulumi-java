@@ -21,7 +21,7 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -33,7 +33,7 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -44,7 +44,7 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleStatus", required=true)
-        private final Input<Either<String,RoleStatus>> roleStatus;
+      private final Input<Either<String,RoleStatus>> roleStatus;
 
     public Input<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;

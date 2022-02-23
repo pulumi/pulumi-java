@@ -18,7 +18,7 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preemptible", required=true)
-        private final Input<Boolean> preemptible;
+      private final Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible;

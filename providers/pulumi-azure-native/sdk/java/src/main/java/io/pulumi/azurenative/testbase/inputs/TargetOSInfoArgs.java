@@ -23,7 +23,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osUpdateType", required=true)
-        private final Input<String> osUpdateType;
+      private final Input<String> osUpdateType;
 
     public Input<String> getOsUpdateType() {
         return this.osUpdateType;
@@ -34,7 +34,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetOSs", required=true)
-        private final Input<List<String>> targetOSs;
+      private final Input<List<String>> targetOSs;
 
     public Input<List<String>> getTargetOSs() {
         return this.targetOSs;

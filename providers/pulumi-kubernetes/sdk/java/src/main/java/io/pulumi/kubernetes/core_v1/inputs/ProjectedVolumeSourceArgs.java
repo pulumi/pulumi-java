@@ -25,7 +25,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultMode")
-        private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -36,7 +36,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sources", required=true)
-        private final Input<List<VolumeProjectionArgs>> sources;
+      private final Input<List<VolumeProjectionArgs>> sources;
 
     public Input<List<VolumeProjectionArgs>> getSources() {
         return this.sources;

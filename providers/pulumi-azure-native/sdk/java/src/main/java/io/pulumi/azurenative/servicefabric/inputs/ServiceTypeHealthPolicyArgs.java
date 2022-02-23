@@ -23,7 +23,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-        private final @Nullable Input<Integer> maxPercentUnhealthyServices;
+      private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 
     public Input<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Input.empty() : this.maxPercentUnhealthyServices;

@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
      * 
      */
     @InputImport(name="apt")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
      * 
      */
     @InputImport(name="goo")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
      * 
      */
     @InputImport(name="yum")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
      * 
      */
     @InputImport(name="zypper")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;

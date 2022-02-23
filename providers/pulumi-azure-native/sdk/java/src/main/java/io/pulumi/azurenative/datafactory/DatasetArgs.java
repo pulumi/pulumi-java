@@ -115,7 +115,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName")
-        private final @Nullable Input<String> datasetName;
+      private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
@@ -126,7 +126,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final Input<String> factoryName;
+      private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -137,7 +137,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<Object> properties;
+      private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -148,7 +148,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

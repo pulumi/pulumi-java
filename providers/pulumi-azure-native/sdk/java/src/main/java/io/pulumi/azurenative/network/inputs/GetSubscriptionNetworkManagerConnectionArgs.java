@@ -17,7 +17,7 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkManagerConnectionName", required=true)
-        private final String networkManagerConnectionName;
+      private final String networkManagerConnectionName;
 
     public String getNetworkManagerConnectionName() {
         return this.networkManagerConnectionName;

@@ -24,7 +24,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fileName")
-        private final @Nullable Input<Object> fileName;
+      private final @Nullable Input<Object> fileName;
 
     public Input<Object> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -35,7 +35,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fileSystem")
-        private final @Nullable Input<Object> fileSystem;
+      private final @Nullable Input<Object> fileSystem;
 
     public Input<Object> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -46,7 +46,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folderPath")
-        private final @Nullable Input<Object> folderPath;
+      private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -58,7 +58,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

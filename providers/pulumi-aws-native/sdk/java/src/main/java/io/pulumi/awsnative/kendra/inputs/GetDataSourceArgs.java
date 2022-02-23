@@ -13,14 +13,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="indexId", required=true)
-        private final String indexId;
+      private final String indexId;
 
     public String getIndexId() {
         return this.indexId;

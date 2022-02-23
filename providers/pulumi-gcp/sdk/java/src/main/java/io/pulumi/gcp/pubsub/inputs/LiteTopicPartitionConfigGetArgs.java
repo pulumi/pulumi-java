@@ -21,7 +21,7 @@ public final class LiteTopicPartitionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<LiteTopicPartitionConfigCapacityGetArgs> capacity;
+      private final @Nullable Input<LiteTopicPartitionConfigCapacityGetArgs> capacity;
 
     public Input<LiteTopicPartitionConfigCapacityGetArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -32,7 +32,7 @@ public final class LiteTopicPartitionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;

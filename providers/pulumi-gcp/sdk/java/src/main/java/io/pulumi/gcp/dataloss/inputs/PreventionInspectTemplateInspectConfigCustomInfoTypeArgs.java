@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="dictionary")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="exclusionType")
-        private final @Nullable Input<String> exclusionType;
+      private final @Nullable Input<String> exclusionType;
 
     public Input<String> getExclusionType() {
         return this.exclusionType == null ? Input.empty() : this.exclusionType;
@@ -51,7 +51,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="infoType", required=true)
-        private final Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
+      private final Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> getInfoType() {
         return this.infoType;
@@ -65,7 +65,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="likelihood")
-        private final @Nullable Input<String> likelihood;
+      private final @Nullable Input<String> likelihood;
 
     public Input<String> getLikelihood() {
         return this.likelihood == null ? Input.empty() : this.likelihood;
@@ -77,7 +77,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="regex")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -89,7 +89,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="storedType")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> getStoredType() {
         return this.storedType == null ? Input.empty() : this.storedType;

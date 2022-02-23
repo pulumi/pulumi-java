@@ -16,28 +16,28 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     public static final MountTargetArgs Empty = new MountTargetArgs();
 
     @InputImport(name="fileSystemId", required=true)
-        private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="securityGroups", required=true)
-        private final Input<List<String>> securityGroups;
+      private final Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
 
     @InputImport(name="subnetId", required=true)
-        private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

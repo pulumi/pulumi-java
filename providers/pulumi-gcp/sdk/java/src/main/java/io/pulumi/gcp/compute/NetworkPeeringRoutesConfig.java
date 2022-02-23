@@ -123,6 +123,21 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkPeeringRoutesConfig(String name) {
+        this(name, NetworkPeeringRoutesConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkPeeringRoutesConfig(String name, NetworkPeeringRoutesConfigArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

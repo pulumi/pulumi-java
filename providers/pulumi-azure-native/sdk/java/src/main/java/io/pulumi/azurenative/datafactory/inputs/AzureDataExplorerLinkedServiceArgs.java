@@ -32,7 +32,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -54,7 +54,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -65,7 +65,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="database", required=true)
-        private final Input<Object> database;
+      private final Input<Object> database;
 
     public Input<Object> getDatabase() {
         return this.database;
@@ -76,7 +76,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final Input<Object> endpoint;
+      private final Input<Object> endpoint;
 
     public Input<Object> getEndpoint() {
         return this.endpoint;
@@ -98,7 +98,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -109,7 +109,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalId")
-        private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -120,7 +120,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -131,7 +131,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tenant")
-        private final @Nullable Input<Object> tenant;
+      private final @Nullable Input<Object> tenant;
 
     public Input<Object> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -143,7 +143,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -20,7 +20,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -32,7 +32,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-        private final Input<String> serviceAccountEmail;
+      private final Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;

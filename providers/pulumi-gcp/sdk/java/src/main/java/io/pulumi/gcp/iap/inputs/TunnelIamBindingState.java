@@ -22,7 +22,7 @@ public final class TunnelIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<TunnelIamBindingConditionGetArgs> condition;
+      private final @Nullable Input<TunnelIamBindingConditionGetArgs> condition;
 
     public Input<TunnelIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,14 +33,14 @@ public final class TunnelIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-        private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -52,7 +52,7 @@ public final class TunnelIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class TunnelIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

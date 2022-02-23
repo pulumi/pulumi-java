@@ -19,7 +19,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssetArgs Empty = new AssetArgs();
 
     @InputImport(name="assetHierarchies")
-        private final @Nullable Input<List<AssetHierarchyArgs>> assetHierarchies;
+      private final @Nullable Input<List<AssetHierarchyArgs>> assetHierarchies;
 
     public Input<List<AssetHierarchyArgs>> getAssetHierarchies() {
         return this.assetHierarchies == null ? Input.empty() : this.assetHierarchies;
@@ -30,7 +30,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelId", required=true)
-        private final Input<String> assetModelId;
+      private final Input<String> assetModelId;
 
     public Input<String> getAssetModelId() {
         return this.assetModelId;
@@ -41,14 +41,14 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName")
-        private final @Nullable Input<String> assetName;
+      private final @Nullable Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName == null ? Input.empty() : this.assetName;
     }
 
     @InputImport(name="assetProperties")
-        private final @Nullable Input<List<AssetPropertyArgs>> assetProperties;
+      private final @Nullable Input<List<AssetPropertyArgs>> assetProperties;
 
     public Input<List<AssetPropertyArgs>> getAssetProperties() {
         return this.assetProperties == null ? Input.empty() : this.assetProperties;
@@ -59,7 +59,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<AssetTagArgs>> tags;
+      private final @Nullable Input<List<AssetTagArgs>> tags;
 
     public Input<List<AssetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

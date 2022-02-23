@@ -19,7 +19,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -41,7 +41,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagValue")
-        private final @Nullable Input<String> tagValue;
+      private final @Nullable Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;

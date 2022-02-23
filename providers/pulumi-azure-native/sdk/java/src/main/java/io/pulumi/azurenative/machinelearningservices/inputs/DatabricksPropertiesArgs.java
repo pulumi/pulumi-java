@@ -19,7 +19,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="databricksAccessToken")
-        private final @Nullable Input<String> databricksAccessToken;
+      private final @Nullable Input<String> databricksAccessToken;
 
     public Input<String> getDatabricksAccessToken() {
         return this.databricksAccessToken == null ? Input.empty() : this.databricksAccessToken;
@@ -30,7 +30,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceUrl")
-        private final @Nullable Input<String> workspaceUrl;
+      private final @Nullable Input<String> workspaceUrl;
 
     public Input<String> getWorkspaceUrl() {
         return this.workspaceUrl == null ? Input.empty() : this.workspaceUrl;

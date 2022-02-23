@@ -24,7 +24,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceModel")
-        private final @Nullable Input<String> deviceModel;
+      private final @Nullable Input<String> deviceModel;
 
     public Input<String> getDeviceModel() {
         return this.deviceModel == null ? Input.empty() : this.deviceModel;
@@ -35,7 +35,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceVendor")
-        private final @Nullable Input<String> deviceVendor;
+      private final @Nullable Input<String> deviceVendor;
 
     public Input<String> getDeviceVendor() {
         return this.deviceVendor == null ? Input.empty() : this.deviceVendor;
@@ -46,7 +46,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-        private final @Nullable Input<Integer> linkSpeedInMbps;
+      private final @Nullable Input<Integer> linkSpeedInMbps;
 
     public Input<Integer> getLinkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Input.empty() : this.linkSpeedInMbps;

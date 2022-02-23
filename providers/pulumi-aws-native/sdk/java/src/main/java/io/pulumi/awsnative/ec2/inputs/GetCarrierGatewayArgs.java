@@ -17,7 +17,7 @@ public final class GetCarrierGatewayArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="carrierGatewayId", required=true)
-        private final String carrierGatewayId;
+      private final String carrierGatewayId;
 
     public String getCarrierGatewayId() {
         return this.carrierGatewayId;

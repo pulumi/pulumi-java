@@ -25,7 +25,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="trafficAnalyticsInterval")
-        private final @Nullable Input<Integer> trafficAnalyticsInterval;
+      private final @Nullable Input<Integer> trafficAnalyticsInterval;
 
     public Input<Integer> getTrafficAnalyticsInterval() {
         return this.trafficAnalyticsInterval == null ? Input.empty() : this.trafficAnalyticsInterval;
@@ -47,7 +47,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceId")
-        private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;
@@ -58,7 +58,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceRegion")
-        private final @Nullable Input<String> workspaceRegion;
+      private final @Nullable Input<String> workspaceRegion;
 
     public Input<String> getWorkspaceRegion() {
         return this.workspaceRegion == null ? Input.empty() : this.workspaceRegion;
@@ -69,7 +69,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceResourceId")
-        private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Input<String> workspaceResourceId;
 
     public Input<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;

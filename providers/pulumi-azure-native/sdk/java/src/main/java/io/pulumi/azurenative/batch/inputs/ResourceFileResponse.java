@@ -19,7 +19,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoStorageContainerName")
-        private final @Nullable String autoStorageContainerName;
+      private final @Nullable String autoStorageContainerName;
 
     public Optional<String> getAutoStorageContainerName() {
         return this.autoStorageContainerName == null ? Optional.empty() : Optional.ofNullable(this.autoStorageContainerName);
@@ -30,7 +30,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blobPrefix")
-        private final @Nullable String blobPrefix;
+      private final @Nullable String blobPrefix;
 
     public Optional<String> getBlobPrefix() {
         return this.blobPrefix == null ? Optional.empty() : Optional.ofNullable(this.blobPrefix);
@@ -41,7 +41,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileMode")
-        private final @Nullable String fileMode;
+      private final @Nullable String fileMode;
 
     public Optional<String> getFileMode() {
         return this.fileMode == null ? Optional.empty() : Optional.ofNullable(this.fileMode);
@@ -52,7 +52,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filePath")
-        private final @Nullable String filePath;
+      private final @Nullable String filePath;
 
     public Optional<String> getFilePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
@@ -63,7 +63,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpUrl")
-        private final @Nullable String httpUrl;
+      private final @Nullable String httpUrl;
 
     public Optional<String> getHttpUrl() {
         return this.httpUrl == null ? Optional.empty() : Optional.ofNullable(this.httpUrl);
@@ -74,7 +74,7 @@ public final class ResourceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageContainerUrl")
-        private final @Nullable String storageContainerUrl;
+      private final @Nullable String storageContainerUrl;
 
     public Optional<String> getStorageContainerUrl() {
         return this.storageContainerUrl == null ? Optional.empty() : Optional.ofNullable(this.storageContainerUrl);

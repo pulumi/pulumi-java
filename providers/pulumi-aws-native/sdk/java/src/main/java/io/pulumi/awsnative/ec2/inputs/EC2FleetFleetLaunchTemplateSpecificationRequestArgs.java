@@ -15,21 +15,21 @@ public final class EC2FleetFleetLaunchTemplateSpecificationRequestArgs extends i
     public static final EC2FleetFleetLaunchTemplateSpecificationRequestArgs Empty = new EC2FleetFleetLaunchTemplateSpecificationRequestArgs();
 
     @InputImport(name="launchTemplateId")
-        private final @Nullable Input<String> launchTemplateId;
+      private final @Nullable Input<String> launchTemplateId;
 
     public Input<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
     }
 
     @InputImport(name="launchTemplateName")
-        private final @Nullable Input<String> launchTemplateName;
+      private final @Nullable Input<String> launchTemplateName;
 
     public Input<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Input.empty() : this.launchTemplateName;
     }
 
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

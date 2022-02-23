@@ -17,7 +17,7 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

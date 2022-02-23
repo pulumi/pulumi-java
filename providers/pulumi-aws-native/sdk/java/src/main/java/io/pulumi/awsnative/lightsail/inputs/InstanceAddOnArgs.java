@@ -25,14 +25,14 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOnType", required=true)
-        private final Input<String> addOnType;
+      private final Input<String> addOnType;
 
     public Input<String> getAddOnType() {
         return this.addOnType;
     }
 
     @InputImport(name="autoSnapshotAddOnRequest")
-        private final @Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
+      private final @Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
     public Input<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Input.empty() : this.autoSnapshotAddOnRequest;
@@ -43,7 +43,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<InstanceAddOnStatus> status;
+      private final @Nullable Input<InstanceAddOnStatus> status;
 
     public Input<InstanceAddOnStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;

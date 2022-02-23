@@ -26,7 +26,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationAddresses")
-        private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
@@ -48,7 +48,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationPorts")
-        private final @Nullable Input<List<String>> destinationPorts;
+      private final @Nullable Input<List<String>> destinationPorts;
 
     public Input<List<String>> getDestinationPorts() {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
@@ -59,7 +59,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="protocols")
-        private final @Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
+      private final @Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
 
     public Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -81,7 +81,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceAddresses")
-        private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -92,7 +92,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceIpGroups")
-        private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
@@ -103,7 +103,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedAddress")
-        private final @Nullable Input<String> translatedAddress;
+      private final @Nullable Input<String> translatedAddress;
 
     public Input<String> getTranslatedAddress() {
         return this.translatedAddress == null ? Input.empty() : this.translatedAddress;
@@ -114,7 +114,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedFqdn")
-        private final @Nullable Input<String> translatedFqdn;
+      private final @Nullable Input<String> translatedFqdn;
 
     public Input<String> getTranslatedFqdn() {
         return this.translatedFqdn == null ? Input.empty() : this.translatedFqdn;
@@ -125,7 +125,7 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedPort")
-        private final @Nullable Input<String> translatedPort;
+      private final @Nullable Input<String> translatedPort;
 
     public Input<String> getTranslatedPort() {
         return this.translatedPort == null ? Input.empty() : this.translatedPort;

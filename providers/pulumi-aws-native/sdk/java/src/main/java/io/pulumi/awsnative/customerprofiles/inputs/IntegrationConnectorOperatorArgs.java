@@ -19,35 +19,35 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     public static final IntegrationConnectorOperatorArgs Empty = new IntegrationConnectorOperatorArgs();
 
     @InputImport(name="marketo")
-        private final @Nullable Input<IntegrationMarketoConnectorOperator> marketo;
+      private final @Nullable Input<IntegrationMarketoConnectorOperator> marketo;
 
     public Input<IntegrationMarketoConnectorOperator> getMarketo() {
         return this.marketo == null ? Input.empty() : this.marketo;
     }
 
     @InputImport(name="s3")
-        private final @Nullable Input<IntegrationS3ConnectorOperator> s3;
+      private final @Nullable Input<IntegrationS3ConnectorOperator> s3;
 
     public Input<IntegrationS3ConnectorOperator> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
     @InputImport(name="salesforce")
-        private final @Nullable Input<IntegrationSalesforceConnectorOperator> salesforce;
+      private final @Nullable Input<IntegrationSalesforceConnectorOperator> salesforce;
 
     public Input<IntegrationSalesforceConnectorOperator> getSalesforce() {
         return this.salesforce == null ? Input.empty() : this.salesforce;
     }
 
     @InputImport(name="serviceNow")
-        private final @Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow;
+      private final @Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow;
 
     public Input<IntegrationServiceNowConnectorOperator> getServiceNow() {
         return this.serviceNow == null ? Input.empty() : this.serviceNow;
     }
 
     @InputImport(name="zendesk")
-        private final @Nullable Input<IntegrationZendeskConnectorOperator> zendesk;
+      private final @Nullable Input<IntegrationZendeskConnectorOperator> zendesk;
 
     public Input<IntegrationZendeskConnectorOperator> getZendesk() {
         return this.zendesk == null ? Input.empty() : this.zendesk;

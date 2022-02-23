@@ -20,7 +20,7 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-        private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -32,7 +32,7 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="kmsKeyVersion")
-        private final @Nullable Input<String> kmsKeyVersion;
+      private final @Nullable Input<String> kmsKeyVersion;
 
     public Input<String> getKmsKeyVersion() {
         return this.kmsKeyVersion == null ? Input.empty() : this.kmsKeyVersion;

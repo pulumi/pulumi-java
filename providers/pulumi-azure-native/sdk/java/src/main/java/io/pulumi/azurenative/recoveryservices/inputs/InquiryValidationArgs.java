@@ -23,7 +23,7 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

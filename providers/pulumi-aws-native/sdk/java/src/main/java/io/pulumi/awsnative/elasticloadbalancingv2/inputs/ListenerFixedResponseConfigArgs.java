@@ -15,21 +15,21 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
     public static final ListenerFixedResponseConfigArgs Empty = new ListenerFixedResponseConfigArgs();
 
     @InputImport(name="contentType")
-        private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
     @InputImport(name="messageBody")
-        private final @Nullable Input<String> messageBody;
+      private final @Nullable Input<String> messageBody;
 
     public Input<String> getMessageBody() {
         return this.messageBody == null ? Input.empty() : this.messageBody;
     }
 
     @InputImport(name="statusCode", required=true)
-        private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

@@ -25,7 +25,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extra")
-        private final @Nullable Input<Map<String,List<String>>> extra;
+      private final @Nullable Input<Map<String,List<String>>> extra;
 
     public Input<Map<String,List<String>>> getExtra() {
         return this.extra == null ? Input.empty() : this.extra;
@@ -36,7 +36,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groups")
-        private final @Nullable Input<List<String>> groups;
+      private final @Nullable Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups == null ? Input.empty() : this.groups;
@@ -47,7 +47,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="request", required=true)
-        private final Input<String> request;
+      private final Input<String> request;
 
     public Input<String> getRequest() {
         return this.request;
@@ -64,7 +64,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signerName")
-        private final @Nullable Input<String> signerName;
+      private final @Nullable Input<String> signerName;
 
     public Input<String> getSignerName() {
         return this.signerName == null ? Input.empty() : this.signerName;
@@ -75,7 +75,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -87,7 +87,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usages")
-        private final @Nullable Input<List<String>> usages;
+      private final @Nullable Input<List<String>> usages;
 
     public Input<List<String>> getUsages() {
         return this.usages == null ? Input.empty() : this.usages;
@@ -98,7 +98,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

@@ -16,14 +16,14 @@ public final class RuleGroupTCPFlagField extends io.pulumi.resources.InvokeArgs 
     public static final RuleGroupTCPFlagField Empty = new RuleGroupTCPFlagField();
 
     @InputImport(name="flags", required=true)
-        private final List<RuleGroupTCPFlag> flags;
+      private final List<RuleGroupTCPFlag> flags;
 
     public List<RuleGroupTCPFlag> getFlags() {
         return this.flags;
     }
 
     @InputImport(name="masks")
-        private final @Nullable List<RuleGroupTCPFlag> masks;
+      private final @Nullable List<RuleGroupTCPFlag> masks;
 
     public List<RuleGroupTCPFlag> getMasks() {
         return this.masks == null ? List.of() : this.masks;

@@ -24,7 +24,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobListBlobPath")
-        private final @Nullable Input<String> blobListBlobPath;
+      private final @Nullable Input<String> blobListBlobPath;
 
     public Input<String> getBlobListBlobPath() {
         return this.blobListBlobPath == null ? Input.empty() : this.blobListBlobPath;
@@ -35,7 +35,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPath")
-        private final @Nullable Input<List<String>> blobPath;
+      private final @Nullable Input<List<String>> blobPath;
 
     public Input<List<String>> getBlobPath() {
         return this.blobPath == null ? Input.empty() : this.blobPath;
@@ -46,7 +46,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPathPrefix")
-        private final @Nullable Input<List<String>> blobPathPrefix;
+      private final @Nullable Input<List<String>> blobPathPrefix;
 
     public Input<List<String>> getBlobPathPrefix() {
         return this.blobPathPrefix == null ? Input.empty() : this.blobPathPrefix;

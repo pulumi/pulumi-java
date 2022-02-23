@@ -23,7 +23,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configurationStatus")
-        private final @Nullable Input<String> configurationStatus;
+      private final @Nullable Input<String> configurationStatus;
 
     public Input<String> getConfigurationStatus() {
         return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
@@ -34,7 +34,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcementSupport")
-        private final @Nullable Input<String> enforcementSupport;
+      private final @Nullable Input<String> enforcementSupport;
 
     public Input<String> getEnforcementSupport() {
         return this.enforcementSupport == null ? Input.empty() : this.enforcementSupport;
@@ -45,7 +45,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recommendationAction")
-        private final @Nullable Input<String> recommendationAction;
+      private final @Nullable Input<String> recommendationAction;
 
     public Input<String> getRecommendationAction() {
         return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
@@ -56,7 +56,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

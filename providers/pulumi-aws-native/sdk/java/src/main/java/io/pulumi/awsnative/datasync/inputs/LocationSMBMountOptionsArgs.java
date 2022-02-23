@@ -23,7 +23,7 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<LocationSMBMountOptionsVersion> version;
+      private final @Nullable Input<LocationSMBMountOptionsVersion> version;
 
     public Input<LocationSMBMountOptionsVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;

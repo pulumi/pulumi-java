@@ -22,7 +22,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="host", required=true)
-        private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -33,7 +33,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tls", required=true)
-        private final TlsPropertiesResponse tls;
+      private final TlsPropertiesResponse tls;
 
     public TlsPropertiesResponse getTls() {
         return this.tls;

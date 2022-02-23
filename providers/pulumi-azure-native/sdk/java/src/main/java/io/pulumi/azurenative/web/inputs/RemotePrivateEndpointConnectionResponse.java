@@ -26,7 +26,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -37,7 +37,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipAddresses")
-        private final @Nullable List<String> ipAddresses;
+      private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
@@ -48,7 +48,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -59,7 +59,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateEndpoint")
-        private final @Nullable ArmIdWrapperResponse privateEndpoint;
+      private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -81,14 +81,14 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-        private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -99,7 +99,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

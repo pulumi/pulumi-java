@@ -22,7 +22,7 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ManagerType> type;
+      private final Input<ManagerType> type;
 
     public Input<ManagerType> getType() {
         return this.type;

@@ -32,7 +32,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectionBandwidth")
-        private final @Nullable Integer connectionBandwidth;
+      private final @Nullable Integer connectionBandwidth;
 
     public Optional<Integer> getConnectionBandwidth() {
         return this.connectionBandwidth == null ? Optional.empty() : Optional.ofNullable(this.connectionBandwidth);
@@ -43,7 +43,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectionStatus", required=true)
-        private final String connectionStatus;
+      private final String connectionStatus;
 
     public String getConnectionStatus() {
         return this.connectionStatus;
@@ -54,7 +54,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dpdTimeoutSeconds")
-        private final @Nullable Integer dpdTimeoutSeconds;
+      private final @Nullable Integer dpdTimeoutSeconds;
 
     public Optional<Integer> getDpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.dpdTimeoutSeconds);
@@ -65,7 +65,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="egressBytesTransferred", required=true)
-        private final Double egressBytesTransferred;
+      private final Double egressBytesTransferred;
 
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -76,7 +76,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enableBgp")
-        private final @Nullable Boolean enableBgp;
+      private final @Nullable Boolean enableBgp;
 
     public Optional<Boolean> getEnableBgp() {
         return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
@@ -87,7 +87,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enableInternetSecurity")
-        private final @Nullable Boolean enableInternetSecurity;
+      private final @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
@@ -98,7 +98,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enableRateLimiting")
-        private final @Nullable Boolean enableRateLimiting;
+      private final @Nullable Boolean enableRateLimiting;
 
     public Optional<Boolean> getEnableRateLimiting() {
         return this.enableRateLimiting == null ? Optional.empty() : Optional.ofNullable(this.enableRateLimiting);
@@ -109,7 +109,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -120,7 +120,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -131,7 +131,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ingressBytesTransferred", required=true)
-        private final Double ingressBytesTransferred;
+      private final Double ingressBytesTransferred;
 
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -142,7 +142,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipsecPolicies")
-        private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
+      private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
 
     public List<IpsecPolicyResponse> getIpsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
@@ -153,7 +153,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -164,7 +164,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -175,7 +175,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="remoteVpnSite")
-        private final @Nullable SubResourceResponse remoteVpnSite;
+      private final @Nullable SubResourceResponse remoteVpnSite;
 
     public Optional<SubResourceResponse> getRemoteVpnSite() {
         return this.remoteVpnSite == null ? Optional.empty() : Optional.ofNullable(this.remoteVpnSite);
@@ -186,7 +186,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routingConfiguration")
-        private final @Nullable RoutingConfigurationResponse routingConfiguration;
+      private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
@@ -197,7 +197,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routingWeight")
-        private final @Nullable Integer routingWeight;
+      private final @Nullable Integer routingWeight;
 
     public Optional<Integer> getRoutingWeight() {
         return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
@@ -208,7 +208,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sharedKey")
-        private final @Nullable String sharedKey;
+      private final @Nullable String sharedKey;
 
     public Optional<String> getSharedKey() {
         return this.sharedKey == null ? Optional.empty() : Optional.ofNullable(this.sharedKey);
@@ -219,7 +219,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="trafficSelectorPolicies")
-        private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
+      private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
 
     public List<TrafficSelectorPolicyResponse> getTrafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
@@ -230,7 +230,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="useLocalAzureIpAddress")
-        private final @Nullable Boolean useLocalAzureIpAddress;
+      private final @Nullable Boolean useLocalAzureIpAddress;
 
     public Optional<Boolean> getUseLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress == null ? Optional.empty() : Optional.ofNullable(this.useLocalAzureIpAddress);
@@ -241,7 +241,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="usePolicyBasedTrafficSelectors")
-        private final @Nullable Boolean usePolicyBasedTrafficSelectors;
+      private final @Nullable Boolean usePolicyBasedTrafficSelectors;
 
     public Optional<Boolean> getUsePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors == null ? Optional.empty() : Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
@@ -252,7 +252,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vpnConnectionProtocolType")
-        private final @Nullable String vpnConnectionProtocolType;
+      private final @Nullable String vpnConnectionProtocolType;
 
     public Optional<String> getVpnConnectionProtocolType() {
         return this.vpnConnectionProtocolType == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionProtocolType);
@@ -263,7 +263,7 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vpnLinkConnections")
-        private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
+      private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
 
     public List<VpnSiteLinkConnectionResponse> getVpnLinkConnections() {
         return this.vpnLinkConnections == null ? List.of() : this.vpnLinkConnections;

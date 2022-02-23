@@ -15,7 +15,7 @@ public final class JobPigConfigLoggingConfigArgs extends io.pulumi.resources.Res
     public static final JobPigConfigLoggingConfigArgs Empty = new JobPigConfigLoggingConfigArgs();
 
     @InputImport(name="driverLogLevels", required=true)
-        private final Input<Map<String,String>> driverLogLevels;
+      private final Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels;

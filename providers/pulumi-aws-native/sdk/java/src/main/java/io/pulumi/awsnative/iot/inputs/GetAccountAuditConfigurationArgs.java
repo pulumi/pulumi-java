@@ -17,7 +17,7 @@ public final class GetAccountAuditConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountId", required=true)
-        private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;

@@ -15,14 +15,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigMana
     public static final WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs();
 
     @InputImport(name="instanceGroupManagerName")
-        private final @Nullable Input<String> instanceGroupManagerName;
+      private final @Nullable Input<String> instanceGroupManagerName;
 
     public Input<String> getInstanceGroupManagerName() {
         return this.instanceGroupManagerName == null ? Input.empty() : this.instanceGroupManagerName;
     }
 
     @InputImport(name="instanceTemplateName")
-        private final @Nullable Input<String> instanceTemplateName;
+      private final @Nullable Input<String> instanceTemplateName;
 
     public Input<String> getInstanceTemplateName() {
         return this.instanceTemplateName == null ? Input.empty() : this.instanceTemplateName;

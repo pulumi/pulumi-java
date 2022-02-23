@@ -26,7 +26,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifacts")
-        private final @Nullable ServiceUnitArtifactsResponse artifacts;
+      private final @Nullable ServiceUnitArtifactsResponse artifacts;
 
     public Optional<ServiceUnitArtifactsResponse> getArtifacts() {
         return this.artifacts == null ? Optional.empty() : Optional.ofNullable(this.artifacts);
@@ -37,7 +37,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deploymentMode", required=true)
-        private final String deploymentMode;
+      private final String deploymentMode;
 
     public String getDeploymentMode() {
         return this.deploymentMode;
@@ -48,7 +48,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -59,7 +59,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="steps")
-        private final @Nullable List<RolloutStepResponse> steps;
+      private final @Nullable List<RolloutStepResponse> steps;
 
     public List<RolloutStepResponse> getSteps() {
         return this.steps == null ? List.of() : this.steps;
@@ -70,7 +70,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetResourceGroup", required=true)
-        private final String targetResourceGroup;
+      private final String targetResourceGroup;
 
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;

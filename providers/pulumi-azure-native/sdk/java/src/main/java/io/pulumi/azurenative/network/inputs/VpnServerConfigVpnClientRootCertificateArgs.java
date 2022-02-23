@@ -23,7 +23,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicCertData")
-        private final @Nullable Input<String> publicCertData;
+      private final @Nullable Input<String> publicCertData;
 
     public Input<String> getPublicCertData() {
         return this.publicCertData == null ? Input.empty() : this.publicCertData;

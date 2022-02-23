@@ -17,7 +17,7 @@ public final class GetResourceSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceSetName", required=true)
-        private final String resourceSetName;
+      private final String resourceSetName;
 
     public String getResourceSetName() {
         return this.resourceSetName;

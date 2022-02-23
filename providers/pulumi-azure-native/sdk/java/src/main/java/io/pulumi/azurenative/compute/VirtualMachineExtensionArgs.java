@@ -23,7 +23,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-        private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -34,7 +34,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableAutomaticUpgrade")
-        private final @Nullable Input<Boolean> enableAutomaticUpgrade;
+      private final @Nullable Input<Boolean> enableAutomaticUpgrade;
 
     public Input<Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
@@ -45,7 +45,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="forceUpdateTag")
-        private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -56,7 +56,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceView")
-        private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
+      private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
     public Input<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
         return this.instanceView == null ? Input.empty() : this.instanceView;
@@ -67,7 +67,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protectedSettings")
-        private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -89,7 +89,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publisher")
-        private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -100,7 +100,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<Object> settings;
+      private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -122,7 +122,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -133,7 +133,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -144,7 +144,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="typeHandlerVersion")
-        private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
@@ -155,7 +155,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vmExtensionName")
-        private final @Nullable Input<String> vmExtensionName;
+      private final @Nullable Input<String> vmExtensionName;
 
     public Input<String> getVmExtensionName() {
         return this.vmExtensionName == null ? Input.empty() : this.vmExtensionName;
@@ -166,7 +166,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vmName", required=true)
-        private final Input<String> vmName;
+      private final Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName;

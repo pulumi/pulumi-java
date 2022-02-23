@@ -17,7 +17,7 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="applicationDefinitionName", required=true)
-        private final String applicationDefinitionName;
+      private final String applicationDefinitionName;
 
     public String getApplicationDefinitionName() {
         return this.applicationDefinitionName;
@@ -28,7 +28,7 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

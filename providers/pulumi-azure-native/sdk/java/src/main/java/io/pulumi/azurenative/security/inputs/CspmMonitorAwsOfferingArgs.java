@@ -24,7 +24,7 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="nativeCloudConnection")
-        private final @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
+      private final @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
 
     public Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> getNativeCloudConnection() {
         return this.nativeCloudConnection == null ? Input.empty() : this.nativeCloudConnection;
@@ -36,7 +36,7 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offeringType", required=true)
-        private final Input<String> offeringType;
+      private final Input<String> offeringType;
 
     public Input<String> getOfferingType() {
         return this.offeringType;

@@ -30,7 +30,7 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="image")
-        private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -41,7 +41,7 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,Object>> labels;
+      private final @Nullable Input<Map<String,Object>> labels;
 
     public Input<Map<String,Object>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -53,7 +53,7 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="size")
-        private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -64,7 +64,7 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

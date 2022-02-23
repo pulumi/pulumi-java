@@ -18,49 +18,49 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     public static final IntegrationScheduledTriggerPropertiesArgs Empty = new IntegrationScheduledTriggerPropertiesArgs();
 
     @InputImport(name="dataPullMode")
-        private final @Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
+      private final @Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
     public Input<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
         return this.dataPullMode == null ? Input.empty() : this.dataPullMode;
     }
 
     @InputImport(name="firstExecutionFrom")
-        private final @Nullable Input<Double> firstExecutionFrom;
+      private final @Nullable Input<Double> firstExecutionFrom;
 
     public Input<Double> getFirstExecutionFrom() {
         return this.firstExecutionFrom == null ? Input.empty() : this.firstExecutionFrom;
     }
 
     @InputImport(name="scheduleEndTime")
-        private final @Nullable Input<Double> scheduleEndTime;
+      private final @Nullable Input<Double> scheduleEndTime;
 
     public Input<Double> getScheduleEndTime() {
         return this.scheduleEndTime == null ? Input.empty() : this.scheduleEndTime;
     }
 
     @InputImport(name="scheduleExpression", required=true)
-        private final Input<String> scheduleExpression;
+      private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     @InputImport(name="scheduleOffset")
-        private final @Nullable Input<Integer> scheduleOffset;
+      private final @Nullable Input<Integer> scheduleOffset;
 
     public Input<Integer> getScheduleOffset() {
         return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
     }
 
     @InputImport(name="scheduleStartTime")
-        private final @Nullable Input<Double> scheduleStartTime;
+      private final @Nullable Input<Double> scheduleStartTime;
 
     public Input<Double> getScheduleStartTime() {
         return this.scheduleStartTime == null ? Input.empty() : this.scheduleStartTime;
     }
 
     @InputImport(name="timezone")
-        private final @Nullable Input<String> timezone;
+      private final @Nullable Input<String> timezone;
 
     public Input<String> getTimezone() {
         return this.timezone == null ? Input.empty() : this.timezone;

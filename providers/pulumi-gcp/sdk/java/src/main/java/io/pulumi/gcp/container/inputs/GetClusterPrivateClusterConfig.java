@@ -16,49 +16,49 @@ public final class GetClusterPrivateClusterConfig extends io.pulumi.resources.In
     public static final GetClusterPrivateClusterConfig Empty = new GetClusterPrivateClusterConfig();
 
     @InputImport(name="enablePrivateEndpoint", required=true)
-        private final Boolean enablePrivateEndpoint;
+      private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
     @InputImport(name="enablePrivateNodes", required=true)
-        private final Boolean enablePrivateNodes;
+      private final Boolean enablePrivateNodes;
 
     public Boolean getEnablePrivateNodes() {
         return this.enablePrivateNodes;
     }
 
     @InputImport(name="masterGlobalAccessConfigs", required=true)
-        private final List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs;
+      private final List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs;
 
     public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfigs() {
         return this.masterGlobalAccessConfigs;
     }
 
     @InputImport(name="masterIpv4CidrBlock", required=true)
-        private final String masterIpv4CidrBlock;
+      private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
     @InputImport(name="peeringName", required=true)
-        private final String peeringName;
+      private final String peeringName;
 
     public String getPeeringName() {
         return this.peeringName;
     }
 
     @InputImport(name="privateEndpoint", required=true)
-        private final String privateEndpoint;
+      private final String privateEndpoint;
 
     public String getPrivateEndpoint() {
         return this.privateEndpoint;
     }
 
     @InputImport(name="publicEndpoint", required=true)
-        private final String publicEndpoint;
+      private final String publicEndpoint;
 
     public String getPublicEndpoint() {
         return this.publicEndpoint;

@@ -24,7 +24,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="status")
-        private final @Nullable MachineExtensionInstanceViewResponseStatus status;
+      private final @Nullable MachineExtensionInstanceViewResponseStatus status;
 
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -46,7 +46,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -57,7 +57,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="typeHandlerVersion", required=true)
-        private final String typeHandlerVersion;
+      private final String typeHandlerVersion;
 
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;

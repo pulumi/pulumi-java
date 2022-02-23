@@ -19,7 +19,7 @@ public final class ClusterDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clusterDns")
-        private final @Nullable Input<String> clusterDns;
+      private final @Nullable Input<String> clusterDns;
 
     public Input<String> getClusterDns() {
         return this.clusterDns == null ? Input.empty() : this.clusterDns;
@@ -30,7 +30,7 @@ public final class ClusterDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clusterDnsDomain")
-        private final @Nullable Input<String> clusterDnsDomain;
+      private final @Nullable Input<String> clusterDnsDomain;
 
     public Input<String> getClusterDnsDomain() {
         return this.clusterDnsDomain == null ? Input.empty() : this.clusterDnsDomain;
@@ -41,7 +41,7 @@ public final class ClusterDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clusterDnsScope")
-        private final @Nullable Input<String> clusterDnsScope;
+      private final @Nullable Input<String> clusterDnsScope;
 
     public Input<String> getClusterDnsScope() {
         return this.clusterDnsScope == null ? Input.empty() : this.clusterDnsScope;

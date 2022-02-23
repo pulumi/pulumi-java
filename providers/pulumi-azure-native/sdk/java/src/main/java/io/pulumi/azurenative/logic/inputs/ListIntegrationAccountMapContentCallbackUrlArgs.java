@@ -21,7 +21,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-        private final String integrationAccountName;
+      private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -32,7 +32,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
      * 
      */
     @InputImport(name="keyType")
-        private final @Nullable Either<String,KeyType> keyType;
+      private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
         return this.keyType == null ? null : this.keyType;
@@ -43,7 +43,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
      * 
      */
     @InputImport(name="mapName", required=true)
-        private final String mapName;
+      private final String mapName;
 
     public String getMapName() {
         return this.mapName;
@@ -54,7 +54,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
      * 
      */
     @InputImport(name="notAfter")
-        private final @Nullable String notAfter;
+      private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
@@ -65,7 +65,7 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

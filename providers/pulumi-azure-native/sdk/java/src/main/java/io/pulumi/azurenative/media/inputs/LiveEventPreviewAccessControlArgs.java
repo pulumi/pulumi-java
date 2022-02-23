@@ -23,7 +23,7 @@ public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ip")
-        private final @Nullable Input<IPAccessControlArgs> ip;
+      private final @Nullable Input<IPAccessControlArgs> ip;
 
     public Input<IPAccessControlArgs> getIp() {
         return this.ip == null ? Input.empty() : this.ip;

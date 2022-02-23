@@ -24,7 +24,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="delayInMinutes")
-        private final @Nullable Input<Integer> delayInMinutes;
+      private final @Nullable Input<Integer> delayInMinutes;
 
     public Input<Integer> getDelayInMinutes() {
         return this.delayInMinutes == null ? Input.empty() : this.delayInMinutes;
@@ -35,7 +35,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

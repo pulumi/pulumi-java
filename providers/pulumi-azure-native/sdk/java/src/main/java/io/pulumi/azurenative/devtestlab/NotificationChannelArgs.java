@@ -22,7 +22,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="emailRecipient")
-        private final @Nullable Input<String> emailRecipient;
+      private final @Nullable Input<String> emailRecipient;
 
     public Input<String> getEmailRecipient() {
         return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
@@ -44,7 +44,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="events")
-        private final @Nullable Input<List<EventArgs>> events;
+      private final @Nullable Input<List<EventArgs>> events;
 
     public Input<List<EventArgs>> getEvents() {
         return this.events == null ? Input.empty() : this.events;
@@ -55,7 +55,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labName", required=true)
-        private final Input<String> labName;
+      private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -66,7 +66,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationLocale")
-        private final @Nullable Input<String> notificationLocale;
+      private final @Nullable Input<String> notificationLocale;
 
     public Input<String> getNotificationLocale() {
         return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
@@ -99,7 +99,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -110,7 +110,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="webHookUrl")
-        private final @Nullable Input<String> webHookUrl;
+      private final @Nullable Input<String> webHookUrl;
 
     public Input<String> getWebHookUrl() {
         return this.webHookUrl == null ? Input.empty() : this.webHookUrl;

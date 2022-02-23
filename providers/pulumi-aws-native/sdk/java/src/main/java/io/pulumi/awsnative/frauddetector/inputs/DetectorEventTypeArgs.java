@@ -25,7 +25,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-        private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createdTime")
-        private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -47,35 +47,35 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="entityTypes")
-        private final @Nullable Input<List<DetectorEntityTypeArgs>> entityTypes;
+      private final @Nullable Input<List<DetectorEntityTypeArgs>> entityTypes;
 
     public Input<List<DetectorEntityTypeArgs>> getEntityTypes() {
         return this.entityTypes == null ? Input.empty() : this.entityTypes;
     }
 
     @InputImport(name="eventVariables")
-        private final @Nullable Input<List<DetectorEventVariableArgs>> eventVariables;
+      private final @Nullable Input<List<DetectorEventVariableArgs>> eventVariables;
 
     public Input<List<DetectorEventVariableArgs>> getEventVariables() {
         return this.eventVariables == null ? Input.empty() : this.eventVariables;
     }
 
     @InputImport(name="inline")
-        private final @Nullable Input<Boolean> inline;
+      private final @Nullable Input<Boolean> inline;
 
     public Input<Boolean> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
     }
 
     @InputImport(name="labels")
-        private final @Nullable Input<List<DetectorLabelArgs>> labels;
+      private final @Nullable Input<List<DetectorLabelArgs>> labels;
 
     public Input<List<DetectorLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -86,7 +86,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastUpdatedTime")
-        private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
@@ -97,7 +97,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -108,7 +108,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<DetectorTagArgs>> tags;
+      private final @Nullable Input<List<DetectorTagArgs>> tags;
 
     public Input<List<DetectorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

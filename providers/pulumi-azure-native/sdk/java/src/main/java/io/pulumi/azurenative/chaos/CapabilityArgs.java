@@ -19,7 +19,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilityName")
-        private final @Nullable Input<String> capabilityName;
+      private final @Nullable Input<String> capabilityName;
 
     public Input<String> getCapabilityName() {
         return this.capabilityName == null ? Input.empty() : this.capabilityName;
@@ -30,7 +30,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentProviderNamespace", required=true)
-        private final Input<String> parentProviderNamespace;
+      private final Input<String> parentProviderNamespace;
 
     public Input<String> getParentProviderNamespace() {
         return this.parentProviderNamespace;
@@ -41,7 +41,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceName", required=true)
-        private final Input<String> parentResourceName;
+      private final Input<String> parentResourceName;
 
     public Input<String> getParentResourceName() {
         return this.parentResourceName;
@@ -52,7 +52,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-        private final Input<String> parentResourceType;
+      private final Input<String> parentResourceType;
 
     public Input<String> getParentResourceType() {
         return this.parentResourceType;
@@ -63,7 +63,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-        private final Input<String> targetName;
+      private final Input<String> targetName;
 
     public Input<String> getTargetName() {
         return this.targetName;

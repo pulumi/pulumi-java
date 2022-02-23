@@ -22,7 +22,7 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-        private final Input<String> sourceArmResourceId;
+      private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;

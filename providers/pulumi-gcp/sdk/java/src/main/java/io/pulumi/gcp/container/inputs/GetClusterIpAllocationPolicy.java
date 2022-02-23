@@ -13,28 +13,28 @@ public final class GetClusterIpAllocationPolicy extends io.pulumi.resources.Invo
     public static final GetClusterIpAllocationPolicy Empty = new GetClusterIpAllocationPolicy();
 
     @InputImport(name="clusterIpv4CidrBlock", required=true)
-        private final String clusterIpv4CidrBlock;
+      private final String clusterIpv4CidrBlock;
 
     public String getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
     }
 
     @InputImport(name="clusterSecondaryRangeName", required=true)
-        private final String clusterSecondaryRangeName;
+      private final String clusterSecondaryRangeName;
 
     public String getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
     }
 
     @InputImport(name="servicesIpv4CidrBlock", required=true)
-        private final String servicesIpv4CidrBlock;
+      private final String servicesIpv4CidrBlock;
 
     public String getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
     }
 
     @InputImport(name="servicesSecondaryRangeName", required=true)
-        private final String servicesSecondaryRangeName;
+      private final String servicesSecondaryRangeName;
 
     public String getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;

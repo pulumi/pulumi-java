@@ -22,7 +22,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLevels")
-        private final @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels;
+      private final @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
     public Input<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
@@ -34,7 +34,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;

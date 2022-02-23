@@ -24,7 +24,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<HttpVersionMatchConditionParametersArgs> parameters;
+      private final Input<HttpVersionMatchConditionParametersArgs> parameters;
 
     public Input<HttpVersionMatchConditionParametersArgs> getParameters() {
         return this.parameters;

@@ -17,21 +17,21 @@ public final class RuleGroup extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroup Empty = new RuleGroup();
 
     @InputImport(name="ruleVariables")
-        private final @Nullable RuleGroupRuleVariables ruleVariables;
+      private final @Nullable RuleGroupRuleVariables ruleVariables;
 
     public Optional<RuleGroupRuleVariables> getRuleVariables() {
         return this.ruleVariables == null ? Optional.empty() : Optional.ofNullable(this.ruleVariables);
     }
 
     @InputImport(name="rulesSource", required=true)
-        private final RuleGroupRulesSource rulesSource;
+      private final RuleGroupRulesSource rulesSource;
 
     public RuleGroupRulesSource getRulesSource() {
         return this.rulesSource;
     }
 
     @InputImport(name="statefulRuleOptions")
-        private final @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions;
+      private final @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions;
 
     public Optional<RuleGroupStatefulRuleOptions> getStatefulRuleOptions() {
         return this.statefulRuleOptions == null ? Optional.empty() : Optional.ofNullable(this.statefulRuleOptions);

@@ -21,7 +21,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelArn", required=true)
-        private final Input<String> channelArn;
+      private final Input<String> channelArn;
 
     public Input<String> getChannelArn() {
         return this.channelArn;
@@ -32,7 +32,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<StreamKeyTagArgs>> tags;
+      private final @Nullable Input<List<StreamKeyTagArgs>> tags;
 
     public Input<List<StreamKeyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

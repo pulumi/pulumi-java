@@ -14,7 +14,7 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     public static final RuleGroupAddressArgs Empty = new RuleGroupAddressArgs();
 
     @InputImport(name="addressDefinition", required=true)
-        private final Input<String> addressDefinition;
+      private final Input<String> addressDefinition;
 
     public Input<String> getAddressDefinition() {
         return this.addressDefinition;

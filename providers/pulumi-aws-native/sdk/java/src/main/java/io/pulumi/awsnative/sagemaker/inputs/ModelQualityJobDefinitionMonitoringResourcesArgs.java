@@ -18,7 +18,7 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     public static final ModelQualityJobDefinitionMonitoringResourcesArgs Empty = new ModelQualityJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-        private final Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Input<ModelQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;

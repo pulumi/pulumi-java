@@ -23,7 +23,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="logs")
-        private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+      private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
     public Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;

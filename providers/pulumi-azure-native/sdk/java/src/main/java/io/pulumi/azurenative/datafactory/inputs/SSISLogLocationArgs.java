@@ -27,7 +27,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessCredential")
-        private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
+      private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
 
     public Input<SSISAccessCredentialArgs> getAccessCredential() {
         return this.accessCredential == null ? Input.empty() : this.accessCredential;
@@ -38,7 +38,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logPath", required=true)
-        private final Input<Object> logPath;
+      private final Input<Object> logPath;
 
     public Input<Object> getLogPath() {
         return this.logPath;
@@ -49,7 +49,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logRefreshInterval")
-        private final @Nullable Input<Object> logRefreshInterval;
+      private final @Nullable Input<Object> logRefreshInterval;
 
     public Input<Object> getLogRefreshInterval() {
         return this.logRefreshInterval == null ? Input.empty() : this.logRefreshInterval;
@@ -60,7 +60,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,SsisLogLocationType>> type;
+      private final Input<Either<String,SsisLogLocationType>> type;
 
     public Input<Either<String,SsisLogLocationType>> getType() {
         return this.type;

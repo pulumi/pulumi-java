@@ -25,7 +25,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -36,7 +36,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="isCompatible")
-        private final @Nullable Boolean isCompatible;
+      private final @Nullable Boolean isCompatible;
 
     public Optional<Boolean> getIsCompatible() {
         return this.isCompatible == null ? Optional.empty() : Optional.ofNullable(this.isCompatible);
@@ -47,7 +47,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="issues")
-        private final @Nullable List<String> issues;
+      private final @Nullable List<String> issues;
 
     public List<String> getIssues() {
         return this.issues == null ? List.of() : this.issues;
@@ -58,7 +58,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);

@@ -29,7 +29,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataRefreshWindowDays")
-        private final @Nullable Input<Integer> dataRefreshWindowDays;
+      private final @Nullable Input<Integer> dataRefreshWindowDays;
 
     public Input<Integer> getDataRefreshWindowDays() {
         return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
@@ -40,7 +40,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataSourceId")
-        private final @Nullable Input<String> dataSourceId;
+      private final @Nullable Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
@@ -51,7 +51,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationDatasetId")
-        private final @Nullable Input<String> destinationDatasetId;
+      private final @Nullable Input<String> destinationDatasetId;
 
     public Input<String> getDestinationDatasetId() {
         return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
@@ -62,7 +62,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disabled")
-        private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -73,7 +73,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -86,7 +86,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="emailPreferences")
-        private final @Nullable Input<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
+      private final @Nullable Input<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
 
     public Input<DataTransferConfigEmailPreferencesGetArgs> getEmailPreferences() {
         return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
@@ -98,7 +98,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -111,7 +111,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -123,7 +123,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationPubsubTopic")
-        private final @Nullable Input<String> notificationPubsubTopic;
+      private final @Nullable Input<String> notificationPubsubTopic;
 
     public Input<String> getNotificationPubsubTopic() {
         return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
@@ -136,7 +136,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="params")
-        private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params == null ? Input.empty() : this.params;
@@ -148,7 +148,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -166,7 +166,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -178,7 +178,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scheduleOptions")
-        private final @Nullable Input<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
+      private final @Nullable Input<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
 
     public Input<DataTransferConfigScheduleOptionsGetArgs> getScheduleOptions() {
         return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
@@ -195,7 +195,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sensitiveParams")
-        private final @Nullable Input<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
+      private final @Nullable Input<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
 
     public Input<DataTransferConfigSensitiveParamsGetArgs> getSensitiveParams() {
         return this.sensitiveParams == null ? Input.empty() : this.sensitiveParams;
@@ -208,7 +208,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccountName")
-        private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;

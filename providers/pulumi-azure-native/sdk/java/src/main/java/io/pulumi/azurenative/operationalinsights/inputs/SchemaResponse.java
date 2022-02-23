@@ -27,7 +27,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="categories", required=true)
-        private final List<String> categories;
+      private final List<String> categories;
 
     public List<String> getCategories() {
         return this.categories;
@@ -38,7 +38,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="columns")
-        private final @Nullable List<ColumnResponse> columns;
+      private final @Nullable List<ColumnResponse> columns;
 
     public List<ColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -49,7 +49,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -60,7 +60,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -71,7 +71,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-        private final List<String> labels;
+      private final List<String> labels;
 
     public List<String> getLabels() {
         return this.labels;
@@ -82,7 +82,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -93,7 +93,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restoredLogs", required=true)
-        private final RestoredLogsResponse restoredLogs;
+      private final RestoredLogsResponse restoredLogs;
 
     public RestoredLogsResponse getRestoredLogs() {
         return this.restoredLogs;
@@ -104,7 +104,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="searchResults", required=true)
-        private final SearchResultsResponse searchResults;
+      private final SearchResultsResponse searchResults;
 
     public SearchResultsResponse getSearchResults() {
         return this.searchResults;
@@ -115,7 +115,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="solutions", required=true)
-        private final List<String> solutions;
+      private final List<String> solutions;
 
     public List<String> getSolutions() {
         return this.solutions;
@@ -126,7 +126,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-        private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -137,7 +137,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="standardColumns", required=true)
-        private final List<ColumnResponse> standardColumns;
+      private final List<ColumnResponse> standardColumns;
 
     public List<ColumnResponse> getStandardColumns() {
         return this.standardColumns;
@@ -148,7 +148,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableSubType", required=true)
-        private final String tableSubType;
+      private final String tableSubType;
 
     public String getTableSubType() {
         return this.tableSubType;
@@ -159,7 +159,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableType", required=true)
-        private final String tableType;
+      private final String tableType;
 
     public String getTableType() {
         return this.tableType;

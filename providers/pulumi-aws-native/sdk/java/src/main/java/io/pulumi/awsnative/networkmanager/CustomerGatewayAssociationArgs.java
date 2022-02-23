@@ -19,7 +19,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="customerGatewayArn", required=true)
-        private final Input<String> customerGatewayArn;
+      private final Input<String> customerGatewayArn;
 
     public Input<String> getCustomerGatewayArn() {
         return this.customerGatewayArn;
@@ -30,7 +30,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deviceId", required=true)
-        private final Input<String> deviceId;
+      private final Input<String> deviceId;
 
     public Input<String> getDeviceId() {
         return this.deviceId;
@@ -41,7 +41,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-        private final Input<String> globalNetworkId;
+      private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -52,7 +52,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkId")
-        private final @Nullable Input<String> linkId;
+      private final @Nullable Input<String> linkId;
 
     public Input<String> getLinkId() {
         return this.linkId == null ? Input.empty() : this.linkId;

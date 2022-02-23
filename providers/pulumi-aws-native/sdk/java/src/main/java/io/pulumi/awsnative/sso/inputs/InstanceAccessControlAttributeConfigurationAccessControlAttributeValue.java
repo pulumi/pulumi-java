@@ -14,7 +14,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue();
 
     @InputImport(name="source", required=true)
-        private final List<String> source;
+      private final List<String> source;
 
     public List<String> getSource() {
         return this.source;

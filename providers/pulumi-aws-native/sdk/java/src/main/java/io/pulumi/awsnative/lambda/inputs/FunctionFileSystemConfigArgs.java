@@ -18,7 +18,7 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn", required=true)
-        private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -29,7 +29,7 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="localMountPath", required=true)
-        private final Input<String> localMountPath;
+      private final Input<String> localMountPath;
 
     public Input<String> getLocalMountPath() {
         return this.localMountPath;

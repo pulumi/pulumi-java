@@ -23,7 +23,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pattern", required=true)
-        private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;
@@ -34,7 +34,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="patternName", required=true)
-        private final Input<String> patternName;
+      private final Input<String> patternName;
 
     public Input<String> getPatternName() {
         return this.patternName;
@@ -45,7 +45,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rank", required=true)
-        private final Input<Integer> rank;
+      private final Input<Integer> rank;
 
     public Input<Integer> getRank() {
         return this.rank;

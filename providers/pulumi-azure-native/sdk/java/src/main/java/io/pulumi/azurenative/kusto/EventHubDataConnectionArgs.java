@@ -23,7 +23,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -34,7 +34,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="compression")
-        private final @Nullable Input<Either<String,Compression>> compression;
+      private final @Nullable Input<Either<String,Compression>> compression;
 
     public Input<Either<String,Compression>> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -45,7 +45,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-        private final Input<String> consumerGroup;
+      private final Input<String> consumerGroup;
 
     public Input<String> getConsumerGroup() {
         return this.consumerGroup;
@@ -56,7 +56,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataConnectionName")
-        private final @Nullable Input<String> dataConnectionName;
+      private final @Nullable Input<String> dataConnectionName;
 
     public Input<String> getDataConnectionName() {
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
@@ -67,7 +67,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataFormat")
-        private final @Nullable Input<Either<String,EventHubDataFormat>> dataFormat;
+      private final @Nullable Input<Either<String,EventHubDataFormat>> dataFormat;
 
     public Input<Either<String,EventHubDataFormat>> getDataFormat() {
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
@@ -78,7 +78,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -89,7 +89,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventHubResourceId", required=true)
-        private final Input<String> eventHubResourceId;
+      private final Input<String> eventHubResourceId;
 
     public Input<String> getEventHubResourceId() {
         return this.eventHubResourceId;
@@ -100,7 +100,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventSystemProperties")
-        private final @Nullable Input<List<String>> eventSystemProperties;
+      private final @Nullable Input<List<String>> eventSystemProperties;
 
     public Input<List<String>> getEventSystemProperties() {
         return this.eventSystemProperties == null ? Input.empty() : this.eventSystemProperties;
@@ -112,7 +112,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -123,7 +123,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -134,7 +134,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedIdentityResourceId")
-        private final @Nullable Input<String> managedIdentityResourceId;
+      private final @Nullable Input<String> managedIdentityResourceId;
 
     public Input<String> getManagedIdentityResourceId() {
         return this.managedIdentityResourceId == null ? Input.empty() : this.managedIdentityResourceId;
@@ -145,7 +145,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mappingRuleName")
-        private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Input<String> mappingRuleName;
 
     public Input<String> getMappingRuleName() {
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
@@ -156,7 +156,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

@@ -21,7 +21,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedSubscriptionId", required=true)
-        private final Input<String> linkedSubscriptionId;
+      private final Input<String> linkedSubscriptionId;
 
     public Input<String> getLinkedSubscriptionId() {
         return this.linkedSubscriptionId;
@@ -32,7 +32,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedSubscriptionName")
-        private final @Nullable Input<String> linkedSubscriptionName;
+      private final @Nullable Input<String> linkedSubscriptionName;
 
     public Input<String> getLinkedSubscriptionName() {
         return this.linkedSubscriptionName == null ? Input.empty() : this.linkedSubscriptionName;
@@ -43,7 +43,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<Either<String,Location>> location;
+      private final @Nullable Input<Either<String,Location>> location;
 
     public Input<Either<String,Location>> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registrationResourceId", required=true)
-        private final Input<String> registrationResourceId;
+      private final Input<String> registrationResourceId;
 
     public Input<String> getRegistrationResourceId() {
         return this.registrationResourceId;
@@ -65,7 +65,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final Input<String> resourceGroup;
+      private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;

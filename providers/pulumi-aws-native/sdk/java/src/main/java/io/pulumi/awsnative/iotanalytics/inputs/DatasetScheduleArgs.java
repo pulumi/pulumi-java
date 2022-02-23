@@ -14,7 +14,7 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatasetScheduleArgs Empty = new DatasetScheduleArgs();
 
     @InputImport(name="scheduleExpression", required=true)
-        private final Input<String> scheduleExpression;
+      private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;

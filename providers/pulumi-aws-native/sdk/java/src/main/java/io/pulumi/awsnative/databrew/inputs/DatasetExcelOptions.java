@@ -18,21 +18,21 @@ public final class DatasetExcelOptions extends io.pulumi.resources.InvokeArgs {
     public static final DatasetExcelOptions Empty = new DatasetExcelOptions();
 
     @InputImport(name="headerRow")
-        private final @Nullable Boolean headerRow;
+      private final @Nullable Boolean headerRow;
 
     public Optional<Boolean> getHeaderRow() {
         return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);
     }
 
     @InputImport(name="sheetIndexes")
-        private final @Nullable List<Integer> sheetIndexes;
+      private final @Nullable List<Integer> sheetIndexes;
 
     public List<Integer> getSheetIndexes() {
         return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
     }
 
     @InputImport(name="sheetNames")
-        private final @Nullable List<String> sheetNames;
+      private final @Nullable List<String> sheetNames;
 
     public List<String> getSheetNames() {
         return this.sheetNames == null ? List.of() : this.sheetNames;

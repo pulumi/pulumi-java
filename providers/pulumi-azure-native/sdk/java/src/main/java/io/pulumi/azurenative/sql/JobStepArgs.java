@@ -23,7 +23,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-        private final Input<JobStepActionArgs> action;
+      private final Input<JobStepActionArgs> action;
 
     public Input<JobStepActionArgs> getAction() {
         return this.action;
@@ -34,7 +34,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential", required=true)
-        private final Input<String> credential;
+      private final Input<String> credential;
 
     public Input<String> getCredential() {
         return this.credential;
@@ -45,7 +45,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionOptions")
-        private final @Nullable Input<JobStepExecutionOptionsArgs> executionOptions;
+      private final @Nullable Input<JobStepExecutionOptionsArgs> executionOptions;
 
     public Input<JobStepExecutionOptionsArgs> getExecutionOptions() {
         return this.executionOptions == null ? Input.empty() : this.executionOptions;
@@ -56,7 +56,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-        private final Input<String> jobAgentName;
+      private final Input<String> jobAgentName;
 
     public Input<String> getJobAgentName() {
         return this.jobAgentName;
@@ -67,7 +67,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-        private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;
@@ -78,7 +78,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="output")
-        private final @Nullable Input<JobStepOutputArgs> output;
+      private final @Nullable Input<JobStepOutputArgs> output;
 
     public Input<JobStepOutputArgs> getOutput() {
         return this.output == null ? Input.empty() : this.output;
@@ -89,7 +89,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -111,7 +111,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId")
-        private final @Nullable Input<Integer> stepId;
+      private final @Nullable Input<Integer> stepId;
 
     public Input<Integer> getStepId() {
         return this.stepId == null ? Input.empty() : this.stepId;
@@ -122,7 +122,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepName")
-        private final @Nullable Input<String> stepName;
+      private final @Nullable Input<String> stepName;
 
     public Input<String> getStepName() {
         return this.stepName == null ? Input.empty() : this.stepName;
@@ -133,7 +133,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroup", required=true)
-        private final Input<String> targetGroup;
+      private final Input<String> targetGroup;
 
     public Input<String> getTargetGroup() {
         return this.targetGroup;

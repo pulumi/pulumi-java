@@ -20,7 +20,7 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
     public static final ContainerPublicDomainName Empty = new ContainerPublicDomainName();
 
     @InputImport(name="certificateName")
-        private final @Nullable String certificateName;
+      private final @Nullable String certificateName;
 
     public Optional<String> getCertificateName() {
         return this.certificateName == null ? Optional.empty() : Optional.ofNullable(this.certificateName);
@@ -31,7 +31,7 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="domainNames")
-        private final @Nullable List<String> domainNames;
+      private final @Nullable List<String> domainNames;
 
     public List<String> getDomainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;

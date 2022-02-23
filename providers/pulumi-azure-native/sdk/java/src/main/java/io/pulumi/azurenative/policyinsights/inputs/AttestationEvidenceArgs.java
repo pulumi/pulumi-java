@@ -23,7 +23,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUri")
-        private final @Nullable Input<String> sourceUri;
+      private final @Nullable Input<String> sourceUri;
 
     public Input<String> getSourceUri() {
         return this.sourceUri == null ? Input.empty() : this.sourceUri;

@@ -16,14 +16,14 @@ public final class GroupConfigurationParameterArgs extends io.pulumi.resources.R
     public static final GroupConfigurationParameterArgs Empty = new GroupConfigurationParameterArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

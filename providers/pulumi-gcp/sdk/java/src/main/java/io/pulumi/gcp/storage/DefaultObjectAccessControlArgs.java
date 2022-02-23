@@ -19,7 +19,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -38,7 +38,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="entity", required=true)
-        private final Input<String> entity;
+      private final Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity;
@@ -49,7 +49,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="object")
-        private final @Nullable Input<String> object;
+      private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -61,7 +61,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

@@ -13,28 +13,28 @@ public final class TopicRuleCloudwatchAlarmAction extends io.pulumi.resources.In
     public static final TopicRuleCloudwatchAlarmAction Empty = new TopicRuleCloudwatchAlarmAction();
 
     @InputImport(name="alarmName", required=true)
-        private final String alarmName;
+      private final String alarmName;
 
     public String getAlarmName() {
         return this.alarmName;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stateReason", required=true)
-        private final String stateReason;
+      private final String stateReason;
 
     public String getStateReason() {
         return this.stateReason;
     }
 
     @InputImport(name="stateValue", required=true)
-        private final String stateValue;
+      private final String stateValue;
 
     public String getStateValue() {
         return this.stateValue;

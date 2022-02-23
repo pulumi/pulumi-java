@@ -15,21 +15,21 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     public static final DeliveryStreamHttpEndpointConfigurationArgs Empty = new DeliveryStreamHttpEndpointConfigurationArgs();
 
     @InputImport(name="accessKey")
-        private final @Nullable Input<String> accessKey;
+      private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

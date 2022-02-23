@@ -23,7 +23,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kerberosArmoring")
-        private final @Nullable String kerberosArmoring;
+      private final @Nullable String kerberosArmoring;
 
     public Optional<String> getKerberosArmoring() {
         return this.kerberosArmoring == null ? Optional.empty() : Optional.ofNullable(this.kerberosArmoring);
@@ -34,7 +34,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kerberosRc4Encryption")
-        private final @Nullable String kerberosRc4Encryption;
+      private final @Nullable String kerberosRc4Encryption;
 
     public Optional<String> getKerberosRc4Encryption() {
         return this.kerberosRc4Encryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosRc4Encryption);
@@ -45,7 +45,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="ntlmV1")
-        private final @Nullable String ntlmV1;
+      private final @Nullable String ntlmV1;
 
     public Optional<String> getNtlmV1() {
         return this.ntlmV1 == null ? Optional.empty() : Optional.ofNullable(this.ntlmV1);
@@ -56,7 +56,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="syncKerberosPasswords")
-        private final @Nullable String syncKerberosPasswords;
+      private final @Nullable String syncKerberosPasswords;
 
     public Optional<String> getSyncKerberosPasswords() {
         return this.syncKerberosPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncKerberosPasswords);
@@ -67,7 +67,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="syncNtlmPasswords")
-        private final @Nullable String syncNtlmPasswords;
+      private final @Nullable String syncNtlmPasswords;
 
     public Optional<String> getSyncNtlmPasswords() {
         return this.syncNtlmPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncNtlmPasswords);
@@ -78,7 +78,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="syncOnPremPasswords")
-        private final @Nullable String syncOnPremPasswords;
+      private final @Nullable String syncOnPremPasswords;
 
     public Optional<String> getSyncOnPremPasswords() {
         return this.syncOnPremPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncOnPremPasswords);
@@ -89,7 +89,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tlsV1")
-        private final @Nullable String tlsV1;
+      private final @Nullable String tlsV1;
 
     public Optional<String> getTlsV1() {
         return this.tlsV1 == null ? Optional.empty() : Optional.ofNullable(this.tlsV1);

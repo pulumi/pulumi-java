@@ -27,7 +27,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fabricSpecificSettings")
-        private final @Nullable Object fabricSpecificSettings;
+      private final @Nullable Object fabricSpecificSettings;
 
     public Object getFabricSpecificSettings() {
         return this.fabricSpecificSettings == null ? null : this.fabricSpecificSettings;
@@ -38,7 +38,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryFabricFriendlyName")
-        private final @Nullable String primaryFabricFriendlyName;
+      private final @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> getPrimaryFabricFriendlyName() {
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
@@ -49,7 +49,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryNetworkFriendlyName")
-        private final @Nullable String primaryNetworkFriendlyName;
+      private final @Nullable String primaryNetworkFriendlyName;
 
     public Optional<String> getPrimaryNetworkFriendlyName() {
         return this.primaryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkFriendlyName);
@@ -60,7 +60,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryNetworkId")
-        private final @Nullable String primaryNetworkId;
+      private final @Nullable String primaryNetworkId;
 
     public Optional<String> getPrimaryNetworkId() {
         return this.primaryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkId);
@@ -71,7 +71,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryFabricArmId")
-        private final @Nullable String recoveryFabricArmId;
+      private final @Nullable String recoveryFabricArmId;
 
     public Optional<String> getRecoveryFabricArmId() {
         return this.recoveryFabricArmId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricArmId);
@@ -82,7 +82,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryFabricFriendlyName")
-        private final @Nullable String recoveryFabricFriendlyName;
+      private final @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> getRecoveryFabricFriendlyName() {
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
@@ -93,7 +93,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryNetworkFriendlyName")
-        private final @Nullable String recoveryNetworkFriendlyName;
+      private final @Nullable String recoveryNetworkFriendlyName;
 
     public Optional<String> getRecoveryNetworkFriendlyName() {
         return this.recoveryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkFriendlyName);
@@ -104,7 +104,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryNetworkId")
-        private final @Nullable String recoveryNetworkId;
+      private final @Nullable String recoveryNetworkId;
 
     public Optional<String> getRecoveryNetworkId() {
         return this.recoveryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkId);
@@ -115,7 +115,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);

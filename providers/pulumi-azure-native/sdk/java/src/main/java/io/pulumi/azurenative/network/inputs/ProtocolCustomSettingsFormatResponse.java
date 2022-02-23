@@ -23,7 +23,7 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -34,7 +34,7 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceRateOverride")
-        private final @Nullable String sourceRateOverride;
+      private final @Nullable String sourceRateOverride;
 
     public Optional<String> getSourceRateOverride() {
         return this.sourceRateOverride == null ? Optional.empty() : Optional.ofNullable(this.sourceRateOverride);
@@ -45,7 +45,7 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="triggerRateOverride")
-        private final @Nullable String triggerRateOverride;
+      private final @Nullable String triggerRateOverride;
 
     public Optional<String> getTriggerRateOverride() {
         return this.triggerRateOverride == null ? Optional.empty() : Optional.ofNullable(this.triggerRateOverride);
@@ -56,7 +56,7 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="triggerSensitivityOverride")
-        private final @Nullable String triggerSensitivityOverride;
+      private final @Nullable String triggerSensitivityOverride;
 
     public Optional<String> getTriggerSensitivityOverride() {
         return this.triggerSensitivityOverride == null ? Optional.empty() : Optional.ofNullable(this.triggerSensitivityOverride);

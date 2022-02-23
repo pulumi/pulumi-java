@@ -23,7 +23,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="branchName")
-        private final @Nullable Input<String> branchName;
+      private final @Nullable Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName == null ? Input.empty() : this.branchName;
@@ -34,7 +34,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="commitSha")
-        private final @Nullable Input<String> commitSha;
+      private final @Nullable Input<String> commitSha;
 
     public Input<String> getCommitSha() {
         return this.commitSha == null ? Input.empty() : this.commitSha;
@@ -53,7 +53,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dir")
-        private final @Nullable Input<String> dir;
+      private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -64,7 +64,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="invertRegex")
-        private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -76,7 +76,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="projectId")
-        private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -87,7 +87,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="repoName", required=true)
-        private final Input<String> repoName;
+      private final Input<String> repoName;
 
     public Input<String> getRepoName() {
         return this.repoName;
@@ -98,7 +98,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="substitutions")
-        private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Input<Map<String,String>> substitutions;
 
     public Input<Map<String,String>> getSubstitutions() {
         return this.substitutions == null ? Input.empty() : this.substitutions;
@@ -111,7 +111,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tagName")
-        private final @Nullable Input<String> tagName;
+      private final @Nullable Input<String> tagName;
 
     public Input<String> getTagName() {
         return this.tagName == null ? Input.empty() : this.tagName;

@@ -37,7 +37,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterDefinition", required=true)
-        private final ClusterDefinitionResponse clusterDefinition;
+      private final ClusterDefinitionResponse clusterDefinition;
 
     public ClusterDefinitionResponse getClusterDefinition() {
         return this.clusterDefinition;
@@ -48,7 +48,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterHdpVersion")
-        private final @Nullable String clusterHdpVersion;
+      private final @Nullable String clusterHdpVersion;
 
     public Optional<String> getClusterHdpVersion() {
         return this.clusterHdpVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterHdpVersion);
@@ -59,7 +59,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterId")
-        private final @Nullable String clusterId;
+      private final @Nullable String clusterId;
 
     public Optional<String> getClusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
@@ -70,7 +70,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterState")
-        private final @Nullable String clusterState;
+      private final @Nullable String clusterState;
 
     public Optional<String> getClusterState() {
         return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);
@@ -81,7 +81,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterVersion")
-        private final @Nullable String clusterVersion;
+      private final @Nullable String clusterVersion;
 
     public Optional<String> getClusterVersion() {
         return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
@@ -92,7 +92,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="computeIsolationProperties")
-        private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
+      private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
 
     public Optional<ComputeIsolationPropertiesResponse> getComputeIsolationProperties() {
         return this.computeIsolationProperties == null ? Optional.empty() : Optional.ofNullable(this.computeIsolationProperties);
@@ -103,7 +103,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="computeProfile")
-        private final @Nullable ComputeProfileResponse computeProfile;
+      private final @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
@@ -114,7 +114,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="connectivityEndpoints")
-        private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
+      private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
 
     public List<ConnectivityEndpointResponse> getConnectivityEndpoints() {
         return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
@@ -125,7 +125,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="createdDate")
-        private final @Nullable String createdDate;
+      private final @Nullable String createdDate;
 
     public Optional<String> getCreatedDate() {
         return this.createdDate == null ? Optional.empty() : Optional.ofNullable(this.createdDate);
@@ -136,7 +136,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="diskEncryptionProperties")
-        private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
+      private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
 
     public Optional<DiskEncryptionPropertiesResponse> getDiskEncryptionProperties() {
         return this.diskEncryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionProperties);
@@ -147,7 +147,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encryptionInTransitProperties")
-        private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
+      private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
 
     public Optional<EncryptionInTransitPropertiesResponse> getEncryptionInTransitProperties() {
         return this.encryptionInTransitProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionInTransitProperties);
@@ -158,7 +158,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="errors")
-        private final @Nullable List<ErrorsResponse> errors;
+      private final @Nullable List<ErrorsResponse> errors;
 
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -169,7 +169,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="excludedServicesConfig")
-        private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
+      private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
 
     public Optional<ExcludedServicesConfigResponse> getExcludedServicesConfig() {
         return this.excludedServicesConfig == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfig);
@@ -180,7 +180,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kafkaRestProperties")
-        private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
+      private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
 
     public Optional<KafkaRestPropertiesResponse> getKafkaRestProperties() {
         return this.kafkaRestProperties == null ? Optional.empty() : Optional.ofNullable(this.kafkaRestProperties);
@@ -191,7 +191,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="minSupportedTlsVersion")
-        private final @Nullable String minSupportedTlsVersion;
+      private final @Nullable String minSupportedTlsVersion;
 
     public Optional<String> getMinSupportedTlsVersion() {
         return this.minSupportedTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minSupportedTlsVersion);
@@ -202,7 +202,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="networkProperties")
-        private final @Nullable NetworkPropertiesResponse networkProperties;
+      private final @Nullable NetworkPropertiesResponse networkProperties;
 
     public Optional<NetworkPropertiesResponse> getNetworkProperties() {
         return this.networkProperties == null ? Optional.empty() : Optional.ofNullable(this.networkProperties);
@@ -213,7 +213,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -224,7 +224,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -235,7 +235,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="quotaInfo")
-        private final @Nullable QuotaInfoResponse quotaInfo;
+      private final @Nullable QuotaInfoResponse quotaInfo;
 
     public Optional<QuotaInfoResponse> getQuotaInfo() {
         return this.quotaInfo == null ? Optional.empty() : Optional.ofNullable(this.quotaInfo);
@@ -246,7 +246,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="securityProfile")
-        private final @Nullable SecurityProfileResponse securityProfile;
+      private final @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> getSecurityProfile() {
         return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
@@ -257,7 +257,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="storageProfile")
-        private final @Nullable StorageProfileResponse storageProfile;
+      private final @Nullable StorageProfileResponse storageProfile;
 
     public Optional<StorageProfileResponse> getStorageProfile() {
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
@@ -268,7 +268,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);

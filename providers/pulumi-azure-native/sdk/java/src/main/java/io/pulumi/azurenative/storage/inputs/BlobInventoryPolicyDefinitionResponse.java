@@ -21,7 +21,7 @@ public final class BlobInventoryPolicyDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="filters", required=true)
-        private final BlobInventoryPolicyFilterResponse filters;
+      private final BlobInventoryPolicyFilterResponse filters;
 
     public BlobInventoryPolicyFilterResponse getFilters() {
         return this.filters;

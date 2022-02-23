@@ -20,7 +20,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="authenticationName")
-        private final @Nullable Input<String> authenticationName;
+      private final @Nullable Input<String> authenticationName;
 
     public Input<String> getAuthenticationName() {
         return this.authenticationName == null ? Input.empty() : this.authenticationName;
@@ -31,7 +31,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="azureADOnlyAuthentication", required=true)
-        private final Input<Boolean> azureADOnlyAuthentication;
+      private final Input<Boolean> azureADOnlyAuthentication;
 
     public Input<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
@@ -42,7 +42,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-        private final Input<String> managedInstanceName;
+      private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -53,7 +53,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

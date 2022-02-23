@@ -17,42 +17,42 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     public static final LicenseEntitlementArgs Empty = new LicenseEntitlementArgs();
 
     @InputImport(name="allowCheckIn")
-        private final @Nullable Input<Boolean> allowCheckIn;
+      private final @Nullable Input<Boolean> allowCheckIn;
 
     public Input<Boolean> getAllowCheckIn() {
         return this.allowCheckIn == null ? Input.empty() : this.allowCheckIn;
     }
 
     @InputImport(name="maxCount")
-        private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Input<Integer> maxCount;
 
     public Input<Integer> getMaxCount() {
         return this.maxCount == null ? Input.empty() : this.maxCount;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="overage")
-        private final @Nullable Input<Boolean> overage;
+      private final @Nullable Input<Boolean> overage;
 
     public Input<Boolean> getOverage() {
         return this.overage == null ? Input.empty() : this.overage;
     }
 
     @InputImport(name="unit", required=true)
-        private final Input<String> unit;
+      private final Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

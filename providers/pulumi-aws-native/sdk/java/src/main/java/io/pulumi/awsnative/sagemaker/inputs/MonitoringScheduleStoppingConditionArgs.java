@@ -22,7 +22,7 @@ public final class MonitoringScheduleStoppingConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxRuntimeInSeconds", required=true)
-        private final Input<Integer> maxRuntimeInSeconds;
+      private final Input<Integer> maxRuntimeInSeconds;
 
     public Input<Integer> getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;

@@ -25,7 +25,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="accountId")
-        private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -36,7 +36,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="configurationProfile")
-        private final @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile;
+      private final @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile;
 
     public Input<Either<String,ConfigurationProfile>> getConfigurationProfile() {
         return this.configurationProfile == null ? Input.empty() : this.configurationProfile;
@@ -47,7 +47,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="configurationProfilePreferenceId")
-        private final @Nullable Input<String> configurationProfilePreferenceId;
+      private final @Nullable Input<String> configurationProfilePreferenceId;
 
     public Input<String> getConfigurationProfilePreferenceId() {
         return this.configurationProfilePreferenceId == null ? Input.empty() : this.configurationProfilePreferenceId;
@@ -58,7 +58,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="targetId")
-        private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;

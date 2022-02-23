@@ -23,7 +23,7 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
      * 
      */
     @InputImport(name="include")
-        private final @Nullable Input<TransferAllDetailsArgs> include;
+      private final @Nullable Input<TransferAllDetailsArgs> include;
 
     public Input<TransferAllDetailsArgs> getInclude() {
         return this.include == null ? Input.empty() : this.include;

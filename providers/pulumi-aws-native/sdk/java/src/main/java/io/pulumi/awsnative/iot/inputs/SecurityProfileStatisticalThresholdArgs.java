@@ -23,7 +23,7 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statistic")
-        private final @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
+      private final @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
 
     public Input<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return this.statistic == null ? Input.empty() : this.statistic;

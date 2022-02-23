@@ -20,7 +20,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -44,7 +44,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="valueType")
-        private final @Nullable Input<String> valueType;
+      private final @Nullable Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType == null ? Input.empty() : this.valueType;

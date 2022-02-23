@@ -17,7 +17,7 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-        private final String kustoPoolName;
+      private final String kustoPoolName;
 
     public String getKustoPoolName() {
         return this.kustoPoolName;
@@ -28,7 +28,7 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

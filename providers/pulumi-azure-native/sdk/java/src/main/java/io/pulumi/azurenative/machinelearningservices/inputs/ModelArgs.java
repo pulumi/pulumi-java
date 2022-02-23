@@ -29,7 +29,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-        private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -40,7 +40,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasets")
-        private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
+      private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
 
     public Input<List<DatasetReferenceArgs>> getDatasets() {
         return this.datasets == null ? Input.empty() : this.datasets;
@@ -51,7 +51,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="derivedModelIds")
-        private final @Nullable Input<List<String>> derivedModelIds;
+      private final @Nullable Input<List<String>> derivedModelIds;
 
     public Input<List<String>> getDerivedModelIds() {
         return this.derivedModelIds == null ? Input.empty() : this.derivedModelIds;
@@ -62,7 +62,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experimentName")
-        private final @Nullable Input<String> experimentName;
+      private final @Nullable Input<String> experimentName;
 
     public Input<String> getExperimentName() {
         return this.experimentName == null ? Input.empty() : this.experimentName;
@@ -84,7 +84,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="framework")
-        private final @Nullable Input<String> framework;
+      private final @Nullable Input<String> framework;
 
     public Input<String> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -95,7 +95,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkVersion")
-        private final @Nullable Input<String> frameworkVersion;
+      private final @Nullable Input<String> frameworkVersion;
 
     public Input<String> getFrameworkVersion() {
         return this.frameworkVersion == null ? Input.empty() : this.frameworkVersion;
@@ -106,7 +106,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -117,7 +117,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kvTags")
-        private final @Nullable Input<Map<String,String>> kvTags;
+      private final @Nullable Input<Map<String,String>> kvTags;
 
     public Input<Map<String,String>> getKvTags() {
         return this.kvTags == null ? Input.empty() : this.kvTags;
@@ -128,7 +128,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType", required=true)
-        private final Input<String> mimeType;
+      private final Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType;
@@ -139,7 +139,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modifiedTime")
-        private final @Nullable Input<String> modifiedTime;
+      private final @Nullable Input<String> modifiedTime;
 
     public Input<String> getModifiedTime() {
         return this.modifiedTime == null ? Input.empty() : this.modifiedTime;
@@ -150,7 +150,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -161,7 +161,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentModelId")
-        private final @Nullable Input<String> parentModelId;
+      private final @Nullable Input<String> parentModelId;
 
     public Input<String> getParentModelId() {
         return this.parentModelId == null ? Input.empty() : this.parentModelId;
@@ -172,7 +172,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -183,7 +183,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceRequirements")
-        private final @Nullable Input<ContainerResourceRequirementsArgs> resourceRequirements;
+      private final @Nullable Input<ContainerResourceRequirementsArgs> resourceRequirements;
 
     public Input<ContainerResourceRequirementsArgs> getResourceRequirements() {
         return this.resourceRequirements == null ? Input.empty() : this.resourceRequirements;
@@ -194,7 +194,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runId")
-        private final @Nullable Input<String> runId;
+      private final @Nullable Input<String> runId;
 
     public Input<String> getRunId() {
         return this.runId == null ? Input.empty() : this.runId;
@@ -205,7 +205,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleInputData")
-        private final @Nullable Input<String> sampleInputData;
+      private final @Nullable Input<String> sampleInputData;
 
     public Input<String> getSampleInputData() {
         return this.sampleInputData == null ? Input.empty() : this.sampleInputData;
@@ -216,7 +216,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleOutputData")
-        private final @Nullable Input<String> sampleOutputData;
+      private final @Nullable Input<String> sampleOutputData;
 
     public Input<String> getSampleOutputData() {
         return this.sampleOutputData == null ? Input.empty() : this.sampleOutputData;
@@ -227,7 +227,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unpack")
-        private final @Nullable Input<Boolean> unpack;
+      private final @Nullable Input<Boolean> unpack;
 
     public Input<Boolean> getUnpack() {
         return this.unpack == null ? Input.empty() : this.unpack;
@@ -238,7 +238,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -249,7 +249,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<Double> version;
+      private final @Nullable Input<Double> version;
 
     public Input<Double> getVersion() {
         return this.version == null ? Input.empty() : this.version;

@@ -25,7 +25,7 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="failoverPolicy")
-        private final @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
+      private final @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
     public Input<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
         return this.failoverPolicy == null ? Input.empty() : this.failoverPolicy;

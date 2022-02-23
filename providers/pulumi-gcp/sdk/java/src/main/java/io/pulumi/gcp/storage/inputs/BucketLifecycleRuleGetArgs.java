@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-        private final Input<BucketLifecycleRuleActionGetArgs> action;
+      private final Input<BucketLifecycleRuleActionGetArgs> action;
 
     public Input<BucketLifecycleRuleActionGetArgs> getAction() {
         return this.action;
@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="condition", required=true)
-        private final Input<BucketLifecycleRuleConditionGetArgs> condition;
+      private final Input<BucketLifecycleRuleConditionGetArgs> condition;
 
     public Input<BucketLifecycleRuleConditionGetArgs> getCondition() {
         return this.condition;

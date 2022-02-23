@@ -24,7 +24,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeInterval")
-        private final @Nullable Input<String> timeInterval;
+      private final @Nullable Input<String> timeInterval;
 
     public Input<String> getTimeInterval() {
         return this.timeInterval == null ? Input.empty() : this.timeInterval;

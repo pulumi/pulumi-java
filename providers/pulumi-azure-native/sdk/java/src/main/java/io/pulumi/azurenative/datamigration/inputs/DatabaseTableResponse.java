@@ -22,7 +22,7 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hasRows", required=true)
-        private final Boolean hasRows;
+      private final Boolean hasRows;
 
     public Boolean getHasRows() {
         return this.hasRows;
@@ -33,7 +33,7 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

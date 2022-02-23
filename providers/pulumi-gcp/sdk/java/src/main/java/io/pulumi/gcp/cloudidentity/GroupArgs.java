@@ -22,7 +22,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupKey", required=true)
-        private final Input<GroupGroupKeyArgs> groupKey;
+      private final Input<GroupGroupKeyArgs> groupKey;
 
     public Input<GroupGroupKeyArgs> getGroupKey() {
         return this.groupKey;
@@ -61,7 +61,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialGroupConfig")
-        private final @Nullable Input<String> initialGroupConfig;
+      private final @Nullable Input<String> initialGroupConfig;
 
     public Input<String> getInitialGroupConfig() {
         return this.initialGroupConfig == null ? Input.empty() : this.initialGroupConfig;
@@ -75,7 +75,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-        private final Input<Map<String,String>> labels;
+      private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -89,7 +89,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;

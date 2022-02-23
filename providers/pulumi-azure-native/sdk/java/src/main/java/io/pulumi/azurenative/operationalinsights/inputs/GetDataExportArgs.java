@@ -17,7 +17,7 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataExportName", required=true)
-        private final String dataExportName;
+      private final String dataExportName;
 
     public String getDataExportName() {
         return this.dataExportName;
@@ -28,7 +28,7 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

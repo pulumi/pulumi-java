@@ -20,14 +20,14 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     public static final CertificateApiPassthroughArgs Empty = new CertificateApiPassthroughArgs();
 
     @InputImport(name="extensions")
-        private final @Nullable Input<CertificateExtensionsArgs> extensions;
+      private final @Nullable Input<CertificateExtensionsArgs> extensions;
 
     public Input<CertificateExtensionsArgs> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="subject")
-        private final @Nullable Input<CertificateSubjectArgs> subject;
+      private final @Nullable Input<CertificateSubjectArgs> subject;
 
     public Input<CertificateSubjectArgs> getSubject() {
         return this.subject == null ? Input.empty() : this.subject;

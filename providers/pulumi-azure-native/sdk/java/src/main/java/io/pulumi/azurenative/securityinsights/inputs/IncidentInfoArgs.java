@@ -25,7 +25,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentId")
-        private final @Nullable Input<String> incidentId;
+      private final @Nullable Input<String> incidentId;
 
     public Input<String> getIncidentId() {
         return this.incidentId == null ? Input.empty() : this.incidentId;
@@ -36,7 +36,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationName")
-        private final @Nullable Input<String> relationName;
+      private final @Nullable Input<String> relationName;
 
     public Input<String> getRelationName() {
         return this.relationName == null ? Input.empty() : this.relationName;
@@ -47,7 +47,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-        private final @Nullable Input<Either<String,IncidentSeverity>> severity;
+      private final @Nullable Input<Either<String,IncidentSeverity>> severity;
 
     public Input<Either<String,IncidentSeverity>> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -58,7 +58,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-        private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;

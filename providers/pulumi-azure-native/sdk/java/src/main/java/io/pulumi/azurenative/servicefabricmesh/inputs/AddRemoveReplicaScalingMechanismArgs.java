@@ -24,7 +24,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -35,7 +35,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxCount", required=true)
-        private final Input<Integer> maxCount;
+      private final Input<Integer> maxCount;
 
     public Input<Integer> getMaxCount() {
         return this.maxCount;
@@ -46,7 +46,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minCount", required=true)
-        private final Input<Integer> minCount;
+      private final Input<Integer> minCount;
 
     public Input<Integer> getMinCount() {
         return this.minCount;
@@ -57,7 +57,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="scaleIncrement", required=true)
-        private final Input<Integer> scaleIncrement;
+      private final Input<Integer> scaleIncrement;
 
     public Input<Integer> getScaleIncrement() {
         return this.scaleIncrement;

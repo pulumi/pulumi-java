@@ -26,7 +26,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreId")
-        private final @Nullable Input<String> datastoreId;
+      private final @Nullable Input<String> datastoreId;
 
     public Input<String> getDatastoreId() {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
@@ -37,7 +37,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flavors")
-        private final @Nullable Input<Map<String,FlavorDataArgs>> flavors;
+      private final @Nullable Input<Map<String,FlavorDataArgs>> flavors;
 
     public Input<Map<String,FlavorDataArgs>> getFlavors() {
         return this.flavors == null ? Input.empty() : this.flavors;
@@ -59,7 +59,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAnonymous")
-        private final @Nullable Input<Boolean> isAnonymous;
+      private final @Nullable Input<Boolean> isAnonymous;
 
     public Input<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
@@ -70,7 +70,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -81,7 +81,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -92,7 +92,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -22,7 +22,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -33,7 +33,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-        private final @Nullable Input<String> logGroupName;
+      private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -44,7 +44,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-        private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -55,7 +55,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<LogGroupTagArgs>> tags;
+      private final @Nullable Input<List<LogGroupTagArgs>> tags;
 
     public Input<List<LogGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -16,28 +16,28 @@ public final class PipelineLambdaArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineLambdaArgs Empty = new PipelineLambdaArgs();
 
     @InputImport(name="batchSize", required=true)
-        private final Input<Integer> batchSize;
+      private final Input<Integer> batchSize;
 
     public Input<Integer> getBatchSize() {
         return this.batchSize;
     }
 
     @InputImport(name="lambdaName", required=true)
-        private final Input<String> lambdaName;
+      private final Input<String> lambdaName;
 
     public Input<String> getLambdaName() {
         return this.lambdaName;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-        private final @Nullable Input<String> next;
+      private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;

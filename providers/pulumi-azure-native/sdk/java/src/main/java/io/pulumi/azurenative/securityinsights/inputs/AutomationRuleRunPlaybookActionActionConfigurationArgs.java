@@ -23,7 +23,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @InputImport(name="logicAppResourceId")
-        private final @Nullable Input<String> logicAppResourceId;
+      private final @Nullable Input<String> logicAppResourceId;
 
     public Input<String> getLogicAppResourceId() {
         return this.logicAppResourceId == null ? Input.empty() : this.logicAppResourceId;
@@ -34,7 +34,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

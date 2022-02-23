@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-        private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
     public Input<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-        private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
+      private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
 
     public Input<List<SubResourceArgs>> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-        private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
     public Input<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="loadBalancerInboundNatPools")
-        private final @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools;
+      private final @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools;
 
     public Input<List<SubResourceArgs>> getLoadBalancerInboundNatPools() {
         return this.loadBalancerInboundNatPools == null ? Input.empty() : this.loadBalancerInboundNatPools;
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-        private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
+      private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
     public Input<Either<String,IPVersion>> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-        private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+      private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
     public Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
@@ -129,7 +129,7 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<ApiEntityReferenceArgs> subnet;
+      private final @Nullable Input<ApiEntityReferenceArgs> subnet;
 
     public Input<ApiEntityReferenceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;

@@ -17,21 +17,21 @@ public final class ThrottlingRuleResponse extends io.pulumi.resources.InvokeArgs
     public static final ThrottlingRuleResponse Empty = new ThrottlingRuleResponse();
 
     @InputImport(name="action", required=true)
-        private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
     }
 
     @InputImport(name="metrics", required=true)
-        private final List<ThrottlingMetricResponse> metrics;
+      private final List<ThrottlingMetricResponse> metrics;
 
     public List<ThrottlingMetricResponse> getMetrics() {
         return this.metrics;
     }
 
     @InputImport(name="requiredFeatures")
-        private final @Nullable List<String> requiredFeatures;
+      private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;

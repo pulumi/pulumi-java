@@ -26,7 +26,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dispositionNotificationTo")
-        private final @Nullable Input<String> dispositionNotificationTo;
+      private final @Nullable Input<String> dispositionNotificationTo;
 
     public Input<String> getDispositionNotificationTo() {
         return this.dispositionNotificationTo == null ? Input.empty() : this.dispositionNotificationTo;
@@ -37,7 +37,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mdnText")
-        private final @Nullable Input<String> mdnText;
+      private final @Nullable Input<String> mdnText;
 
     public Input<String> getMdnText() {
         return this.mdnText == null ? Input.empty() : this.mdnText;
@@ -48,7 +48,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="micHashingAlgorithm", required=true)
-        private final Input<Either<String,HashingAlgorithm>> micHashingAlgorithm;
+      private final Input<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
     public Input<Either<String,HashingAlgorithm>> getMicHashingAlgorithm() {
         return this.micHashingAlgorithm;
@@ -59,7 +59,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="needMDN", required=true)
-        private final Input<Boolean> needMDN;
+      private final Input<Boolean> needMDN;
 
     public Input<Boolean> getNeedMDN() {
         return this.needMDN;
@@ -70,7 +70,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="receiptDeliveryUrl")
-        private final @Nullable Input<String> receiptDeliveryUrl;
+      private final @Nullable Input<String> receiptDeliveryUrl;
 
     public Input<String> getReceiptDeliveryUrl() {
         return this.receiptDeliveryUrl == null ? Input.empty() : this.receiptDeliveryUrl;
@@ -81,7 +81,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendInboundMDNToMessageBox", required=true)
-        private final Input<Boolean> sendInboundMDNToMessageBox;
+      private final Input<Boolean> sendInboundMDNToMessageBox;
 
     public Input<Boolean> getSendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
@@ -92,7 +92,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendMDNAsynchronously", required=true)
-        private final Input<Boolean> sendMDNAsynchronously;
+      private final Input<Boolean> sendMDNAsynchronously;
 
     public Input<Boolean> getSendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
@@ -103,7 +103,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signMDN", required=true)
-        private final Input<Boolean> signMDN;
+      private final Input<Boolean> signMDN;
 
     public Input<Boolean> getSignMDN() {
         return this.signMDN;
@@ -114,7 +114,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signOutboundMDNIfOptional", required=true)
-        private final Input<Boolean> signOutboundMDNIfOptional;
+      private final Input<Boolean> signOutboundMDNIfOptional;
 
     public Input<Boolean> getSignOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;

@@ -27,7 +27,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventSource")
-        private final @Nullable Input<Either<String,EventSource>> eventSource;
+      private final @Nullable Input<Either<String,EventSource>> eventSource;
 
     public Input<Either<String,EventSource>> getEventSource() {
         return this.eventSource == null ? Input.empty() : this.eventSource;
@@ -38,7 +38,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleSets")
-        private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
+      private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
 
     public Input<List<AutomationRuleSetArgs>> getRuleSets() {
         return this.ruleSets == null ? Input.empty() : this.ruleSets;

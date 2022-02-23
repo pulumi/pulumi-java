@@ -30,7 +30,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="commands", required=true)
-        private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -41,7 +41,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<ODataErrorResponse> errors;
+      private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -52,7 +52,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="input")
-        private final @Nullable GetUserTablesSqlSyncTaskInputResponse input;
+      private final @Nullable GetUserTablesSqlSyncTaskInputResponse input;
 
     public Optional<GetUserTablesSqlSyncTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -63,7 +63,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="output", required=true)
-        private final List<GetUserTablesSqlSyncTaskOutputResponse> output;
+      private final List<GetUserTablesSqlSyncTaskOutputResponse> output;
 
     public List<GetUserTablesSqlSyncTaskOutputResponse> getOutput() {
         return this.output;
@@ -74,7 +74,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -86,7 +86,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final String taskType;
+      private final String taskType;
 
     public String getTaskType() {
         return this.taskType;

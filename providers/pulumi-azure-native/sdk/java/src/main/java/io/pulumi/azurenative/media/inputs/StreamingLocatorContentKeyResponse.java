@@ -25,7 +25,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="labelReferenceInStreamingPolicy")
-        private final @Nullable String labelReferenceInStreamingPolicy;
+      private final @Nullable String labelReferenceInStreamingPolicy;
 
     public Optional<String> getLabelReferenceInStreamingPolicy() {
         return this.labelReferenceInStreamingPolicy == null ? Optional.empty() : Optional.ofNullable(this.labelReferenceInStreamingPolicy);
@@ -47,7 +47,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final String policyName;
+      private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -58,7 +58,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="tracks", required=true)
-        private final List<TrackSelectionResponse> tracks;
+      private final List<TrackSelectionResponse> tracks;
 
     public List<TrackSelectionResponse> getTracks() {
         return this.tracks;
@@ -69,7 +69,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

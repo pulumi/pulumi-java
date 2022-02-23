@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigEphemeralStorageConfig extends io
     public static final GetClusterNodePoolNodeConfigEphemeralStorageConfig Empty = new GetClusterNodePoolNodeConfigEphemeralStorageConfig();
 
     @InputImport(name="localSsdCount", required=true)
-        private final Integer localSsdCount;
+      private final Integer localSsdCount;
 
     public Integer getLocalSsdCount() {
         return this.localSsdCount;

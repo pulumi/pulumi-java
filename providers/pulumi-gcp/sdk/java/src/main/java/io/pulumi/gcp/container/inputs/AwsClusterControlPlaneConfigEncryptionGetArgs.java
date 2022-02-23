@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneConfigEncryptionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="kmsKeyArn", required=true)
-        private final Input<String> kmsKeyArn;
+      private final Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn;

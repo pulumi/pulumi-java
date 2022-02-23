@@ -18,7 +18,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
     public static final OriginGroupOverrideActionParametersResponse Empty = new OriginGroupOverrideActionParametersResponse();
 
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -29,7 +29,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="originGroup", required=true)
-        private final ResourceReferenceResponse originGroup;
+      private final ResourceReferenceResponse originGroup;
 
     public ResourceReferenceResponse getOriginGroup() {
         return this.originGroup;

@@ -21,7 +21,7 @@ public final class ServiceCodeRepository extends io.pulumi.resources.InvokeArgs 
     public static final ServiceCodeRepository Empty = new ServiceCodeRepository();
 
     @InputImport(name="codeConfiguration")
-        private final @Nullable ServiceCodeConfiguration codeConfiguration;
+      private final @Nullable ServiceCodeConfiguration codeConfiguration;
 
     public Optional<ServiceCodeConfiguration> getCodeConfiguration() {
         return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
@@ -32,14 +32,14 @@ public final class ServiceCodeRepository extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-        private final String repositoryUrl;
+      private final String repositoryUrl;
 
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
     @InputImport(name="sourceCodeVersion", required=true)
-        private final ServiceSourceCodeVersion sourceCodeVersion;
+      private final ServiceSourceCodeVersion sourceCodeVersion;
 
     public ServiceSourceCodeVersion getSourceCodeVersion() {
         return this.sourceCodeVersion;

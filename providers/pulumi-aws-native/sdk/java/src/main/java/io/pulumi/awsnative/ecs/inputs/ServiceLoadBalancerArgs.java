@@ -16,28 +16,28 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     public static final ServiceLoadBalancerArgs Empty = new ServiceLoadBalancerArgs();
 
     @InputImport(name="containerName")
-        private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
     @InputImport(name="containerPort")
-        private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
     }
 
     @InputImport(name="loadBalancerName")
-        private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
     }
 
     @InputImport(name="targetGroupArn")
-        private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;

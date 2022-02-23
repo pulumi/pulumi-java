@@ -27,7 +27,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-        private final Input<String> backupManagementType;
+      private final Input<String> backupManagementType;
 
     public Input<String> getBackupManagementType() {
         return this.backupManagementType;
@@ -38,7 +38,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fabricName")
-        private final @Nullable Input<String> fabricName;
+      private final @Nullable Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName == null ? Input.empty() : this.fabricName;
@@ -49,7 +49,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protectedItemsCount")
-        private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Input<Integer> protectedItemsCount;
 
     public Input<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
@@ -60,7 +60,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subProtectionPolicy")
-        private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+      private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
     public Input<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
@@ -71,7 +71,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

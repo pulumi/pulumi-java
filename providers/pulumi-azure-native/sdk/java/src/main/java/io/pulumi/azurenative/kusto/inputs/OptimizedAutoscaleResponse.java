@@ -22,7 +22,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -33,7 +33,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maximum", required=true)
-        private final Integer maximum;
+      private final Integer maximum;
 
     public Integer getMaximum() {
         return this.maximum;
@@ -44,7 +44,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="minimum", required=true)
-        private final Integer minimum;
+      private final Integer minimum;
 
     public Integer getMinimum() {
         return this.minimum;
@@ -55,7 +55,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="version", required=true)
-        private final Integer version;
+      private final Integer version;
 
     public Integer getVersion() {
         return this.version;

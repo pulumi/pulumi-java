@@ -18,7 +18,7 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maxUnusedVersionsToKeep", required=true)
-        private final Input<Double> maxUnusedVersionsToKeep;
+      private final Input<Double> maxUnusedVersionsToKeep;
 
     public Input<Double> getMaxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;

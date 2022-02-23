@@ -26,7 +26,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,OutputType>> type;
+      private final @Nullable Input<Either<String,OutputType>> type;
 
     public Input<Either<String,OutputType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -37,7 +37,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceSettings")
-        private final @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
+      private final @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
     public Input<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {
         return this.workspaceSettings == null ? Input.empty() : this.workspaceSettings;

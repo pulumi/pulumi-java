@@ -15,14 +15,14 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
     public static final ObjectAccessControlProjectTeamGetArgs Empty = new ObjectAccessControlProjectTeamGetArgs();
 
     @InputImport(name="projectNumber")
-        private final @Nullable Input<String> projectNumber;
+      private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
     }
 
     @InputImport(name="team")
-        private final @Nullable Input<String> team;
+      private final @Nullable Input<String> team;
 
     public Input<String> getTeam() {
         return this.team == null ? Input.empty() : this.team;

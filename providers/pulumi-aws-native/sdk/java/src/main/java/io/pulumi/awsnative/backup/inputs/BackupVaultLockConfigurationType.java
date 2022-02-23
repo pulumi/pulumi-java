@@ -15,21 +15,21 @@ public final class BackupVaultLockConfigurationType extends io.pulumi.resources.
     public static final BackupVaultLockConfigurationType Empty = new BackupVaultLockConfigurationType();
 
     @InputImport(name="changeableForDays")
-        private final @Nullable Double changeableForDays;
+      private final @Nullable Double changeableForDays;
 
     public Optional<Double> getChangeableForDays() {
         return this.changeableForDays == null ? Optional.empty() : Optional.ofNullable(this.changeableForDays);
     }
 
     @InputImport(name="maxRetentionDays")
-        private final @Nullable Double maxRetentionDays;
+      private final @Nullable Double maxRetentionDays;
 
     public Optional<Double> getMaxRetentionDays() {
         return this.maxRetentionDays == null ? Optional.empty() : Optional.ofNullable(this.maxRetentionDays);
     }
 
     @InputImport(name="minRetentionDays", required=true)
-        private final Double minRetentionDays;
+      private final Double minRetentionDays;
 
     public Double getMinRetentionDays() {
         return this.minRetentionDays;

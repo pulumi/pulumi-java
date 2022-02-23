@@ -21,7 +21,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpUrlProperties")
-        private final @Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
+      private final @Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
     public Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> getHttpUrlProperties() {
         return this.httpUrlProperties == null ? Input.empty() : this.httpUrlProperties;
@@ -32,7 +32,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<TopicRuleDestinationStatus> status;
+      private final @Nullable Input<TopicRuleDestinationStatus> status;
 
     public Input<TopicRuleDestinationStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -43,7 +43,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcProperties")
-        private final @Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
+      private final @Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
     public Input<TopicRuleDestinationVpcDestinationPropertiesArgs> getVpcProperties() {
         return this.vpcProperties == null ? Input.empty() : this.vpcProperties;

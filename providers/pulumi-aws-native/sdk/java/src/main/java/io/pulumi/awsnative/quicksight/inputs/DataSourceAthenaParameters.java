@@ -23,7 +23,7 @@ public final class DataSourceAthenaParameters extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="workGroup")
-        private final @Nullable String workGroup;
+      private final @Nullable String workGroup;
 
     public Optional<String> getWorkGroup() {
         return this.workGroup == null ? Optional.empty() : Optional.ofNullable(this.workGroup);

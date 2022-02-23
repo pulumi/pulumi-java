@@ -18,14 +18,14 @@ public final class DatasetPathParameter extends io.pulumi.resources.InvokeArgs {
     public static final DatasetPathParameter Empty = new DatasetPathParameter();
 
     @InputImport(name="datasetParameter", required=true)
-        private final DatasetParameter datasetParameter;
+      private final DatasetParameter datasetParameter;
 
     public DatasetParameter getDatasetParameter() {
         return this.datasetParameter;
     }
 
     @InputImport(name="pathParameterName", required=true)
-        private final String pathParameterName;
+      private final String pathParameterName;
 
     public String getPathParameterName() {
         return this.pathParameterName;

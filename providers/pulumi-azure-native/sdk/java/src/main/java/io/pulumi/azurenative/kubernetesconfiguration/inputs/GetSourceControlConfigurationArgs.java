@@ -17,7 +17,7 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterResourceName", required=true)
-        private final String clusterResourceName;
+      private final String clusterResourceName;
 
     public String getClusterResourceName() {
         return this.clusterResourceName;
@@ -39,7 +39,7 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterRp", required=true)
-        private final String clusterRp;
+      private final String clusterRp;
 
     public String getClusterRp() {
         return this.clusterRp;
@@ -50,7 +50,7 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceControlConfigurationName", required=true)
-        private final String sourceControlConfigurationName;
+      private final String sourceControlConfigurationName;
 
     public String getSourceControlConfigurationName() {
         return this.sourceControlConfigurationName;

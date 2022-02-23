@@ -24,7 +24,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<CacheKeyQueryStringActionParametersArgs> parameters;
+      private final Input<CacheKeyQueryStringActionParametersArgs> parameters;
 
     public Input<CacheKeyQueryStringActionParametersArgs> getParameters() {
         return this.parameters;

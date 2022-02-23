@@ -16,21 +16,21 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyGroupConfigArgs Empty = new KeyGroupConfigArgs();
 
     @InputImport(name="comment")
-        private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
     }
 
     @InputImport(name="items", required=true)
-        private final Input<List<String>> items;
+      private final Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

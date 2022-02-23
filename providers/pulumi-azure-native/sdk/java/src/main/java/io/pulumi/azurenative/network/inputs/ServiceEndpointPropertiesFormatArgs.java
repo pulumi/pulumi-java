@@ -24,7 +24,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="locations")
-        private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -35,7 +35,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;

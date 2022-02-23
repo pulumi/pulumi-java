@@ -24,7 +24,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType")
-        private final @Nullable Input<String> containerType;
+      private final @Nullable Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType == null ? Input.empty() : this.containerType;
@@ -36,7 +36,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sha1")
-        private final @Nullable Input<String> sha1;
+      private final @Nullable Input<String> sha1;
 
     public Input<String> getSha1() {
         return this.sha1 == null ? Input.empty() : this.sha1;
@@ -49,7 +49,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;

@@ -17,56 +17,56 @@ public final class InstanceFromMachineImageBootDiskArgs extends io.pulumi.resour
     public static final InstanceFromMachineImageBootDiskArgs Empty = new InstanceFromMachineImageBootDiskArgs();
 
     @InputImport(name="autoDelete")
-        private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
     }
 
     @InputImport(name="deviceName")
-        private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
     @InputImport(name="diskEncryptionKeyRaw")
-        private final @Nullable Input<String> diskEncryptionKeyRaw;
+      private final @Nullable Input<String> diskEncryptionKeyRaw;
 
     public Input<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-        private final @Nullable Input<String> diskEncryptionKeySha256;
+      private final @Nullable Input<String> diskEncryptionKeySha256;
 
     public Input<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
     }
 
     @InputImport(name="initializeParams")
-        private final @Nullable Input<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams;
+      private final @Nullable Input<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams;
 
     public Input<InstanceFromMachineImageBootDiskInitializeParamsArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
     }
 
     @InputImport(name="kmsKeySelfLink")
-        private final @Nullable Input<String> kmsKeySelfLink;
+      private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
     @InputImport(name="mode")
-        private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="source")
-        private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;

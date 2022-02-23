@@ -17,7 +17,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="availabilitySetName", required=true)
-        private final String availabilitySetName;
+      private final String availabilitySetName;
 
     public String getAvailabilitySetName() {
         return this.availabilitySetName;
@@ -28,7 +28,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

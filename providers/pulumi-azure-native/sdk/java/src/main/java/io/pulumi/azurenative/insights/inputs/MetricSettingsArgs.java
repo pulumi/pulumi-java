@@ -25,7 +25,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-        private final @Nullable Input<String> category;
+      private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -36,7 +36,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
 
     public Input<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -58,7 +58,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeGrain")
-        private final @Nullable Input<String> timeGrain;
+      private final @Nullable Input<String> timeGrain;
 
     public Input<String> getTimeGrain() {
         return this.timeGrain == null ? Input.empty() : this.timeGrain;

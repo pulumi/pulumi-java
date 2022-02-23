@@ -25,7 +25,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitLockerKey")
-        private final @Nullable String bitLockerKey;
+      private final @Nullable String bitLockerKey;
 
     public Optional<String> getBitLockerKey() {
         return this.bitLockerKey == null ? Optional.empty() : Optional.ofNullable(this.bitLockerKey);
@@ -36,7 +36,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bytesSucceeded")
-        private final @Nullable Double bytesSucceeded;
+      private final @Nullable Double bytesSucceeded;
 
     public Optional<Double> getBytesSucceeded() {
         return this.bytesSucceeded == null ? Optional.empty() : Optional.ofNullable(this.bytesSucceeded);
@@ -47,7 +47,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="copyStatus")
-        private final @Nullable String copyStatus;
+      private final @Nullable String copyStatus;
 
     public Optional<String> getCopyStatus() {
         return this.copyStatus == null ? Optional.empty() : Optional.ofNullable(this.copyStatus);
@@ -58,7 +58,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="driveHeaderHash")
-        private final @Nullable String driveHeaderHash;
+      private final @Nullable String driveHeaderHash;
 
     public Optional<String> getDriveHeaderHash() {
         return this.driveHeaderHash == null ? Optional.empty() : Optional.ofNullable(this.driveHeaderHash);
@@ -69,7 +69,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="driveId")
-        private final @Nullable String driveId;
+      private final @Nullable String driveId;
 
     public Optional<String> getDriveId() {
         return this.driveId == null ? Optional.empty() : Optional.ofNullable(this.driveId);
@@ -80,7 +80,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorLogUri")
-        private final @Nullable String errorLogUri;
+      private final @Nullable String errorLogUri;
 
     public Optional<String> getErrorLogUri() {
         return this.errorLogUri == null ? Optional.empty() : Optional.ofNullable(this.errorLogUri);
@@ -91,7 +91,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manifestFile")
-        private final @Nullable String manifestFile;
+      private final @Nullable String manifestFile;
 
     public Optional<String> getManifestFile() {
         return this.manifestFile == null ? Optional.empty() : Optional.ofNullable(this.manifestFile);
@@ -102,7 +102,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manifestHash")
-        private final @Nullable String manifestHash;
+      private final @Nullable String manifestHash;
 
     public Optional<String> getManifestHash() {
         return this.manifestHash == null ? Optional.empty() : Optional.ofNullable(this.manifestHash);
@@ -113,7 +113,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manifestUri")
-        private final @Nullable String manifestUri;
+      private final @Nullable String manifestUri;
 
     public Optional<String> getManifestUri() {
         return this.manifestUri == null ? Optional.empty() : Optional.ofNullable(this.manifestUri);
@@ -124,7 +124,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="percentComplete")
-        private final @Nullable Integer percentComplete;
+      private final @Nullable Integer percentComplete;
 
     public Optional<Integer> getPercentComplete() {
         return this.percentComplete == null ? Optional.empty() : Optional.ofNullable(this.percentComplete);
@@ -135,7 +135,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -146,7 +146,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="verboseLogUri")
-        private final @Nullable String verboseLogUri;
+      private final @Nullable String verboseLogUri;
 
     public Optional<String> getVerboseLogUri() {
         return this.verboseLogUri == null ? Optional.empty() : Optional.ofNullable(this.verboseLogUri);

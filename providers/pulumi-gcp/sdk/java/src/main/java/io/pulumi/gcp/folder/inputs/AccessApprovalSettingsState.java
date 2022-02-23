@@ -23,7 +23,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledAncestor")
-        private final @Nullable Input<Boolean> enrolledAncestor;
+      private final @Nullable Input<Boolean> enrolledAncestor;
 
     public Input<Boolean> getEnrolledAncestor() {
         return this.enrolledAncestor == null ? Input.empty() : this.enrolledAncestor;
@@ -38,7 +38,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledServices")
-        private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+      private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
     public Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
         return this.enrolledServices == null ? Input.empty() : this.enrolledServices;
@@ -49,7 +49,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="folderId")
-        private final @Nullable Input<String> folderId;
+      private final @Nullable Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId == null ? Input.empty() : this.folderId;
@@ -60,7 +60,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="notificationEmails")
-        private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Input<List<String>> notificationEmails;
 
     public Input<List<String>> getNotificationEmails() {
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;

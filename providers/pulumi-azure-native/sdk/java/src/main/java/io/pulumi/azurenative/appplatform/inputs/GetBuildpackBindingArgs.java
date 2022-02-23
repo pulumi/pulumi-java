@@ -17,7 +17,7 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-        private final String buildServiceName;
+      private final String buildServiceName;
 
     public String getBuildServiceName() {
         return this.buildServiceName;
@@ -28,7 +28,7 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="builderName", required=true)
-        private final String builderName;
+      private final String builderName;
 
     public String getBuilderName() {
         return this.builderName;
@@ -39,7 +39,7 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="buildpackBindingName", required=true)
-        private final String buildpackBindingName;
+      private final String buildpackBindingName;
 
     public String getBuildpackBindingName() {
         return this.buildpackBindingName;
@@ -50,7 +50,7 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

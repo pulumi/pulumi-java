@@ -13,14 +13,14 @@ public final class DeliveryStreamProcessorParameter extends io.pulumi.resources.
     public static final DeliveryStreamProcessorParameter Empty = new DeliveryStreamProcessorParameter();
 
     @InputImport(name="parameterName", required=true)
-        private final String parameterName;
+      private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-        private final String parameterValue;
+      private final String parameterValue;
 
     public String getParameterValue() {
         return this.parameterValue;

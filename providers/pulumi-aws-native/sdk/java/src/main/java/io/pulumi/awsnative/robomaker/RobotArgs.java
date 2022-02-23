@@ -21,7 +21,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture", required=true)
-        private final Input<RobotArchitecture> architecture;
+      private final Input<RobotArchitecture> architecture;
 
     public Input<RobotArchitecture> getArchitecture() {
         return this.architecture;
@@ -32,7 +32,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleet")
-        private final @Nullable Input<String> fleet;
+      private final @Nullable Input<String> fleet;
 
     public Input<String> getFleet() {
         return this.fleet == null ? Input.empty() : this.fleet;
@@ -43,7 +43,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="greengrassGroupId", required=true)
-        private final Input<String> greengrassGroupId;
+      private final Input<String> greengrassGroupId;
 
     public Input<String> getGreengrassGroupId() {
         return this.greengrassGroupId;
@@ -54,14 +54,14 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<RobotTagsArgs> tags;
+      private final @Nullable Input<RobotTagsArgs> tags;
 
     public Input<RobotTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

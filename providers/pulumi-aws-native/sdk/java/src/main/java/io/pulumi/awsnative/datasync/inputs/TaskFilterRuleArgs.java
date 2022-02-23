@@ -24,7 +24,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterType")
-        private final @Nullable Input<TaskFilterRuleFilterType> filterType;
+      private final @Nullable Input<TaskFilterRuleFilterType> filterType;
 
     public Input<TaskFilterRuleFilterType> getFilterType() {
         return this.filterType == null ? Input.empty() : this.filterType;
@@ -35,7 +35,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

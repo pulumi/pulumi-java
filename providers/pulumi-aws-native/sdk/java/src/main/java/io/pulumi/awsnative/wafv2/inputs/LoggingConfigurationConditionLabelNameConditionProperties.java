@@ -21,7 +21,7 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
      * 
      */
     @InputImport(name="labelName", required=true)
-        private final String labelName;
+      private final String labelName;
 
     public String getLabelName() {
         return this.labelName;

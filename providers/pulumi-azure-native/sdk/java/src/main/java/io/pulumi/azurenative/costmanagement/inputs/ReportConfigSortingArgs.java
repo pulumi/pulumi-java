@@ -23,7 +23,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="direction")
-        private final @Nullable Input<String> direction;
+      private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -34,7 +34,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

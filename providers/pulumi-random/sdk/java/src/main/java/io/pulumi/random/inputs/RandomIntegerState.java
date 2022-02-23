@@ -22,7 +22,7 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-        private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -33,7 +33,7 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max")
-        private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
@@ -44,7 +44,7 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min")
-        private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -55,7 +55,7 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="result")
-        private final @Nullable Input<Integer> result;
+      private final @Nullable Input<Integer> result;
 
     public Input<Integer> getResult() {
         return this.result == null ? Input.empty() : this.result;
@@ -66,7 +66,7 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seed")
-        private final @Nullable Input<String> seed;
+      private final @Nullable Input<String> seed;
 
     public Input<String> getSeed() {
         return this.seed == null ? Input.empty() : this.seed;

@@ -19,7 +19,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="coreCount", required=true)
-        private final Input<Integer> coreCount;
+      private final Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount;
@@ -31,7 +31,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -21,7 +21,7 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectionString", required=true)
-        private final String connectionString;
+      private final String connectionString;
 
     public String getConnectionString() {
         return this.connectionString;
@@ -32,7 +32,7 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;

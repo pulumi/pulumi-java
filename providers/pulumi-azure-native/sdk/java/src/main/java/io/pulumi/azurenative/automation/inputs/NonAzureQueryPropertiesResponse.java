@@ -23,7 +23,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="functionAlias")
-        private final @Nullable String functionAlias;
+      private final @Nullable String functionAlias;
 
     public Optional<String> getFunctionAlias() {
         return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
@@ -34,7 +34,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceId")
-        private final @Nullable String workspaceId;
+      private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);

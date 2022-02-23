@@ -23,7 +23,7 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-        private final @Nullable String customLicenseAcquisitionUrlTemplate;
+      private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
@@ -34,7 +34,7 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="playReadyCustomAttributes")
-        private final @Nullable String playReadyCustomAttributes;
+      private final @Nullable String playReadyCustomAttributes;
 
     public Optional<String> getPlayReadyCustomAttributes() {
         return this.playReadyCustomAttributes == null ? Optional.empty() : Optional.ofNullable(this.playReadyCustomAttributes);

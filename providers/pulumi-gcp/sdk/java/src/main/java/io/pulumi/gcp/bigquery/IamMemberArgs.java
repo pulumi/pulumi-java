@@ -21,21 +21,21 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<IamMemberConditionArgs> condition;
+      private final @Nullable Input<IamMemberConditionArgs> condition;
 
     public Input<IamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="datasetId", required=true)
-        private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -47,7 +47,7 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,14 +60,14 @@ public final class IamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="tableId", required=true)
-        private final Input<String> tableId;
+      private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;

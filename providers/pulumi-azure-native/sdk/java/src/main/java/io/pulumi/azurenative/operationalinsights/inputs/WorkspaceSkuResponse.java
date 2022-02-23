@@ -24,7 +24,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacityReservationLevel")
-        private final @Nullable Integer capacityReservationLevel;
+      private final @Nullable Integer capacityReservationLevel;
 
     public Optional<Integer> getCapacityReservationLevel() {
         return this.capacityReservationLevel == null ? Optional.empty() : Optional.ofNullable(this.capacityReservationLevel);
@@ -35,7 +35,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastSkuUpdate", required=true)
-        private final String lastSkuUpdate;
+      private final String lastSkuUpdate;
 
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
@@ -46,7 +46,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

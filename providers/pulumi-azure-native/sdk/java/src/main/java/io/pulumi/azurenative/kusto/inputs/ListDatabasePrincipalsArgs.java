@@ -17,7 +17,7 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

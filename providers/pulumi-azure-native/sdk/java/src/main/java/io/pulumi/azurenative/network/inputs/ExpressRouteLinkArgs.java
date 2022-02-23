@@ -26,7 +26,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="adminState")
-        private final @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState;
+      private final @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState;
 
     public Input<Either<String,ExpressRouteLinkAdminState>> getAdminState() {
         return this.adminState == null ? Input.empty() : this.adminState;
@@ -37,7 +37,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macSecConfig")
-        private final @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
+      private final @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
 
     public Input<ExpressRouteLinkMacSecConfigArgs> getMacSecConfig() {
         return this.macSecConfig == null ? Input.empty() : this.macSecConfig;
@@ -59,7 +59,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

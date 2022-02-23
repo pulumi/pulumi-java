@@ -23,7 +23,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metric", required=true)
-        private final Input<MetricIdentifierArgs> metric;
+      private final Input<MetricIdentifierArgs> metric;
 
     public Input<MetricIdentifierArgs> getMetric() {
         return this.metric;
@@ -34,7 +34,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target", required=true)
-        private final Input<MetricTargetArgs> target;
+      private final Input<MetricTargetArgs> target;
 
     public Input<MetricTargetArgs> getTarget() {
         return this.target;

@@ -23,7 +23,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caFile")
-        private final @Nullable Input<String> caFile;
+      private final @Nullable Input<String> caFile;
 
     public Input<String> getCaFile() {
         return this.caFile == null ? Input.empty() : this.caFile;
@@ -34,7 +34,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certFile")
-        private final @Nullable Input<String> certFile;
+      private final @Nullable Input<String> certFile;
 
     public Input<String> getCertFile() {
         return this.certFile == null ? Input.empty() : this.certFile;
@@ -45,7 +45,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFile")
-        private final @Nullable Input<String> keyFile;
+      private final @Nullable Input<String> keyFile;
 
     public Input<String> getKeyFile() {
         return this.keyFile == null ? Input.empty() : this.keyFile;
@@ -56,7 +56,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -67,7 +67,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repo")
-        private final @Nullable Input<String> repo;
+      private final @Nullable Input<String> repo;
 
     public Input<String> getRepo() {
         return this.repo == null ? Input.empty() : this.repo;
@@ -78,7 +78,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

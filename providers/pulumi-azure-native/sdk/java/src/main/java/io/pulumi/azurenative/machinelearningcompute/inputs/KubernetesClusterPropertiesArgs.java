@@ -23,7 +23,7 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="servicePrincipal")
-        private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+      private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
 
     public Input<ServicePrincipalPropertiesArgs> getServicePrincipal() {
         return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;

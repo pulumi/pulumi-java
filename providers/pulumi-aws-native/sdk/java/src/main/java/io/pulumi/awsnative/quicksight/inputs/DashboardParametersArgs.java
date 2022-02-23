@@ -27,7 +27,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dateTimeParameters")
-        private final @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
+      private final @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
     public Input<List<DashboardDateTimeParameterArgs>> getDateTimeParameters() {
         return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
@@ -38,7 +38,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="decimalParameters")
-        private final @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters;
+      private final @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters;
 
     public Input<List<DashboardDecimalParameterArgs>> getDecimalParameters() {
         return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
@@ -49,7 +49,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integerParameters")
-        private final @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters;
+      private final @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters;
 
     public Input<List<DashboardIntegerParameterArgs>> getIntegerParameters() {
         return this.integerParameters == null ? Input.empty() : this.integerParameters;
@@ -60,7 +60,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stringParameters")
-        private final @Nullable Input<List<DashboardStringParameterArgs>> stringParameters;
+      private final @Nullable Input<List<DashboardStringParameterArgs>> stringParameters;
 
     public Input<List<DashboardStringParameterArgs>> getStringParameters() {
         return this.stringParameters == null ? Input.empty() : this.stringParameters;

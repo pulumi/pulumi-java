@@ -21,7 +21,7 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -32,7 +32,7 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="valueReference", required=true)
-        private final String valueReference;
+      private final String valueReference;
 
     public String getValueReference() {
         return this.valueReference;

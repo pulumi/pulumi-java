@@ -23,7 +23,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -34,7 +34,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -45,7 +45,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="itemId")
-        private final @Nullable String itemId;
+      private final @Nullable String itemId;
 
     public Optional<String> getItemId() {
         return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
@@ -56,7 +56,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable String policyId;
+      private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -68,7 +68,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="protectionIntentItemType", required=true)
-        private final String protectionIntentItemType;
+      private final String protectionIntentItemType;
 
     public String getProtectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -79,7 +79,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="protectionState")
-        private final @Nullable String protectionState;
+      private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
@@ -90,7 +90,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable String sourceResourceId;
+      private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);

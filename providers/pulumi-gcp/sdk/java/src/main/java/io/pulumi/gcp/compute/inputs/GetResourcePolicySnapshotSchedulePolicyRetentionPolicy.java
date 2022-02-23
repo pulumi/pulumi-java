@@ -14,14 +14,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyRetentionPolicy extend
     public static final GetResourcePolicySnapshotSchedulePolicyRetentionPolicy Empty = new GetResourcePolicySnapshotSchedulePolicyRetentionPolicy();
 
     @InputImport(name="maxRetentionDays", required=true)
-        private final Integer maxRetentionDays;
+      private final Integer maxRetentionDays;
 
     public Integer getMaxRetentionDays() {
         return this.maxRetentionDays;
     }
 
     @InputImport(name="onSourceDiskDelete", required=true)
-        private final String onSourceDiskDelete;
+      private final String onSourceDiskDelete;
 
     public String getOnSourceDiskDelete() {
         return this.onSourceDiskDelete;

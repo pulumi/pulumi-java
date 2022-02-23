@@ -23,7 +23,7 @@ public final class HlsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fragmentsPerTsSegment")
-        private final @Nullable Integer fragmentsPerTsSegment;
+      private final @Nullable Integer fragmentsPerTsSegment;
 
     public Optional<Integer> getFragmentsPerTsSegment() {
         return this.fragmentsPerTsSegment == null ? Optional.empty() : Optional.ofNullable(this.fragmentsPerTsSegment);

@@ -17,7 +17,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="contactFlowModuleArn", required=true)
-        private final String contactFlowModuleArn;
+      private final String contactFlowModuleArn;
 
     public String getContactFlowModuleArn() {
         return this.contactFlowModuleArn;

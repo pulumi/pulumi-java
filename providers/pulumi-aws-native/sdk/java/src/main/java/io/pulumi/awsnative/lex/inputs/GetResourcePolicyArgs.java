@@ -13,7 +13,7 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

@@ -17,7 +17,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterKey", required=true)
-        private final String parameterKey;
+      private final String parameterKey;
 
     public String getParameterKey() {
         return this.parameterKey;
@@ -28,7 +28,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterValue", required=true)
-        private final String parameterValue;
+      private final String parameterValue;
 
     public String getParameterValue() {
         return this.parameterValue;

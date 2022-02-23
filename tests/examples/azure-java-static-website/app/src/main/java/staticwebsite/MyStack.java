@@ -2,7 +2,6 @@ package staticwebsite;
 
 import java.util.List;
 
-import io.pulumi.Config;
 import io.pulumi.Stack;
 import io.pulumi.azurenative.cdn.Endpoint;
 import io.pulumi.azurenative.cdn.EndpointArgs;
@@ -11,7 +10,6 @@ import io.pulumi.azurenative.cdn.ProfileArgs;
 import io.pulumi.azurenative.cdn.enums.QueryStringCachingBehavior;
 import io.pulumi.azurenative.cdn.inputs.DeepCreatedOriginArgs;
 import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.resources.ResourceGroupArgs;
 import io.pulumi.azurenative.storage.Blob;
 import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.StorageAccount;
@@ -25,7 +23,6 @@ import io.pulumi.core.Asset;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
-import io.pulumi.resources.CustomResourceOptions;
 
 public final class MyStack extends Stack {
 
@@ -36,9 +33,7 @@ public final class MyStack extends Stack {
     private Output<String> cdnEndpoint;
 
     public MyStack() {
-        var resourceGroup = new ResourceGroup("resourceGroup",
-                ResourceGroupArgs.builder().build(),
-                CustomResourceOptions.Empty);
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("storageaccount",
                 StorageAccountArgs.builder()
@@ -47,8 +42,7 @@ public final class MyStack extends Stack {
                         .setSku(SkuArgs.builder()
                                 .setName(Either.ofRight(SkuName.Standard_LRS))
                                 .build())
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
                 StorageAccountStaticWebsiteArgs.builder()
@@ -56,8 +50,7 @@ public final class MyStack extends Stack {
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setIndexDocument("index.html")
                         .setError404Document("404.html")
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var indexHtml = new Blob("index.html",
                 BlobArgs.builder()
@@ -66,8 +59,7 @@ public final class MyStack extends Stack {
                         .setContainerName(staticWebsite.getContainerName().toInput())
                         .setSource(new Asset.FileAsset("./wwwroot/index.html"))
                         .setContentType("text/html")
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var notFoundHtml = new Blob("404.html",
                 BlobArgs.builder()
@@ -76,8 +68,7 @@ public final class MyStack extends Stack {
                         .setContainerName(staticWebsite.getContainerName().toInput())
                         .setSource(new Asset.FileAsset("./wwwroot/404.html"))
                         .setContentType("text/html")
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         // Web endpoint to the website.
         this.staticEndpoint = storageAccount.getPrimaryEndpoints()
@@ -90,8 +81,7 @@ public final class MyStack extends Stack {
                 .setSku(io.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
                         .setName(Either.ofRight(io.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
                         .build())
-                .build(),
-                CustomResourceOptions.Empty);
+                .build());
 
         var endpointOrigin = storageAccount.getPrimaryEndpoints()
                 .applyValue(pe -> pe.getWeb().replace("https://", "").replace("/", ""));
@@ -109,8 +99,7 @@ public final class MyStack extends Stack {
                         .setProfileName(profile.getName().toInput())
                         .setQueryStringCachingBehavior(QueryStringCachingBehavior.NotSet)
                         .setResourceGroupName(resourceGroup.getName().toInput())
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
 
         // CDN endpoint to the website.

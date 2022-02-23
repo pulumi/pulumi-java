@@ -22,28 +22,28 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetInputArgs Empty = new DatasetInputArgs();
 
     @InputImport(name="dataCatalogInputDefinition")
-        private final @Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+      private final @Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Input<DatasetDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Input.empty() : this.dataCatalogInputDefinition;
     }
 
     @InputImport(name="databaseInputDefinition")
-        private final @Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
+      private final @Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
 
     public Input<DatasetDatabaseInputDefinitionArgs> getDatabaseInputDefinition() {
         return this.databaseInputDefinition == null ? Input.empty() : this.databaseInputDefinition;
     }
 
     @InputImport(name="metadata")
-        private final @Nullable Input<DatasetMetadataArgs> metadata;
+      private final @Nullable Input<DatasetMetadataArgs> metadata;
 
     public Input<DatasetMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="s3InputDefinition")
-        private final @Nullable Input<DatasetS3LocationArgs> s3InputDefinition;
+      private final @Nullable Input<DatasetS3LocationArgs> s3InputDefinition;
 
     public Input<DatasetS3LocationArgs> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Input.empty() : this.s3InputDefinition;

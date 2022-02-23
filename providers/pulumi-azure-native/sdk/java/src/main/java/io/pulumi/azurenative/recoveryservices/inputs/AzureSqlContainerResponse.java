@@ -23,7 +23,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -38,7 +38,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="containerType", required=true)
-        private final String containerType;
+      private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -49,7 +49,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -60,7 +60,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="healthStatus")
-        private final @Nullable String healthStatus;
+      private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
@@ -71,7 +71,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="registrationStatus")
-        private final @Nullable String registrationStatus;
+      private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);

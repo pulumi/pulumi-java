@@ -17,7 +17,7 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="connectorProfileName", required=true)
-        private final String connectorProfileName;
+      private final String connectorProfileName;
 
     public String getConnectorProfileName() {
         return this.connectorProfileName;

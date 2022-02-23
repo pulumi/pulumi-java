@@ -23,7 +23,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-        private final @Nullable String diskEncryptionSetId;
+      private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
@@ -34,7 +34,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

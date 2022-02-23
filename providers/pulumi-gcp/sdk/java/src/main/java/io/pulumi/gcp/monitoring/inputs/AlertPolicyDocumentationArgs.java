@@ -22,7 +22,7 @@ public final class AlertPolicyDocumentationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="content")
-        private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class AlertPolicyDocumentationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mimeType")
-        private final @Nullable Input<String> mimeType;
+      private final @Nullable Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType == null ? Input.empty() : this.mimeType;

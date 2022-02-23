@@ -15,14 +15,14 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     public static final ExtendedLocationOptionsArgs Empty = new ExtendedLocationOptionsArgs();
 
     @InputImport(name="supportedPolicy")
-        private final @Nullable Input<String> supportedPolicy;
+      private final @Nullable Input<String> supportedPolicy;
 
     public Input<String> getSupportedPolicy() {
         return this.supportedPolicy == null ? Input.empty() : this.supportedPolicy;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

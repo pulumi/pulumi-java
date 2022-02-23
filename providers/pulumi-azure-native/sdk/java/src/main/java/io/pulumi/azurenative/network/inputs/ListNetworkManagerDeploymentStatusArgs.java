@@ -22,7 +22,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deploymentTypes")
-        private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
+      private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
 
     public List<Either<String,ConfigurationType>> getDeploymentTypes() {
         return this.deploymentTypes == null ? List.of() : this.deploymentTypes;
@@ -33,7 +33,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-        private final String networkManagerName;
+      private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -44,7 +44,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="regions")
-        private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
@@ -55,7 +55,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="skipToken")
-        private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);

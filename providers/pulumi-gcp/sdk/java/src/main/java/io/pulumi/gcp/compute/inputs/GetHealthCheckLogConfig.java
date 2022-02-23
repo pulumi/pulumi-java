@@ -13,7 +13,7 @@ public final class GetHealthCheckLogConfig extends io.pulumi.resources.InvokeArg
     public static final GetHealthCheckLogConfig Empty = new GetHealthCheckLogConfig();
 
     @InputImport(name="enable", required=true)
-        private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;

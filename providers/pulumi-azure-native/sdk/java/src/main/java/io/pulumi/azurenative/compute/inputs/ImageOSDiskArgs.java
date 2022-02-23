@@ -31,7 +31,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobUri")
-        private final @Nullable Input<String> blobUri;
+      private final @Nullable Input<String> blobUri;
 
     public Input<String> getBlobUri() {
         return this.blobUri == null ? Input.empty() : this.blobUri;
@@ -42,7 +42,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caching")
-        private final @Nullable Input<CachingTypes> caching;
+      private final @Nullable Input<CachingTypes> caching;
 
     public Input<CachingTypes> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
@@ -53,7 +53,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSet")
-        private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+      private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
     public Input<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
         return this.diskEncryptionSet == null ? Input.empty() : this.diskEncryptionSet;
@@ -64,7 +64,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-        private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -75,7 +75,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDisk")
-        private final @Nullable Input<SubResourceArgs> managedDisk;
+      private final @Nullable Input<SubResourceArgs> managedDisk;
 
     public Input<SubResourceArgs> getManagedDisk() {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
@@ -86,7 +86,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osState", required=true)
-        private final Input<OperatingSystemStateTypes> osState;
+      private final Input<OperatingSystemStateTypes> osState;
 
     public Input<OperatingSystemStateTypes> getOsState() {
         return this.osState;
@@ -97,7 +97,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-        private final Input<OperatingSystemTypes> osType;
+      private final Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType;
@@ -108,7 +108,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshot")
-        private final @Nullable Input<SubResourceArgs> snapshot;
+      private final @Nullable Input<SubResourceArgs> snapshot;
 
     public Input<SubResourceArgs> getSnapshot() {
         return this.snapshot == null ? Input.empty() : this.snapshot;
@@ -119,7 +119,7 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
+      private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
 
     public Input<Either<String,StorageAccountTypes>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;

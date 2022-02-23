@@ -25,7 +25,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filteringTags")
-        private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
+      private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
 
     public Input<List<FilteringTagArgs>> getFilteringTags() {
         return this.filteringTags == null ? Input.empty() : this.filteringTags;
@@ -36,7 +36,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-        private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;

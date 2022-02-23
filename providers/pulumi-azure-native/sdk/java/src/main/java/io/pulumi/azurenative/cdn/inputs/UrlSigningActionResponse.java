@@ -23,7 +23,7 @@ public final class UrlSigningActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class UrlSigningActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final UrlSigningActionParametersResponse parameters;
+      private final UrlSigningActionParametersResponse parameters;
 
     public UrlSigningActionParametersResponse getParameters() {
         return this.parameters;

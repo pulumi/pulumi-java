@@ -21,7 +21,7 @@ public final class KeyVaultReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class KeyVaultReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url", required=true)
-        private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;

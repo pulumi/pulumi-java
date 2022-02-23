@@ -13,7 +13,7 @@ public final class GetNetworkInsightsAnalysisArgs extends io.pulumi.resources.In
     public static final GetNetworkInsightsAnalysisArgs Empty = new GetNetworkInsightsAnalysisArgs();
 
     @InputImport(name="networkInsightsAnalysisId", required=true)
-        private final String networkInsightsAnalysisId;
+      private final String networkInsightsAnalysisId;
 
     public String getNetworkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;

@@ -17,14 +17,14 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     public static final RuleGroupGeoMatchStatementArgs Empty = new RuleGroupGeoMatchStatementArgs();
 
     @InputImport(name="countryCodes")
-        private final @Nullable Input<List<String>> countryCodes;
+      private final @Nullable Input<List<String>> countryCodes;
 
     public Input<List<String>> getCountryCodes() {
         return this.countryCodes == null ? Input.empty() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-        private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
     public Input<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;

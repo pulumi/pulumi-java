@@ -25,7 +25,7 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobName", required=true)
-        private final String jobName;
+      private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -36,7 +36,7 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobSecrets", required=true)
-        private final Object jobSecrets;
+      private final Object jobSecrets;
 
     public Object getJobSecrets() {
         return this.jobSecrets;

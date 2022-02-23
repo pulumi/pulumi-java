@@ -30,7 +30,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="action")
-        private final @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
+      private final @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
 
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -41,7 +41,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -52,7 +52,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Integer priority;
+      private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -64,7 +64,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="ruleCollectionType", required=true)
-        private final String ruleCollectionType;
+      private final String ruleCollectionType;
 
     public String getRuleCollectionType() {
         return this.ruleCollectionType;
@@ -75,7 +75,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<Object> rules;
+      private final @Nullable List<Object> rules;
 
     public List<Object> getRules() {
         return this.rules == null ? List.of() : this.rules;

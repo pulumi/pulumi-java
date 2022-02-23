@@ -28,7 +28,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -39,7 +39,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -50,7 +50,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interval")
-        private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -61,7 +61,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="match")
-        private final @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match;
+      private final @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match;
 
     public Input<ApplicationGatewayProbeHealthResponseMatchArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -72,7 +72,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minServers")
-        private final @Nullable Input<Integer> minServers;
+      private final @Nullable Input<Integer> minServers;
 
     public Input<Integer> getMinServers() {
         return this.minServers == null ? Input.empty() : this.minServers;
@@ -83,7 +83,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -105,7 +105,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pickHostNameFromBackendHttpSettings")
-        private final @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings;
+      private final @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings;
 
     public Input<Boolean> getPickHostNameFromBackendHttpSettings() {
         return this.pickHostNameFromBackendHttpSettings == null ? Input.empty() : this.pickHostNameFromBackendHttpSettings;
@@ -116,7 +116,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -127,7 +127,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
+      private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
 
     public Input<Either<String,ApplicationGatewayProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -138,7 +138,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -149,7 +149,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="unhealthyThreshold")
-        private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;

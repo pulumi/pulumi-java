@@ -18,7 +18,7 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -29,7 +29,7 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;

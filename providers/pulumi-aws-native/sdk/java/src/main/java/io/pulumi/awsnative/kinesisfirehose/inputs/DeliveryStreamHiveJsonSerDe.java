@@ -16,7 +16,7 @@ public final class DeliveryStreamHiveJsonSerDe extends io.pulumi.resources.Invok
     public static final DeliveryStreamHiveJsonSerDe Empty = new DeliveryStreamHiveJsonSerDe();
 
     @InputImport(name="timestampFormats")
-        private final @Nullable List<String> timestampFormats;
+      private final @Nullable List<String> timestampFormats;
 
     public List<String> getTimestampFormats() {
         return this.timestampFormats == null ? List.of() : this.timestampFormats;

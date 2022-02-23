@@ -16,14 +16,14 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     public static final GlobalTableTimeToLiveSpecificationArgs Empty = new GlobalTableTimeToLiveSpecificationArgs();
 
     @InputImport(name="attributeName")
-        private final @Nullable Input<String> attributeName;
+      private final @Nullable Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName == null ? Input.empty() : this.attributeName;
     }
 
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

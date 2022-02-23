@@ -24,7 +24,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cacheNetBiosName", required=true)
-        private final Input<String> cacheNetBiosName;
+      private final Input<String> cacheNetBiosName;
 
     public Input<String> getCacheNetBiosName() {
         return this.cacheNetBiosName;
@@ -35,7 +35,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable Input<CacheActiveDirectorySettingsCredentialsArgs> credentials;
+      private final @Nullable Input<CacheActiveDirectorySettingsCredentialsArgs> credentials;
 
     public Input<CacheActiveDirectorySettingsCredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -46,7 +46,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainName", required=true)
-        private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -57,7 +57,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainNetBiosName", required=true)
-        private final Input<String> domainNetBiosName;
+      private final Input<String> domainNetBiosName;
 
     public Input<String> getDomainNetBiosName() {
         return this.domainNetBiosName;
@@ -68,7 +68,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryDnsIpAddress", required=true)
-        private final Input<String> primaryDnsIpAddress;
+      private final Input<String> primaryDnsIpAddress;
 
     public Input<String> getPrimaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
@@ -79,7 +79,7 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondaryDnsIpAddress")
-        private final @Nullable Input<String> secondaryDnsIpAddress;
+      private final @Nullable Input<String> secondaryDnsIpAddress;
 
     public Input<String> getSecondaryDnsIpAddress() {
         return this.secondaryDnsIpAddress == null ? Input.empty() : this.secondaryDnsIpAddress;

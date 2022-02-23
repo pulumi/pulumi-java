@@ -36,7 +36,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier")
-        private final @Nullable Input<AccessTier> accessTier;
+      private final @Nullable Input<AccessTier> accessTier;
 
     public Input<AccessTier> getAccessTier() {
         return this.accessTier == null ? Input.empty() : this.accessTier;
@@ -47,7 +47,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-        private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -58,7 +58,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowBlobPublicAccess")
-        private final @Nullable Input<Boolean> allowBlobPublicAccess;
+      private final @Nullable Input<Boolean> allowBlobPublicAccess;
 
     public Input<Boolean> getAllowBlobPublicAccess() {
         return this.allowBlobPublicAccess == null ? Input.empty() : this.allowBlobPublicAccess;
@@ -69,7 +69,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSharedKeyAccess")
-        private final @Nullable Input<Boolean> allowSharedKeyAccess;
+      private final @Nullable Input<Boolean> allowSharedKeyAccess;
 
     public Input<Boolean> getAllowSharedKeyAccess() {
         return this.allowSharedKeyAccess == null ? Input.empty() : this.allowSharedKeyAccess;
@@ -80,7 +80,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureFilesIdentityBasedAuthentication")
-        private final @Nullable Input<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
+      private final @Nullable Input<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
     public Input<AzureFilesIdentityBasedAuthenticationArgs> getAzureFilesIdentityBasedAuthentication() {
         return this.azureFilesIdentityBasedAuthentication == null ? Input.empty() : this.azureFilesIdentityBasedAuthentication;
@@ -91,7 +91,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomain")
-        private final @Nullable Input<CustomDomainArgs> customDomain;
+      private final @Nullable Input<CustomDomainArgs> customDomain;
 
     public Input<CustomDomainArgs> getCustomDomain() {
         return this.customDomain == null ? Input.empty() : this.customDomain;
@@ -102,7 +102,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttpsTrafficOnly")
-        private final @Nullable Input<Boolean> enableHttpsTrafficOnly;
+      private final @Nullable Input<Boolean> enableHttpsTrafficOnly;
 
     public Input<Boolean> getEnableHttpsTrafficOnly() {
         return this.enableHttpsTrafficOnly == null ? Input.empty() : this.enableHttpsTrafficOnly;
@@ -113,7 +113,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNfsV3")
-        private final @Nullable Input<Boolean> enableNfsV3;
+      private final @Nullable Input<Boolean> enableNfsV3;
 
     public Input<Boolean> getEnableNfsV3() {
         return this.enableNfsV3 == null ? Input.empty() : this.enableNfsV3;
@@ -124,7 +124,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable Input<EncryptionArgs> encryption;
+      private final @Nullable Input<EncryptionArgs> encryption;
 
     public Input<EncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -135,7 +135,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -146,7 +146,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -157,7 +157,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isHnsEnabled")
-        private final @Nullable Input<Boolean> isHnsEnabled;
+      private final @Nullable Input<Boolean> isHnsEnabled;
 
     public Input<Boolean> getIsHnsEnabled() {
         return this.isHnsEnabled == null ? Input.empty() : this.isHnsEnabled;
@@ -168,7 +168,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPolicy")
-        private final @Nullable Input<KeyPolicyArgs> keyPolicy;
+      private final @Nullable Input<KeyPolicyArgs> keyPolicy;
 
     public Input<KeyPolicyArgs> getKeyPolicy() {
         return this.keyPolicy == null ? Input.empty() : this.keyPolicy;
@@ -179,7 +179,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<Either<String,Kind>> kind;
+      private final Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind;
@@ -190,7 +190,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="largeFileSharesState")
-        private final @Nullable Input<Either<String,LargeFileSharesState>> largeFileSharesState;
+      private final @Nullable Input<Either<String,LargeFileSharesState>> largeFileSharesState;
 
     public Input<Either<String,LargeFileSharesState>> getLargeFileSharesState() {
         return this.largeFileSharesState == null ? Input.empty() : this.largeFileSharesState;
@@ -201,7 +201,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -212,7 +212,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumTlsVersion")
-        private final @Nullable Input<Either<String,MinimumTlsVersion>> minimumTlsVersion;
+      private final @Nullable Input<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
     public Input<Either<String,MinimumTlsVersion>> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
@@ -223,7 +223,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkRuleSet")
-        private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
+      private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
     public Input<NetworkRuleSetArgs> getNetworkRuleSet() {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
@@ -234,7 +234,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -245,7 +245,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingPreference")
-        private final @Nullable Input<RoutingPreferenceArgs> routingPreference;
+      private final @Nullable Input<RoutingPreferenceArgs> routingPreference;
 
     public Input<RoutingPreferenceArgs> getRoutingPreference() {
         return this.routingPreference == null ? Input.empty() : this.routingPreference;
@@ -256,7 +256,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasPolicy")
-        private final @Nullable Input<SasPolicyArgs> sasPolicy;
+      private final @Nullable Input<SasPolicyArgs> sasPolicy;
 
     public Input<SasPolicyArgs> getSasPolicy() {
         return this.sasPolicy == null ? Input.empty() : this.sasPolicy;
@@ -267,7 +267,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -278,7 +278,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

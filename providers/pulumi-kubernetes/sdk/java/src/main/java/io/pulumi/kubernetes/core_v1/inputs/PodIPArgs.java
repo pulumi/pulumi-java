@@ -24,7 +24,7 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-        private final @Nullable Input<String> ip;
+      private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;

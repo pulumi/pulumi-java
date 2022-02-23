@@ -16,14 +16,14 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     public static final RuleGroupRuleDefinitionArgs Empty = new RuleGroupRuleDefinitionArgs();
 
     @InputImport(name="actions", required=true)
-        private final Input<List<String>> actions;
+      private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="matchAttributes", required=true)
-        private final Input<RuleGroupMatchAttributesArgs> matchAttributes;
+      private final Input<RuleGroupMatchAttributesArgs> matchAttributes;
 
     public Input<RuleGroupMatchAttributesArgs> getMatchAttributes() {
         return this.matchAttributes;

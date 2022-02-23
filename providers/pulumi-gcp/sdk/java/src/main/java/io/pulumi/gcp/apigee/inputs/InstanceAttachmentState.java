@@ -19,7 +19,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable Input<String> environment;
+      private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -31,7 +31,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceId")
-        private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -42,7 +42,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

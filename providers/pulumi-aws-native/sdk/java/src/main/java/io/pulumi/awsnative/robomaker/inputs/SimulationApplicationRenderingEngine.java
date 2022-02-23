@@ -22,7 +22,7 @@ public final class SimulationApplicationRenderingEngine extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final SimulationApplicationRenderingEngineName name;
+      private final SimulationApplicationRenderingEngineName name;
 
     public SimulationApplicationRenderingEngineName getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class SimulationApplicationRenderingEngine extends io.pulumi.resour
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

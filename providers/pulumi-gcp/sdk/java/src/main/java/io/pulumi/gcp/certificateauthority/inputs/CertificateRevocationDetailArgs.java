@@ -15,14 +15,14 @@ public final class CertificateRevocationDetailArgs extends io.pulumi.resources.R
     public static final CertificateRevocationDetailArgs Empty = new CertificateRevocationDetailArgs();
 
     @InputImport(name="revocationState")
-        private final @Nullable Input<String> revocationState;
+      private final @Nullable Input<String> revocationState;
 
     public Input<String> getRevocationState() {
         return this.revocationState == null ? Input.empty() : this.revocationState;
     }
 
     @InputImport(name="revocationTime")
-        private final @Nullable Input<String> revocationTime;
+      private final @Nullable Input<String> revocationTime;
 
     public Input<String> getRevocationTime() {
         return this.revocationTime == null ? Input.empty() : this.revocationTime;

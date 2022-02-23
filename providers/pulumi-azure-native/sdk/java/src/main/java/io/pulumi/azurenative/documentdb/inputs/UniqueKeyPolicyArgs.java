@@ -24,7 +24,7 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uniqueKeys")
-        private final @Nullable Input<List<UniqueKeyArgs>> uniqueKeys;
+      private final @Nullable Input<List<UniqueKeyArgs>> uniqueKeys;
 
     public Input<List<UniqueKeyArgs>> getUniqueKeys() {
         return this.uniqueKeys == null ? Input.empty() : this.uniqueKeys;

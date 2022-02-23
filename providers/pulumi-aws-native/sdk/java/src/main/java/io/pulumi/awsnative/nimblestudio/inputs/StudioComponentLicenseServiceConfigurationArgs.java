@@ -23,7 +23,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;

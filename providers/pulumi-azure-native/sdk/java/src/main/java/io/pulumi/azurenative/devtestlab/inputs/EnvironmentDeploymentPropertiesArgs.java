@@ -25,7 +25,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="armTemplateId")
-        private final @Nullable Input<String> armTemplateId;
+      private final @Nullable Input<String> armTemplateId;
 
     public Input<String> getArmTemplateId() {
         return this.armTemplateId == null ? Input.empty() : this.armTemplateId;
@@ -36,7 +36,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters;
+      private final @Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
     public Input<List<ArmTemplateParameterPropertiesArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

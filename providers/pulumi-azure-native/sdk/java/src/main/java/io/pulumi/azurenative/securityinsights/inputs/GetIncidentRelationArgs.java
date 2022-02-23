@@ -17,7 +17,7 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="incidentId", required=true)
-        private final String incidentId;
+      private final String incidentId;
 
     public String getIncidentId() {
         return this.incidentId;
@@ -28,7 +28,7 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-        private final String operationalInsightsResourceProvider;
+      private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="relationName", required=true)
-        private final String relationName;
+      private final String relationName;
 
     public String getRelationName() {
         return this.relationName;
@@ -50,7 +50,7 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

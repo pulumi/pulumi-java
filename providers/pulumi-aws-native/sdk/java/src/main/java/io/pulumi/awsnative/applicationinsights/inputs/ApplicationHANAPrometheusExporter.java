@@ -24,7 +24,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * 
      */
     @InputImport(name="agreeToInstallHANADBClient", required=true)
-        private final Boolean agreeToInstallHANADBClient;
+      private final Boolean agreeToInstallHANADBClient;
 
     public Boolean getAgreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
@@ -35,7 +35,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * 
      */
     @InputImport(name="hANAPort", required=true)
-        private final String hANAPort;
+      private final String hANAPort;
 
     public String getHANAPort() {
         return this.hANAPort;
@@ -46,7 +46,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * 
      */
     @InputImport(name="hANASID", required=true)
-        private final String hANASID;
+      private final String hANASID;
 
     public String getHANASID() {
         return this.hANASID;
@@ -60,7 +60,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * 
      */
     @InputImport(name="hANASecretName", required=true)
-        private final String hANASecretName;
+      private final String hANASecretName;
 
     public String getHANASecretName() {
         return this.hANASecretName;
@@ -71,7 +71,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * 
      */
     @InputImport(name="prometheusPort")
-        private final @Nullable String prometheusPort;
+      private final @Nullable String prometheusPort;
 
     public Optional<String> getPrometheusPort() {
         return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);

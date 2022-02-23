@@ -13,7 +13,7 @@ public final class GetClusterNodeConfigWorkloadMetadataConfig extends io.pulumi.
     public static final GetClusterNodeConfigWorkloadMetadataConfig Empty = new GetClusterNodeConfigWorkloadMetadataConfig();
 
     @InputImport(name="mode", required=true)
-        private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;

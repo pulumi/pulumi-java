@@ -26,7 +26,7 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="allowInterrupt")
-        private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
@@ -37,14 +37,14 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="delayInSeconds", required=true)
-        private final Input<Integer> delayInSeconds;
+      private final Input<Integer> delayInSeconds;
 
     public Input<Integer> getDelayInSeconds() {
         return this.delayInSeconds;
     }
 
     @InputImport(name="messageGroups", required=true)
-        private final Input<List<BotMessageGroupArgs>> messageGroups;
+      private final Input<List<BotMessageGroupArgs>> messageGroups;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroups() {
         return this.messageGroups;

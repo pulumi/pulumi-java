@@ -15,7 +15,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     public static final OutboundFirewallRuleArgs Empty = new OutboundFirewallRuleArgs();
 
     @InputImport(name="outboundRuleFqdn")
-        private final @Nullable Input<String> outboundRuleFqdn;
+      private final @Nullable Input<String> outboundRuleFqdn;
 
     public Input<String> getOutboundRuleFqdn() {
         return this.outboundRuleFqdn == null ? Input.empty() : this.outboundRuleFqdn;
@@ -26,7 +26,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -37,7 +37,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;

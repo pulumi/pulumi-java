@@ -20,7 +20,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleEntities")
-        private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;

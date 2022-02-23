@@ -24,7 +24,7 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="assetName", required=true)
-        private final String assetName;
+      private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -35,7 +35,7 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="datasetVersion", required=true)
-        private final String datasetVersion;
+      private final String datasetVersion;
 
     public String getDatasetVersion() {
         return this.datasetVersion;
@@ -46,7 +46,7 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableIncrementalDatasetRefresh")
-        private final @Nullable Boolean enableIncrementalDatasetRefresh;
+      private final @Nullable Boolean enableIncrementalDatasetRefresh;
 
     public Optional<Boolean> getEnableIncrementalDatasetRefresh() {
         return this.enableIncrementalDatasetRefresh == null ? Optional.empty() : Optional.ofNullable(this.enableIncrementalDatasetRefresh);

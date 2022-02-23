@@ -24,7 +24,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-        private final Input<List<Either<String,WebhookAction>>> actions;
+      private final Input<List<Either<String,WebhookAction>>> actions;
 
     public Input<List<Either<String,WebhookAction>>> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHeaders")
-        private final @Nullable Input<Map<String,String>> customHeaders;
+      private final @Nullable Input<Map<String,String>> customHeaders;
 
     public Input<Map<String,String>> getCustomHeaders() {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
@@ -46,7 +46,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-        private final Input<String> registryName;
+      private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -68,7 +68,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -90,7 +90,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceUri", required=true)
-        private final Input<String> serviceUri;
+      private final Input<String> serviceUri;
 
     public Input<String> getServiceUri() {
         return this.serviceUri;
@@ -101,7 +101,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,WebhookStatus>> status;
+      private final @Nullable Input<Either<String,WebhookStatus>> status;
 
     public Input<Either<String,WebhookStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -112,7 +112,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -123,7 +123,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookName")
-        private final @Nullable Input<String> webhookName;
+      private final @Nullable Input<String> webhookName;
 
     public Input<String> getWebhookName() {
         return this.webhookName == null ? Input.empty() : this.webhookName;

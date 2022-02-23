@@ -20,7 +20,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
     public static final BotAliasLocaleSettings Empty = new BotAliasLocaleSettings();
 
     @InputImport(name="codeHookSpecification")
-        private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
+      private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
 
     public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {
         return this.codeHookSpecification == null ? Optional.empty() : Optional.ofNullable(this.codeHookSpecification);
@@ -31,7 +31,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

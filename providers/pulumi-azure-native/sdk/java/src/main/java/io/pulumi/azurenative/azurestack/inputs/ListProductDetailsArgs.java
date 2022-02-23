@@ -17,7 +17,7 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="productName", required=true)
-        private final String productName;
+      private final String productName;
 
     public String getProductName() {
         return this.productName;
@@ -28,7 +28,7 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="registrationName", required=true)
-        private final String registrationName;
+      private final String registrationName;
 
     public String getRegistrationName() {
         return this.registrationName;
@@ -39,7 +39,7 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final String resourceGroup;
+      private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;

@@ -21,7 +21,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeName")
-        private final @Nullable Input<String> typeName;
+      private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -32,7 +32,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeVersionArn")
-        private final @Nullable Input<String> typeVersionArn;
+      private final @Nullable Input<String> typeVersionArn;
 
     public Input<String> getTypeVersionArn() {
         return this.typeVersionArn == null ? Input.empty() : this.typeVersionArn;
@@ -43,7 +43,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="versionId")
-        private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;

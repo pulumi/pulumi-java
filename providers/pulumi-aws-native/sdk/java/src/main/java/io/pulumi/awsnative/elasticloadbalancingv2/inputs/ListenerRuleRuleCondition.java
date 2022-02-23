@@ -22,56 +22,56 @@ public final class ListenerRuleRuleCondition extends io.pulumi.resources.InvokeA
     public static final ListenerRuleRuleCondition Empty = new ListenerRuleRuleCondition();
 
     @InputImport(name="field")
-        private final @Nullable String field;
+      private final @Nullable String field;
 
     public Optional<String> getField() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
     @InputImport(name="hostHeaderConfig")
-        private final @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig;
+      private final @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig;
 
     public Optional<ListenerRuleHostHeaderConfig> getHostHeaderConfig() {
         return this.hostHeaderConfig == null ? Optional.empty() : Optional.ofNullable(this.hostHeaderConfig);
     }
 
     @InputImport(name="httpHeaderConfig")
-        private final @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig;
+      private final @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig;
 
     public Optional<ListenerRuleHttpHeaderConfig> getHttpHeaderConfig() {
         return this.httpHeaderConfig == null ? Optional.empty() : Optional.ofNullable(this.httpHeaderConfig);
     }
 
     @InputImport(name="httpRequestMethodConfig")
-        private final @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig;
+      private final @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig;
 
     public Optional<ListenerRuleHttpRequestMethodConfig> getHttpRequestMethodConfig() {
         return this.httpRequestMethodConfig == null ? Optional.empty() : Optional.ofNullable(this.httpRequestMethodConfig);
     }
 
     @InputImport(name="pathPatternConfig")
-        private final @Nullable ListenerRulePathPatternConfig pathPatternConfig;
+      private final @Nullable ListenerRulePathPatternConfig pathPatternConfig;
 
     public Optional<ListenerRulePathPatternConfig> getPathPatternConfig() {
         return this.pathPatternConfig == null ? Optional.empty() : Optional.ofNullable(this.pathPatternConfig);
     }
 
     @InputImport(name="queryStringConfig")
-        private final @Nullable ListenerRuleQueryStringConfig queryStringConfig;
+      private final @Nullable ListenerRuleQueryStringConfig queryStringConfig;
 
     public Optional<ListenerRuleQueryStringConfig> getQueryStringConfig() {
         return this.queryStringConfig == null ? Optional.empty() : Optional.ofNullable(this.queryStringConfig);
     }
 
     @InputImport(name="sourceIpConfig")
-        private final @Nullable ListenerRuleSourceIpConfig sourceIpConfig;
+      private final @Nullable ListenerRuleSourceIpConfig sourceIpConfig;
 
     public Optional<ListenerRuleSourceIpConfig> getSourceIpConfig() {
         return this.sourceIpConfig == null ? Optional.empty() : Optional.ofNullable(this.sourceIpConfig);
     }
 
     @InputImport(name="values")
-        private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

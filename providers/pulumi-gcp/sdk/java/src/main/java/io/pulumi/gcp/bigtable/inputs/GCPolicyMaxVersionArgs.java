@@ -18,7 +18,7 @@ public final class GCPolicyMaxVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="number", required=true)
-        private final Input<Integer> number;
+      private final Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number;

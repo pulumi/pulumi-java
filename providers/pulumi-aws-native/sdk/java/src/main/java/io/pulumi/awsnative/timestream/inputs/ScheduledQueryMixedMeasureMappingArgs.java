@@ -22,35 +22,35 @@ public final class ScheduledQueryMixedMeasureMappingArgs extends io.pulumi.resou
     public static final ScheduledQueryMixedMeasureMappingArgs Empty = new ScheduledQueryMixedMeasureMappingArgs();
 
     @InputImport(name="measureName")
-        private final @Nullable Input<String> measureName;
+      private final @Nullable Input<String> measureName;
 
     public Input<String> getMeasureName() {
         return this.measureName == null ? Input.empty() : this.measureName;
     }
 
     @InputImport(name="measureValueType", required=true)
-        private final Input<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType;
+      private final Input<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType;
 
     public Input<ScheduledQueryMixedMeasureMappingMeasureValueType> getMeasureValueType() {
         return this.measureValueType;
     }
 
     @InputImport(name="multiMeasureAttributeMappings")
-        private final @Nullable Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
+      private final @Nullable Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
     public Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings == null ? Input.empty() : this.multiMeasureAttributeMappings;
     }
 
     @InputImport(name="sourceColumn")
-        private final @Nullable Input<String> sourceColumn;
+      private final @Nullable Input<String> sourceColumn;
 
     public Input<String> getSourceColumn() {
         return this.sourceColumn == null ? Input.empty() : this.sourceColumn;
     }
 
     @InputImport(name="targetMeasureName")
-        private final @Nullable Input<String> targetMeasureName;
+      private final @Nullable Input<String> targetMeasureName;
 
     public Input<String> getTargetMeasureName() {
         return this.targetMeasureName == null ? Input.empty() : this.targetMeasureName;

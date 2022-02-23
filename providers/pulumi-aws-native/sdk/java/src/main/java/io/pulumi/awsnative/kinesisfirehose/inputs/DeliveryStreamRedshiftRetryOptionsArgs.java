@@ -15,7 +15,7 @@ public final class DeliveryStreamRedshiftRetryOptionsArgs extends io.pulumi.reso
     public static final DeliveryStreamRedshiftRetryOptionsArgs Empty = new DeliveryStreamRedshiftRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-        private final @Nullable Input<Integer> durationInSeconds;
+      private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;

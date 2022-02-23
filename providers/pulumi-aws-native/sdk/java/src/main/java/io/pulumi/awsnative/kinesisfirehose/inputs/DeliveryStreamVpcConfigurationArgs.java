@@ -15,21 +15,21 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     public static final DeliveryStreamVpcConfigurationArgs Empty = new DeliveryStreamVpcConfigurationArgs();
 
     @InputImport(name="roleARN", required=true)
-        private final Input<String> roleARN;
+      private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="securityGroupIds", required=true)
-        private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-        private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;

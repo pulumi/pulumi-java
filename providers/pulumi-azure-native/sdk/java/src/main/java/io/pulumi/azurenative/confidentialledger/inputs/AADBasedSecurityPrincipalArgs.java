@@ -25,7 +25,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ledgerRoleName")
-        private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
+      private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Input<Either<String,LedgerRoleName>> getLedgerRoleName() {
         return this.ledgerRoleName == null ? Input.empty() : this.ledgerRoleName;
@@ -36,7 +36,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -47,7 +47,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

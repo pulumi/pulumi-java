@@ -24,7 +24,7 @@ public final class LogLocationSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -35,7 +35,7 @@ public final class LogLocationSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Object path;
+      private final @Nullable Object path;
 
     public Optional<Object> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);

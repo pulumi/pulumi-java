@@ -16,35 +16,35 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs extends 
     public static final EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs Empty = new EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs();
 
     @InputImport(name="clusterIpv4CidrBlock")
-        private final @Nullable Input<String> clusterIpv4CidrBlock;
+      private final @Nullable Input<String> clusterIpv4CidrBlock;
 
     public Input<String> getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Input.empty() : this.clusterIpv4CidrBlock;
     }
 
     @InputImport(name="clusterSecondaryRangeName")
-        private final @Nullable Input<String> clusterSecondaryRangeName;
+      private final @Nullable Input<String> clusterSecondaryRangeName;
 
     public Input<String> getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Input.empty() : this.clusterSecondaryRangeName;
     }
 
     @InputImport(name="servicesIpv4CidrBlock")
-        private final @Nullable Input<String> servicesIpv4CidrBlock;
+      private final @Nullable Input<String> servicesIpv4CidrBlock;
 
     public Input<String> getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Input.empty() : this.servicesIpv4CidrBlock;
     }
 
     @InputImport(name="servicesSecondaryRangeName")
-        private final @Nullable Input<String> servicesSecondaryRangeName;
+      private final @Nullable Input<String> servicesSecondaryRangeName;
 
     public Input<String> getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Input.empty() : this.servicesSecondaryRangeName;
     }
 
     @InputImport(name="useIpAliases")
-        private final @Nullable Input<Boolean> useIpAliases;
+      private final @Nullable Input<Boolean> useIpAliases;
 
     public Input<Boolean> getUseIpAliases() {
         return this.useIpAliases == null ? Input.empty() : this.useIpAliases;

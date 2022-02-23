@@ -17,7 +17,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeName", required=true)
-        private final String routeName;
+      private final String routeName;
 
     public String getRouteName() {
         return this.routeName;
@@ -39,7 +39,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeTableName", required=true)
-        private final String routeTableName;
+      private final String routeTableName;
 
     public String getRouteTableName() {
         return this.routeTableName;

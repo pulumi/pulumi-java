@@ -18,35 +18,35 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatasetVariableArgs Empty = new DatasetVariableArgs();
 
     @InputImport(name="datasetContentVersionValue")
-        private final @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
+      private final @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
     public Input<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Input.empty() : this.datasetContentVersionValue;
     }
 
     @InputImport(name="doubleValue")
-        private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
     @InputImport(name="outputFileUriValue")
-        private final @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
+      private final @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
     public Input<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
         return this.outputFileUriValue == null ? Input.empty() : this.outputFileUriValue;
     }
 
     @InputImport(name="stringValue")
-        private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
     @InputImport(name="variableName", required=true)
-        private final Input<String> variableName;
+      private final Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName;

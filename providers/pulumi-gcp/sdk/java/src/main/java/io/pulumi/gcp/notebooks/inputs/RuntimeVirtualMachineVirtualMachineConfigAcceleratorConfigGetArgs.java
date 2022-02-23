@@ -20,7 +20,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="coreCount")
-        private final @Nullable Input<Integer> coreCount;
+      private final @Nullable Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -33,7 +33,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

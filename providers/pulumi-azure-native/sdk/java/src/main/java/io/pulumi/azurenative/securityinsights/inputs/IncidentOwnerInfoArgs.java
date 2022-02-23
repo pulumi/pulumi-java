@@ -23,7 +23,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assignedTo")
-        private final @Nullable Input<String> assignedTo;
+      private final @Nullable Input<String> assignedTo;
 
     public Input<String> getAssignedTo() {
         return this.assignedTo == null ? Input.empty() : this.assignedTo;
@@ -34,7 +34,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -45,7 +45,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -56,7 +56,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userPrincipalName")
-        private final @Nullable Input<String> userPrincipalName;
+      private final @Nullable Input<String> userPrincipalName;
 
     public Input<String> getUserPrincipalName() {
         return this.userPrincipalName == null ? Input.empty() : this.userPrincipalName;

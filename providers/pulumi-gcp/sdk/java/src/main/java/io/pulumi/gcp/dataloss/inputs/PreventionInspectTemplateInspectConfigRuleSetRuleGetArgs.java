@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
      * 
      */
     @InputImport(name="exclusionRule")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> getExclusionRule() {
         return this.exclusionRule == null ? Input.empty() : this.exclusionRule;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
      * 
      */
     @InputImport(name="hotwordRule")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> getHotwordRule() {
         return this.hotwordRule == null ? Input.empty() : this.hotwordRule;

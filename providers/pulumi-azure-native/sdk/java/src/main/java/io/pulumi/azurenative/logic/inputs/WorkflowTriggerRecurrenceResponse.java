@@ -25,7 +25,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable String endTime;
+      private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -36,7 +36,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="frequency")
-        private final @Nullable String frequency;
+      private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
@@ -47,7 +47,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="interval")
-        private final @Nullable Integer interval;
+      private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
@@ -58,7 +58,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable RecurrenceScheduleResponse schedule;
+      private final @Nullable RecurrenceScheduleResponse schedule;
 
     public Optional<RecurrenceScheduleResponse> getSchedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
@@ -69,7 +69,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable String startTime;
+      private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -80,7 +80,7 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable String timeZone;
+      private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);

@@ -17,7 +17,7 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sqlServerRegistrationName", required=true)
-        private final String sqlServerRegistrationName;
+      private final String sqlServerRegistrationName;
 
     public String getSqlServerRegistrationName() {
         return this.sqlServerRegistrationName;

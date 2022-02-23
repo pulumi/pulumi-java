@@ -27,7 +27,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="constantInitializationVector")
-        private final @Nullable Input<String> constantInitializationVector;
+      private final @Nullable Input<String> constantInitializationVector;
 
     public Input<String> getConstantInitializationVector() {
         return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
@@ -38,7 +38,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionMethod")
-        private final @Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
+      private final @Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
 
     public Input<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return this.encryptionMethod == null ? Input.empty() : this.encryptionMethod;
@@ -49,7 +49,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyRotationIntervalSeconds")
-        private final @Nullable Input<Integer> keyRotationIntervalSeconds;
+      private final @Nullable Input<Integer> keyRotationIntervalSeconds;
 
     public Input<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Input.empty() : this.keyRotationIntervalSeconds;
@@ -60,14 +60,14 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="repeatExtXKey")
-        private final @Nullable Input<Boolean> repeatExtXKey;
+      private final @Nullable Input<Boolean> repeatExtXKey;
 
     public Input<Boolean> getRepeatExtXKey() {
         return this.repeatExtXKey == null ? Input.empty() : this.repeatExtXKey;
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;

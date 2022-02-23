@@ -20,7 +20,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final Input<String> fabricName;
+      private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="mappingName")
-        private final @Nullable Input<String> mappingName;
+      private final @Nullable Input<String> mappingName;
 
     public Input<String> getMappingName() {
         return this.mappingName == null ? Input.empty() : this.mappingName;
@@ -42,7 +42,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<CreateProtectionContainerMappingInputPropertiesArgs> properties;
+      private final @Nullable Input<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
     public Input<CreateProtectionContainerMappingInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="protectionContainerName", required=true)
-        private final Input<String> protectionContainerName;
+      private final Input<String> protectionContainerName;
 
     public Input<String> getProtectionContainerName() {
         return this.protectionContainerName;
@@ -64,7 +64,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

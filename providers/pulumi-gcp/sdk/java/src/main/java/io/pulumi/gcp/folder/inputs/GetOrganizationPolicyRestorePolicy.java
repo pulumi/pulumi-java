@@ -13,7 +13,7 @@ public final class GetOrganizationPolicyRestorePolicy extends io.pulumi.resource
     public static final GetOrganizationPolicyRestorePolicy Empty = new GetOrganizationPolicyRestorePolicy();
 
     @InputImport(name="default", required=true)
-        private final Boolean $default;
+      private final Boolean $default;
 
     public Boolean get$default() {
         return this.$default;

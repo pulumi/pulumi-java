@@ -22,7 +22,7 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="regionName", required=true)
-        private final Input<String> regionName;
+      private final Input<String> regionName;
 
     public Input<String> getRegionName() {
         return this.regionName;

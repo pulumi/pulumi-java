@@ -23,7 +23,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authTokenUrl")
-        private final @Nullable Input<String> authTokenUrl;
+      private final @Nullable Input<String> authTokenUrl;
 
     public Input<String> getAuthTokenUrl() {
         return this.authTokenUrl == null ? Input.empty() : this.authTokenUrl;
@@ -34,7 +34,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -45,7 +45,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;

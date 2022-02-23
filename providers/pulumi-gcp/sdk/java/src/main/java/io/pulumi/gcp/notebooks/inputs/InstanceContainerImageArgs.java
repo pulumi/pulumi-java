@@ -20,7 +20,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="repository", required=true)
-        private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -31,7 +31,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;

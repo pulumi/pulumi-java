@@ -14,7 +14,7 @@ public final class EnvironmentConfigEncryptionConfigGetArgs extends io.pulumi.re
     public static final EnvironmentConfigEncryptionConfigGetArgs Empty = new EnvironmentConfigEncryptionConfigGetArgs();
 
     @InputImport(name="kmsKeyName", required=true)
-        private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;

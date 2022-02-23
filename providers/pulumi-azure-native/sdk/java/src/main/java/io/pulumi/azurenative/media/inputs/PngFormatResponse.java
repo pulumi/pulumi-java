@@ -21,7 +21,7 @@ public final class PngFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-        private final String filenamePattern;
+      private final String filenamePattern;
 
     public String getFilenamePattern() {
         return this.filenamePattern;
@@ -33,7 +33,7 @@ public final class PngFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

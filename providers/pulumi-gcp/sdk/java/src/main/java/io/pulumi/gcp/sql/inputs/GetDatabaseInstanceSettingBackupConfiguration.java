@@ -17,49 +17,49 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends io.pulu
     public static final GetDatabaseInstanceSettingBackupConfiguration Empty = new GetDatabaseInstanceSettingBackupConfiguration();
 
     @InputImport(name="backupRetentionSettings", required=true)
-        private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
+      private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
 
     public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> getBackupRetentionSettings() {
         return this.backupRetentionSettings;
     }
 
     @InputImport(name="binaryLogEnabled", required=true)
-        private final Boolean binaryLogEnabled;
+      private final Boolean binaryLogEnabled;
 
     public Boolean getBinaryLogEnabled() {
         return this.binaryLogEnabled;
     }
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="pointInTimeRecoveryEnabled", required=true)
-        private final Boolean pointInTimeRecoveryEnabled;
+      private final Boolean pointInTimeRecoveryEnabled;
 
     public Boolean getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
 
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
     }
 
     @InputImport(name="transactionLogRetentionDays", required=true)
-        private final Integer transactionLogRetentionDays;
+      private final Integer transactionLogRetentionDays;
 
     public Integer getTransactionLogRetentionDays() {
         return this.transactionLogRetentionDays;

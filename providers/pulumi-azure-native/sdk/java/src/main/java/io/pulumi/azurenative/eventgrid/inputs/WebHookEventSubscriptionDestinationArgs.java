@@ -24,7 +24,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="azureActiveDirectoryApplicationIdOrUri")
-        private final @Nullable Input<String> azureActiveDirectoryApplicationIdOrUri;
+      private final @Nullable Input<String> azureActiveDirectoryApplicationIdOrUri;
 
     public Input<String> getAzureActiveDirectoryApplicationIdOrUri() {
         return this.azureActiveDirectoryApplicationIdOrUri == null ? Input.empty() : this.azureActiveDirectoryApplicationIdOrUri;
@@ -35,7 +35,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="azureActiveDirectoryTenantId")
-        private final @Nullable Input<String> azureActiveDirectoryTenantId;
+      private final @Nullable Input<String> azureActiveDirectoryTenantId;
 
     public Input<String> getAzureActiveDirectoryTenantId() {
         return this.azureActiveDirectoryTenantId == null ? Input.empty() : this.azureActiveDirectoryTenantId;
@@ -47,7 +47,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -58,7 +58,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="endpointUrl")
-        private final @Nullable Input<String> endpointUrl;
+      private final @Nullable Input<String> endpointUrl;
 
     public Input<String> getEndpointUrl() {
         return this.endpointUrl == null ? Input.empty() : this.endpointUrl;
@@ -69,7 +69,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxEventsPerBatch")
-        private final @Nullable Input<Integer> maxEventsPerBatch;
+      private final @Nullable Input<Integer> maxEventsPerBatch;
 
     public Input<Integer> getMaxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Input.empty() : this.maxEventsPerBatch;
@@ -80,7 +80,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="preferredBatchSizeInKilobytes")
-        private final @Nullable Input<Integer> preferredBatchSizeInKilobytes;
+      private final @Nullable Input<Integer> preferredBatchSizeInKilobytes;
 
     public Input<Integer> getPreferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Input.empty() : this.preferredBatchSizeInKilobytes;

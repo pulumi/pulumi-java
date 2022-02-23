@@ -19,7 +19,7 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="googleServiceAccount", required=true)
-        private final Input<String> googleServiceAccount;
+      private final Input<String> googleServiceAccount;
 
     public Input<String> getGoogleServiceAccount() {
         return this.googleServiceAccount;

@@ -19,7 +19,7 @@ public final class PipelineTriggerPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceTrigger")
-        private final @Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
+      private final @Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
 
     public Input<PipelineSourceTriggerPropertiesArgs> getSourceTrigger() {
         return this.sourceTrigger == null ? Input.empty() : this.sourceTrigger;

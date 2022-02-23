@@ -13,7 +13,7 @@ public final class GetConnectionAliasArgs extends io.pulumi.resources.InvokeArgs
     public static final GetConnectionAliasArgs Empty = new GetConnectionAliasArgs();
 
     @InputImport(name="aliasId", required=true)
-        private final String aliasId;
+      private final String aliasId;
 
     public String getAliasId() {
         return this.aliasId;

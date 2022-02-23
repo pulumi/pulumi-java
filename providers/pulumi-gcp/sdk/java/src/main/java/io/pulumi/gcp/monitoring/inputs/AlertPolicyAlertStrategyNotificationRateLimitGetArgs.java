@@ -19,7 +19,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitGetArgs extends 
      * 
      */
     @InputImport(name="period")
-        private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;

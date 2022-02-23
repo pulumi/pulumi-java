@@ -24,7 +24,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extend
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<ValidateMigrationInputSqlServerSqlMITaskInputArgs> input;
+      private final @Nullable Input<ValidateMigrationInputSqlServerSqlMITaskInputArgs> input;
 
     public Input<ValidateMigrationInputSqlServerSqlMITaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extend
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

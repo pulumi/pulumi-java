@@ -17,7 +17,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     public static final ConsentStoreIamBindingArgs Empty = new ConsentStoreIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ConsentStoreIamBindingConditionArgs> condition;
+      private final @Nullable Input<ConsentStoreIamBindingConditionArgs> condition;
 
     public Input<ConsentStoreIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consentStoreId", required=true)
-        private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
@@ -41,14 +41,14 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataset", required=true)
-        private final Input<String> dataset;
+      private final Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -61,7 +61,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

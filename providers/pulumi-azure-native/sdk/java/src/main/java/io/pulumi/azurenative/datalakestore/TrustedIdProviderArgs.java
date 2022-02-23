@@ -19,7 +19,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idProvider", required=true)
-        private final Input<String> idProvider;
+      private final Input<String> idProvider;
 
     public Input<String> getIdProvider() {
         return this.idProvider;
@@ -41,7 +41,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustedIdProviderName")
-        private final @Nullable Input<String> trustedIdProviderName;
+      private final @Nullable Input<String> trustedIdProviderName;
 
     public Input<String> getTrustedIdProviderName() {
         return this.trustedIdProviderName == null ? Input.empty() : this.trustedIdProviderName;

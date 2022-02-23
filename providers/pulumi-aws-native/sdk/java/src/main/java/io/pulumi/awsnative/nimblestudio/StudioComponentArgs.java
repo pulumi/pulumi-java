@@ -22,7 +22,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     public static final StudioComponentArgs Empty = new StudioComponentArgs();
 
     @InputImport(name="configuration")
-        private final @Nullable Input<StudioComponentConfigurationArgs> configuration;
+      private final @Nullable Input<StudioComponentConfigurationArgs> configuration;
 
     public Input<StudioComponentConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -33,7 +33,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ec2SecurityGroupIds")
-        private final @Nullable Input<List<String>> ec2SecurityGroupIds;
+      private final @Nullable Input<List<String>> ec2SecurityGroupIds;
 
     public Input<List<String>> getEc2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? Input.empty() : this.ec2SecurityGroupIds;
@@ -55,7 +55,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="initializationScripts")
-        private final @Nullable Input<List<StudioComponentInitializationScriptArgs>> initializationScripts;
+      private final @Nullable Input<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
     public Input<List<StudioComponentInitializationScriptArgs>> getInitializationScripts() {
         return this.initializationScripts == null ? Input.empty() : this.initializationScripts;
@@ -66,7 +66,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptParameters")
-        private final @Nullable Input<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
+      private final @Nullable Input<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
     public Input<List<StudioComponentScriptParameterKeyValueArgs>> getScriptParameters() {
         return this.scriptParameters == null ? Input.empty() : this.scriptParameters;
@@ -88,28 +88,28 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="studioId", required=true)
-        private final Input<String> studioId;
+      private final Input<String> studioId;
 
     public Input<String> getStudioId() {
         return this.studioId;
     }
 
     @InputImport(name="subtype")
-        private final @Nullable Input<StudioComponentSubtype> subtype;
+      private final @Nullable Input<StudioComponentSubtype> subtype;
 
     public Input<StudioComponentSubtype> getSubtype() {
         return this.subtype == null ? Input.empty() : this.subtype;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<StudioComponentTagsArgs> tags;
+      private final @Nullable Input<StudioComponentTagsArgs> tags;
 
     public Input<StudioComponentTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<StudioComponentType> type;
+      private final Input<StudioComponentType> type;
 
     public Input<StudioComponentType> getType() {
         return this.type;

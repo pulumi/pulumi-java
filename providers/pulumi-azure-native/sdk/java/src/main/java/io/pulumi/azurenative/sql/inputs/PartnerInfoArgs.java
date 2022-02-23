@@ -22,7 +22,7 @@ public final class PartnerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;

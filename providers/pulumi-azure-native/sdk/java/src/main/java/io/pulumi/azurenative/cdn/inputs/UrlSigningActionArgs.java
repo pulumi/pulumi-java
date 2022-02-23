@@ -24,7 +24,7 @@ public final class UrlSigningActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class UrlSigningActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<UrlSigningActionParametersArgs> parameters;
+      private final Input<UrlSigningActionParametersArgs> parameters;
 
     public Input<UrlSigningActionParametersArgs> getParameters() {
         return this.parameters;

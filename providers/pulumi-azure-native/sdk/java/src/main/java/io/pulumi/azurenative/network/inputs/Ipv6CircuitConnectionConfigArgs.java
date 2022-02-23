@@ -23,7 +23,7 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="addressPrefix")
-        private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Input<String> addressPrefix;
 
     public Input<String> getAddressPrefix() {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;

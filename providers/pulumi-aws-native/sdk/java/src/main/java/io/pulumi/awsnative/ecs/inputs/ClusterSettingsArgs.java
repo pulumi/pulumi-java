@@ -19,14 +19,14 @@ public final class ClusterSettingsArgs extends io.pulumi.resources.ResourceArgs 
     public static final ClusterSettingsArgs Empty = new ClusterSettingsArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

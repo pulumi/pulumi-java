@@ -22,7 +22,7 @@ public final class ManagedZoneForwardingConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-        private final Input<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
+      private final Input<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
 
     public Input<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> getTargetNameServers() {
         return this.targetNameServers;

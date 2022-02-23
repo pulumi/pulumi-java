@@ -17,21 +17,21 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
     public static final CapacityProviderAutoScalingGroupProviderArgs Empty = new CapacityProviderAutoScalingGroupProviderArgs();
 
     @InputImport(name="autoScalingGroupArn", required=true)
-        private final Input<String> autoScalingGroupArn;
+      private final Input<String> autoScalingGroupArn;
 
     public Input<String> getAutoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
     @InputImport(name="managedScaling")
-        private final @Nullable Input<CapacityProviderManagedScalingArgs> managedScaling;
+      private final @Nullable Input<CapacityProviderManagedScalingArgs> managedScaling;
 
     public Input<CapacityProviderManagedScalingArgs> getManagedScaling() {
         return this.managedScaling == null ? Input.empty() : this.managedScaling;
     }
 
     @InputImport(name="managedTerminationProtection")
-        private final @Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection;
+      private final @Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection;
 
     public Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {
         return this.managedTerminationProtection == null ? Input.empty() : this.managedTerminationProtection;

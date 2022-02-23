@@ -24,49 +24,49 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
     public static final DataQualityJobDefinitionArgs Empty = new DataQualityJobDefinitionArgs();
 
     @InputImport(name="dataQualityAppSpecification", required=true)
-        private final Input<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
+      private final Input<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
 
     public Input<DataQualityJobDefinitionDataQualityAppSpecificationArgs> getDataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
 
     @InputImport(name="dataQualityBaselineConfig")
-        private final @Nullable Input<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
+      private final @Nullable Input<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
 
     public Input<DataQualityJobDefinitionDataQualityBaselineConfigArgs> getDataQualityBaselineConfig() {
         return this.dataQualityBaselineConfig == null ? Input.empty() : this.dataQualityBaselineConfig;
     }
 
     @InputImport(name="dataQualityJobInput", required=true)
-        private final Input<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
+      private final Input<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
 
     public Input<DataQualityJobDefinitionDataQualityJobInputArgs> getDataQualityJobInput() {
         return this.dataQualityJobInput;
     }
 
     @InputImport(name="dataQualityJobOutputConfig", required=true)
-        private final Input<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
+      private final Input<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
 
     public Input<DataQualityJobDefinitionMonitoringOutputConfigArgs> getDataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
 
     @InputImport(name="jobDefinitionName")
-        private final @Nullable Input<String> jobDefinitionName;
+      private final @Nullable Input<String> jobDefinitionName;
 
     public Input<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
     }
 
     @InputImport(name="jobResources", required=true)
-        private final Input<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
+      private final Input<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Input<DataQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
     @InputImport(name="networkConfig")
-        private final @Nullable Input<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
+      private final @Nullable Input<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Input<DataQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -77,14 +77,14 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-        private final @Nullable Input<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
+      private final @Nullable Input<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Input<DataQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;
@@ -95,7 +95,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<DataQualityJobDefinitionTagArgs>> tags;
+      private final @Nullable Input<List<DataQualityJobDefinitionTagArgs>> tags;
 
     public Input<List<DataQualityJobDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

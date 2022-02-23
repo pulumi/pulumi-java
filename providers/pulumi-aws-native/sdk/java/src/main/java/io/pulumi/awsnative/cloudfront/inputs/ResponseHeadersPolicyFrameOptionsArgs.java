@@ -15,14 +15,14 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     public static final ResponseHeadersPolicyFrameOptionsArgs Empty = new ResponseHeadersPolicyFrameOptionsArgs();
 
     @InputImport(name="frameOption", required=true)
-        private final Input<String> frameOption;
+      private final Input<String> frameOption;
 
     public Input<String> getFrameOption() {
         return this.frameOption;
     }
 
     @InputImport(name="override", required=true)
-        private final Input<Boolean> override;
+      private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;

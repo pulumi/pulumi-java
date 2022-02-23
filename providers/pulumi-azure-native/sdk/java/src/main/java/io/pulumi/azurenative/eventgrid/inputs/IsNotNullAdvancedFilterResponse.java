@@ -23,7 +23,7 @@ public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -35,7 +35,7 @@ public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="operatorType", required=true)
-        private final String operatorType;
+      private final String operatorType;
 
     public String getOperatorType() {
         return this.operatorType;

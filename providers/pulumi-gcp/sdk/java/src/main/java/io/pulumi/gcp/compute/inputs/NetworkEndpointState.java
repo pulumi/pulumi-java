@@ -22,7 +22,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instance")
-        private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -35,7 +35,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -46,7 +46,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkEndpointGroup")
-        private final @Nullable Input<String> networkEndpointGroup;
+      private final @Nullable Input<String> networkEndpointGroup;
 
     public Input<String> getNetworkEndpointGroup() {
         return this.networkEndpointGroup == null ? Input.empty() : this.networkEndpointGroup;
@@ -57,7 +57,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -69,7 +69,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

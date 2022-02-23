@@ -20,7 +20,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<UserPropertiesArgs> properties;
+      private final Input<UserPropertiesArgs> properties;
 
     public Input<UserPropertiesArgs> getProperties() {
         return this.properties;
@@ -31,7 +31,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettingsName")
-        private final @Nullable Input<String> userSettingsName;
+      private final @Nullable Input<String> userSettingsName;
 
     public Input<String> getUserSettingsName() {
         return this.userSettingsName == null ? Input.empty() : this.userSettingsName;

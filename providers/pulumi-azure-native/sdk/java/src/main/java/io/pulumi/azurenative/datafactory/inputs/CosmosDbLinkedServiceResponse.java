@@ -32,7 +32,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accountEndpoint")
-        private final @Nullable Object accountEndpoint;
+      private final @Nullable Object accountEndpoint;
 
     public Optional<Object> getAccountEndpoint() {
         return this.accountEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accountEndpoint);
@@ -43,7 +43,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accountKey")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccountKey() {
         return this.accountKey == null ? null : this.accountKey;
@@ -54,7 +54,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -65,7 +65,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureCloudType")
-        private final @Nullable Object azureCloudType;
+      private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
@@ -76,7 +76,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -87,7 +87,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectionMode")
-        private final @Nullable String connectionMode;
+      private final @Nullable String connectionMode;
 
     public Optional<String> getConnectionMode() {
         return this.connectionMode == null ? Optional.empty() : Optional.ofNullable(this.connectionMode);
@@ -98,7 +98,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectionString")
-        private final @Nullable Object connectionString;
+      private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -109,7 +109,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -120,7 +120,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="database")
-        private final @Nullable Object database;
+      private final @Nullable Object database;
 
     public Optional<Object> getDatabase() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
@@ -131,7 +131,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -142,7 +142,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -153,7 +153,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -164,7 +164,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="servicePrincipalCredential")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalCredential() {
         return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
@@ -175,7 +175,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="servicePrincipalCredentialType")
-        private final @Nullable String servicePrincipalCredentialType;
+      private final @Nullable String servicePrincipalCredentialType;
 
     public Optional<String> getServicePrincipalCredentialType() {
         return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
@@ -186,7 +186,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="servicePrincipalId")
-        private final @Nullable Object servicePrincipalId;
+      private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -197,7 +197,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tenant")
-        private final @Nullable Object tenant;
+      private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -209,7 +209,7 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -16,14 +16,14 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     public static final GroupResourceQueryArgs Empty = new GroupResourceQueryArgs();
 
     @InputImport(name="query")
-        private final @Nullable Input<GroupQueryArgs> query;
+      private final @Nullable Input<GroupQueryArgs> query;
 
     public Input<GroupQueryArgs> getQuery() {
         return this.query == null ? Input.empty() : this.query;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<GroupResourceQueryType> type;
+      private final @Nullable Input<GroupResourceQueryType> type;
 
     public Input<GroupResourceQueryType> getType() {
         return this.type == null ? Input.empty() : this.type;

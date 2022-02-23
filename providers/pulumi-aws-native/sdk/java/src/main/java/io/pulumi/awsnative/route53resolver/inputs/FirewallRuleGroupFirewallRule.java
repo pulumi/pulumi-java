@@ -27,7 +27,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="action", required=true)
-        private final FirewallRuleGroupFirewallRuleAction action;
+      private final FirewallRuleGroupFirewallRuleAction action;
 
     public FirewallRuleGroupFirewallRuleAction getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="blockOverrideDnsType")
-        private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
+      private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
 
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
         return this.blockOverrideDnsType == null ? Optional.empty() : Optional.ofNullable(this.blockOverrideDnsType);
@@ -49,7 +49,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="blockOverrideDomain")
-        private final @Nullable String blockOverrideDomain;
+      private final @Nullable String blockOverrideDomain;
 
     public Optional<String> getBlockOverrideDomain() {
         return this.blockOverrideDomain == null ? Optional.empty() : Optional.ofNullable(this.blockOverrideDomain);
@@ -60,7 +60,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="blockOverrideTtl")
-        private final @Nullable Integer blockOverrideTtl;
+      private final @Nullable Integer blockOverrideTtl;
 
     public Optional<Integer> getBlockOverrideTtl() {
         return this.blockOverrideTtl == null ? Optional.empty() : Optional.ofNullable(this.blockOverrideTtl);
@@ -71,7 +71,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="blockResponse")
-        private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
+      private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
 
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
         return this.blockResponse == null ? Optional.empty() : Optional.ofNullable(this.blockResponse);
@@ -82,7 +82,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="firewallDomainListId", required=true)
-        private final String firewallDomainListId;
+      private final String firewallDomainListId;
 
     public String getFirewallDomainListId() {
         return this.firewallDomainListId;
@@ -93,7 +93,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;

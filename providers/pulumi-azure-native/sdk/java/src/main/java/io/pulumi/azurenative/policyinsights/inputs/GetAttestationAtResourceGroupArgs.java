@@ -17,7 +17,7 @@ public final class GetAttestationAtResourceGroupArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="attestationName", required=true)
-        private final String attestationName;
+      private final String attestationName;
 
     public String getAttestationName() {
         return this.attestationName;
@@ -28,7 +28,7 @@ public final class GetAttestationAtResourceGroupArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

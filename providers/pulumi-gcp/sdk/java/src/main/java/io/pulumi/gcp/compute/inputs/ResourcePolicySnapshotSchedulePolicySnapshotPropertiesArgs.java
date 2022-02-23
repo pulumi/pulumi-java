@@ -21,7 +21,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="guestFlush")
-        private final @Nullable Input<Boolean> guestFlush;
+      private final @Nullable Input<Boolean> guestFlush;
 
     public Input<Boolean> getGuestFlush() {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
@@ -32,7 +32,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -44,7 +44,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="storageLocations")
-        private final @Nullable Input<String> storageLocations;
+      private final @Nullable Input<String> storageLocations;
 
     public Input<String> getStorageLocations() {
         return this.storageLocations == null ? Input.empty() : this.storageLocations;

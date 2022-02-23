@@ -24,7 +24,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="assessmentActivityId", required=true)
-        private final String assessmentActivityId;
+      private final String assessmentActivityId;
 
     public String getAssessmentActivityId() {
         return this.assessmentActivityId;
@@ -35,7 +35,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="criticalAndSecurityPatchCount", required=true)
-        private final Integer criticalAndSecurityPatchCount;
+      private final Integer criticalAndSecurityPatchCount;
 
     public Integer getCriticalAndSecurityPatchCount() {
         return this.criticalAndSecurityPatchCount;
@@ -46,7 +46,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="error", required=true)
-        private final ApiErrorResponse error;
+      private final ApiErrorResponse error;
 
     public ApiErrorResponse getError() {
         return this.error;
@@ -57,7 +57,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastModifiedTime", required=true)
-        private final String lastModifiedTime;
+      private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
@@ -68,7 +68,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="otherPatchCount", required=true)
-        private final Integer otherPatchCount;
+      private final Integer otherPatchCount;
 
     public Integer getOtherPatchCount() {
         return this.otherPatchCount;
@@ -79,7 +79,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rebootPending", required=true)
-        private final Boolean rebootPending;
+      private final Boolean rebootPending;
 
     public Boolean getRebootPending() {
         return this.rebootPending;
@@ -90,7 +90,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -101,7 +101,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

@@ -26,7 +26,7 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assessmentMode")
-        private final @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
+      private final @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
     public Input<Either<String,LinuxPatchAssessmentMode>> getAssessmentMode() {
         return this.assessmentMode == null ? Input.empty() : this.assessmentMode;
@@ -37,7 +37,7 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="patchMode")
-        private final @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode;
+      private final @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
     public Input<Either<String,LinuxVMGuestPatchMode>> getPatchMode() {
         return this.patchMode == null ? Input.empty() : this.patchMode;

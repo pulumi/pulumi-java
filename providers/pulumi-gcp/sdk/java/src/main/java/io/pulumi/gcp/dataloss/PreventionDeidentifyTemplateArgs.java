@@ -21,7 +21,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deidentifyConfig", required=true)
-        private final Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
+      private final Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> getDeidentifyConfig() {
         return this.deidentifyConfig;
@@ -32,7 +32,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -58,7 +58,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;

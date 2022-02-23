@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
     public static final ResponseHeadersPolicyContentTypeOptionsArgs Empty = new ResponseHeadersPolicyContentTypeOptionsArgs();
 
     @InputImport(name="override", required=true)
-        private final Input<Boolean> override;
+      private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;

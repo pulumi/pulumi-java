@@ -31,7 +31,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiKey", required=true)
-        private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> apiKey;
+      private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> apiKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getApiKey() {
         return this.apiKey;
@@ -53,7 +53,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable Input<Object> authentication;
+      private final @Nullable Input<Object> authentication;
 
     public Input<Object> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -64,7 +64,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -75,7 +75,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -86,7 +86,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -97,7 +97,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mlEndpoint", required=true)
-        private final Input<Object> mlEndpoint;
+      private final Input<Object> mlEndpoint;
 
     public Input<Object> getMlEndpoint() {
         return this.mlEndpoint;
@@ -108,7 +108,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -119,7 +119,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="servicePrincipalId")
-        private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -130,7 +130,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="servicePrincipalKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -141,7 +141,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenant")
-        private final @Nullable Input<Object> tenant;
+      private final @Nullable Input<Object> tenant;
 
     public Input<Object> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -153,7 +153,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -164,7 +164,7 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="updateResourceEndpoint")
-        private final @Nullable Input<Object> updateResourceEndpoint;
+      private final @Nullable Input<Object> updateResourceEndpoint;
 
     public Input<Object> getUpdateResourceEndpoint() {
         return this.updateResourceEndpoint == null ? Input.empty() : this.updateResourceEndpoint;

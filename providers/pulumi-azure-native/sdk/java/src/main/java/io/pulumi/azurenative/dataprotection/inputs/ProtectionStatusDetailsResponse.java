@@ -24,7 +24,7 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="errorDetails")
-        private final @Nullable UserFacingErrorResponse errorDetails;
+      private final @Nullable UserFacingErrorResponse errorDetails;
 
     public Optional<UserFacingErrorResponse> getErrorDetails() {
         return this.errorDetails == null ? Optional.empty() : Optional.ofNullable(this.errorDetails);
@@ -35,7 +35,7 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

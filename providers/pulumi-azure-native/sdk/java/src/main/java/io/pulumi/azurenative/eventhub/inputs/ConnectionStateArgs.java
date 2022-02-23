@@ -25,7 +25,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,PrivateLinkConnectionStatus>> status;
+      private final @Nullable Input<Either<String,PrivateLinkConnectionStatus>> status;
 
     public Input<Either<String,PrivateLinkConnectionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;

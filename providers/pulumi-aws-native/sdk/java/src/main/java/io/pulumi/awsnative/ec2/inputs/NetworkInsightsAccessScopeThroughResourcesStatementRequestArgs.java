@@ -15,7 +15,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     public static final NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs Empty = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs();
 
     @InputImport(name="resourceStatement")
-        private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+      private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
     public Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
         return this.resourceStatement == null ? Input.empty() : this.resourceStatement;

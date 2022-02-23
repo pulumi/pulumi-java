@@ -23,7 +23,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArg
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-        private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
+      private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -35,7 +35,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArg
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-        private final @Nullable Input<List<String>> requestHeadersToRemoves;
+      private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -47,7 +47,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArg
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-        private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
+      private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Input<List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -59,7 +59,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArg
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-        private final @Nullable Input<List<String>> responseHeadersToRemoves;
+      private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;

@@ -26,7 +26,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labSubnetName")
-        private final @Nullable Input<String> labSubnetName;
+      private final @Nullable Input<String> labSubnetName;
 
     public Input<String> getLabSubnetName() {
         return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
@@ -37,7 +37,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -48,7 +48,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedPublicIpAddressConfiguration")
-        private final @Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
+      private final @Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
     public Input<SubnetSharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Input.empty() : this.sharedPublicIpAddressConfiguration;
@@ -59,7 +59,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useInVmCreationPermission")
-        private final @Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission;
+      private final @Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission;
 
     public Input<Either<String,UsagePermissionType>> getUseInVmCreationPermission() {
         return this.useInVmCreationPermission == null ? Input.empty() : this.useInVmCreationPermission;
@@ -70,7 +70,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usePublicIpAddressPermission")
-        private final @Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
+      private final @Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
 
     public Input<Either<String,UsagePermissionType>> getUsePublicIpAddressPermission() {
         return this.usePublicIpAddressPermission == null ? Input.empty() : this.usePublicIpAddressPermission;
@@ -81,7 +81,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkPoolName")
-        private final @Nullable Input<String> virtualNetworkPoolName;
+      private final @Nullable Input<String> virtualNetworkPoolName;
 
     public Input<String> getVirtualNetworkPoolName() {
         return this.virtualNetworkPoolName == null ? Input.empty() : this.virtualNetworkPoolName;

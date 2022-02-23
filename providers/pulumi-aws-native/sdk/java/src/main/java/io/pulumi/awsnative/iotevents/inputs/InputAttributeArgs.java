@@ -24,7 +24,7 @@ public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jsonPath", required=true)
-        private final Input<String> jsonPath;
+      private final Input<String> jsonPath;
 
     public Input<String> getJsonPath() {
         return this.jsonPath;

@@ -19,7 +19,7 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-        private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -31,7 +31,7 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

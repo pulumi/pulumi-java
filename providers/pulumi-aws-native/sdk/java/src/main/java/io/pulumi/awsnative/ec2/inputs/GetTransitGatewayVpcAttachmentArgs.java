@@ -13,7 +13,7 @@ public final class GetTransitGatewayVpcAttachmentArgs extends io.pulumi.resource
     public static final GetTransitGatewayVpcAttachmentArgs Empty = new GetTransitGatewayVpcAttachmentArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

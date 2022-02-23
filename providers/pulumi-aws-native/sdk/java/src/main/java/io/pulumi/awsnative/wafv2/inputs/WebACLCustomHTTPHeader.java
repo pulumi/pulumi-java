@@ -17,14 +17,14 @@ public final class WebACLCustomHTTPHeader extends io.pulumi.resources.InvokeArgs
     public static final WebACLCustomHTTPHeader Empty = new WebACLCustomHTTPHeader();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

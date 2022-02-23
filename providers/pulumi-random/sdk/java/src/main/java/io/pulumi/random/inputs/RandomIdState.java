@@ -22,7 +22,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="b64Std")
-        private final @Nullable Input<String> b64Std;
+      private final @Nullable Input<String> b64Std;
 
     public Input<String> getB64Std() {
         return this.b64Std == null ? Input.empty() : this.b64Std;
@@ -33,7 +33,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="b64Url")
-        private final @Nullable Input<String> b64Url;
+      private final @Nullable Input<String> b64Url;
 
     public Input<String> getB64Url() {
         return this.b64Url == null ? Input.empty() : this.b64Url;
@@ -44,7 +44,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteLength")
-        private final @Nullable Input<Integer> byteLength;
+      private final @Nullable Input<Integer> byteLength;
 
     public Input<Integer> getByteLength() {
         return this.byteLength == null ? Input.empty() : this.byteLength;
@@ -55,7 +55,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dec")
-        private final @Nullable Input<String> dec;
+      private final @Nullable Input<String> dec;
 
     public Input<String> getDec() {
         return this.dec == null ? Input.empty() : this.dec;
@@ -66,7 +66,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hex")
-        private final @Nullable Input<String> hex;
+      private final @Nullable Input<String> hex;
 
     public Input<String> getHex() {
         return this.hex == null ? Input.empty() : this.hex;
@@ -77,7 +77,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-        private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -88,7 +88,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

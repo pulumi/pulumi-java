@@ -15,7 +15,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     public static final DistributionS3OriginConfigArgs Empty = new DistributionS3OriginConfigArgs();
 
     @InputImport(name="originAccessIdentity")
-        private final @Nullable Input<String> originAccessIdentity;
+      private final @Nullable Input<String> originAccessIdentity;
 
     public Input<String> getOriginAccessIdentity() {
         return this.originAccessIdentity == null ? Input.empty() : this.originAccessIdentity;

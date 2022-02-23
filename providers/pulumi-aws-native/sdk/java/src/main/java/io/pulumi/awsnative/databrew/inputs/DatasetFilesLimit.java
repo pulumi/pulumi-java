@@ -21,7 +21,7 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxFiles", required=true)
-        private final Integer maxFiles;
+      private final Integer maxFiles;
 
     public Integer getMaxFiles() {
         return this.maxFiles;
@@ -32,7 +32,7 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="order")
-        private final @Nullable DatasetFilesLimitOrder order;
+      private final @Nullable DatasetFilesLimitOrder order;
 
     public Optional<DatasetFilesLimitOrder> getOrder() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
@@ -43,7 +43,7 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="orderedBy")
-        private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
+      private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
 
     public Optional<DatasetFilesLimitOrderedBy> getOrderedBy() {
         return this.orderedBy == null ? Optional.empty() : Optional.ofNullable(this.orderedBy);

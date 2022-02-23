@@ -19,7 +19,7 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAllocationName", required=true)
-        private final String ipAllocationName;
+      private final String ipAllocationName;
 
     public String getIpAllocationName() {
         return this.ipAllocationName;
@@ -41,7 +41,7 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

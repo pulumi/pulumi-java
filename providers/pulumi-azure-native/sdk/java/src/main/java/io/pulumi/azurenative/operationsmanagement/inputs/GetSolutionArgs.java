@@ -17,7 +17,7 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="solutionName", required=true)
-        private final String solutionName;
+      private final String solutionName;
 
     public String getSolutionName() {
         return this.solutionName;

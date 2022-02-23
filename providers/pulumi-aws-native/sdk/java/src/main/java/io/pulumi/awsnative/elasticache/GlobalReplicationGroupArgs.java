@@ -24,7 +24,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="automaticFailoverEnabled")
-        private final @Nullable Input<Boolean> automaticFailoverEnabled;
+      private final @Nullable Input<Boolean> automaticFailoverEnabled;
 
     public Input<Boolean> getAutomaticFailoverEnabled() {
         return this.automaticFailoverEnabled == null ? Input.empty() : this.automaticFailoverEnabled;
@@ -35,7 +35,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheNodeType")
-        private final @Nullable Input<String> cacheNodeType;
+      private final @Nullable Input<String> cacheNodeType;
 
     public Input<String> getCacheNodeType() {
         return this.cacheNodeType == null ? Input.empty() : this.cacheNodeType;
@@ -46,7 +46,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheParameterGroupName")
-        private final @Nullable Input<String> cacheParameterGroupName;
+      private final @Nullable Input<String> cacheParameterGroupName;
 
     public Input<String> getCacheParameterGroupName() {
         return this.cacheParameterGroupName == null ? Input.empty() : this.cacheParameterGroupName;
@@ -57,7 +57,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="engineVersion")
-        private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -68,7 +68,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalNodeGroupCount")
-        private final @Nullable Input<Integer> globalNodeGroupCount;
+      private final @Nullable Input<Integer> globalNodeGroupCount;
 
     public Input<Integer> getGlobalNodeGroupCount() {
         return this.globalNodeGroupCount == null ? Input.empty() : this.globalNodeGroupCount;
@@ -79,7 +79,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupDescription")
-        private final @Nullable Input<String> globalReplicationGroupDescription;
+      private final @Nullable Input<String> globalReplicationGroupDescription;
 
     public Input<String> getGlobalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
@@ -90,7 +90,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupIdSuffix")
-        private final @Nullable Input<String> globalReplicationGroupIdSuffix;
+      private final @Nullable Input<String> globalReplicationGroupIdSuffix;
 
     public Input<String> getGlobalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix == null ? Input.empty() : this.globalReplicationGroupIdSuffix;
@@ -101,7 +101,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="members", required=true)
-        private final Input<List<GlobalReplicationGroupMemberArgs>> members;
+      private final Input<List<GlobalReplicationGroupMemberArgs>> members;
 
     public Input<List<GlobalReplicationGroupMemberArgs>> getMembers() {
         return this.members;
@@ -112,7 +112,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regionalConfigurations")
-        private final @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
+      private final @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
     public Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> getRegionalConfigurations() {
         return this.regionalConfigurations == null ? Input.empty() : this.regionalConfigurations;

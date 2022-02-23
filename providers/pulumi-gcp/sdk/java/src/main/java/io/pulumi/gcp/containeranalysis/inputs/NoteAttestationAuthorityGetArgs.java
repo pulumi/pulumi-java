@@ -26,7 +26,7 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hint", required=true)
-        private final Input<NoteAttestationAuthorityHintGetArgs> hint;
+      private final Input<NoteAttestationAuthorityHintGetArgs> hint;
 
     public Input<NoteAttestationAuthorityHintGetArgs> getHint() {
         return this.hint;

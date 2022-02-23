@@ -17,7 +17,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final DatasetIamBindingArgs Empty = new DatasetIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DatasetIamBindingConditionArgs> condition;
+      private final @Nullable Input<DatasetIamBindingConditionArgs> condition;
 
     public Input<DatasetIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datasetId", required=true)
-        private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -47,7 +47,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

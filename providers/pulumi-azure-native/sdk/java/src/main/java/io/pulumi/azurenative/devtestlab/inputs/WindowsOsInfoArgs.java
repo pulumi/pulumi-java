@@ -25,7 +25,7 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsOsState")
-        private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
+      private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
 
     public Input<Either<String,WindowsOsState>> getWindowsOsState() {
         return this.windowsOsState == null ? Input.empty() : this.windowsOsState;

@@ -17,7 +17,7 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hubName", required=true)
-        private final String hubName;
+      private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="predictionName", required=true)
-        private final String predictionName;
+      private final String predictionName;
 
     public String getPredictionName() {
         return this.predictionName;
@@ -39,7 +39,7 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

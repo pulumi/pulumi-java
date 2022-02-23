@@ -25,7 +25,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOnStepGroups")
-        private final @Nullable Input<List<String>> dependsOnStepGroups;
+      private final @Nullable Input<List<String>> dependsOnStepGroups;
 
     public Input<List<String>> getDependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? Input.empty() : this.dependsOnStepGroups;
@@ -36,7 +36,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentTargetId", required=true)
-        private final Input<String> deploymentTargetId;
+      private final Input<String> deploymentTargetId;
 
     public Input<String> getDeploymentTargetId() {
         return this.deploymentTargetId;
@@ -47,7 +47,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postDeploymentSteps")
-        private final @Nullable Input<List<PrePostStepArgs>> postDeploymentSteps;
+      private final @Nullable Input<List<PrePostStepArgs>> postDeploymentSteps;
 
     public Input<List<PrePostStepArgs>> getPostDeploymentSteps() {
         return this.postDeploymentSteps == null ? Input.empty() : this.postDeploymentSteps;
@@ -69,7 +69,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preDeploymentSteps")
-        private final @Nullable Input<List<PrePostStepArgs>> preDeploymentSteps;
+      private final @Nullable Input<List<PrePostStepArgs>> preDeploymentSteps;
 
     public Input<List<PrePostStepArgs>> getPreDeploymentSteps() {
         return this.preDeploymentSteps == null ? Input.empty() : this.preDeploymentSteps;

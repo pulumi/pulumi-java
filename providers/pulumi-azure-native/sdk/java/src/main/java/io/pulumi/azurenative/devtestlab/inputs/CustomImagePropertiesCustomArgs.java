@@ -26,7 +26,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="imageName")
-        private final @Nullable Input<String> imageName;
+      private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -37,7 +37,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="osType", required=true)
-        private final Input<Either<String,CustomImageOsType>> osType;
+      private final Input<Either<String,CustomImageOsType>> osType;
 
     public Input<Either<String,CustomImageOsType>> getOsType() {
         return this.osType;
@@ -48,7 +48,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sysPrep")
-        private final @Nullable Input<Boolean> sysPrep;
+      private final @Nullable Input<Boolean> sysPrep;
 
     public Input<Boolean> getSysPrep() {
         return this.sysPrep == null ? Input.empty() : this.sysPrep;

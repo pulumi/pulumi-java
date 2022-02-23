@@ -13,7 +13,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFileSystemArgs Empty = new GetFileSystemArgs();
 
     @InputImport(name="fileSystemId", required=true)
-        private final String fileSystemId;
+      private final String fileSystemId;
 
     public String getFileSystemId() {
         return this.fileSystemId;

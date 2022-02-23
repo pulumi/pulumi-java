@@ -18,35 +18,35 @@ public final class TaskDefinitionEFSVolumeConfigurationArgs extends io.pulumi.re
     public static final TaskDefinitionEFSVolumeConfigurationArgs Empty = new TaskDefinitionEFSVolumeConfigurationArgs();
 
     @InputImport(name="authorizationConfig")
-        private final @Nullable Input<TaskDefinitionAuthorizationConfigArgs> authorizationConfig;
+      private final @Nullable Input<TaskDefinitionAuthorizationConfigArgs> authorizationConfig;
 
     public Input<TaskDefinitionAuthorizationConfigArgs> getAuthorizationConfig() {
         return this.authorizationConfig == null ? Input.empty() : this.authorizationConfig;
     }
 
     @InputImport(name="filesystemId", required=true)
-        private final Input<String> filesystemId;
+      private final Input<String> filesystemId;
 
     public Input<String> getFilesystemId() {
         return this.filesystemId;
     }
 
     @InputImport(name="rootDirectory")
-        private final @Nullable Input<String> rootDirectory;
+      private final @Nullable Input<String> rootDirectory;
 
     public Input<String> getRootDirectory() {
         return this.rootDirectory == null ? Input.empty() : this.rootDirectory;
     }
 
     @InputImport(name="transitEncryption")
-        private final @Nullable Input<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption;
+      private final @Nullable Input<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption;
 
     public Input<TaskDefinitionEFSVolumeConfigurationTransitEncryption> getTransitEncryption() {
         return this.transitEncryption == null ? Input.empty() : this.transitEncryption;
     }
 
     @InputImport(name="transitEncryptionPort")
-        private final @Nullable Input<Integer> transitEncryptionPort;
+      private final @Nullable Input<Integer> transitEncryptionPort;
 
     public Input<Integer> getTransitEncryptionPort() {
         return this.transitEncryptionPort == null ? Input.empty() : this.transitEncryptionPort;

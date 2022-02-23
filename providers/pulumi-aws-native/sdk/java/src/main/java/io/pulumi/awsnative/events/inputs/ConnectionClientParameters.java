@@ -13,14 +13,14 @@ public final class ConnectionClientParameters extends io.pulumi.resources.Invoke
     public static final ConnectionClientParameters Empty = new ConnectionClientParameters();
 
     @InputImport(name="clientID", required=true)
-        private final String clientID;
+      private final String clientID;
 
     public String getClientID() {
         return this.clientID;
     }
 
     @InputImport(name="clientSecret", required=true)
-        private final String clientSecret;
+      private final String clientSecret;
 
     public String getClientSecret() {
         return this.clientSecret;

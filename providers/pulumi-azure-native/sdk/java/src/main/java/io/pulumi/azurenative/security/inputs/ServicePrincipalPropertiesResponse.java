@@ -23,7 +23,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="applicationId")
-        private final @Nullable String applicationId;
+      private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -34,7 +34,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="secret")
-        private final @Nullable String secret;
+      private final @Nullable String secret;
 
     public Optional<String> getSecret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);

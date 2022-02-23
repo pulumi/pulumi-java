@@ -13,7 +13,7 @@ public final class GetCloudFormationProvisionedProductArgs extends io.pulumi.res
     public static final GetCloudFormationProvisionedProductArgs Empty = new GetCloudFormationProvisionedProductArgs();
 
     @InputImport(name="provisionedProductId", required=true)
-        private final String provisionedProductId;
+      private final String provisionedProductId;
 
     public String getProvisionedProductId() {
         return this.provisionedProductId;

@@ -16,7 +16,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     public static final ConsentStoreIamMemberArgs Empty = new ConsentStoreIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ConsentStoreIamMemberConditionArgs> condition;
+      private final @Nullable Input<ConsentStoreIamMemberConditionArgs> condition;
 
     public Input<ConsentStoreIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="consentStoreId", required=true)
-        private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
@@ -40,14 +40,14 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataset", required=true)
-        private final Input<String> dataset;
+      private final Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -60,7 +60,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

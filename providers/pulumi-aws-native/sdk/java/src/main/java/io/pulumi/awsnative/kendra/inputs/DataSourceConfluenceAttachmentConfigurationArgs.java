@@ -17,14 +17,14 @@ public final class DataSourceConfluenceAttachmentConfigurationArgs extends io.pu
     public static final DataSourceConfluenceAttachmentConfigurationArgs Empty = new DataSourceConfluenceAttachmentConfigurationArgs();
 
     @InputImport(name="attachmentFieldMappings")
-        private final @Nullable Input<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
+      private final @Nullable Input<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
 
     public Input<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> getAttachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? Input.empty() : this.attachmentFieldMappings;
     }
 
     @InputImport(name="crawlAttachments")
-        private final @Nullable Input<Boolean> crawlAttachments;
+      private final @Nullable Input<Boolean> crawlAttachments;
 
     public Input<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Input.empty() : this.crawlAttachments;

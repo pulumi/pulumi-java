@@ -24,7 +24,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="busNumber")
-        private final @Nullable Integer busNumber;
+      private final @Nullable Integer busNumber;
 
     public Optional<Integer> getBusNumber() {
         return this.busNumber == null ? Optional.empty() : Optional.ofNullable(this.busNumber);
@@ -35,7 +35,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="controllerKey")
-        private final @Nullable Integer controllerKey;
+      private final @Nullable Integer controllerKey;
 
     public Optional<Integer> getControllerKey() {
         return this.controllerKey == null ? Optional.empty() : Optional.ofNullable(this.controllerKey);
@@ -46,7 +46,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="scsiCtlrUnitNumber")
-        private final @Nullable Integer scsiCtlrUnitNumber;
+      private final @Nullable Integer scsiCtlrUnitNumber;
 
     public Optional<Integer> getScsiCtlrUnitNumber() {
         return this.scsiCtlrUnitNumber == null ? Optional.empty() : Optional.ofNullable(this.scsiCtlrUnitNumber);
@@ -57,7 +57,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sharing")
-        private final @Nullable String sharing;
+      private final @Nullable String sharing;
 
     public Optional<String> getSharing() {
         return this.sharing == null ? Optional.empty() : Optional.ofNullable(this.sharing);
@@ -68,7 +68,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

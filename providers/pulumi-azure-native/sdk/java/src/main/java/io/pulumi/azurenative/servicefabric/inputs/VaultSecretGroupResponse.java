@@ -23,7 +23,7 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceVault", required=true)
-        private final SubResourceResponse sourceVault;
+      private final SubResourceResponse sourceVault;
 
     public SubResourceResponse getSourceVault() {
         return this.sourceVault;
@@ -34,7 +34,7 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vaultCertificates", required=true)
-        private final List<VaultCertificateResponse> vaultCertificates;
+      private final List<VaultCertificateResponse> vaultCertificates;
 
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates;

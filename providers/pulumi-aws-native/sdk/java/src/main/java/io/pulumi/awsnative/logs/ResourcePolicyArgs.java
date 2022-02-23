@@ -18,7 +18,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyDocument", required=true)
-        private final Input<String> policyDocument;
+      private final Input<String> policyDocument;
 
     public Input<String> getPolicyDocument() {
         return this.policyDocument;
@@ -29,7 +29,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final Input<String> policyName;
+      private final Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName;

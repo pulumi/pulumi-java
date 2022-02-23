@@ -15,21 +15,21 @@ public final class DatastoreCustomerManagedS3Args extends io.pulumi.resources.Re
     public static final DatastoreCustomerManagedS3Args Empty = new DatastoreCustomerManagedS3Args();
 
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="keyPrefix")
-        private final @Nullable Input<String> keyPrefix;
+      private final @Nullable Input<String> keyPrefix;
 
     public Input<String> getKeyPrefix() {
         return this.keyPrefix == null ? Input.empty() : this.keyPrefix;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

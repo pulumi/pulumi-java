@@ -17,7 +17,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-        private final String tier;
+      private final String tier;
 
     public String getTier() {
         return this.tier;

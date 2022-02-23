@@ -21,7 +21,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends io.
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final String endpoint;
+      private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;

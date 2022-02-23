@@ -15,28 +15,28 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final PublicKeyConfigArgs Empty = new PublicKeyConfigArgs();
 
     @InputImport(name="callerReference", required=true)
-        private final Input<String> callerReference;
+      private final Input<String> callerReference;
 
     public Input<String> getCallerReference() {
         return this.callerReference;
     }
 
     @InputImport(name="comment")
-        private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
     }
 
     @InputImport(name="encodedKey", required=true)
-        private final Input<String> encodedKey;
+      private final Input<String> encodedKey;
 
     public Input<String> getEncodedKey() {
         return this.encodedKey;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

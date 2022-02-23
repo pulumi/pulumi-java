@@ -14,7 +14,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyGroupArgs Empty = new KeyGroupArgs();
 
     @InputImport(name="keyGroupConfig", required=true)
-        private final Input<KeyGroupConfigArgs> keyGroupConfig;
+      private final Input<KeyGroupConfigArgs> keyGroupConfig;
 
     public Input<KeyGroupConfigArgs> getKeyGroupConfig() {
         return this.keyGroupConfig;

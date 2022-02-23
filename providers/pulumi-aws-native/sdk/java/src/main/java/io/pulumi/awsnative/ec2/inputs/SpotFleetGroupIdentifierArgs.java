@@ -14,7 +14,7 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     public static final SpotFleetGroupIdentifierArgs Empty = new SpotFleetGroupIdentifierArgs();
 
     @InputImport(name="groupId", required=true)
-        private final Input<String> groupId;
+      private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;

@@ -21,7 +21,7 @@ public final class FolderSinkBigqueryOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="usePartitionedTables", required=true)
-        private final Input<Boolean> usePartitionedTables;
+      private final Input<Boolean> usePartitionedTables;
 
     public Input<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables;

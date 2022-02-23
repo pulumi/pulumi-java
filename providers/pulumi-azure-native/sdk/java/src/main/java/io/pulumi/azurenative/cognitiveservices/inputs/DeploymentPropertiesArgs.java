@@ -24,7 +24,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="model")
-        private final @Nullable Input<DeploymentModelArgs> model;
+      private final @Nullable Input<DeploymentModelArgs> model;
 
     public Input<DeploymentModelArgs> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -35,7 +35,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scaleSettings")
-        private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
+      private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
 
     public Input<DeploymentScaleSettingsArgs> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;

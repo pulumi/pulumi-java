@@ -21,7 +21,7 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="region", required=true)
-        private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;

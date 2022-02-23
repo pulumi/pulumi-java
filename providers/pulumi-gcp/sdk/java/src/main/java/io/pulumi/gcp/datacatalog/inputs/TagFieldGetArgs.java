@@ -22,7 +22,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-        private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Input<Boolean> boolValue;
 
     public Input<Boolean> getBoolValue() {
         return this.boolValue == null ? Input.empty() : this.boolValue;
@@ -34,7 +34,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="doubleValue")
-        private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
@@ -57,7 +57,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumValue")
-        private final @Nullable Input<String> enumValue;
+      private final @Nullable Input<String> enumValue;
 
     public Input<String> getEnumValue() {
         return this.enumValue == null ? Input.empty() : this.enumValue;
@@ -68,7 +68,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName", required=true)
-        private final Input<String> fieldName;
+      private final Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName;
@@ -82,7 +82,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order")
-        private final @Nullable Input<Integer> order;
+      private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -93,7 +93,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValue")
-        private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -104,7 +104,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampValue")
-        private final @Nullable Input<String> timestampValue;
+      private final @Nullable Input<String> timestampValue;
 
     public Input<String> getTimestampValue() {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;

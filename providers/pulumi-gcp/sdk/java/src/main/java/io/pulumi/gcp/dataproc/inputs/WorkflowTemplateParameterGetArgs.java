@@ -21,7 +21,7 @@ public final class WorkflowTemplateParameterGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class WorkflowTemplateParameterGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fields", required=true)
-        private final Input<List<String>> fields;
+      private final Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields;
@@ -43,7 +43,7 @@ public final class WorkflowTemplateParameterGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class WorkflowTemplateParameterGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validation")
-        private final @Nullable Input<WorkflowTemplateParameterValidationGetArgs> validation;
+      private final @Nullable Input<WorkflowTemplateParameterValidationGetArgs> validation;
 
     public Input<WorkflowTemplateParameterValidationGetArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;

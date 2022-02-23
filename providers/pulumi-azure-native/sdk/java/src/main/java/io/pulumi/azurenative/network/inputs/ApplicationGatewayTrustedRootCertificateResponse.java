@@ -23,7 +23,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="data")
-        private final @Nullable String data;
+      private final @Nullable String data;
 
     public Optional<String> getData() {
         return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
@@ -34,7 +34,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -45,7 +45,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -56,7 +56,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="keyVaultSecretId")
-        private final @Nullable String keyVaultSecretId;
+      private final @Nullable String keyVaultSecretId;
 
     public Optional<String> getKeyVaultSecretId() {
         return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
@@ -67,7 +67,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -78,7 +78,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -89,7 +89,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

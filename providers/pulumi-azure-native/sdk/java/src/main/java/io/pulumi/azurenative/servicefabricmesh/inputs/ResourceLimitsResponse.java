@@ -23,7 +23,7 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cpu")
-        private final @Nullable Double cpu;
+      private final @Nullable Double cpu;
 
     public Optional<Double> getCpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
@@ -34,7 +34,7 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="memoryInGB")
-        private final @Nullable Double memoryInGB;
+      private final @Nullable Double memoryInGB;
 
     public Optional<Double> getMemoryInGB() {
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);

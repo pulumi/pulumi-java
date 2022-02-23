@@ -24,7 +24,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -36,7 +36,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * 
      */
     @InputImport(name="privateIpAddress")
-        private final @Nullable String privateIpAddress;
+      private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -47,7 +47,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * 
      */
     @InputImport(name="privateIpAllocationMethod")
-        private final @Nullable String privateIpAllocationMethod;
+      private final @Nullable String privateIpAllocationMethod;
 
     public Optional<String> getPrivateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIpAllocationMethod);
@@ -58,7 +58,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable SubnetReferenceResponse subnet;
+      private final @Nullable SubnetReferenceResponse subnet;
 
     public Optional<SubnetReferenceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -69,7 +69,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable String zones;
+      private final @Nullable String zones;
 
     public Optional<String> getZones() {
         return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);

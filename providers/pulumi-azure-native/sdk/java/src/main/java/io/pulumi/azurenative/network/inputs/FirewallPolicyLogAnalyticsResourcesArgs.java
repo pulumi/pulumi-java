@@ -25,7 +25,7 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="defaultWorkspaceId")
-        private final @Nullable Input<SubResourceArgs> defaultWorkspaceId;
+      private final @Nullable Input<SubResourceArgs> defaultWorkspaceId;
 
     public Input<SubResourceArgs> getDefaultWorkspaceId() {
         return this.defaultWorkspaceId == null ? Input.empty() : this.defaultWorkspaceId;
@@ -36,7 +36,7 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="workspaces")
-        private final @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
+      private final @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 
     public Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> getWorkspaces() {
         return this.workspaces == null ? Input.empty() : this.workspaces;

@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="groupIds")
-        private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requestMessage")
-        private final @Nullable Input<String> requestMessage;
+      private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;

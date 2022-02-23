@@ -21,7 +21,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-        private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -32,7 +32,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<FlowSourceArgs> source;
+      private final Input<FlowSourceArgs> source;
 
     public Input<FlowSourceArgs> getSource() {
         return this.source;
@@ -54,7 +54,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFailoverConfig")
-        private final @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig;
+      private final @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig;
 
     public Input<FlowFailoverConfigArgs> getSourceFailoverConfig() {
         return this.sourceFailoverConfig == null ? Input.empty() : this.sourceFailoverConfig;

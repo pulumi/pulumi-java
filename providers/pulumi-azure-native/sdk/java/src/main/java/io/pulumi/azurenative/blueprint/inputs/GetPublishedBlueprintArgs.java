@@ -17,7 +17,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="blueprintName", required=true)
-        private final String blueprintName;
+      private final String blueprintName;
 
     public String getBlueprintName() {
         return this.blueprintName;
@@ -28,7 +28,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceScope", required=true)
-        private final String resourceScope;
+      private final String resourceScope;
 
     public String getResourceScope() {
         return this.resourceScope;
@@ -39,7 +39,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="versionId", required=true)
-        private final String versionId;
+      private final String versionId;
 
     public String getVersionId() {
         return this.versionId;

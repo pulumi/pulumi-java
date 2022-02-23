@@ -25,7 +25,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-        private final @Nullable Input<List<ObjectReferenceArgs>> active;
+      private final @Nullable Input<List<ObjectReferenceArgs>> active;
 
     public Input<List<ObjectReferenceArgs>> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -36,7 +36,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastScheduleTime")
-        private final @Nullable Input<String> lastScheduleTime;
+      private final @Nullable Input<String> lastScheduleTime;
 
     public Input<String> getLastScheduleTime() {
         return this.lastScheduleTime == null ? Input.empty() : this.lastScheduleTime;

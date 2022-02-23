@@ -14,14 +14,14 @@ public final class RuleGroupCustomAction extends io.pulumi.resources.InvokeArgs 
     public static final RuleGroupCustomAction Empty = new RuleGroupCustomAction();
 
     @InputImport(name="actionDefinition", required=true)
-        private final RuleGroupActionDefinition actionDefinition;
+      private final RuleGroupActionDefinition actionDefinition;
 
     public RuleGroupActionDefinition getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-        private final String actionName;
+      private final String actionName;
 
     public String getActionName() {
         return this.actionName;

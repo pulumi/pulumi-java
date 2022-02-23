@@ -15,7 +15,7 @@ public final class AssociationInstanceAssociationOutputLocation extends io.pulum
     public static final AssociationInstanceAssociationOutputLocation Empty = new AssociationInstanceAssociationOutputLocation();
 
     @InputImport(name="s3Location")
-        private final @Nullable AssociationS3OutputLocation s3Location;
+      private final @Nullable AssociationS3OutputLocation s3Location;
 
     public Optional<AssociationS3OutputLocation> getS3Location() {
         return this.s3Location == null ? Optional.empty() : Optional.ofNullable(this.s3Location);

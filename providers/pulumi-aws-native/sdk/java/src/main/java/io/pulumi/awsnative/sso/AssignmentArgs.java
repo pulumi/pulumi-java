@@ -20,7 +20,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-        private final Input<String> instanceArn;
+      private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -31,7 +31,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-        private final Input<String> permissionSetArn;
+      private final Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn;
@@ -42,7 +42,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -53,7 +53,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalType", required=true)
-        private final Input<AssignmentPrincipalType> principalType;
+      private final Input<AssignmentPrincipalType> principalType;
 
     public Input<AssignmentPrincipalType> getPrincipalType() {
         return this.principalType;
@@ -64,7 +64,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId", required=true)
-        private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;
@@ -75,7 +75,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType", required=true)
-        private final Input<AssignmentTargetType> targetType;
+      private final Input<AssignmentTargetType> targetType;
 
     public Input<AssignmentTargetType> getTargetType() {
         return this.targetType;

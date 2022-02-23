@@ -28,7 +28,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobNfs")
-        private final @Nullable Input<BlobNfsTargetArgs> blobNfs;
+      private final @Nullable Input<BlobNfsTargetArgs> blobNfs;
 
     public Input<BlobNfsTargetArgs> getBlobNfs() {
         return this.blobNfs == null ? Input.empty() : this.blobNfs;
@@ -39,7 +39,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-        private final Input<String> cacheName;
+      private final Input<String> cacheName;
 
     public Input<String> getCacheName() {
         return this.cacheName;
@@ -50,7 +50,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clfs")
-        private final @Nullable Input<ClfsTargetArgs> clfs;
+      private final @Nullable Input<ClfsTargetArgs> clfs;
 
     public Input<ClfsTargetArgs> getClfs() {
         return this.clfs == null ? Input.empty() : this.clfs;
@@ -61,7 +61,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="junctions")
-        private final @Nullable Input<List<NamespaceJunctionArgs>> junctions;
+      private final @Nullable Input<List<NamespaceJunctionArgs>> junctions;
 
     public Input<List<NamespaceJunctionArgs>> getJunctions() {
         return this.junctions == null ? Input.empty() : this.junctions;
@@ -72,7 +72,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfs3")
-        private final @Nullable Input<Nfs3TargetArgs> nfs3;
+      private final @Nullable Input<Nfs3TargetArgs> nfs3;
 
     public Input<Nfs3TargetArgs> getNfs3() {
         return this.nfs3 == null ? Input.empty() : this.nfs3;
@@ -83,7 +83,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
 
     public Input<Either<String,ProvisioningStateType>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -94,7 +94,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -105,7 +105,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTargetName")
-        private final @Nullable Input<String> storageTargetName;
+      private final @Nullable Input<String> storageTargetName;
 
     public Input<String> getStorageTargetName() {
         return this.storageTargetName == null ? Input.empty() : this.storageTargetName;
@@ -116,7 +116,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType", required=true)
-        private final Input<Either<String,StorageTargetType>> targetType;
+      private final Input<Either<String,StorageTargetType>> targetType;
 
     public Input<Either<String,StorageTargetType>> getTargetType() {
         return this.targetType;
@@ -127,7 +127,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unknown")
-        private final @Nullable Input<UnknownTargetArgs> unknown;
+      private final @Nullable Input<UnknownTargetArgs> unknown;
 
     public Input<UnknownTargetArgs> getUnknown() {
         return this.unknown == null ? Input.empty() : this.unknown;

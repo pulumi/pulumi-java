@@ -17,7 +17,7 @@ public final class GetServerTrustCertificateArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificateName", required=true)
-        private final String certificateName;
+      private final String certificateName;
 
     public String getCertificateName() {
         return this.certificateName;
@@ -28,7 +28,7 @@ public final class GetServerTrustCertificateArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-        private final String managedInstanceName;
+      private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -39,7 +39,7 @@ public final class GetServerTrustCertificateArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

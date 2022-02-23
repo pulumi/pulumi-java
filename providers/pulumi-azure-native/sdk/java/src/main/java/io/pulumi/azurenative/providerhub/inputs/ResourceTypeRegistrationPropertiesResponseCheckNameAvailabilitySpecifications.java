@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     public static final ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications Empty = new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications();
 
     @InputImport(name="enableDefaultValidation")
-        private final @Nullable Boolean enableDefaultValidation;
+      private final @Nullable Boolean enableDefaultValidation;
 
     public Optional<Boolean> getEnableDefaultValidation() {
         return this.enableDefaultValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDefaultValidation);
     }
 
     @InputImport(name="resourceTypesWithCustomValidation")
-        private final @Nullable List<String> resourceTypesWithCustomValidation;
+      private final @Nullable List<String> resourceTypesWithCustomValidation;
 
     public List<String> getResourceTypesWithCustomValidation() {
         return this.resourceTypesWithCustomValidation == null ? List.of() : this.resourceTypesWithCustomValidation;

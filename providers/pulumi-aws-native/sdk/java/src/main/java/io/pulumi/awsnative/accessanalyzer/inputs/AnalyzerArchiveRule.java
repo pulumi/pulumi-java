@@ -19,7 +19,7 @@ public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
     public static final AnalyzerArchiveRule Empty = new AnalyzerArchiveRule();
 
     @InputImport(name="filter", required=true)
-        private final List<AnalyzerFilter> filter;
+      private final List<AnalyzerFilter> filter;
 
     public List<AnalyzerFilter> getFilter() {
         return this.filter;
@@ -30,7 +30,7 @@ public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-        private final String ruleName;
+      private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;

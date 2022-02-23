@@ -19,7 +19,7 @@ public final class GetKeysZoneSigningKeyDigest extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="digest")
-        private final @Nullable String digest;
+      private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
@@ -30,7 +30,7 @@ public final class GetKeysZoneSigningKeyDigest extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

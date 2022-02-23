@@ -25,7 +25,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cert")
-        private final @Nullable Input<String> cert;
+      private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
@@ -36,7 +36,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cname")
-        private final @Nullable Input<String> cname;
+      private final @Nullable Input<String> cname;
 
     public Input<String> getCname() {
         return this.cname == null ? Input.empty() : this.cname;
@@ -47,7 +47,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -58,7 +58,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,Status>> status;
+      private final @Nullable Input<Either<String,Status>> status;
 
     public Input<Either<String,Status>> getStatus() {
         return this.status == null ? Input.empty() : this.status;

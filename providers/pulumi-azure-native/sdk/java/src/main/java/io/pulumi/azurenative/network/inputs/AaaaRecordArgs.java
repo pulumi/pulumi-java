@@ -23,7 +23,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Address")
-        private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address == null ? Input.empty() : this.ipv6Address;

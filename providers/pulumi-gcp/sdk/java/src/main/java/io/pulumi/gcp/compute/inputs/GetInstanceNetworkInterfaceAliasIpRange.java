@@ -17,7 +17,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-        private final String ipCidrRange;
+      private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -30,7 +30,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetworkRangeName", required=true)
-        private final String subnetworkRangeName;
+      private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;

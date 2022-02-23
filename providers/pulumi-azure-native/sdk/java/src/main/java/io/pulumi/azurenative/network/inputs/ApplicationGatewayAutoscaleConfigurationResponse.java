@@ -23,7 +23,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="maxCapacity")
-        private final @Nullable Integer maxCapacity;
+      private final @Nullable Integer maxCapacity;
 
     public Optional<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
@@ -34,7 +34,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="minCapacity", required=true)
-        private final Integer minCapacity;
+      private final Integer minCapacity;
 
     public Integer getMinCapacity() {
         return this.minCapacity;

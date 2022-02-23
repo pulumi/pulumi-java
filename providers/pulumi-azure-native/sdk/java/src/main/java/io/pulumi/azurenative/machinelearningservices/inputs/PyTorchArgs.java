@@ -25,7 +25,7 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-        private final Input<String> distributionType;
+      private final Input<String> distributionType;
 
     public Input<String> getDistributionType() {
         return this.distributionType;
@@ -36,7 +36,7 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processCount")
-        private final @Nullable Input<Integer> processCount;
+      private final @Nullable Input<Integer> processCount;
 
     public Input<Integer> getProcessCount() {
         return this.processCount == null ? Input.empty() : this.processCount;

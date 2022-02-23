@@ -24,7 +24,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-        private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -35,7 +35,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelay")
-        private final @Nullable Input<String> initialDelay;
+      private final @Nullable Input<String> initialDelay;
 
     public Input<String> getInitialDelay() {
         return this.initialDelay == null ? Input.empty() : this.initialDelay;
@@ -46,7 +46,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="period")
-        private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -57,7 +57,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-        private final @Nullable Input<Integer> successThreshold;
+      private final @Nullable Input<Integer> successThreshold;
 
     public Input<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -68,7 +68,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

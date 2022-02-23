@@ -28,7 +28,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdDate", required=true)
-        private final String createdDate;
+      private final String createdDate;
 
     public String getCreatedDate() {
         return this.createdDate;
@@ -39,7 +39,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dailyRecurrence")
-        private final @Nullable DayDetailsResponse dailyRecurrence;
+      private final @Nullable DayDetailsResponse dailyRecurrence;
 
     public Optional<DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
@@ -50,7 +50,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hourlyRecurrence")
-        private final @Nullable HourDetailsResponse hourlyRecurrence;
+      private final @Nullable HourDetailsResponse hourlyRecurrence;
 
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
@@ -61,7 +61,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -72,7 +72,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -83,7 +83,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -94,7 +94,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notificationSettings")
-        private final @Nullable NotificationSettingsResponse notificationSettings;
+      private final @Nullable NotificationSettingsResponse notificationSettings;
 
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
@@ -105,7 +105,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -116,7 +116,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -127,7 +127,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -138,7 +138,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-        private final @Nullable String targetResourceId;
+      private final @Nullable String targetResourceId;
 
     public Optional<String> getTargetResourceId() {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
@@ -149,7 +149,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="taskType")
-        private final @Nullable String taskType;
+      private final @Nullable String taskType;
 
     public Optional<String> getTaskType() {
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
@@ -160,7 +160,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeZoneId")
-        private final @Nullable String timeZoneId;
+      private final @Nullable String timeZoneId;
 
     public Optional<String> getTimeZoneId() {
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
@@ -171,7 +171,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -182,7 +182,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uniqueIdentifier", required=true)
-        private final String uniqueIdentifier;
+      private final String uniqueIdentifier;
 
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
@@ -193,7 +193,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weeklyRecurrence")
-        private final @Nullable WeekDetailsResponse weeklyRecurrence;
+      private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.weeklyRecurrence);

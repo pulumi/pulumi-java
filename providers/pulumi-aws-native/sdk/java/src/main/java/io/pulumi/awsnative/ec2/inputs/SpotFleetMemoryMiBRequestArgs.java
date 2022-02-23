@@ -15,14 +15,14 @@ public final class SpotFleetMemoryMiBRequestArgs extends io.pulumi.resources.Res
     public static final SpotFleetMemoryMiBRequestArgs Empty = new SpotFleetMemoryMiBRequestArgs();
 
     @InputImport(name="max")
-        private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-        private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;

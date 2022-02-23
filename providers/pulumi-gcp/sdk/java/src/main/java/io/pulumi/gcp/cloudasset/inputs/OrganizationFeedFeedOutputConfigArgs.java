@@ -19,7 +19,7 @@ public final class OrganizationFeedFeedOutputConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-        private final Input<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
+      private final Input<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 
     public Input<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> getPubsubDestination() {
         return this.pubsubDestination;

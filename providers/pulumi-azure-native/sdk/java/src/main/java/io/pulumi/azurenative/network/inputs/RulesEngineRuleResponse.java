@@ -27,7 +27,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="action", required=true)
-        private final RulesEngineActionResponse action;
+      private final RulesEngineActionResponse action;
 
     public RulesEngineActionResponse getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="matchConditions")
-        private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
+      private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
 
     public List<RulesEngineMatchConditionResponse> getMatchConditions() {
         return this.matchConditions == null ? List.of() : this.matchConditions;
@@ -49,7 +49,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="matchProcessingBehavior")
-        private final @Nullable String matchProcessingBehavior;
+      private final @Nullable String matchProcessingBehavior;
 
     public Optional<String> getMatchProcessingBehavior() {
         return this.matchProcessingBehavior == null ? Optional.empty() : Optional.ofNullable(this.matchProcessingBehavior);
@@ -60,7 +60,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -71,7 +71,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;

@@ -20,7 +20,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName", required=true)
-        private final Input<String> commonName;
+      private final Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName;
@@ -32,7 +32,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-        private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -44,7 +44,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

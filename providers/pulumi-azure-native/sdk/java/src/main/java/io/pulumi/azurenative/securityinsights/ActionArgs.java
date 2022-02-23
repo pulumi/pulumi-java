@@ -19,7 +19,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionId")
-        private final @Nullable Input<String> actionId;
+      private final @Nullable Input<String> actionId;
 
     public Input<String> getActionId() {
         return this.actionId == null ? Input.empty() : this.actionId;
@@ -30,7 +30,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicAppResourceId", required=true)
-        private final Input<String> logicAppResourceId;
+      private final Input<String> logicAppResourceId;
 
     public Input<String> getLogicAppResourceId() {
         return this.logicAppResourceId;
@@ -41,7 +41,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId", required=true)
-        private final Input<String> ruleId;
+      private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -63,7 +63,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerUri", required=true)
-        private final Input<String> triggerUri;
+      private final Input<String> triggerUri;
 
     public Input<String> getTriggerUri() {
         return this.triggerUri;
@@ -74,7 +74,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

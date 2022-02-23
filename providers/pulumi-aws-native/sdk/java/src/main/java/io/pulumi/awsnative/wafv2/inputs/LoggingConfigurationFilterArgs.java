@@ -21,7 +21,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="behavior", required=true)
-        private final Input<LoggingConfigurationFilterBehavior> behavior;
+      private final Input<LoggingConfigurationFilterBehavior> behavior;
 
     public Input<LoggingConfigurationFilterBehavior> getBehavior() {
         return this.behavior;
@@ -32,7 +32,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="conditions", required=true)
-        private final Input<List<LoggingConfigurationConditionArgs>> conditions;
+      private final Input<List<LoggingConfigurationConditionArgs>> conditions;
 
     public Input<List<LoggingConfigurationConditionArgs>> getConditions() {
         return this.conditions;
@@ -43,7 +43,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requirement", required=true)
-        private final Input<LoggingConfigurationFilterRequirement> requirement;
+      private final Input<LoggingConfigurationFilterRequirement> requirement;
 
     public Input<LoggingConfigurationFilterRequirement> getRequirement() {
         return this.requirement;

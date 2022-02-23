@@ -23,7 +23,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="httpErrorCodeReturnedEquals")
-        private final @Nullable Input<String> httpErrorCodeReturnedEquals;
+      private final @Nullable Input<String> httpErrorCodeReturnedEquals;
 
     public Input<String> getHttpErrorCodeReturnedEquals() {
         return this.httpErrorCodeReturnedEquals == null ? Input.empty() : this.httpErrorCodeReturnedEquals;
@@ -34,7 +34,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyPrefixEquals")
-        private final @Nullable Input<String> keyPrefixEquals;
+      private final @Nullable Input<String> keyPrefixEquals;
 
     public Input<String> getKeyPrefixEquals() {
         return this.keyPrefixEquals == null ? Input.empty() : this.keyPrefixEquals;

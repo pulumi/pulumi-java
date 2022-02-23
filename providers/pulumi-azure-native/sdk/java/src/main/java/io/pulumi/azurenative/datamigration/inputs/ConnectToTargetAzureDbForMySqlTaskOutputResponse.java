@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
      * 
      */
     @InputImport(name="databases", required=true)
-        private final List<String> databases;
+      private final List<String> databases;
 
     public List<String> getDatabases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
      * 
      */
     @InputImport(name="serverVersion", required=true)
-        private final String serverVersion;
+      private final String serverVersion;
 
     public String getServerVersion() {
         return this.serverVersion;
@@ -56,7 +56,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-        private final String targetServerBrandVersion;
+      private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -67,7 +67,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
      * 
      */
     @InputImport(name="validationErrors", required=true)
-        private final List<ReportableExceptionResponse> validationErrors;
+      private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

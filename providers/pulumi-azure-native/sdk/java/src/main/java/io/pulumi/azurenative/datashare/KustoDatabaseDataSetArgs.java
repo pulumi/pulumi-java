@@ -19,7 +19,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataSetName")
-        private final @Nullable Input<String> dataSetName;
+      private final @Nullable Input<String> dataSetName;
 
     public Input<String> getDataSetName() {
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
@@ -42,7 +42,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -53,7 +53,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kustoDatabaseResourceId", required=true)
-        private final Input<String> kustoDatabaseResourceId;
+      private final Input<String> kustoDatabaseResourceId;
 
     public Input<String> getKustoDatabaseResourceId() {
         return this.kustoDatabaseResourceId;
@@ -64,7 +64,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="shareName", required=true)
-        private final Input<String> shareName;
+      private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;

@@ -20,7 +20,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alertRuleTemplateName", required=true)
-        private final Input<String> alertRuleTemplateName;
+      private final Input<String> alertRuleTemplateName;
 
     public Input<String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName;
@@ -31,7 +31,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -43,7 +43,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleId")
-        private final @Nullable Input<String> ruleId;
+      private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -76,7 +76,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

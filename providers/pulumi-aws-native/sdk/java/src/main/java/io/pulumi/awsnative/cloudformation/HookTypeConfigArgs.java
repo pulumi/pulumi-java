@@ -20,7 +20,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-        private final @Nullable Input<String> configuration;
+      private final @Nullable Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -31,7 +31,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationAlias")
-        private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
+      private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
 
     public Input<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
         return this.configurationAlias == null ? Input.empty() : this.configurationAlias;
@@ -42,7 +42,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeArn")
-        private final @Nullable Input<String> typeArn;
+      private final @Nullable Input<String> typeArn;
 
     public Input<String> getTypeArn() {
         return this.typeArn == null ? Input.empty() : this.typeArn;
@@ -55,7 +55,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-        private final @Nullable Input<String> typeName;
+      private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;

@@ -24,7 +24,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes", required=true)
-        private final Input<List<HttpRouteConfigArgs>> routes;
+      private final Input<List<HttpRouteConfigArgs>> routes;
 
     public Input<List<HttpRouteConfigArgs>> getRoutes() {
         return this.routes;

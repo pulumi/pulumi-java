@@ -26,7 +26,7 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -37,7 +37,7 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="registeredTools")
-        private final @Nullable Input<List<String>> registeredTools;
+      private final @Nullable Input<List<String>> registeredTools;
 
     public Input<List<String>> getRegisteredTools() {
         return this.registeredTools == null ? Input.empty() : this.registeredTools;

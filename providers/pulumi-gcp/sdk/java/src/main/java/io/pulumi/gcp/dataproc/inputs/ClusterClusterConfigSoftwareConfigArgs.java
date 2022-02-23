@@ -26,7 +26,7 @@ public final class ClusterClusterConfigSoftwareConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageVersion")
-        private final @Nullable Input<String> imageVersion;
+      private final @Nullable Input<String> imageVersion;
 
     public Input<String> getImageVersion() {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
@@ -49,7 +49,7 @@ public final class ClusterClusterConfigSoftwareConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="optionalComponents")
-        private final @Nullable Input<List<String>> optionalComponents;
+      private final @Nullable Input<List<String>> optionalComponents;
 
     public Input<List<String>> getOptionalComponents() {
         return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
@@ -63,14 +63,14 @@ public final class ClusterClusterConfigSoftwareConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="overrideProperties")
-        private final @Nullable Input<Map<String,String>> overrideProperties;
+      private final @Nullable Input<Map<String,String>> overrideProperties;
 
     public Input<Map<String,String>> getOverrideProperties() {
         return this.overrideProperties == null ? Input.empty() : this.overrideProperties;
     }
 
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,Object>> properties;
+      private final @Nullable Input<Map<String,Object>> properties;
 
     public Input<Map<String,Object>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;

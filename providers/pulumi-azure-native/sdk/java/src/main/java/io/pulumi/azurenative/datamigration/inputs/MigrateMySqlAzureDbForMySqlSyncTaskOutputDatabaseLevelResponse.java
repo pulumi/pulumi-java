@@ -19,7 +19,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="appliedChanges", required=true)
-        private final Double appliedChanges;
+      private final Double appliedChanges;
 
     public Double getAppliedChanges() {
         return this.appliedChanges;
@@ -30,7 +30,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="cdcDeleteCounter", required=true)
-        private final Double cdcDeleteCounter;
+      private final Double cdcDeleteCounter;
 
     public Double getCdcDeleteCounter() {
         return this.cdcDeleteCounter;
@@ -41,7 +41,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="cdcInsertCounter", required=true)
-        private final Double cdcInsertCounter;
+      private final Double cdcInsertCounter;
 
     public Double getCdcInsertCounter() {
         return this.cdcInsertCounter;
@@ -52,7 +52,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="cdcUpdateCounter", required=true)
-        private final Double cdcUpdateCounter;
+      private final Double cdcUpdateCounter;
 
     public Double getCdcUpdateCounter() {
         return this.cdcUpdateCounter;
@@ -63,7 +63,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -74,7 +74,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="endedOn", required=true)
-        private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -85,7 +85,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="fullLoadCompletedTables", required=true)
-        private final Double fullLoadCompletedTables;
+      private final Double fullLoadCompletedTables;
 
     public Double getFullLoadCompletedTables() {
         return this.fullLoadCompletedTables;
@@ -96,7 +96,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="fullLoadErroredTables", required=true)
-        private final Double fullLoadErroredTables;
+      private final Double fullLoadErroredTables;
 
     public Double getFullLoadErroredTables() {
         return this.fullLoadErroredTables;
@@ -107,7 +107,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="fullLoadLoadingTables", required=true)
-        private final Double fullLoadLoadingTables;
+      private final Double fullLoadLoadingTables;
 
     public Double getFullLoadLoadingTables() {
         return this.fullLoadLoadingTables;
@@ -118,7 +118,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="fullLoadQueuedTables", required=true)
-        private final Double fullLoadQueuedTables;
+      private final Double fullLoadQueuedTables;
 
     public Double getFullLoadQueuedTables() {
         return this.fullLoadQueuedTables;
@@ -129,7 +129,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -140,7 +140,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="incomingChanges", required=true)
-        private final Double incomingChanges;
+      private final Double incomingChanges;
 
     public Double getIncomingChanges() {
         return this.incomingChanges;
@@ -151,7 +151,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="initializationCompleted", required=true)
-        private final Boolean initializationCompleted;
+      private final Boolean initializationCompleted;
 
     public Boolean getInitializationCompleted() {
         return this.initializationCompleted;
@@ -162,7 +162,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="latency", required=true)
-        private final Double latency;
+      private final Double latency;
 
     public Double getLatency() {
         return this.latency;
@@ -173,7 +173,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="migrationState", required=true)
-        private final String migrationState;
+      private final String migrationState;
 
     public String getMigrationState() {
         return this.migrationState;
@@ -185,7 +185,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="resultType", required=true)
-        private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -196,7 +196,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
      * 
      */
     @InputImport(name="startedOn", required=true)
-        private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;

@@ -25,7 +25,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,ApplicationDefinitionArtifactName>> name;
+      private final Input<Either<String,ApplicationDefinitionArtifactName>> name;
 
     public Input<Either<String,ApplicationDefinitionArtifactName>> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ApplicationArtifactType> type;
+      private final Input<ApplicationArtifactType> type;
 
     public Input<ApplicationArtifactType> getType() {
         return this.type;
@@ -47,7 +47,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

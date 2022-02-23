@@ -24,7 +24,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-        private final String appImageConfigName;
+      private final String appImageConfigName;
 
     public String getAppImageConfigName() {
         return this.appImageConfigName;
@@ -35,7 +35,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageName", required=true)
-        private final String imageName;
+      private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -46,7 +46,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageVersionNumber")
-        private final @Nullable Integer imageVersionNumber;
+      private final @Nullable Integer imageVersionNumber;
 
     public Optional<Integer> getImageVersionNumber() {
         return this.imageVersionNumber == null ? Optional.empty() : Optional.ofNullable(this.imageVersionNumber);

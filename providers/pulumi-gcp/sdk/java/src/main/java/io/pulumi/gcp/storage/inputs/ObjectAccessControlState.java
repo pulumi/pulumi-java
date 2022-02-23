@@ -22,7 +22,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="domain")
-        private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -44,7 +44,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -63,7 +63,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entity")
-        private final @Nullable Input<String> entity;
+      private final @Nullable Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity == null ? Input.empty() : this.entity;
@@ -74,7 +74,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entityId")
-        private final @Nullable Input<String> entityId;
+      private final @Nullable Input<String> entityId;
 
     public Input<String> getEntityId() {
         return this.entityId == null ? Input.empty() : this.entityId;
@@ -85,7 +85,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="generation")
-        private final @Nullable Input<Integer> generation;
+      private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -96,7 +96,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="object")
-        private final @Nullable Input<String> object;
+      private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -107,7 +107,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="projectTeams")
-        private final @Nullable Input<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
+      private final @Nullable Input<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
     public Input<List<ObjectAccessControlProjectTeamGetArgs>> getProjectTeams() {
         return this.projectTeams == null ? Input.empty() : this.projectTeams;
@@ -119,7 +119,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

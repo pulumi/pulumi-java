@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigConfigConnectorConfig extends io.pulumi
     public static final GetClusterAddonsConfigConfigConnectorConfig Empty = new GetClusterAddonsConfigConfigConnectorConfig();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

@@ -17,7 +17,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="trustedIdProviderName", required=true)
-        private final String trustedIdProviderName;
+      private final String trustedIdProviderName;
 
     public String getTrustedIdProviderName() {
         return this.trustedIdProviderName;

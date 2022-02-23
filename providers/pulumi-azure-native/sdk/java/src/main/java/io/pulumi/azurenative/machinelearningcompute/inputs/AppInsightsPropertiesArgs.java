@@ -23,7 +23,7 @@ public final class AppInsightsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

@@ -25,7 +25,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="containerName")
-        private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -36,7 +36,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="containerPort")
-        private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
@@ -47,7 +47,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="healthCheckConfig")
-        private final @Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig;
+      private final @Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
     public Input<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {
         return this.healthCheckConfig == null ? Input.empty() : this.healthCheckConfig;

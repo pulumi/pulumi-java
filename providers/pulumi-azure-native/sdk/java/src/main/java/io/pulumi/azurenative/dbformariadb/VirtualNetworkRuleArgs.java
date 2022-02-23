@@ -20,7 +20,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-        private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
+      private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
 
     public Input<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
@@ -31,7 +31,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -53,7 +53,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkRuleName")
-        private final @Nullable Input<String> virtualNetworkRuleName;
+      private final @Nullable Input<String> virtualNetworkRuleName;
 
     public Input<String> getVirtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Input.empty() : this.virtualNetworkRuleName;
@@ -64,7 +64,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkSubnetId", required=true)
-        private final Input<String> virtualNetworkSubnetId;
+      private final Input<String> virtualNetworkSubnetId;
 
     public Input<String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;

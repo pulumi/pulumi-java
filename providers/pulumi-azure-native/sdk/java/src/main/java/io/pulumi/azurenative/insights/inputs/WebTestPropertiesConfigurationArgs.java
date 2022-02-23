@@ -23,7 +23,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="webTest")
-        private final @Nullable Input<String> webTest;
+      private final @Nullable Input<String> webTest;
 
     public Input<String> getWebTest() {
         return this.webTest == null ? Input.empty() : this.webTest;

@@ -15,21 +15,21 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     public static final TopicRuleKinesisActionArgs Empty = new TopicRuleKinesisActionArgs();
 
     @InputImport(name="partitionKey")
-        private final @Nullable Input<String> partitionKey;
+      private final @Nullable Input<String> partitionKey;
 
     public Input<String> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamName", required=true)
-        private final Input<String> streamName;
+      private final Input<String> streamName;
 
     public Input<String> getStreamName() {
         return this.streamName;

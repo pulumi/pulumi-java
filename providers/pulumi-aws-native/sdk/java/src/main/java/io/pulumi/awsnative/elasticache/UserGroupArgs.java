@@ -21,7 +21,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-        private final Input<UserGroupEngine> engine;
+      private final Input<UserGroupEngine> engine;
 
     public Input<UserGroupEngine> getEngine() {
         return this.engine;
@@ -32,7 +32,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userGroupId", required=true)
-        private final Input<String> userGroupId;
+      private final Input<String> userGroupId;
 
     public Input<String> getUserGroupId() {
         return this.userGroupId;
@@ -43,7 +43,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIds")
-        private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;

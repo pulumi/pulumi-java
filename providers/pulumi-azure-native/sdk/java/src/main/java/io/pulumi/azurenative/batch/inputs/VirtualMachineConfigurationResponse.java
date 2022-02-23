@@ -27,7 +27,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerConfiguration")
-        private final @Nullable ContainerConfigurationResponse containerConfiguration;
+      private final @Nullable ContainerConfigurationResponse containerConfiguration;
 
     public Optional<ContainerConfigurationResponse> getContainerConfiguration() {
         return this.containerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerConfiguration);
@@ -38,7 +38,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataDisks")
-        private final @Nullable List<DataDiskResponse> dataDisks;
+      private final @Nullable List<DataDiskResponse> dataDisks;
 
     public List<DataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
@@ -49,7 +49,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-        private final @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
+      private final @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
 
     public Optional<DiskEncryptionConfigurationResponse> getDiskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionConfiguration);
@@ -60,14 +60,14 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="extensions")
-        private final @Nullable List<VMExtensionResponse> extensions;
+      private final @Nullable List<VMExtensionResponse> extensions;
 
     public List<VMExtensionResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 
     @InputImport(name="imageReference", required=true)
-        private final ImageReferenceResponse imageReference;
+      private final ImageReferenceResponse imageReference;
 
     public ImageReferenceResponse getImageReference() {
         return this.imageReference;
@@ -81,7 +81,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable String licenseType;
+      private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -92,7 +92,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="nodeAgentSkuId", required=true)
-        private final String nodeAgentSkuId;
+      private final String nodeAgentSkuId;
 
     public String getNodeAgentSkuId() {
         return this.nodeAgentSkuId;
@@ -103,7 +103,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="nodePlacementConfiguration")
-        private final @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
+      private final @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
 
     public Optional<NodePlacementConfigurationResponse> getNodePlacementConfiguration() {
         return this.nodePlacementConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nodePlacementConfiguration);
@@ -114,7 +114,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowsConfiguration")
-        private final @Nullable WindowsConfigurationResponse windowsConfiguration;
+      private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
     public Optional<WindowsConfigurationResponse> getWindowsConfiguration() {
         return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);

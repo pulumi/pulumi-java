@@ -20,7 +20,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dynamicTagsJson")
-        private final @Nullable Input<String> dynamicTagsJson;
+      private final @Nullable Input<String> dynamicTagsJson;
 
     public Input<String> getDynamicTagsJson() {
         return this.dynamicTagsJson == null ? Input.empty() : this.dynamicTagsJson;
@@ -31,7 +31,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isPushEnabled", required=true)
-        private final Input<Boolean> isPushEnabled;
+      private final Input<Boolean> isPushEnabled;
 
     public Input<Boolean> getIsPushEnabled() {
         return this.isPushEnabled;
@@ -42,7 +42,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -53,7 +53,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -64,7 +64,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagWhitelistJson")
-        private final @Nullable Input<String> tagWhitelistJson;
+      private final @Nullable Input<String> tagWhitelistJson;
 
     public Input<String> getTagWhitelistJson() {
         return this.tagWhitelistJson == null ? Input.empty() : this.tagWhitelistJson;
@@ -89,7 +89,7 @@ public final class WebAppSitePushSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsRequiringAuth")
-        private final @Nullable Input<String> tagsRequiringAuth;
+      private final @Nullable Input<String> tagsRequiringAuth;
 
     public Input<String> getTagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Input.empty() : this.tagsRequiringAuth;

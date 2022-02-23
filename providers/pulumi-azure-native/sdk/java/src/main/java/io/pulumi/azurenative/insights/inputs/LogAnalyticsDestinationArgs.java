@@ -24,7 +24,7 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceResourceId")
-        private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Input<String> workspaceResourceId;
 
     public Input<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;

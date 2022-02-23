@@ -16,7 +16,7 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
     public static final EnvironmentIamMemberState Empty = new EnvironmentIamMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<EnvironmentIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<EnvironmentIamMemberConditionGetArgs> condition;
 
     public Input<EnvironmentIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="envId")
-        private final @Nullable Input<String> envId;
+      private final @Nullable Input<String> envId;
 
     public Input<String> getEnvId() {
         return this.envId == null ? Input.empty() : this.envId;
@@ -38,21 +38,21 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
     }
 
     @InputImport(name="orgId")
-        private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -65,7 +65,7 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

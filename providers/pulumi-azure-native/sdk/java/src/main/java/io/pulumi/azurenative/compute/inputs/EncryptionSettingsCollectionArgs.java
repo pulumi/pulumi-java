@@ -26,7 +26,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -37,7 +37,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionSettings")
-        private final @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings;
+      private final @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
     public Input<List<EncryptionSettingsElementArgs>> getEncryptionSettings() {
         return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
@@ -48,7 +48,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionSettingsVersion")
-        private final @Nullable Input<String> encryptionSettingsVersion;
+      private final @Nullable Input<String> encryptionSettingsVersion;
 
     public Input<String> getEncryptionSettingsVersion() {
         return this.encryptionSettingsVersion == null ? Input.empty() : this.encryptionSettingsVersion;

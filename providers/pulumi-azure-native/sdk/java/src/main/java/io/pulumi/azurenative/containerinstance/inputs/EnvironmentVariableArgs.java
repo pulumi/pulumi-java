@@ -23,7 +23,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secureValue")
-        private final @Nullable Input<String> secureValue;
+      private final @Nullable Input<String> secureValue;
 
     public Input<String> getSecureValue() {
         return this.secureValue == null ? Input.empty() : this.secureValue;
@@ -45,7 +45,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

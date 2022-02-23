@@ -15,14 +15,14 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     public static final FilterNumberFilterArgs Empty = new FilterNumberFilterArgs();
 
     @InputImport(name="lowerInclusive")
-        private final @Nullable Input<Double> lowerInclusive;
+      private final @Nullable Input<Double> lowerInclusive;
 
     public Input<Double> getLowerInclusive() {
         return this.lowerInclusive == null ? Input.empty() : this.lowerInclusive;
     }
 
     @InputImport(name="upperInclusive")
-        private final @Nullable Input<Double> upperInclusive;
+      private final @Nullable Input<Double> upperInclusive;
 
     public Input<Double> getUpperInclusive() {
         return this.upperInclusive == null ? Input.empty() : this.upperInclusive;

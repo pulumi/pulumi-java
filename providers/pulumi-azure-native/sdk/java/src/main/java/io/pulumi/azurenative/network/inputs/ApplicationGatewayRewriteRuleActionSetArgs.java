@@ -25,7 +25,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="requestHeaderConfigurations")
-        private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
+      private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
     public Input<List<ApplicationGatewayHeaderConfigurationArgs>> getRequestHeaderConfigurations() {
         return this.requestHeaderConfigurations == null ? Input.empty() : this.requestHeaderConfigurations;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseHeaderConfigurations")
-        private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
+      private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
     public Input<List<ApplicationGatewayHeaderConfigurationArgs>> getResponseHeaderConfigurations() {
         return this.responseHeaderConfigurations == null ? Input.empty() : this.responseHeaderConfigurations;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="urlConfiguration")
-        private final @Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
+      private final @Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
     public Input<ApplicationGatewayUrlConfigurationArgs> getUrlConfiguration() {
         return this.urlConfiguration == null ? Input.empty() : this.urlConfiguration;

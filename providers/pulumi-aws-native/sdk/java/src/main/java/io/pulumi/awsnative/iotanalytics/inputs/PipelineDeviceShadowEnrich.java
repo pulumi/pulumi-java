@@ -15,35 +15,35 @@ public final class PipelineDeviceShadowEnrich extends io.pulumi.resources.Invoke
     public static final PipelineDeviceShadowEnrich Empty = new PipelineDeviceShadowEnrich();
 
     @InputImport(name="attribute", required=true)
-        private final String attribute;
+      private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-        private final @Nullable String next;
+      private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="thingName", required=true)
-        private final String thingName;
+      private final String thingName;
 
     public String getThingName() {
         return this.thingName;

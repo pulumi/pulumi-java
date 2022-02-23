@@ -25,7 +25,7 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable Input<List<DetectorModelActionArgs>> actions;
+      private final @Nullable Input<List<DetectorModelActionArgs>> actions;
 
     public Input<List<DetectorModelActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -36,7 +36,7 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -47,7 +47,7 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventName", required=true)
-        private final Input<String> eventName;
+      private final Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName;

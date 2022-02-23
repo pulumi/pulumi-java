@@ -24,7 +24,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessType", required=true)
-        private final Input<Either<String,ShareAccessType>> accessType;
+      private final Input<Either<String,ShareAccessType>> accessType;
 
     public Input<Either<String,ShareAccessType>> getAccessType() {
         return this.accessType;
@@ -35,7 +35,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-        private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;

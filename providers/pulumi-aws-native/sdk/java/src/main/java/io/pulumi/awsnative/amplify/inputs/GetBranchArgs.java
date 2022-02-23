@@ -13,7 +13,7 @@ public final class GetBranchArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBranchArgs Empty = new GetBranchArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

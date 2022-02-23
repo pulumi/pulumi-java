@@ -25,7 +25,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -36,7 +36,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endDate", required=true)
-        private final String endDate;
+      private final String endDate;
 
     public String getEndDate() {
         return this.endDate;
@@ -47,7 +47,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="quota", required=true)
-        private final CommitmentQuotaResponse quota;
+      private final CommitmentQuotaResponse quota;
 
     public CommitmentQuotaResponse getQuota() {
         return this.quota;
@@ -58,7 +58,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startDate", required=true)
-        private final String startDate;
+      private final String startDate;
 
     public String getStartDate() {
         return this.startDate;
@@ -69,7 +69,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);

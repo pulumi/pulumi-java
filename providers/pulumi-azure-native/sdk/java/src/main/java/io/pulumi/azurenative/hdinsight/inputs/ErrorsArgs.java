@@ -23,7 +23,7 @@ public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-        private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -34,7 +34,7 @@ public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;

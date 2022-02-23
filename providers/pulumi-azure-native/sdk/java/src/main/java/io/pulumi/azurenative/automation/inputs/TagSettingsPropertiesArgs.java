@@ -26,7 +26,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterOperator")
-        private final @Nullable Input<TagOperators> filterOperator;
+      private final @Nullable Input<TagOperators> filterOperator;
 
     public Input<TagOperators> getFilterOperator() {
         return this.filterOperator == null ? Input.empty() : this.filterOperator;
@@ -37,7 +37,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,List<String>>> tags;
+      private final @Nullable Input<Map<String,List<String>>> tags;
 
     public Input<Map<String,List<String>>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

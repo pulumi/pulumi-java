@@ -29,7 +29,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enum")
-        private final @Nullable Input<List<Object>> $enum;
+      private final @Nullable Input<List<Object>> $enum;
 
     public Input<List<Object>> get$enum() {
         return this.$enum == null ? Input.empty() : this.$enum;
@@ -40,7 +40,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="format")
-        private final @Nullable Input<Either<String,ColumnFormat>> format;
+      private final @Nullable Input<Either<String,ColumnFormat>> format;
 
     public Input<Either<String,ColumnFormat>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -51,7 +51,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ColumnType>> type;
+      private final Input<Either<String,ColumnType>> type;
 
     public Input<Either<String,ColumnType>> getType() {
         return this.type;
@@ -62,7 +62,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="xMsIsnullable")
-        private final @Nullable Input<Boolean> xMsIsnullable;
+      private final @Nullable Input<Boolean> xMsIsnullable;
 
     public Input<Boolean> getXMsIsnullable() {
         return this.xMsIsnullable == null ? Input.empty() : this.xMsIsnullable;
@@ -73,7 +73,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="xMsIsordered")
-        private final @Nullable Input<Boolean> xMsIsordered;
+      private final @Nullable Input<Boolean> xMsIsordered;
 
     public Input<Boolean> getXMsIsordered() {
         return this.xMsIsordered == null ? Input.empty() : this.xMsIsordered;

@@ -23,7 +23,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastRefreshedAt")
-        private final @Nullable Input<String> lastRefreshedAt;
+      private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;

@@ -25,7 +25,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="authorizationType", required=true)
-        private final Input<String> authorizationType;
+      private final Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType;
@@ -36,7 +36,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -47,7 +47,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;

@@ -14,7 +14,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig extends io.pulumi.re
     public static final GetClusterMasterAuthorizedNetworksConfig Empty = new GetClusterMasterAuthorizedNetworksConfig();
 
     @InputImport(name="cidrBlocks", required=true)
-        private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
+      private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
     public List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
         return this.cidrBlocks;

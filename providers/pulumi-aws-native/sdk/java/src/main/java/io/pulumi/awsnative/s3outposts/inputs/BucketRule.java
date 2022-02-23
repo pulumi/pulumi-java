@@ -27,7 +27,7 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="abortIncompleteMultipartUpload")
-        private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
+      private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
     public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Optional.empty() : Optional.ofNullable(this.abortIncompleteMultipartUpload);
@@ -38,7 +38,7 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationDate")
-        private final @Nullable String expirationDate;
+      private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
@@ -49,7 +49,7 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationInDays")
-        private final @Nullable Integer expirationInDays;
+      private final @Nullable Integer expirationInDays;
 
     public Optional<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
@@ -60,7 +60,7 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable BucketRuleFilterProperties filter;
+      private final @Nullable BucketRuleFilterProperties filter;
 
     public Optional<BucketRuleFilterProperties> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -71,14 +71,14 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @InputImport(name="status")
-        private final @Nullable BucketRuleStatus status;
+      private final @Nullable BucketRuleStatus status;
 
     public Optional<BucketRuleStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

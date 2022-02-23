@@ -16,14 +16,14 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
     public static final DistributionOriginGroupMembersArgs Empty = new DistributionOriginGroupMembersArgs();
 
     @InputImport(name="items", required=true)
-        private final Input<List<DistributionOriginGroupMemberArgs>> items;
+      private final Input<List<DistributionOriginGroupMemberArgs>> items;
 
     public Input<List<DistributionOriginGroupMemberArgs>> getItems() {
         return this.items;
     }
 
     @InputImport(name="quantity", required=true)
-        private final Input<Integer> quantity;
+      private final Input<Integer> quantity;
 
     public Input<Integer> getQuantity() {
         return this.quantity;

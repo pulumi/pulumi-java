@@ -21,7 +21,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authType")
-        private final @Nullable Input<String> authType;
+      private final @Nullable Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType == null ? Input.empty() : this.authType;
@@ -32,7 +32,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="category")
-        private final @Nullable Input<String> category;
+      private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -43,7 +43,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectionName")
-        private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -54,7 +54,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -87,7 +87,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -98,7 +98,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="valueFormat")
-        private final @Nullable Input<Either<String,ValueFormat>> valueFormat;
+      private final @Nullable Input<Either<String,ValueFormat>> valueFormat;
 
     public Input<Either<String,ValueFormat>> getValueFormat() {
         return this.valueFormat == null ? Input.empty() : this.valueFormat;
@@ -109,7 +109,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

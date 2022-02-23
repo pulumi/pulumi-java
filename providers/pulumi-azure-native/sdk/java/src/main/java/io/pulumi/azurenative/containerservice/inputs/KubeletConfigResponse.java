@@ -26,7 +26,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="allowedUnsafeSysctls")
-        private final @Nullable List<String> allowedUnsafeSysctls;
+      private final @Nullable List<String> allowedUnsafeSysctls;
 
     public List<String> getAllowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
@@ -37,7 +37,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="containerLogMaxFiles")
-        private final @Nullable Integer containerLogMaxFiles;
+      private final @Nullable Integer containerLogMaxFiles;
 
     public Optional<Integer> getContainerLogMaxFiles() {
         return this.containerLogMaxFiles == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxFiles);
@@ -48,7 +48,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="containerLogMaxSizeMB")
-        private final @Nullable Integer containerLogMaxSizeMB;
+      private final @Nullable Integer containerLogMaxSizeMB;
 
     public Optional<Integer> getContainerLogMaxSizeMB() {
         return this.containerLogMaxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxSizeMB);
@@ -59,7 +59,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="cpuCfsQuota")
-        private final @Nullable Boolean cpuCfsQuota;
+      private final @Nullable Boolean cpuCfsQuota;
 
     public Optional<Boolean> getCpuCfsQuota() {
         return this.cpuCfsQuota == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuota);
@@ -70,7 +70,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="cpuCfsQuotaPeriod")
-        private final @Nullable String cpuCfsQuotaPeriod;
+      private final @Nullable String cpuCfsQuotaPeriod;
 
     public Optional<String> getCpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuotaPeriod);
@@ -81,7 +81,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="cpuManagerPolicy")
-        private final @Nullable String cpuManagerPolicy;
+      private final @Nullable String cpuManagerPolicy;
 
     public Optional<String> getCpuManagerPolicy() {
         return this.cpuManagerPolicy == null ? Optional.empty() : Optional.ofNullable(this.cpuManagerPolicy);
@@ -92,7 +92,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="failSwapOn")
-        private final @Nullable Boolean failSwapOn;
+      private final @Nullable Boolean failSwapOn;
 
     public Optional<Boolean> getFailSwapOn() {
         return this.failSwapOn == null ? Optional.empty() : Optional.ofNullable(this.failSwapOn);
@@ -103,7 +103,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="imageGcHighThreshold")
-        private final @Nullable Integer imageGcHighThreshold;
+      private final @Nullable Integer imageGcHighThreshold;
 
     public Optional<Integer> getImageGcHighThreshold() {
         return this.imageGcHighThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcHighThreshold);
@@ -114,7 +114,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="imageGcLowThreshold")
-        private final @Nullable Integer imageGcLowThreshold;
+      private final @Nullable Integer imageGcLowThreshold;
 
     public Optional<Integer> getImageGcLowThreshold() {
         return this.imageGcLowThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcLowThreshold);
@@ -125,7 +125,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="podMaxPids")
-        private final @Nullable Integer podMaxPids;
+      private final @Nullable Integer podMaxPids;
 
     public Optional<Integer> getPodMaxPids() {
         return this.podMaxPids == null ? Optional.empty() : Optional.ofNullable(this.podMaxPids);
@@ -136,7 +136,7 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="topologyManagerPolicy")
-        private final @Nullable String topologyManagerPolicy;
+      private final @Nullable String topologyManagerPolicy;
 
     public Optional<String> getTopologyManagerPolicy() {
         return this.topologyManagerPolicy == null ? Optional.empty() : Optional.ofNullable(this.topologyManagerPolicy);

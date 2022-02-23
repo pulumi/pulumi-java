@@ -22,7 +22,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * 
      */
     @InputImport(name="idProvider", required=true)
-        private final Input<String> idProvider;
+      private final Input<String> idProvider;
 
     public Input<String> getIdProvider() {
         return this.idProvider;
@@ -33,7 +33,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

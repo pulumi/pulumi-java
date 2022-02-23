@@ -24,7 +24,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="copyBehavior")
-        private final @Nullable Input<Object> copyBehavior;
+      private final @Nullable Input<Object> copyBehavior;
 
     public Input<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -46,7 +46,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableAdlsSingleFileParallel")
-        private final @Nullable Input<Object> enableAdlsSingleFileParallel;
+      private final @Nullable Input<Object> enableAdlsSingleFileParallel;
 
     public Input<Object> getEnableAdlsSingleFileParallel() {
         return this.enableAdlsSingleFileParallel == null ? Input.empty() : this.enableAdlsSingleFileParallel;
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -68,7 +68,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Input<Object> sinkRetryCount;
 
     public Input<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
@@ -79,7 +79,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Input<Object> sinkRetryWait;
 
     public Input<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
@@ -91,7 +91,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -102,7 +102,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Input<Object> writeBatchSize;
 
     public Input<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
@@ -113,7 +113,7 @@ public final class AzureDataLakeStoreSinkArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Input<Object> writeBatchTimeout;
 
     public Input<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;

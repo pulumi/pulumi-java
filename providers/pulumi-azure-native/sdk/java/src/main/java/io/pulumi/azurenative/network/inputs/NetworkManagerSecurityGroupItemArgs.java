@@ -23,7 +23,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkGroupId")
-        private final @Nullable Input<String> networkGroupId;
+      private final @Nullable Input<String> networkGroupId;
 
     public Input<String> getNetworkGroupId() {
         return this.networkGroupId == null ? Input.empty() : this.networkGroupId;

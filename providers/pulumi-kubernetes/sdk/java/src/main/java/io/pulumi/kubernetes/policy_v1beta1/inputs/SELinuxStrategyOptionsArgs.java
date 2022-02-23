@@ -24,7 +24,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rule", required=true)
-        private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -35,7 +35,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="seLinuxOptions")
-        private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
 
     public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
         return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;

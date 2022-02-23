@@ -18,14 +18,14 @@ public final class ScheduledQueryTagArgs extends io.pulumi.resources.ResourceArg
     public static final ScheduledQueryTagArgs Empty = new ScheduledQueryTagArgs();
 
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

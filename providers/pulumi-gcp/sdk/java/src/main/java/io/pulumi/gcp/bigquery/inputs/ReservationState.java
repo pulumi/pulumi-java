@@ -23,7 +23,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreIdleSlots")
-        private final @Nullable Input<Boolean> ignoreIdleSlots;
+      private final @Nullable Input<Boolean> ignoreIdleSlots;
 
     public Input<Boolean> getIgnoreIdleSlots() {
         return this.ignoreIdleSlots == null ? Input.empty() : this.ignoreIdleSlots;
@@ -35,7 +35,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotCapacity")
-        private final @Nullable Input<Integer> slotCapacity;
+      private final @Nullable Input<Integer> slotCapacity;
 
     public Input<Integer> getSlotCapacity() {
         return this.slotCapacity == null ? Input.empty() : this.slotCapacity;

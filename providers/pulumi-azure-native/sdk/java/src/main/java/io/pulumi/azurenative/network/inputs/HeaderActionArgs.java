@@ -25,7 +25,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerActionType", required=true)
-        private final Input<Either<String,HeaderActionType>> headerActionType;
+      private final Input<Either<String,HeaderActionType>> headerActionType;
 
     public Input<Either<String,HeaderActionType>> getHeaderActionType() {
         return this.headerActionType;
@@ -36,7 +36,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerName", required=true)
-        private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -47,7 +47,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

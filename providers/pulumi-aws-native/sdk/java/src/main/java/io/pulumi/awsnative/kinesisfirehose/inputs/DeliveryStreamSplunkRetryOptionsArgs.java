@@ -15,7 +15,7 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends io.pulumi.resour
     public static final DeliveryStreamSplunkRetryOptionsArgs Empty = new DeliveryStreamSplunkRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-        private final @Nullable Input<Integer> durationInSeconds;
+      private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;

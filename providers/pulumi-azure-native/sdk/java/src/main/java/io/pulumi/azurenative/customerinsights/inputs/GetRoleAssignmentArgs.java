@@ -17,7 +17,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="assignmentName", required=true)
-        private final String assignmentName;
+      private final String assignmentName;
 
     public String getAssignmentName() {
         return this.assignmentName;
@@ -28,7 +28,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hubName", required=true)
-        private final String hubName;
+      private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -39,7 +39,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

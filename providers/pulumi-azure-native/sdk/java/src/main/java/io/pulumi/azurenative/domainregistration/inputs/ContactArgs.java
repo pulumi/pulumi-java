@@ -25,7 +25,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressMailing")
-        private final @Nullable Input<AddressArgs> addressMailing;
+      private final @Nullable Input<AddressArgs> addressMailing;
 
     public Input<AddressArgs> getAddressMailing() {
         return this.addressMailing == null ? Input.empty() : this.addressMailing;
@@ -36,7 +36,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-        private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -47,7 +47,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fax")
-        private final @Nullable Input<String> fax;
+      private final @Nullable Input<String> fax;
 
     public Input<String> getFax() {
         return this.fax == null ? Input.empty() : this.fax;
@@ -58,7 +58,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTitle")
-        private final @Nullable Input<String> jobTitle;
+      private final @Nullable Input<String> jobTitle;
 
     public Input<String> getJobTitle() {
         return this.jobTitle == null ? Input.empty() : this.jobTitle;
@@ -69,7 +69,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameFirst", required=true)
-        private final Input<String> nameFirst;
+      private final Input<String> nameFirst;
 
     public Input<String> getNameFirst() {
         return this.nameFirst;
@@ -80,7 +80,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameLast", required=true)
-        private final Input<String> nameLast;
+      private final Input<String> nameLast;
 
     public Input<String> getNameLast() {
         return this.nameLast;
@@ -91,7 +91,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameMiddle")
-        private final @Nullable Input<String> nameMiddle;
+      private final @Nullable Input<String> nameMiddle;
 
     public Input<String> getNameMiddle() {
         return this.nameMiddle == null ? Input.empty() : this.nameMiddle;
@@ -102,7 +102,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization")
-        private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -113,7 +113,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-        private final Input<String> phone;
+      private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;

@@ -24,7 +24,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable String groupId;
+      private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -35,7 +35,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="privateLinkServiceID", required=true)
-        private final String privateLinkServiceID;
+      private final String privateLinkServiceID;
 
     public String getPrivateLinkServiceID() {
         return this.privateLinkServiceID;
@@ -68,7 +68,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="requiredMembers")
-        private final @Nullable List<String> requiredMembers;
+      private final @Nullable List<String> requiredMembers;
 
     public List<String> getRequiredMembers() {
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
@@ -79,7 +79,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

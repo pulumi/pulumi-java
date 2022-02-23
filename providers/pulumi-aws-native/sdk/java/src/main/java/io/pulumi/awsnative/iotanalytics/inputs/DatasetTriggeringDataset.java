@@ -13,7 +13,7 @@ public final class DatasetTriggeringDataset extends io.pulumi.resources.InvokeAr
     public static final DatasetTriggeringDataset Empty = new DatasetTriggeringDataset();
 
     @InputImport(name="datasetName", required=true)
-        private final String datasetName;
+      private final String datasetName;
 
     public String getDatasetName() {
         return this.datasetName;

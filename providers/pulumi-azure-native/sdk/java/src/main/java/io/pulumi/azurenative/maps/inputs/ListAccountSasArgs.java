@@ -23,7 +23,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expiry", required=true)
-        private final String expiry;
+      private final String expiry;
 
     public String getExpiry() {
         return this.expiry;
@@ -45,7 +45,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxRatePerSecond", required=true)
-        private final Integer maxRatePerSecond;
+      private final Integer maxRatePerSecond;
 
     public Integer getMaxRatePerSecond() {
         return this.maxRatePerSecond;
@@ -56,7 +56,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -67,7 +67,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regions")
-        private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
@@ -78,7 +78,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signingKey", required=true)
-        private final Either<String,SigningKey> signingKey;
+      private final Either<String,SigningKey> signingKey;
 
     public Either<String,SigningKey> getSigningKey() {
         return this.signingKey;
@@ -100,7 +100,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="start", required=true)
-        private final String start;
+      private final String start;
 
     public String getStart() {
         return this.start;

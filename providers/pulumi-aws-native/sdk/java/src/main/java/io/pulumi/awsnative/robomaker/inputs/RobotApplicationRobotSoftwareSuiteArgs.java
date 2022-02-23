@@ -24,7 +24,7 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<RobotApplicationRobotSoftwareSuiteName> name;
+      private final Input<RobotApplicationRobotSoftwareSuiteName> name;
 
     public Input<RobotApplicationRobotSoftwareSuiteName> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version;
+      private final @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version;
 
     public Input<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;

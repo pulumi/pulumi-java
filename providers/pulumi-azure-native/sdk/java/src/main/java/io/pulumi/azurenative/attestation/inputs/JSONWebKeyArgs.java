@@ -24,7 +24,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alg")
-        private final @Nullable Input<String> alg;
+      private final @Nullable Input<String> alg;
 
     public Input<String> getAlg() {
         return this.alg == null ? Input.empty() : this.alg;
@@ -35,7 +35,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crv")
-        private final @Nullable Input<String> crv;
+      private final @Nullable Input<String> crv;
 
     public Input<String> getCrv() {
         return this.crv == null ? Input.empty() : this.crv;
@@ -46,7 +46,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="d")
-        private final @Nullable Input<String> d;
+      private final @Nullable Input<String> d;
 
     public Input<String> getD() {
         return this.d == null ? Input.empty() : this.d;
@@ -57,7 +57,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dp")
-        private final @Nullable Input<String> dp;
+      private final @Nullable Input<String> dp;
 
     public Input<String> getDp() {
         return this.dp == null ? Input.empty() : this.dp;
@@ -68,7 +68,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dq")
-        private final @Nullable Input<String> dq;
+      private final @Nullable Input<String> dq;
 
     public Input<String> getDq() {
         return this.dq == null ? Input.empty() : this.dq;
@@ -79,7 +79,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="e")
-        private final @Nullable Input<String> e;
+      private final @Nullable Input<String> e;
 
     public Input<String> getE() {
         return this.e == null ? Input.empty() : this.e;
@@ -90,7 +90,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="k")
-        private final @Nullable Input<String> k;
+      private final @Nullable Input<String> k;
 
     public Input<String> getK() {
         return this.k == null ? Input.empty() : this.k;
@@ -109,7 +109,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kid")
-        private final @Nullable Input<String> kid;
+      private final @Nullable Input<String> kid;
 
     public Input<String> getKid() {
         return this.kid == null ? Input.empty() : this.kid;
@@ -124,7 +124,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kty", required=true)
-        private final Input<String> kty;
+      private final Input<String> kty;
 
     public Input<String> getKty() {
         return this.kty;
@@ -135,7 +135,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="n")
-        private final @Nullable Input<String> n;
+      private final @Nullable Input<String> n;
 
     public Input<String> getN() {
         return this.n == null ? Input.empty() : this.n;
@@ -146,7 +146,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="p")
-        private final @Nullable Input<String> p;
+      private final @Nullable Input<String> p;
 
     public Input<String> getP() {
         return this.p == null ? Input.empty() : this.p;
@@ -157,7 +157,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="q")
-        private final @Nullable Input<String> q;
+      private final @Nullable Input<String> q;
 
     public Input<String> getQ() {
         return this.q == null ? Input.empty() : this.q;
@@ -168,7 +168,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qi")
-        private final @Nullable Input<String> qi;
+      private final @Nullable Input<String> qi;
 
     public Input<String> getQi() {
         return this.qi == null ? Input.empty() : this.qi;
@@ -182,7 +182,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="use")
-        private final @Nullable Input<String> use;
+      private final @Nullable Input<String> use;
 
     public Input<String> getUse() {
         return this.use == null ? Input.empty() : this.use;
@@ -193,7 +193,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x")
-        private final @Nullable Input<String> x;
+      private final @Nullable Input<String> x;
 
     public Input<String> getX() {
         return this.x == null ? Input.empty() : this.x;
@@ -210,7 +210,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x5c")
-        private final @Nullable Input<List<String>> x5c;
+      private final @Nullable Input<List<String>> x5c;
 
     public Input<List<String>> getX5c() {
         return this.x5c == null ? Input.empty() : this.x5c;
@@ -221,7 +221,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y")
-        private final @Nullable Input<String> y;
+      private final @Nullable Input<String> y;
 
     public Input<String> getY() {
         return this.y == null ? Input.empty() : this.y;

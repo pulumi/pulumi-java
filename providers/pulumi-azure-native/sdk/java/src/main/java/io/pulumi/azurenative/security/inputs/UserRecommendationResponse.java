@@ -23,7 +23,7 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="recommendationAction")
-        private final @Nullable String recommendationAction;
+      private final @Nullable String recommendationAction;
 
     public Optional<String> getRecommendationAction() {
         return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
@@ -34,7 +34,7 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="username")
-        private final @Nullable String username;
+      private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);

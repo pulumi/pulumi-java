@@ -24,7 +24,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="identifierUri")
-        private final @Nullable String identifierUri;
+      private final @Nullable String identifierUri;
 
     public Optional<String> getIdentifierUri() {
         return this.identifierUri == null ? Optional.empty() : Optional.ofNullable(this.identifierUri);
@@ -35,7 +35,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable String objectId;
+      private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -57,7 +57,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceUri", required=true)
-        private final String serviceUri;
+      private final String serviceUri;
 
     public String getServiceUri() {
         return this.serviceUri;
@@ -68,7 +68,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -79,7 +79,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="useAadAuth")
-        private final @Nullable Boolean useAadAuth;
+      private final @Nullable Boolean useAadAuth;
 
     public Optional<Boolean> getUseAadAuth() {
         return this.useAadAuth == null ? Optional.empty() : Optional.ofNullable(this.useAadAuth);
@@ -90,7 +90,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-        private final @Nullable Boolean useCommonAlertSchema;
+      private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);

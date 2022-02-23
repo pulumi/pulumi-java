@@ -24,7 +24,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-        private final @Nullable Input<String> container;
+      private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -35,7 +35,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystem")
-        private final @Nullable Input<String> fileSystem;
+      private final @Nullable Input<String> fileSystem;
 
     public Input<String> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -46,7 +46,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileshare")
-        private final @Nullable Input<String> fileshare;
+      private final @Nullable Input<String> fileshare;
 
     public Input<String> getFileshare() {
         return this.fileshare == null ? Input.empty() : this.fileshare;
@@ -57,7 +57,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDefault")
-        private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Input<Boolean> isDefault;
 
     public Input<Boolean> getIsDefault() {
         return this.isDefault == null ? Input.empty() : this.isDefault;
@@ -68,7 +68,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -79,7 +79,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msiResourceId")
-        private final @Nullable Input<String> msiResourceId;
+      private final @Nullable Input<String> msiResourceId;
 
     public Input<String> getMsiResourceId() {
         return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
@@ -90,7 +90,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -112,7 +112,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saskey")
-        private final @Nullable Input<String> saskey;
+      private final @Nullable Input<String> saskey;
 
     public Input<String> getSaskey() {
         return this.saskey == null ? Input.empty() : this.saskey;

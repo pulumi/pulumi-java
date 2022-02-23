@@ -22,7 +22,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="certificate", required=true)
-        private final TlsCertificatePropertiesResponse certificate;
+      private final TlsCertificatePropertiesResponse certificate;
 
     public TlsCertificatePropertiesResponse getCertificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

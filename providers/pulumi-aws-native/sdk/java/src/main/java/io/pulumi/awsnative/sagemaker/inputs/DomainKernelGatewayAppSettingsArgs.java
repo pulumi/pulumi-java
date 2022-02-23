@@ -25,7 +25,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="customImages")
-        private final @Nullable Input<List<DomainCustomImageArgs>> customImages;
+      private final @Nullable Input<List<DomainCustomImageArgs>> customImages;
 
     public Input<List<DomainCustomImageArgs>> getCustomImages() {
         return this.customImages == null ? Input.empty() : this.customImages;
@@ -36,7 +36,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultResourceSpec")
-        private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
 
     public Input<DomainResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;

@@ -19,14 +19,14 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
     }
 
     @InputImport(name="info", required=true)
-        private final Input<VirtualClusterContainerInfoArgs> info;
+      private final Input<VirtualClusterContainerInfoArgs> info;
 
     public Input<VirtualClusterContainerInfoArgs> getInfo() {
         return this.info;
@@ -37,7 +37,7 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

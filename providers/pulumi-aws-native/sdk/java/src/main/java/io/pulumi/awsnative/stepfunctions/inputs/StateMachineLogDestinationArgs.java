@@ -15,7 +15,7 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     public static final StateMachineLogDestinationArgs Empty = new StateMachineLogDestinationArgs();
 
     @InputImport(name="cloudWatchLogsLogGroup")
-        private final @Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
+      private final @Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
     public Input<StateMachineCloudWatchLogsLogGroupArgs> getCloudWatchLogsLogGroup() {
         return this.cloudWatchLogsLogGroup == null ? Input.empty() : this.cloudWatchLogsLogGroup;

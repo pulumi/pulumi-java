@@ -20,7 +20,7 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     public static final ServiceCodeConfigurationArgs Empty = new ServiceCodeConfigurationArgs();
 
     @InputImport(name="codeConfigurationValues")
-        private final @Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
+      private final @Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
 
     public Input<ServiceCodeConfigurationValuesArgs> getCodeConfigurationValues() {
         return this.codeConfigurationValues == null ? Input.empty() : this.codeConfigurationValues;
@@ -31,7 +31,7 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configurationSource", required=true)
-        private final Input<ServiceCodeConfigurationConfigurationSource> configurationSource;
+      private final Input<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
     public Input<ServiceCodeConfigurationConfigurationSource> getConfigurationSource() {
         return this.configurationSource;

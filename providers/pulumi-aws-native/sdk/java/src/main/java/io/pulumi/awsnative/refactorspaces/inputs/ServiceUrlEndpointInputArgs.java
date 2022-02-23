@@ -15,14 +15,14 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
     public static final ServiceUrlEndpointInputArgs Empty = new ServiceUrlEndpointInputArgs();
 
     @InputImport(name="healthUrl")
-        private final @Nullable Input<String> healthUrl;
+      private final @Nullable Input<String> healthUrl;
 
     public Input<String> getHealthUrl() {
         return this.healthUrl == null ? Input.empty() : this.healthUrl;
     }
 
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

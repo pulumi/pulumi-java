@@ -26,7 +26,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="addressSpace")
-        private final @Nullable List<String> addressSpace;
+      private final @Nullable List<String> addressSpace;
 
     public List<String> getAddressSpace() {
         return this.addressSpace == null ? List.of() : this.addressSpace;
@@ -38,7 +38,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable List<String> dnsServers;
+      private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -50,7 +50,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableDdosProtection")
-        private final @Nullable Boolean enableDdosProtection;
+      private final @Nullable Boolean enableDdosProtection;
 
     public Optional<Boolean> getEnableDdosProtection() {
         return this.enableDdosProtection == null ? Optional.empty() : Optional.ofNullable(this.enableDdosProtection);
@@ -62,7 +62,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -73,7 +73,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="subnets")
-        private final @Nullable List<SubnetResourceSettingsResponse> subnets;
+      private final @Nullable List<SubnetResourceSettingsResponse> subnets;
 
     public List<SubnetResourceSettingsResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -84,7 +84,7 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final String targetResourceName;
+      private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;

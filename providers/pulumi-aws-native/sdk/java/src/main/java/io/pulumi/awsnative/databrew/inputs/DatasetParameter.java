@@ -23,28 +23,28 @@ public final class DatasetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createColumn")
-        private final @Nullable Boolean createColumn;
+      private final @Nullable Boolean createColumn;
 
     public Optional<Boolean> getCreateColumn() {
         return this.createColumn == null ? Optional.empty() : Optional.ofNullable(this.createColumn);
     }
 
     @InputImport(name="datetimeOptions")
-        private final @Nullable DatasetDatetimeOptions datetimeOptions;
+      private final @Nullable DatasetDatetimeOptions datetimeOptions;
 
     public Optional<DatasetDatetimeOptions> getDatetimeOptions() {
         return this.datetimeOptions == null ? Optional.empty() : Optional.ofNullable(this.datetimeOptions);
     }
 
     @InputImport(name="filter")
-        private final @Nullable DatasetFilterExpression filter;
+      private final @Nullable DatasetFilterExpression filter;
 
     public Optional<DatasetFilterExpression> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class DatasetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final DatasetParameterType type;
+      private final DatasetParameterType type;
 
     public DatasetParameterType getType() {
         return this.type;

@@ -14,7 +14,7 @@ public final class InstanceFromMachineImageConfidentialInstanceConfigArgs extend
     public static final InstanceFromMachineImageConfidentialInstanceConfigArgs Empty = new InstanceFromMachineImageConfidentialInstanceConfigArgs();
 
     @InputImport(name="enableConfidentialCompute", required=true)
-        private final Input<Boolean> enableConfidentialCompute;
+      private final Input<Boolean> enableConfidentialCompute;
 
     public Input<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;

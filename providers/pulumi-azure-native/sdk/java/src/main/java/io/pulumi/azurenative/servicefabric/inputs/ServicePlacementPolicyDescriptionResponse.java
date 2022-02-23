@@ -21,7 +21,7 @@ public final class ServicePlacementPolicyDescriptionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

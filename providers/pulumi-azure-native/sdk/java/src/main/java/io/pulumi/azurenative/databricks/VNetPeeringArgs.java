@@ -23,7 +23,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowForwardedTraffic")
-        private final @Nullable Input<Boolean> allowForwardedTraffic;
+      private final @Nullable Input<Boolean> allowForwardedTraffic;
 
     public Input<Boolean> getAllowForwardedTraffic() {
         return this.allowForwardedTraffic == null ? Input.empty() : this.allowForwardedTraffic;
@@ -34,7 +34,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowGatewayTransit")
-        private final @Nullable Input<Boolean> allowGatewayTransit;
+      private final @Nullable Input<Boolean> allowGatewayTransit;
 
     public Input<Boolean> getAllowGatewayTransit() {
         return this.allowGatewayTransit == null ? Input.empty() : this.allowGatewayTransit;
@@ -45,7 +45,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowVirtualNetworkAccess")
-        private final @Nullable Input<Boolean> allowVirtualNetworkAccess;
+      private final @Nullable Input<Boolean> allowVirtualNetworkAccess;
 
     public Input<Boolean> getAllowVirtualNetworkAccess() {
         return this.allowVirtualNetworkAccess == null ? Input.empty() : this.allowVirtualNetworkAccess;
@@ -56,7 +56,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databricksAddressSpace")
-        private final @Nullable Input<AddressSpaceArgs> databricksAddressSpace;
+      private final @Nullable Input<AddressSpaceArgs> databricksAddressSpace;
 
     public Input<AddressSpaceArgs> getDatabricksAddressSpace() {
         return this.databricksAddressSpace == null ? Input.empty() : this.databricksAddressSpace;
@@ -67,7 +67,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databricksVirtualNetwork")
-        private final @Nullable Input<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
+      private final @Nullable Input<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
     public Input<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> getDatabricksVirtualNetwork() {
         return this.databricksVirtualNetwork == null ? Input.empty() : this.databricksVirtualNetwork;
@@ -78,7 +78,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringName")
-        private final @Nullable Input<String> peeringName;
+      private final @Nullable Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName == null ? Input.empty() : this.peeringName;
@@ -89,7 +89,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteAddressSpace")
-        private final @Nullable Input<AddressSpaceArgs> remoteAddressSpace;
+      private final @Nullable Input<AddressSpaceArgs> remoteAddressSpace;
 
     public Input<AddressSpaceArgs> getRemoteAddressSpace() {
         return this.remoteAddressSpace == null ? Input.empty() : this.remoteAddressSpace;
@@ -100,7 +100,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteVirtualNetwork", required=true)
-        private final Input<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
+      private final Input<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
 
     public Input<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> getRemoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
@@ -111,7 +111,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -122,7 +122,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useRemoteGateways")
-        private final @Nullable Input<Boolean> useRemoteGateways;
+      private final @Nullable Input<Boolean> useRemoteGateways;
 
     public Input<Boolean> getUseRemoteGateways() {
         return this.useRemoteGateways == null ? Input.empty() : this.useRemoteGateways;
@@ -133,7 +133,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

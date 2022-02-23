@@ -22,7 +22,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * 
      */
     @InputImport(name="authorizationType", required=true)
-        private final String authorizationType;
+      private final String authorizationType;
 
     public String getAuthorizationType() {
         return this.authorizationType;
@@ -33,7 +33,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;

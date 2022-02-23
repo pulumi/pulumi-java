@@ -23,7 +23,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -34,7 +34,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="secret")
-        private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;

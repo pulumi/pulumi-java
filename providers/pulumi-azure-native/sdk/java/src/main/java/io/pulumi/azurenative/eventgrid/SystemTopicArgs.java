@@ -21,7 +21,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<IdentityInfoArgs> identity;
+      private final @Nullable Input<IdentityInfoArgs> identity;
 
     public Input<IdentityInfoArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -32,7 +32,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -65,7 +65,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemTopicName")
-        private final @Nullable Input<String> systemTopicName;
+      private final @Nullable Input<String> systemTopicName;
 
     public Input<String> getSystemTopicName() {
         return this.systemTopicName == null ? Input.empty() : this.systemTopicName;
@@ -76,7 +76,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicType")
-        private final @Nullable Input<String> topicType;
+      private final @Nullable Input<String> topicType;
 
     public Input<String> getTopicType() {
         return this.topicType == null ? Input.empty() : this.topicType;

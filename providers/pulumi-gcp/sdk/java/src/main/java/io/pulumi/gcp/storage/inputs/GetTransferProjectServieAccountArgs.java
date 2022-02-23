@@ -19,7 +19,7 @@ public final class GetTransferProjectServieAccountArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);

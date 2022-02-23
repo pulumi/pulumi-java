@@ -20,7 +20,7 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -32,7 +32,7 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workloadIdentityPoolId", required=true)
-        private final String workloadIdentityPoolId;
+      private final String workloadIdentityPoolId;
 
     public String getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId;

@@ -13,7 +13,7 @@ public final class GlobalTableStreamSpecification extends io.pulumi.resources.In
     public static final GlobalTableStreamSpecification Empty = new GlobalTableStreamSpecification();
 
     @InputImport(name="streamViewType", required=true)
-        private final String streamViewType;
+      private final String streamViewType;
 
     public String getStreamViewType() {
         return this.streamViewType;

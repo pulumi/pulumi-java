@@ -24,7 +24,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="recordingMode", required=true)
-        private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
+      private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
     public Input<RecordingConfigurationThumbnailConfigurationRecordingMode> getRecordingMode() {
         return this.recordingMode;
@@ -35,7 +35,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="targetIntervalSeconds")
-        private final @Nullable Input<Integer> targetIntervalSeconds;
+      private final @Nullable Input<Integer> targetIntervalSeconds;
 
     public Input<Integer> getTargetIntervalSeconds() {
         return this.targetIntervalSeconds == null ? Input.empty() : this.targetIntervalSeconds;

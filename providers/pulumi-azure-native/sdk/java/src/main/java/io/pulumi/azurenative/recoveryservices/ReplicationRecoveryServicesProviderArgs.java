@@ -20,7 +20,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final Input<String> fabricName;
+      private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<AddRecoveryServicesProviderInputPropertiesArgs> properties;
+      private final Input<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
     public Input<AddRecoveryServicesProviderInputPropertiesArgs> getProperties() {
         return this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="providerName")
-        private final @Nullable Input<String> providerName;
+      private final @Nullable Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName == null ? Input.empty() : this.providerName;
@@ -53,7 +53,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

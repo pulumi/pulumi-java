@@ -14,7 +14,7 @@ public final class EnvironmentConfigDatabaseConfigArgs extends io.pulumi.resourc
     public static final EnvironmentConfigDatabaseConfigArgs Empty = new EnvironmentConfigDatabaseConfigArgs();
 
     @InputImport(name="machineType", required=true)
-        private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;

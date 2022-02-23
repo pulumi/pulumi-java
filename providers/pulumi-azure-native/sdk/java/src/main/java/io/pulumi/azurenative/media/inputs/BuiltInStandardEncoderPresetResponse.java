@@ -22,7 +22,7 @@ public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="presetName", required=true)
-        private final String presetName;
+      private final String presetName;
 
     public String getPresetName() {
         return this.presetName;

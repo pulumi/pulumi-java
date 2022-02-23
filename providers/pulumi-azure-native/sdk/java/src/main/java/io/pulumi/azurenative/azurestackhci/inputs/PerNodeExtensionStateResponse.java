@@ -21,7 +21,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="extension", required=true)
-        private final String extension;
+      private final String extension;
 
     public String getExtension() {
         return this.extension;
@@ -32,7 +32,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

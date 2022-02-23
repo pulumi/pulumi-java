@@ -23,7 +23,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort", required=true)
-        private final Input<Integer> backendPort;
+      private final Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort;
@@ -34,7 +34,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeEnd", required=true)
-        private final Input<Integer> frontendPortRangeEnd;
+      private final Input<Integer> frontendPortRangeEnd;
 
     public Input<Integer> getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
@@ -45,7 +45,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeStart", required=true)
-        private final Input<Integer> frontendPortRangeStart;
+      private final Input<Integer> frontendPortRangeStart;
 
     public Input<Integer> getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
@@ -56,7 +56,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -67,14 +67,14 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSecurityGroupRules")
-        private final @Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
+      private final @Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
     public Input<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? Input.empty() : this.networkSecurityGroupRules;
     }
 
     @InputImport(name="protocol", required=true)
-        private final Input<InboundEndpointProtocol> protocol;
+      private final Input<InboundEndpointProtocol> protocol;
 
     public Input<InboundEndpointProtocol> getProtocol() {
         return this.protocol;

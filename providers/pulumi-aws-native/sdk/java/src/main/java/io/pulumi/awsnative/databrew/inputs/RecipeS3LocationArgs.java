@@ -19,14 +19,14 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
     public static final RecipeS3LocationArgs Empty = new RecipeS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;

@@ -27,7 +27,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="affinityType", required=true)
-        private final Input<Either<String,AffinityType>> affinityType;
+      private final Input<Either<String,AffinityType>> affinityType;
 
     public Input<Either<String,AffinityType>> getAffinityType() {
         return this.affinityType;
@@ -38,7 +38,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,7 +49,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,PlacementPolicyState>> state;
+      private final @Nullable Input<Either<String,PlacementPolicyState>> state;
 
     public Input<Either<String,PlacementPolicyState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -61,7 +61,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -72,7 +72,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmMembers", required=true)
-        private final Input<List<String>> vmMembers;
+      private final Input<List<String>> vmMembers;
 
     public Input<List<String>> getVmMembers() {
         return this.vmMembers;

@@ -18,7 +18,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetId", required=true)
-        private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -29,7 +29,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-        private final Input<String> transitGatewayAttachmentId;
+      private final Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -40,7 +40,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-        private final Input<String> transitGatewayMulticastDomainId;
+      private final Input<String> transitGatewayMulticastDomainId;
 
     public Input<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;

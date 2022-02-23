@@ -22,7 +22,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -33,7 +33,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registrationDefinition", required=true)
-        private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
+      private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
         return this.registrationDefinition;
@@ -44,7 +44,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registrationDefinitionId", required=true)
-        private final String registrationDefinitionId;
+      private final String registrationDefinitionId;
 
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;

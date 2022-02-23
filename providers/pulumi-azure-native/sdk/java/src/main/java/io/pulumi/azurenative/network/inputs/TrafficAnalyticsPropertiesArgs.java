@@ -23,7 +23,7 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkWatcherFlowAnalyticsConfiguration")
-        private final @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+      private final @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
     public Input<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
         return this.networkWatcherFlowAnalyticsConfiguration == null ? Input.empty() : this.networkWatcherFlowAnalyticsConfiguration;

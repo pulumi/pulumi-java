@@ -19,7 +19,7 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-        private final String instance;
+      private final String instance;
 
     public String getInstance() {
         return this.instance;
@@ -30,7 +30,7 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);

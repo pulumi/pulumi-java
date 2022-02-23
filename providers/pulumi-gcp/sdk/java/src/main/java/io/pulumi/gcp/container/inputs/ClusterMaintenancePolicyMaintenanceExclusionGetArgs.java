@@ -14,21 +14,21 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     public static final ClusterMaintenancePolicyMaintenanceExclusionGetArgs Empty = new ClusterMaintenancePolicyMaintenanceExclusionGetArgs();
 
     @InputImport(name="endTime", required=true)
-        private final Input<String> endTime;
+      private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="exclusionName", required=true)
-        private final Input<String> exclusionName;
+      private final Input<String> exclusionName;
 
     public Input<String> getExclusionName() {
         return this.exclusionName;
     }
 
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

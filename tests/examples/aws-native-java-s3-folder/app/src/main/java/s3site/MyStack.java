@@ -39,8 +39,7 @@ public final class MyStack extends Stack {
                 .setWebsiteConfiguration(BucketWebsiteConfigurationArgs.builder()
                         .setIndexDocument("index.html")
                         .build())
-                .build(),
-                CustomResourceOptions.Empty);
+                .build());
 
         final String sitedir = "www/";
         for (var path : Files.walk(Paths.get(sitedir)).filter(Files::isRegularFile).collect(Collectors.toList())) {
@@ -49,8 +48,7 @@ public final class MyStack extends Stack {
                             .setBucket(siteBucket.getId().toInput())
                             .setSource(new FileAsset(path.toAbsolutePath().toString()))
                             .setContentType(Files.probeContentType(path))
-                            .build(),
-                    CustomResourceOptions.Empty);
+                            .build());
         }
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()
@@ -59,8 +57,7 @@ public final class MyStack extends Stack {
                         bucketArn ->
                                 "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" + bucketArn + "/*\"]}]}").toInput()
                 )
-                .build(),
-                CustomResourceOptions.Empty);
+                .build());
 
         this.bucketName = siteBucket.getBucketName();
         this.websiteUrl = siteBucket.getWebsiteURL();

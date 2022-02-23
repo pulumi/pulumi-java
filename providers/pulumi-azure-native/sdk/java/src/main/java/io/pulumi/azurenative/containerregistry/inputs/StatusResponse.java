@@ -21,7 +21,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayStatus", required=true)
-        private final String displayStatus;
+      private final String displayStatus;
 
     public String getDisplayStatus() {
         return this.displayStatus;
@@ -32,7 +32,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -43,7 +43,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestamp", required=true)
-        private final String timestamp;
+      private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;

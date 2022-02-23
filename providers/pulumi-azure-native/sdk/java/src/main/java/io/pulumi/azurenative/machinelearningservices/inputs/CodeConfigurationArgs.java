@@ -23,7 +23,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="codeId")
-        private final @Nullable Input<String> codeId;
+      private final @Nullable Input<String> codeId;
 
     public Input<String> getCodeId() {
         return this.codeId == null ? Input.empty() : this.codeId;
@@ -34,7 +34,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scoringScript", required=true)
-        private final Input<String> scoringScript;
+      private final Input<String> scoringScript;
 
     public Input<String> getScoringScript() {
         return this.scoringScript;

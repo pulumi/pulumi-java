@@ -21,7 +21,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventHubAuthorizationRuleId")
-        private final @Nullable Input<String> eventHubAuthorizationRuleId;
+      private final @Nullable Input<String> eventHubAuthorizationRuleId;
 
     public Input<String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId == null ? Input.empty() : this.eventHubAuthorizationRuleId;
@@ -32,7 +32,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventHubName")
-        private final @Nullable Input<String> eventHubName;
+      private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -43,7 +43,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="logs")
-        private final @Nullable Input<List<SubscriptionLogSettingsArgs>> logs;
+      private final @Nullable Input<List<SubscriptionLogSettingsArgs>> logs;
 
     public Input<List<SubscriptionLogSettingsArgs>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -65,7 +65,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceBusRuleId")
-        private final @Nullable Input<String> serviceBusRuleId;
+      private final @Nullable Input<String> serviceBusRuleId;
 
     public Input<String> getServiceBusRuleId() {
         return this.serviceBusRuleId == null ? Input.empty() : this.serviceBusRuleId;
@@ -87,7 +87,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageAccountId")
-        private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -98,7 +98,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workspaceId")
-        private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;

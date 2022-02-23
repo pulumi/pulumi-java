@@ -17,7 +17,7 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loggerId", required=true)
-        private final String loggerId;
+      private final String loggerId;
 
     public String getLoggerId() {
         return this.loggerId;
@@ -28,7 +28,7 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

@@ -20,7 +20,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dataCollectionFrequency")
-        private final @Nullable String dataCollectionFrequency;
+      private final @Nullable String dataCollectionFrequency;
 
     public Optional<String> getDataCollectionFrequency() {
         return this.dataCollectionFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataCollectionFrequency);
@@ -31,7 +31,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dataReportingFrequency")
-        private final @Nullable String dataReportingFrequency;
+      private final @Nullable String dataReportingFrequency;
 
     public Optional<String> getDataReportingFrequency() {
         return this.dataReportingFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataReportingFrequency);
@@ -42,7 +42,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="eventHubDetails")
-        private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
+      private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
 
     public Optional<EdgeUsageDataEventHubResponse> getEventHubDetails() {
         return this.eventHubDetails == null ? Optional.empty() : Optional.ofNullable(this.eventHubDetails);
@@ -53,7 +53,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxAllowedUnreportedUsageDuration")
-        private final @Nullable String maxAllowedUnreportedUsageDuration;
+      private final @Nullable String maxAllowedUnreportedUsageDuration;
 
     public Optional<String> getMaxAllowedUnreportedUsageDuration() {
         return this.maxAllowedUnreportedUsageDuration == null ? Optional.empty() : Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);

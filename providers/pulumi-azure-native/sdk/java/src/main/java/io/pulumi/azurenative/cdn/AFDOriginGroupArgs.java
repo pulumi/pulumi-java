@@ -25,7 +25,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-        private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
+      private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
 
     public Input<HealthProbeParametersArgs> getHealthProbeSettings() {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
@@ -36,7 +36,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingSettings")
-        private final @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
+      private final @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
 
     public Input<LoadBalancingSettingsParametersArgs> getLoadBalancingSettings() {
         return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
@@ -47,7 +47,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroupName")
-        private final @Nullable Input<String> originGroupName;
+      private final @Nullable Input<String> originGroupName;
 
     public Input<String> getOriginGroupName() {
         return this.originGroupName == null ? Input.empty() : this.originGroupName;
@@ -58,7 +58,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -69,7 +69,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -80,7 +80,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseBasedAfdOriginErrorDetectionSettings")
-        private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
+      private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
 
     public Input<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedAfdOriginErrorDetectionSettings() {
         return this.responseBasedAfdOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedAfdOriginErrorDetectionSettings;
@@ -91,7 +91,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinityState")
-        private final @Nullable Input<Either<String,EnabledState>> sessionAffinityState;
+      private final @Nullable Input<Either<String,EnabledState>> sessionAffinityState;
 
     public Input<Either<String,EnabledState>> getSessionAffinityState() {
         return this.sessionAffinityState == null ? Input.empty() : this.sessionAffinityState;
@@ -102,7 +102,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-        private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+      private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Input<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Input.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;

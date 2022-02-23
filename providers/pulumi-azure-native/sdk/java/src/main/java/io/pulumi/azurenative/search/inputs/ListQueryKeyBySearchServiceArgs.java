@@ -17,7 +17,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="searchServiceName", required=true)
-        private final String searchServiceName;
+      private final String searchServiceName;
 
     public String getSearchServiceName() {
         return this.searchServiceName;

@@ -25,7 +25,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encoding")
-        private final @Nullable Input<Either<String,Encoding>> encoding;
+      private final @Nullable Input<Either<String,Encoding>> encoding;
 
     public Input<Either<String,Encoding>> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -36,7 +36,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fieldDelimiter")
-        private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -48,7 +48,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

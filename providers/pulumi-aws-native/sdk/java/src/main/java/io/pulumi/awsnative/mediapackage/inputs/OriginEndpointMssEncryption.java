@@ -17,7 +17,7 @@ public final class OriginEndpointMssEncryption extends io.pulumi.resources.Invok
     public static final OriginEndpointMssEncryption Empty = new OriginEndpointMssEncryption();
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;

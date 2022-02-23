@@ -16,14 +16,14 @@ public final class GlobalTableSSESpecification extends io.pulumi.resources.Invok
     public static final GlobalTableSSESpecification Empty = new GlobalTableSSESpecification();
 
     @InputImport(name="sSEEnabled", required=true)
-        private final Boolean sSEEnabled;
+      private final Boolean sSEEnabled;
 
     public Boolean getSSEEnabled() {
         return this.sSEEnabled;
     }
 
     @InputImport(name="sSEType")
-        private final @Nullable String sSEType;
+      private final @Nullable String sSEType;
 
     public Optional<String> getSSEType() {
         return this.sSEType == null ? Optional.empty() : Optional.ofNullable(this.sSEType);

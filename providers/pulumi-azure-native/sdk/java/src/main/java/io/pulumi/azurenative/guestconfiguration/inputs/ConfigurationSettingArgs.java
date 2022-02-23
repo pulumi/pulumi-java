@@ -28,7 +28,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="actionAfterReboot")
-        private final @Nullable Input<Either<String,ActionAfterReboot>> actionAfterReboot;
+      private final @Nullable Input<Either<String,ActionAfterReboot>> actionAfterReboot;
 
     public Input<Either<String,ActionAfterReboot>> getActionAfterReboot() {
         return this.actionAfterReboot == null ? Input.empty() : this.actionAfterReboot;
@@ -39,7 +39,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowModuleOverwrite")
-        private final @Nullable Input<Boolean> allowModuleOverwrite;
+      private final @Nullable Input<Boolean> allowModuleOverwrite;
 
     public Input<Boolean> getAllowModuleOverwrite() {
         return this.allowModuleOverwrite == null ? Input.empty() : this.allowModuleOverwrite;
@@ -50,7 +50,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationMode")
-        private final @Nullable Input<Either<String,ConfigurationMode>> configurationMode;
+      private final @Nullable Input<Either<String,ConfigurationMode>> configurationMode;
 
     public Input<Either<String,ConfigurationMode>> getConfigurationMode() {
         return this.configurationMode == null ? Input.empty() : this.configurationMode;
@@ -61,7 +61,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationModeFrequencyMins")
-        private final @Nullable Input<Double> configurationModeFrequencyMins;
+      private final @Nullable Input<Double> configurationModeFrequencyMins;
 
     public Input<Double> getConfigurationModeFrequencyMins() {
         return this.configurationModeFrequencyMins == null ? Input.empty() : this.configurationModeFrequencyMins;
@@ -72,7 +72,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rebootIfNeeded")
-        private final @Nullable Input<Boolean> rebootIfNeeded;
+      private final @Nullable Input<Boolean> rebootIfNeeded;
 
     public Input<Boolean> getRebootIfNeeded() {
         return this.rebootIfNeeded == null ? Input.empty() : this.rebootIfNeeded;
@@ -83,7 +83,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="refreshFrequencyMins")
-        private final @Nullable Input<Double> refreshFrequencyMins;
+      private final @Nullable Input<Double> refreshFrequencyMins;
 
     public Input<Double> getRefreshFrequencyMins() {
         return this.refreshFrequencyMins == null ? Input.empty() : this.refreshFrequencyMins;

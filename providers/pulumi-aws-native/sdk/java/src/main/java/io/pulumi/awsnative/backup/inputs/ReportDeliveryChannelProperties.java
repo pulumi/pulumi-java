@@ -24,7 +24,7 @@ public final class ReportDeliveryChannelProperties extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="formats")
-        private final @Nullable List<String> formats;
+      private final @Nullable List<String> formats;
 
     public List<String> getFormats() {
         return this.formats == null ? List.of() : this.formats;
@@ -35,7 +35,7 @@ public final class ReportDeliveryChannelProperties extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-        private final String s3BucketName;
+      private final String s3BucketName;
 
     public String getS3BucketName() {
         return this.s3BucketName;
@@ -46,7 +46,7 @@ public final class ReportDeliveryChannelProperties extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="s3KeyPrefix")
-        private final @Nullable String s3KeyPrefix;
+      private final @Nullable String s3KeyPrefix;
 
     public Optional<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);

@@ -17,7 +17,7 @@ public final class ResourceProviderManifestPropertiesRequestHeaderOptionsArgs ex
     public static final ResourceProviderManifestPropertiesRequestHeaderOptionsArgs Empty = new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs();
 
     @InputImport(name="optInHeaders")
-        private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
+      private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
 
     public Input<Either<String,OptInHeaderType>> getOptInHeaders() {
         return this.optInHeaders == null ? Input.empty() : this.optInHeaders;

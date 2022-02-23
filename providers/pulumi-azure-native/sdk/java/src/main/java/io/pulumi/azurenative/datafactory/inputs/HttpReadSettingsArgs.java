@@ -25,7 +25,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalHeaders")
-        private final @Nullable Input<Object> additionalHeaders;
+      private final @Nullable Input<Object> additionalHeaders;
 
     public Input<Object> getAdditionalHeaders() {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
@@ -36,7 +36,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -47,7 +47,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-        private final @Nullable Input<Boolean> enablePartitionDiscovery;
+      private final @Nullable Input<Boolean> enablePartitionDiscovery;
 
     public Input<Boolean> getEnablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
@@ -58,7 +58,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -69,7 +69,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partitionRootPath")
-        private final @Nullable Input<Object> partitionRootPath;
+      private final @Nullable Input<Object> partitionRootPath;
 
     public Input<Object> getPartitionRootPath() {
         return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
@@ -80,7 +80,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestBody")
-        private final @Nullable Input<Object> requestBody;
+      private final @Nullable Input<Object> requestBody;
 
     public Input<Object> getRequestBody() {
         return this.requestBody == null ? Input.empty() : this.requestBody;
@@ -91,7 +91,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestMethod")
-        private final @Nullable Input<Object> requestMethod;
+      private final @Nullable Input<Object> requestMethod;
 
     public Input<Object> getRequestMethod() {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
@@ -102,7 +102,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestTimeout")
-        private final @Nullable Input<Object> requestTimeout;
+      private final @Nullable Input<Object> requestTimeout;
 
     public Input<Object> getRequestTimeout() {
         return this.requestTimeout == null ? Input.empty() : this.requestTimeout;
@@ -114,7 +114,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

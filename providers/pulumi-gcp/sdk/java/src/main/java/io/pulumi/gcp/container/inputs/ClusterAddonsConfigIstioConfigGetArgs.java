@@ -20,7 +20,7 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="auth")
-        private final @Nullable Input<String> auth;
+      private final @Nullable Input<String> auth;
 
     public Input<String> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -32,7 +32,7 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disabled", required=true)
-        private final Input<Boolean> disabled;
+      private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;

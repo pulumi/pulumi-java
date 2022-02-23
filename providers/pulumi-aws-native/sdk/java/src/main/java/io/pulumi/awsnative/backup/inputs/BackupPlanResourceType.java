@@ -18,21 +18,21 @@ public final class BackupPlanResourceType extends io.pulumi.resources.InvokeArgs
     public static final BackupPlanResourceType Empty = new BackupPlanResourceType();
 
     @InputImport(name="advancedBackupSettings")
-        private final @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings;
+      private final @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings;
 
     public List<BackupPlanAdvancedBackupSettingResourceType> getAdvancedBackupSettings() {
         return this.advancedBackupSettings == null ? List.of() : this.advancedBackupSettings;
     }
 
     @InputImport(name="backupPlanName", required=true)
-        private final String backupPlanName;
+      private final String backupPlanName;
 
     public String getBackupPlanName() {
         return this.backupPlanName;
     }
 
     @InputImport(name="backupPlanRule", required=true)
-        private final List<BackupPlanBackupRuleResourceType> backupPlanRule;
+      private final List<BackupPlanBackupRuleResourceType> backupPlanRule;
 
     public List<BackupPlanBackupRuleResourceType> getBackupPlanRule() {
         return this.backupPlanRule;

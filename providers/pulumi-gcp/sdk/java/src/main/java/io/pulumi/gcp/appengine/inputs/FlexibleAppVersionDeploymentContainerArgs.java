@@ -19,7 +19,7 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="image", required=true)
-        private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;

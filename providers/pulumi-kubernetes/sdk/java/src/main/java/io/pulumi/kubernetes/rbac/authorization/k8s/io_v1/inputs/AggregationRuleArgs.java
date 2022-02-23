@@ -24,7 +24,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterRoleSelectors")
-        private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
+      private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
 
     public Input<List<LabelSelectorArgs>> getClusterRoleSelectors() {
         return this.clusterRoleSelectors == null ? Input.empty() : this.clusterRoleSelectors;

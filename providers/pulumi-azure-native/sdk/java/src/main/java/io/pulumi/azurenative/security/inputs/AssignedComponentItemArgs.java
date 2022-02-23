@@ -23,7 +23,7 @@ public final class AssignedComponentItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;

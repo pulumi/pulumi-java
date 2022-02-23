@@ -20,7 +20,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hybridConnectionName")
-        private final @Nullable Input<String> hybridConnectionName;
+      private final @Nullable Input<String> hybridConnectionName;
 
     public Input<String> getHybridConnectionName() {
         return this.hybridConnectionName == null ? Input.empty() : this.hybridConnectionName;
@@ -31,7 +31,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -42,7 +42,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requiresClientAuthorization")
-        private final @Nullable Input<Boolean> requiresClientAuthorization;
+      private final @Nullable Input<Boolean> requiresClientAuthorization;
 
     public Input<Boolean> getRequiresClientAuthorization() {
         return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
@@ -53,7 +53,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userMetadata")
-        private final @Nullable Input<String> userMetadata;
+      private final @Nullable Input<String> userMetadata;
 
     public Input<String> getUserMetadata() {
         return this.userMetadata == null ? Input.empty() : this.userMetadata;

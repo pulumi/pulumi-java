@@ -24,7 +24,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-        private final Input<String> dataAccountType;
+      private final Input<String> dataAccountType;
 
     public Input<String> getDataAccountType() {
         return this.dataAccountType;
@@ -35,7 +35,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sharePassword")
-        private final @Nullable Input<String> sharePassword;
+      private final @Nullable Input<String> sharePassword;
 
     public Input<String> getSharePassword() {
         return this.sharePassword == null ? Input.empty() : this.sharePassword;
@@ -46,7 +46,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-        private final Input<String> storageAccountId;
+      private final Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId;

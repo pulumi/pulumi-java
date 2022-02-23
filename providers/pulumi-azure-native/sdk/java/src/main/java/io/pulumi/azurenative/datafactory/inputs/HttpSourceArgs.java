@@ -24,7 +24,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -35,7 +35,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpRequestTimeout")
-        private final @Nullable Input<Object> httpRequestTimeout;
+      private final @Nullable Input<Object> httpRequestTimeout;
 
     public Input<Object> getHttpRequestTimeout() {
         return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
@@ -46,7 +46,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -57,7 +57,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-        private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -68,7 +68,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-        private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -80,7 +80,7 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -19,14 +19,14 @@ public final class WebACLXssMatchStatement extends io.pulumi.resources.InvokeArg
     public static final WebACLXssMatchStatement Empty = new WebACLXssMatchStatement();
 
     @InputImport(name="fieldToMatch", required=true)
-        private final WebACLFieldToMatch fieldToMatch;
+      private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final List<WebACLTextTransformation> textTransformations;
+      private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {
         return this.textTransformations;

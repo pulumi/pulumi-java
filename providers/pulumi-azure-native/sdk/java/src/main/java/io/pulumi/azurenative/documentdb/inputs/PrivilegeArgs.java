@@ -25,7 +25,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable Input<List<String>> actions;
+      private final @Nullable Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -36,7 +36,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-        private final @Nullable Input<PrivilegeResourceArgs> resource;
+      private final @Nullable Input<PrivilegeResourceArgs> resource;
 
     public Input<PrivilegeResourceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;

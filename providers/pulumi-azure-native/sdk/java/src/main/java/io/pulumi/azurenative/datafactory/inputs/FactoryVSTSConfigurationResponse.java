@@ -23,7 +23,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="collaborationBranch", required=true)
-        private final String collaborationBranch;
+      private final String collaborationBranch;
 
     public String getCollaborationBranch() {
         return this.collaborationBranch;
@@ -45,7 +45,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastCommitId")
-        private final @Nullable String lastCommitId;
+      private final @Nullable String lastCommitId;
 
     public Optional<String> getLastCommitId() {
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
@@ -56,7 +56,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="projectName", required=true)
-        private final String projectName;
+      private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -67,7 +67,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repositoryName", required=true)
-        private final String repositoryName;
+      private final String repositoryName;
 
     public String getRepositoryName() {
         return this.repositoryName;
@@ -78,7 +78,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rootFolder", required=true)
-        private final String rootFolder;
+      private final String rootFolder;
 
     public String getRootFolder() {
         return this.rootFolder;
@@ -89,7 +89,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -101,7 +101,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

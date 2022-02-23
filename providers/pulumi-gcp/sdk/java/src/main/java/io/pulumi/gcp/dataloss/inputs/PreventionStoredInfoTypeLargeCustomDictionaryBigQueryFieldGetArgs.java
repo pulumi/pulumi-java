@@ -20,7 +20,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @InputImport(name="field", required=true)
-        private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
+      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> getField() {
         return this.field;
@@ -32,7 +32,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @InputImport(name="table", required=true)
-        private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
+      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> getTable() {
         return this.table;

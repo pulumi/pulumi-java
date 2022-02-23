@@ -25,7 +25,7 @@ public final class NumberInRangeAdvancedFilterResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -37,7 +37,7 @@ public final class NumberInRangeAdvancedFilterResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="operatorType", required=true)
-        private final String operatorType;
+      private final String operatorType;
 
     public String getOperatorType() {
         return this.operatorType;
@@ -48,7 +48,7 @@ public final class NumberInRangeAdvancedFilterResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="values")
-        private final @Nullable List<List<Double>> values;
+      private final @Nullable List<List<Double>> values;
 
     public List<List<Double>> getValues() {
         return this.values == null ? List.of() : this.values;

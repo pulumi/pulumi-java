@@ -18,21 +18,21 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     public static final ThrottlingMetricArgs Empty = new ThrottlingMetricArgs();
 
     @InputImport(name="interval")
-        private final @Nullable Input<String> interval;
+      private final @Nullable Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
     @InputImport(name="limit", required=true)
-        private final Input<Double> limit;
+      private final Input<Double> limit;
 
     public Input<Double> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ThrottlingMetricType>> type;
+      private final Input<Either<String,ThrottlingMetricType>> type;
 
     public Input<Either<String,ThrottlingMetricType>> getType() {
         return this.type;

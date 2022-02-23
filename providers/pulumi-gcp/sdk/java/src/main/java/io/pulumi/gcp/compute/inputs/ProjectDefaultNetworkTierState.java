@@ -20,7 +20,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkTier")
-        private final @Nullable Input<String> networkTier;
+      private final @Nullable Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
@@ -32,7 +32,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

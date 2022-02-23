@@ -20,7 +20,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxInstances")
-        private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -31,7 +31,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minInstances")
-        private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -42,7 +42,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pollingInterval")
-        private final @Nullable Input<String> pollingInterval;
+      private final @Nullable Input<String> pollingInterval;
 
     public Input<String> getPollingInterval() {
         return this.pollingInterval == null ? Input.empty() : this.pollingInterval;
@@ -53,7 +53,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scaleType", required=true)
-        private final Input<String> scaleType;
+      private final Input<String> scaleType;
 
     public Input<String> getScaleType() {
         return this.scaleType;
@@ -64,7 +64,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetUtilizationPercentage")
-        private final @Nullable Input<Integer> targetUtilizationPercentage;
+      private final @Nullable Input<Integer> targetUtilizationPercentage;
 
     public Input<Integer> getTargetUtilizationPercentage() {
         return this.targetUtilizationPercentage == null ? Input.empty() : this.targetUtilizationPercentage;

@@ -25,7 +25,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityType")
-        private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
+      private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
 
     public Input<Either<String,DiskSecurityTypes>> getSecurityType() {
         return this.securityType == null ? Input.empty() : this.securityType;

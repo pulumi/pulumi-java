@@ -27,7 +27,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disableConnectionDrainOnFailover")
-        private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
+      private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
 
     public Input<Boolean> getDisableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover == null ? Input.empty() : this.disableConnectionDrainOnFailover;
@@ -41,7 +41,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dropTrafficIfUnhealthy")
-        private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
+      private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
 
     public Input<Boolean> getDropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy == null ? Input.empty() : this.dropTrafficIfUnhealthy;
@@ -59,7 +59,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="failoverRatio")
-        private final @Nullable Input<Double> failoverRatio;
+      private final @Nullable Input<Double> failoverRatio;
 
     public Input<Double> getFailoverRatio() {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;

@@ -30,7 +30,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dnsSettings")
-        private final @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings;
+      private final @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
     public Input<NetworkInterfaceDnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -41,7 +41,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-        private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
     public Input<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
@@ -52,7 +52,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableIPForwarding")
-        private final @Nullable Input<Boolean> enableIPForwarding;
+      private final @Nullable Input<Boolean> enableIPForwarding;
 
     public Input<Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
@@ -63,7 +63,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -74,7 +74,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -85,7 +85,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipConfigurations")
-        private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+      private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
     public Input<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -96,7 +96,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -107,7 +107,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="migrationPhase")
-        private final @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
+      private final @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
     public Input<Either<String,NetworkInterfaceMigrationPhase>> getMigrationPhase() {
         return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
@@ -118,7 +118,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInterfaceName")
-        private final @Nullable Input<String> networkInterfaceName;
+      private final @Nullable Input<String> networkInterfaceName;
 
     public Input<String> getNetworkInterfaceName() {
         return this.networkInterfaceName == null ? Input.empty() : this.networkInterfaceName;
@@ -129,7 +129,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkSecurityGroup")
-        private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
+      private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
 
     public Input<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
@@ -140,7 +140,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType;
+      private final @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType;
 
     public Input<Either<String,NetworkInterfaceNicType>> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -151,7 +151,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateLinkService")
-        private final @Nullable Input<PrivateLinkServiceArgs> privateLinkService;
+      private final @Nullable Input<PrivateLinkServiceArgs> privateLinkService;
 
     public Input<PrivateLinkServiceArgs> getPrivateLinkService() {
         return this.privateLinkService == null ? Input.empty() : this.privateLinkService;
@@ -162,7 +162,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -173,7 +173,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

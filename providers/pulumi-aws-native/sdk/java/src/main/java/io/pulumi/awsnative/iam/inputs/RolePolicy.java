@@ -21,7 +21,7 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyDocument", required=true)
-        private final String policyDocument;
+      private final String policyDocument;
 
     public String getPolicyDocument() {
         return this.policyDocument;
@@ -32,7 +32,7 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final String policyName;
+      private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;

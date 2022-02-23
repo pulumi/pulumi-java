@@ -17,7 +17,7 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualWANName", required=true)
-        private final String virtualWANName;
+      private final String virtualWANName;
 
     public String getVirtualWANName() {
         return this.virtualWANName;

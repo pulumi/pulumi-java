@@ -15,7 +15,7 @@ public final class IntentFollowupIntentInfoGetArgs extends io.pulumi.resources.R
     public static final IntentFollowupIntentInfoGetArgs Empty = new IntentFollowupIntentInfoGetArgs();
 
     @InputImport(name="followupIntentName")
-        private final @Nullable Input<String> followupIntentName;
+      private final @Nullable Input<String> followupIntentName;
 
     public Input<String> getFollowupIntentName() {
         return this.followupIntentName == null ? Input.empty() : this.followupIntentName;
@@ -27,7 +27,7 @@ public final class IntentFollowupIntentInfoGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-        private final @Nullable Input<String> parentFollowupIntentName;
+      private final @Nullable Input<String> parentFollowupIntentName;
 
     public Input<String> getParentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;

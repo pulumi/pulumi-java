@@ -23,7 +23,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerGroupName", required=true)
-        private final Input<String> consumerGroupName;
+      private final Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName;
@@ -34,7 +34,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="environmentName", required=true)
-        private final Input<String> environmentName;
+      private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -45,7 +45,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSourceName")
-        private final @Nullable Input<String> eventSourceName;
+      private final @Nullable Input<String> eventSourceName;
 
     public Input<String> getEventSourceName() {
         return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
@@ -56,7 +56,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSourceResourceId", required=true)
-        private final Input<String> eventSourceResourceId;
+      private final Input<String> eventSourceResourceId;
 
     public Input<String> getEventSourceResourceId() {
         return this.eventSourceResourceId;
@@ -67,7 +67,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iotHubName", required=true)
-        private final Input<String> iotHubName;
+      private final Input<String> iotHubName;
 
     public Input<String> getIotHubName() {
         return this.iotHubName;
@@ -78,7 +78,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyName", required=true)
-        private final Input<String> keyName;
+      private final Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName;
@@ -90,7 +90,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -101,7 +101,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localTimestamp")
-        private final @Nullable Input<LocalTimestampArgs> localTimestamp;
+      private final @Nullable Input<LocalTimestampArgs> localTimestamp;
 
     public Input<LocalTimestampArgs> getLocalTimestamp() {
         return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
@@ -112,7 +112,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -123,7 +123,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -134,7 +134,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sharedAccessKey", required=true)
-        private final Input<String> sharedAccessKey;
+      private final Input<String> sharedAccessKey;
 
     public Input<String> getSharedAccessKey() {
         return this.sharedAccessKey;
@@ -145,7 +145,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -156,7 +156,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="time")
-        private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -167,7 +167,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timestampPropertyName")
-        private final @Nullable Input<String> timestampPropertyName;
+      private final @Nullable Input<String> timestampPropertyName;
 
     public Input<String> getTimestampPropertyName() {
         return this.timestampPropertyName == null ? Input.empty() : this.timestampPropertyName;
@@ -178,7 +178,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,IngressStartAtType>> type;
+      private final @Nullable Input<Either<String,IngressStartAtType>> type;
 
     public Input<Either<String,IngressStartAtType>> getType() {
         return this.type == null ? Input.empty() : this.type;

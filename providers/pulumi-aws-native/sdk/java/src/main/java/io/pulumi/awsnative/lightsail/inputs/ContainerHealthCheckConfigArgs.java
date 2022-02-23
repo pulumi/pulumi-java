@@ -24,7 +24,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthyThreshold")
-        private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
@@ -35,7 +35,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="intervalSeconds")
-        private final @Nullable Input<Integer> intervalSeconds;
+      private final @Nullable Input<Integer> intervalSeconds;
 
     public Input<Integer> getIntervalSeconds() {
         return this.intervalSeconds == null ? Input.empty() : this.intervalSeconds;
@@ -46,7 +46,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -57,7 +57,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="successCodes")
-        private final @Nullable Input<String> successCodes;
+      private final @Nullable Input<String> successCodes;
 
     public Input<String> getSuccessCodes() {
         return this.successCodes == null ? Input.empty() : this.successCodes;
@@ -68,7 +68,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeoutSeconds")
-        private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -79,7 +79,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="unhealthyThreshold")
-        private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;

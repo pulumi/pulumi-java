@@ -21,7 +21,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backendAddressPoolName")
-        private final @Nullable Input<String> backendAddressPoolName;
+      private final @Nullable Input<String> backendAddressPoolName;
 
     public Input<String> getBackendAddressPoolName() {
         return this.backendAddressPoolName == null ? Input.empty() : this.backendAddressPoolName;
@@ -32,7 +32,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -43,7 +43,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerBackendAddresses")
-        private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+      private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
     public Input<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? Input.empty() : this.loadBalancerBackendAddresses;
@@ -54,7 +54,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-        private final Input<String> loadBalancerName;
+      private final Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName;
@@ -65,7 +65,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

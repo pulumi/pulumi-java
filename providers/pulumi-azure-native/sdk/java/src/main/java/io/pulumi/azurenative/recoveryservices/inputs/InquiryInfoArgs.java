@@ -26,7 +26,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inquiryDetails")
-        private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
+      private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
     public Input<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
         return this.inquiryDetails == null ? Input.empty() : this.inquiryDetails;
@@ -38,7 +38,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

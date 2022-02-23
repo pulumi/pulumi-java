@@ -24,7 +24,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-        private final @Nullable Input<Integer> code;
+      private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -35,7 +35,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

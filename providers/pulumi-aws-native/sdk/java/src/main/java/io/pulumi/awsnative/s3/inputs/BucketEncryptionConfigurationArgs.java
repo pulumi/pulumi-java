@@ -22,7 +22,7 @@ public final class BucketEncryptionConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="replicaKmsKeyID", required=true)
-        private final Input<String> replicaKmsKeyID;
+      private final Input<String> replicaKmsKeyID;
 
     public Input<String> getReplicaKmsKeyID() {
         return this.replicaKmsKeyID;

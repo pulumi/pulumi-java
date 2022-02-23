@@ -23,7 +23,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="channelId", required=true)
-        private final Input<String> channelId;
+      private final Input<String> channelId;
 
     public Input<String> getChannelId() {
         return this.channelId;
@@ -34,7 +34,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryIntervalInMinutes", required=true)
-        private final Input<Integer> retryIntervalInMinutes;
+      private final Input<Integer> retryIntervalInMinutes;
 
     public Input<Integer> getRetryIntervalInMinutes() {
         return this.retryIntervalInMinutes;

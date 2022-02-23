@@ -21,7 +21,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName")
-        private final @Nullable Input<String> backupPolicyName;
+      private final @Nullable Input<String> backupPolicyName;
 
     public Input<String> getBackupPolicyName() {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
@@ -32,7 +32,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -43,7 +43,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<Kind> kind;
+      private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -54,7 +54,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-        private final Input<String> managerName;
+      private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -65,7 +65,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeIds", required=true)
-        private final Input<List<String>> volumeIds;
+      private final Input<List<String>> volumeIds;
 
     public Input<List<String>> getVolumeIds() {
         return this.volumeIds;

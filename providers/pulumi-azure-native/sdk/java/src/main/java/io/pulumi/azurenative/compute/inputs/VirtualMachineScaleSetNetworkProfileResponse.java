@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="healthProbe")
-        private final @Nullable ApiEntityReferenceResponse healthProbe;
+      private final @Nullable ApiEntityReferenceResponse healthProbe;
 
     public Optional<ApiEntityReferenceResponse> getHealthProbe() {
         return this.healthProbe == null ? Optional.empty() : Optional.ofNullable(this.healthProbe);
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="networkApiVersion")
-        private final @Nullable String networkApiVersion;
+      private final @Nullable String networkApiVersion;
 
     public Optional<String> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Optional.empty() : Optional.ofNullable(this.networkApiVersion);
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-        private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+      private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;

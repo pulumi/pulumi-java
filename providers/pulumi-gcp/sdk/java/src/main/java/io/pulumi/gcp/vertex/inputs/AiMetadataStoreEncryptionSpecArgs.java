@@ -20,7 +20,7 @@ public final class AiMetadataStoreEncryptionSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kmsKeyName")
-        private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;

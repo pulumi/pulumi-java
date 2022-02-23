@@ -22,7 +22,7 @@ public final class ImmediateCopyOptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;

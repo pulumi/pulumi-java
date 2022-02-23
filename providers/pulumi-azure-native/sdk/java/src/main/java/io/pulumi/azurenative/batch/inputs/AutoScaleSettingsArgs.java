@@ -19,14 +19,14 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="evaluationInterval")
-        private final @Nullable Input<String> evaluationInterval;
+      private final @Nullable Input<String> evaluationInterval;
 
     public Input<String> getEvaluationInterval() {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
     }
 
     @InputImport(name="formula", required=true)
-        private final Input<String> formula;
+      private final Input<String> formula;
 
     public Input<String> getFormula() {
         return this.formula;

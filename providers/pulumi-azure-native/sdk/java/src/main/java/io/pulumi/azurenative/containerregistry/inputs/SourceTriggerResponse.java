@@ -25,7 +25,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceRepository", required=true)
-        private final SourcePropertiesResponse sourceRepository;
+      private final SourcePropertiesResponse sourceRepository;
 
     public SourcePropertiesResponse getSourceRepository() {
         return this.sourceRepository;
@@ -47,7 +47,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceTriggerEvents", required=true)
-        private final List<String> sourceTriggerEvents;
+      private final List<String> sourceTriggerEvents;
 
     public List<String> getSourceTriggerEvents() {
         return this.sourceTriggerEvents;
@@ -58,7 +58,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

@@ -21,7 +21,7 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiPortalName")
-        private final @Nullable Input<String> apiPortalName;
+      private final @Nullable Input<String> apiPortalName;
 
     public Input<String> getApiPortalName() {
         return this.apiPortalName == null ? Input.empty() : this.apiPortalName;
@@ -32,7 +32,7 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<ApiPortalPropertiesArgs> properties;
+      private final @Nullable Input<ApiPortalPropertiesArgs> properties;
 
     public Input<ApiPortalPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -43,7 +43,7 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -65,7 +65,7 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;

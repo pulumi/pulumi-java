@@ -24,7 +24,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="extendedLocations")
-        private final @Nullable List<String> extendedLocations;
+      private final @Nullable List<String> extendedLocations;
 
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
@@ -35,7 +35,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -46,7 +46,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

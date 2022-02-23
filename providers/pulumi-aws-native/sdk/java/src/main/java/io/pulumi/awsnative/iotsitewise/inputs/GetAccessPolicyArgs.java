@@ -17,7 +17,7 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessPolicyId", required=true)
-        private final String accessPolicyId;
+      private final String accessPolicyId;
 
     public String getAccessPolicyId() {
         return this.accessPolicyId;

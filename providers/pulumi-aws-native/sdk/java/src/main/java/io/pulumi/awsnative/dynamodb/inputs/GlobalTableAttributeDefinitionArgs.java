@@ -14,14 +14,14 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     public static final GlobalTableAttributeDefinitionArgs Empty = new GlobalTableAttributeDefinitionArgs();
 
     @InputImport(name="attributeName", required=true)
-        private final Input<String> attributeName;
+      private final Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeType", required=true)
-        private final Input<String> attributeType;
+      private final Input<String> attributeType;
 
     public Input<String> getAttributeType() {
         return this.attributeType;

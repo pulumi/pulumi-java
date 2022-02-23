@@ -20,7 +20,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
      * 
      */
     @InputImport(name="followGaeApplication")
-        private final @Nullable Input<String> followGaeApplication;
+      private final @Nullable Input<String> followGaeApplication;
 
     public Input<String> getFollowGaeApplication() {
         return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
@@ -32,7 +32,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

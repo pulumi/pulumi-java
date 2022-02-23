@@ -23,7 +23,7 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="doubleEncryptionStatus")
-        private final @Nullable String doubleEncryptionStatus;
+      private final @Nullable String doubleEncryptionStatus;
 
     public Optional<String> getDoubleEncryptionStatus() {
         return this.doubleEncryptionStatus == null ? Optional.empty() : Optional.ofNullable(this.doubleEncryptionStatus);

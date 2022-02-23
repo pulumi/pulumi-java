@@ -24,7 +24,7 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dnsResources")
-        private final @Nullable List<SubResourceResponse> dnsResources;
+      private final @Nullable List<SubResourceResponse> dnsResources;
 
     public List<SubResourceResponse> getDnsResources() {
         return this.dnsResources == null ? List.of() : this.dnsResources;
@@ -35,7 +35,7 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetResource")
-        private final @Nullable SubResourceResponse targetResource;
+      private final @Nullable SubResourceResponse targetResource;
 
     public Optional<SubResourceResponse> getTargetResource() {
         return this.targetResource == null ? Optional.empty() : Optional.ofNullable(this.targetResource);

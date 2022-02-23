@@ -22,7 +22,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="messageFormat", required=true)
-        private final Input<String> messageFormat;
+      private final Input<String> messageFormat;
 
     public Input<String> getMessageFormat() {
         return this.messageFormat;
@@ -36,7 +36,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceAccountEmail")
-        private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -47,7 +47,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topic", required=true)
-        private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

@@ -23,7 +23,7 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="failedObjects", required=true)
-        private final Map<String,String> failedObjects;
+      private final Map<String,String> failedObjects;
 
     public Map<String,String> getFailedObjects() {
         return this.failedObjects;
@@ -34,7 +34,7 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="validationErrors", required=true)
-        private final ValidationErrorResponse validationErrors;
+      private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;

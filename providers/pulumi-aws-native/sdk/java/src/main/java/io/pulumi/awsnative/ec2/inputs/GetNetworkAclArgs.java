@@ -13,7 +13,7 @@ public final class GetNetworkAclArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNetworkAclArgs Empty = new GetNetworkAclArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

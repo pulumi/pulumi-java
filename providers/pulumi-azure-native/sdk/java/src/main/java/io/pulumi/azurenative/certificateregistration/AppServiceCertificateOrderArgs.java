@@ -24,7 +24,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoRenew")
-        private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Input<Boolean> autoRenew;
 
     public Input<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
@@ -35,7 +35,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateOrderName")
-        private final @Nullable Input<String> certificateOrderName;
+      private final @Nullable Input<String> certificateOrderName;
 
     public Input<String> getCertificateOrderName() {
         return this.certificateOrderName == null ? Input.empty() : this.certificateOrderName;
@@ -46,7 +46,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificates")
-        private final @Nullable Input<Map<String,AppServiceCertificateArgs>> certificates;
+      private final @Nullable Input<Map<String,AppServiceCertificateArgs>> certificates;
 
     public Input<Map<String,AppServiceCertificateArgs>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
@@ -57,7 +57,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="csr")
-        private final @Nullable Input<String> csr;
+      private final @Nullable Input<String> csr;
 
     public Input<String> getCsr() {
         return this.csr == null ? Input.empty() : this.csr;
@@ -68,7 +68,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="distinguishedName")
-        private final @Nullable Input<String> distinguishedName;
+      private final @Nullable Input<String> distinguishedName;
 
     public Input<String> getDistinguishedName() {
         return this.distinguishedName == null ? Input.empty() : this.distinguishedName;
@@ -79,7 +79,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keySize")
-        private final @Nullable Input<Integer> keySize;
+      private final @Nullable Input<Integer> keySize;
 
     public Input<Integer> getKeySize() {
         return this.keySize == null ? Input.empty() : this.keySize;
@@ -90,7 +90,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -101,7 +101,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -112,7 +112,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="productType", required=true)
-        private final Input<CertificateProductType> productType;
+      private final Input<CertificateProductType> productType;
 
     public Input<CertificateProductType> getProductType() {
         return this.productType;
@@ -123,7 +123,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -134,7 +134,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -145,7 +145,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="validityInYears")
-        private final @Nullable Input<Integer> validityInYears;
+      private final @Nullable Input<Integer> validityInYears;
 
     public Input<Integer> getValidityInYears() {
         return this.validityInYears == null ? Input.empty() : this.validityInYears;

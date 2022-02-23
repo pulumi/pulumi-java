@@ -15,28 +15,28 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobStatusGetArgs Empty = new JobStatusGetArgs();
 
     @InputImport(name="details")
-        private final @Nullable Input<String> details;
+      private final @Nullable Input<String> details;
 
     public Input<String> getDetails() {
         return this.details == null ? Input.empty() : this.details;
     }
 
     @InputImport(name="state")
-        private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="stateStartTime")
-        private final @Nullable Input<String> stateStartTime;
+      private final @Nullable Input<String> stateStartTime;
 
     public Input<String> getStateStartTime() {
         return this.stateStartTime == null ? Input.empty() : this.stateStartTime;
     }
 
     @InputImport(name="substate")
-        private final @Nullable Input<String> substate;
+      private final @Nullable Input<String> substate;
 
     public Input<String> getSubstate() {
         return this.substate == null ? Input.empty() : this.substate;

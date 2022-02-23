@@ -24,7 +24,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs extends 
      * 
      */
     @InputImport(name="publicIPs")
-        private final @Nullable List<ResourceReferenceResponse> publicIPs;
+      private final @Nullable List<ResourceReferenceResponse> publicIPs;
 
     public List<ResourceReferenceResponse> getPublicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;

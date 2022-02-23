@@ -26,7 +26,7 @@ public final class EncryptionSettingsCollectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -37,7 +37,7 @@ public final class EncryptionSettingsCollectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="encryptionSettings")
-        private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
+      private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
 
     public List<EncryptionSettingsElementResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
@@ -48,7 +48,7 @@ public final class EncryptionSettingsCollectionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="encryptionSettingsVersion")
-        private final @Nullable String encryptionSettingsVersion;
+      private final @Nullable String encryptionSettingsVersion;
 
     public Optional<String> getEncryptionSettingsVersion() {
         return this.encryptionSettingsVersion == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettingsVersion);

@@ -27,7 +27,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="computeLocation")
-        private final @Nullable String computeLocation;
+      private final @Nullable String computeLocation;
 
     public Optional<String> getComputeLocation() {
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
@@ -39,7 +39,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="computeType", required=true)
-        private final String computeType;
+      private final String computeType;
 
     public String getComputeType() {
         return this.computeType;
@@ -50,7 +50,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -61,7 +61,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isAttachedCompute", required=true)
-        private final Boolean isAttachedCompute;
+      private final Boolean isAttachedCompute;
 
     public Boolean getIsAttachedCompute() {
         return this.isAttachedCompute;
@@ -72,7 +72,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable ComputeInstanceResponseProperties properties;
+      private final @Nullable ComputeInstanceResponseProperties properties;
 
     public Optional<ComputeInstanceResponseProperties> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -83,7 +83,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningErrors", required=true)
-        private final List<MachineLearningServiceErrorResponse> provisioningErrors;
+      private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
         return this.provisioningErrors;
@@ -94,7 +94,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -105,7 +105,7 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);

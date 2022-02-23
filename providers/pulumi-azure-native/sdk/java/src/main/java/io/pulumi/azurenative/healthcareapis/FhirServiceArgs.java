@@ -29,7 +29,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicies")
-        private final @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
+      private final @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
     public Input<List<FhirServiceAccessPolicyEntryArgs>> getAccessPolicies() {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
@@ -40,7 +40,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acrConfiguration")
-        private final @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration;
+      private final @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
     public Input<FhirServiceAcrConfigurationArgs> getAcrConfiguration() {
         return this.acrConfiguration == null ? Input.empty() : this.acrConfiguration;
@@ -51,7 +51,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationConfiguration")
-        private final @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+      private final @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Input<FhirServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
@@ -62,7 +62,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="corsConfiguration")
-        private final @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration;
+      private final @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
     public Input<FhirServiceCorsConfigurationArgs> getCorsConfiguration() {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
@@ -73,7 +73,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportConfiguration")
-        private final @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration;
+      private final @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration;
 
     public Input<FhirServiceExportConfigurationArgs> getExportConfiguration() {
         return this.exportConfiguration == null ? Input.empty() : this.exportConfiguration;
@@ -84,7 +84,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fhirServiceName")
-        private final @Nullable Input<String> fhirServiceName;
+      private final @Nullable Input<String> fhirServiceName;
 
     public Input<String> getFhirServiceName() {
         return this.fhirServiceName == null ? Input.empty() : this.fhirServiceName;
@@ -95,7 +95,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
+      private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
 
     public Input<ServiceManagedIdentityIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -106,7 +106,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<Either<String,FhirServiceKind>> kind;
+      private final @Nullable Input<Either<String,FhirServiceKind>> kind;
 
     public Input<Either<String,FhirServiceKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -117,7 +117,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -128,7 +128,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -139,7 +139,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -150,7 +150,7 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

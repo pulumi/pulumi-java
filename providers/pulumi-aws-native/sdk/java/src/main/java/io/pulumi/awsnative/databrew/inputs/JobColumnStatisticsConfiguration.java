@@ -17,14 +17,14 @@ public final class JobColumnStatisticsConfiguration extends io.pulumi.resources.
     public static final JobColumnStatisticsConfiguration Empty = new JobColumnStatisticsConfiguration();
 
     @InputImport(name="selectors")
-        private final @Nullable List<JobColumnSelector> selectors;
+      private final @Nullable List<JobColumnSelector> selectors;
 
     public List<JobColumnSelector> getSelectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }
 
     @InputImport(name="statistics", required=true)
-        private final JobStatisticsConfiguration statistics;
+      private final JobStatisticsConfiguration statistics;
 
     public JobStatisticsConfiguration getStatistics() {
         return this.statistics;

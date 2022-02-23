@@ -20,28 +20,28 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     public static final AppResourceMappingArgs Empty = new AppResourceMappingArgs();
 
     @InputImport(name="logicalStackName")
-        private final @Nullable Input<String> logicalStackName;
+      private final @Nullable Input<String> logicalStackName;
 
     public Input<String> getLogicalStackName() {
         return this.logicalStackName == null ? Input.empty() : this.logicalStackName;
     }
 
     @InputImport(name="mappingType", required=true)
-        private final Input<String> mappingType;
+      private final Input<String> mappingType;
 
     public Input<String> getMappingType() {
         return this.mappingType;
     }
 
     @InputImport(name="physicalResourceId", required=true)
-        private final Input<AppPhysicalResourceIdArgs> physicalResourceId;
+      private final Input<AppPhysicalResourceIdArgs> physicalResourceId;
 
     public Input<AppPhysicalResourceIdArgs> getPhysicalResourceId() {
         return this.physicalResourceId;
     }
 
     @InputImport(name="resourceName")
-        private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;

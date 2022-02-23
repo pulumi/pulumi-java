@@ -13,7 +13,7 @@ public final class GetRobotApplicationArgs extends io.pulumi.resources.InvokeArg
     public static final GetRobotApplicationArgs Empty = new GetRobotApplicationArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

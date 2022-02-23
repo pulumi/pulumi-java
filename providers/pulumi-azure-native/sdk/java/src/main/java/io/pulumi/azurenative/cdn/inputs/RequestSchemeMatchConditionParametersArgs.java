@@ -25,7 +25,7 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="matchValues")
-        private final @Nullable Input<List<String>> matchValues;
+      private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -36,14 +36,14 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="negateCondition")
-        private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -54,7 +54,7 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="operator", required=true)
-        private final Input<String> operator;
+      private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;

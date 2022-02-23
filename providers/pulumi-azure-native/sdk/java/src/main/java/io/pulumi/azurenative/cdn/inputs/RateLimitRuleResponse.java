@@ -26,7 +26,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="action", required=true)
-        private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -37,7 +37,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable String enabledState;
+      private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -48,7 +48,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="matchConditions", required=true)
-        private final List<MatchConditionResponse> matchConditions;
+      private final List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
@@ -59,7 +59,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -81,7 +81,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rateLimitDurationInMinutes", required=true)
-        private final Integer rateLimitDurationInMinutes;
+      private final Integer rateLimitDurationInMinutes;
 
     public Integer getRateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
@@ -92,7 +92,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rateLimitThreshold", required=true)
-        private final Integer rateLimitThreshold;
+      private final Integer rateLimitThreshold;
 
     public Integer getRateLimitThreshold() {
         return this.rateLimitThreshold;

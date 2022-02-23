@@ -26,7 +26,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault")
-        private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
+      private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
 
     public Input<KeyVaultPropertiesArgs> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -37,7 +37,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;

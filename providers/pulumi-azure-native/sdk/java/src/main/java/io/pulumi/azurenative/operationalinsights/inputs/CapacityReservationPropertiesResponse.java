@@ -22,7 +22,7 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="lastSkuUpdate", required=true)
-        private final String lastSkuUpdate;
+      private final String lastSkuUpdate;
 
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
@@ -33,7 +33,7 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="minCapacity", required=true)
-        private final Double minCapacity;
+      private final Double minCapacity;
 
     public Double getMinCapacity() {
         return this.minCapacity;

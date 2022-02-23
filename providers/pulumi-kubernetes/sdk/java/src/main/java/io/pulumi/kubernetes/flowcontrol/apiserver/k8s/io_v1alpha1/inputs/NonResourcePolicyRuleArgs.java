@@ -29,7 +29,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nonResourceURLs", required=true)
-        private final Input<List<String>> nonResourceURLs;
+      private final Input<List<String>> nonResourceURLs;
 
     public Input<List<String>> getNonResourceURLs() {
         return this.nonResourceURLs;
@@ -40,7 +40,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="verbs", required=true)
-        private final Input<List<String>> verbs;
+      private final Input<List<String>> verbs;
 
     public Input<List<String>> getVerbs() {
         return this.verbs;

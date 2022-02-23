@@ -19,7 +19,7 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

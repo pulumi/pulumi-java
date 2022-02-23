@@ -23,7 +23,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="appName", required=true)
-        private final String appName;
+      private final String appName;
 
     public String getAppName() {
         return this.appName;
@@ -34,7 +34,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="certName")
-        private final @Nullable String certName;
+      private final @Nullable String certName;
 
     public Optional<String> getCertName() {
         return this.certName == null ? Optional.empty() : Optional.ofNullable(this.certName);
@@ -45,7 +45,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="thumbprint")
-        private final @Nullable String thumbprint;
+      private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);

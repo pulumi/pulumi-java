@@ -24,7 +24,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="grpcServiceName")
-        private final @Nullable Input<String> grpcServiceName;
+      private final @Nullable Input<String> grpcServiceName;
 
     public Input<String> getGrpcServiceName() {
         return this.grpcServiceName == null ? Input.empty() : this.grpcServiceName;
@@ -37,7 +37,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -49,7 +49,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="portName")
-        private final @Nullable Input<String> portName;
+      private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -70,7 +70,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="portSpecification")
-        private final @Nullable Input<String> portSpecification;
+      private final @Nullable Input<String> portSpecification;
 
     public Input<String> getPortSpecification() {
         return this.portSpecification == null ? Input.empty() : this.portSpecification;

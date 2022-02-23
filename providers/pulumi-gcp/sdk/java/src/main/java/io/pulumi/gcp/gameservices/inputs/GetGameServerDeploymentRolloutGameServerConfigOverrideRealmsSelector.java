@@ -14,7 +14,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
     public static final GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector Empty = new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector();
 
     @InputImport(name="realms", required=true)
-        private final List<String> realms;
+      private final List<String> realms;
 
     public List<String> getRealms() {
         return this.realms;

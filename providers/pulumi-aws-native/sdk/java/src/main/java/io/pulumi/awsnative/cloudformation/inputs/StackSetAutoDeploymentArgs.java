@@ -19,7 +19,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -30,7 +30,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retainStacksOnAccountRemoval")
-        private final @Nullable Input<Boolean> retainStacksOnAccountRemoval;
+      private final @Nullable Input<Boolean> retainStacksOnAccountRemoval;
 
     public Input<Boolean> getRetainStacksOnAccountRemoval() {
         return this.retainStacksOnAccountRemoval == null ? Input.empty() : this.retainStacksOnAccountRemoval;

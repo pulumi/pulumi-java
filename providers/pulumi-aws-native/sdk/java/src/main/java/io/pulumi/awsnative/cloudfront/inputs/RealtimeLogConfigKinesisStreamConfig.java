@@ -13,14 +13,14 @@ public final class RealtimeLogConfigKinesisStreamConfig extends io.pulumi.resour
     public static final RealtimeLogConfigKinesisStreamConfig Empty = new RealtimeLogConfigKinesisStreamConfig();
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamArn", required=true)
-        private final String streamArn;
+      private final String streamArn;
 
     public String getStreamArn() {
         return this.streamArn;

@@ -20,7 +20,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authToken")
-        private final @Nullable Input<String> authToken;
+      private final @Nullable Input<String> authToken;
 
     public Input<String> getAuthToken() {
         return this.authToken == null ? Input.empty() : this.authToken;
@@ -32,7 +32,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -44,7 +44,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serviceKey")
-        private final @Nullable Input<String> serviceKey;
+      private final @Nullable Input<String> serviceKey;
 
     public Input<String> getServiceKey() {
         return this.serviceKey == null ? Input.empty() : this.serviceKey;

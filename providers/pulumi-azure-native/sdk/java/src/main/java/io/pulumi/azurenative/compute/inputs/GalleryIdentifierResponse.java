@@ -21,7 +21,7 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="uniqueName", required=true)
-        private final String uniqueName;
+      private final String uniqueName;
 
     public String getUniqueName() {
         return this.uniqueName;

@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="generation")
-        private final @Nullable Input<Integer> generation;
+      private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="object")
-        private final @Nullable Input<String> object;
+      private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;

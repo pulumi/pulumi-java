@@ -22,7 +22,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -40,7 +40,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parts", required=true)
-        private final Input<List<CxIntentTrainingPhrasePartGetArgs>> parts;
+      private final Input<List<CxIntentTrainingPhrasePartGetArgs>> parts;
 
     public Input<List<CxIntentTrainingPhrasePartGetArgs>> getParts() {
         return this.parts;
@@ -51,7 +51,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="repeatCount")
-        private final @Nullable Input<Integer> repeatCount;
+      private final @Nullable Input<Integer> repeatCount;
 
     public Input<Integer> getRepeatCount() {
         return this.repeatCount == null ? Input.empty() : this.repeatCount;

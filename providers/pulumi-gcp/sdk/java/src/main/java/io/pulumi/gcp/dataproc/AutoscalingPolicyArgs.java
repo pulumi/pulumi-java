@@ -23,7 +23,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="basicAlgorithm")
-        private final @Nullable Input<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm;
+      private final @Nullable Input<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm;
 
     public Input<AutoscalingPolicyBasicAlgorithmArgs> getBasicAlgorithm() {
         return this.basicAlgorithm == null ? Input.empty() : this.basicAlgorithm;
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -48,7 +48,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyId", required=true)
-        private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -60,7 +60,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -72,7 +72,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-        private final @Nullable Input<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig;
+      private final @Nullable Input<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
     public Input<AutoscalingPolicySecondaryWorkerConfigArgs> getSecondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
@@ -84,7 +84,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workerConfig")
-        private final @Nullable Input<AutoscalingPolicyWorkerConfigArgs> workerConfig;
+      private final @Nullable Input<AutoscalingPolicyWorkerConfigArgs> workerConfig;
 
     public Input<AutoscalingPolicyWorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;

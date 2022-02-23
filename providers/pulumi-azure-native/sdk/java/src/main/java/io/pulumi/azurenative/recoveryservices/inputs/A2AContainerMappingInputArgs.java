@@ -25,7 +25,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="agentAutoUpdateStatus")
-        private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
+      private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
     public Input<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
         return this.agentAutoUpdateStatus == null ? Input.empty() : this.agentAutoUpdateStatus;
@@ -36,7 +36,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automationAccountArmId")
-        private final @Nullable Input<String> automationAccountArmId;
+      private final @Nullable Input<String> automationAccountArmId;
 
     public Input<String> getAutomationAccountArmId() {
         return this.automationAccountArmId == null ? Input.empty() : this.automationAccountArmId;
@@ -48,7 +48,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;

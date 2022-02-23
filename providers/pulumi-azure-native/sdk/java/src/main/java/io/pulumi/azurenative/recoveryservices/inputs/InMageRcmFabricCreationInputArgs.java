@@ -24,7 +24,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authCertificate")
-        private final @Nullable Input<String> authCertificate;
+      private final @Nullable Input<String> authCertificate;
 
     public Input<String> getAuthCertificate() {
         return this.authCertificate == null ? Input.empty() : this.authCertificate;
@@ -36,7 +36,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -47,7 +47,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="physicalSiteId")
-        private final @Nullable Input<String> physicalSiteId;
+      private final @Nullable Input<String> physicalSiteId;
 
     public Input<String> getPhysicalSiteId() {
         return this.physicalSiteId == null ? Input.empty() : this.physicalSiteId;
@@ -58,7 +58,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceAgentIdentity")
-        private final @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity;
+      private final @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity;
 
     public Input<IdentityProviderInputArgs> getSourceAgentIdentity() {
         return this.sourceAgentIdentity == null ? Input.empty() : this.sourceAgentIdentity;
@@ -69,7 +69,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vmwareSiteId")
-        private final @Nullable Input<String> vmwareSiteId;
+      private final @Nullable Input<String> vmwareSiteId;
 
     public Input<String> getVmwareSiteId() {
         return this.vmwareSiteId == null ? Input.empty() : this.vmwareSiteId;

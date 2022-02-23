@@ -25,7 +25,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-        private final Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+      private final Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;

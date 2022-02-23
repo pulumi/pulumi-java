@@ -22,7 +22,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromAr
      * 
      */
     @InputImport(name="identities")
-        private final @Nullable Input<List<String>> identities;
+      private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -36,7 +36,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromAr
      * 
      */
     @InputImport(name="identityType")
-        private final @Nullable Input<String> identityType;
+      private final @Nullable Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;

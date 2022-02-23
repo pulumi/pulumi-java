@@ -16,7 +16,7 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
     public static final ResourceProviderManifestPropertiesFeaturesRuleArgs Empty = new ResourceProviderManifestPropertiesFeaturesRuleArgs();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-        private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+      private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
     public Input<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;

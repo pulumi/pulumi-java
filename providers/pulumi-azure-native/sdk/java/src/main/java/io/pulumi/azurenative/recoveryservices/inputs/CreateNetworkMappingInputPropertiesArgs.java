@@ -27,7 +27,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricSpecificDetails")
-        private final @Nullable Input<Object> fabricSpecificDetails;
+      private final @Nullable Input<Object> fabricSpecificDetails;
 
     public Input<Object> getFabricSpecificDetails() {
         return this.fabricSpecificDetails == null ? Input.empty() : this.fabricSpecificDetails;
@@ -38,7 +38,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryFabricName")
-        private final @Nullable Input<String> recoveryFabricName;
+      private final @Nullable Input<String> recoveryFabricName;
 
     public Input<String> getRecoveryFabricName() {
         return this.recoveryFabricName == null ? Input.empty() : this.recoveryFabricName;
@@ -49,7 +49,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryNetworkId")
-        private final @Nullable Input<String> recoveryNetworkId;
+      private final @Nullable Input<String> recoveryNetworkId;
 
     public Input<String> getRecoveryNetworkId() {
         return this.recoveryNetworkId == null ? Input.empty() : this.recoveryNetworkId;

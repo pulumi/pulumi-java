@@ -13,7 +13,7 @@ public final class GetInAppTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetInAppTemplateArgs Empty = new GetInAppTemplateArgs();
 
     @InputImport(name="templateName", required=true)
-        private final String templateName;
+      private final String templateName;
 
     public String getTemplateName() {
         return this.templateName;

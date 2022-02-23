@@ -20,7 +20,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mainPageSuffix")
-        private final @Nullable Input<String> mainPageSuffix;
+      private final @Nullable Input<String> mainPageSuffix;
 
     public Input<String> getMainPageSuffix() {
         return this.mainPageSuffix == null ? Input.empty() : this.mainPageSuffix;
@@ -32,7 +32,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notFoundPage")
-        private final @Nullable Input<String> notFoundPage;
+      private final @Nullable Input<String> notFoundPage;
 
     public Input<String> getNotFoundPage() {
         return this.notFoundPage == null ? Input.empty() : this.notFoundPage;

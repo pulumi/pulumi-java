@@ -19,7 +19,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="host", required=true)
-        private final Input<String> host;
+      private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -41,7 +41,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -52,7 +52,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;

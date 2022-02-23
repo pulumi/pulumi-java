@@ -25,7 +25,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;

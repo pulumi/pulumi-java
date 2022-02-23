@@ -27,7 +27,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpoints")
-        private final @Nullable Input<RoutingEndpointsArgs> endpoints;
+      private final @Nullable Input<RoutingEndpointsArgs> endpoints;
 
     public Input<RoutingEndpointsArgs> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -38,7 +38,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enrichments")
-        private final @Nullable Input<List<EnrichmentPropertiesArgs>> enrichments;
+      private final @Nullable Input<List<EnrichmentPropertiesArgs>> enrichments;
 
     public Input<List<EnrichmentPropertiesArgs>> getEnrichments() {
         return this.enrichments == null ? Input.empty() : this.enrichments;
@@ -49,7 +49,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fallbackRoute")
-        private final @Nullable Input<FallbackRoutePropertiesArgs> fallbackRoute;
+      private final @Nullable Input<FallbackRoutePropertiesArgs> fallbackRoute;
 
     public Input<FallbackRoutePropertiesArgs> getFallbackRoute() {
         return this.fallbackRoute == null ? Input.empty() : this.fallbackRoute;
@@ -60,7 +60,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable Input<List<RoutePropertiesArgs>> routes;
+      private final @Nullable Input<List<RoutePropertiesArgs>> routes;
 
     public Input<List<RoutePropertiesArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;

@@ -15,14 +15,14 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     public static final RegistryEventNotificationConfigItemArgs Empty = new RegistryEventNotificationConfigItemArgs();
 
     @InputImport(name="pubsubTopicName", required=true)
-        private final Input<String> pubsubTopicName;
+      private final Input<String> pubsubTopicName;
 
     public Input<String> getPubsubTopicName() {
         return this.pubsubTopicName;
     }
 
     @InputImport(name="subfolderMatches")
-        private final @Nullable Input<String> subfolderMatches;
+      private final @Nullable Input<String> subfolderMatches;
 
     public Input<String> getSubfolderMatches() {
         return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;

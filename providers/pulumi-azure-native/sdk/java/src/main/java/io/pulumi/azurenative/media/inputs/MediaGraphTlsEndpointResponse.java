@@ -26,7 +26,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
+      private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -38,7 +38,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -49,7 +49,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="trustedCertificates")
-        private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
+      private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
 
     public Optional<MediaGraphPemCertificateListResponse> getTrustedCertificates() {
         return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
@@ -60,7 +60,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="url", required=true)
-        private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -71,7 +71,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validationOptions")
-        private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
+      private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
     public Optional<MediaGraphTlsValidationOptionsResponse> getValidationOptions() {
         return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);

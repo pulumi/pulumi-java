@@ -24,7 +24,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fileNamePrefix")
-        private final @Nullable Input<Object> fileNamePrefix;
+      private final @Nullable Input<Object> fileNamePrefix;
 
     public Input<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
@@ -35,7 +35,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxRowsPerFile")
-        private final @Nullable Input<Object> maxRowsPerFile;
+      private final @Nullable Input<Object> maxRowsPerFile;
 
     public Input<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
@@ -47,7 +47,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

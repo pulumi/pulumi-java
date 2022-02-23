@@ -16,14 +16,14 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
     public static final SubscriptionIAMMemberArgs Empty = new SubscriptionIAMMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<SubscriptionIAMMemberConditionArgs> condition;
+      private final @Nullable Input<SubscriptionIAMMemberConditionArgs> condition;
 
     public Input<SubscriptionIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -35,7 +35,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -48,7 +48,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -59,7 +59,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscription", required=true)
-        private final Input<String> subscription;
+      private final Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription;

@@ -16,7 +16,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     public static final CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs();
 
     @InputImport(name="keyUsageOptions")
-        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
+      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> getKeyUsageOptions() {
         return this.keyUsageOptions == null ? Input.empty() : this.keyUsageOptions;

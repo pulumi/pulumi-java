@@ -24,7 +24,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricName", required=true)
-        private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -35,7 +35,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -46,7 +46,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetAverageValue", required=true)
-        private final Input<String> targetAverageValue;
+      private final Input<String> targetAverageValue;
 
     public Input<String> getTargetAverageValue() {
         return this.targetAverageValue;

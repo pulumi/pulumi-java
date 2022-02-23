@@ -20,7 +20,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxModulusSize")
-        private final @Nullable Input<String> maxModulusSize;
+      private final @Nullable Input<String> maxModulusSize;
 
     public Input<String> getMaxModulusSize() {
         return this.maxModulusSize == null ? Input.empty() : this.maxModulusSize;
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minModulusSize")
-        private final @Nullable Input<String> minModulusSize;
+      private final @Nullable Input<String> minModulusSize;
 
     public Input<String> getMinModulusSize() {
         return this.minModulusSize == null ? Input.empty() : this.minModulusSize;

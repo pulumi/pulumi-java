@@ -23,7 +23,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="aggregatedState", required=true)
-        private final String aggregatedState;
+      private final String aggregatedState;
 
     public String getAggregatedState() {
         return this.aggregatedState;
@@ -34,7 +34,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="summary", required=true)
-        private final List<RegionalReplicationStatusResponse> summary;
+      private final List<RegionalReplicationStatusResponse> summary;
 
     public List<RegionalReplicationStatusResponse> getSummary() {
         return this.summary;

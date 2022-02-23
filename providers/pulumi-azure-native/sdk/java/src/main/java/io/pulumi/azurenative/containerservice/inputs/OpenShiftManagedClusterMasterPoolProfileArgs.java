@@ -27,7 +27,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -38,7 +38,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<Either<String,OSType>> osType;
+      private final @Nullable Input<Either<String,OSType>> osType;
 
     public Input<Either<String,OSType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -60,7 +60,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetCidr")
-        private final @Nullable Input<String> subnetCidr;
+      private final @Nullable Input<String> subnetCidr;
 
     public Input<String> getSubnetCidr() {
         return this.subnetCidr == null ? Input.empty() : this.subnetCidr;
@@ -71,7 +71,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="vmSize", required=true)
-        private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+      private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
     public Input<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {
         return this.vmSize;

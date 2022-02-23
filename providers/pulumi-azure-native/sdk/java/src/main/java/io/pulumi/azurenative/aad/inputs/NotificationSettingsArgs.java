@@ -27,7 +27,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalRecipients")
-        private final @Nullable Input<List<String>> additionalRecipients;
+      private final @Nullable Input<List<String>> additionalRecipients;
 
     public Input<List<String>> getAdditionalRecipients() {
         return this.additionalRecipients == null ? Input.empty() : this.additionalRecipients;
@@ -38,7 +38,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notifyDcAdmins")
-        private final @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins;
+      private final @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
     public Input<Either<String,NotifyDcAdmins>> getNotifyDcAdmins() {
         return this.notifyDcAdmins == null ? Input.empty() : this.notifyDcAdmins;
@@ -49,7 +49,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notifyGlobalAdmins")
-        private final @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
+      private final @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
     public Input<Either<String,NotifyGlobalAdmins>> getNotifyGlobalAdmins() {
         return this.notifyGlobalAdmins == null ? Input.empty() : this.notifyGlobalAdmins;

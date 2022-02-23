@@ -15,14 +15,14 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry extends io.pulumi
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskEntry Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskEntry();
 
     @InputImport(name="currentVersion")
-        private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
+      private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
     @InputImport(name="updateVersion")
-        private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
+      private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {
         return this.updateVersion == null ? Optional.empty() : Optional.ofNullable(this.updateVersion);

@@ -15,14 +15,14 @@ public final class FirewallPolicyCustomActionArgs extends io.pulumi.resources.Re
     public static final FirewallPolicyCustomActionArgs Empty = new FirewallPolicyCustomActionArgs();
 
     @InputImport(name="actionDefinition", required=true)
-        private final Input<FirewallPolicyActionDefinitionArgs> actionDefinition;
+      private final Input<FirewallPolicyActionDefinitionArgs> actionDefinition;
 
     public Input<FirewallPolicyActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-        private final Input<String> actionName;
+      private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;

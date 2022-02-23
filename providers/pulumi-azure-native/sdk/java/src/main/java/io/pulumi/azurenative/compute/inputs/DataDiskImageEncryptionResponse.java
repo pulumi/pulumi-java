@@ -24,7 +24,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-        private final @Nullable String diskEncryptionSetId;
+      private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
@@ -35,7 +35,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lun", required=true)
-        private final Integer lun;
+      private final Integer lun;
 
     public Integer getLun() {
         return this.lun;

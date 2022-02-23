@@ -22,7 +22,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventType", required=true)
-        private final Input<String> eventType;
+      private final Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType;
@@ -33,7 +33,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="failurePolicy")
-        private final @Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
+      private final @Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
 
     public Input<FunctionEventTriggerFailurePolicyGetArgs> getFailurePolicy() {
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
@@ -45,7 +45,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resource", required=true)
-        private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;

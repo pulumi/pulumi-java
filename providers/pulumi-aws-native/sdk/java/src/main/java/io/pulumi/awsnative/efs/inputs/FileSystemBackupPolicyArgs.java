@@ -14,7 +14,7 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     public static final FileSystemBackupPolicyArgs Empty = new FileSystemBackupPolicyArgs();
 
     @InputImport(name="status", required=true)
-        private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;

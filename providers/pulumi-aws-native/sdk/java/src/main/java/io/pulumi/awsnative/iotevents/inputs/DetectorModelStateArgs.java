@@ -22,21 +22,21 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     public static final DetectorModelStateArgs Empty = new DetectorModelStateArgs();
 
     @InputImport(name="onEnter")
-        private final @Nullable Input<DetectorModelOnEnterArgs> onEnter;
+      private final @Nullable Input<DetectorModelOnEnterArgs> onEnter;
 
     public Input<DetectorModelOnEnterArgs> getOnEnter() {
         return this.onEnter == null ? Input.empty() : this.onEnter;
     }
 
     @InputImport(name="onExit")
-        private final @Nullable Input<DetectorModelOnExitArgs> onExit;
+      private final @Nullable Input<DetectorModelOnExitArgs> onExit;
 
     public Input<DetectorModelOnExitArgs> getOnExit() {
         return this.onExit == null ? Input.empty() : this.onExit;
     }
 
     @InputImport(name="onInput")
-        private final @Nullable Input<DetectorModelOnInputArgs> onInput;
+      private final @Nullable Input<DetectorModelOnInputArgs> onInput;
 
     public Input<DetectorModelOnInputArgs> getOnInput() {
         return this.onInput == null ? Input.empty() : this.onInput;
@@ -47,7 +47,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stateName", required=true)
-        private final Input<String> stateName;
+      private final Input<String> stateName;
 
     public Input<String> getStateName() {
         return this.stateName;

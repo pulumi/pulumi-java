@@ -15,14 +15,14 @@ public final class ExperimentTreatmentToWeightArgs extends io.pulumi.resources.R
     public static final ExperimentTreatmentToWeightArgs Empty = new ExperimentTreatmentToWeightArgs();
 
     @InputImport(name="splitWeight", required=true)
-        private final Input<Integer> splitWeight;
+      private final Input<Integer> splitWeight;
 
     public Input<Integer> getSplitWeight() {
         return this.splitWeight;
     }
 
     @InputImport(name="treatment", required=true)
-        private final Input<String> treatment;
+      private final Input<String> treatment;
 
     public Input<String> getTreatment() {
         return this.treatment;

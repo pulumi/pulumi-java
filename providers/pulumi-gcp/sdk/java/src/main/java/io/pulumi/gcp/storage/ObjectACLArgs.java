@@ -20,7 +20,7 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-        private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -31,7 +31,7 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -42,7 +42,7 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-        private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Input<String> predefinedAcl;
 
     public Input<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
@@ -54,7 +54,7 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-        private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;

@@ -23,7 +23,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetResourceId")
-        private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Input<String> subnetResourceId;
 
     public Input<String> getSubnetResourceId() {
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;

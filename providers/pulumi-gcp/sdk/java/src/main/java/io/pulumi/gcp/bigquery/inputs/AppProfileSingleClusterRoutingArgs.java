@@ -21,7 +21,7 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowTransactionalWrites")
-        private final @Nullable Input<Boolean> allowTransactionalWrites;
+      private final @Nullable Input<Boolean> allowTransactionalWrites;
 
     public Input<Boolean> getAllowTransactionalWrites() {
         return this.allowTransactionalWrites == null ? Input.empty() : this.allowTransactionalWrites;
@@ -32,7 +32,7 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterId", required=true)
-        private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;

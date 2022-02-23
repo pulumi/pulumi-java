@@ -14,7 +14,7 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigArgs extends 
     public static final InstanceFromMachineImageNetworkPerformanceConfigArgs Empty = new InstanceFromMachineImageNetworkPerformanceConfigArgs();
 
     @InputImport(name="totalEgressBandwidthTier", required=true)
-        private final Input<String> totalEgressBandwidthTier;
+      private final Input<String> totalEgressBandwidthTier;
 
     public Input<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;

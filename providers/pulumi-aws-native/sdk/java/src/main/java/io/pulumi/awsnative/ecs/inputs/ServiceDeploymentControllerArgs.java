@@ -15,7 +15,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     public static final ServiceDeploymentControllerArgs Empty = new ServiceDeploymentControllerArgs();
 
     @InputImport(name="type")
-        private final @Nullable Input<ServiceDeploymentControllerType> type;
+      private final @Nullable Input<ServiceDeploymentControllerType> type;
 
     public Input<ServiceDeploymentControllerType> getType() {
         return this.type == null ? Input.empty() : this.type;

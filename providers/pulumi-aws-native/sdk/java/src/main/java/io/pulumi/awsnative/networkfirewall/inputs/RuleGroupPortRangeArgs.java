@@ -14,14 +14,14 @@ public final class RuleGroupPortRangeArgs extends io.pulumi.resources.ResourceAr
     public static final RuleGroupPortRangeArgs Empty = new RuleGroupPortRangeArgs();
 
     @InputImport(name="fromPort", required=true)
-        private final Input<Integer> fromPort;
+      private final Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort;
     }
 
     @InputImport(name="toPort", required=true)
-        private final Input<Integer> toPort;
+      private final Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort;

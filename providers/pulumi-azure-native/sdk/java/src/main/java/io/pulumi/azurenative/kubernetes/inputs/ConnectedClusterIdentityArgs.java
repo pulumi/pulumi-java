@@ -22,7 +22,7 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ResourceIdentityType> type;
+      private final Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type;

@@ -14,14 +14,14 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     public static final SubnetRouteTableAssociationArgs Empty = new SubnetRouteTableAssociationArgs();
 
     @InputImport(name="routeTableId", required=true)
-        private final Input<String> routeTableId;
+      private final Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId;
     }
 
     @InputImport(name="subnetId", required=true)
-        private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

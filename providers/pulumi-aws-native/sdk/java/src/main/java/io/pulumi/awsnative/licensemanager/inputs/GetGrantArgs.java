@@ -17,7 +17,7 @@ public final class GetGrantArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="grantArn", required=true)
-        private final String grantArn;
+      private final String grantArn;
 
     public String getGrantArn() {
         return this.grantArn;

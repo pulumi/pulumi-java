@@ -24,7 +24,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accounts")
-        private final @Nullable Input<List<String>> accounts;
+      private final @Nullable Input<List<String>> accounts;
 
     public Input<List<String>> getAccounts() {
         return this.accounts == null ? Input.empty() : this.accounts;
@@ -35,7 +35,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="organizationalUnitIds")
-        private final @Nullable Input<List<String>> organizationalUnitIds;
+      private final @Nullable Input<List<String>> organizationalUnitIds;
 
     public Input<List<String>> getOrganizationalUnitIds() {
         return this.organizationalUnitIds == null ? Input.empty() : this.organizationalUnitIds;

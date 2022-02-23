@@ -18,7 +18,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

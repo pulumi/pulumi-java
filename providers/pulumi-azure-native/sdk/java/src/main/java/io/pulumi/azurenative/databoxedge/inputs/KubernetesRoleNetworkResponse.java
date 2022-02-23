@@ -22,7 +22,7 @@ public final class KubernetesRoleNetworkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="cniConfig", required=true)
-        private final CniConfigResponse cniConfig;
+      private final CniConfigResponse cniConfig;
 
     public CniConfigResponse getCniConfig() {
         return this.cniConfig;
@@ -33,7 +33,7 @@ public final class KubernetesRoleNetworkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="loadBalancerConfig", required=true)
-        private final LoadBalancerConfigResponse loadBalancerConfig;
+      private final LoadBalancerConfigResponse loadBalancerConfig;
 
     public LoadBalancerConfigResponse getLoadBalancerConfig() {
         return this.loadBalancerConfig;

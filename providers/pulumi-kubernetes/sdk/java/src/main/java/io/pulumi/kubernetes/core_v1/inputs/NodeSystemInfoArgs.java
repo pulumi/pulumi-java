@@ -22,7 +22,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture", required=true)
-        private final Input<String> architecture;
+      private final Input<String> architecture;
 
     public Input<String> getArchitecture() {
         return this.architecture;
@@ -33,7 +33,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootID", required=true)
-        private final Input<String> bootID;
+      private final Input<String> bootID;
 
     public Input<String> getBootID() {
         return this.bootID;
@@ -44,7 +44,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerRuntimeVersion", required=true)
-        private final Input<String> containerRuntimeVersion;
+      private final Input<String> containerRuntimeVersion;
 
     public Input<String> getContainerRuntimeVersion() {
         return this.containerRuntimeVersion;
@@ -55,7 +55,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelVersion", required=true)
-        private final Input<String> kernelVersion;
+      private final Input<String> kernelVersion;
 
     public Input<String> getKernelVersion() {
         return this.kernelVersion;
@@ -66,7 +66,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeProxyVersion", required=true)
-        private final Input<String> kubeProxyVersion;
+      private final Input<String> kubeProxyVersion;
 
     public Input<String> getKubeProxyVersion() {
         return this.kubeProxyVersion;
@@ -77,7 +77,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeletVersion", required=true)
-        private final Input<String> kubeletVersion;
+      private final Input<String> kubeletVersion;
 
     public Input<String> getKubeletVersion() {
         return this.kubeletVersion;
@@ -88,7 +88,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineID", required=true)
-        private final Input<String> machineID;
+      private final Input<String> machineID;
 
     public Input<String> getMachineID() {
         return this.machineID;
@@ -99,7 +99,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-        private final Input<String> operatingSystem;
+      private final Input<String> operatingSystem;
 
     public Input<String> getOperatingSystem() {
         return this.operatingSystem;
@@ -110,7 +110,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osImage", required=true)
-        private final Input<String> osImage;
+      private final Input<String> osImage;
 
     public Input<String> getOsImage() {
         return this.osImage;
@@ -121,7 +121,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemUUID", required=true)
-        private final Input<String> systemUUID;
+      private final Input<String> systemUUID;
 
     public Input<String> getSystemUUID() {
         return this.systemUUID;

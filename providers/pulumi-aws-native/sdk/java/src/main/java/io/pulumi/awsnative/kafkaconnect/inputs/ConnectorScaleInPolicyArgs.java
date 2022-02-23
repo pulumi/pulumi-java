@@ -22,7 +22,7 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-        private final Input<Integer> cpuUtilizationPercentage;
+      private final Input<Integer> cpuUtilizationPercentage;
 
     public Input<Integer> getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;

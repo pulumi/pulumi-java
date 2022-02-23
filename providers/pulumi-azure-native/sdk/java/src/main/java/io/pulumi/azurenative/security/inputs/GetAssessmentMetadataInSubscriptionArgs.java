@@ -17,7 +17,7 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="assessmentMetadataName", required=true)
-        private final String assessmentMetadataName;
+      private final String assessmentMetadataName;
 
     public String getAssessmentMetadataName() {
         return this.assessmentMetadataName;

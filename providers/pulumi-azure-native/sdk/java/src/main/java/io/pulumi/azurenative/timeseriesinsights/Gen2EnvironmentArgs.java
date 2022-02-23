@@ -25,7 +25,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentName")
-        private final @Nullable Input<String> environmentName;
+      private final @Nullable Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName == null ? Input.empty() : this.environmentName;
@@ -37,7 +37,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -48,7 +48,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -70,7 +70,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -81,7 +81,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageConfiguration", required=true)
-        private final Input<Gen2StorageConfigurationInputArgs> storageConfiguration;
+      private final Input<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
     public Input<Gen2StorageConfigurationInputArgs> getStorageConfiguration() {
         return this.storageConfiguration;
@@ -92,7 +92,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -103,7 +103,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesIdProperties", required=true)
-        private final Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
+      private final Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
     public Input<List<TimeSeriesIdPropertyArgs>> getTimeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
@@ -114,7 +114,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="warmStoreConfiguration")
-        private final @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
+      private final @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
     public Input<WarmStoreConfigurationPropertiesArgs> getWarmStoreConfiguration() {
         return this.warmStoreConfiguration == null ? Input.empty() : this.warmStoreConfiguration;

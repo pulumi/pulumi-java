@@ -13,7 +13,7 @@ public final class WebACLImmunityTimeProperty extends io.pulumi.resources.Invoke
     public static final WebACLImmunityTimeProperty Empty = new WebACLImmunityTimeProperty();
 
     @InputImport(name="immunityTime", required=true)
-        private final Integer immunityTime;
+      private final Integer immunityTime;
 
     public Integer getImmunityTime() {
         return this.immunityTime;

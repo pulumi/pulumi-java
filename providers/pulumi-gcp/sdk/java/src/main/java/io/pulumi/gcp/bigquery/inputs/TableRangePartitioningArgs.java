@@ -20,7 +20,7 @@ public final class TableRangePartitioningArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="field", required=true)
-        private final Input<String> field;
+      private final Input<String> field;
 
     public Input<String> getField() {
         return this.field;
@@ -32,7 +32,7 @@ public final class TableRangePartitioningArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="range", required=true)
-        private final Input<TableRangePartitioningRangeArgs> range;
+      private final Input<TableRangePartitioningRangeArgs> range;
 
     public Input<TableRangePartitioningRangeArgs> getRange() {
         return this.range;

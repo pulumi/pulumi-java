@@ -15,14 +15,14 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceEndpointArgs Empty = new ServiceEndpointArgs();
 
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

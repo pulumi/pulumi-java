@@ -24,7 +24,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="JSONPath", required=true)
-        private final Input<String> JSONPath;
+      private final Input<String> JSONPath;
 
     public Input<String> getJSONPath() {
         return this.JSONPath;
@@ -35,7 +35,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format")
-        private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -57,7 +57,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -79,7 +79,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

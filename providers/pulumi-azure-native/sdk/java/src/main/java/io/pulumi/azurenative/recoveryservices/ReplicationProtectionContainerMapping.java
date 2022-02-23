@@ -92,6 +92,21 @@ public class ReplicationProtectionContainerMapping extends io.pulumi.resources.C
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicationProtectionContainerMapping(String name) {
+        this(name, ReplicationProtectionContainerMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicationProtectionContainerMapping(String name, ReplicationProtectionContainerMappingArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

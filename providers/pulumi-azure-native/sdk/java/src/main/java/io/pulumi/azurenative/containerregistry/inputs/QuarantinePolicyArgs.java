@@ -25,7 +25,7 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,PolicyStatus>> status;
+      private final @Nullable Input<Either<String,PolicyStatus>> status;
 
     public Input<Either<String,PolicyStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;

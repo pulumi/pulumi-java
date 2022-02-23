@@ -28,7 +28,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -39,7 +39,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -50,7 +50,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Integer idleTimeoutInMinutes;
+      private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -61,7 +61,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -72,7 +72,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -94,7 +94,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicIpAddresses")
-        private final @Nullable List<SubResourceResponse> publicIpAddresses;
+      private final @Nullable List<SubResourceResponse> publicIpAddresses;
 
     public List<SubResourceResponse> getPublicIpAddresses() {
         return this.publicIpAddresses == null ? List.of() : this.publicIpAddresses;
@@ -105,7 +105,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicIpPrefixes")
-        private final @Nullable List<SubResourceResponse> publicIpPrefixes;
+      private final @Nullable List<SubResourceResponse> publicIpPrefixes;
 
     public List<SubResourceResponse> getPublicIpPrefixes() {
         return this.publicIpPrefixes == null ? List.of() : this.publicIpPrefixes;
@@ -116,7 +116,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-        private final String resourceGuid;
+      private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -127,7 +127,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable NatGatewaySkuResponse sku;
+      private final @Nullable NatGatewaySkuResponse sku;
 
     public Optional<NatGatewaySkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -138,7 +138,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-        private final List<SubResourceResponse> subnets;
+      private final List<SubResourceResponse> subnets;
 
     public List<SubResourceResponse> getSubnets() {
         return this.subnets;
@@ -149,7 +149,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -160,7 +160,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -171,7 +171,7 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable List<String> zones;
+      private final @Nullable List<String> zones;
 
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;

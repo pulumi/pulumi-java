@@ -26,28 +26,28 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowInterrupt")
-        private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="frequencyInSeconds", required=true)
-        private final Input<Integer> frequencyInSeconds;
+      private final Input<Integer> frequencyInSeconds;
 
     public Input<Integer> getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-        private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+      private final Input<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
     }
 
     @InputImport(name="timeoutInSeconds", required=true)
-        private final Input<Integer> timeoutInSeconds;
+      private final Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;

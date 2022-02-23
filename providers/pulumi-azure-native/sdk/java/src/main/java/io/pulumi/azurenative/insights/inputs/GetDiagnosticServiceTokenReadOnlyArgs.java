@@ -17,7 +17,7 @@ public final class GetDiagnosticServiceTokenReadOnlyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceUri", required=true)
-        private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;

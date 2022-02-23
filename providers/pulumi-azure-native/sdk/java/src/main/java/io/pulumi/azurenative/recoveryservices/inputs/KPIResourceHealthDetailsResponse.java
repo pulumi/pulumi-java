@@ -25,7 +25,7 @@ public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceHealthDetails")
-        private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
+      private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
 
     public List<ResourceHealthDetailsResponse> getResourceHealthDetails() {
         return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
@@ -36,7 +36,7 @@ public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceHealthStatus")
-        private final @Nullable String resourceHealthStatus;
+      private final @Nullable String resourceHealthStatus;
 
     public Optional<String> getResourceHealthStatus() {
         return this.resourceHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.resourceHealthStatus);

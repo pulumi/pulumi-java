@@ -21,7 +21,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cellName")
-        private final @Nullable Input<String> cellName;
+      private final @Nullable Input<String> cellName;
 
     public Input<String> getCellName() {
         return this.cellName == null ? Input.empty() : this.cellName;
@@ -32,7 +32,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-        private final @Nullable Input<List<String>> cells;
+      private final @Nullable Input<List<String>> cells;
 
     public Input<List<String>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -43,7 +43,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<CellTagArgs>> tags;
+      private final @Nullable Input<List<CellTagArgs>> tags;
 
     public Input<List<CellTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

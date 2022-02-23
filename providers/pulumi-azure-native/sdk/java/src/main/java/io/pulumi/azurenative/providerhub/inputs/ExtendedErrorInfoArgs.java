@@ -17,35 +17,35 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     public static final ExtendedErrorInfoArgs Empty = new ExtendedErrorInfoArgs();
 
     @InputImport(name="additionalInfo")
-        private final @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo;
+      private final @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo;
 
     public Input<List<TypedErrorInfoArgs>> getAdditionalInfo() {
         return this.additionalInfo == null ? Input.empty() : this.additionalInfo;
     }
 
     @InputImport(name="code")
-        private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
     }
 
     @InputImport(name="details")
-        private final @Nullable Input<List<ExtendedErrorInfoArgs>> details;
+      private final @Nullable Input<List<ExtendedErrorInfoArgs>> details;
 
     public Input<List<ExtendedErrorInfoArgs>> getDetails() {
         return this.details == null ? Input.empty() : this.details;
     }
 
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;

@@ -22,7 +22,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyData", required=true)
-        private final Input<String> keyData;
+      private final Input<String> keyData;
 
     public Input<String> getKeyData() {
         return this.keyData;

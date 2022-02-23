@@ -24,7 +24,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication;
+      private final @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication;
 
     public Input<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -35,7 +35,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterExtensionIds")
-        private final @Nullable Input<List<String>> clusterExtensionIds;
+      private final @Nullable Input<List<String>> clusterExtensionIds;
 
     public Input<List<String>> getClusterExtensionIds() {
         return this.clusterExtensionIds == null ? Input.empty() : this.clusterExtensionIds;
@@ -46,7 +46,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostResourceId")
-        private final @Nullable Input<String> hostResourceId;
+      private final @Nullable Input<String> hostResourceId;
 
     public Input<String> getHostResourceId() {
         return this.hostResourceId == null ? Input.empty() : this.hostResourceId;
@@ -68,7 +68,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostType")
-        private final @Nullable Input<Either<String,HostType>> hostType;
+      private final @Nullable Input<Either<String,HostType>> hostType;
 
     public Input<Either<String,HostType>> getHostType() {
         return this.hostType == null ? Input.empty() : this.hostType;
@@ -79,7 +79,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-        private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -101,7 +101,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -112,7 +112,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-        private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -134,7 +134,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

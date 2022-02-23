@@ -29,7 +29,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-        private final Input<Either<String,ActionType>> action;
+      private final Input<Either<String,ActionType>> action;
 
     public Input<Either<String,ActionType>> getAction() {
         return this.action;
@@ -40,7 +40,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
+      private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
 
     public Input<Either<String,CustomRuleEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -51,7 +51,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchConditions", required=true)
-        private final Input<List<MatchConditionArgs>> matchConditions;
+      private final Input<List<MatchConditionArgs>> matchConditions;
 
     public Input<List<MatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
@@ -62,7 +62,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -73,7 +73,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;

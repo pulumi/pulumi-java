@@ -24,7 +24,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable Input<AutoHealActionsArgs> actions;
+      private final @Nullable Input<AutoHealActionsArgs> actions;
 
     public Input<AutoHealActionsArgs> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-        private final @Nullable Input<AutoHealTriggersArgs> triggers;
+      private final @Nullable Input<AutoHealTriggersArgs> triggers;
 
     public Input<AutoHealTriggersArgs> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

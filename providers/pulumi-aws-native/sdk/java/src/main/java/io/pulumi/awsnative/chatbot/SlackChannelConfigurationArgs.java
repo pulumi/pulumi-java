@@ -21,7 +21,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configurationName", required=true)
-        private final Input<String> configurationName;
+      private final Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName;
@@ -32,7 +32,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="guardrailPolicies")
-        private final @Nullable Input<List<String>> guardrailPolicies;
+      private final @Nullable Input<List<String>> guardrailPolicies;
 
     public Input<List<String>> getGuardrailPolicies() {
         return this.guardrailPolicies == null ? Input.empty() : this.guardrailPolicies;
@@ -43,7 +43,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-        private final Input<String> iamRoleArn;
+      private final Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn;
@@ -54,7 +54,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loggingLevel")
-        private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Input<String> loggingLevel;
 
     public Input<String> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -65,7 +65,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="slackChannelId", required=true)
-        private final Input<String> slackChannelId;
+      private final Input<String> slackChannelId;
 
     public Input<String> getSlackChannelId() {
         return this.slackChannelId;
@@ -76,7 +76,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="slackWorkspaceId", required=true)
-        private final Input<String> slackWorkspaceId;
+      private final Input<String> slackWorkspaceId;
 
     public Input<String> getSlackWorkspaceId() {
         return this.slackWorkspaceId;
@@ -87,7 +87,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="snsTopicArns")
-        private final @Nullable Input<List<String>> snsTopicArns;
+      private final @Nullable Input<List<String>> snsTopicArns;
 
     public Input<List<String>> getSnsTopicArns() {
         return this.snsTopicArns == null ? Input.empty() : this.snsTopicArns;
@@ -98,7 +98,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userRoleRequired")
-        private final @Nullable Input<Boolean> userRoleRequired;
+      private final @Nullable Input<Boolean> userRoleRequired;
 
     public Input<Boolean> getUserRoleRequired() {
         return this.userRoleRequired == null ? Input.empty() : this.userRoleRequired;

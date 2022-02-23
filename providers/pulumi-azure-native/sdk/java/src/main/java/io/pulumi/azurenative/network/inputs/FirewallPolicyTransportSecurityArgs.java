@@ -23,7 +23,7 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateAuthority")
-        private final @Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
+      private final @Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
     public Input<FirewallPolicyCertificateAuthorityArgs> getCertificateAuthority() {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;

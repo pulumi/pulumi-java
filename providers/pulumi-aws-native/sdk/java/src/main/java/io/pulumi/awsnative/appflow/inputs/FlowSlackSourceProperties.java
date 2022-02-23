@@ -13,7 +13,7 @@ public final class FlowSlackSourceProperties extends io.pulumi.resources.InvokeA
     public static final FlowSlackSourceProperties Empty = new FlowSlackSourceProperties();
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;

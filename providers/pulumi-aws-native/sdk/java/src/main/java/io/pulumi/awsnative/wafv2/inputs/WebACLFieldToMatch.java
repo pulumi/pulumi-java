@@ -26,7 +26,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allQueryArguments")
-        private final @Nullable Object allQueryArguments;
+      private final @Nullable Object allQueryArguments;
 
     public Optional<Object> getAllQueryArguments() {
         return this.allQueryArguments == null ? Optional.empty() : Optional.ofNullable(this.allQueryArguments);
@@ -37,14 +37,14 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Object body;
+      private final @Nullable Object body;
 
     public Optional<Object> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
     @InputImport(name="jsonBody")
-        private final @Nullable WebACLJsonBody jsonBody;
+      private final @Nullable WebACLJsonBody jsonBody;
 
     public Optional<WebACLJsonBody> getJsonBody() {
         return this.jsonBody == null ? Optional.empty() : Optional.ofNullable(this.jsonBody);
@@ -55,7 +55,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="method")
-        private final @Nullable Object method;
+      private final @Nullable Object method;
 
     public Optional<Object> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -66,14 +66,14 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryString")
-        private final @Nullable Object queryString;
+      private final @Nullable Object queryString;
 
     public Optional<Object> getQueryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
     @InputImport(name="singleHeader")
-        private final @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader;
+      private final @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader;
 
     public Optional<WebACLFieldToMatchSingleHeaderProperties> getSingleHeader() {
         return this.singleHeader == null ? Optional.empty() : Optional.ofNullable(this.singleHeader);
@@ -84,7 +84,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="singleQueryArgument")
-        private final @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
+      private final @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
 
     public Optional<WebACLFieldToMatchSingleQueryArgumentProperties> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Optional.empty() : Optional.ofNullable(this.singleQueryArgument);
@@ -95,7 +95,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uriPath")
-        private final @Nullable Object uriPath;
+      private final @Nullable Object uriPath;
 
     public Optional<Object> getUriPath() {
         return this.uriPath == null ? Optional.empty() : Optional.ofNullable(this.uriPath);

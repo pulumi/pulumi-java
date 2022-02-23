@@ -17,14 +17,14 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     public static final PolicyTagIamBindingArgs Empty = new PolicyTagIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<PolicyTagIamBindingConditionArgs> condition;
+      private final @Nullable Input<PolicyTagIamBindingConditionArgs> condition;
 
     public Input<PolicyTagIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -35,7 +35,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTag", required=true)
-        private final Input<String> policyTag;
+      private final Input<String> policyTag;
 
     public Input<String> getPolicyTag() {
         return this.policyTag;
@@ -48,7 +48,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

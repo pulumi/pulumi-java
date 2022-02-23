@@ -29,7 +29,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-        private final @Nullable Input<List<Object>> inputs;
+      private final @Nullable Input<List<Object>> inputs;
 
     public Input<List<Object>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -41,7 +41,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

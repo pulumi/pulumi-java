@@ -25,7 +25,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appProtocol")
-        private final @Nullable Input<String> appProtocol;
+      private final @Nullable Input<String> appProtocol;
 
     public Input<String> getAppProtocol() {
         return this.appProtocol == null ? Input.empty() : this.appProtocol;
@@ -36,7 +36,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodePort")
-        private final @Nullable Input<Integer> nodePort;
+      private final @Nullable Input<Integer> nodePort;
 
     public Input<Integer> getNodePort() {
         return this.nodePort == null ? Input.empty() : this.nodePort;
@@ -58,7 +58,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -74,7 +74,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -85,7 +85,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPort")
-        private final @Nullable Input<Either<Integer,String>> targetPort;
+      private final @Nullable Input<Either<Integer,String>> targetPort;
 
     public Input<Either<Integer,String>> getTargetPort() {
         return this.targetPort == null ? Input.empty() : this.targetPort;

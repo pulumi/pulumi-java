@@ -25,7 +25,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureLocation", required=true)
-        private final Input<String> azureLocation;
+      private final Input<String> azureLocation;
 
     public Input<String> getAzureLocation() {
         return this.azureLocation;
@@ -36,7 +36,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureSku", required=true)
-        private final Input<String> azureSku;
+      private final Input<String> azureSku;
 
     public Input<String> getAzureSku() {
         return this.azureSku;
@@ -47,7 +47,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
+      private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
 
     public Input<Either<String,EnterpriseChannelNodeState>> getState() {
         return this.state == null ? Input.empty() : this.state;

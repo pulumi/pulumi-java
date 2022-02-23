@@ -18,35 +18,35 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
     public static final WebACLManagedRuleGroupStatementArgs Empty = new WebACLManagedRuleGroupStatementArgs();
 
     @InputImport(name="excludedRules")
-        private final @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
+      private final @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
 
     public Input<List<WebACLExcludedRuleArgs>> getExcludedRules() {
         return this.excludedRules == null ? Input.empty() : this.excludedRules;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="scopeDownStatement")
-        private final @Nullable Input<WebACLStatementArgs> scopeDownStatement;
+      private final @Nullable Input<WebACLStatementArgs> scopeDownStatement;
 
     public Input<WebACLStatementArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
     }
 
     @InputImport(name="vendorName", required=true)
-        private final Input<String> vendorName;
+      private final Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName;
     }
 
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

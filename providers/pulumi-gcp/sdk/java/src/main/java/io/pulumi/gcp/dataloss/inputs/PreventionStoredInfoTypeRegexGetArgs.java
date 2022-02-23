@@ -21,7 +21,7 @@ public final class PreventionStoredInfoTypeRegexGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupIndexes")
-        private final @Nullable Input<List<Integer>> groupIndexes;
+      private final @Nullable Input<List<Integer>> groupIndexes;
 
     public Input<List<Integer>> getGroupIndexes() {
         return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
@@ -33,7 +33,7 @@ public final class PreventionStoredInfoTypeRegexGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pattern", required=true)
-        private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;

@@ -15,7 +15,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     public static final ListenerCertificateArgs Empty = new ListenerCertificateArgs();
 
     @InputImport(name="certificateArn")
-        private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;

@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends io.pulum
     public static final NodePoolNodeConfigEphemeralStorageConfigArgs Empty = new NodePoolNodeConfigEphemeralStorageConfigArgs();
 
     @InputImport(name="localSsdCount", required=true)
-        private final Input<Integer> localSsdCount;
+      private final Input<Integer> localSsdCount;
 
     public Input<Integer> getLocalSsdCount() {
         return this.localSsdCount;

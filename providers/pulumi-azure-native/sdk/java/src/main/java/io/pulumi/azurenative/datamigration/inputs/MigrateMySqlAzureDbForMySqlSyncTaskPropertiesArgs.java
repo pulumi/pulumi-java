@@ -24,7 +24,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
+      private final @Nullable Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
 
     public Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

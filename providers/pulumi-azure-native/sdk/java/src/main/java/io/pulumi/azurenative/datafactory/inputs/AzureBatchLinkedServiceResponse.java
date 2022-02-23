@@ -33,7 +33,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="accessKey")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessKey() {
         return this.accessKey == null ? null : this.accessKey;
@@ -44,7 +44,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Object accountName;
+      private final Object accountName;
 
     public Object getAccountName() {
         return this.accountName;
@@ -55,7 +55,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -66,7 +66,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="batchUri", required=true)
-        private final Object batchUri;
+      private final Object batchUri;
 
     public Object getBatchUri() {
         return this.batchUri;
@@ -77,7 +77,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -88,7 +88,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -99,7 +99,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -110,7 +110,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -121,7 +121,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -132,7 +132,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -143,7 +143,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="poolName", required=true)
-        private final Object poolName;
+      private final Object poolName;
 
     public Object getPoolName() {
         return this.poolName;
@@ -155,7 +155,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

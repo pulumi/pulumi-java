@@ -23,7 +23,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable String principalId;
+      private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -34,7 +34,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalType", required=true)
-        private final String principalType;
+      private final String principalType;
 
     public String getPrincipalType() {
         return this.principalType;

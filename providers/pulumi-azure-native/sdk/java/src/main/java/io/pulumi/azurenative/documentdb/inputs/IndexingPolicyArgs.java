@@ -31,7 +31,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automatic")
-        private final @Nullable Input<Boolean> automatic;
+      private final @Nullable Input<Boolean> automatic;
 
     public Input<Boolean> getAutomatic() {
         return this.automatic == null ? Input.empty() : this.automatic;
@@ -42,7 +42,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compositeIndexes")
-        private final @Nullable Input<List<List<CompositePathArgs>>> compositeIndexes;
+      private final @Nullable Input<List<List<CompositePathArgs>>> compositeIndexes;
 
     public Input<List<List<CompositePathArgs>>> getCompositeIndexes() {
         return this.compositeIndexes == null ? Input.empty() : this.compositeIndexes;
@@ -53,7 +53,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludedPaths")
-        private final @Nullable Input<List<ExcludedPathArgs>> excludedPaths;
+      private final @Nullable Input<List<ExcludedPathArgs>> excludedPaths;
 
     public Input<List<ExcludedPathArgs>> getExcludedPaths() {
         return this.excludedPaths == null ? Input.empty() : this.excludedPaths;
@@ -64,7 +64,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedPaths")
-        private final @Nullable Input<List<IncludedPathArgs>> includedPaths;
+      private final @Nullable Input<List<IncludedPathArgs>> includedPaths;
 
     public Input<List<IncludedPathArgs>> getIncludedPaths() {
         return this.includedPaths == null ? Input.empty() : this.includedPaths;
@@ -75,7 +75,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexingMode")
-        private final @Nullable Input<Either<String,IndexingMode>> indexingMode;
+      private final @Nullable Input<Either<String,IndexingMode>> indexingMode;
 
     public Input<Either<String,IndexingMode>> getIndexingMode() {
         return this.indexingMode == null ? Input.empty() : this.indexingMode;
@@ -86,7 +86,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spatialIndexes")
-        private final @Nullable Input<List<SpatialSpecArgs>> spatialIndexes;
+      private final @Nullable Input<List<SpatialSpecArgs>> spatialIndexes;
 
     public Input<List<SpatialSpecArgs>> getSpatialIndexes() {
         return this.spatialIndexes == null ? Input.empty() : this.spatialIndexes;

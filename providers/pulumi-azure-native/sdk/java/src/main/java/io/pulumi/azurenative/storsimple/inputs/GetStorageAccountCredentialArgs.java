@@ -17,7 +17,7 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="managerName", required=true)
-        private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -28,7 +28,7 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="storageAccountCredentialName", required=true)
-        private final String storageAccountCredentialName;
+      private final String storageAccountCredentialName;
 
     public String getStorageAccountCredentialName() {
         return this.storageAccountCredentialName;

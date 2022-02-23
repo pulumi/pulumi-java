@@ -20,7 +20,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final SafetyRuleArgs Empty = new SafetyRuleArgs();
 
     @InputImport(name="assertionRule")
-        private final @Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule;
+      private final @Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule;
 
     public Input<SafetyRuleAssertionRuleArgs> getAssertionRule() {
         return this.assertionRule == null ? Input.empty() : this.assertionRule;
@@ -31,28 +31,28 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPanelArn")
-        private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Input<String> controlPanelArn;
 
     public Input<String> getControlPanelArn() {
         return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
     }
 
     @InputImport(name="gatingRule")
-        private final @Nullable Input<SafetyRuleGatingRuleArgs> gatingRule;
+      private final @Nullable Input<SafetyRuleGatingRuleArgs> gatingRule;
 
     public Input<SafetyRuleGatingRuleArgs> getGatingRule() {
         return this.gatingRule == null ? Input.empty() : this.gatingRule;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="ruleConfig")
-        private final @Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig;
+      private final @Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig;
 
     public Input<SafetyRuleRuleConfigArgs> getRuleConfig() {
         return this.ruleConfig == null ? Input.empty() : this.ruleConfig;
@@ -63,7 +63,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<SafetyRuleTagArgs>> tags;
+      private final @Nullable Input<List<SafetyRuleTagArgs>> tags;
 
     public Input<List<SafetyRuleTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

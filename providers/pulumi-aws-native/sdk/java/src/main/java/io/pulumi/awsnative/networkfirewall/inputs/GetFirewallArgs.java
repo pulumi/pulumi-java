@@ -13,7 +13,7 @@ public final class GetFirewallArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFirewallArgs Empty = new GetFirewallArgs();
 
     @InputImport(name="firewallArn", required=true)
-        private final String firewallArn;
+      private final String firewallArn;
 
     public String getFirewallArn() {
         return this.firewallArn;

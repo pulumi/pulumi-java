@@ -17,7 +17,7 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scopeName", required=true)
-        private final String scopeName;
+      private final String scopeName;
 
     public String getScopeName() {
         return this.scopeName;

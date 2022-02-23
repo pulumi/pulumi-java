@@ -17,28 +17,28 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationAr
     public static final DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs Empty = new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs();
 
     @InputImport(name="documentDataFieldName", required=true)
-        private final Input<String> documentDataFieldName;
+      private final Input<String> documentDataFieldName;
 
     public Input<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-        private final @Nullable Input<String> documentTitleFieldName;
+      private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="fieldMappings")
-        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

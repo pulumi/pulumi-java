@@ -25,7 +25,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="conditionAbsent")
-        private final @Nullable Input<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent;
+      private final @Nullable Input<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent;
 
     public Input<AlertPolicyConditionConditionAbsentGetArgs> getConditionAbsent() {
         return this.conditionAbsent == null ? Input.empty() : this.conditionAbsent;
@@ -38,7 +38,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="conditionMatchedLog")
-        private final @Nullable Input<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog;
+      private final @Nullable Input<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog;
 
     public Input<AlertPolicyConditionConditionMatchedLogGetArgs> getConditionMatchedLog() {
         return this.conditionMatchedLog == null ? Input.empty() : this.conditionMatchedLog;
@@ -50,7 +50,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="conditionMonitoringQueryLanguage")
-        private final @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage;
+      private final @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage;
 
     public Input<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> getConditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage == null ? Input.empty() : this.conditionMonitoringQueryLanguage;
@@ -63,7 +63,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="conditionThreshold")
-        private final @Nullable Input<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold;
+      private final @Nullable Input<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold;
 
     public Input<AlertPolicyConditionConditionThresholdGetArgs> getConditionThreshold() {
         return this.conditionThreshold == null ? Input.empty() : this.conditionThreshold;
@@ -78,7 +78,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -95,7 +95,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

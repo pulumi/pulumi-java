@@ -23,7 +23,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<CreateParentGroupInfoArgs> parent;
+      private final @Nullable Input<CreateParentGroupInfoArgs> parent;
 
     public Input<CreateParentGroupInfoArgs> getParent() {
         return this.parent == null ? Input.empty() : this.parent;

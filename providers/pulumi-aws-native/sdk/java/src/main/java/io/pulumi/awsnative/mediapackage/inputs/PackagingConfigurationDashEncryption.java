@@ -17,7 +17,7 @@ public final class PackagingConfigurationDashEncryption extends io.pulumi.resour
     public static final PackagingConfigurationDashEncryption Empty = new PackagingConfigurationDashEncryption();
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+      private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;

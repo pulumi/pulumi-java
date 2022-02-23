@@ -25,7 +25,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="activity", required=true)
-        private final Input<String> activity;
+      private final Input<String> activity;
 
     public Input<String> getActivity() {
         return this.activity;
@@ -36,7 +36,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dependencyConditions", required=true)
-        private final Input<List<Either<String,DependencyCondition>>> dependencyConditions;
+      private final Input<List<Either<String,DependencyCondition>>> dependencyConditions;
 
     public Input<List<Either<String,DependencyCondition>>> getDependencyConditions() {
         return this.dependencyConditions;

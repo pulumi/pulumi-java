@@ -19,28 +19,28 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     public static final RuleGroupRulesSourceArgs Empty = new RuleGroupRulesSourceArgs();
 
     @InputImport(name="rulesSourceList")
-        private final @Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList;
+      private final @Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList;
 
     public Input<RuleGroupRulesSourceListArgs> getRulesSourceList() {
         return this.rulesSourceList == null ? Input.empty() : this.rulesSourceList;
     }
 
     @InputImport(name="rulesString")
-        private final @Nullable Input<String> rulesString;
+      private final @Nullable Input<String> rulesString;
 
     public Input<String> getRulesString() {
         return this.rulesString == null ? Input.empty() : this.rulesString;
     }
 
     @InputImport(name="statefulRules")
-        private final @Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules;
+      private final @Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules;
 
     public Input<List<RuleGroupStatefulRuleArgs>> getStatefulRules() {
         return this.statefulRules == null ? Input.empty() : this.statefulRules;
     }
 
     @InputImport(name="statelessRulesAndCustomActions")
-        private final @Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
+      private final @Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
     public Input<RuleGroupStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {
         return this.statelessRulesAndCustomActions == null ? Input.empty() : this.statelessRulesAndCustomActions;

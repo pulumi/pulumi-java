@@ -18,35 +18,35 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
     public static final ResponseHeadersPolicyConfigArgs Empty = new ResponseHeadersPolicyConfigArgs();
 
     @InputImport(name="comment")
-        private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
     }
 
     @InputImport(name="corsConfig")
-        private final @Nullable Input<ResponseHeadersPolicyCorsConfigArgs> corsConfig;
+      private final @Nullable Input<ResponseHeadersPolicyCorsConfigArgs> corsConfig;
 
     public Input<ResponseHeadersPolicyCorsConfigArgs> getCorsConfig() {
         return this.corsConfig == null ? Input.empty() : this.corsConfig;
     }
 
     @InputImport(name="customHeadersConfig")
-        private final @Nullable Input<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig;
+      private final @Nullable Input<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig;
 
     public Input<ResponseHeadersPolicyCustomHeadersConfigArgs> getCustomHeadersConfig() {
         return this.customHeadersConfig == null ? Input.empty() : this.customHeadersConfig;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="securityHeadersConfig")
-        private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigArgs> getSecurityHeadersConfig() {
         return this.securityHeadersConfig == null ? Input.empty() : this.securityHeadersConfig;

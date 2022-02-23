@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfig extends io.pulumi.re
     public static final ResponseHeadersPolicyCustomHeadersConfig Empty = new ResponseHeadersPolicyCustomHeadersConfig();
 
     @InputImport(name="items", required=true)
-        private final List<ResponseHeadersPolicyCustomHeader> items;
+      private final List<ResponseHeadersPolicyCustomHeader> items;
 
     public List<ResponseHeadersPolicyCustomHeader> getItems() {
         return this.items;

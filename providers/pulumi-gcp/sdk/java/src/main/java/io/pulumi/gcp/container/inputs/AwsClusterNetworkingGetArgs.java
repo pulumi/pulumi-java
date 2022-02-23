@@ -19,7 +19,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="podAddressCidrBlocks", required=true)
-        private final Input<List<String>> podAddressCidrBlocks;
+      private final Input<List<String>> podAddressCidrBlocks;
 
     public Input<List<String>> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
@@ -30,7 +30,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
-        private final Input<List<String>> serviceAddressCidrBlocks;
+      private final Input<List<String>> serviceAddressCidrBlocks;
 
     public Input<List<String>> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
@@ -41,7 +41,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId", required=true)
-        private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

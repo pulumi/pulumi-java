@@ -17,7 +17,7 @@ public final class GetInstancePoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instancePoolName", required=true)
-        private final String instancePoolName;
+      private final String instancePoolName;
 
     public String getInstancePoolName() {
         return this.instancePoolName;
@@ -28,7 +28,7 @@ public final class GetInstancePoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

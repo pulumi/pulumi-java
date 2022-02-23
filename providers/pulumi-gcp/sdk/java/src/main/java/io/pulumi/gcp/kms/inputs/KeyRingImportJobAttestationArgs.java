@@ -15,14 +15,14 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
     public static final KeyRingImportJobAttestationArgs Empty = new KeyRingImportJobAttestationArgs();
 
     @InputImport(name="content")
-        private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
     }
 
     @InputImport(name="format")
-        private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;

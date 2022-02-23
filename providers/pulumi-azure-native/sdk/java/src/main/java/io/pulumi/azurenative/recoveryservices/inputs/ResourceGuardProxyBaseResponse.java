@@ -17,21 +17,21 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
     public static final ResourceGuardProxyBaseResponse Empty = new ResourceGuardProxyBaseResponse();
 
     @InputImport(name="lastUpdatedTime")
-        private final @Nullable String lastUpdatedTime;
+      private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @InputImport(name="resourceGuardOperationDetails")
-        private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
+      private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
 
     public List<ResourceGuardOperationDetailResponse> getResourceGuardOperationDetails() {
         return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
     }
 
     @InputImport(name="resourceGuardResourceId")
-        private final @Nullable String resourceGuardResourceId;
+      private final @Nullable String resourceGuardResourceId;
 
     public Optional<String> getResourceGuardResourceId() {
         return this.resourceGuardResourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceGuardResourceId);

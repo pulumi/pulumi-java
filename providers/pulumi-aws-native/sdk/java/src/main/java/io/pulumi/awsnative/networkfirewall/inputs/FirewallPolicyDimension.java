@@ -13,7 +13,7 @@ public final class FirewallPolicyDimension extends io.pulumi.resources.InvokeArg
     public static final FirewallPolicyDimension Empty = new FirewallPolicyDimension();
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

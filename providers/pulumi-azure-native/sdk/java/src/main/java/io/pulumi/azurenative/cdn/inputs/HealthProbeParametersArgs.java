@@ -26,7 +26,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeIntervalInSeconds")
-        private final @Nullable Input<Integer> probeIntervalInSeconds;
+      private final @Nullable Input<Integer> probeIntervalInSeconds;
 
     public Input<Integer> getProbeIntervalInSeconds() {
         return this.probeIntervalInSeconds == null ? Input.empty() : this.probeIntervalInSeconds;
@@ -37,7 +37,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probePath")
-        private final @Nullable Input<String> probePath;
+      private final @Nullable Input<String> probePath;
 
     public Input<String> getProbePath() {
         return this.probePath == null ? Input.empty() : this.probePath;
@@ -48,7 +48,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeProtocol")
-        private final @Nullable Input<ProbeProtocol> probeProtocol;
+      private final @Nullable Input<ProbeProtocol> probeProtocol;
 
     public Input<ProbeProtocol> getProbeProtocol() {
         return this.probeProtocol == null ? Input.empty() : this.probeProtocol;
@@ -59,7 +59,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeRequestType")
-        private final @Nullable Input<HealthProbeRequestType> probeRequestType;
+      private final @Nullable Input<HealthProbeRequestType> probeRequestType;
 
     public Input<HealthProbeRequestType> getProbeRequestType() {
         return this.probeRequestType == null ? Input.empty() : this.probeRequestType;

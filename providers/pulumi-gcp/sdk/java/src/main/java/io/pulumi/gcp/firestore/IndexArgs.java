@@ -21,7 +21,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection", required=true)
-        private final Input<String> collection;
+      private final Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection;
@@ -32,7 +32,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-        private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -49,7 +49,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-        private final Input<List<IndexFieldArgs>> fields;
+      private final Input<List<IndexFieldArgs>> fields;
 
     public Input<List<IndexFieldArgs>> getFields() {
         return this.fields;
@@ -61,7 +61,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,7 +74,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryScope")
-        private final @Nullable Input<String> queryScope;
+      private final @Nullable Input<String> queryScope;
 
     public Input<String> getQueryScope() {
         return this.queryScope == null ? Input.empty() : this.queryScope;

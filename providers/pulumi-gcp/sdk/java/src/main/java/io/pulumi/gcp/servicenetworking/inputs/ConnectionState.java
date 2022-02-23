@@ -20,14 +20,14 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="peering")
-        private final @Nullable Input<String> peering;
+      private final @Nullable Input<String> peering;
 
     public Input<String> getPeering() {
         return this.peering == null ? Input.empty() : this.peering;
@@ -40,7 +40,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedPeeringRanges")
-        private final @Nullable Input<List<String>> reservedPeeringRanges;
+      private final @Nullable Input<List<String>> reservedPeeringRanges;
 
     public Input<List<String>> getReservedPeeringRanges() {
         return this.reservedPeeringRanges == null ? Input.empty() : this.reservedPeeringRanges;
@@ -53,7 +53,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;

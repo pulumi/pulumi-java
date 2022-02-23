@@ -20,7 +20,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
+      private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
 
     public Input<DefaultRolloutPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-        private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -42,7 +42,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutName")
-        private final @Nullable Input<String> rolloutName;
+      private final @Nullable Input<String> rolloutName;
 
     public Input<String> getRolloutName() {
         return this.rolloutName == null ? Input.empty() : this.rolloutName;

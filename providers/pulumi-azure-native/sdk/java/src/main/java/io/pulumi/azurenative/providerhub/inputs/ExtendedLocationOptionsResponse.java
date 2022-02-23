@@ -15,14 +15,14 @@ public final class ExtendedLocationOptionsResponse extends io.pulumi.resources.I
     public static final ExtendedLocationOptionsResponse Empty = new ExtendedLocationOptionsResponse();
 
     @InputImport(name="supportedPolicy")
-        private final @Nullable String supportedPolicy;
+      private final @Nullable String supportedPolicy;
 
     public Optional<String> getSupportedPolicy() {
         return this.supportedPolicy == null ? Optional.empty() : Optional.ofNullable(this.supportedPolicy);
     }
 
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

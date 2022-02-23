@@ -25,7 +25,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configEncryption", required=true)
-        private final Input<AwsNodePoolConfigConfigEncryptionArgs> configEncryption;
+      private final Input<AwsNodePoolConfigConfigEncryptionArgs> configEncryption;
 
     public Input<AwsNodePoolConfigConfigEncryptionArgs> getConfigEncryption() {
         return this.configEncryption;
@@ -36,7 +36,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iamInstanceProfile", required=true)
-        private final Input<String> iamInstanceProfile;
+      private final Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile;
@@ -47,7 +47,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -58,7 +58,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -69,7 +69,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootVolume")
-        private final @Nullable Input<AwsNodePoolConfigRootVolumeArgs> rootVolume;
+      private final @Nullable Input<AwsNodePoolConfigRootVolumeArgs> rootVolume;
 
     public Input<AwsNodePoolConfigRootVolumeArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -80,7 +80,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-        private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -91,7 +91,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sshConfig")
-        private final @Nullable Input<AwsNodePoolConfigSshConfigArgs> sshConfig;
+      private final @Nullable Input<AwsNodePoolConfigSshConfigArgs> sshConfig;
 
     public Input<AwsNodePoolConfigSshConfigArgs> getSshConfig() {
         return this.sshConfig == null ? Input.empty() : this.sshConfig;
@@ -102,7 +102,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -113,7 +113,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="taints")
-        private final @Nullable Input<List<AwsNodePoolConfigTaintArgs>> taints;
+      private final @Nullable Input<List<AwsNodePoolConfigTaintArgs>> taints;
 
     public Input<List<AwsNodePoolConfigTaintArgs>> getTaints() {
         return this.taints == null ? Input.empty() : this.taints;

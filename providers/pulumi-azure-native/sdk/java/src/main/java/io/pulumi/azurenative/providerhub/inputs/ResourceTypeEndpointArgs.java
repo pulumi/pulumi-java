@@ -19,49 +19,49 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     public static final ResourceTypeEndpointArgs Empty = new ResourceTypeEndpointArgs();
 
     @InputImport(name="apiVersions")
-        private final @Nullable Input<List<String>> apiVersions;
+      private final @Nullable Input<List<String>> apiVersions;
 
     public Input<List<String>> getApiVersions() {
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
     }
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="extensions")
-        private final @Nullable Input<List<ResourceTypeExtensionArgs>> extensions;
+      private final @Nullable Input<List<ResourceTypeExtensionArgs>> extensions;
 
     public Input<List<ResourceTypeExtensionArgs>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="featuresRule")
-        private final @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
+      private final @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
     public Input<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
         return this.featuresRule == null ? Input.empty() : this.featuresRule;
     }
 
     @InputImport(name="locations")
-        private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
     @InputImport(name="requiredFeatures")
-        private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Input<List<String>> requiredFeatures;
 
     public Input<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

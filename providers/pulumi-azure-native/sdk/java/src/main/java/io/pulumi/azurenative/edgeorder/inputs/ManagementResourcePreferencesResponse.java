@@ -23,7 +23,7 @@ public final class ManagementResourcePreferencesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="preferredManagementResourceId")
-        private final @Nullable String preferredManagementResourceId;
+      private final @Nullable String preferredManagementResourceId;
 
     public Optional<String> getPreferredManagementResourceId() {
         return this.preferredManagementResourceId == null ? Optional.empty() : Optional.ofNullable(this.preferredManagementResourceId);

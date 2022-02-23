@@ -16,14 +16,14 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
     public static final OriginRequestPolicyHeadersConfigArgs Empty = new OriginRequestPolicyHeadersConfigArgs();
 
     @InputImport(name="headerBehavior", required=true)
-        private final Input<String> headerBehavior;
+      private final Input<String> headerBehavior;
 
     public Input<String> getHeaderBehavior() {
         return this.headerBehavior;
     }
 
     @InputImport(name="headers")
-        private final @Nullable Input<List<String>> headers;
+      private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;

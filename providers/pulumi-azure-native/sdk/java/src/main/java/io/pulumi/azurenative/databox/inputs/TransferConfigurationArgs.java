@@ -27,7 +27,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferAllDetails")
-        private final @Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
+      private final @Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
     public Input<TransferConfigurationTransferAllDetailsArgs> getTransferAllDetails() {
         return this.transferAllDetails == null ? Input.empty() : this.transferAllDetails;
@@ -38,7 +38,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferConfigurationType", required=true)
-        private final Input<Either<String,TransferConfigurationType>> transferConfigurationType;
+      private final Input<Either<String,TransferConfigurationType>> transferConfigurationType;
 
     public Input<Either<String,TransferConfigurationType>> getTransferConfigurationType() {
         return this.transferConfigurationType;
@@ -49,7 +49,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferFilterDetails")
-        private final @Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
+      private final @Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
     public Input<TransferConfigurationTransferFilterDetailsArgs> getTransferFilterDetails() {
         return this.transferFilterDetails == null ? Input.empty() : this.transferFilterDetails;

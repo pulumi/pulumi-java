@@ -24,7 +24,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerInstanceId", required=true)
-        private final String containerInstanceId;
+      private final String containerInstanceId;
 
     public String getContainerInstanceId() {
         return this.containerInstanceId;
@@ -35,7 +35,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-        private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -46,7 +46,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="error")
-        private final @Nullable ErrorResponseResponse error;
+      private final @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -57,7 +57,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationTime", required=true)
-        private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -68,7 +68,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -79,7 +79,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-        private final String storageAccountId;
+      private final String storageAccountId;
 
     public String getStorageAccountId() {
         return this.storageAccountId;

@@ -28,7 +28,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<String> identity;
+      private final @Nullable Input<String> identity;
 
     public Input<String> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -40,7 +40,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<SecretObjectArgs> password;
+      private final @Nullable Input<SecretObjectArgs> password;
 
     public Input<SecretObjectArgs> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -51,7 +51,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Input<SecretObjectArgs> userName;
+      private final @Nullable Input<SecretObjectArgs> userName;
 
     public Input<SecretObjectArgs> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

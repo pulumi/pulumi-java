@@ -13,21 +13,21 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer extends io.pulum
     public static final GetEnvironmentConfigWorkloadsConfigWebServer Empty = new GetEnvironmentConfigWorkloadsConfigWebServer();
 
     @InputImport(name="cpu", required=true)
-        private final Double cpu;
+      private final Double cpu;
 
     public Double getCpu() {
         return this.cpu;
     }
 
     @InputImport(name="memoryGb", required=true)
-        private final Double memoryGb;
+      private final Double memoryGb;
 
     public Double getMemoryGb() {
         return this.memoryGb;
     }
 
     @InputImport(name="storageGb", required=true)
-        private final Double storageGb;
+      private final Double storageGb;
 
     public Double getStorageGb() {
         return this.storageGb;

@@ -79,7 +79,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="auditActionsAndGroups")
-        private final @Nullable Input<List<String>> auditActionsAndGroups;
+      private final @Nullable Input<List<String>> auditActionsAndGroups;
 
     public Input<List<String>> getAuditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? Input.empty() : this.auditActionsAndGroups;
@@ -90,7 +90,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="blobAuditingPolicyName")
-        private final @Nullable Input<String> blobAuditingPolicyName;
+      private final @Nullable Input<String> blobAuditingPolicyName;
 
     public Input<String> getBlobAuditingPolicyName() {
         return this.blobAuditingPolicyName == null ? Input.empty() : this.blobAuditingPolicyName;
@@ -111,7 +111,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="isAzureMonitorTargetEnabled")
-        private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
+      private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
 
     public Input<Boolean> getIsAzureMonitorTargetEnabled() {
         return this.isAzureMonitorTargetEnabled == null ? Input.empty() : this.isAzureMonitorTargetEnabled;
@@ -131,7 +131,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="isDevopsAuditEnabled")
-        private final @Nullable Input<Boolean> isDevopsAuditEnabled;
+      private final @Nullable Input<Boolean> isDevopsAuditEnabled;
 
     public Input<Boolean> getIsDevopsAuditEnabled() {
         return this.isDevopsAuditEnabled == null ? Input.empty() : this.isDevopsAuditEnabled;
@@ -142,7 +142,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="isStorageSecondaryKeyInUse")
-        private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
+      private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
 
     public Input<Boolean> getIsStorageSecondaryKeyInUse() {
         return this.isStorageSecondaryKeyInUse == null ? Input.empty() : this.isStorageSecondaryKeyInUse;
@@ -153,7 +153,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="predicateExpression")
-        private final @Nullable Input<String> predicateExpression;
+      private final @Nullable Input<String> predicateExpression;
 
     public Input<String> getPredicateExpression() {
         return this.predicateExpression == null ? Input.empty() : this.predicateExpression;
@@ -165,7 +165,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queueDelayMs")
-        private final @Nullable Input<Integer> queueDelayMs;
+      private final @Nullable Input<Integer> queueDelayMs;
 
     public Input<Integer> getQueueDelayMs() {
         return this.queueDelayMs == null ? Input.empty() : this.queueDelayMs;
@@ -176,7 +176,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -187,7 +187,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="retentionDays")
-        private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -198,7 +198,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -209,7 +209,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="state", required=true)
-        private final Input<BlobAuditingPolicyState> state;
+      private final Input<BlobAuditingPolicyState> state;
 
     public Input<BlobAuditingPolicyState> getState() {
         return this.state;
@@ -225,7 +225,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-        private final @Nullable Input<String> storageAccountAccessKey;
+      private final @Nullable Input<String> storageAccountAccessKey;
 
     public Input<String> getStorageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
@@ -236,7 +236,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageAccountSubscriptionId")
-        private final @Nullable Input<String> storageAccountSubscriptionId;
+      private final @Nullable Input<String> storageAccountSubscriptionId;
 
     public Input<String> getStorageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId == null ? Input.empty() : this.storageAccountSubscriptionId;
@@ -247,7 +247,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageEndpoint")
-        private final @Nullable Input<String> storageEndpoint;
+      private final @Nullable Input<String> storageEndpoint;
 
     public Input<String> getStorageEndpoint() {
         return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;

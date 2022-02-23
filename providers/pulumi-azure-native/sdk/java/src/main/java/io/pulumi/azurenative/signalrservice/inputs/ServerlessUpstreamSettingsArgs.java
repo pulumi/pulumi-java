@@ -24,7 +24,7 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="templates")
-        private final @Nullable Input<List<UpstreamTemplateArgs>> templates;
+      private final @Nullable Input<List<UpstreamTemplateArgs>> templates;
 
     public Input<List<UpstreamTemplateArgs>> getTemplates() {
         return this.templates == null ? Input.empty() : this.templates;

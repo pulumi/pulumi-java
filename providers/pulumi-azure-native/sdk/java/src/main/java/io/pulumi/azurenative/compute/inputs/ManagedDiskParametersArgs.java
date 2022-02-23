@@ -26,7 +26,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskEncryptionSet")
-        private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+      private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
     public Input<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
         return this.diskEncryptionSet == null ? Input.empty() : this.diskEncryptionSet;
@@ -37,7 +37,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
+      private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
 
     public Input<Either<String,StorageAccountTypes>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;

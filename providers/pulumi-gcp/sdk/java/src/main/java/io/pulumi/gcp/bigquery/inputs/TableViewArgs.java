@@ -20,7 +20,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-        private final Input<String> query;
+      private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -32,7 +32,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-        private final @Nullable Input<Boolean> useLegacySql;
+      private final @Nullable Input<Boolean> useLegacySql;
 
     public Input<Boolean> getUseLegacySql() {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;

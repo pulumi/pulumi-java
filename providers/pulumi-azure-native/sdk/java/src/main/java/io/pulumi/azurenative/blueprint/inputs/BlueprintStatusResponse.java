@@ -21,7 +21,7 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastModified", required=true)
-        private final String lastModified;
+      private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -32,7 +32,7 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeCreated", required=true)
-        private final String timeCreated;
+      private final String timeCreated;
 
     public String getTimeCreated() {
         return this.timeCreated;

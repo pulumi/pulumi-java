@@ -27,7 +27,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="architecture")
-        private final @Nullable Input<Either<String,Architecture>> architecture;
+      private final @Nullable Input<Either<String,Architecture>> architecture;
 
     public Input<Either<String,Architecture>> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -38,7 +38,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="os", required=true)
-        private final Input<Either<String,OS>> os;
+      private final Input<Either<String,OS>> os;
 
     public Input<Either<String,OS>> getOs() {
         return this.os;
@@ -49,7 +49,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="variant")
-        private final @Nullable Input<Either<String,Variant>> variant;
+      private final @Nullable Input<Either<String,Variant>> variant;
 
     public Input<Either<String,Variant>> getVariant() {
         return this.variant == null ? Input.empty() : this.variant;

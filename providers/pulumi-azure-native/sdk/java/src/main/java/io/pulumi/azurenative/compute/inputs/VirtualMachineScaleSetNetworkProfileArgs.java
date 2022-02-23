@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="healthProbe")
-        private final @Nullable Input<ApiEntityReferenceArgs> healthProbe;
+      private final @Nullable Input<ApiEntityReferenceArgs> healthProbe;
 
     public Input<ApiEntityReferenceArgs> getHealthProbe() {
         return this.healthProbe == null ? Input.empty() : this.healthProbe;
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkApiVersion")
-        private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
+      private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
 
     public Input<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-        private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+      private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
     public Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;

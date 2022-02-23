@@ -25,7 +25,7 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -58,7 +58,7 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+      private final @Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,BatchAccountIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

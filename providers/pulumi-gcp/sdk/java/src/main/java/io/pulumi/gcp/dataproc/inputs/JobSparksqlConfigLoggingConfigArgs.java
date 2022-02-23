@@ -15,7 +15,7 @@ public final class JobSparksqlConfigLoggingConfigArgs extends io.pulumi.resource
     public static final JobSparksqlConfigLoggingConfigArgs Empty = new JobSparksqlConfigLoggingConfigArgs();
 
     @InputImport(name="driverLogLevels", required=true)
-        private final Input<Map<String,String>> driverLogLevels;
+      private final Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels;

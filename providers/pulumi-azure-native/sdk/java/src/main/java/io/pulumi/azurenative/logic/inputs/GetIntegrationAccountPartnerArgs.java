@@ -17,7 +17,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-        private final String integrationAccountName;
+      private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="partnerName", required=true)
-        private final String partnerName;
+      private final String partnerName;
 
     public String getPartnerName() {
         return this.partnerName;
@@ -39,7 +39,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

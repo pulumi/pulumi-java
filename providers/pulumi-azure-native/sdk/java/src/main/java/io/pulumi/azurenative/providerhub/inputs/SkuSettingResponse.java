@@ -20,84 +20,84 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
     public static final SkuSettingResponse Empty = new SkuSettingResponse();
 
     @InputImport(name="capabilities")
-        private final @Nullable List<SkuCapabilityResponse> capabilities;
+      private final @Nullable List<SkuCapabilityResponse> capabilities;
 
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
     @InputImport(name="capacity")
-        private final @Nullable SkuSettingResponseCapacity capacity;
+      private final @Nullable SkuSettingResponseCapacity capacity;
 
     public Optional<SkuSettingResponseCapacity> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
     @InputImport(name="costs")
-        private final @Nullable List<SkuCostResponse> costs;
+      private final @Nullable List<SkuCostResponse> costs;
 
     public List<SkuCostResponse> getCosts() {
         return this.costs == null ? List.of() : this.costs;
     }
 
     @InputImport(name="family")
-        private final @Nullable String family;
+      private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
     @InputImport(name="kind")
-        private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
     @InputImport(name="locationInfo")
-        private final @Nullable List<SkuLocationInfoResponse> locationInfo;
+      private final @Nullable List<SkuLocationInfoResponse> locationInfo;
 
     public List<SkuLocationInfoResponse> getLocationInfo() {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
 
     @InputImport(name="locations")
-        private final @Nullable List<String> locations;
+      private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="requiredFeatures")
-        private final @Nullable List<String> requiredFeatures;
+      private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
     @InputImport(name="requiredQuotaIds")
-        private final @Nullable List<String> requiredQuotaIds;
+      private final @Nullable List<String> requiredQuotaIds;
 
     public List<String> getRequiredQuotaIds() {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
 
     @InputImport(name="size")
-        private final @Nullable String size;
+      private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
     @InputImport(name="tier")
-        private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);

@@ -19,7 +19,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="perimeterName")
-        private final @Nullable Input<String> perimeterName;
+      private final @Nullable Input<String> perimeterName;
 
     public Input<String> getPerimeterName() {
         return this.perimeterName == null ? Input.empty() : this.perimeterName;
@@ -32,7 +32,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resource")
-        private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;

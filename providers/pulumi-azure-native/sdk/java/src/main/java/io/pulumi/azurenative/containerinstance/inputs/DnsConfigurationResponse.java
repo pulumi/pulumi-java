@@ -24,7 +24,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nameServers", required=true)
-        private final List<String> nameServers;
+      private final List<String> nameServers;
 
     public List<String> getNameServers() {
         return this.nameServers;
@@ -35,7 +35,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="options")
-        private final @Nullable String options;
+      private final @Nullable String options;
 
     public Optional<String> getOptions() {
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
@@ -46,7 +46,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="searchDomains")
-        private final @Nullable String searchDomains;
+      private final @Nullable String searchDomains;
 
     public Optional<String> getSearchDomains() {
         return this.searchDomains == null ? Optional.empty() : Optional.ofNullable(this.searchDomains);

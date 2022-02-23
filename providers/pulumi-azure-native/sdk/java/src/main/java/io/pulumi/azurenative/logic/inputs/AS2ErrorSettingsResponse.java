@@ -21,7 +21,7 @@ public final class AS2ErrorSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resendIfMDNNotReceived", required=true)
-        private final Boolean resendIfMDNNotReceived;
+      private final Boolean resendIfMDNNotReceived;
 
     public Boolean getResendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
@@ -32,7 +32,7 @@ public final class AS2ErrorSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="suspendDuplicateMessage", required=true)
-        private final Boolean suspendDuplicateMessage;
+      private final Boolean suspendDuplicateMessage;
 
     public Boolean getSuspendDuplicateMessage() {
         return this.suspendDuplicateMessage;

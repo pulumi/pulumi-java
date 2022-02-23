@@ -24,7 +24,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
      * 
      */
     @InputImport(name="categories")
-        private final @Nullable List<String> categories;
+      private final @Nullable List<String> categories;
 
     public List<String> getCategories() {
         return this.categories == null ? List.of() : this.categories;
@@ -35,7 +35,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
      * 
      */
     @InputImport(name="resourceTypes")
-        private final @Nullable List<String> resourceTypes;
+      private final @Nullable List<String> resourceTypes;
 
     public List<String> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
@@ -46,7 +46,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
      * 
      */
     @InputImport(name="solutions")
-        private final @Nullable List<String> solutions;
+      private final @Nullable List<String> solutions;
 
     public List<String> getSolutions() {
         return this.solutions == null ? List.of() : this.solutions;

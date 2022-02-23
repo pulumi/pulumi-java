@@ -25,7 +25,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="licenses", required=true)
-        private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
+      private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
     public Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> getLicenses() {
         return this.licenses;
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCustomData")
-        private final @Nullable Input<String> responseCustomData;
+      private final @Nullable Input<String> responseCustomData;
 
     public Input<String> getResponseCustomData() {
         return this.responseCustomData == null ? Input.empty() : this.responseCustomData;

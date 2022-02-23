@@ -24,14 +24,14 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
     public static final RepositoryEncryptionConfigurationArgs Empty = new RepositoryEncryptionConfigurationArgs();
 
     @InputImport(name="encryptionType", required=true)
-        private final Input<RepositoryEncryptionType> encryptionType;
+      private final Input<RepositoryEncryptionType> encryptionType;
 
     public Input<RepositoryEncryptionType> getEncryptionType() {
         return this.encryptionType;
     }
 
     @InputImport(name="kmsKey")
-        private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;

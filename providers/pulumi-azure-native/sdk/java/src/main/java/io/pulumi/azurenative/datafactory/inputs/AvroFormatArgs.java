@@ -24,7 +24,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deserializer")
-        private final @Nullable Input<Object> deserializer;
+      private final @Nullable Input<Object> deserializer;
 
     public Input<Object> getDeserializer() {
         return this.deserializer == null ? Input.empty() : this.deserializer;
@@ -35,7 +35,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serializer")
-        private final @Nullable Input<Object> serializer;
+      private final @Nullable Input<Object> serializer;
 
     public Input<Object> getSerializer() {
         return this.serializer == null ? Input.empty() : this.serializer;
@@ -47,7 +47,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

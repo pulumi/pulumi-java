@@ -22,7 +22,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * 
      */
     @InputImport(name="errorCode", required=true)
-        private final Integer errorCode;
+      private final Integer errorCode;
 
     public Integer getErrorCode() {
         return this.errorCode;
@@ -33,7 +33,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * 
      */
     @InputImport(name="persistentCount", required=true)
-        private final Double persistentCount;
+      private final Double persistentCount;
 
     public Double getPersistentCount() {
         return this.persistentCount;
@@ -44,7 +44,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * 
      */
     @InputImport(name="transientCount", required=true)
-        private final Double transientCount;
+      private final Double transientCount;
 
     public Double getTransientCount() {
         return this.transientCount;

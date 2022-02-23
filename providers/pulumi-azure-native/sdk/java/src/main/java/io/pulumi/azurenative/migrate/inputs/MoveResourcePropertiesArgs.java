@@ -39,7 +39,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dependsOnOverrides")
-        private final @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
+      private final @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
     public Input<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
         return this.dependsOnOverrides == null ? Input.empty() : this.dependsOnOverrides;
@@ -50,7 +50,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="existingTargetId")
-        private final @Nullable Input<String> existingTargetId;
+      private final @Nullable Input<String> existingTargetId;
 
     public Input<String> getExistingTargetId() {
         return this.existingTargetId == null ? Input.empty() : this.existingTargetId;
@@ -61,7 +61,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceSettings")
-        private final @Nullable Input<Object> resourceSettings;
+      private final @Nullable Input<Object> resourceSettings;
 
     public Input<Object> getResourceSettings() {
         return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
@@ -72,7 +72,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceId", required=true)
-        private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;

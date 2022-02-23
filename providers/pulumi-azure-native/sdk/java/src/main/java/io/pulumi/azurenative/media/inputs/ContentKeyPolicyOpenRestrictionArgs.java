@@ -23,7 +23,7 @@ public final class ContentKeyPolicyOpenRestrictionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

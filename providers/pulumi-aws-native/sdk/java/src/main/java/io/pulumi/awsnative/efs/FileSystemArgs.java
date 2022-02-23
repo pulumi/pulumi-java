@@ -22,14 +22,14 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     public static final FileSystemArgs Empty = new FileSystemArgs();
 
     @InputImport(name="availabilityZoneName")
-        private final @Nullable Input<String> availabilityZoneName;
+      private final @Nullable Input<String> availabilityZoneName;
 
     public Input<String> getAvailabilityZoneName() {
         return this.availabilityZoneName == null ? Input.empty() : this.availabilityZoneName;
     }
 
     @InputImport(name="backupPolicy")
-        private final @Nullable Input<FileSystemBackupPolicyArgs> backupPolicy;
+      private final @Nullable Input<FileSystemBackupPolicyArgs> backupPolicy;
 
     public Input<FileSystemBackupPolicyArgs> getBackupPolicy() {
         return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
@@ -40,63 +40,63 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-        private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     @InputImport(name="encrypted")
-        private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
     }
 
     @InputImport(name="fileSystemPolicy")
-        private final @Nullable Input<Object> fileSystemPolicy;
+      private final @Nullable Input<Object> fileSystemPolicy;
 
     public Input<Object> getFileSystemPolicy() {
         return this.fileSystemPolicy == null ? Input.empty() : this.fileSystemPolicy;
     }
 
     @InputImport(name="fileSystemTags")
-        private final @Nullable Input<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
+      private final @Nullable Input<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
 
     public Input<List<FileSystemElasticFileSystemTagArgs>> getFileSystemTags() {
         return this.fileSystemTags == null ? Input.empty() : this.fileSystemTags;
     }
 
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="lifecyclePolicies")
-        private final @Nullable Input<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
+      private final @Nullable Input<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
 
     public Input<List<FileSystemLifecyclePolicyArgs>> getLifecyclePolicies() {
         return this.lifecyclePolicies == null ? Input.empty() : this.lifecyclePolicies;
     }
 
     @InputImport(name="performanceMode")
-        private final @Nullable Input<String> performanceMode;
+      private final @Nullable Input<String> performanceMode;
 
     public Input<String> getPerformanceMode() {
         return this.performanceMode == null ? Input.empty() : this.performanceMode;
     }
 
     @InputImport(name="provisionedThroughputInMibps")
-        private final @Nullable Input<Double> provisionedThroughputInMibps;
+      private final @Nullable Input<Double> provisionedThroughputInMibps;
 
     public Input<Double> getProvisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps == null ? Input.empty() : this.provisionedThroughputInMibps;
     }
 
     @InputImport(name="throughputMode")
-        private final @Nullable Input<String> throughputMode;
+      private final @Nullable Input<String> throughputMode;
 
     public Input<String> getThroughputMode() {
         return this.throughputMode == null ? Input.empty() : this.throughputMode;

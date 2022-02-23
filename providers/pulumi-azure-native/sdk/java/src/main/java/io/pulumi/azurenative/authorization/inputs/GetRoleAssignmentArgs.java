@@ -19,7 +19,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="roleAssignmentName", required=true)
-        private final String roleAssignmentName;
+      private final String roleAssignmentName;
 
     public String getRoleAssignmentName() {
         return this.roleAssignmentName;
@@ -30,7 +30,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-        private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -41,7 +41,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);

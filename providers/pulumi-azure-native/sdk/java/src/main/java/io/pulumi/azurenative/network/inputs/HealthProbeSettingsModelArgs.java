@@ -28,7 +28,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,HealthProbeEnabled>> enabledState;
+      private final @Nullable Input<Either<String,HealthProbeEnabled>> enabledState;
 
     public Input<Either<String,HealthProbeEnabled>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -39,7 +39,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthProbeMethod")
-        private final @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
+      private final @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
     public Input<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
         return this.healthProbeMethod == null ? Input.empty() : this.healthProbeMethod;
@@ -50,7 +50,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -61,7 +61,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="intervalInSeconds")
-        private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Input<Integer> intervalInSeconds;
 
     public Input<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
@@ -72,7 +72,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -83,7 +83,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -94,7 +94,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<Either<String,FrontDoorProtocol>> protocol;
+      private final @Nullable Input<Either<String,FrontDoorProtocol>> protocol;
 
     public Input<Either<String,FrontDoorProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

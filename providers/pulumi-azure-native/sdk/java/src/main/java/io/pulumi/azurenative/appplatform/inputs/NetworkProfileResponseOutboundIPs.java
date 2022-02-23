@@ -22,7 +22,7 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIPs", required=true)
-        private final List<String> publicIPs;
+      private final List<String> publicIPs;
 
     public List<String> getPublicIPs() {
         return this.publicIPs;

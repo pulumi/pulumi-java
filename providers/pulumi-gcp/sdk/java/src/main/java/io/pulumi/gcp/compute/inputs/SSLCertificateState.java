@@ -23,7 +23,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificate")
-        private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -34,7 +34,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificateId")
-        private final @Nullable Input<Integer> certificateId;
+      private final @Nullable Input<Integer> certificateId;
 
     public Input<Integer> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -45,7 +45,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-        private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -56,7 +56,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -85,7 +85,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-        private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -97,7 +97,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateKey")
-        private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -109,7 +109,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -120,7 +120,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;

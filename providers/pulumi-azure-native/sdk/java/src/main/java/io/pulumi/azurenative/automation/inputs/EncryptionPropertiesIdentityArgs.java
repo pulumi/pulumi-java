@@ -23,7 +23,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userAssignedIdentity")
-        private final @Nullable Input<Object> userAssignedIdentity;
+      private final @Nullable Input<Object> userAssignedIdentity;
 
     public Input<Object> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;

@@ -33,7 +33,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-        private final Input<String> backupManagementType;
+      private final Input<String> backupManagementType;
 
     public Input<String> getBackupManagementType() {
         return this.backupManagementType;
@@ -44,7 +44,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="protectedItemsCount")
-        private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Input<Integer> protectedItemsCount;
 
     public Input<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
@@ -55,7 +55,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+      private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -66,7 +66,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schedulePolicy")
-        private final @Nullable Input<Object> schedulePolicy;
+      private final @Nullable Input<Object> schedulePolicy;
 
     public Input<Object> getSchedulePolicy() {
         return this.schedulePolicy == null ? Input.empty() : this.schedulePolicy;
@@ -77,7 +77,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -88,7 +88,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workLoadType")
-        private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
+      private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
 
     public Input<Either<String,WorkloadType>> getWorkLoadType() {
         return this.workLoadType == null ? Input.empty() : this.workLoadType;

@@ -17,7 +17,7 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-        private final String domainId;
+      private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
@@ -28,7 +28,7 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userProfileName", required=true)
-        private final String userProfileName;
+      private final String userProfileName;
 
     public String getUserProfileName() {
         return this.userProfileName;

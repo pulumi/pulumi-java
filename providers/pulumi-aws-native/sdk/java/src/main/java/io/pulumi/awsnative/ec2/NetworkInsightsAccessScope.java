@@ -67,6 +67,21 @@ public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkInsightsAccessScope(String name) {
+        this(name, NetworkInsightsAccessScopeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkInsightsAccessScope(String name, @Nullable NetworkInsightsAccessScopeArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

@@ -23,7 +23,7 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);

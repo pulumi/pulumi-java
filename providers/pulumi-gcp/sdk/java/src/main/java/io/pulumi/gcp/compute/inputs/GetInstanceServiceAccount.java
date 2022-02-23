@@ -18,7 +18,7 @@ public final class GetInstanceServiceAccount extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="email", required=true)
-        private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -29,7 +29,7 @@ public final class GetInstanceServiceAccount extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="scopes", required=true)
-        private final List<String> scopes;
+      private final List<String> scopes;
 
     public List<String> getScopes() {
         return this.scopes;

@@ -23,7 +23,7 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pattern")
-        private final @Nullable String pattern;
+      private final @Nullable String pattern;
 
     public Optional<String> getPattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);

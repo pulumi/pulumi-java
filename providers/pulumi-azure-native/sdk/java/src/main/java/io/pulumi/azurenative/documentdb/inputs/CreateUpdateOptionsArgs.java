@@ -24,7 +24,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoscaleSettings")
-        private final @Nullable Input<AutoscaleSettingsArgs> autoscaleSettings;
+      private final @Nullable Input<AutoscaleSettingsArgs> autoscaleSettings;
 
     public Input<AutoscaleSettingsArgs> getAutoscaleSettings() {
         return this.autoscaleSettings == null ? Input.empty() : this.autoscaleSettings;
@@ -35,7 +35,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="throughput")
-        private final @Nullable Input<Integer> throughput;
+      private final @Nullable Input<Integer> throughput;
 
     public Input<Integer> getThroughput() {
         return this.throughput == null ? Input.empty() : this.throughput;

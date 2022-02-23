@@ -22,7 +22,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="parameter", required=true)
-        private final Input<String> parameter;
+      private final Input<String> parameter;
 
     public Input<String> getParameter() {
         return this.parameter;
@@ -33,7 +33,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="scheme", required=true)
-        private final Input<String> scheme;
+      private final Input<String> scheme;
 
     public Input<String> getScheme() {
         return this.scheme;

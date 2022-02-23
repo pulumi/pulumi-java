@@ -21,7 +21,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authScheme")
-        private final @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme;
+      private final @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme;
 
     public Input<DBProxyAuthFormatAuthScheme> getAuthScheme() {
         return this.authScheme == null ? Input.empty() : this.authScheme;
@@ -32,7 +32,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iAMAuth")
-        private final @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth;
+      private final @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth;
 
     public Input<DBProxyAuthFormatIAMAuth> getIAMAuth() {
         return this.iAMAuth == null ? Input.empty() : this.iAMAuth;
@@ -54,7 +54,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="secretArn")
-        private final @Nullable Input<String> secretArn;
+      private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;
@@ -65,7 +65,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

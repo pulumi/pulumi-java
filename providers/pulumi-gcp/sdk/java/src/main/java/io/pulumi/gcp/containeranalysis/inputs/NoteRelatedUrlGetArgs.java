@@ -19,7 +19,7 @@ public final class NoteRelatedUrlGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="label")
-        private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -30,7 +30,7 @@ public final class NoteRelatedUrlGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

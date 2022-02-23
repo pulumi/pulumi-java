@@ -23,7 +23,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disableTraceRoute")
-        private final @Nullable Input<Boolean> disableTraceRoute;
+      private final @Nullable Input<Boolean> disableTraceRoute;
 
     public Input<Boolean> getDisableTraceRoute() {
         return this.disableTraceRoute == null ? Input.empty() : this.disableTraceRoute;

@@ -26,7 +26,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationDeltaHealthPolicies")
-        private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
+      private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
     public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
@@ -39,7 +39,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyApplications", required=true)
-        private final Integer maxPercentDeltaUnhealthyApplications;
+      private final Integer maxPercentDeltaUnhealthyApplications;
 
     public Integer getMaxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
@@ -52,7 +52,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyNodes", required=true)
-        private final Integer maxPercentDeltaUnhealthyNodes;
+      private final Integer maxPercentDeltaUnhealthyNodes;
 
     public Integer getMaxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
@@ -65,7 +65,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
-        private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
+      private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
     public Integer getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;

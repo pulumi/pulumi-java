@@ -27,7 +27,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricTrigger")
-        private final @Nullable Input<LogMetricTriggerArgs> metricTrigger;
+      private final @Nullable Input<LogMetricTriggerArgs> metricTrigger;
 
     public Input<LogMetricTriggerArgs> getMetricTrigger() {
         return this.metricTrigger == null ? Input.empty() : this.metricTrigger;
@@ -38,7 +38,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="threshold", required=true)
-        private final Input<Double> threshold;
+      private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -49,7 +49,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thresholdOperator", required=true)
-        private final Input<Either<String,ConditionalOperator>> thresholdOperator;
+      private final Input<Either<String,ConditionalOperator>> thresholdOperator;
 
     public Input<Either<String,ConditionalOperator>> getThresholdOperator() {
         return this.thresholdOperator;

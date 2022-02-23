@@ -17,14 +17,14 @@ public final class ReplicationConfigurationReplicationDestination extends io.pul
     public static final ReplicationConfigurationReplicationDestination Empty = new ReplicationConfigurationReplicationDestination();
 
     @InputImport(name="region", required=true)
-        private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="registryId", required=true)
-        private final String registryId;
+      private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;

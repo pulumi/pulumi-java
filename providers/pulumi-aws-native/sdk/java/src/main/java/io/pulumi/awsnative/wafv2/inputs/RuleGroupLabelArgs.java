@@ -14,7 +14,7 @@ public final class RuleGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuleGroupLabelArgs Empty = new RuleGroupLabelArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

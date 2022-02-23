@@ -20,7 +20,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="catalogId")
-        private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -31,7 +31,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="databaseName")
-        private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -42,14 +42,14 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
     @InputImport(name="tempDirectory")
-        private final @Nullable Input<RecipeS3LocationArgs> tempDirectory;
+      private final @Nullable Input<RecipeS3LocationArgs> tempDirectory;
 
     public Input<RecipeS3LocationArgs> getTempDirectory() {
         return this.tempDirectory == null ? Input.empty() : this.tempDirectory;

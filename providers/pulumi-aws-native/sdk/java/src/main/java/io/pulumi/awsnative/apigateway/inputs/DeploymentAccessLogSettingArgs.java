@@ -19,7 +19,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinationArn")
-        private final @Nullable Input<String> destinationArn;
+      private final @Nullable Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn == null ? Input.empty() : this.destinationArn;
@@ -30,7 +30,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="format")
-        private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;

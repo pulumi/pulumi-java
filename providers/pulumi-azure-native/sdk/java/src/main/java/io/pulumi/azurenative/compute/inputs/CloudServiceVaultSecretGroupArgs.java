@@ -25,7 +25,7 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceVault")
-        private final @Nullable Input<SubResourceArgs> sourceVault;
+      private final @Nullable Input<SubResourceArgs> sourceVault;
 
     public Input<SubResourceArgs> getSourceVault() {
         return this.sourceVault == null ? Input.empty() : this.sourceVault;
@@ -36,7 +36,7 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vaultCertificates")
-        private final @Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
+      private final @Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
 
     public Input<List<CloudServiceVaultCertificateArgs>> getVaultCertificates() {
         return this.vaultCertificates == null ? Input.empty() : this.vaultCertificates;

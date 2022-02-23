@@ -26,7 +26,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auth")
-        private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
+      private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
 
     public Input<List<ScaleRuleAuthArgs>> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -37,7 +37,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -49,7 +49,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

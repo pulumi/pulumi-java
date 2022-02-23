@@ -18,14 +18,14 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="apiKey", required=true)
-        private final Input<String> apiKey;
+      private final Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey;
     }
 
     @InputImport(name="secretKey", required=true)
-        private final Input<String> secretKey;
+      private final Input<String> secretKey;
 
     public Input<String> getSecretKey() {
         return this.secretKey;

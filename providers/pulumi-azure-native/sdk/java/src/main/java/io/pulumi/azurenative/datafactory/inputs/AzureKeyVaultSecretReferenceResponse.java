@@ -25,7 +25,7 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secretName", required=true)
-        private final Object secretName;
+      private final Object secretName;
 
     public Object getSecretName() {
         return this.secretName;
@@ -36,7 +36,7 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secretVersion")
-        private final @Nullable Object secretVersion;
+      private final @Nullable Object secretVersion;
 
     public Optional<Object> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
@@ -47,7 +47,7 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="store", required=true)
-        private final LinkedServiceReferenceResponse store;
+      private final LinkedServiceReferenceResponse store;
 
     public LinkedServiceReferenceResponse getStore() {
         return this.store;
@@ -59,7 +59,7 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

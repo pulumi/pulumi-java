@@ -24,7 +24,7 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="addressPrefixes")
-        private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Input<List<String>> addressPrefixes;
 
     public Input<List<String>> getAddressPrefixes() {
         return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
@@ -35,7 +35,7 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nextHopIpAddress")
-        private final @Nullable Input<String> nextHopIpAddress;
+      private final @Nullable Input<String> nextHopIpAddress;
 
     public Input<String> getNextHopIpAddress() {
         return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;

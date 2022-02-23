@@ -24,14 +24,14 @@ public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<DataSourceErrorInfoType> type;
+      private final @Nullable Input<DataSourceErrorInfoType> type;
 
     public Input<DataSourceErrorInfoType> getType() {
         return this.type == null ? Input.empty() : this.type;

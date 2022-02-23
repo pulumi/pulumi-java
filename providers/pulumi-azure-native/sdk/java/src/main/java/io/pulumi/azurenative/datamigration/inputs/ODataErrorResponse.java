@@ -22,7 +22,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code", required=true)
-        private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -33,7 +33,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details", required=true)
-        private final List<ODataErrorResponse> details;
+      private final List<ODataErrorResponse> details;
 
     public List<ODataErrorResponse> getDetails() {
         return this.details;
@@ -44,7 +44,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;

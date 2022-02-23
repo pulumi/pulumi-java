@@ -17,21 +17,21 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     public static final DatastoreStorageArgs Empty = new DatastoreStorageArgs();
 
     @InputImport(name="customerManagedS3")
-        private final @Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3;
+      private final @Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3;
 
     public Input<DatastoreCustomerManagedS3Args> getCustomerManagedS3() {
         return this.customerManagedS3 == null ? Input.empty() : this.customerManagedS3;
     }
 
     @InputImport(name="iotSiteWiseMultiLayerStorage")
-        private final @Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
+      private final @Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
 
     public Input<DatastoreIotSiteWiseMultiLayerStorageArgs> getIotSiteWiseMultiLayerStorage() {
         return this.iotSiteWiseMultiLayerStorage == null ? Input.empty() : this.iotSiteWiseMultiLayerStorage;
     }
 
     @InputImport(name="serviceManagedS3")
-        private final @Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3;
+      private final @Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3;
 
     public Input<DatastoreServiceManagedS3Args> getServiceManagedS3() {
         return this.serviceManagedS3 == null ? Input.empty() : this.serviceManagedS3;

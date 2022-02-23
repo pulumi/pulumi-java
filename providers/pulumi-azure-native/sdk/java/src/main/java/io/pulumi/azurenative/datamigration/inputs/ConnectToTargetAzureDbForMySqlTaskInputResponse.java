@@ -21,7 +21,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends io.pu
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-        private final MySqlConnectionInfoResponse sourceConnectionInfo;
+      private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -32,7 +32,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends io.pu
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final MySqlConnectionInfoResponse targetConnectionInfo;
+      private final MySqlConnectionInfoResponse targetConnectionInfo;
 
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

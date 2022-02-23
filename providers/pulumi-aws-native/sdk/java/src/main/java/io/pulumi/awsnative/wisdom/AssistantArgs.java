@@ -19,35 +19,35 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssistantArgs Empty = new AssistantArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="serverSideEncryptionConfiguration")
-        private final @Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+      private final @Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Input<AssistantServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<AssistantTagArgs>> tags;
+      private final @Nullable Input<List<AssistantTagArgs>> tags;
 
     public Input<List<AssistantTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<AssistantType> type;
+      private final Input<AssistantType> type;
 
     public Input<AssistantType> getType() {
         return this.type;

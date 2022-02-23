@@ -24,7 +24,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerConcurrency")
-        private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Input<Integer> containerConcurrency;
 
     public Input<Integer> getContainerConcurrency() {
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
@@ -40,7 +40,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containers")
-        private final @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers;
 
     public Input<List<ServiceTemplateSpecContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -54,7 +54,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccountName")
-        private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
@@ -73,7 +73,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="servingState")
-        private final @Nullable Input<String> servingState;
+      private final @Nullable Input<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<String> getServingState() {
@@ -85,7 +85,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeoutSeconds")
-        private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -97,7 +97,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volumes")
-        private final @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes;
+      private final @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
     public Input<List<ServiceTemplateSpecVolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;

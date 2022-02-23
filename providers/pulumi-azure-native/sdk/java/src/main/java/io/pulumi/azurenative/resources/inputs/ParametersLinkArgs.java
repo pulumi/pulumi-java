@@ -23,7 +23,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentVersion")
-        private final @Nullable Input<String> contentVersion;
+      private final @Nullable Input<String> contentVersion;
 
     public Input<String> getContentVersion() {
         return this.contentVersion == null ? Input.empty() : this.contentVersion;
@@ -34,7 +34,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

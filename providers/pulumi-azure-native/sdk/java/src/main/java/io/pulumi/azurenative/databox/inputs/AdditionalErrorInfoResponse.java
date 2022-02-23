@@ -24,7 +24,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="info")
-        private final @Nullable Object info;
+      private final @Nullable Object info;
 
     public Optional<Object> getInfo() {
         return this.info == null ? Optional.empty() : Optional.ofNullable(this.info);
@@ -35,7 +35,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

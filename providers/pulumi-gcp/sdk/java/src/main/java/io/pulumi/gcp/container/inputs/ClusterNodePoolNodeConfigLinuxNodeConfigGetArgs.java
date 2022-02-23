@@ -21,7 +21,7 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="sysctls", required=true)
-        private final Input<Map<String,String>> sysctls;
+      private final Input<Map<String,String>> sysctls;
 
     public Input<Map<String,String>> getSysctls() {
         return this.sysctls;

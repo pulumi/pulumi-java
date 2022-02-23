@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOriginsArgs extends io
     public static final ResponseHeadersPolicyAccessControlAllowOriginsArgs Empty = new ResponseHeadersPolicyAccessControlAllowOriginsArgs();
 
     @InputImport(name="items", required=true)
-        private final Input<List<String>> items;
+      private final Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items;

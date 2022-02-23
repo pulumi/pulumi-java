@@ -22,7 +22,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
      * 
      */
     @InputImport(name="monthDay")
-        private final @Nullable Input<Integer> monthDay;
+      private final @Nullable Input<Integer> monthDay;
 
     public Input<Integer> getMonthDay() {
         return this.monthDay == null ? Input.empty() : this.monthDay;
@@ -34,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
      * 
      */
     @InputImport(name="weekDayOfMonth")
-        private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth;
+      private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth;
 
     public Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> getWeekDayOfMonth() {
         return this.weekDayOfMonth == null ? Input.empty() : this.weekDayOfMonth;

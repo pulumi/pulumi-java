@@ -22,7 +22,7 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timerName", required=true)
-        private final Input<String> timerName;
+      private final Input<String> timerName;
 
     public Input<String> getTimerName() {
         return this.timerName;

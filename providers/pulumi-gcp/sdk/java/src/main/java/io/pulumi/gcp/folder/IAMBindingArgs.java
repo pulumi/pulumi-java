@@ -17,7 +17,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMBindingArgs Empty = new IAMBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<IAMBindingConditionArgs> condition;
+      private final @Nullable Input<IAMBindingConditionArgs> condition;
 
     public Input<IAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder", required=true)
-        private final Input<String> folder;
+      private final Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder;
@@ -45,7 +45,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -58,7 +58,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

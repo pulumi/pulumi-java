@@ -20,7 +20,7 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -31,7 +31,7 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -42,7 +42,7 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
      * 
      */
     @InputImport(name="clientSecret", required=true)
-        private final Input<String> clientSecret;
+      private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
@@ -53,7 +53,7 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
      * 
      */
     @InputImport(name="connectorOAuthRequest")
-        private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+      private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Input<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Input.empty() : this.connectorOAuthRequest;
@@ -64,7 +64,7 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
      * 
      */
     @InputImport(name="refreshToken")
-        private final @Nullable Input<String> refreshToken;
+      private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;

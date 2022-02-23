@@ -31,7 +31,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoScalingPolicies")
-        private final @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies;
+      private final @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
     public Input<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
         return this.autoScalingPolicies == null ? Input.empty() : this.autoScalingPolicies;
@@ -42,7 +42,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="codePackages", required=true)
-        private final Input<List<ContainerCodePackagePropertiesArgs>> codePackages;
+      private final Input<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
     public Input<List<ContainerCodePackagePropertiesArgs>> getCodePackages() {
         return this.codePackages;
@@ -53,7 +53,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="diagnostics")
-        private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
+      private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
 
     public Input<DiagnosticsRefArgs> getDiagnostics() {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
@@ -75,7 +75,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkRefs")
-        private final @Nullable Input<List<NetworkRefArgs>> networkRefs;
+      private final @Nullable Input<List<NetworkRefArgs>> networkRefs;
 
     public Input<List<NetworkRefArgs>> getNetworkRefs() {
         return this.networkRefs == null ? Input.empty() : this.networkRefs;
@@ -97,7 +97,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="osType", required=true)
-        private final Input<Either<String,OperatingSystemType>> osType;
+      private final Input<Either<String,OperatingSystemType>> osType;
 
     public Input<Either<String,OperatingSystemType>> getOsType() {
         return this.osType;
@@ -108,7 +108,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="replicaCount")
-        private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;

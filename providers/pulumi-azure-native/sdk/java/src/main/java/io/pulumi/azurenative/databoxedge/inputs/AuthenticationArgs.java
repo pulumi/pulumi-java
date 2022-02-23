@@ -23,7 +23,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="symmetricKey")
-        private final @Nullable Input<SymmetricKeyArgs> symmetricKey;
+      private final @Nullable Input<SymmetricKeyArgs> symmetricKey;
 
     public Input<SymmetricKeyArgs> getSymmetricKey() {
         return this.symmetricKey == null ? Input.empty() : this.symmetricKey;

@@ -18,7 +18,7 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dataprocMetastoreService", required=true)
-        private final Input<String> dataprocMetastoreService;
+      private final Input<String> dataprocMetastoreService;
 
     public Input<String> getDataprocMetastoreService() {
         return this.dataprocMetastoreService;

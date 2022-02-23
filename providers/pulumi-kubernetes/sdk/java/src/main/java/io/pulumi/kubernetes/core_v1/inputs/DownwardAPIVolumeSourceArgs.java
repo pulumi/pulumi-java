@@ -25,7 +25,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultMode")
-        private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -36,7 +36,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="items")
-        private final @Nullable Input<List<DownwardAPIVolumeFileArgs>> items;
+      private final @Nullable Input<List<DownwardAPIVolumeFileArgs>> items;
 
     public Input<List<DownwardAPIVolumeFileArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;

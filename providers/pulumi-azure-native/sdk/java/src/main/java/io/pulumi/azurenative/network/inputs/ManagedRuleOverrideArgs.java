@@ -25,7 +25,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleId", required=true)
-        private final Input<String> ruleId;
+      private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -36,7 +36,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
+      private final @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
 
     public Input<Either<String,ManagedRuleEnabledState>> getState() {
         return this.state == null ? Input.empty() : this.state;

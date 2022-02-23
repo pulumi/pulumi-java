@@ -17,7 +17,7 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gameServerGroupArn", required=true)
-        private final String gameServerGroupArn;
+      private final String gameServerGroupArn;
 
     public String getGameServerGroupArn() {
         return this.gameServerGroupArn;

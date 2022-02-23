@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="allowedExitCodes")
-        private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="args")
-        private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -43,7 +43,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="artifactId")
-        private final @Nullable Input<String> artifactId;
+      private final @Nullable Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId == null ? Input.empty() : this.artifactId;
@@ -54,7 +54,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="localPath")
-        private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;

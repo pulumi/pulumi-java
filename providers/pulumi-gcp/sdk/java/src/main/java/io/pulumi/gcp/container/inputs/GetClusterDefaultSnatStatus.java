@@ -13,7 +13,7 @@ public final class GetClusterDefaultSnatStatus extends io.pulumi.resources.Invok
     public static final GetClusterDefaultSnatStatus Empty = new GetClusterDefaultSnatStatus();
 
     @InputImport(name="disabled", required=true)
-        private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;

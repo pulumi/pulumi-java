@@ -22,7 +22,7 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pattern", required=true)
-        private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;

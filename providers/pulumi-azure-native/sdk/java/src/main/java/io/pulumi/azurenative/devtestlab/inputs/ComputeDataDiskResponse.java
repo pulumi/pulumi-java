@@ -24,7 +24,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskSizeGiB")
-        private final @Nullable Integer diskSizeGiB;
+      private final @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> getDiskSizeGiB() {
         return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
@@ -35,7 +35,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskUri")
-        private final @Nullable String diskUri;
+      private final @Nullable String diskUri;
 
     public Optional<String> getDiskUri() {
         return this.diskUri == null ? Optional.empty() : Optional.ofNullable(this.diskUri);
@@ -46,7 +46,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="managedDiskId")
-        private final @Nullable String managedDiskId;
+      private final @Nullable String managedDiskId;
 
     public Optional<String> getManagedDiskId() {
         return this.managedDiskId == null ? Optional.empty() : Optional.ofNullable(this.managedDiskId);
@@ -57,7 +57,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);

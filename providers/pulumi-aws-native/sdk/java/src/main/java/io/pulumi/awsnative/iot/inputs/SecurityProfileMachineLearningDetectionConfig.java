@@ -23,7 +23,7 @@ public final class SecurityProfileMachineLearningDetectionConfig extends io.pulu
      * 
      */
     @InputImport(name="confidenceLevel")
-        private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
+      private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
 
     public Optional<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
         return this.confidenceLevel == null ? Optional.empty() : Optional.ofNullable(this.confidenceLevel);

@@ -15,14 +15,14 @@ public final class EC2FleetTotalLocalStorageGBRequestArgs extends io.pulumi.reso
     public static final EC2FleetTotalLocalStorageGBRequestArgs Empty = new EC2FleetTotalLocalStorageGBRequestArgs();
 
     @InputImport(name="max")
-        private final @Nullable Input<Double> max;
+      private final @Nullable Input<Double> max;
 
     public Input<Double> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-        private final @Nullable Input<Double> min;
+      private final @Nullable Input<Double> min;
 
     public Input<Double> getMin() {
         return this.min == null ? Input.empty() : this.min;

@@ -15,21 +15,21 @@ public final class ConfigS3RecordingConfig extends io.pulumi.resources.InvokeArg
     public static final ConfigS3RecordingConfig Empty = new ConfigS3RecordingConfig();
 
     @InputImport(name="bucketArn")
-        private final @Nullable String bucketArn;
+      private final @Nullable String bucketArn;
 
     public Optional<String> getBucketArn() {
         return this.bucketArn == null ? Optional.empty() : Optional.ofNullable(this.bucketArn);
     }
 
     @InputImport(name="prefix")
-        private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @InputImport(name="roleArn")
-        private final @Nullable String roleArn;
+      private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);

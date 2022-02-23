@@ -17,7 +17,7 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-        private final String linkedServiceName;
+      private final String linkedServiceName;
 
     public String getLinkedServiceName() {
         return this.linkedServiceName;
@@ -39,7 +39,7 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -20,7 +20,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gid")
-        private final @Nullable Input<Integer> gid;
+      private final @Nullable Input<Integer> gid;
 
     public Input<Integer> getGid() {
         return this.gid == null ? Input.empty() : this.gid;
@@ -31,7 +31,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sshPrivateKey")
-        private final @Nullable Input<String> sshPrivateKey;
+      private final @Nullable Input<String> sshPrivateKey;
 
     public Input<String> getSshPrivateKey() {
         return this.sshPrivateKey == null ? Input.empty() : this.sshPrivateKey;
@@ -42,7 +42,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable Input<Integer> uid;
+      private final @Nullable Input<Integer> uid;
 
     public Input<Integer> getUid() {
         return this.uid == null ? Input.empty() : this.uid;

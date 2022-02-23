@@ -26,7 +26,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultBackendAddressPool")
-        private final @Nullable Input<SubResourceArgs> defaultBackendAddressPool;
+      private final @Nullable Input<SubResourceArgs> defaultBackendAddressPool;
 
     public Input<SubResourceArgs> getDefaultBackendAddressPool() {
         return this.defaultBackendAddressPool == null ? Input.empty() : this.defaultBackendAddressPool;
@@ -37,7 +37,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultBackendHttpSettings")
-        private final @Nullable Input<SubResourceArgs> defaultBackendHttpSettings;
+      private final @Nullable Input<SubResourceArgs> defaultBackendHttpSettings;
 
     public Input<SubResourceArgs> getDefaultBackendHttpSettings() {
         return this.defaultBackendHttpSettings == null ? Input.empty() : this.defaultBackendHttpSettings;
@@ -48,7 +48,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultRedirectConfiguration")
-        private final @Nullable Input<SubResourceArgs> defaultRedirectConfiguration;
+      private final @Nullable Input<SubResourceArgs> defaultRedirectConfiguration;
 
     public Input<SubResourceArgs> getDefaultRedirectConfiguration() {
         return this.defaultRedirectConfiguration == null ? Input.empty() : this.defaultRedirectConfiguration;
@@ -59,7 +59,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultRewriteRuleSet")
-        private final @Nullable Input<SubResourceArgs> defaultRewriteRuleSet;
+      private final @Nullable Input<SubResourceArgs> defaultRewriteRuleSet;
 
     public Input<SubResourceArgs> getDefaultRewriteRuleSet() {
         return this.defaultRewriteRuleSet == null ? Input.empty() : this.defaultRewriteRuleSet;
@@ -70,7 +70,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -81,7 +81,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pathRules")
-        private final @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules;
+      private final @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
     public Input<List<ApplicationGatewayPathRuleArgs>> getPathRules() {
         return this.pathRules == null ? Input.empty() : this.pathRules;

@@ -24,7 +24,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerID")
-        private final @Nullable Input<String> containerID;
+      private final @Nullable Input<String> containerID;
 
     public Input<String> getContainerID() {
         return this.containerID == null ? Input.empty() : this.containerID;
@@ -35,7 +35,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="exitCode", required=true)
-        private final Input<Integer> exitCode;
+      private final Input<Integer> exitCode;
 
     public Input<Integer> getExitCode() {
         return this.exitCode;
@@ -46,7 +46,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="finishedAt")
-        private final @Nullable Input<String> finishedAt;
+      private final @Nullable Input<String> finishedAt;
 
     public Input<String> getFinishedAt() {
         return this.finishedAt == null ? Input.empty() : this.finishedAt;
@@ -57,7 +57,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -68,7 +68,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reason")
-        private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -79,7 +79,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="signal")
-        private final @Nullable Input<Integer> signal;
+      private final @Nullable Input<Integer> signal;
 
     public Input<Integer> getSignal() {
         return this.signal == null ? Input.empty() : this.signal;
@@ -90,7 +90,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startedAt")
-        private final @Nullable Input<String> startedAt;
+      private final @Nullable Input<String> startedAt;
 
     public Input<String> getStartedAt() {
         return this.startedAt == null ? Input.empty() : this.startedAt;

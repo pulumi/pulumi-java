@@ -36,7 +36,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-        private final Input<Either<String,SamplingAlgorithm>> algorithm;
+      private final Input<Either<String,SamplingAlgorithm>> algorithm;
 
     public Input<Either<String,SamplingAlgorithm>> getAlgorithm() {
         return this.algorithm;
@@ -47,7 +47,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compute", required=true)
-        private final Input<ComputeConfigurationArgs> compute;
+      private final Input<ComputeConfigurationArgs> compute;
 
     public Input<ComputeConfigurationArgs> getCompute() {
         return this.compute;
@@ -58,7 +58,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -69,7 +69,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="earlyTermination")
-        private final @Nullable Input<Object> earlyTermination;
+      private final @Nullable Input<Object> earlyTermination;
 
     public Input<Object> getEarlyTermination() {
         return this.earlyTermination == null ? Input.empty() : this.earlyTermination;
@@ -80,7 +80,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experimentName")
-        private final @Nullable Input<String> experimentName;
+      private final @Nullable Input<String> experimentName;
 
     public Input<String> getExperimentName() {
         return this.experimentName == null ? Input.empty() : this.experimentName;
@@ -92,7 +92,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
+      private final @Nullable Input<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
     public Input<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -104,7 +104,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobType", required=true)
-        private final Input<String> jobType;
+      private final Input<String> jobType;
 
     public Input<String> getJobType() {
         return this.jobType;
@@ -115,7 +115,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentTrials")
-        private final @Nullable Input<Integer> maxConcurrentTrials;
+      private final @Nullable Input<Integer> maxConcurrentTrials;
 
     public Input<Integer> getMaxConcurrentTrials() {
         return this.maxConcurrentTrials == null ? Input.empty() : this.maxConcurrentTrials;
@@ -126,7 +126,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTotalTrials")
-        private final @Nullable Input<Integer> maxTotalTrials;
+      private final @Nullable Input<Integer> maxTotalTrials;
 
     public Input<Integer> getMaxTotalTrials() {
         return this.maxTotalTrials == null ? Input.empty() : this.maxTotalTrials;
@@ -137,7 +137,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objective", required=true)
-        private final Input<ObjectiveArgs> objective;
+      private final Input<ObjectiveArgs> objective;
 
     public Input<ObjectiveArgs> getObjective() {
         return this.objective;
@@ -149,7 +149,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -160,7 +160,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -171,7 +171,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchSpace", required=true)
-        private final Input<Map<String,Object>> searchSpace;
+      private final Input<Map<String,Object>> searchSpace;
 
     public Input<Map<String,Object>> getSearchSpace() {
         return this.searchSpace;
@@ -182,7 +182,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -193,7 +193,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -204,7 +204,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trial")
-        private final @Nullable Input<TrialComponentArgs> trial;
+      private final @Nullable Input<TrialComponentArgs> trial;
 
     public Input<TrialComponentArgs> getTrial() {
         return this.trial == null ? Input.empty() : this.trial;

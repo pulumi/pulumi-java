@@ -19,7 +19,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricsScope", required=true)
-        private final Input<String> metricsScope;
+      private final Input<String> metricsScope;
 
     public Input<String> getMetricsScope() {
         return this.metricsScope;
@@ -30,7 +30,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

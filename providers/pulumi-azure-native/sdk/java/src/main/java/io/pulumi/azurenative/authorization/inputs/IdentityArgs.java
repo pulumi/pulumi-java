@@ -23,7 +23,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<ResourceIdentityType> type;
+      private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;

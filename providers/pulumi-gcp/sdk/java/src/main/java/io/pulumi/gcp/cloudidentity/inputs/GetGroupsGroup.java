@@ -16,49 +16,49 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
     public static final GetGroupsGroup Empty = new GetGroupsGroup();
 
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="groupKeys", required=true)
-        private final List<GetGroupsGroupGroupKey> groupKeys;
+      private final List<GetGroupsGroupGroupKey> groupKeys;
 
     public List<GetGroupsGroupGroupKey> getGroupKeys() {
         return this.groupKeys;
     }
 
     @InputImport(name="initialGroupConfig", required=true)
-        private final String initialGroupConfig;
+      private final String initialGroupConfig;
 
     public String getInitialGroupConfig() {
         return this.initialGroupConfig;
     }
 
     @InputImport(name="labels", required=true)
-        private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -69,14 +69,14 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final String parent;
+      private final String parent;
 
     public String getParent() {
         return this.parent;
     }
 
     @InputImport(name="updateTime", required=true)
-        private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;

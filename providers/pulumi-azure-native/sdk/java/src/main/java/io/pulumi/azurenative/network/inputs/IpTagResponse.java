@@ -23,7 +23,7 @@ public final class IpTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipTagType")
-        private final @Nullable String ipTagType;
+      private final @Nullable String ipTagType;
 
     public Optional<String> getIpTagType() {
         return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
@@ -34,7 +34,7 @@ public final class IpTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);

@@ -17,21 +17,21 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
     public static final ConfigSpectrumConfigArgs Empty = new ConfigSpectrumConfigArgs();
 
     @InputImport(name="bandwidth")
-        private final @Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth;
+      private final @Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth;
 
     public Input<ConfigFrequencyBandwidthArgs> getBandwidth() {
         return this.bandwidth == null ? Input.empty() : this.bandwidth;
     }
 
     @InputImport(name="centerFrequency")
-        private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
+      private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
 
     public Input<ConfigFrequencyArgs> getCenterFrequency() {
         return this.centerFrequency == null ? Input.empty() : this.centerFrequency;
     }
 
     @InputImport(name="polarization")
-        private final @Nullable Input<ConfigPolarization> polarization;
+      private final @Nullable Input<ConfigPolarization> polarization;
 
     public Input<ConfigPolarization> getPolarization() {
         return this.polarization == null ? Input.empty() : this.polarization;

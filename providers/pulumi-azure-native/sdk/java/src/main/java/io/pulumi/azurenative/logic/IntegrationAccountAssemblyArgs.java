@@ -21,7 +21,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="assemblyArtifactName")
-        private final @Nullable Input<String> assemblyArtifactName;
+      private final @Nullable Input<String> assemblyArtifactName;
 
     public Input<String> getAssemblyArtifactName() {
         return this.assemblyArtifactName == null ? Input.empty() : this.assemblyArtifactName;
@@ -32,7 +32,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-        private final Input<String> integrationAccountName;
+      private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -43,7 +43,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<AssemblyPropertiesArgs> properties;
+      private final Input<AssemblyPropertiesArgs> properties;
 
     public Input<AssemblyPropertiesArgs> getProperties() {
         return this.properties;
@@ -65,7 +65,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

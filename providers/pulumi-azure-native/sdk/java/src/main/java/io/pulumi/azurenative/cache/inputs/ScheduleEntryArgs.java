@@ -25,7 +25,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-        private final Input<DayOfWeek> dayOfWeek;
+      private final Input<DayOfWeek> dayOfWeek;
 
     public Input<DayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
@@ -36,7 +36,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-        private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Input<String> maintenanceWindow;
 
     public Input<String> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -47,7 +47,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startHourUtc", required=true)
-        private final Input<Integer> startHourUtc;
+      private final Input<Integer> startHourUtc;
 
     public Input<Integer> getStartHourUtc() {
         return this.startHourUtc;

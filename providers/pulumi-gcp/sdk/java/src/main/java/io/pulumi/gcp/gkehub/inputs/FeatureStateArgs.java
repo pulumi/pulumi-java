@@ -16,7 +16,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     public static final FeatureStateArgs Empty = new FeatureStateArgs();
 
     @InputImport(name="states")
-        private final @Nullable Input<List<FeatureStateStateArgs>> states;
+      private final @Nullable Input<List<FeatureStateStateArgs>> states;
 
     public Input<List<FeatureStateStateArgs>> getStates() {
         return this.states == null ? Input.empty() : this.states;

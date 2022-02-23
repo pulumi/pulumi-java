@@ -19,7 +19,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consoleName")
-        private final @Nullable Input<String> consoleName;
+      private final @Nullable Input<String> consoleName;
 
     public Input<String> getConsoleName() {
         return this.consoleName == null ? Input.empty() : this.consoleName;
@@ -30,7 +30,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;

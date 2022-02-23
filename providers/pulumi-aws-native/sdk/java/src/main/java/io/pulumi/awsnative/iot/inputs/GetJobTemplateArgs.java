@@ -13,7 +13,7 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetJobTemplateArgs Empty = new GetJobTemplateArgs();
 
     @InputImport(name="jobTemplateId", required=true)
-        private final String jobTemplateId;
+      private final String jobTemplateId;
 
     public String getJobTemplateId() {
         return this.jobTemplateId;

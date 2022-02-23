@@ -27,7 +27,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="azureVirtualMachines")
-        private final @Nullable List<String> azureVirtualMachines;
+      private final @Nullable List<String> azureVirtualMachines;
 
     public List<String> getAzureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
@@ -38,7 +38,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="duration")
-        private final @Nullable String duration;
+      private final @Nullable String duration;
 
     public Optional<String> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
@@ -49,7 +49,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="linux")
-        private final @Nullable LinuxPropertiesResponse linux;
+      private final @Nullable LinuxPropertiesResponse linux;
 
     public Optional<LinuxPropertiesResponse> getLinux() {
         return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
@@ -60,7 +60,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="nonAzureComputerNames")
-        private final @Nullable List<String> nonAzureComputerNames;
+      private final @Nullable List<String> nonAzureComputerNames;
 
     public List<String> getNonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
@@ -71,7 +71,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-        private final String operatingSystem;
+      private final String operatingSystem;
 
     public String getOperatingSystem() {
         return this.operatingSystem;
@@ -82,7 +82,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targets")
-        private final @Nullable TargetPropertiesResponse targets;
+      private final @Nullable TargetPropertiesResponse targets;
 
     public Optional<TargetPropertiesResponse> getTargets() {
         return this.targets == null ? Optional.empty() : Optional.ofNullable(this.targets);
@@ -93,7 +93,7 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="windows")
-        private final @Nullable WindowsPropertiesResponse windows;
+      private final @Nullable WindowsPropertiesResponse windows;
 
     public Optional<WindowsPropertiesResponse> getWindows() {
         return this.windows == null ? Optional.empty() : Optional.ofNullable(this.windows);

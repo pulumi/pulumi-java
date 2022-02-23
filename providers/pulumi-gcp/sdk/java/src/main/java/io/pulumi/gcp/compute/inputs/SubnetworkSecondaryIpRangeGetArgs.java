@@ -21,7 +21,7 @@ public final class SubnetworkSecondaryIpRangeGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-        private final Input<String> ipCidrRange;
+      private final Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange;
@@ -35,7 +35,7 @@ public final class SubnetworkSecondaryIpRangeGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rangeName", required=true)
-        private final Input<String> rangeName;
+      private final Input<String> rangeName;
 
     public Input<String> getRangeName() {
         return this.rangeName;

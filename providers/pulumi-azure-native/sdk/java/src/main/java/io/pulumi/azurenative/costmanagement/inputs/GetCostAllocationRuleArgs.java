@@ -17,7 +17,7 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="billingAccountId", required=true)
-        private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
@@ -28,7 +28,7 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ruleName", required=true)
-        private final String ruleName;
+      private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;

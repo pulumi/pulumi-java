@@ -16,14 +16,14 @@ public final class InstanceFromTemplateReservationAffinityGetArgs extends io.pul
     public static final InstanceFromTemplateReservationAffinityGetArgs Empty = new InstanceFromTemplateReservationAffinityGetArgs();
 
     @InputImport(name="specificReservation")
-        private final @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> specificReservation;
+      private final @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> specificReservation;
 
     public Input<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

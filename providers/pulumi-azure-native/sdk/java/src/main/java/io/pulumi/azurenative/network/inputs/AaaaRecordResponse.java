@@ -23,7 +23,7 @@ public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv6Address")
-        private final @Nullable String ipv6Address;
+      private final @Nullable String ipv6Address;
 
     public Optional<String> getIpv6Address() {
         return this.ipv6Address == null ? Optional.empty() : Optional.ofNullable(this.ipv6Address);

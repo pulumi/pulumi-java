@@ -17,7 +17,7 @@ public final class GetDataConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataConnectorId", required=true)
-        private final String dataConnectorId;
+      private final String dataConnectorId;
 
     public String getDataConnectorId() {
         return this.dataConnectorId;
@@ -28,7 +28,7 @@ public final class GetDataConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetDataConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

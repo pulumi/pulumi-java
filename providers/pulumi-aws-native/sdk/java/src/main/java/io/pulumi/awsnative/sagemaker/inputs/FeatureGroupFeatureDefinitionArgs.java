@@ -15,14 +15,14 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     public static final FeatureGroupFeatureDefinitionArgs Empty = new FeatureGroupFeatureDefinitionArgs();
 
     @InputImport(name="featureName", required=true)
-        private final Input<String> featureName;
+      private final Input<String> featureName;
 
     public Input<String> getFeatureName() {
         return this.featureName;
     }
 
     @InputImport(name="featureType", required=true)
-        private final Input<FeatureGroupFeatureDefinitionFeatureType> featureType;
+      private final Input<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
     public Input<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {
         return this.featureType;

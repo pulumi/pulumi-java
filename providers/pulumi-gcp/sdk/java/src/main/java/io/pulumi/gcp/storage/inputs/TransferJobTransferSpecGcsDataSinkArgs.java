@@ -19,7 +19,7 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

@@ -23,7 +23,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expiry")
-        private final @Nullable String expiry;
+      private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
@@ -34,7 +34,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="level", required=true)
-        private final String level;
+      private final String level;
 
     public String getLevel() {
         return this.level;

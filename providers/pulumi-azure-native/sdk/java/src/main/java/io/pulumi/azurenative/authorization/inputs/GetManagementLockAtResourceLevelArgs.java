@@ -17,7 +17,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="lockName", required=true)
-        private final String lockName;
+      private final String lockName;
 
     public String getLockName() {
         return this.lockName;
@@ -28,7 +28,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="parentResourcePath", required=true)
-        private final String parentResourcePath;
+      private final String parentResourcePath;
 
     public String getParentResourcePath() {
         return this.parentResourcePath;
@@ -39,7 +39,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-        private final String resourceProviderNamespace;
+      private final String resourceProviderNamespace;
 
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -72,7 +72,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;

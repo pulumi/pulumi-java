@@ -17,21 +17,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
     public static final ConfigAntennaDownlinkDemodDecodeConfigArgs Empty = new ConfigAntennaDownlinkDemodDecodeConfigArgs();
 
     @InputImport(name="decodeConfig")
-        private final @Nullable Input<ConfigDecodeConfigArgs> decodeConfig;
+      private final @Nullable Input<ConfigDecodeConfigArgs> decodeConfig;
 
     public Input<ConfigDecodeConfigArgs> getDecodeConfig() {
         return this.decodeConfig == null ? Input.empty() : this.decodeConfig;
     }
 
     @InputImport(name="demodulationConfig")
-        private final @Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig;
+      private final @Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig;
 
     public Input<ConfigDemodulationConfigArgs> getDemodulationConfig() {
         return this.demodulationConfig == null ? Input.empty() : this.demodulationConfig;
     }
 
     @InputImport(name="spectrumConfig")
-        private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+      private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Input<ConfigSpectrumConfigArgs> getSpectrumConfig() {
         return this.spectrumConfig == null ? Input.empty() : this.spectrumConfig;

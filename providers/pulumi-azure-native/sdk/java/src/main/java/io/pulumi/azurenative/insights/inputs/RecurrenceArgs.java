@@ -23,7 +23,7 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-        private final Input<RecurrenceFrequency> frequency;
+      private final Input<RecurrenceFrequency> frequency;
 
     public Input<RecurrenceFrequency> getFrequency() {
         return this.frequency;
@@ -34,7 +34,7 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-        private final Input<RecurrentScheduleArgs> schedule;
+      private final Input<RecurrentScheduleArgs> schedule;
 
     public Input<RecurrentScheduleArgs> getSchedule() {
         return this.schedule;

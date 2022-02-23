@@ -24,7 +24,7 @@ public final class DetectorModelOnExit extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="events")
-        private final @Nullable List<DetectorModelEvent> events;
+      private final @Nullable List<DetectorModelEvent> events;
 
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;

@@ -17,7 +17,7 @@ public final class GetContainerGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="containerGroupName", required=true)
-        private final String containerGroupName;
+      private final String containerGroupName;
 
     public String getContainerGroupName() {
         return this.containerGroupName;
@@ -28,7 +28,7 @@ public final class GetContainerGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

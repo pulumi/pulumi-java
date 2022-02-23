@@ -15,7 +15,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     public static final ConfigDemodulationConfigArgs Empty = new ConfigDemodulationConfigArgs();
 
     @InputImport(name="unvalidatedJSON")
-        private final @Nullable Input<String> unvalidatedJSON;
+      private final @Nullable Input<String> unvalidatedJSON;
 
     public Input<String> getUnvalidatedJSON() {
         return this.unvalidatedJSON == null ? Input.empty() : this.unvalidatedJSON;

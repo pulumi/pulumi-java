@@ -22,7 +22,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateZoneName", required=true)
-        private final Input<String> privateZoneName;
+      private final Input<String> privateZoneName;
 
     public Input<String> getPrivateZoneName() {
         return this.privateZoneName;
@@ -44,7 +44,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registrationEnabled")
-        private final @Nullable Input<Boolean> registrationEnabled;
+      private final @Nullable Input<Boolean> registrationEnabled;
 
     public Input<Boolean> getRegistrationEnabled() {
         return this.registrationEnabled == null ? Input.empty() : this.registrationEnabled;
@@ -55,7 +55,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetwork")
-        private final @Nullable Input<SubResourceArgs> virtualNetwork;
+      private final @Nullable Input<SubResourceArgs> virtualNetwork;
 
     public Input<SubResourceArgs> getVirtualNetwork() {
         return this.virtualNetwork == null ? Input.empty() : this.virtualNetwork;
@@ -88,7 +88,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkLinkName")
-        private final @Nullable Input<String> virtualNetworkLinkName;
+      private final @Nullable Input<String> virtualNetworkLinkName;
 
     public Input<String> getVirtualNetworkLinkName() {
         return this.virtualNetworkLinkName == null ? Input.empty() : this.virtualNetworkLinkName;

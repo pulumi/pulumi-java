@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="backendService")
-        private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -36,7 +36,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="headerAction")
-        private final @Nullable Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+      private final @Nullable Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="weight")
-        private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;

@@ -31,7 +31,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="details", required=true)
-        private final Map<String,Object> details;
+      private final Map<String,Object> details;
 
     public Map<String,Object> getDetails() {
         return this.details;
@@ -42,7 +42,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="errorDetails", required=true)
-        private final RecommendedActionErrorInfoResponse errorDetails;
+      private final RecommendedActionErrorInfoResponse errorDetails;
 
     public RecommendedActionErrorInfoResponse getErrorDetails() {
         return this.errorDetails;
@@ -53,7 +53,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="estimatedImpact", required=true)
-        private final List<RecommendedActionImpactRecordResponse> estimatedImpact;
+      private final List<RecommendedActionImpactRecordResponse> estimatedImpact;
 
     public List<RecommendedActionImpactRecordResponse> getEstimatedImpact() {
         return this.estimatedImpact;
@@ -64,7 +64,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="executeActionDuration", required=true)
-        private final String executeActionDuration;
+      private final String executeActionDuration;
 
     public String getExecuteActionDuration() {
         return this.executeActionDuration;
@@ -75,7 +75,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="executeActionInitiatedBy", required=true)
-        private final String executeActionInitiatedBy;
+      private final String executeActionInitiatedBy;
 
     public String getExecuteActionInitiatedBy() {
         return this.executeActionInitiatedBy;
@@ -86,7 +86,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="executeActionInitiatedTime", required=true)
-        private final String executeActionInitiatedTime;
+      private final String executeActionInitiatedTime;
 
     public String getExecuteActionInitiatedTime() {
         return this.executeActionInitiatedTime;
@@ -97,7 +97,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="executeActionStartTime", required=true)
-        private final String executeActionStartTime;
+      private final String executeActionStartTime;
 
     public String getExecuteActionStartTime() {
         return this.executeActionStartTime;
@@ -108,7 +108,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -119,7 +119,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="implementationDetails", required=true)
-        private final RecommendedActionImplementationInfoResponse implementationDetails;
+      private final RecommendedActionImplementationInfoResponse implementationDetails;
 
     public RecommendedActionImplementationInfoResponse getImplementationDetails() {
         return this.implementationDetails;
@@ -130,7 +130,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isArchivedAction", required=true)
-        private final Boolean isArchivedAction;
+      private final Boolean isArchivedAction;
 
     public Boolean getIsArchivedAction() {
         return this.isArchivedAction;
@@ -141,7 +141,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isExecutableAction", required=true)
-        private final Boolean isExecutableAction;
+      private final Boolean isExecutableAction;
 
     public Boolean getIsExecutableAction() {
         return this.isExecutableAction;
@@ -152,7 +152,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isRevertableAction", required=true)
-        private final Boolean isRevertableAction;
+      private final Boolean isRevertableAction;
 
     public Boolean getIsRevertableAction() {
         return this.isRevertableAction;
@@ -163,7 +163,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -174,7 +174,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="lastRefresh", required=true)
-        private final String lastRefresh;
+      private final String lastRefresh;
 
     public String getLastRefresh() {
         return this.lastRefresh;
@@ -185,7 +185,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="linkedObjects", required=true)
-        private final List<String> linkedObjects;
+      private final List<String> linkedObjects;
 
     public List<String> getLinkedObjects() {
         return this.linkedObjects;
@@ -196,7 +196,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -207,7 +207,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -218,7 +218,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="observedImpact", required=true)
-        private final List<RecommendedActionImpactRecordResponse> observedImpact;
+      private final List<RecommendedActionImpactRecordResponse> observedImpact;
 
     public List<RecommendedActionImpactRecordResponse> getObservedImpact() {
         return this.observedImpact;
@@ -229,7 +229,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recommendationReason", required=true)
-        private final String recommendationReason;
+      private final String recommendationReason;
 
     public String getRecommendationReason() {
         return this.recommendationReason;
@@ -240,7 +240,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revertActionDuration", required=true)
-        private final String revertActionDuration;
+      private final String revertActionDuration;
 
     public String getRevertActionDuration() {
         return this.revertActionDuration;
@@ -251,7 +251,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revertActionInitiatedBy", required=true)
-        private final String revertActionInitiatedBy;
+      private final String revertActionInitiatedBy;
 
     public String getRevertActionInitiatedBy() {
         return this.revertActionInitiatedBy;
@@ -262,7 +262,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revertActionInitiatedTime", required=true)
-        private final String revertActionInitiatedTime;
+      private final String revertActionInitiatedTime;
 
     public String getRevertActionInitiatedTime() {
         return this.revertActionInitiatedTime;
@@ -273,7 +273,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revertActionStartTime", required=true)
-        private final String revertActionStartTime;
+      private final String revertActionStartTime;
 
     public String getRevertActionStartTime() {
         return this.revertActionStartTime;
@@ -284,7 +284,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="score", required=true)
-        private final Integer score;
+      private final Integer score;
 
     public Integer getScore() {
         return this.score;
@@ -295,7 +295,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="state", required=true)
-        private final RecommendedActionStateInfoResponse state;
+      private final RecommendedActionStateInfoResponse state;
 
     public RecommendedActionStateInfoResponse getState() {
         return this.state;
@@ -306,7 +306,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="timeSeries", required=true)
-        private final List<RecommendedActionMetricInfoResponse> timeSeries;
+      private final List<RecommendedActionMetricInfoResponse> timeSeries;
 
     public List<RecommendedActionMetricInfoResponse> getTimeSeries() {
         return this.timeSeries;
@@ -317,7 +317,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -328,7 +328,7 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="validSince", required=true)
-        private final String validSince;
+      private final String validSince;
 
     public String getValidSince() {
         return this.validSince;

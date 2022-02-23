@@ -20,14 +20,14 @@ public final class CertificateAuthorityOcspConfiguration extends io.pulumi.resou
     public static final CertificateAuthorityOcspConfiguration Empty = new CertificateAuthorityOcspConfiguration();
 
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="ocspCustomCname")
-        private final @Nullable String ocspCustomCname;
+      private final @Nullable String ocspCustomCname;
 
     public Optional<String> getOcspCustomCname() {
         return this.ocspCustomCname == null ? Optional.empty() : Optional.ofNullable(this.ocspCustomCname);

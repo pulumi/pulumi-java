@@ -20,7 +20,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="algorithm", required=true)
-        private final Input<String> algorithm;
+      private final Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm;
@@ -31,7 +31,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protectionLevel")
-        private final @Nullable Input<String> protectionLevel;
+      private final @Nullable Input<String> protectionLevel;
 
     public Input<String> getProtectionLevel() {
         return this.protectionLevel == null ? Input.empty() : this.protectionLevel;

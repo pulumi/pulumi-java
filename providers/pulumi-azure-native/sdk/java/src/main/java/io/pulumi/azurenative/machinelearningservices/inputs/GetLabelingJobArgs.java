@@ -20,7 +20,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includeJobInstructions")
-        private final @Nullable Boolean includeJobInstructions;
+      private final @Nullable Boolean includeJobInstructions;
 
     public Optional<Boolean> getIncludeJobInstructions() {
         return this.includeJobInstructions == null ? Optional.empty() : Optional.ofNullable(this.includeJobInstructions);
@@ -31,7 +31,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includeLabelCategories")
-        private final @Nullable Boolean includeLabelCategories;
+      private final @Nullable Boolean includeLabelCategories;
 
     public Optional<Boolean> getIncludeLabelCategories() {
         return this.includeLabelCategories == null ? Optional.empty() : Optional.ofNullable(this.includeLabelCategories);
@@ -42,7 +42,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labelingJobId", required=true)
-        private final String labelingJobId;
+      private final String labelingJobId;
 
     public String getLabelingJobId() {
         return this.labelingJobId;
@@ -53,7 +53,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

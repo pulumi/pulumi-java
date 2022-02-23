@@ -21,7 +21,7 @@ public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-        private final String sourceArmResourceId;
+      private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;

@@ -22,7 +22,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links")
-        private final @Nullable Input<List<SpacecraftLinkArgs>> links;
+      private final @Nullable Input<List<SpacecraftLinkArgs>> links;
 
     public Input<List<SpacecraftLinkArgs>> getLinks() {
         return this.links == null ? Input.empty() : this.links;
@@ -33,7 +33,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noradId", required=true)
-        private final Input<String> noradId;
+      private final Input<String> noradId;
 
     public Input<String> getNoradId() {
         return this.noradId;
@@ -55,7 +55,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spacecraftName")
-        private final @Nullable Input<String> spacecraftName;
+      private final @Nullable Input<String> spacecraftName;
 
     public Input<String> getSpacecraftName() {
         return this.spacecraftName == null ? Input.empty() : this.spacecraftName;
@@ -77,7 +77,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="titleLine")
-        private final @Nullable Input<String> titleLine;
+      private final @Nullable Input<String> titleLine;
 
     public Input<String> getTitleLine() {
         return this.titleLine == null ? Input.empty() : this.titleLine;
@@ -99,7 +99,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tleLine1")
-        private final @Nullable Input<String> tleLine1;
+      private final @Nullable Input<String> tleLine1;
 
     public Input<String> getTleLine1() {
         return this.tleLine1 == null ? Input.empty() : this.tleLine1;
@@ -110,7 +110,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tleLine2")
-        private final @Nullable Input<String> tleLine2;
+      private final @Nullable Input<String> tleLine2;
 
     public Input<String> getTleLine2() {
         return this.tleLine2 == null ? Input.empty() : this.tleLine2;

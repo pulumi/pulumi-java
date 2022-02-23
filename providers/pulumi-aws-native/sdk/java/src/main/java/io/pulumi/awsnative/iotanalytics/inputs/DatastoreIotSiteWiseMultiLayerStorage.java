@@ -15,7 +15,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorage extends io.pulumi.resou
     public static final DatastoreIotSiteWiseMultiLayerStorage Empty = new DatastoreIotSiteWiseMultiLayerStorage();
 
     @InputImport(name="customerManagedS3Storage")
-        private final @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
+      private final @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
 
     public Optional<DatastoreCustomerManagedS3Storage> getCustomerManagedS3Storage() {
         return this.customerManagedS3Storage == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3Storage);

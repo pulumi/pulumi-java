@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * 
      */
     @InputImport(name="archiveType", required=true)
-        private final Input<String> archiveType;
+      private final Input<String> archiveType;
 
     public Input<String> getArchiveType() {
         return this.archiveType;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * 
      */
     @InputImport(name="components", required=true)
-        private final Input<List<String>> components;
+      private final Input<List<String>> components;
 
     public Input<List<String>> getComponents() {
         return this.components;
@@ -42,7 +42,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * 
      */
     @InputImport(name="distribution", required=true)
-        private final Input<String> distribution;
+      private final Input<String> distribution;
 
     public Input<String> getDistribution() {
         return this.distribution;
@@ -53,7 +53,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * 
      */
     @InputImport(name="gpgKey")
-        private final @Nullable Input<String> gpgKey;
+      private final @Nullable Input<String> gpgKey;
 
     public Input<String> getGpgKey() {
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
@@ -64,7 +64,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

@@ -16,7 +16,7 @@ public final class ListenerRuleQueryStringConfig extends io.pulumi.resources.Inv
     public static final ListenerRuleQueryStringConfig Empty = new ListenerRuleQueryStringConfig();
 
     @InputImport(name="values")
-        private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
+      private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
 
     public List<ListenerRuleQueryStringKeyValue> getValues() {
         return this.values == null ? List.of() : this.values;

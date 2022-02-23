@@ -20,7 +20,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="exportCustomRoutes", required=true)
-        private final Input<Boolean> exportCustomRoutes;
+      private final Input<Boolean> exportCustomRoutes;
 
     public Input<Boolean> getExportCustomRoutes() {
         return this.exportCustomRoutes;
@@ -31,7 +31,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="importCustomRoutes", required=true)
-        private final Input<Boolean> importCustomRoutes;
+      private final Input<Boolean> importCustomRoutes;
 
     public Input<Boolean> getImportCustomRoutes() {
         return this.importCustomRoutes;
@@ -42,7 +42,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="network", required=true)
-        private final Input<String> network;
+      private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -53,7 +53,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peering", required=true)
-        private final Input<String> peering;
+      private final Input<String> peering;
 
     public Input<String> getPeering() {
         return this.peering;
@@ -65,7 +65,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

@@ -20,14 +20,14 @@ public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.r
     public static final CertificateAuthorityOcspConfigurationArgs Empty = new CertificateAuthorityOcspConfigurationArgs();
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="ocspCustomCname")
-        private final @Nullable Input<String> ocspCustomCname;
+      private final @Nullable Input<String> ocspCustomCname;
 
     public Input<String> getOcspCustomCname() {
         return this.ocspCustomCname == null ? Input.empty() : this.ocspCustomCname;

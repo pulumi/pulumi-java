@@ -22,7 +22,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-        private final Input<String> certificateCommonName;
+      private final Input<String> certificateCommonName;
 
     public Input<String> getCertificateCommonName() {
         return this.certificateCommonName;
@@ -33,7 +33,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-        private final Input<String> certificateIssuerThumbprint;
+      private final Input<String> certificateIssuerThumbprint;
 
     public Input<String> getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;

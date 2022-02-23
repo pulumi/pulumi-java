@@ -25,7 +25,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextAccessToken")
-        private final @Nullable Input<String> contextAccessToken;
+      private final @Nullable Input<String> contextAccessToken;
 
     public Input<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
@@ -36,7 +36,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextPath")
-        private final @Nullable Input<String> contextPath;
+      private final @Nullable Input<String> contextPath;
 
     public Input<String> getContextPath() {
         return this.contextPath == null ? Input.empty() : this.contextPath;
@@ -47,7 +47,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encodedTaskContent", required=true)
-        private final Input<String> encodedTaskContent;
+      private final Input<String> encodedTaskContent;
 
     public Input<String> getEncodedTaskContent() {
         return this.encodedTaskContent;
@@ -58,7 +58,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encodedValuesContent")
-        private final @Nullable Input<String> encodedValuesContent;
+      private final @Nullable Input<String> encodedValuesContent;
 
     public Input<String> getEncodedValuesContent() {
         return this.encodedValuesContent == null ? Input.empty() : this.encodedValuesContent;
@@ -70,7 +70,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -81,7 +81,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Input<List<SetValueArgs>> values;
 
     public Input<List<SetValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;

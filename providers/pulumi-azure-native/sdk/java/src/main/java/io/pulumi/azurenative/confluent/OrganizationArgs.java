@@ -22,7 +22,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offerDetail")
-        private final @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
+      private final @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
     public Input<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
         return this.offerDetail == null ? Input.empty() : this.offerDetail;
@@ -44,7 +44,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organizationName")
-        private final @Nullable Input<String> organizationName;
+      private final @Nullable Input<String> organizationName;
 
     public Input<String> getOrganizationName() {
         return this.organizationName == null ? Input.empty() : this.organizationName;
@@ -55,7 +55,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDetail")
-        private final @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail;
+      private final @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
     public Input<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {
         return this.userDetail == null ? Input.empty() : this.userDetail;

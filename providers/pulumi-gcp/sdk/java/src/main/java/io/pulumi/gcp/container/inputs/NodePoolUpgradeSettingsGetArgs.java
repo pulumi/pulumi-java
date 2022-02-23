@@ -20,7 +20,7 @@ public final class NodePoolUpgradeSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxSurge", required=true)
-        private final Input<Integer> maxSurge;
+      private final Input<Integer> maxSurge;
 
     public Input<Integer> getMaxSurge() {
         return this.maxSurge;
@@ -33,7 +33,7 @@ public final class NodePoolUpgradeSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxUnavailable", required=true)
-        private final Input<Integer> maxUnavailable;
+      private final Input<Integer> maxUnavailable;
 
     public Input<Integer> getMaxUnavailable() {
         return this.maxUnavailable;

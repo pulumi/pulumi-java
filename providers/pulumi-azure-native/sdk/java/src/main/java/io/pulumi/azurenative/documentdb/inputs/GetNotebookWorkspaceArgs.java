@@ -17,7 +17,7 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="notebookWorkspaceName", required=true)
-        private final String notebookWorkspaceName;
+      private final String notebookWorkspaceName;
 
     public String getNotebookWorkspaceName() {
         return this.notebookWorkspaceName;
@@ -39,7 +39,7 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

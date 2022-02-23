@@ -23,7 +23,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authType", required=true)
-        private final Input<String> authType;
+      private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -45,7 +45,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-        private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;

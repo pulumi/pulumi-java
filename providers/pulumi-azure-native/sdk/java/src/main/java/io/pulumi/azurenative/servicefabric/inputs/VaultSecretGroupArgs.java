@@ -24,7 +24,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceVault", required=true)
-        private final Input<SubResourceArgs> sourceVault;
+      private final Input<SubResourceArgs> sourceVault;
 
     public Input<SubResourceArgs> getSourceVault() {
         return this.sourceVault;
@@ -35,7 +35,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vaultCertificates", required=true)
-        private final Input<List<VaultCertificateArgs>> vaultCertificates;
+      private final Input<List<VaultCertificateArgs>> vaultCertificates;
 
     public Input<List<VaultCertificateArgs>> getVaultCertificates() {
         return this.vaultCertificates;

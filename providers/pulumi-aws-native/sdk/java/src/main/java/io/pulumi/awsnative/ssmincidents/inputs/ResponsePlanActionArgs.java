@@ -19,7 +19,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     public static final ResponsePlanActionArgs Empty = new ResponsePlanActionArgs();
 
     @InputImport(name="ssmAutomation")
-        private final @Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation;
+      private final @Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
     public Input<ResponsePlanSsmAutomationArgs> getSsmAutomation() {
         return this.ssmAutomation == null ? Input.empty() : this.ssmAutomation;

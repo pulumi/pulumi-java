@@ -23,7 +23,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableDependentServices")
-        private final @Nullable Input<Boolean> disableDependentServices;
+      private final @Nullable Input<Boolean> disableDependentServices;
 
     public Input<Boolean> getDisableDependentServices() {
         return this.disableDependentServices == null ? Input.empty() : this.disableDependentServices;
@@ -34,7 +34,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableOnDestroy")
-        private final @Nullable Input<Boolean> disableOnDestroy;
+      private final @Nullable Input<Boolean> disableOnDestroy;
 
     public Input<Boolean> getDisableOnDestroy() {
         return this.disableOnDestroy == null ? Input.empty() : this.disableOnDestroy;
@@ -46,7 +46,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -57,7 +57,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;

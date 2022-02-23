@@ -20,7 +20,7 @@ public final class URLMapHostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class URLMapHostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-        private final Input<List<String>> hosts;
+      private final Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts;
@@ -45,7 +45,7 @@ public final class URLMapHostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatcher", required=true)
-        private final Input<String> pathMatcher;
+      private final Input<String> pathMatcher;
 
     public Input<String> getPathMatcher() {
         return this.pathMatcher;

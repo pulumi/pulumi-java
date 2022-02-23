@@ -22,7 +22,7 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
     public static final ServiceSourceConfigurationArgs Empty = new ServiceSourceConfigurationArgs();
 
     @InputImport(name="authenticationConfiguration")
-        private final @Nullable Input<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+      private final @Nullable Input<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Input<ServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
@@ -33,21 +33,21 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoDeploymentsEnabled")
-        private final @Nullable Input<Boolean> autoDeploymentsEnabled;
+      private final @Nullable Input<Boolean> autoDeploymentsEnabled;
 
     public Input<Boolean> getAutoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Input.empty() : this.autoDeploymentsEnabled;
     }
 
     @InputImport(name="codeRepository")
-        private final @Nullable Input<ServiceCodeRepositoryArgs> codeRepository;
+      private final @Nullable Input<ServiceCodeRepositoryArgs> codeRepository;
 
     public Input<ServiceCodeRepositoryArgs> getCodeRepository() {
         return this.codeRepository == null ? Input.empty() : this.codeRepository;
     }
 
     @InputImport(name="imageRepository")
-        private final @Nullable Input<ServiceImageRepositoryArgs> imageRepository;
+      private final @Nullable Input<ServiceImageRepositoryArgs> imageRepository;
 
     public Input<ServiceImageRepositoryArgs> getImageRepository() {
         return this.imageRepository == null ? Input.empty() : this.imageRepository;

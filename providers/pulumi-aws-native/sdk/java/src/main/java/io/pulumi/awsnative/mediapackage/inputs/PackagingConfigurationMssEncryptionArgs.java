@@ -18,7 +18,7 @@ public final class PackagingConfigurationMssEncryptionArgs extends io.pulumi.res
     public static final PackagingConfigurationMssEncryptionArgs Empty = new PackagingConfigurationMssEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;

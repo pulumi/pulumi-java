@@ -22,7 +22,7 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="registrationDefinitionId", required=true)
-        private final Input<String> registrationDefinitionId;
+      private final Input<String> registrationDefinitionId;
 
     public Input<String> getRegistrationDefinitionId() {
         return this.registrationDefinitionId;

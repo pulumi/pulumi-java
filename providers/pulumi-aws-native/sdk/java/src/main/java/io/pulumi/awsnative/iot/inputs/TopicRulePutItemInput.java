@@ -13,7 +13,7 @@ public final class TopicRulePutItemInput extends io.pulumi.resources.InvokeArgs 
     public static final TopicRulePutItemInput Empty = new TopicRulePutItemInput();
 
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

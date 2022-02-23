@@ -32,7 +32,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<Either<String,ServiceNowAuthenticationType>> authenticationType;
+      private final Input<Either<String,ServiceNowAuthenticationType>> authenticationType;
 
     public Input<Either<String,ServiceNowAuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
@@ -54,7 +54,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<Object> clientId;
+      private final @Nullable Input<Object> clientId;
 
     public Input<Object> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -65,7 +65,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -76,7 +76,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -87,7 +87,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -109,7 +109,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final Input<Object> endpoint;
+      private final Input<Object> endpoint;
 
     public Input<Object> getEndpoint() {
         return this.endpoint;
@@ -120,7 +120,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -131,7 +131,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -143,7 +143,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -154,7 +154,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-        private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Input<Object> useEncryptedEndpoints;
 
     public Input<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
@@ -165,7 +165,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="useHostVerification")
-        private final @Nullable Input<Object> useHostVerification;
+      private final @Nullable Input<Object> useHostVerification;
 
     public Input<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
@@ -176,7 +176,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="usePeerVerification")
-        private final @Nullable Input<Object> usePeerVerification;
+      private final @Nullable Input<Object> usePeerVerification;
 
     public Input<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
@@ -187,7 +187,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;

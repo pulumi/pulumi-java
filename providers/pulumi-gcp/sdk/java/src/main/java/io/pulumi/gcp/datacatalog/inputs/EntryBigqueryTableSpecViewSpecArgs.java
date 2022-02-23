@@ -15,7 +15,7 @@ public final class EntryBigqueryTableSpecViewSpecArgs extends io.pulumi.resource
     public static final EntryBigqueryTableSpecViewSpecArgs Empty = new EntryBigqueryTableSpecViewSpecArgs();
 
     @InputImport(name="viewQuery")
-        private final @Nullable Input<String> viewQuery;
+      private final @Nullable Input<String> viewQuery;
 
     public Input<String> getViewQuery() {
         return this.viewQuery == null ? Input.empty() : this.viewQuery;

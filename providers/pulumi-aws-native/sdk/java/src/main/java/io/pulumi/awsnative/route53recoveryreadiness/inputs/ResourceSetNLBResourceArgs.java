@@ -23,7 +23,7 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-        private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;

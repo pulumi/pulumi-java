@@ -15,14 +15,14 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
     public static final BackupPlanLifecycleResourceTypeArgs Empty = new BackupPlanLifecycleResourceTypeArgs();
 
     @InputImport(name="deleteAfterDays")
-        private final @Nullable Input<Double> deleteAfterDays;
+      private final @Nullable Input<Double> deleteAfterDays;
 
     public Input<Double> getDeleteAfterDays() {
         return this.deleteAfterDays == null ? Input.empty() : this.deleteAfterDays;
     }
 
     @InputImport(name="moveToColdStorageAfterDays")
-        private final @Nullable Input<Double> moveToColdStorageAfterDays;
+      private final @Nullable Input<Double> moveToColdStorageAfterDays;
 
     public Input<Double> getMoveToColdStorageAfterDays() {
         return this.moveToColdStorageAfterDays == null ? Input.empty() : this.moveToColdStorageAfterDays;

@@ -166,6 +166,21 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public TenantDefaultSupportedIdpConfig(String name) {
+        this(name, TenantDefaultSupportedIdpConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TenantDefaultSupportedIdpConfig(String name, TenantDefaultSupportedIdpConfigArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

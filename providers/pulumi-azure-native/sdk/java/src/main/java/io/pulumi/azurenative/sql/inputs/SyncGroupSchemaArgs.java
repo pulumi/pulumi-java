@@ -25,7 +25,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="masterSyncMemberName")
-        private final @Nullable Input<String> masterSyncMemberName;
+      private final @Nullable Input<String> masterSyncMemberName;
 
     public Input<String> getMasterSyncMemberName() {
         return this.masterSyncMemberName == null ? Input.empty() : this.masterSyncMemberName;
@@ -36,7 +36,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tables")
-        private final @Nullable Input<List<SyncGroupSchemaTableArgs>> tables;
+      private final @Nullable Input<List<SyncGroupSchemaTableArgs>> tables;
 
     public Input<List<SyncGroupSchemaTableArgs>> getTables() {
         return this.tables == null ? Input.empty() : this.tables;

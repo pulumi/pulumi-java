@@ -16,14 +16,14 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     public static final CachePolicyQueryStringsConfigArgs Empty = new CachePolicyQueryStringsConfigArgs();
 
     @InputImport(name="queryStringBehavior", required=true)
-        private final Input<String> queryStringBehavior;
+      private final Input<String> queryStringBehavior;
 
     public Input<String> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-        private final @Nullable Input<List<String>> queryStrings;
+      private final @Nullable Input<List<String>> queryStrings;
 
     public Input<List<String>> getQueryStrings() {
         return this.queryStrings == null ? Input.empty() : this.queryStrings;

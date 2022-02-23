@@ -24,14 +24,14 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deliveryStreamName", required=true)
-        private final Input<String> deliveryStreamName;
+      private final Input<String> deliveryStreamName;
 
     public Input<String> getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @InputImport(name="payload")
-        private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Input<DetectorModelPayloadArgs> payload;
 
     public Input<DetectorModelPayloadArgs> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -42,7 +42,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="separator")
-        private final @Nullable Input<String> separator;
+      private final @Nullable Input<String> separator;
 
     public Input<String> getSeparator() {
         return this.separator == null ? Input.empty() : this.separator;

@@ -24,7 +24,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="logRules")
-        private final @Nullable LogRulesResponse logRules;
+      private final @Nullable LogRulesResponse logRules;
 
     public Optional<LogRulesResponse> getLogRules() {
         return this.logRules == null ? Optional.empty() : Optional.ofNullable(this.logRules);
@@ -35,7 +35,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);

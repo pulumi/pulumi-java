@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
      * 
      */
     @InputImport(name="infoTypes", required=true)
-        private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
+      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> getInfoTypes() {
         return this.infoTypes;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
      * 
      */
     @InputImport(name="rules", required=true)
-        private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
+      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> getRules() {
         return this.rules;

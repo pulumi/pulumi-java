@@ -24,7 +24,7 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-        private final @Nullable Input<List<String>> keys;
+      private final @Nullable Input<List<String>> keys;
 
     public Input<List<String>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;

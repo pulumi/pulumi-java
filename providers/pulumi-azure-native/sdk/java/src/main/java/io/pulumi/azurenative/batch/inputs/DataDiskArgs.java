@@ -31,14 +31,14 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caching")
-        private final @Nullable Input<CachingType> caching;
+      private final @Nullable Input<CachingType> caching;
 
     public Input<CachingType> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
     }
 
     @InputImport(name="diskSizeGB", required=true)
-        private final Input<Integer> diskSizeGB;
+      private final Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB;
@@ -49,7 +49,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lun", required=true)
-        private final Input<Integer> lun;
+      private final Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun;
@@ -63,7 +63,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable Input<StorageAccountType> storageAccountType;
+      private final @Nullable Input<StorageAccountType> storageAccountType;
 
     public Input<StorageAccountType> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;

@@ -17,7 +17,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-        private final String sqlPoolName;
+      private final String sqlPoolName;
 
     public String getSqlPoolName() {
         return this.sqlPoolName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workloadClassifierName", required=true)
-        private final String workloadClassifierName;
+      private final String workloadClassifierName;
 
     public String getWorkloadClassifierName() {
         return this.workloadClassifierName;
@@ -50,7 +50,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workloadGroupName", required=true)
-        private final String workloadGroupName;
+      private final String workloadGroupName;
 
     public String getWorkloadGroupName() {
         return this.workloadGroupName;
@@ -61,7 +61,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

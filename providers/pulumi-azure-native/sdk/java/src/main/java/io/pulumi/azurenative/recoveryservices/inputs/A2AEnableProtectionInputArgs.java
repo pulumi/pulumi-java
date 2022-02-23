@@ -27,7 +27,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskEncryptionInfo")
-        private final @Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo;
+      private final @Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
     public Input<DiskEncryptionInfoArgs> getDiskEncryptionInfo() {
         return this.diskEncryptionInfo == null ? Input.empty() : this.diskEncryptionInfo;
@@ -38,7 +38,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fabricObjectId")
-        private final @Nullable Input<String> fabricObjectId;
+      private final @Nullable Input<String> fabricObjectId;
 
     public Input<String> getFabricObjectId() {
         return this.fabricObjectId == null ? Input.empty() : this.fabricObjectId;
@@ -50,7 +50,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -61,7 +61,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="multiVmGroupName")
-        private final @Nullable Input<String> multiVmGroupName;
+      private final @Nullable Input<String> multiVmGroupName;
 
     public Input<String> getMultiVmGroupName() {
         return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
@@ -72,7 +72,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryAvailabilitySetId")
-        private final @Nullable Input<String> recoveryAvailabilitySetId;
+      private final @Nullable Input<String> recoveryAvailabilitySetId;
 
     public Input<String> getRecoveryAvailabilitySetId() {
         return this.recoveryAvailabilitySetId == null ? Input.empty() : this.recoveryAvailabilitySetId;
@@ -83,7 +83,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryAvailabilityZone")
-        private final @Nullable Input<String> recoveryAvailabilityZone;
+      private final @Nullable Input<String> recoveryAvailabilityZone;
 
     public Input<String> getRecoveryAvailabilityZone() {
         return this.recoveryAvailabilityZone == null ? Input.empty() : this.recoveryAvailabilityZone;
@@ -94,7 +94,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryAzureNetworkId")
-        private final @Nullable Input<String> recoveryAzureNetworkId;
+      private final @Nullable Input<String> recoveryAzureNetworkId;
 
     public Input<String> getRecoveryAzureNetworkId() {
         return this.recoveryAzureNetworkId == null ? Input.empty() : this.recoveryAzureNetworkId;
@@ -105,7 +105,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryBootDiagStorageAccountId")
-        private final @Nullable Input<String> recoveryBootDiagStorageAccountId;
+      private final @Nullable Input<String> recoveryBootDiagStorageAccountId;
 
     public Input<String> getRecoveryBootDiagStorageAccountId() {
         return this.recoveryBootDiagStorageAccountId == null ? Input.empty() : this.recoveryBootDiagStorageAccountId;
@@ -116,7 +116,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryCloudServiceId")
-        private final @Nullable Input<String> recoveryCloudServiceId;
+      private final @Nullable Input<String> recoveryCloudServiceId;
 
     public Input<String> getRecoveryCloudServiceId() {
         return this.recoveryCloudServiceId == null ? Input.empty() : this.recoveryCloudServiceId;
@@ -127,7 +127,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryContainerId")
-        private final @Nullable Input<String> recoveryContainerId;
+      private final @Nullable Input<String> recoveryContainerId;
 
     public Input<String> getRecoveryContainerId() {
         return this.recoveryContainerId == null ? Input.empty() : this.recoveryContainerId;
@@ -138,7 +138,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryProximityPlacementGroupId")
-        private final @Nullable Input<String> recoveryProximityPlacementGroupId;
+      private final @Nullable Input<String> recoveryProximityPlacementGroupId;
 
     public Input<String> getRecoveryProximityPlacementGroupId() {
         return this.recoveryProximityPlacementGroupId == null ? Input.empty() : this.recoveryProximityPlacementGroupId;
@@ -149,7 +149,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryResourceGroupId")
-        private final @Nullable Input<String> recoveryResourceGroupId;
+      private final @Nullable Input<String> recoveryResourceGroupId;
 
     public Input<String> getRecoveryResourceGroupId() {
         return this.recoveryResourceGroupId == null ? Input.empty() : this.recoveryResourceGroupId;
@@ -160,7 +160,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoverySubnetName")
-        private final @Nullable Input<String> recoverySubnetName;
+      private final @Nullable Input<String> recoverySubnetName;
 
     public Input<String> getRecoverySubnetName() {
         return this.recoverySubnetName == null ? Input.empty() : this.recoverySubnetName;
@@ -171,7 +171,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmDisks")
-        private final @Nullable Input<List<A2AVmDiskInputDetailsArgs>> vmDisks;
+      private final @Nullable Input<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
     public Input<List<A2AVmDiskInputDetailsArgs>> getVmDisks() {
         return this.vmDisks == null ? Input.empty() : this.vmDisks;
@@ -182,7 +182,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmManagedDisks")
-        private final @Nullable Input<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
+      private final @Nullable Input<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 
     public Input<List<A2AVmManagedDiskInputDetailsArgs>> getVmManagedDisks() {
         return this.vmManagedDisks == null ? Input.empty() : this.vmManagedDisks;

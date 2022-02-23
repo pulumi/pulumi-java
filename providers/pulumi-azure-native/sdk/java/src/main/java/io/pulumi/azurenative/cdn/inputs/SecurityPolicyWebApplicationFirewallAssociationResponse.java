@@ -25,7 +25,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @InputImport(name="domains")
-        private final @Nullable List<ResourceReferenceResponse> domains;
+      private final @Nullable List<ResourceReferenceResponse> domains;
 
     public List<ResourceReferenceResponse> getDomains() {
         return this.domains == null ? List.of() : this.domains;
@@ -36,7 +36,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @InputImport(name="patternsToMatch")
-        private final @Nullable List<String> patternsToMatch;
+      private final @Nullable List<String> patternsToMatch;
 
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;

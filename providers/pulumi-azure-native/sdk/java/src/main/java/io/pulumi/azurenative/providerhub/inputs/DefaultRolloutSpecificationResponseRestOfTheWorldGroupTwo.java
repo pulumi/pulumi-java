@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo ext
     public static final DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo Empty = new DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo();
 
     @InputImport(name="regions")
-        private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @InputImport(name="waitDuration")
-        private final @Nullable String waitDuration;
+      private final @Nullable String waitDuration;
 
     public Optional<String> getWaitDuration() {
         return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);

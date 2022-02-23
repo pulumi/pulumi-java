@@ -16,21 +16,21 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     public static final FlowErrorHandlingConfigArgs Empty = new FlowErrorHandlingConfigArgs();
 
     @InputImport(name="bucketName")
-        private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-        private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="failOnFirstError")
-        private final @Nullable Input<Boolean> failOnFirstError;
+      private final @Nullable Input<Boolean> failOnFirstError;
 
     public Input<Boolean> getFailOnFirstError() {
         return this.failOnFirstError == null ? Input.empty() : this.failOnFirstError;

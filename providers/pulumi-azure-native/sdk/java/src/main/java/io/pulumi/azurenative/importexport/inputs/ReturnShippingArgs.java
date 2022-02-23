@@ -22,7 +22,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierAccountNumber", required=true)
-        private final Input<String> carrierAccountNumber;
+      private final Input<String> carrierAccountNumber;
 
     public Input<String> getCarrierAccountNumber() {
         return this.carrierAccountNumber;
@@ -33,7 +33,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierName", required=true)
-        private final Input<String> carrierName;
+      private final Input<String> carrierName;
 
     public Input<String> getCarrierName() {
         return this.carrierName;

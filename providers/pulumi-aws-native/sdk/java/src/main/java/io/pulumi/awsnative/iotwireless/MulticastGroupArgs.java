@@ -22,7 +22,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWirelessDevice")
-        private final @Nullable Input<String> associateWirelessDevice;
+      private final @Nullable Input<String> associateWirelessDevice;
 
     public Input<String> getAssociateWirelessDevice() {
         return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
@@ -33,7 +33,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateWirelessDevice")
-        private final @Nullable Input<String> disassociateWirelessDevice;
+      private final @Nullable Input<String> disassociateWirelessDevice;
 
     public Input<String> getDisassociateWirelessDevice() {
         return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
@@ -55,7 +55,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN", required=true)
-        private final Input<MulticastGroupLoRaWANArgs> loRaWAN;
+      private final Input<MulticastGroupLoRaWANArgs> loRaWAN;
 
     public Input<MulticastGroupLoRaWANArgs> getLoRaWAN() {
         return this.loRaWAN;
@@ -66,7 +66,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<MulticastGroupTagArgs>> tags;
+      private final @Nullable Input<List<MulticastGroupTagArgs>> tags;
 
     public Input<List<MulticastGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

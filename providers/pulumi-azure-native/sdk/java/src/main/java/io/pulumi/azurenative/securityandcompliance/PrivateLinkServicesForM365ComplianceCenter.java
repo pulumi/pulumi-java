@@ -165,6 +165,21 @@ public class PrivateLinkServicesForM365ComplianceCenter extends io.pulumi.resour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForM365ComplianceCenter(String name) {
+        this(name, PrivateLinkServicesForM365ComplianceCenterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForM365ComplianceCenter(String name, PrivateLinkServicesForM365ComplianceCenterArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

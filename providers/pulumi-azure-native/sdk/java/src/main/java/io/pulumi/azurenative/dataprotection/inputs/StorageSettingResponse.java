@@ -23,7 +23,7 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="datastoreType")
-        private final @Nullable String datastoreType;
+      private final @Nullable String datastoreType;
 
     public Optional<String> getDatastoreType() {
         return this.datastoreType == null ? Optional.empty() : Optional.ofNullable(this.datastoreType);
@@ -34,7 +34,7 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

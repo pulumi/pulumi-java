@@ -24,7 +24,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-        private final @Nullable Input<String> creationTime;
+      private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -35,7 +35,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="draftContentLink")
-        private final @Nullable Input<ContentLinkArgs> draftContentLink;
+      private final @Nullable Input<ContentLinkArgs> draftContentLink;
 
     public Input<ContentLinkArgs> getDraftContentLink() {
         return this.draftContentLink == null ? Input.empty() : this.draftContentLink;
@@ -46,7 +46,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inEdit")
-        private final @Nullable Input<Boolean> inEdit;
+      private final @Nullable Input<Boolean> inEdit;
 
     public Input<Boolean> getInEdit() {
         return this.inEdit == null ? Input.empty() : this.inEdit;
@@ -57,7 +57,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-        private final @Nullable Input<String> lastModifiedTime;
+      private final @Nullable Input<String> lastModifiedTime;
 
     public Input<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
@@ -68,7 +68,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputTypes")
-        private final @Nullable Input<List<String>> outputTypes;
+      private final @Nullable Input<List<String>> outputTypes;
 
     public Input<List<String>> getOutputTypes() {
         return this.outputTypes == null ? Input.empty() : this.outputTypes;
@@ -79,7 +79,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,RunbookParameterArgs>> parameters;
+      private final @Nullable Input<Map<String,RunbookParameterArgs>> parameters;
 
     public Input<Map<String,RunbookParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

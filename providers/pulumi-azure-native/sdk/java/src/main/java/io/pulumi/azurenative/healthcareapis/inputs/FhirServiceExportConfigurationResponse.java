@@ -23,7 +23,7 @@ public final class FhirServiceExportConfigurationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageAccountName")
-        private final @Nullable String storageAccountName;
+      private final @Nullable String storageAccountName;
 
     public Optional<String> getStorageAccountName() {
         return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);

@@ -20,7 +20,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @InputImport(name="authCode")
-        private final @Nullable Input<String> authCode;
+      private final @Nullable Input<String> authCode;
 
     public Input<String> getAuthCode() {
         return this.authCode == null ? Input.empty() : this.authCode;
@@ -31,7 +31,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoRenew")
-        private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Input<Boolean> autoRenew;
 
     public Input<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
@@ -42,7 +42,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consent", required=true)
-        private final Input<DomainPurchaseConsentArgs> consent;
+      private final Input<DomainPurchaseConsentArgs> consent;
 
     public Input<DomainPurchaseConsentArgs> getConsent() {
         return this.consent;
@@ -53,7 +53,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactAdmin", required=true)
-        private final Input<ContactArgs> contactAdmin;
+      private final Input<ContactArgs> contactAdmin;
 
     public Input<ContactArgs> getContactAdmin() {
         return this.contactAdmin;
@@ -64,7 +64,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactBilling", required=true)
-        private final Input<ContactArgs> contactBilling;
+      private final Input<ContactArgs> contactBilling;
 
     public Input<ContactArgs> getContactBilling() {
         return this.contactBilling;
@@ -75,7 +75,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactRegistrant", required=true)
-        private final Input<ContactArgs> contactRegistrant;
+      private final Input<ContactArgs> contactRegistrant;
 
     public Input<ContactArgs> getContactRegistrant() {
         return this.contactRegistrant;
@@ -86,7 +86,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactTech", required=true)
-        private final Input<ContactArgs> contactTech;
+      private final Input<ContactArgs> contactTech;
 
     public Input<ContactArgs> getContactTech() {
         return this.contactTech;
@@ -97,7 +97,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsType")
-        private final @Nullable Input<DnsType> dnsType;
+      private final @Nullable Input<DnsType> dnsType;
 
     public Input<DnsType> getDnsType() {
         return this.dnsType == null ? Input.empty() : this.dnsType;
@@ -108,7 +108,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsZoneId")
-        private final @Nullable Input<String> dnsZoneId;
+      private final @Nullable Input<String> dnsZoneId;
 
     public Input<String> getDnsZoneId() {
         return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
@@ -119,7 +119,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-        private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -130,7 +130,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -141,7 +141,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -152,7 +152,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privacy")
-        private final @Nullable Input<Boolean> privacy;
+      private final @Nullable Input<Boolean> privacy;
 
     public Input<Boolean> getPrivacy() {
         return this.privacy == null ? Input.empty() : this.privacy;
@@ -163,7 +163,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -174,7 +174,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -185,7 +185,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDnsType")
-        private final @Nullable Input<DnsType> targetDnsType;
+      private final @Nullable Input<DnsType> targetDnsType;
 
     public Input<DnsType> getTargetDnsType() {
         return this.targetDnsType == null ? Input.empty() : this.targetDnsType;

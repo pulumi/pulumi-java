@@ -17,7 +17,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostName", required=true)
-        private final String hostName;
+      private final String hostName;
 
     public String getHostName() {
         return this.hostName;
@@ -28,7 +28,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="slot", required=true)
-        private final String slot;
+      private final String slot;
 
     public String getSlot() {
         return this.slot;

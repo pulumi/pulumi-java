@@ -24,7 +24,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domains")
-        private final @Nullable Input<List<String>> domains;
+      private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -35,7 +35,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verticals")
-        private final @Nullable Input<List<String>> verticals;
+      private final @Nullable Input<List<String>> verticals;
 
     public Input<List<String>> getVerticals() {
         return this.verticals == null ? Input.empty() : this.verticals;

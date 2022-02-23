@@ -15,7 +15,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     public static final ResourceTypeRegistrationPropertiesExtensionOptionsArgs Empty = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
 
     @InputImport(name="resourceCreationBegin")
-        private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+      private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
     public Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
         return this.resourceCreationBegin == null ? Input.empty() : this.resourceCreationBegin;

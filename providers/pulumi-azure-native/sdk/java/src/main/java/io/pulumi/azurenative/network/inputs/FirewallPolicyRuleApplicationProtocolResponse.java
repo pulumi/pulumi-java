@@ -24,7 +24,7 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -35,7 +35,7 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
      * 
      */
     @InputImport(name="protocolType")
-        private final @Nullable String protocolType;
+      private final @Nullable String protocolType;
 
     public Optional<String> getProtocolType() {
         return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);

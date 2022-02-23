@@ -21,42 +21,42 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     public static final FlowScheduledTriggerPropertiesArgs Empty = new FlowScheduledTriggerPropertiesArgs();
 
     @InputImport(name="dataPullMode")
-        private final @Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
+      private final @Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
     public Input<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
         return this.dataPullMode == null ? Input.empty() : this.dataPullMode;
     }
 
     @InputImport(name="scheduleEndTime")
-        private final @Nullable Input<Double> scheduleEndTime;
+      private final @Nullable Input<Double> scheduleEndTime;
 
     public Input<Double> getScheduleEndTime() {
         return this.scheduleEndTime == null ? Input.empty() : this.scheduleEndTime;
     }
 
     @InputImport(name="scheduleExpression", required=true)
-        private final Input<String> scheduleExpression;
+      private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     @InputImport(name="scheduleOffset")
-        private final @Nullable Input<Double> scheduleOffset;
+      private final @Nullable Input<Double> scheduleOffset;
 
     public Input<Double> getScheduleOffset() {
         return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
     }
 
     @InputImport(name="scheduleStartTime")
-        private final @Nullable Input<Double> scheduleStartTime;
+      private final @Nullable Input<Double> scheduleStartTime;
 
     public Input<Double> getScheduleStartTime() {
         return this.scheduleStartTime == null ? Input.empty() : this.scheduleStartTime;
     }
 
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

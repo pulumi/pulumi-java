@@ -22,7 +22,7 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="coreDeviceThingName", required=true)
-        private final Input<String> coreDeviceThingName;
+      private final Input<String> coreDeviceThingName;
 
     public Input<String> getCoreDeviceThingName() {
         return this.coreDeviceThingName;

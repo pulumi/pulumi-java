@@ -24,7 +24,7 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<OriginGroupOverrideActionParametersArgs> parameters;
+      private final Input<OriginGroupOverrideActionParametersArgs> parameters;
 
     public Input<OriginGroupOverrideActionParametersArgs> getParameters() {
         return this.parameters;

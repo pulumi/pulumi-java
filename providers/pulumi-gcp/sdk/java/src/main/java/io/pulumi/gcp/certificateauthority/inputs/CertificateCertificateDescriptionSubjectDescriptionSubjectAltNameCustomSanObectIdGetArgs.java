@@ -20,7 +20,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="objectIdPaths")
-        private final @Nullable Input<List<Integer>> objectIdPaths;
+      private final @Nullable Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths == null ? Input.empty() : this.objectIdPaths;

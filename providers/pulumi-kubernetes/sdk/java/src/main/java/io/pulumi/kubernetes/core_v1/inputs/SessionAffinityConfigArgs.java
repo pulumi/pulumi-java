@@ -23,7 +23,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientIP")
-        private final @Nullable Input<ClientIPConfigArgs> clientIP;
+      private final @Nullable Input<ClientIPConfigArgs> clientIP;
 
     public Input<ClientIPConfigArgs> getClientIP() {
         return this.clientIP == null ? Input.empty() : this.clientIP;

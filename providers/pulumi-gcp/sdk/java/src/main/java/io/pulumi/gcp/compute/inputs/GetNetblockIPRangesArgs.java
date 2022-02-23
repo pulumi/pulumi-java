@@ -19,7 +19,7 @@ public final class GetNetblockIPRangesArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rangeType")
-        private final @Nullable String rangeType;
+      private final @Nullable String rangeType;
 
     public Optional<String> getRangeType() {
         return this.rangeType == null ? Optional.empty() : Optional.ofNullable(this.rangeType);

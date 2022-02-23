@@ -23,7 +23,7 @@ public final class VirtualMachineScaleSetIpTagArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipTagType")
-        private final @Nullable Input<String> ipTagType;
+      private final @Nullable Input<String> ipTagType;
 
     public Input<String> getIpTagType() {
         return this.ipTagType == null ? Input.empty() : this.ipTagType;
@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetIpTagArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;

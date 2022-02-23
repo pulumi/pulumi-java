@@ -16,14 +16,14 @@ public final class WebACLIPSetReferenceStatement extends io.pulumi.resources.Inv
     public static final WebACLIPSetReferenceStatement Empty = new WebACLIPSetReferenceStatement();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="iPSetForwardedIPConfig")
-        private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
+      private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
     public Optional<WebACLIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {
         return this.iPSetForwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.iPSetForwardedIPConfig);

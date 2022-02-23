@@ -20,14 +20,14 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     public static final GameServerGroupAutoScalingPolicyArgs Empty = new GameServerGroupAutoScalingPolicyArgs();
 
     @InputImport(name="estimatedInstanceWarmup")
-        private final @Nullable Input<Double> estimatedInstanceWarmup;
+      private final @Nullable Input<Double> estimatedInstanceWarmup;
 
     public Input<Double> getEstimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
     }
 
     @InputImport(name="targetTrackingConfiguration", required=true)
-        private final Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
+      private final Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
     public Input<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
         return this.targetTrackingConfiguration;

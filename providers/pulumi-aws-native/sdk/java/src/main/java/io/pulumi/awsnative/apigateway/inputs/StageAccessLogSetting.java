@@ -23,7 +23,7 @@ public final class StageAccessLogSetting extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="destinationArn")
-        private final @Nullable String destinationArn;
+      private final @Nullable String destinationArn;
 
     public Optional<String> getDestinationArn() {
         return this.destinationArn == null ? Optional.empty() : Optional.ofNullable(this.destinationArn);
@@ -34,7 +34,7 @@ public final class StageAccessLogSetting extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="format")
-        private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);

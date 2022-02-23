@@ -23,7 +23,7 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpu")
-        private final @Nullable Input<Integer> cpu;
+      private final @Nullable Input<Integer> cpu;
 
     public Input<Integer> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;

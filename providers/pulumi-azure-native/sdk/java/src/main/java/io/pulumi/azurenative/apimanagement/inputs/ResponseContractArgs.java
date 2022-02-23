@@ -27,7 +27,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<List<ParameterContractArgs>> headers;
+      private final @Nullable Input<List<ParameterContractArgs>> headers;
 
     public Input<List<ParameterContractArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -49,7 +49,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="representations")
-        private final @Nullable Input<List<RepresentationContractArgs>> representations;
+      private final @Nullable Input<List<RepresentationContractArgs>> representations;
 
     public Input<List<RepresentationContractArgs>> getRepresentations() {
         return this.representations == null ? Input.empty() : this.representations;
@@ -60,7 +60,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCode", required=true)
-        private final Input<Integer> statusCode;
+      private final Input<Integer> statusCode;
 
     public Input<Integer> getStatusCode() {
         return this.statusCode;

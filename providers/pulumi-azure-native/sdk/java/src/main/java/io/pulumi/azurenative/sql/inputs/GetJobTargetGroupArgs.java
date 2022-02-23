@@ -17,7 +17,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-        private final String jobAgentName;
+      private final String jobAgentName;
 
     public String getJobAgentName() {
         return this.jobAgentName;
@@ -28,7 +28,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-        private final String targetGroupName;
+      private final String targetGroupName;
 
     public String getTargetGroupName() {
         return this.targetGroupName;

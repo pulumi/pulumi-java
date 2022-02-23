@@ -23,7 +23,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="applicationReadable")
-        private final @Nullable Input<Boolean> applicationReadable;
+      private final @Nullable Input<Boolean> applicationReadable;
 
     public Input<Boolean> getApplicationReadable() {
         return this.applicationReadable == null ? Input.empty() : this.applicationReadable;
@@ -35,7 +35,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="expiration")
-        private final @Nullable Input<String> expiration;
+      private final @Nullable Input<String> expiration;
 
     public Input<String> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -47,7 +47,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="httpHeaders")
-        private final @Nullable Input<Map<String,String>> httpHeaders;
+      private final @Nullable Input<Map<String,String>> httpHeaders;
 
     public Input<Map<String,String>> getHttpHeaders() {
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
@@ -59,7 +59,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="mimeType")
-        private final @Nullable Input<String> mimeType;
+      private final @Nullable Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType == null ? Input.empty() : this.mimeType;
@@ -70,7 +70,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -81,7 +81,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="requireMatchingFile")
-        private final @Nullable Input<Boolean> requireMatchingFile;
+      private final @Nullable Input<Boolean> requireMatchingFile;
 
     public Input<Boolean> getRequireMatchingFile() {
         return this.requireMatchingFile == null ? Input.empty() : this.requireMatchingFile;
@@ -92,7 +92,7 @@ public final class StandardAppVersionHandlerStaticFilesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="uploadPathRegex")
-        private final @Nullable Input<String> uploadPathRegex;
+      private final @Nullable Input<String> uploadPathRegex;
 
     public Input<String> getUploadPathRegex() {
         return this.uploadPathRegex == null ? Input.empty() : this.uploadPathRegex;

@@ -17,14 +17,14 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
     public static final DataSourceOneDriveUsersArgs Empty = new DataSourceOneDriveUsersArgs();
 
     @InputImport(name="oneDriveUserList")
-        private final @Nullable Input<List<String>> oneDriveUserList;
+      private final @Nullable Input<List<String>> oneDriveUserList;
 
     public Input<List<String>> getOneDriveUserList() {
         return this.oneDriveUserList == null ? Input.empty() : this.oneDriveUserList;
     }
 
     @InputImport(name="oneDriveUserS3Path")
-        private final @Nullable Input<DataSourceS3PathArgs> oneDriveUserS3Path;
+      private final @Nullable Input<DataSourceS3PathArgs> oneDriveUserS3Path;
 
     public Input<DataSourceS3PathArgs> getOneDriveUserS3Path() {
         return this.oneDriveUserS3Path == null ? Input.empty() : this.oneDriveUserS3Path;

@@ -19,7 +19,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="incidentId", required=true)
-        private final Input<String> incidentId;
+      private final Input<String> incidentId;
 
     public Input<String> getIncidentId() {
         return this.incidentId;
@@ -30,7 +30,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-        private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -41,7 +41,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relatedResourceId", required=true)
-        private final Input<String> relatedResourceId;
+      private final Input<String> relatedResourceId;
 
     public Input<String> getRelatedResourceId() {
         return this.relatedResourceId;
@@ -52,7 +52,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relationName")
-        private final @Nullable Input<String> relationName;
+      private final @Nullable Input<String> relationName;
 
     public Input<String> getRelationName() {
         return this.relationName == null ? Input.empty() : this.relationName;
@@ -63,7 +63,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

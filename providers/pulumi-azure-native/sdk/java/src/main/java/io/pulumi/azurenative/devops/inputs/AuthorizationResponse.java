@@ -24,7 +24,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="authorizationType", required=true)
-        private final String authorizationType;
+      private final String authorizationType;
 
     public String getAuthorizationType() {
         return this.authorizationType;
@@ -35,7 +35,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,String> parameters;
+      private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;

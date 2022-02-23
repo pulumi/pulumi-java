@@ -16,14 +16,14 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     public static final DatastoreFileFormatConfigurationArgs Empty = new DatastoreFileFormatConfigurationArgs();
 
     @InputImport(name="jsonConfiguration")
-        private final @Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration;
+      private final @Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration;
 
     public Input<DatastoreJsonConfigurationArgs> getJsonConfiguration() {
         return this.jsonConfiguration == null ? Input.empty() : this.jsonConfiguration;
     }
 
     @InputImport(name="parquetConfiguration")
-        private final @Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration;
+      private final @Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration;
 
     public Input<DatastoreParquetConfigurationArgs> getParquetConfiguration() {
         return this.parquetConfiguration == null ? Input.empty() : this.parquetConfiguration;

@@ -15,21 +15,21 @@ public final class PipelineFilter extends io.pulumi.resources.InvokeArgs {
     public static final PipelineFilter Empty = new PipelineFilter();
 
     @InputImport(name="filter", required=true)
-        private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-        private final @Nullable String next;
+      private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);

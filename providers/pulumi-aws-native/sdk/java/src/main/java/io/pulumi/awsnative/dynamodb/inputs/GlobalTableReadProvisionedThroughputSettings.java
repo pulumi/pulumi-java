@@ -16,14 +16,14 @@ public final class GlobalTableReadProvisionedThroughputSettings extends io.pulum
     public static final GlobalTableReadProvisionedThroughputSettings Empty = new GlobalTableReadProvisionedThroughputSettings();
 
     @InputImport(name="readCapacityAutoScalingSettings")
-        private final @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
+      private final @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
 
     public Optional<GlobalTableCapacityAutoScalingSettings> getReadCapacityAutoScalingSettings() {
         return this.readCapacityAutoScalingSettings == null ? Optional.empty() : Optional.ofNullable(this.readCapacityAutoScalingSettings);
     }
 
     @InputImport(name="readCapacityUnits")
-        private final @Nullable Integer readCapacityUnits;
+      private final @Nullable Integer readCapacityUnits;
 
     public Optional<Integer> getReadCapacityUnits() {
         return this.readCapacityUnits == null ? Optional.empty() : Optional.ofNullable(this.readCapacityUnits);

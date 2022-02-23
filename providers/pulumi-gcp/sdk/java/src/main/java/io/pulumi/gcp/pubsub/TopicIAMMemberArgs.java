@@ -16,14 +16,14 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicIAMMemberArgs Empty = new TopicIAMMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TopicIAMMemberConditionArgs> condition;
+      private final @Nullable Input<TopicIAMMemberConditionArgs> condition;
 
     public Input<TopicIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -35,7 +35,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -48,7 +48,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -59,7 +59,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-        private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

@@ -24,7 +24,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessEndpointIpAddresses")
-        private final @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
+      private final @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
 
     public Input<List<IpAddressArgs>> getAccessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? Input.empty() : this.accessEndpointIpAddresses;
@@ -35,7 +35,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outgoingIpAddresses")
-        private final @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
+      private final @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
 
     public Input<List<IpAddressArgs>> getOutgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? Input.empty() : this.outgoingIpAddresses;

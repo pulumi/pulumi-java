@@ -25,7 +25,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actionHostName")
-        private final @Nullable String actionHostName;
+      private final @Nullable String actionHostName;
 
     public Optional<String> getActionHostName() {
         return this.actionHostName == null ? Optional.empty() : Optional.ofNullable(this.actionHostName);
@@ -37,7 +37,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="changeDecisionCallbackUrl")
-        private final @Nullable String changeDecisionCallbackUrl;
+      private final @Nullable String changeDecisionCallbackUrl;
 
     public Optional<String> getChangeDecisionCallbackUrl() {
         return this.changeDecisionCallbackUrl == null ? Optional.empty() : Optional.ofNullable(this.changeDecisionCallbackUrl);
@@ -48,7 +48,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="changeIntervalInMinutes")
-        private final @Nullable Integer changeIntervalInMinutes;
+      private final @Nullable Integer changeIntervalInMinutes;
 
     public Optional<Integer> getChangeIntervalInMinutes() {
         return this.changeIntervalInMinutes == null ? Optional.empty() : Optional.ofNullable(this.changeIntervalInMinutes);
@@ -61,7 +61,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="changeStep")
-        private final @Nullable Double changeStep;
+      private final @Nullable Double changeStep;
 
     public Optional<Double> getChangeStep() {
         return this.changeStep == null ? Optional.empty() : Optional.ofNullable(this.changeStep);
@@ -72,7 +72,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxReroutePercentage")
-        private final @Nullable Double maxReroutePercentage;
+      private final @Nullable Double maxReroutePercentage;
 
     public Optional<Double> getMaxReroutePercentage() {
         return this.maxReroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.maxReroutePercentage);
@@ -83,7 +83,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minReroutePercentage")
-        private final @Nullable Double minReroutePercentage;
+      private final @Nullable Double minReroutePercentage;
 
     public Optional<Double> getMinReroutePercentage() {
         return this.minReroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.minReroutePercentage);
@@ -94,7 +94,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -105,7 +105,7 @@ public final class RampUpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reroutePercentage")
-        private final @Nullable Double reroutePercentage;
+      private final @Nullable Double reroutePercentage;
 
     public Optional<Double> getReroutePercentage() {
         return this.reroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.reroutePercentage);

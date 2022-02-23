@@ -21,7 +21,7 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowAllDomains")
-        private final @Nullable Input<Boolean> allowAllDomains;
+      private final @Nullable Input<Boolean> allowAllDomains;
 
     public Input<Boolean> getAllowAllDomains() {
         return this.allowAllDomains == null ? Input.empty() : this.allowAllDomains;
@@ -32,7 +32,7 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowAmpTraffic")
-        private final @Nullable Input<Boolean> allowAmpTraffic;
+      private final @Nullable Input<Boolean> allowAmpTraffic;
 
     public Input<Boolean> getAllowAmpTraffic() {
         return this.allowAmpTraffic == null ? Input.empty() : this.allowAmpTraffic;
@@ -43,7 +43,7 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedDomains")
-        private final @Nullable Input<List<String>> allowedDomains;
+      private final @Nullable Input<List<String>> allowedDomains;
 
     public Input<List<String>> getAllowedDomains() {
         return this.allowedDomains == null ? Input.empty() : this.allowedDomains;
@@ -54,7 +54,7 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="challengeSecurityPreference")
-        private final @Nullable Input<String> challengeSecurityPreference;
+      private final @Nullable Input<String> challengeSecurityPreference;
 
     public Input<String> getChallengeSecurityPreference() {
         return this.challengeSecurityPreference == null ? Input.empty() : this.challengeSecurityPreference;
@@ -65,7 +65,7 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="integrationType", required=true)
-        private final Input<String> integrationType;
+      private final Input<String> integrationType;
 
     public Input<String> getIntegrationType() {
         return this.integrationType;

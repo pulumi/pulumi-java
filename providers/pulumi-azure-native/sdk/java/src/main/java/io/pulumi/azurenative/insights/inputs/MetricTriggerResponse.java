@@ -27,7 +27,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dimensions")
-        private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
+      private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
 
     public List<ScaleRuleMetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
@@ -38,7 +38,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dividePerInstance")
-        private final @Nullable Boolean dividePerInstance;
+      private final @Nullable Boolean dividePerInstance;
 
     public Optional<Boolean> getDividePerInstance() {
         return this.dividePerInstance == null ? Optional.empty() : Optional.ofNullable(this.dividePerInstance);
@@ -49,7 +49,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metricName", required=true)
-        private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
@@ -60,7 +60,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metricNamespace")
-        private final @Nullable String metricNamespace;
+      private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
@@ -71,7 +71,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metricResourceLocation")
-        private final @Nullable String metricResourceLocation;
+      private final @Nullable String metricResourceLocation;
 
     public Optional<String> getMetricResourceLocation() {
         return this.metricResourceLocation == null ? Optional.empty() : Optional.ofNullable(this.metricResourceLocation);
@@ -82,7 +82,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metricResourceUri", required=true)
-        private final String metricResourceUri;
+      private final String metricResourceUri;
 
     public String getMetricResourceUri() {
         return this.metricResourceUri;
@@ -93,7 +93,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -104,7 +104,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="statistic", required=true)
-        private final String statistic;
+      private final String statistic;
 
     public String getStatistic() {
         return this.statistic;
@@ -115,7 +115,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="threshold", required=true)
-        private final Double threshold;
+      private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -126,7 +126,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-        private final String timeAggregation;
+      private final String timeAggregation;
 
     public String getTimeAggregation() {
         return this.timeAggregation;
@@ -137,7 +137,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeGrain", required=true)
-        private final String timeGrain;
+      private final String timeGrain;
 
     public String getTimeGrain() {
         return this.timeGrain;
@@ -148,7 +148,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeWindow", required=true)
-        private final String timeWindow;
+      private final String timeWindow;
 
     public String getTimeWindow() {
         return this.timeWindow;

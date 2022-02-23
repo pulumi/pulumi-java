@@ -23,7 +23,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptArguments")
-        private final @Nullable Input<String> scriptArguments;
+      private final @Nullable Input<String> scriptArguments;
 
     public Input<String> getScriptArguments() {
         return this.scriptArguments == null ? Input.empty() : this.scriptArguments;
@@ -34,7 +34,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptData")
-        private final @Nullable Input<String> scriptData;
+      private final @Nullable Input<String> scriptData;
 
     public Input<String> getScriptData() {
         return this.scriptData == null ? Input.empty() : this.scriptData;
@@ -45,7 +45,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptSource")
-        private final @Nullable Input<String> scriptSource;
+      private final @Nullable Input<String> scriptSource;
 
     public Input<String> getScriptSource() {
         return this.scriptSource == null ? Input.empty() : this.scriptSource;
@@ -56,7 +56,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

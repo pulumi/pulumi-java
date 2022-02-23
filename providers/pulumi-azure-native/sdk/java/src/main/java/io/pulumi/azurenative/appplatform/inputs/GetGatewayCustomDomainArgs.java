@@ -17,7 +17,7 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="domainName", required=true)
-        private final String domainName;
+      private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gatewayName", required=true)
-        private final String gatewayName;
+      private final String gatewayName;
 
     public String getGatewayName() {
         return this.gatewayName;
@@ -39,7 +39,7 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

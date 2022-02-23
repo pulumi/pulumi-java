@@ -19,7 +19,7 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ingestionSettingName")
-        private final @Nullable Input<String> ingestionSettingName;
+      private final @Nullable Input<String> ingestionSettingName;
 
     public Input<String> getIngestionSettingName() {
         return this.ingestionSettingName == null ? Input.empty() : this.ingestionSettingName;

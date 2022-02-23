@@ -22,7 +22,7 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-        private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
+      private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
 
     public Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> getTargetNameServers() {
         return this.targetNameServers;

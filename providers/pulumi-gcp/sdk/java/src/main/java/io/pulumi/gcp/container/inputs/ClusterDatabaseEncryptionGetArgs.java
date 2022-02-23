@@ -19,7 +19,7 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -30,7 +30,7 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state", required=true)
-        private final Input<String> state;
+      private final Input<String> state;
 
     public Input<String> getState() {
         return this.state;

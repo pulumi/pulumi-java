@@ -22,7 +22,7 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareId", required=true)
-        private final Input<String> shareId;
+      private final Input<String> shareId;
 
     public Input<String> getShareId() {
         return this.shareId;

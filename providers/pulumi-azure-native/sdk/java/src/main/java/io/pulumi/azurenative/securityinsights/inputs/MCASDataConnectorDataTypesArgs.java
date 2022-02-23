@@ -23,7 +23,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="alerts")
-        private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+      private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
 
     public Input<DataConnectorDataTypeCommonArgs> getAlerts() {
         return this.alerts == null ? Input.empty() : this.alerts;
@@ -34,7 +34,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="discoveryLogs")
-        private final @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
+      private final @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
     public Input<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {
         return this.discoveryLogs == null ? Input.empty() : this.discoveryLogs;

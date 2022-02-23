@@ -17,7 +17,7 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediaGraphName", required=true)
-        private final String mediaGraphName;
+      private final String mediaGraphName;
 
     public String getMediaGraphName() {
         return this.mediaGraphName;
@@ -39,7 +39,7 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

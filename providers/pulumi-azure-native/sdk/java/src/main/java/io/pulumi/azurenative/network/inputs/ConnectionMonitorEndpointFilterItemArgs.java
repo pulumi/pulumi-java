@@ -25,7 +25,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -36,7 +36,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
+      private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
     public Input<Either<String,ConnectionMonitorEndpointFilterItemType>> getType() {
         return this.type == null ? Input.empty() : this.type;

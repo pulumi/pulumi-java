@@ -23,7 +23,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-        private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Input<Boolean> associatePublicIpAddress;
 
     public Input<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
@@ -34,7 +34,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blockDeviceMappings")
-        private final @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Input<List<LaunchConfigurationBlockDeviceMappingArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -45,7 +45,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classicLinkVPCId")
-        private final @Nullable Input<String> classicLinkVPCId;
+      private final @Nullable Input<String> classicLinkVPCId;
 
     public Input<String> getClassicLinkVPCId() {
         return this.classicLinkVPCId == null ? Input.empty() : this.classicLinkVPCId;
@@ -56,7 +56,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classicLinkVPCSecurityGroups")
-        private final @Nullable Input<List<String>> classicLinkVPCSecurityGroups;
+      private final @Nullable Input<List<String>> classicLinkVPCSecurityGroups;
 
     public Input<List<String>> getClassicLinkVPCSecurityGroups() {
         return this.classicLinkVPCSecurityGroups == null ? Input.empty() : this.classicLinkVPCSecurityGroups;
@@ -67,7 +67,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ebsOptimized")
-        private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -78,7 +78,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="iamInstanceProfile")
-        private final @Nullable Input<String> iamInstanceProfile;
+      private final @Nullable Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
@@ -89,7 +89,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageId", required=true)
-        private final Input<String> imageId;
+      private final Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId;
@@ -100,7 +100,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceId")
-        private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -111,7 +111,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceMonitoring")
-        private final @Nullable Input<Boolean> instanceMonitoring;
+      private final @Nullable Input<Boolean> instanceMonitoring;
 
     public Input<Boolean> getInstanceMonitoring() {
         return this.instanceMonitoring == null ? Input.empty() : this.instanceMonitoring;
@@ -122,7 +122,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -133,7 +133,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kernelId")
-        private final @Nullable Input<String> kernelId;
+      private final @Nullable Input<String> kernelId;
 
     public Input<String> getKernelId() {
         return this.kernelId == null ? Input.empty() : this.kernelId;
@@ -144,7 +144,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -155,7 +155,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="launchConfigurationName")
-        private final @Nullable Input<String> launchConfigurationName;
+      private final @Nullable Input<String> launchConfigurationName;
 
     public Input<String> getLaunchConfigurationName() {
         return this.launchConfigurationName == null ? Input.empty() : this.launchConfigurationName;
@@ -166,7 +166,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadataOptions")
-        private final @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
+      private final @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
     public Input<LaunchConfigurationMetadataOptionsArgs> getMetadataOptions() {
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
@@ -177,7 +177,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="placementTenancy")
-        private final @Nullable Input<String> placementTenancy;
+      private final @Nullable Input<String> placementTenancy;
 
     public Input<String> getPlacementTenancy() {
         return this.placementTenancy == null ? Input.empty() : this.placementTenancy;
@@ -188,7 +188,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ramDiskId")
-        private final @Nullable Input<String> ramDiskId;
+      private final @Nullable Input<String> ramDiskId;
 
     public Input<String> getRamDiskId() {
         return this.ramDiskId == null ? Input.empty() : this.ramDiskId;
@@ -199,7 +199,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroups")
-        private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -210,7 +210,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="spotPrice")
-        private final @Nullable Input<String> spotPrice;
+      private final @Nullable Input<String> spotPrice;
 
     public Input<String> getSpotPrice() {
         return this.spotPrice == null ? Input.empty() : this.spotPrice;
@@ -221,7 +221,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userData")
-        private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;

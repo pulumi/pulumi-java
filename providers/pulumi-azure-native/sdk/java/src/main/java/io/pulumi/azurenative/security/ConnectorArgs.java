@@ -24,7 +24,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationDetails")
-        private final @Nullable Input<Object> authenticationDetails;
+      private final @Nullable Input<Object> authenticationDetails;
 
     public Input<Object> getAuthenticationDetails() {
         return this.authenticationDetails == null ? Input.empty() : this.authenticationDetails;
@@ -35,7 +35,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-        private final @Nullable Input<String> connectorName;
+      private final @Nullable Input<String> connectorName;
 
     public Input<String> getConnectorName() {
         return this.connectorName == null ? Input.empty() : this.connectorName;
@@ -46,7 +46,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hybridComputeSettings")
-        private final @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
+      private final @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
     public Input<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {
         return this.hybridComputeSettings == null ? Input.empty() : this.hybridComputeSettings;

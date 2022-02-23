@@ -28,7 +28,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchValues")
-        private final @Nullable Input<List<String>> matchValues;
+      private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -39,14 +39,14 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="negateCondition")
-        private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="operator", required=true)
-        private final Input<Either<String,CookiesOperator>> operator;
+      private final Input<Either<String,CookiesOperator>> operator;
 
     public Input<Either<String,CookiesOperator>> getOperator() {
         return this.operator;
@@ -68,7 +68,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -79,7 +79,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="transforms")
-        private final @Nullable Input<List<Either<String,Transform>>> transforms;
+      private final @Nullable Input<List<Either<String,Transform>>> transforms;
 
     public Input<List<Either<String,Transform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;

@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyAccessControlExposeHeadersArgs extends i
     public static final ResponseHeadersPolicyAccessControlExposeHeadersArgs Empty = new ResponseHeadersPolicyAccessControlExposeHeadersArgs();
 
     @InputImport(name="items", required=true)
-        private final Input<List<String>> items;
+      private final Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items;

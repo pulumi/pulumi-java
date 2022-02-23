@@ -22,7 +22,7 @@ public final class ManagedCertificateParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

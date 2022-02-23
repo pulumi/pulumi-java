@@ -27,7 +27,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="definition", required=true)
-        private final Input<ManagementPolicyDefinitionArgs> definition;
+      private final Input<ManagementPolicyDefinitionArgs> definition;
 
     public Input<ManagementPolicyDefinitionArgs> getDefinition() {
         return this.definition;
@@ -38,7 +38,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -49,7 +49,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -60,7 +60,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,RuleType>> type;
+      private final Input<Either<String,RuleType>> type;
 
     public Input<Either<String,RuleType>> getType() {
         return this.type;

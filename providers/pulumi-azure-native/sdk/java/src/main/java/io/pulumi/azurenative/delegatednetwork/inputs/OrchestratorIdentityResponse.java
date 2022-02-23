@@ -19,7 +19,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -30,7 +30,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -41,7 +41,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

@@ -21,7 +21,7 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

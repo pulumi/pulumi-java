@@ -18,7 +18,7 @@ public final class AwsClusterAuthorizationAdminUserGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

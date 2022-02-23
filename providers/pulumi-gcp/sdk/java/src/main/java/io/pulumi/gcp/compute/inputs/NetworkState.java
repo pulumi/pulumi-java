@@ -25,7 +25,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateSubnetworks")
-        private final @Nullable Input<Boolean> autoCreateSubnetworks;
+      private final @Nullable Input<Boolean> autoCreateSubnetworks;
 
     public Input<Boolean> getAutoCreateSubnetworks() {
         return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
@@ -37,7 +37,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteDefaultRoutesOnCreate")
-        private final @Nullable Input<Boolean> deleteDefaultRoutesOnCreate;
+      private final @Nullable Input<Boolean> deleteDefaultRoutesOnCreate;
 
     public Input<Boolean> getDeleteDefaultRoutesOnCreate() {
         return this.deleteDefaultRoutesOnCreate == null ? Input.empty() : this.deleteDefaultRoutesOnCreate;
@@ -49,7 +49,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayIpv4")
-        private final @Nullable Input<String> gatewayIpv4;
+      private final @Nullable Input<String> gatewayIpv4;
 
     public Input<String> getGatewayIpv4() {
         return this.gatewayIpv4 == null ? Input.empty() : this.gatewayIpv4;
@@ -72,7 +72,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtu")
-        private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -89,7 +89,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingMode")
-        private final @Nullable Input<String> routingMode;
+      private final @Nullable Input<String> routingMode;
 
     public Input<String> getRoutingMode() {
         return this.routingMode == null ? Input.empty() : this.routingMode;
@@ -128,7 +128,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;

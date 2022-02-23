@@ -17,7 +17,7 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final String automationAccountName;
+      private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="nodeConfigurationName", required=true)
-        private final String nodeConfigurationName;
+      private final String nodeConfigurationName;
 
     public String getNodeConfigurationName() {
         return this.nodeConfigurationName;
@@ -39,7 +39,7 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

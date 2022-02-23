@@ -24,7 +24,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedSourceAddressPrefix")
-        private final @Nullable Input<String> allowedSourceAddressPrefix;
+      private final @Nullable Input<String> allowedSourceAddressPrefix;
 
     public Input<String> getAllowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Input.empty() : this.allowedSourceAddressPrefix;
@@ -35,7 +35,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedSourceAddressPrefixes")
-        private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
+      private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
 
     public Input<List<String>> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? Input.empty() : this.allowedSourceAddressPrefixes;
@@ -46,7 +46,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endTimeUtc", required=true)
-        private final Input<String> endTimeUtc;
+      private final Input<String> endTimeUtc;
 
     public Input<String> getEndTimeUtc() {
         return this.endTimeUtc;
@@ -57,14 +57,14 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mappedPort")
-        private final @Nullable Input<Integer> mappedPort;
+      private final @Nullable Input<Integer> mappedPort;
 
     public Input<Integer> getMappedPort() {
         return this.mappedPort == null ? Input.empty() : this.mappedPort;
     }
 
     @InputImport(name="number", required=true)
-        private final Input<Integer> number;
+      private final Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number;
@@ -75,7 +75,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<Either<String,Status>> status;
+      private final Input<Either<String,Status>> status;
 
     public Input<Either<String,Status>> getStatus() {
         return this.status;
@@ -86,7 +86,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="statusReason", required=true)
-        private final Input<Either<String,StatusReason>> statusReason;
+      private final Input<Either<String,StatusReason>> statusReason;
 
     public Input<Either<String,StatusReason>> getStatusReason() {
         return this.statusReason;

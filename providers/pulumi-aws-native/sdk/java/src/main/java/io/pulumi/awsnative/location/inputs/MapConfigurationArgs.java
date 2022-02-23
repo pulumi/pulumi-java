@@ -14,7 +14,7 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     public static final MapConfigurationArgs Empty = new MapConfigurationArgs();
 
     @InputImport(name="style", required=true)
-        private final Input<String> style;
+      private final Input<String> style;
 
     public Input<String> getStyle() {
         return this.style;

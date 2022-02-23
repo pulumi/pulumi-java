@@ -24,7 +24,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskSizeGB", required=true)
-        private final Integer diskSizeGB;
+      private final Integer diskSizeGB;
 
     public Integer getDiskSizeGB() {
         return this.diskSizeGB;
@@ -35,7 +35,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disksPerNode")
-        private final @Nullable Integer disksPerNode;
+      private final @Nullable Integer disksPerNode;
 
     public Optional<Integer> getDisksPerNode() {
         return this.disksPerNode == null ? Optional.empty() : Optional.ofNullable(this.disksPerNode);
@@ -46,7 +46,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageAccountType", required=true)
-        private final String storageAccountType;
+      private final String storageAccountType;
 
     public String getStorageAccountType() {
         return this.storageAccountType;

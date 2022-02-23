@@ -17,7 +17,7 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupInstanceName", required=true)
-        private final String backupInstanceName;
+      private final String backupInstanceName;
 
     public String getBackupInstanceName() {
         return this.backupInstanceName;
@@ -28,7 +28,7 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vaultName", required=true)
-        private final String vaultName;
+      private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;

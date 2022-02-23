@@ -23,7 +23,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableReliableLogging")
-        private final @Nullable Input<Object> enableReliableLogging;
+      private final @Nullable Input<Object> enableReliableLogging;
 
     public Input<Object> getEnableReliableLogging() {
         return this.enableReliableLogging == null ? Input.empty() : this.enableReliableLogging;
@@ -34,7 +34,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logLevel")
-        private final @Nullable Input<Object> logLevel;
+      private final @Nullable Input<Object> logLevel;
 
     public Input<Object> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;

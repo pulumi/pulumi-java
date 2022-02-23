@@ -16,14 +16,14 @@ public final class DistributionCookiesArgs extends io.pulumi.resources.ResourceA
     public static final DistributionCookiesArgs Empty = new DistributionCookiesArgs();
 
     @InputImport(name="forward", required=true)
-        private final Input<String> forward;
+      private final Input<String> forward;
 
     public Input<String> getForward() {
         return this.forward;
     }
 
     @InputImport(name="whitelistedNames")
-        private final @Nullable Input<List<String>> whitelistedNames;
+      private final @Nullable Input<List<String>> whitelistedNames;
 
     public Input<List<String>> getWhitelistedNames() {
         return this.whitelistedNames == null ? Input.empty() : this.whitelistedNames;

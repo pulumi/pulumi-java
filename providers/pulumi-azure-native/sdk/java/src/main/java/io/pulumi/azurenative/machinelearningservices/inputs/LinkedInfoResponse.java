@@ -23,7 +23,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedId")
-        private final @Nullable String linkedId;
+      private final @Nullable String linkedId;
 
     public Optional<String> getLinkedId() {
         return this.linkedId == null ? Optional.empty() : Optional.ofNullable(this.linkedId);
@@ -34,7 +34,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedResourceName")
-        private final @Nullable String linkedResourceName;
+      private final @Nullable String linkedResourceName;
 
     public Optional<String> getLinkedResourceName() {
         return this.linkedResourceName == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceName);
@@ -45,7 +45,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="origin")
-        private final @Nullable String origin;
+      private final @Nullable String origin;
 
     public Optional<String> getOrigin() {
         return this.origin == null ? Optional.empty() : Optional.ofNullable(this.origin);

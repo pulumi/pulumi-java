@@ -22,7 +22,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ascLocation", required=true)
-        private final Input<String> ascLocation;
+      private final Input<String> ascLocation;
 
     public Input<String> getAscLocation() {
         return this.ascLocation;
@@ -33,7 +33,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="jitNetworkAccessPolicyName")
-        private final @Nullable Input<String> jitNetworkAccessPolicyName;
+      private final @Nullable Input<String> jitNetworkAccessPolicyName;
 
     public Input<String> getJitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName == null ? Input.empty() : this.jitNetworkAccessPolicyName;
@@ -44,14 +44,14 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="requests")
-        private final @Nullable Input<List<JitNetworkAccessRequestArgs>> requests;
+      private final @Nullable Input<List<JitNetworkAccessRequestArgs>> requests;
 
     public Input<List<JitNetworkAccessRequestArgs>> getRequests() {
         return this.requests == null ? Input.empty() : this.requests;
@@ -62,7 +62,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -73,7 +73,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualMachines", required=true)
-        private final Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
+      private final Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 
     public Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> getVirtualMachines() {
         return this.virtualMachines;

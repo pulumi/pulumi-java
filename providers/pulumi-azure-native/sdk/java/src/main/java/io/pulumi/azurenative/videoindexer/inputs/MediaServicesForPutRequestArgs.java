@@ -23,7 +23,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -34,7 +34,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userAssignedIdentity")
-        private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;

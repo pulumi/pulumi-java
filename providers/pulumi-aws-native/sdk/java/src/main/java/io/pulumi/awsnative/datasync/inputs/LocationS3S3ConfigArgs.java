@@ -22,7 +22,7 @@ public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketAccessRoleArn", required=true)
-        private final Input<String> bucketAccessRoleArn;
+      private final Input<String> bucketAccessRoleArn;
 
     public Input<String> getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;

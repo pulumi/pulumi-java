@@ -19,7 +19,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -30,7 +30,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
      * 
      */
     @InputImport(name="roleSessionName")
-        private final @Nullable Input<String> roleSessionName;
+      private final @Nullable Input<String> roleSessionName;
 
     public Input<String> getRoleSessionName() {
         return this.roleSessionName == null ? Input.empty() : this.roleSessionName;

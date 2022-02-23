@@ -17,7 +17,7 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskName", required=true)
-        private final String diskName;
+      private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -28,7 +28,7 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pem")
-        private final @Nullable Input<String> pem;
+      private final @Nullable Input<String> pem;
 
     public Input<String> getPem() {
         return this.pem == null ? Input.empty() : this.pem;

@@ -20,7 +20,7 @@ public final class FirewallPolicyRuleMatchLayer4ConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ipProtocol", required=true)
-        private final Input<String> ipProtocol;
+      private final Input<String> ipProtocol;
 
     public Input<String> getIpProtocol() {
         return this.ipProtocol;
@@ -31,7 +31,7 @@ public final class FirewallPolicyRuleMatchLayer4ConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ports")
-        private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;

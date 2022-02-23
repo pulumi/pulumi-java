@@ -26,7 +26,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fsType")
-        private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -37,7 +37,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image", required=true)
-        private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -48,7 +48,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyring")
-        private final @Nullable Input<String> keyring;
+      private final @Nullable Input<String> keyring;
 
     public Input<String> getKeyring() {
         return this.keyring == null ? Input.empty() : this.keyring;
@@ -59,7 +59,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="monitors", required=true)
-        private final Input<List<String>> monitors;
+      private final Input<List<String>> monitors;
 
     public Input<List<String>> getMonitors() {
         return this.monitors;
@@ -70,7 +70,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pool")
-        private final @Nullable Input<String> pool;
+      private final @Nullable Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool == null ? Input.empty() : this.pool;
@@ -81,7 +81,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -92,7 +92,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="secretRef")
-        private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
+      private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
     public Input<LocalObjectReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -103,7 +103,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="user")
-        private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;

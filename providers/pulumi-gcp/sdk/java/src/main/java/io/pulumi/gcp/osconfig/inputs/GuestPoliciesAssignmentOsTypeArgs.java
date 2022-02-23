@@ -19,7 +19,7 @@ public final class GuestPoliciesAssignmentOsTypeArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="osArchitecture")
-        private final @Nullable Input<String> osArchitecture;
+      private final @Nullable Input<String> osArchitecture;
 
     public Input<String> getOsArchitecture() {
         return this.osArchitecture == null ? Input.empty() : this.osArchitecture;
@@ -30,7 +30,7 @@ public final class GuestPoliciesAssignmentOsTypeArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="osShortName")
-        private final @Nullable Input<String> osShortName;
+      private final @Nullable Input<String> osShortName;
 
     public Input<String> getOsShortName() {
         return this.osShortName == null ? Input.empty() : this.osShortName;
@@ -41,7 +41,7 @@ public final class GuestPoliciesAssignmentOsTypeArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="osVersion")
-        private final @Nullable Input<String> osVersion;
+      private final @Nullable Input<String> osVersion;
 
     public Input<String> getOsVersion() {
         return this.osVersion == null ? Input.empty() : this.osVersion;

@@ -28,7 +28,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="allocatedOutboundPorts")
-        private final @Nullable Integer allocatedOutboundPorts;
+      private final @Nullable Integer allocatedOutboundPorts;
 
     public Optional<Integer> getAllocatedOutboundPorts() {
         return this.allocatedOutboundPorts == null ? Optional.empty() : Optional.ofNullable(this.allocatedOutboundPorts);
@@ -39,7 +39,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="effectiveOutboundIPs")
-        private final @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs;
+      private final @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs;
 
     public List<ResourceReferenceResponse> getEffectiveOutboundIPs() {
         return this.effectiveOutboundIPs == null ? List.of() : this.effectiveOutboundIPs;
@@ -50,7 +50,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Integer idleTimeoutInMinutes;
+      private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -61,7 +61,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="managedOutboundIPs")
-        private final @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs;
+      private final @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs;
 
     public Optional<ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs> getManagedOutboundIPs() {
         return this.managedOutboundIPs == null ? Optional.empty() : Optional.ofNullable(this.managedOutboundIPs);
@@ -72,7 +72,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="outboundIPPrefixes")
-        private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes;
+      private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes;
 
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes> getOutboundIPPrefixes() {
         return this.outboundIPPrefixes == null ? Optional.empty() : Optional.ofNullable(this.outboundIPPrefixes);
@@ -83,7 +83,7 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="outboundIPs")
-        private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
+      private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPs> getOutboundIPs() {
         return this.outboundIPs == null ? Optional.empty() : Optional.ofNullable(this.outboundIPs);

@@ -25,7 +25,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowVersionUpgrade")
-        private final @Nullable Input<Boolean> allowVersionUpgrade;
+      private final @Nullable Input<Boolean> allowVersionUpgrade;
 
     public Input<Boolean> getAllowVersionUpgrade() {
         return this.allowVersionUpgrade == null ? Input.empty() : this.allowVersionUpgrade;
@@ -40,7 +40,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aquaConfigurationStatus")
-        private final @Nullable Input<String> aquaConfigurationStatus;
+      private final @Nullable Input<String> aquaConfigurationStatus;
 
     public Input<String> getAquaConfigurationStatus() {
         return this.aquaConfigurationStatus == null ? Input.empty() : this.aquaConfigurationStatus;
@@ -51,7 +51,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automatedSnapshotRetentionPeriod")
-        private final @Nullable Input<Integer> automatedSnapshotRetentionPeriod;
+      private final @Nullable Input<Integer> automatedSnapshotRetentionPeriod;
 
     public Input<Integer> getAutomatedSnapshotRetentionPeriod() {
         return this.automatedSnapshotRetentionPeriod == null ? Input.empty() : this.automatedSnapshotRetentionPeriod;
@@ -62,7 +62,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-        private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -73,7 +73,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneRelocation")
-        private final @Nullable Input<Boolean> availabilityZoneRelocation;
+      private final @Nullable Input<Boolean> availabilityZoneRelocation;
 
     public Input<Boolean> getAvailabilityZoneRelocation() {
         return this.availabilityZoneRelocation == null ? Input.empty() : this.availabilityZoneRelocation;
@@ -84,7 +84,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneRelocationStatus")
-        private final @Nullable Input<String> availabilityZoneRelocationStatus;
+      private final @Nullable Input<String> availabilityZoneRelocationStatus;
 
     public Input<String> getAvailabilityZoneRelocationStatus() {
         return this.availabilityZoneRelocationStatus == null ? Input.empty() : this.availabilityZoneRelocationStatus;
@@ -95,7 +95,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classic")
-        private final @Nullable Input<Boolean> classic;
+      private final @Nullable Input<Boolean> classic;
 
     public Input<Boolean> getClassic() {
         return this.classic == null ? Input.empty() : this.classic;
@@ -106,7 +106,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIdentifier")
-        private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
@@ -117,7 +117,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterParameterGroupName")
-        private final @Nullable Input<String> clusterParameterGroupName;
+      private final @Nullable Input<String> clusterParameterGroupName;
 
     public Input<String> getClusterParameterGroupName() {
         return this.clusterParameterGroupName == null ? Input.empty() : this.clusterParameterGroupName;
@@ -128,7 +128,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterSecurityGroups")
-        private final @Nullable Input<List<String>> clusterSecurityGroups;
+      private final @Nullable Input<List<String>> clusterSecurityGroups;
 
     public Input<List<String>> getClusterSecurityGroups() {
         return this.clusterSecurityGroups == null ? Input.empty() : this.clusterSecurityGroups;
@@ -139,7 +139,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterSubnetGroupName")
-        private final @Nullable Input<String> clusterSubnetGroupName;
+      private final @Nullable Input<String> clusterSubnetGroupName;
 
     public Input<String> getClusterSubnetGroupName() {
         return this.clusterSubnetGroupName == null ? Input.empty() : this.clusterSubnetGroupName;
@@ -150,7 +150,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterType", required=true)
-        private final Input<String> clusterType;
+      private final Input<String> clusterType;
 
     public Input<String> getClusterType() {
         return this.clusterType;
@@ -161,7 +161,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterVersion")
-        private final @Nullable Input<String> clusterVersion;
+      private final @Nullable Input<String> clusterVersion;
 
     public Input<String> getClusterVersion() {
         return this.clusterVersion == null ? Input.empty() : this.clusterVersion;
@@ -172,7 +172,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dBName", required=true)
-        private final Input<String> dBName;
+      private final Input<String> dBName;
 
     public Input<String> getDBName() {
         return this.dBName;
@@ -183,7 +183,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferMaintenance")
-        private final @Nullable Input<Boolean> deferMaintenance;
+      private final @Nullable Input<Boolean> deferMaintenance;
 
     public Input<Boolean> getDeferMaintenance() {
         return this.deferMaintenance == null ? Input.empty() : this.deferMaintenance;
@@ -194,7 +194,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferMaintenanceDuration")
-        private final @Nullable Input<Integer> deferMaintenanceDuration;
+      private final @Nullable Input<Integer> deferMaintenanceDuration;
 
     public Input<Integer> getDeferMaintenanceDuration() {
         return this.deferMaintenanceDuration == null ? Input.empty() : this.deferMaintenanceDuration;
@@ -205,7 +205,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferMaintenanceEndTime")
-        private final @Nullable Input<String> deferMaintenanceEndTime;
+      private final @Nullable Input<String> deferMaintenanceEndTime;
 
     public Input<String> getDeferMaintenanceEndTime() {
         return this.deferMaintenanceEndTime == null ? Input.empty() : this.deferMaintenanceEndTime;
@@ -216,7 +216,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferMaintenanceStartTime")
-        private final @Nullable Input<String> deferMaintenanceStartTime;
+      private final @Nullable Input<String> deferMaintenanceStartTime;
 
     public Input<String> getDeferMaintenanceStartTime() {
         return this.deferMaintenanceStartTime == null ? Input.empty() : this.deferMaintenanceStartTime;
@@ -227,7 +227,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationRegion")
-        private final @Nullable Input<String> destinationRegion;
+      private final @Nullable Input<String> destinationRegion;
 
     public Input<String> getDestinationRegion() {
         return this.destinationRegion == null ? Input.empty() : this.destinationRegion;
@@ -238,7 +238,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticIp")
-        private final @Nullable Input<String> elasticIp;
+      private final @Nullable Input<String> elasticIp;
 
     public Input<String> getElasticIp() {
         return this.elasticIp == null ? Input.empty() : this.elasticIp;
@@ -249,14 +249,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-        private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
     }
 
     @InputImport(name="endpoint")
-        private final @Nullable Input<ClusterEndpointArgs> endpoint;
+      private final @Nullable Input<ClusterEndpointArgs> endpoint;
 
     public Input<ClusterEndpointArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -271,7 +271,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedVpcRouting")
-        private final @Nullable Input<Boolean> enhancedVpcRouting;
+      private final @Nullable Input<Boolean> enhancedVpcRouting;
 
     public Input<Boolean> getEnhancedVpcRouting() {
         return this.enhancedVpcRouting == null ? Input.empty() : this.enhancedVpcRouting;
@@ -282,7 +282,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmClientCertificateIdentifier")
-        private final @Nullable Input<String> hsmClientCertificateIdentifier;
+      private final @Nullable Input<String> hsmClientCertificateIdentifier;
 
     public Input<String> getHsmClientCertificateIdentifier() {
         return this.hsmClientCertificateIdentifier == null ? Input.empty() : this.hsmClientCertificateIdentifier;
@@ -293,7 +293,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmConfigurationIdentifier")
-        private final @Nullable Input<String> hsmConfigurationIdentifier;
+      private final @Nullable Input<String> hsmConfigurationIdentifier;
 
     public Input<String> getHsmConfigurationIdentifier() {
         return this.hsmConfigurationIdentifier == null ? Input.empty() : this.hsmConfigurationIdentifier;
@@ -304,7 +304,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoles")
-        private final @Nullable Input<List<String>> iamRoles;
+      private final @Nullable Input<List<String>> iamRoles;
 
     public Input<List<String>> getIamRoles() {
         return this.iamRoles == null ? Input.empty() : this.iamRoles;
@@ -315,14 +315,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="loggingProperties")
-        private final @Nullable Input<ClusterLoggingPropertiesArgs> loggingProperties;
+      private final @Nullable Input<ClusterLoggingPropertiesArgs> loggingProperties;
 
     public Input<ClusterLoggingPropertiesArgs> getLoggingProperties() {
         return this.loggingProperties == null ? Input.empty() : this.loggingProperties;
@@ -333,7 +333,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceTrackName")
-        private final @Nullable Input<String> maintenanceTrackName;
+      private final @Nullable Input<String> maintenanceTrackName;
 
     public Input<String> getMaintenanceTrackName() {
         return this.maintenanceTrackName == null ? Input.empty() : this.maintenanceTrackName;
@@ -346,7 +346,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualSnapshotRetentionPeriod")
-        private final @Nullable Input<Integer> manualSnapshotRetentionPeriod;
+      private final @Nullable Input<Integer> manualSnapshotRetentionPeriod;
 
     public Input<Integer> getManualSnapshotRetentionPeriod() {
         return this.manualSnapshotRetentionPeriod == null ? Input.empty() : this.manualSnapshotRetentionPeriod;
@@ -357,7 +357,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUserPassword", required=true)
-        private final Input<String> masterUserPassword;
+      private final Input<String> masterUserPassword;
 
     public Input<String> getMasterUserPassword() {
         return this.masterUserPassword;
@@ -368,7 +368,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUsername", required=true)
-        private final Input<String> masterUsername;
+      private final Input<String> masterUsername;
 
     public Input<String> getMasterUsername() {
         return this.masterUsername;
@@ -379,7 +379,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType", required=true)
-        private final Input<String> nodeType;
+      private final Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType;
@@ -390,14 +390,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfNodes")
-        private final @Nullable Input<Integer> numberOfNodes;
+      private final @Nullable Input<Integer> numberOfNodes;
 
     public Input<Integer> getNumberOfNodes() {
         return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;
     }
 
     @InputImport(name="ownerAccount")
-        private final @Nullable Input<String> ownerAccount;
+      private final @Nullable Input<String> ownerAccount;
 
     public Input<String> getOwnerAccount() {
         return this.ownerAccount == null ? Input.empty() : this.ownerAccount;
@@ -408,7 +408,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -419,7 +419,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-        private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Input<String> preferredMaintenanceWindow;
 
     public Input<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
@@ -430,7 +430,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAccessible")
-        private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Input<Boolean> publiclyAccessible;
 
     public Input<Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
@@ -441,7 +441,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceAction")
-        private final @Nullable Input<String> resourceAction;
+      private final @Nullable Input<String> resourceAction;
 
     public Input<String> getResourceAction() {
         return this.resourceAction == null ? Input.empty() : this.resourceAction;
@@ -452,7 +452,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionTarget")
-        private final @Nullable Input<String> revisionTarget;
+      private final @Nullable Input<String> revisionTarget;
 
     public Input<String> getRevisionTarget() {
         return this.revisionTarget == null ? Input.empty() : this.revisionTarget;
@@ -463,7 +463,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotateEncryptionKey")
-        private final @Nullable Input<Boolean> rotateEncryptionKey;
+      private final @Nullable Input<Boolean> rotateEncryptionKey;
 
     public Input<Boolean> getRotateEncryptionKey() {
         return this.rotateEncryptionKey == null ? Input.empty() : this.rotateEncryptionKey;
@@ -474,7 +474,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotClusterIdentifier")
-        private final @Nullable Input<String> snapshotClusterIdentifier;
+      private final @Nullable Input<String> snapshotClusterIdentifier;
 
     public Input<String> getSnapshotClusterIdentifier() {
         return this.snapshotClusterIdentifier == null ? Input.empty() : this.snapshotClusterIdentifier;
@@ -485,7 +485,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotCopyGrantName")
-        private final @Nullable Input<String> snapshotCopyGrantName;
+      private final @Nullable Input<String> snapshotCopyGrantName;
 
     public Input<String> getSnapshotCopyGrantName() {
         return this.snapshotCopyGrantName == null ? Input.empty() : this.snapshotCopyGrantName;
@@ -496,7 +496,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotCopyManual")
-        private final @Nullable Input<Boolean> snapshotCopyManual;
+      private final @Nullable Input<Boolean> snapshotCopyManual;
 
     public Input<Boolean> getSnapshotCopyManual() {
         return this.snapshotCopyManual == null ? Input.empty() : this.snapshotCopyManual;
@@ -511,7 +511,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotCopyRetentionPeriod")
-        private final @Nullable Input<Integer> snapshotCopyRetentionPeriod;
+      private final @Nullable Input<Integer> snapshotCopyRetentionPeriod;
 
     public Input<Integer> getSnapshotCopyRetentionPeriod() {
         return this.snapshotCopyRetentionPeriod == null ? Input.empty() : this.snapshotCopyRetentionPeriod;
@@ -522,7 +522,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotIdentifier")
-        private final @Nullable Input<String> snapshotIdentifier;
+      private final @Nullable Input<String> snapshotIdentifier;
 
     public Input<String> getSnapshotIdentifier() {
         return this.snapshotIdentifier == null ? Input.empty() : this.snapshotIdentifier;
@@ -533,7 +533,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ClusterTagArgs>> tags;
+      private final @Nullable Input<List<ClusterTagArgs>> tags;
 
     public Input<List<ClusterTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -544,7 +544,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-        private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;

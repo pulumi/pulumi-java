@@ -23,7 +23,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettingId")
-        private final @Nullable Input<String> resourceSettingId;
+      private final @Nullable Input<String> resourceSettingId;
 
     public Input<String> getResourceSettingId() {
         return this.resourceSettingId == null ? Input.empty() : this.resourceSettingId;
@@ -34,7 +34,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmResourceId")
-        private final @Nullable Input<String> vmResourceId;
+      private final @Nullable Input<String> vmResourceId;
 
     public Input<String> getVmResourceId() {
         return this.vmResourceId == null ? Input.empty() : this.vmResourceId;

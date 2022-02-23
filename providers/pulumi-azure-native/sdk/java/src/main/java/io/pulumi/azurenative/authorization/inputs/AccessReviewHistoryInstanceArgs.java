@@ -23,7 +23,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -34,7 +34,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="expiration")
-        private final @Nullable Input<String> expiration;
+      private final @Nullable Input<String> expiration;
 
     public Input<String> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -45,7 +45,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fulfilledDateTime")
-        private final @Nullable Input<String> fulfilledDateTime;
+      private final @Nullable Input<String> fulfilledDateTime;
 
     public Input<String> getFulfilledDateTime() {
         return this.fulfilledDateTime == null ? Input.empty() : this.fulfilledDateTime;
@@ -56,7 +56,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="reviewHistoryPeriodEndDateTime")
-        private final @Nullable Input<String> reviewHistoryPeriodEndDateTime;
+      private final @Nullable Input<String> reviewHistoryPeriodEndDateTime;
 
     public Input<String> getReviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime == null ? Input.empty() : this.reviewHistoryPeriodEndDateTime;
@@ -67,7 +67,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="reviewHistoryPeriodStartDateTime")
-        private final @Nullable Input<String> reviewHistoryPeriodStartDateTime;
+      private final @Nullable Input<String> reviewHistoryPeriodStartDateTime;
 
     public Input<String> getReviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime == null ? Input.empty() : this.reviewHistoryPeriodStartDateTime;
@@ -78,7 +78,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runDateTime")
-        private final @Nullable Input<String> runDateTime;
+      private final @Nullable Input<String> runDateTime;
 
     public Input<String> getRunDateTime() {
         return this.runDateTime == null ? Input.empty() : this.runDateTime;

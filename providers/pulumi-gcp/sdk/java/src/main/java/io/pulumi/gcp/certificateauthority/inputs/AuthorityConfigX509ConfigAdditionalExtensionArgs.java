@@ -21,7 +21,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
      * 
      */
     @InputImport(name="critical", required=true)
-        private final Input<Boolean> critical;
+      private final Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical;
@@ -33,7 +33,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
      * 
      */
     @InputImport(name="objectId", required=true)
-        private final Input<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
+      private final Input<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
 
     public Input<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> getObjectId() {
         return this.objectId;
@@ -44,7 +44,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

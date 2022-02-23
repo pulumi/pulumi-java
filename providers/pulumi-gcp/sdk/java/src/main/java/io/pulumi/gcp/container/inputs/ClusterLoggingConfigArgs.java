@@ -19,7 +19,7 @@ public final class ClusterLoggingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableComponents", required=true)
-        private final Input<List<String>> enableComponents;
+      private final Input<List<String>> enableComponents;
 
     public Input<List<String>> getEnableComponents() {
         return this.enableComponents;

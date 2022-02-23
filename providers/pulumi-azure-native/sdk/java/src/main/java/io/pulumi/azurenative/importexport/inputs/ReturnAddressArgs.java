@@ -23,7 +23,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="city", required=true)
-        private final Input<String> city;
+      private final Input<String> city;
 
     public Input<String> getCity() {
         return this.city;
@@ -34,7 +34,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryOrRegion", required=true)
-        private final Input<String> countryOrRegion;
+      private final Input<String> countryOrRegion;
 
     public Input<String> getCountryOrRegion() {
         return this.countryOrRegion;
@@ -45,7 +45,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-        private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -56,7 +56,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-        private final Input<String> phone;
+      private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;
@@ -67,7 +67,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalCode", required=true)
-        private final Input<String> postalCode;
+      private final Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode;
@@ -78,7 +78,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipientName", required=true)
-        private final Input<String> recipientName;
+      private final Input<String> recipientName;
 
     public Input<String> getRecipientName() {
         return this.recipientName;
@@ -89,7 +89,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateOrProvince")
-        private final @Nullable Input<String> stateOrProvince;
+      private final @Nullable Input<String> stateOrProvince;
 
     public Input<String> getStateOrProvince() {
         return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
@@ -100,7 +100,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streetAddress1", required=true)
-        private final Input<String> streetAddress1;
+      private final Input<String> streetAddress1;
 
     public Input<String> getStreetAddress1() {
         return this.streetAddress1;
@@ -111,7 +111,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streetAddress2")
-        private final @Nullable Input<String> streetAddress2;
+      private final @Nullable Input<String> streetAddress2;
 
     public Input<String> getStreetAddress2() {
         return this.streetAddress2 == null ? Input.empty() : this.streetAddress2;

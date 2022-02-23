@@ -15,14 +15,14 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
     public static final EncryptionConfigPropertiesArgs Empty = new EncryptionConfigPropertiesArgs();
 
     @InputImport(name="kmsKeyArn")
-        private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
     }
 
     @InputImport(name="roleArn")
-        private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

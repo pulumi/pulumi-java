@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="all")
-        private final @Nullable Input<Boolean> all;
+      private final @Nullable Input<Boolean> all;
 
     public Input<Boolean> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusionLabels")
-        private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
+      private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
 
     public Input<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> getExclusionLabels() {
         return this.exclusionLabels == null ? Input.empty() : this.exclusionLabels;
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inclusionLabels")
-        private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
+      private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
 
     public Input<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> getInclusionLabels() {
         return this.inclusionLabels == null ? Input.empty() : this.inclusionLabels;
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inventories")
-        private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+      private final @Nullable Input<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
     public Input<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {
         return this.inventories == null ? Input.empty() : this.inventories;

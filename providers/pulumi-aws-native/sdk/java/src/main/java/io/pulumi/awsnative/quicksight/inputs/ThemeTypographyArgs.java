@@ -20,7 +20,7 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     public static final ThemeTypographyArgs Empty = new ThemeTypographyArgs();
 
     @InputImport(name="fontFamilies")
-        private final @Nullable Input<List<ThemeFontArgs>> fontFamilies;
+      private final @Nullable Input<List<ThemeFontArgs>> fontFamilies;
 
     public Input<List<ThemeFontArgs>> getFontFamilies() {
         return this.fontFamilies == null ? Input.empty() : this.fontFamilies;

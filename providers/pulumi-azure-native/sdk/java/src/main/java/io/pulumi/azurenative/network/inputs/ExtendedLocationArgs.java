@@ -24,7 +24,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ExtendedLocationTypes>> type;
+      private final Input<Either<String,ExtendedLocationTypes>> type;
 
     public Input<Either<String,ExtendedLocationTypes>> getType() {
         return this.type;

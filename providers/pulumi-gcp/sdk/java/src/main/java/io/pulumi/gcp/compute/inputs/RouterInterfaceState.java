@@ -22,7 +22,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interconnectAttachment")
-        private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Input<String> interconnectAttachment;
 
     public Input<String> getInterconnectAttachment() {
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
@@ -34,7 +34,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipRange")
-        private final @Nullable Input<String> ipRange;
+      private final @Nullable Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange == null ? Input.empty() : this.ipRange;
@@ -46,7 +46,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,7 +71,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -83,7 +83,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="router")
-        private final @Nullable Input<String> router;
+      private final @Nullable Input<String> router;
 
     public Input<String> getRouter() {
         return this.router == null ? Input.empty() : this.router;
@@ -96,7 +96,7 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpnTunnel")
-        private final @Nullable Input<String> vpnTunnel;
+      private final @Nullable Input<String> vpnTunnel;
 
     public Input<String> getVpnTunnel() {
         return this.vpnTunnel == null ? Input.empty() : this.vpnTunnel;

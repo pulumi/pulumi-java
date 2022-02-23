@@ -20,7 +20,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deviceName")
-        private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -34,14 +34,14 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskEncryptionKeyRaw")
-        private final @Nullable Input<String> diskEncryptionKeyRaw;
+      private final @Nullable Input<String> diskEncryptionKeyRaw;
 
     public Input<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-        private final @Nullable Input<String> diskEncryptionKeySha256;
+      private final @Nullable Input<String> diskEncryptionKeySha256;
 
     public Input<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
@@ -54,7 +54,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kmsKeySelfLink")
-        private final @Nullable Input<String> kmsKeySelfLink;
+      private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
@@ -68,7 +68,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -79,7 +79,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;

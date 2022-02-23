@@ -27,7 +27,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clearTracks")
-        private final @Nullable List<TrackSelectionResponse> clearTracks;
+      private final @Nullable List<TrackSelectionResponse> clearTracks;
 
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="contentKeys")
-        private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
+      private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
@@ -49,7 +49,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customKeyAcquisitionUrlTemplate")
-        private final @Nullable String customKeyAcquisitionUrlTemplate;
+      private final @Nullable String customKeyAcquisitionUrlTemplate;
 
     public Optional<String> getCustomKeyAcquisitionUrlTemplate() {
         return this.customKeyAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
@@ -60,7 +60,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enabledProtocols")
-        private final @Nullable EnabledProtocolsResponse enabledProtocols;
+      private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);

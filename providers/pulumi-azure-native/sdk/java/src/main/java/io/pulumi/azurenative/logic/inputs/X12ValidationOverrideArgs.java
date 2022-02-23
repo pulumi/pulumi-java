@@ -25,7 +25,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+      private final Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Input<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -36,7 +36,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final Input<String> messageId;
+      private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;
@@ -47,7 +47,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trailingSeparatorPolicy", required=true)
-        private final Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+      private final Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Input<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -58,7 +58,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+      private final Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Input<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -69,7 +69,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateCharacterSet", required=true)
-        private final Input<Boolean> validateCharacterSet;
+      private final Input<Boolean> validateCharacterSet;
 
     public Input<Boolean> getValidateCharacterSet() {
         return this.validateCharacterSet;
@@ -80,7 +80,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateEDITypes", required=true)
-        private final Input<Boolean> validateEDITypes;
+      private final Input<Boolean> validateEDITypes;
 
     public Input<Boolean> getValidateEDITypes() {
         return this.validateEDITypes;
@@ -91,7 +91,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateXSDTypes", required=true)
-        private final Input<Boolean> validateXSDTypes;
+      private final Input<Boolean> validateXSDTypes;
 
     public Input<Boolean> getValidateXSDTypes() {
         return this.validateXSDTypes;

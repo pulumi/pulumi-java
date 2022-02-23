@@ -23,7 +23,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataConfigurationPath")
-        private final @Nullable Input<String> metadataConfigurationPath;
+      private final @Nullable Input<String> metadataConfigurationPath;
 
     public Input<String> getMetadataConfigurationPath() {
         return this.metadataConfigurationPath == null ? Input.empty() : this.metadataConfigurationPath;

@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="excludes")
-        private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -34,7 +34,7 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="exclusivePackages")
-        private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Input<List<String>> exclusivePackages;
 
     public Input<List<String>> getExclusivePackages() {
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minimal")
-        private final @Nullable Input<Boolean> minimal;
+      private final @Nullable Input<Boolean> minimal;
 
     public Input<Boolean> getMinimal() {
         return this.minimal == null ? Input.empty() : this.minimal;
@@ -56,7 +56,7 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="security")
-        private final @Nullable Input<Boolean> security;
+      private final @Nullable Input<Boolean> security;
 
     public Input<Boolean> getSecurity() {
         return this.security == null ? Input.empty() : this.security;

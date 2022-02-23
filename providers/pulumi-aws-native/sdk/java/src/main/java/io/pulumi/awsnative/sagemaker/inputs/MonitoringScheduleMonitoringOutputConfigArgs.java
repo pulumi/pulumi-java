@@ -25,7 +25,7 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-        private final Input<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs;
+      private final Input<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<MonitoringScheduleMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;

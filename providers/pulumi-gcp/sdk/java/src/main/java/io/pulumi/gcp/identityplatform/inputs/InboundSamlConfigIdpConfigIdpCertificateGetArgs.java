@@ -20,7 +20,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificateGetArgs extends io.pu
      * 
      */
     @InputImport(name="x509Certificate")
-        private final @Nullable Input<String> x509Certificate;
+      private final @Nullable Input<String> x509Certificate;
 
     public Input<String> getX509Certificate() {
         return this.x509Certificate == null ? Input.empty() : this.x509Certificate;

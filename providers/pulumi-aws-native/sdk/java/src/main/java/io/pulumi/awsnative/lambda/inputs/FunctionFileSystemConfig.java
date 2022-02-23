@@ -17,7 +17,7 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="localMountPath", required=true)
-        private final String localMountPath;
+      private final String localMountPath;
 
     public String getLocalMountPath() {
         return this.localMountPath;

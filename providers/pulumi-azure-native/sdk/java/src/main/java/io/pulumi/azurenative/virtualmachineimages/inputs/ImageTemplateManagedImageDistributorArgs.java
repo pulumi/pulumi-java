@@ -24,7 +24,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="artifactTags")
-        private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Input<Map<String,String>> artifactTags;
 
     public Input<Map<String,String>> getArtifactTags() {
         return this.artifactTags == null ? Input.empty() : this.artifactTags;
@@ -35,7 +35,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="imageId", required=true)
-        private final Input<String> imageId;
+      private final Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId;
@@ -46,7 +46,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -57,7 +57,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="runOutputName", required=true)
-        private final Input<String> runOutputName;
+      private final Input<String> runOutputName;
 
     public Input<String> getRunOutputName() {
         return this.runOutputName;
@@ -69,7 +69,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

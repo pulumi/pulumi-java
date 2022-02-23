@@ -19,7 +19,7 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     public static final JobCsvOutputOptionsArgs Empty = new JobCsvOutputOptionsArgs();
 
     @InputImport(name="delimiter")
-        private final @Nullable Input<String> delimiter;
+      private final @Nullable Input<String> delimiter;
 
     public Input<String> getDelimiter() {
         return this.delimiter == null ? Input.empty() : this.delimiter;

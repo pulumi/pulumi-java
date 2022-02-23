@@ -19,42 +19,42 @@ public final class RuleGroupMatchAttributesArgs extends io.pulumi.resources.Reso
     public static final RuleGroupMatchAttributesArgs Empty = new RuleGroupMatchAttributesArgs();
 
     @InputImport(name="destinationPorts")
-        private final @Nullable Input<List<RuleGroupPortRangeArgs>> destinationPorts;
+      private final @Nullable Input<List<RuleGroupPortRangeArgs>> destinationPorts;
 
     public Input<List<RuleGroupPortRangeArgs>> getDestinationPorts() {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
     }
 
     @InputImport(name="destinations")
-        private final @Nullable Input<List<RuleGroupAddressArgs>> destinations;
+      private final @Nullable Input<List<RuleGroupAddressArgs>> destinations;
 
     public Input<List<RuleGroupAddressArgs>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
     }
 
     @InputImport(name="protocols")
-        private final @Nullable Input<List<Integer>> protocols;
+      private final @Nullable Input<List<Integer>> protocols;
 
     public Input<List<Integer>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
     }
 
     @InputImport(name="sourcePorts")
-        private final @Nullable Input<List<RuleGroupPortRangeArgs>> sourcePorts;
+      private final @Nullable Input<List<RuleGroupPortRangeArgs>> sourcePorts;
 
     public Input<List<RuleGroupPortRangeArgs>> getSourcePorts() {
         return this.sourcePorts == null ? Input.empty() : this.sourcePorts;
     }
 
     @InputImport(name="sources")
-        private final @Nullable Input<List<RuleGroupAddressArgs>> sources;
+      private final @Nullable Input<List<RuleGroupAddressArgs>> sources;
 
     public Input<List<RuleGroupAddressArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
     }
 
     @InputImport(name="tCPFlags")
-        private final @Nullable Input<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
+      private final @Nullable Input<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
 
     public Input<List<RuleGroupTCPFlagFieldArgs>> getTCPFlags() {
         return this.tCPFlags == null ? Input.empty() : this.tCPFlags;

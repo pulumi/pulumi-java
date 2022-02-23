@@ -21,7 +21,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conformancePackInputParameters")
-        private final @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
+      private final @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
 
     public Input<List<ConformancePackInputParameterArgs>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? Input.empty() : this.conformancePackInputParameters;
@@ -32,7 +32,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conformancePackName")
-        private final @Nullable Input<String> conformancePackName;
+      private final @Nullable Input<String> conformancePackName;
 
     public Input<String> getConformancePackName() {
         return this.conformancePackName == null ? Input.empty() : this.conformancePackName;
@@ -43,7 +43,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryS3Bucket")
-        private final @Nullable Input<String> deliveryS3Bucket;
+      private final @Nullable Input<String> deliveryS3Bucket;
 
     public Input<String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
@@ -54,7 +54,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryS3KeyPrefix")
-        private final @Nullable Input<String> deliveryS3KeyPrefix;
+      private final @Nullable Input<String> deliveryS3KeyPrefix;
 
     public Input<String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
@@ -65,7 +65,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="templateBody")
-        private final @Nullable Input<String> templateBody;
+      private final @Nullable Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody == null ? Input.empty() : this.templateBody;
@@ -76,7 +76,7 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="templateS3Uri")
-        private final @Nullable Input<String> templateS3Uri;
+      private final @Nullable Input<String> templateS3Uri;
 
     public Input<String> getTemplateS3Uri() {
         return this.templateS3Uri == null ? Input.empty() : this.templateS3Uri;

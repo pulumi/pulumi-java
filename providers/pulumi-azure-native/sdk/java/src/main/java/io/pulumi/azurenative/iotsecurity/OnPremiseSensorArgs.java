@@ -19,7 +19,7 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onPremiseSensorName")
-        private final @Nullable Input<String> onPremiseSensorName;
+      private final @Nullable Input<String> onPremiseSensorName;
 
     public Input<String> getOnPremiseSensorName() {
         return this.onPremiseSensorName == null ? Input.empty() : this.onPremiseSensorName;

@@ -25,7 +25,7 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="buildpacks")
-        private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
+      private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
     public List<BuildpackPropertiesResponse> getBuildpacks() {
         return this.buildpacks == null ? List.of() : this.buildpacks;
@@ -36,7 +36,7 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);

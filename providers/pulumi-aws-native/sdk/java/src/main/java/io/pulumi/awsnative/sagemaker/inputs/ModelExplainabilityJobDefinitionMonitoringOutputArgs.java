@@ -18,7 +18,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends 
     public static final ModelExplainabilityJobDefinitionMonitoringOutputArgs Empty = new ModelExplainabilityJobDefinitionMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-        private final Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
+      private final Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
 
     public Input<ModelExplainabilityJobDefinitionS3OutputArgs> getS3Output() {
         return this.s3Output;

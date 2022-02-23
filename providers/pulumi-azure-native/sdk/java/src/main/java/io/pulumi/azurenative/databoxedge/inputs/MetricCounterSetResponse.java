@@ -22,7 +22,7 @@ public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="counters", required=true)
-        private final List<MetricCounterResponse> counters;
+      private final List<MetricCounterResponse> counters;
 
     public List<MetricCounterResponse> getCounters() {
         return this.counters;

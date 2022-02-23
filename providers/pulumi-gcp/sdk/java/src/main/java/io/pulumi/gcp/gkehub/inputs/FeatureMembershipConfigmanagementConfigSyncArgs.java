@@ -21,7 +21,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="git")
-        private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
+      private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
     public Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
         return this.git == null ? Input.empty() : this.git;
@@ -32,7 +32,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="sourceFormat")
-        private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Input<String> sourceFormat;
 
     public Input<String> getSourceFormat() {
         return this.sourceFormat == null ? Input.empty() : this.sourceFormat;

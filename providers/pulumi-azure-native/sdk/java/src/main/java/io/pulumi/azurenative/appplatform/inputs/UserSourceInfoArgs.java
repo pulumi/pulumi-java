@@ -26,7 +26,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSelector")
-        private final @Nullable Input<String> artifactSelector;
+      private final @Nullable Input<String> artifactSelector;
 
     public Input<String> getArtifactSelector() {
         return this.artifactSelector == null ? Input.empty() : this.artifactSelector;
@@ -37,7 +37,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath")
-        private final @Nullable Input<String> relativePath;
+      private final @Nullable Input<String> relativePath;
 
     public Input<String> getRelativePath() {
         return this.relativePath == null ? Input.empty() : this.relativePath;
@@ -48,7 +48,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,UserSourceType>> type;
+      private final @Nullable Input<Either<String,UserSourceType>> type;
 
     public Input<Either<String,UserSourceType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -59,7 +59,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

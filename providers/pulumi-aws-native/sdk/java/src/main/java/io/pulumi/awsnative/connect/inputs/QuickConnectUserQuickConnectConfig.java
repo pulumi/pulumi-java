@@ -17,14 +17,14 @@ public final class QuickConnectUserQuickConnectConfig extends io.pulumi.resource
     public static final QuickConnectUserQuickConnectConfig Empty = new QuickConnectUserQuickConnectConfig();
 
     @InputImport(name="contactFlowArn", required=true)
-        private final String contactFlowArn;
+      private final String contactFlowArn;
 
     public String getContactFlowArn() {
         return this.contactFlowArn;
     }
 
     @InputImport(name="userArn", required=true)
-        private final String userArn;
+      private final String userArn;
 
     public String getUserArn() {
         return this.userArn;

@@ -23,7 +23,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="revision", required=true)
-        private final Input<Integer> revision;
+      private final Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision;
@@ -34,7 +34,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workerConfigurationArn", required=true)
-        private final Input<String> workerConfigurationArn;
+      private final Input<String> workerConfigurationArn;
 
     public Input<String> getWorkerConfigurationArn() {
         return this.workerConfigurationArn;

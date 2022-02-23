@@ -24,7 +24,7 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="accountCredentialDetails", required=true)
-        private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
+      private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
     public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
         return this.accountCredentialDetails;
@@ -35,7 +35,7 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="devicePassword", required=true)
-        private final String devicePassword;
+      private final String devicePassword;
 
     public String getDevicePassword() {
         return this.devicePassword;
@@ -46,7 +46,7 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="deviceSerialNumber", required=true)
-        private final String deviceSerialNumber;
+      private final String deviceSerialNumber;
 
     public String getDeviceSerialNumber() {
         return this.deviceSerialNumber;
@@ -57,7 +57,7 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="encodedValidationCertPubKey", required=true)
-        private final String encodedValidationCertPubKey;
+      private final String encodedValidationCertPubKey;
 
     public String getEncodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
@@ -68,7 +68,7 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="networkConfigurations", required=true)
-        private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
+      private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
     public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {
         return this.networkConfigurations;

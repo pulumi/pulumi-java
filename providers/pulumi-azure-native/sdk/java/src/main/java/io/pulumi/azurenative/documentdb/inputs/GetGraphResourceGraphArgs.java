@@ -17,7 +17,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="graphName", required=true)
-        private final String graphName;
+      private final String graphName;
 
     public String getGraphName() {
         return this.graphName;
@@ -39,7 +39,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

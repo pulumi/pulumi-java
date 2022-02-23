@@ -20,7 +20,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-        private final Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+      private final Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -31,7 +31,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-        private final Input<String> orgId;
+      private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -42,7 +42,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;

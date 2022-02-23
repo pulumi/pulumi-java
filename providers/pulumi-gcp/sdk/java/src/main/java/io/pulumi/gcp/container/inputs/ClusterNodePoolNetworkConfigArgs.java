@@ -20,7 +20,7 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createPodRange")
-        private final @Nullable Input<Boolean> createPodRange;
+      private final @Nullable Input<Boolean> createPodRange;
 
     public Input<Boolean> getCreatePodRange() {
         return this.createPodRange == null ? Input.empty() : this.createPodRange;
@@ -31,7 +31,7 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="podIpv4CidrBlock")
-        private final @Nullable Input<String> podIpv4CidrBlock;
+      private final @Nullable Input<String> podIpv4CidrBlock;
 
     public Input<String> getPodIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Input.empty() : this.podIpv4CidrBlock;
@@ -42,7 +42,7 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="podRange", required=true)
-        private final Input<String> podRange;
+      private final Input<String> podRange;
 
     public Input<String> getPodRange() {
         return this.podRange;

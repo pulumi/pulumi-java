@@ -24,7 +24,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="date")
-        private final @Nullable Input<Integer> date;
+      private final @Nullable Input<Integer> date;
 
     public Input<Integer> getDate() {
         return this.date == null ? Input.empty() : this.date;
@@ -35,7 +35,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isLast")
-        private final @Nullable Input<Boolean> isLast;
+      private final @Nullable Input<Boolean> isLast;
 
     public Input<Boolean> getIsLast() {
         return this.isLast == null ? Input.empty() : this.isLast;

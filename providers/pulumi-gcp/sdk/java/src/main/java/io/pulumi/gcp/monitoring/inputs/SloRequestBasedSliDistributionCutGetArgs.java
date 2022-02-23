@@ -22,7 +22,7 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="distributionFilter", required=true)
-        private final Input<String> distributionFilter;
+      private final Input<String> distributionFilter;
 
     public Input<String> getDistributionFilter() {
         return this.distributionFilter;
@@ -39,7 +39,7 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="range", required=true)
-        private final Input<SloRequestBasedSliDistributionCutRangeGetArgs> range;
+      private final Input<SloRequestBasedSliDistributionCutRangeGetArgs> range;
 
     public Input<SloRequestBasedSliDistributionCutRangeGetArgs> getRange() {
         return this.range;

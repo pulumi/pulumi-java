@@ -24,7 +24,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="akamai")
-        private final @Nullable Input<AkamaiAccessControlArgs> akamai;
+      private final @Nullable Input<AkamaiAccessControlArgs> akamai;
 
     public Input<AkamaiAccessControlArgs> getAkamai() {
         return this.akamai == null ? Input.empty() : this.akamai;
@@ -35,7 +35,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ip")
-        private final @Nullable Input<IPAccessControlArgs> ip;
+      private final @Nullable Input<IPAccessControlArgs> ip;
 
     public Input<IPAccessControlArgs> getIp() {
         return this.ip == null ? Input.empty() : this.ip;

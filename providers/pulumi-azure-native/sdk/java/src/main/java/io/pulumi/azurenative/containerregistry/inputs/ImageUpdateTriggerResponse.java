@@ -25,7 +25,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -36,7 +36,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="images")
-        private final @Nullable List<ImageDescriptorResponse> images;
+      private final @Nullable List<ImageDescriptorResponse> images;
 
     public List<ImageDescriptorResponse> getImages() {
         return this.images == null ? List.of() : this.images;
@@ -47,7 +47,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="timestamp")
-        private final @Nullable String timestamp;
+      private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);

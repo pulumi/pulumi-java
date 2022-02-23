@@ -27,7 +27,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="httpHeaders")
-        private final @Nullable Input<HttpHeadersArgs> httpHeaders;
+      private final @Nullable Input<HttpHeadersArgs> httpHeaders;
 
     public Input<HttpHeadersArgs> getHttpHeaders() {
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
@@ -38,7 +38,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -49,7 +49,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -60,7 +60,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scheme")
-        private final @Nullable Input<Either<String,Scheme>> scheme;
+      private final @Nullable Input<Either<String,Scheme>> scheme;
 
     public Input<Either<String,Scheme>> getScheme() {
         return this.scheme == null ? Input.empty() : this.scheme;

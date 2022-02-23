@@ -15,14 +15,14 @@ public final class ServiceAttachmentConnectedEndpointArgs extends io.pulumi.reso
     public static final ServiceAttachmentConnectedEndpointArgs Empty = new ServiceAttachmentConnectedEndpointArgs();
 
     @InputImport(name="endpoint")
-        private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

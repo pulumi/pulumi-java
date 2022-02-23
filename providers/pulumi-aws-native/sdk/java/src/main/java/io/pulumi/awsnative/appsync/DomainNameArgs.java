@@ -15,14 +15,14 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
     @InputImport(name="certificateArn", required=true)
-        private final Input<String> certificateArn;
+      private final Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;

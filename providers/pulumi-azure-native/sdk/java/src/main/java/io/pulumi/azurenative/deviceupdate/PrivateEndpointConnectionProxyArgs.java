@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateEndpointConnectionProxyId")
-        private final @Nullable Input<String> privateEndpointConnectionProxyId;
+      private final @Nullable Input<String> privateEndpointConnectionProxyId;
 
     public Input<String> getPrivateEndpointConnectionProxyId() {
         return this.privateEndpointConnectionProxyId == null ? Input.empty() : this.privateEndpointConnectionProxyId;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="remotePrivateEndpoint")
-        private final @Nullable Input<RemotePrivateEndpointArgs> remotePrivateEndpoint;
+      private final @Nullable Input<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
     public Input<RemotePrivateEndpointArgs> getRemotePrivateEndpoint() {
         return this.remotePrivateEndpoint == null ? Input.empty() : this.remotePrivateEndpoint;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

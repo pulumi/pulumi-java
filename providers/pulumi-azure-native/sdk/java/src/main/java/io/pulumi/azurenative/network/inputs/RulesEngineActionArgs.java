@@ -27,7 +27,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="requestHeaderActions")
-        private final @Nullable Input<List<HeaderActionArgs>> requestHeaderActions;
+      private final @Nullable Input<List<HeaderActionArgs>> requestHeaderActions;
 
     public Input<List<HeaderActionArgs>> getRequestHeaderActions() {
         return this.requestHeaderActions == null ? Input.empty() : this.requestHeaderActions;
@@ -38,7 +38,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="responseHeaderActions")
-        private final @Nullable Input<List<HeaderActionArgs>> responseHeaderActions;
+      private final @Nullable Input<List<HeaderActionArgs>> responseHeaderActions;
 
     public Input<List<HeaderActionArgs>> getResponseHeaderActions() {
         return this.responseHeaderActions == null ? Input.empty() : this.responseHeaderActions;
@@ -49,7 +49,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeConfigurationOverride")
-        private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
+      private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
     public Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfigurationOverride() {
         return this.routeConfigurationOverride == null ? Input.empty() : this.routeConfigurationOverride;

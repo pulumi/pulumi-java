@@ -22,7 +22,7 @@ public final class VideoTrackDescriptorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

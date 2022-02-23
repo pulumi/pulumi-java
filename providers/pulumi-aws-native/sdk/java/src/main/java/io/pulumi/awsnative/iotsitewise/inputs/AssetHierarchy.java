@@ -21,7 +21,7 @@ public final class AssetHierarchy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="childAssetId", required=true)
-        private final String childAssetId;
+      private final String childAssetId;
 
     public String getChildAssetId() {
         return this.childAssetId;
@@ -32,7 +32,7 @@ public final class AssetHierarchy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-        private final String logicalId;
+      private final String logicalId;
 
     public String getLogicalId() {
         return this.logicalId;

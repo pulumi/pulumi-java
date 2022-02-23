@@ -22,7 +22,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enumType")
-        private final @Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType;
+      private final @Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType;
 
     public Input<TagTemplateFieldTypeEnumTypeArgs> getEnumType() {
         return this.enumType == null ? Input.empty() : this.enumType;
@@ -35,7 +35,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="primitiveType")
-        private final @Nullable Input<String> primitiveType;
+      private final @Nullable Input<String> primitiveType;
 
     public Input<String> getPrimitiveType() {
         return this.primitiveType == null ? Input.empty() : this.primitiveType;

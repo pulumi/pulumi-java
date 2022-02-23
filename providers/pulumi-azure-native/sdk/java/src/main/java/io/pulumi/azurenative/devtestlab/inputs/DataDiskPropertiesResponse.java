@@ -24,7 +24,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="attachNewDataDiskOptions")
-        private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
+      private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
 
     public Optional<AttachNewDataDiskOptionsResponse> getAttachNewDataDiskOptions() {
         return this.attachNewDataDiskOptions == null ? Optional.empty() : Optional.ofNullable(this.attachNewDataDiskOptions);
@@ -35,7 +35,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="existingLabDiskId")
-        private final @Nullable String existingLabDiskId;
+      private final @Nullable String existingLabDiskId;
 
     public Optional<String> getExistingLabDiskId() {
         return this.existingLabDiskId == null ? Optional.empty() : Optional.ofNullable(this.existingLabDiskId);
@@ -46,7 +46,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="hostCaching")
-        private final @Nullable String hostCaching;
+      private final @Nullable String hostCaching;
 
     public Optional<String> getHostCaching() {
         return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);

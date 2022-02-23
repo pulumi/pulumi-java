@@ -22,7 +22,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configurationName")
-        private final @Nullable Input<String> configurationName;
+      private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -33,7 +33,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteExistingNSGs")
-        private final @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
+      private final @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
     public Input<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
         return this.deleteExistingNSGs == null ? Input.empty() : this.deleteExistingNSGs;
@@ -44,7 +44,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,7 +66,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-        private final Input<String> networkManagerName;
+      private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -77,7 +77,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityType")
-        private final @Nullable Input<Either<String,SecurityType>> securityType;
+      private final @Nullable Input<Either<String,SecurityType>> securityType;
 
     public Input<Either<String,SecurityType>> getSecurityType() {
         return this.securityType == null ? Input.empty() : this.securityType;

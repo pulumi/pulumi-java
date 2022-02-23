@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identityClientId")
-        private final @Nullable Input<String> identityClientId;
+      private final @Nullable Input<String> identityClientId;
 
     public Input<String> getIdentityClientId() {
         return this.identityClientId == null ? Input.empty() : this.identityClientId;
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier")
-        private final @Nullable Input<String> keyIdentifier;
+      private final @Nullable Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;

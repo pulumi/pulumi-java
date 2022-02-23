@@ -26,7 +26,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="backendAddressPools")
-        private final @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
+      private final @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
     public Input<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
         return this.backendAddressPools == null ? Input.empty() : this.backendAddressPools;
@@ -37,7 +37,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="frontendIPConfigurations")
-        private final @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
+      private final @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
     public Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? Input.empty() : this.frontendIPConfigurations;
@@ -49,7 +49,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -60,7 +60,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<String> sku;
+      private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -71,7 +71,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;
@@ -83,7 +83,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<String> zones;
+      private final @Nullable Input<String> zones;
 
     public Input<String> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

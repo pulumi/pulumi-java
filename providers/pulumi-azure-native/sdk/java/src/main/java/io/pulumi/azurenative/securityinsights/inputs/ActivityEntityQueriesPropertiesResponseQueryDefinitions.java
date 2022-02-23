@@ -23,7 +23,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
      * 
      */
     @InputImport(name="query")
-        private final @Nullable String query;
+      private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);

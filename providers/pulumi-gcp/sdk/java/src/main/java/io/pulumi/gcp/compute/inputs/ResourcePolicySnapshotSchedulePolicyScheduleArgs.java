@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="dailySchedule")
-        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> getDailySchedule() {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
@@ -34,7 +34,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="hourlySchedule")
-        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> getHourlySchedule() {
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="weeklySchedule")
-        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> getWeeklySchedule() {
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;

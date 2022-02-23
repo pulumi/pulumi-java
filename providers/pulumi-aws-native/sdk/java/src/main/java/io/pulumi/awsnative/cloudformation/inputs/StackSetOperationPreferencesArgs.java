@@ -22,42 +22,42 @@ public final class StackSetOperationPreferencesArgs extends io.pulumi.resources.
     public static final StackSetOperationPreferencesArgs Empty = new StackSetOperationPreferencesArgs();
 
     @InputImport(name="failureToleranceCount")
-        private final @Nullable Input<Integer> failureToleranceCount;
+      private final @Nullable Input<Integer> failureToleranceCount;
 
     public Input<Integer> getFailureToleranceCount() {
         return this.failureToleranceCount == null ? Input.empty() : this.failureToleranceCount;
     }
 
     @InputImport(name="failureTolerancePercentage")
-        private final @Nullable Input<Integer> failureTolerancePercentage;
+      private final @Nullable Input<Integer> failureTolerancePercentage;
 
     public Input<Integer> getFailureTolerancePercentage() {
         return this.failureTolerancePercentage == null ? Input.empty() : this.failureTolerancePercentage;
     }
 
     @InputImport(name="maxConcurrentCount")
-        private final @Nullable Input<Integer> maxConcurrentCount;
+      private final @Nullable Input<Integer> maxConcurrentCount;
 
     public Input<Integer> getMaxConcurrentCount() {
         return this.maxConcurrentCount == null ? Input.empty() : this.maxConcurrentCount;
     }
 
     @InputImport(name="maxConcurrentPercentage")
-        private final @Nullable Input<Integer> maxConcurrentPercentage;
+      private final @Nullable Input<Integer> maxConcurrentPercentage;
 
     public Input<Integer> getMaxConcurrentPercentage() {
         return this.maxConcurrentPercentage == null ? Input.empty() : this.maxConcurrentPercentage;
     }
 
     @InputImport(name="regionConcurrencyType")
-        private final @Nullable Input<StackSetRegionConcurrencyType> regionConcurrencyType;
+      private final @Nullable Input<StackSetRegionConcurrencyType> regionConcurrencyType;
 
     public Input<StackSetRegionConcurrencyType> getRegionConcurrencyType() {
         return this.regionConcurrencyType == null ? Input.empty() : this.regionConcurrencyType;
     }
 
     @InputImport(name="regionOrder")
-        private final @Nullable Input<List<String>> regionOrder;
+      private final @Nullable Input<List<String>> regionOrder;
 
     public Input<List<String>> getRegionOrder() {
         return this.regionOrder == null ? Input.empty() : this.regionOrder;

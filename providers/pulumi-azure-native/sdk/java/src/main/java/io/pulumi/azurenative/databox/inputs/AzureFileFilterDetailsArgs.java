@@ -24,7 +24,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filePathList")
-        private final @Nullable Input<List<String>> filePathList;
+      private final @Nullable Input<List<String>> filePathList;
 
     public Input<List<String>> getFilePathList() {
         return this.filePathList == null ? Input.empty() : this.filePathList;
@@ -35,7 +35,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filePrefixList")
-        private final @Nullable Input<List<String>> filePrefixList;
+      private final @Nullable Input<List<String>> filePrefixList;
 
     public Input<List<String>> getFilePrefixList() {
         return this.filePrefixList == null ? Input.empty() : this.filePrefixList;
@@ -46,7 +46,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fileShareList")
-        private final @Nullable Input<List<String>> fileShareList;
+      private final @Nullable Input<List<String>> fileShareList;
 
     public Input<List<String>> getFileShareList() {
         return this.fileShareList == null ? Input.empty() : this.fileShareList;

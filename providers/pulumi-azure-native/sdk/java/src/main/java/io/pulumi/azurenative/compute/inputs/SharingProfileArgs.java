@@ -25,7 +25,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-        private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
+      private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
 
     public Input<Either<String,GallerySharingPermissionTypes>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;

@@ -15,7 +15,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     public static final DomainSnapshotOptionsArgs Empty = new DomainSnapshotOptionsArgs();
 
     @InputImport(name="automatedSnapshotStartHour")
-        private final @Nullable Input<Integer> automatedSnapshotStartHour;
+      private final @Nullable Input<Integer> automatedSnapshotStartHour;
 
     public Input<Integer> getAutomatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour == null ? Input.empty() : this.automatedSnapshotStartHour;

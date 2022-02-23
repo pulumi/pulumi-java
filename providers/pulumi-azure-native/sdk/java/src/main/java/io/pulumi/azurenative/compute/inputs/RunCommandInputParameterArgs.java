@@ -22,7 +22,7 @@ public final class RunCommandInputParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class RunCommandInputParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

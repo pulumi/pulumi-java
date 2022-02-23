@@ -17,7 +17,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
     public static final DicomStoreIamBindingArgs Empty = new DicomStoreIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DicomStoreIamBindingConditionArgs> condition;
+      private final @Nullable Input<DicomStoreIamBindingConditionArgs> condition;
 
     public Input<DicomStoreIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -31,14 +31,14 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dicomStoreId", required=true)
-        private final Input<String> dicomStoreId;
+      private final Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -51,7 +51,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

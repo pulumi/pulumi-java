@@ -26,7 +26,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="extensionHandlers")
-        private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
+      private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
     public List<VirtualMachineExtensionHandlerInstanceViewResponse> getExtensionHandlers() {
         return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
@@ -37,7 +37,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="statuses")
-        private final @Nullable List<InstanceViewStatusResponse> statuses;
+      private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -48,7 +48,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmAgentVersion")
-        private final @Nullable String vmAgentVersion;
+      private final @Nullable String vmAgentVersion;
 
     public Optional<String> getVmAgentVersion() {
         return this.vmAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.vmAgentVersion);

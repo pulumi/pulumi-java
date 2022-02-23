@@ -19,7 +19,7 @@ public final class InstanceTemplateGuestAcceleratorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -30,7 +30,7 @@ public final class InstanceTemplateGuestAcceleratorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

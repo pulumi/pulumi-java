@@ -24,7 +24,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -35,7 +35,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="secrets")
-        private final @Nullable Input<Map<String,String>> secrets;
+      private final @Nullable Input<Map<String,String>> secrets;
 
     public Input<Map<String,String>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;

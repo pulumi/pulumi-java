@@ -220,6 +220,21 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ADLSGen2FileDataSetMapping(String name) {
+        this(name, ADLSGen2FileDataSetMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ADLSGen2FileDataSetMapping(String name, ADLSGen2FileDataSetMappingArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

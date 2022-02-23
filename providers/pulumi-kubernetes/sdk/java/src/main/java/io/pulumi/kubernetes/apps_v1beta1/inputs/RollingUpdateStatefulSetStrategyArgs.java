@@ -23,7 +23,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partition")
-        private final @Nullable Input<Integer> partition;
+      private final @Nullable Input<Integer> partition;
 
     public Input<Integer> getPartition() {
         return this.partition == null ? Input.empty() : this.partition;

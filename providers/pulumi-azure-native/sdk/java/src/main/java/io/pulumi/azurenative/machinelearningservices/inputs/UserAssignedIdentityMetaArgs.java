@@ -23,7 +23,7 @@ public final class UserAssignedIdentityMetaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityMetaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;

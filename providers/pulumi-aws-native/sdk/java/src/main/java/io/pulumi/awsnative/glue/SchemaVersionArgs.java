@@ -15,7 +15,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 
     @InputImport(name="schema", required=true)
-        private final Input<SchemaVersionSchemaArgs> schema;
+      private final Input<SchemaVersionSchemaArgs> schema;
 
     public Input<SchemaVersionSchemaArgs> getSchema() {
         return this.schema;
@@ -26,7 +26,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-        private final Input<String> schemaDefinition;
+      private final Input<String> schemaDefinition;
 
     public Input<String> getSchemaDefinition() {
         return this.schemaDefinition;

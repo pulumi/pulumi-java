@@ -24,7 +24,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupType")
-        private final @Nullable Input<Either<String,MachineGroupType>> groupType;
+      private final @Nullable Input<Either<String,MachineGroupType>> groupType;
 
     public Input<Either<String,MachineGroupType>> getGroupType() {
         return this.groupType == null ? Input.empty() : this.groupType;
@@ -58,7 +58,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineGroupName")
-        private final @Nullable Input<String> machineGroupName;
+      private final @Nullable Input<String> machineGroupName;
 
     public Input<String> getMachineGroupName() {
         return this.machineGroupName == null ? Input.empty() : this.machineGroupName;
@@ -80,7 +80,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machines")
-        private final @Nullable Input<List<MachineReferenceWithHintsArgs>> machines;
+      private final @Nullable Input<List<MachineReferenceWithHintsArgs>> machines;
 
     public Input<List<MachineReferenceWithHintsArgs>> getMachines() {
         return this.machines == null ? Input.empty() : this.machines;
@@ -91,7 +91,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

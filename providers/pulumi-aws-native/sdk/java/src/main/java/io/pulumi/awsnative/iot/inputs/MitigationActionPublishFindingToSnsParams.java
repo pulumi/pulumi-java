@@ -21,7 +21,7 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
      * 
      */
     @InputImport(name="topicArn", required=true)
-        private final String topicArn;
+      private final String topicArn;
 
     public String getTopicArn() {
         return this.topicArn;

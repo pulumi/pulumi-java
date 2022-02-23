@@ -23,7 +23,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<String> errors;
+      private final List<String> errors;
 
     public List<String> getErrors() {
         return this.errors;
@@ -34,7 +34,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="isValid", required=true)
-        private final Boolean isValid;
+      private final Boolean isValid;
 
     public Boolean getIsValid() {
         return this.isValid;
@@ -45,7 +45,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="validationName", required=true)
-        private final String validationName;
+      private final String validationName;
 
     public String getValidationName() {
         return this.validationName;

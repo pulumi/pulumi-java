@@ -18,7 +18,7 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
     public static final MitigationActionUpdateDeviceCertificateParamsArgs Empty = new MitigationActionUpdateDeviceCertificateParamsArgs();
 
     @InputImport(name="action", required=true)
-        private final Input<MitigationActionUpdateDeviceCertificateParamsAction> action;
+      private final Input<MitigationActionUpdateDeviceCertificateParamsAction> action;
 
     public Input<MitigationActionUpdateDeviceCertificateParamsAction> getAction() {
         return this.action;

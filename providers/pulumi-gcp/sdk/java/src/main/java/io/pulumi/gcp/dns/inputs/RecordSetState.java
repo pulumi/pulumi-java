@@ -22,7 +22,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedZone")
-        private final @Nullable Input<String> managedZone;
+      private final @Nullable Input<String> managedZone;
 
     public Input<String> getManagedZone() {
         return this.managedZone == null ? Input.empty() : this.managedZone;
@@ -33,7 +33,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rrdatas")
-        private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Input<List<String>> rrdatas;
 
     public Input<List<String>> getRrdatas() {
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
@@ -70,7 +70,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-        private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -81,7 +81,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

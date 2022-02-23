@@ -20,7 +20,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="description", required=true)
-        private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -31,7 +31,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+      private final Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
     public Input<Either<String,PrivateLinkServiceConnectionStateStatus>> getStatus() {
         return this.status;

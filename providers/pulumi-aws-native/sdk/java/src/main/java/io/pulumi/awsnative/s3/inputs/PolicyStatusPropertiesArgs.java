@@ -22,7 +22,7 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isPublic", required=true)
-        private final Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
+      private final Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
     public Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {
         return this.isPublic;

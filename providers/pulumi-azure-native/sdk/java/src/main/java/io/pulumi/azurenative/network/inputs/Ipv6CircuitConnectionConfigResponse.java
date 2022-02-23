@@ -23,7 +23,7 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="addressPrefix")
-        private final @Nullable String addressPrefix;
+      private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
@@ -34,7 +34,7 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="circuitConnectionStatus", required=true)
-        private final String circuitConnectionStatus;
+      private final String circuitConnectionStatus;
 
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;

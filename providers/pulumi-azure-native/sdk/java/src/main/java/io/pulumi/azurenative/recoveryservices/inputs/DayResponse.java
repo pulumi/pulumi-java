@@ -24,7 +24,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="date")
-        private final @Nullable Integer date;
+      private final @Nullable Integer date;
 
     public Optional<Integer> getDate() {
         return this.date == null ? Optional.empty() : Optional.ofNullable(this.date);
@@ -35,7 +35,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isLast")
-        private final @Nullable Boolean isLast;
+      private final @Nullable Boolean isLast;
 
     public Optional<Boolean> getIsLast() {
         return this.isLast == null ? Optional.empty() : Optional.ofNullable(this.isLast);

@@ -21,7 +21,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="additionalProperties", required=true)
-        private final Map<String,Object> additionalProperties;
+      private final Map<String,Object> additionalProperties;
 
     public Map<String,Object> getAdditionalProperties() {
         return this.additionalProperties;
@@ -32,7 +32,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="availableMemoryInMB", required=true)
-        private final Integer availableMemoryInMB;
+      private final Integer availableMemoryInMB;
 
     public Integer getAvailableMemoryInMB() {
         return this.availableMemoryInMB;
@@ -43,7 +43,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="concurrentJobsLimit", required=true)
-        private final Integer concurrentJobsLimit;
+      private final Integer concurrentJobsLimit;
 
     public Integer getConcurrentJobsLimit() {
         return this.concurrentJobsLimit;
@@ -54,7 +54,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="concurrentJobsRunning", required=true)
-        private final Integer concurrentJobsRunning;
+      private final Integer concurrentJobsRunning;
 
     public Integer getConcurrentJobsRunning() {
         return this.concurrentJobsRunning;
@@ -65,7 +65,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cpuUtilization", required=true)
-        private final Integer cpuUtilization;
+      private final Integer cpuUtilization;
 
     public Integer getCpuUtilization() {
         return this.cpuUtilization;
@@ -76,7 +76,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxConcurrentJobs", required=true)
-        private final Integer maxConcurrentJobs;
+      private final Integer maxConcurrentJobs;
 
     public Integer getMaxConcurrentJobs() {
         return this.maxConcurrentJobs;
@@ -87,7 +87,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeName", required=true)
-        private final String nodeName;
+      private final String nodeName;
 
     public String getNodeName() {
         return this.nodeName;
@@ -98,7 +98,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="receivedBytes", required=true)
-        private final Double receivedBytes;
+      private final Double receivedBytes;
 
     public Double getReceivedBytes() {
         return this.receivedBytes;
@@ -109,7 +109,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sentBytes", required=true)
-        private final Double sentBytes;
+      private final Double sentBytes;
 
     public Double getSentBytes() {
         return this.sentBytes;

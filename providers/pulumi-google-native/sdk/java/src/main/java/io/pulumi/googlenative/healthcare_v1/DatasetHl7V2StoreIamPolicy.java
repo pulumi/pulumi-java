@@ -84,6 +84,21 @@ public class DatasetHl7V2StoreIamPolicy extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DatasetHl7V2StoreIamPolicy(String name) {
+        this(name, DatasetHl7V2StoreIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DatasetHl7V2StoreIamPolicy(String name, DatasetHl7V2StoreIamPolicyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

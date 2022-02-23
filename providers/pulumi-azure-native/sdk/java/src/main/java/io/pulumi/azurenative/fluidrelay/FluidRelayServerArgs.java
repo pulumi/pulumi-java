@@ -22,7 +22,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -55,7 +55,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final Input<String> resourceGroup;
+      private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -66,7 +66,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

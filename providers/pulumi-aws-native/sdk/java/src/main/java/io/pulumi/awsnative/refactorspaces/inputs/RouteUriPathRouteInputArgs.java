@@ -19,28 +19,28 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     public static final RouteUriPathRouteInputArgs Empty = new RouteUriPathRouteInputArgs();
 
     @InputImport(name="activationState", required=true)
-        private final Input<RouteActivationState> activationState;
+      private final Input<RouteActivationState> activationState;
 
     public Input<RouteActivationState> getActivationState() {
         return this.activationState;
     }
 
     @InputImport(name="includeChildPaths")
-        private final @Nullable Input<Boolean> includeChildPaths;
+      private final @Nullable Input<Boolean> includeChildPaths;
 
     public Input<Boolean> getIncludeChildPaths() {
         return this.includeChildPaths == null ? Input.empty() : this.includeChildPaths;
     }
 
     @InputImport(name="methods")
-        private final @Nullable Input<List<RouteMethod>> methods;
+      private final @Nullable Input<List<RouteMethod>> methods;
 
     public Input<List<RouteMethod>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
     }
 
     @InputImport(name="sourcePath")
-        private final @Nullable Input<String> sourcePath;
+      private final @Nullable Input<String> sourcePath;
 
     public Input<String> getSourcePath() {
         return this.sourcePath == null ? Input.empty() : this.sourcePath;

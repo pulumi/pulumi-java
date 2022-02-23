@@ -24,7 +24,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queuing")
-        private final @Nullable Input<QueuingConfigurationArgs> queuing;
+      private final @Nullable Input<QueuingConfigurationArgs> queuing;
 
     public Input<QueuingConfigurationArgs> getQueuing() {
         return this.queuing == null ? Input.empty() : this.queuing;
@@ -35,7 +35,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

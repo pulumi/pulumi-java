@@ -19,7 +19,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKeyName")
-        private final @Nullable Input<String> diskEncryptionKeyName;
+      private final @Nullable Input<String> diskEncryptionKeyName;
 
     public Input<String> getDiskEncryptionKeyName() {
         return this.diskEncryptionKeyName == null ? Input.empty() : this.diskEncryptionKeyName;
@@ -42,7 +42,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -59,7 +59,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRange")
-        private final @Nullable Input<String> ipRange;
+      private final @Nullable Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange == null ? Input.empty() : this.ipRange;
@@ -72,7 +72,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -83,7 +83,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-        private final Input<String> orgId;
+      private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -107,7 +107,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringCidrRange")
-        private final @Nullable Input<String> peeringCidrRange;
+      private final @Nullable Input<String> peeringCidrRange;
 
     public Input<String> getPeeringCidrRange() {
         return this.peeringCidrRange == null ? Input.empty() : this.peeringCidrRange;

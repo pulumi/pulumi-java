@@ -24,7 +24,7 @@ public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rules")
-        private final @Nullable List<CustomRuleResponse> rules;
+      private final @Nullable List<CustomRuleResponse> rules;
 
     public List<CustomRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

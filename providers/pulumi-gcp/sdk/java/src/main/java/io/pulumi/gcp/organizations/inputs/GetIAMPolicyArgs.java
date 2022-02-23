@@ -21,7 +21,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auditConfigs")
-        private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
+      private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
     public List<GetIAMPolicyAuditConfig> getAuditConfigs() {
         return this.auditConfigs == null ? List.of() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bindings")
-        private final @Nullable List<GetIAMPolicyBinding> bindings;
+      private final @Nullable List<GetIAMPolicyBinding> bindings;
 
     public List<GetIAMPolicyBinding> getBindings() {
         return this.bindings == null ? List.of() : this.bindings;

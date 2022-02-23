@@ -22,7 +22,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends io.pulumi
      * 
      */
     @InputImport(name="componentId", required=true)
-        private final String componentId;
+      private final String componentId;
 
     public String getComponentId() {
         return this.componentId;
@@ -33,7 +33,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends io.pulumi
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-        private final Double failedLocationCount;
+      private final Double failedLocationCount;
 
     public Double getFailedLocationCount() {
         return this.failedLocationCount;
@@ -45,7 +45,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends io.pulumi
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -56,7 +56,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends io.pulumi
      * 
      */
     @InputImport(name="webTestId", required=true)
-        private final String webTestId;
+      private final String webTestId;
 
     public String getWebTestId() {
         return this.webTestId;

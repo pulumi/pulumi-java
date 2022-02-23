@@ -23,7 +23,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

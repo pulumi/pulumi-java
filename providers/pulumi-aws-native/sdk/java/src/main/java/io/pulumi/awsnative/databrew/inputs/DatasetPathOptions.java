@@ -22,21 +22,21 @@ public final class DatasetPathOptions extends io.pulumi.resources.InvokeArgs {
     public static final DatasetPathOptions Empty = new DatasetPathOptions();
 
     @InputImport(name="filesLimit")
-        private final @Nullable DatasetFilesLimit filesLimit;
+      private final @Nullable DatasetFilesLimit filesLimit;
 
     public Optional<DatasetFilesLimit> getFilesLimit() {
         return this.filesLimit == null ? Optional.empty() : Optional.ofNullable(this.filesLimit);
     }
 
     @InputImport(name="lastModifiedDateCondition")
-        private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
+      private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
 
     public Optional<DatasetFilterExpression> getLastModifiedDateCondition() {
         return this.lastModifiedDateCondition == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedDateCondition);
     }
 
     @InputImport(name="parameters")
-        private final @Nullable List<DatasetPathParameter> parameters;
+      private final @Nullable List<DatasetPathParameter> parameters;
 
     public List<DatasetPathParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;

@@ -31,7 +31,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUserSpecification")
-        private final @Nullable Input<Object> autoUserSpecification;
+      private final @Nullable Input<Object> autoUserSpecification;
 
     public Input<Object> getAutoUserSpecification() {
         return this.autoUserSpecification == null ? Input.empty() : this.autoUserSpecification;
@@ -42,7 +42,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command", required=true)
-        private final Input<Object> command;
+      private final Input<Object> command;
 
     public Input<Object> getCommand() {
         return this.command;
@@ -53,7 +53,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -64,7 +64,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-        private final @Nullable Input<Map<String,Object>> extendedProperties;
+      private final @Nullable Input<Map<String,Object>> extendedProperties;
 
     public Input<Map<String,Object>> getExtendedProperties() {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
@@ -86,7 +86,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-        private final @Nullable Input<Object> folderPath;
+      private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -97,7 +97,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -108,7 +108,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -130,7 +130,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceObjects")
-        private final @Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects;
+      private final @Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects;
 
     public Input<CustomActivityReferenceObjectArgs> getReferenceObjects() {
         return this.referenceObjects == null ? Input.empty() : this.referenceObjects;
@@ -141,7 +141,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLinkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getResourceLinkedService() {
         return this.resourceLinkedService == null ? Input.empty() : this.resourceLinkedService;
@@ -152,7 +152,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionTimeInDays")
-        private final @Nullable Input<Object> retentionTimeInDays;
+      private final @Nullable Input<Object> retentionTimeInDays;
 
     public Input<Object> getRetentionTimeInDays() {
         return this.retentionTimeInDays == null ? Input.empty() : this.retentionTimeInDays;
@@ -164,7 +164,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -175,7 +175,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

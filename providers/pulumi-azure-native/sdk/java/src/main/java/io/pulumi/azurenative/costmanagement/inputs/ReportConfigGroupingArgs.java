@@ -24,7 +24,7 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ReportConfigColumnType>> type;
+      private final Input<Either<String,ReportConfigColumnType>> type;
 
     public Input<Either<String,ReportConfigColumnType>> getType() {
         return this.type;

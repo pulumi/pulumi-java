@@ -16,7 +16,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     public static final GraphArgs Empty = new GraphArgs();
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<GraphTagArgs>> tags;
+      private final @Nullable Input<List<GraphTagArgs>> tags;
 
     public Input<List<GraphTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

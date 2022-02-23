@@ -26,7 +26,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hours")
-        private final @Nullable Input<List<Integer>> hours;
+      private final @Nullable Input<List<Integer>> hours;
 
     public Input<List<Integer>> getHours() {
         return this.hours == null ? Input.empty() : this.hours;
@@ -37,7 +37,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minutes")
-        private final @Nullable Input<List<Integer>> minutes;
+      private final @Nullable Input<List<Integer>> minutes;
 
     public Input<List<Integer>> getMinutes() {
         return this.minutes == null ? Input.empty() : this.minutes;
@@ -48,7 +48,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monthDays")
-        private final @Nullable Input<List<Integer>> monthDays;
+      private final @Nullable Input<List<Integer>> monthDays;
 
     public Input<List<Integer>> getMonthDays() {
         return this.monthDays == null ? Input.empty() : this.monthDays;
@@ -59,7 +59,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monthlyOccurrences")
-        private final @Nullable Input<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
+      private final @Nullable Input<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
 
     public Input<List<RecurrenceScheduleOccurrenceArgs>> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? Input.empty() : this.monthlyOccurrences;
@@ -70,7 +70,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="weekDays")
-        private final @Nullable Input<List<DaysOfWeek>> weekDays;
+      private final @Nullable Input<List<DaysOfWeek>> weekDays;
 
     public Input<List<DaysOfWeek>> getWeekDays() {
         return this.weekDays == null ? Input.empty() : this.weekDays;

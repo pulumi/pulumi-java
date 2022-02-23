@@ -20,7 +20,7 @@ public final class FlavorDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="data")
-        private final @Nullable Map<String,String> data;
+      private final @Nullable Map<String,String> data;
 
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;

@@ -24,7 +24,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulum
      * 
      */
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -36,7 +36,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulum
      * 
      */
     @InputImport(name="operatorType", required=true)
-        private final String operatorType;
+      private final String operatorType;
 
     public String getOperatorType() {
         return this.operatorType;
@@ -47,7 +47,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulum
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Double value;
+      private final @Nullable Double value;
 
     public Optional<Double> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

@@ -18,7 +18,7 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-        private final Input<String> hostedZoneId;
+      private final Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId;

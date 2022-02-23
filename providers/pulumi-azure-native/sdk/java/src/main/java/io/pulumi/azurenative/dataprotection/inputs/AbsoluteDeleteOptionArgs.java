@@ -22,7 +22,7 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="duration", required=true)
-        private final Input<String> duration;
+      private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -34,7 +34,7 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final Input<String> objectType;
+      private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;

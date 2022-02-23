@@ -17,42 +17,42 @@ public final class DeliveryStreamParquetSerDeArgs extends io.pulumi.resources.Re
     public static final DeliveryStreamParquetSerDeArgs Empty = new DeliveryStreamParquetSerDeArgs();
 
     @InputImport(name="blockSizeBytes")
-        private final @Nullable Input<Integer> blockSizeBytes;
+      private final @Nullable Input<Integer> blockSizeBytes;
 
     public Input<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Input.empty() : this.blockSizeBytes;
     }
 
     @InputImport(name="compression")
-        private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
     @InputImport(name="enableDictionaryCompression")
-        private final @Nullable Input<Boolean> enableDictionaryCompression;
+      private final @Nullable Input<Boolean> enableDictionaryCompression;
 
     public Input<Boolean> getEnableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Input.empty() : this.enableDictionaryCompression;
     }
 
     @InputImport(name="maxPaddingBytes")
-        private final @Nullable Input<Integer> maxPaddingBytes;
+      private final @Nullable Input<Integer> maxPaddingBytes;
 
     public Input<Integer> getMaxPaddingBytes() {
         return this.maxPaddingBytes == null ? Input.empty() : this.maxPaddingBytes;
     }
 
     @InputImport(name="pageSizeBytes")
-        private final @Nullable Input<Integer> pageSizeBytes;
+      private final @Nullable Input<Integer> pageSizeBytes;
 
     public Input<Integer> getPageSizeBytes() {
         return this.pageSizeBytes == null ? Input.empty() : this.pageSizeBytes;
     }
 
     @InputImport(name="writerVersion")
-        private final @Nullable Input<String> writerVersion;
+      private final @Nullable Input<String> writerVersion;
 
     public Input<String> getWriterVersion() {
         return this.writerVersion == null ? Input.empty() : this.writerVersion;

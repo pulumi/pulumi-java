@@ -15,7 +15,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfoGetArgs extends 
     public static final InterconnectAttachmentPrivateInterconnectInfoGetArgs Empty = new InterconnectAttachmentPrivateInterconnectInfoGetArgs();
 
     @InputImport(name="tag8021q")
-        private final @Nullable Input<Integer> tag8021q;
+      private final @Nullable Input<Integer> tag8021q;
 
     public Input<Integer> getTag8021q() {
         return this.tag8021q == null ? Input.empty() : this.tag8021q;

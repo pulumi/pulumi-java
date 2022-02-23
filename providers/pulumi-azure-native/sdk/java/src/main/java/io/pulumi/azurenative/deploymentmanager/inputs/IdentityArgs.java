@@ -23,7 +23,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityIds", required=true)
-        private final Input<List<String>> identityIds;
+      private final Input<List<String>> identityIds;
 
     public Input<List<String>> getIdentityIds() {
         return this.identityIds;
@@ -34,7 +34,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

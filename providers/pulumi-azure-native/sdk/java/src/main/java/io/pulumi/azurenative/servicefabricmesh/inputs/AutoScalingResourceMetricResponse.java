@@ -22,7 +22,7 @@ public final class AutoScalingResourceMetricResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -33,7 +33,7 @@ public final class AutoScalingResourceMetricResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

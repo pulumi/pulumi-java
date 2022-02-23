@@ -17,7 +17,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="imageTemplateName", required=true)
-        private final String imageTemplateName;
+      private final String imageTemplateName;
 
     public String getImageTemplateName() {
         return this.imageTemplateName;
@@ -28,7 +28,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

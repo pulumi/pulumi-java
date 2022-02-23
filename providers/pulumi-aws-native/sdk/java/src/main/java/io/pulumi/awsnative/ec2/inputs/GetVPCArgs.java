@@ -17,7 +17,7 @@ public final class GetVPCArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-        private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;

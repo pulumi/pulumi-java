@@ -22,7 +22,7 @@ public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="streamMode", required=true)
-        private final Input<StreamModeDetailsStreamMode> streamMode;
+      private final Input<StreamModeDetailsStreamMode> streamMode;
 
     public Input<StreamModeDetailsStreamMode> getStreamMode() {
         return this.streamMode;

@@ -24,7 +24,7 @@ public final class AzureDataLakeStoreLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileName")
-        private final @Nullable Input<Object> fileName;
+      private final @Nullable Input<Object> fileName;
 
     public Input<Object> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="folderPath")
-        private final @Nullable Input<Object> folderPath;
+      private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -47,7 +47,7 @@ public final class AzureDataLakeStoreLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

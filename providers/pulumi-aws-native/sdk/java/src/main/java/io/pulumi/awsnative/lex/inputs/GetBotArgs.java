@@ -13,7 +13,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBotArgs Empty = new GetBotArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

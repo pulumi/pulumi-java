@@ -24,14 +24,14 @@ public final class ThemeError extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
     @InputImport(name="type")
-        private final @Nullable ThemeErrorType type;
+      private final @Nullable ThemeErrorType type;
 
     public Optional<ThemeErrorType> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

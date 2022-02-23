@@ -26,7 +26,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expectedValue")
-        private final @Nullable Input<String> expectedValue;
+      private final @Nullable Input<String> expectedValue;
 
     public Input<String> getExpectedValue() {
         return this.expectedValue == null ? Input.empty() : this.expectedValue;
@@ -37,7 +37,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable Input<Either<String,Operator>> operator;
+      private final @Nullable Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -48,7 +48,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyJPath")
-        private final @Nullable Input<String> propertyJPath;
+      private final @Nullable Input<String> propertyJPath;
 
     public Input<String> getPropertyJPath() {
         return this.propertyJPath == null ? Input.empty() : this.propertyJPath;
@@ -59,7 +59,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyType")
-        private final @Nullable Input<Either<String,PropertyType>> propertyType;
+      private final @Nullable Input<Either<String,PropertyType>> propertyType;
 
     public Input<Either<String,PropertyType>> getPropertyType() {
         return this.propertyType == null ? Input.empty() : this.propertyType;

@@ -19,7 +19,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dynamicRouting")
-        private final @Nullable Input<String> dynamicRouting;
+      private final @Nullable Input<String> dynamicRouting;
 
     public Input<String> getDynamicRouting() {
         return this.dynamicRouting == null ? Input.empty() : this.dynamicRouting;

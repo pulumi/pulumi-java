@@ -13,7 +13,7 @@ public final class DistributionRestrictions extends io.pulumi.resources.InvokeAr
     public static final DistributionRestrictions Empty = new DistributionRestrictions();
 
     @InputImport(name="geoRestriction", required=true)
-        private final DistributionGeoRestriction geoRestriction;
+      private final DistributionGeoRestriction geoRestriction;
 
     public DistributionGeoRestriction getGeoRestriction() {
         return this.geoRestriction;

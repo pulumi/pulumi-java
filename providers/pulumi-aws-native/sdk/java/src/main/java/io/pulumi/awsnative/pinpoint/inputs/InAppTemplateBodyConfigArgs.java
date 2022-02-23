@@ -16,21 +16,21 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     public static final InAppTemplateBodyConfigArgs Empty = new InAppTemplateBodyConfigArgs();
 
     @InputImport(name="alignment")
-        private final @Nullable Input<InAppTemplateAlignment> alignment;
+      private final @Nullable Input<InAppTemplateAlignment> alignment;
 
     public Input<InAppTemplateAlignment> getAlignment() {
         return this.alignment == null ? Input.empty() : this.alignment;
     }
 
     @InputImport(name="body")
-        private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
     }
 
     @InputImport(name="textColor")
-        private final @Nullable Input<String> textColor;
+      private final @Nullable Input<String> textColor;
 
     public Input<String> getTextColor() {
         return this.textColor == null ? Input.empty() : this.textColor;

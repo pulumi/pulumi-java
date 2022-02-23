@@ -16,7 +16,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     public static final DatabaseIAMMemberArgs Empty = new DatabaseIAMMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DatabaseIAMMemberConditionArgs> condition;
+      private final @Nullable Input<DatabaseIAMMemberConditionArgs> condition;
 
     public Input<DatabaseIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="database", required=true)
-        private final Input<String> database;
+      private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -38,14 +38,14 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instance", required=true)
-        private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -57,7 +57,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

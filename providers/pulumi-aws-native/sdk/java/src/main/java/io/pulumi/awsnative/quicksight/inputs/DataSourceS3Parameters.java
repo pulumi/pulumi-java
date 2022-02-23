@@ -17,7 +17,7 @@ public final class DataSourceS3Parameters extends io.pulumi.resources.InvokeArgs
     public static final DataSourceS3Parameters Empty = new DataSourceS3Parameters();
 
     @InputImport(name="manifestFileLocation", required=true)
-        private final DataSourceManifestFileLocation manifestFileLocation;
+      private final DataSourceManifestFileLocation manifestFileLocation;
 
     public DataSourceManifestFileLocation getManifestFileLocation() {
         return this.manifestFileLocation;

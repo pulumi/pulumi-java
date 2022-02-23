@@ -24,7 +24,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="inline")
-        private final @Nullable List<String> inline;
+      private final @Nullable List<String> inline;
 
     public List<String> getInline() {
         return this.inline == null ? List.of() : this.inline;
@@ -35,7 +35,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="scriptUri")
-        private final @Nullable String scriptUri;
+      private final @Nullable String scriptUri;
 
     public Optional<String> getScriptUri() {
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
@@ -57,7 +57,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sha256Checksum")
-        private final @Nullable String sha256Checksum;
+      private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
@@ -69,7 +69,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

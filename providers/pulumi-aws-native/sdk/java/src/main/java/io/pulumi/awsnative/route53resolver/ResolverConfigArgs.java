@@ -19,7 +19,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autodefinedReverseFlag", required=true)
-        private final Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
+      private final Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
     public Input<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
@@ -30,7 +30,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;

@@ -17,7 +17,7 @@ public final class GetJitRequestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jitRequestName", required=true)
-        private final String jitRequestName;
+      private final String jitRequestName;
 
     public String getJitRequestName() {
         return this.jitRequestName;
@@ -28,7 +28,7 @@ public final class GetJitRequestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

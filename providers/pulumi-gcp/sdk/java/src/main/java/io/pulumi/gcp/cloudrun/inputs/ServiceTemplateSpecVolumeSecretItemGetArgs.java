@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<Integer> mode;
+      private final @Nullable Input<Integer> mode;
 
     public Input<Integer> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -49,7 +49,7 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;

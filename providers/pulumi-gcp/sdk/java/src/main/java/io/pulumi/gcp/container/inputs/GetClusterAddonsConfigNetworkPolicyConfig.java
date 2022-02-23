@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigNetworkPolicyConfig extends io.pulumi.r
     public static final GetClusterAddonsConfigNetworkPolicyConfig Empty = new GetClusterAddonsConfigNetworkPolicyConfig();
 
     @InputImport(name="disabled", required=true)
-        private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;

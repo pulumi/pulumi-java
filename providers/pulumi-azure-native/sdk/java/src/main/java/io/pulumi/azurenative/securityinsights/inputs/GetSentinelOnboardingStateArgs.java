@@ -17,7 +17,7 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-        private final String operationalInsightsResourceProvider;
+      private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sentinelOnboardingStateName", required=true)
-        private final String sentinelOnboardingStateName;
+      private final String sentinelOnboardingStateName;
 
     public String getSentinelOnboardingStateName() {
         return this.sentinelOnboardingStateName;
@@ -50,7 +50,7 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

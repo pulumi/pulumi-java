@@ -15,14 +15,14 @@ public final class WirelessDeviceAbpV10xArgs extends io.pulumi.resources.Resourc
     public static final WirelessDeviceAbpV10xArgs Empty = new WirelessDeviceAbpV10xArgs();
 
     @InputImport(name="devAddr", required=true)
-        private final Input<String> devAddr;
+      private final Input<String> devAddr;
 
     public Input<String> getDevAddr() {
         return this.devAddr;
     }
 
     @InputImport(name="sessionKeys", required=true)
-        private final Input<WirelessDeviceSessionKeysAbpV10xArgs> sessionKeys;
+      private final Input<WirelessDeviceSessionKeysAbpV10xArgs> sessionKeys;
 
     public Input<WirelessDeviceSessionKeysAbpV10xArgs> getSessionKeys() {
         return this.sessionKeys;

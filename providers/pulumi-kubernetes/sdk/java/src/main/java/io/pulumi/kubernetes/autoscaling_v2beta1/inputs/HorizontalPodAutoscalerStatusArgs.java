@@ -27,7 +27,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="conditions")
-        private final @Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions;
+      private final @Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions;
 
     public Input<List<HorizontalPodAutoscalerConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -38,7 +38,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentMetrics")
-        private final @Nullable Input<List<MetricStatusArgs>> currentMetrics;
+      private final @Nullable Input<List<MetricStatusArgs>> currentMetrics;
 
     public Input<List<MetricStatusArgs>> getCurrentMetrics() {
         return this.currentMetrics == null ? Input.empty() : this.currentMetrics;
@@ -49,7 +49,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentReplicas", required=true)
-        private final Input<Integer> currentReplicas;
+      private final Input<Integer> currentReplicas;
 
     public Input<Integer> getCurrentReplicas() {
         return this.currentReplicas;
@@ -60,7 +60,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="desiredReplicas", required=true)
-        private final Input<Integer> desiredReplicas;
+      private final Input<Integer> desiredReplicas;
 
     public Input<Integer> getDesiredReplicas() {
         return this.desiredReplicas;
@@ -71,7 +71,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastScaleTime")
-        private final @Nullable Input<String> lastScaleTime;
+      private final @Nullable Input<String> lastScaleTime;
 
     public Input<String> getLastScaleTime() {
         return this.lastScaleTime == null ? Input.empty() : this.lastScaleTime;
@@ -82,7 +82,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="observedGeneration")
-        private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;

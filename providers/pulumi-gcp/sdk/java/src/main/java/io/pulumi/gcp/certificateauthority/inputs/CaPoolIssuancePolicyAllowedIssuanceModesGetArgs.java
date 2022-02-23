@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
      * 
      */
     @InputImport(name="allowConfigBasedIssuance", required=true)
-        private final Input<Boolean> allowConfigBasedIssuance;
+      private final Input<Boolean> allowConfigBasedIssuance;
 
     public Input<Boolean> getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -29,7 +29,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
      * 
      */
     @InputImport(name="allowCsrBasedIssuance", required=true)
-        private final Input<Boolean> allowCsrBasedIssuance;
+      private final Input<Boolean> allowCsrBasedIssuance;
 
     public Input<Boolean> getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;

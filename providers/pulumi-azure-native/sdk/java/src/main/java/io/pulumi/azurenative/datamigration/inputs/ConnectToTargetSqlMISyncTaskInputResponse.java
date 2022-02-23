@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="azureApp", required=true)
-        private final AzureActiveDirectoryAppResponse azureApp;
+      private final AzureActiveDirectoryAppResponse azureApp;
 
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final MiSqlConnectionInfoResponse targetConnectionInfo;
+      private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

@@ -16,21 +16,21 @@ public final class SpotFleetSpotPlacement extends io.pulumi.resources.InvokeArgs
     public static final SpotFleetSpotPlacement Empty = new SpotFleetSpotPlacement();
 
     @InputImport(name="availabilityZone")
-        private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
     @InputImport(name="groupName")
-        private final @Nullable String groupName;
+      private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
     }
 
     @InputImport(name="tenancy")
-        private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
+      private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
 
     public Optional<SpotFleetSpotPlacementTenancy> getTenancy() {
         return this.tenancy == null ? Optional.empty() : Optional.ofNullable(this.tenancy);

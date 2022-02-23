@@ -23,7 +23,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addr")
-        private final @Nullable String addr;
+      private final @Nullable String addr;
 
     public Optional<String> getAddr() {
         return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
@@ -34,7 +34,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceID")
-        private final @Nullable String instanceID;
+      private final @Nullable String instanceID;
 
     public Optional<String> getInstanceID() {
         return this.instanceID == null ? Optional.empty() : Optional.ofNullable(this.instanceID);

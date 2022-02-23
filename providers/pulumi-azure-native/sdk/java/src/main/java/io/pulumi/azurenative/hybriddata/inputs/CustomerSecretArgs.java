@@ -23,7 +23,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-        private final Input<SupportedAlgorithm> algorithm;
+      private final Input<SupportedAlgorithm> algorithm;
 
     public Input<SupportedAlgorithm> getAlgorithm() {
         return this.algorithm;
@@ -34,7 +34,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-        private final Input<String> keyIdentifier;
+      private final Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier;
@@ -45,7 +45,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyValue", required=true)
-        private final Input<String> keyValue;
+      private final Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue;

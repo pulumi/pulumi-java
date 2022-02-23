@@ -25,7 +25,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -36,7 +36,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Either<Integer,String>> port;
+      private final Input<Either<Integer,String>> port;
 
     public Input<Either<Integer,String>> getPort() {
         return this.port;

@@ -23,7 +23,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-        private final @Nullable Input<List<URLMapHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
+      private final @Nullable Input<List<URLMapHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Input<List<URLMapHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -35,7 +35,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-        private final @Nullable Input<List<String>> requestHeadersToRemoves;
+      private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -47,7 +47,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-        private final @Nullable Input<List<URLMapHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
+      private final @Nullable Input<List<URLMapHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Input<List<URLMapHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -59,7 +59,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-        private final @Nullable Input<List<String>> responseHeadersToRemoves;
+      private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;

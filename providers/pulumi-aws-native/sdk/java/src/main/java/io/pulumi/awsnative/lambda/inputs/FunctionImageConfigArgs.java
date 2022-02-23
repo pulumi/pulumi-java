@@ -20,7 +20,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="command")
-        private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -31,7 +31,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entryPoint")
-        private final @Nullable Input<List<String>> entryPoint;
+      private final @Nullable Input<List<String>> entryPoint;
 
     public Input<List<String>> getEntryPoint() {
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
@@ -42,7 +42,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workingDirectory")
-        private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;

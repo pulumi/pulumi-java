@@ -22,7 +22,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
      * 
      */
     @InputImport(name="numRetries")
-        private final @Nullable Input<Integer> numRetries;
+      private final @Nullable Input<Integer> numRetries;
 
     public Input<Integer> getNumRetries() {
         return this.numRetries == null ? Input.empty() : this.numRetries;
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
      * 
      */
     @InputImport(name="perTryTimeout")
-        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
+      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
     public Input<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
         return this.perTryTimeout == null ? Input.empty() : this.perTryTimeout;
@@ -61,7 +61,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
      * 
      */
     @InputImport(name="retryConditions")
-        private final @Nullable Input<List<String>> retryConditions;
+      private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;

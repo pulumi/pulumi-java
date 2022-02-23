@@ -17,7 +17,7 @@ public final class ListIngestionSettingConnectionStringsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ingestionSettingName", required=true)
-        private final String ingestionSettingName;
+      private final String ingestionSettingName;
 
     public String getIngestionSettingName() {
         return this.ingestionSettingName;

@@ -24,7 +24,7 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupLabels")
-        private final @Nullable Input<List<GuestPoliciesAssignmentGroupLabelArgs>> groupLabels;
+      private final @Nullable Input<List<GuestPoliciesAssignmentGroupLabelArgs>> groupLabels;
 
     public Input<List<GuestPoliciesAssignmentGroupLabelArgs>> getGroupLabels() {
         return this.groupLabels == null ? Input.empty() : this.groupLabels;
@@ -38,7 +38,7 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceNamePrefixes")
-        private final @Nullable Input<List<String>> instanceNamePrefixes;
+      private final @Nullable Input<List<String>> instanceNamePrefixes;
 
     public Input<List<String>> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
@@ -53,7 +53,7 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instances")
-        private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -66,7 +66,7 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osTypes")
-        private final @Nullable Input<List<GuestPoliciesAssignmentOsTypeArgs>> osTypes;
+      private final @Nullable Input<List<GuestPoliciesAssignmentOsTypeArgs>> osTypes;
 
     public Input<List<GuestPoliciesAssignmentOsTypeArgs>> getOsTypes() {
         return this.osTypes == null ? Input.empty() : this.osTypes;
@@ -78,7 +78,7 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

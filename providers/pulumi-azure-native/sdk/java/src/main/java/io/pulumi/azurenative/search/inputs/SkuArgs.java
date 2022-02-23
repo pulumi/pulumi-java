@@ -23,7 +23,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<SkuName> name;
+      private final @Nullable Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name == null ? Input.empty() : this.name;

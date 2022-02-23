@@ -25,7 +25,7 @@ public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-        private final String distributionType;
+      private final String distributionType;
 
     public String getDistributionType() {
         return this.distributionType;
@@ -36,7 +36,7 @@ public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="processCount")
-        private final @Nullable Integer processCount;
+      private final @Nullable Integer processCount;
 
     public Optional<Integer> getProcessCount() {
         return this.processCount == null ? Optional.empty() : Optional.ofNullable(this.processCount);

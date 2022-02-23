@@ -20,7 +20,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,7 +32,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -43,7 +43,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscription", required=true)
-        private final Input<String> subscription;
+      private final Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription;

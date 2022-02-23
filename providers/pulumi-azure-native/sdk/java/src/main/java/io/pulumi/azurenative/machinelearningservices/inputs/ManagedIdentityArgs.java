@@ -23,7 +23,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -35,7 +35,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identityType", required=true)
-        private final Input<String> identityType;
+      private final Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType;
@@ -46,7 +46,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -57,7 +57,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

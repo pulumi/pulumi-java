@@ -31,7 +31,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="authHeaders")
-        private final @Nullable Object authHeaders;
+      private final @Nullable Object authHeaders;
 
     public Optional<Object> getAuthHeaders() {
         return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
@@ -53,7 +53,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="authenticationType")
-        private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -64,7 +64,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="certThumbprint")
-        private final @Nullable Object certThumbprint;
+      private final @Nullable Object certThumbprint;
 
     public Optional<Object> getCertThumbprint() {
         return this.certThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certThumbprint);
@@ -75,7 +75,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -86,7 +86,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -97,7 +97,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="embeddedCertData")
-        private final @Nullable Object embeddedCertData;
+      private final @Nullable Object embeddedCertData;
 
     public Optional<Object> getEmbeddedCertData() {
         return this.embeddedCertData == null ? Optional.empty() : Optional.ofNullable(this.embeddedCertData);
@@ -108,7 +108,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enableServerCertificateValidation")
-        private final @Nullable Object enableServerCertificateValidation;
+      private final @Nullable Object enableServerCertificateValidation;
 
     public Optional<Object> getEnableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
@@ -119,7 +119,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -130,7 +130,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -141,7 +141,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -153,7 +153,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -164,7 +164,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url", required=true)
-        private final Object url;
+      private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -175,7 +175,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Object userName;
+      private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);

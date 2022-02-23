@@ -13,14 +13,14 @@ public final class AnomalyDetectorAppFlowConfig extends io.pulumi.resources.Invo
     public static final AnomalyDetectorAppFlowConfig Empty = new AnomalyDetectorAppFlowConfig();
 
     @InputImport(name="flowName", required=true)
-        private final String flowName;
+      private final String flowName;
 
     public String getFlowName() {
         return this.flowName;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;

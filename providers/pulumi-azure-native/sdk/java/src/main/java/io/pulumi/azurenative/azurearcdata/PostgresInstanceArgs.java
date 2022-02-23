@@ -23,7 +23,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -34,7 +34,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="postgresInstanceName")
-        private final @Nullable Input<String> postgresInstanceName;
+      private final @Nullable Input<String> postgresInstanceName;
 
     public Input<String> getPostgresInstanceName() {
         return this.postgresInstanceName == null ? Input.empty() : this.postgresInstanceName;
@@ -56,7 +56,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<PostgresInstancePropertiesArgs> properties;
+      private final Input<PostgresInstancePropertiesArgs> properties;
 
     public Input<PostgresInstancePropertiesArgs> getProperties() {
         return this.properties;
@@ -67,7 +67,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<PostgresInstanceSkuArgs> sku;
+      private final @Nullable Input<PostgresInstanceSkuArgs> sku;
 
     public Input<PostgresInstanceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -89,7 +89,7 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

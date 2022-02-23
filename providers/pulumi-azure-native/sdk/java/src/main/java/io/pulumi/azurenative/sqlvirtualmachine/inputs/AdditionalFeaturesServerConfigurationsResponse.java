@@ -23,7 +23,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends io.pul
      * 
      */
     @InputImport(name="isRServicesEnabled")
-        private final @Nullable Boolean isRServicesEnabled;
+      private final @Nullable Boolean isRServicesEnabled;
 
     public Optional<Boolean> getIsRServicesEnabled() {
         return this.isRServicesEnabled == null ? Optional.empty() : Optional.ofNullable(this.isRServicesEnabled);

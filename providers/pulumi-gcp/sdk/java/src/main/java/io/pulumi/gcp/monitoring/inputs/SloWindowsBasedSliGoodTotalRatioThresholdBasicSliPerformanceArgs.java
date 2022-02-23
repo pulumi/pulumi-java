@@ -23,7 +23,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="availability")
-        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> getAvailability() {
         return this.availability == null ? Input.empty() : this.availability;
@@ -35,7 +35,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="latency")
-        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> getLatency() {
         return this.latency == null ? Input.empty() : this.latency;
@@ -51,7 +51,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="locations")
-        private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -67,7 +67,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="methods")
-        private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -83,7 +83,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="versions")
-        private final @Nullable Input<List<String>> versions;
+      private final @Nullable Input<List<String>> versions;
 
     public Input<List<String>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;

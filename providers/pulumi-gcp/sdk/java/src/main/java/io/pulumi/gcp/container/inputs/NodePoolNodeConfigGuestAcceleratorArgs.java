@@ -16,21 +16,21 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends io.pulumi.reso
     public static final NodePoolNodeConfigGuestAcceleratorArgs Empty = new NodePoolNodeConfigGuestAcceleratorArgs();
 
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
     }
 
     @InputImport(name="gpuPartitionSize")
-        private final @Nullable Input<String> gpuPartitionSize;
+      private final @Nullable Input<String> gpuPartitionSize;
 
     public Input<String> getGpuPartitionSize() {
         return this.gpuPartitionSize == null ? Input.empty() : this.gpuPartitionSize;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

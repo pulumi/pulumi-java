@@ -37,7 +37,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="aadAuthEnabled")
-        private final @Nullable Boolean aadAuthEnabled;
+      private final @Nullable Boolean aadAuthEnabled;
 
     public Optional<Boolean> getAadAuthEnabled() {
         return this.aadAuthEnabled == null ? Optional.empty() : Optional.ofNullable(this.aadAuthEnabled);
@@ -48,7 +48,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="appInsightsEnabled")
-        private final @Nullable Boolean appInsightsEnabled;
+      private final @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> getAppInsightsEnabled() {
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
@@ -59,7 +59,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="authEnabled")
-        private final @Nullable Boolean authEnabled;
+      private final @Nullable Boolean authEnabled;
 
     public Optional<Boolean> getAuthEnabled() {
         return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
@@ -70,7 +70,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoScaler")
-        private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
+      private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
 
     public Optional<AKSServiceResponseResponseAutoScaler> getAutoScaler() {
         return this.autoScaler == null ? Optional.empty() : Optional.ofNullable(this.autoScaler);
@@ -81,7 +81,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="computeName")
-        private final @Nullable String computeName;
+      private final @Nullable String computeName;
 
     public Optional<String> getComputeName() {
         return this.computeName == null ? Optional.empty() : Optional.ofNullable(this.computeName);
@@ -93,7 +93,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="computeType", required=true)
-        private final String computeType;
+      private final String computeType;
 
     public String getComputeType() {
         return this.computeType;
@@ -104,7 +104,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="containerResourceRequirements")
-        private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
+      private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
@@ -115,7 +115,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataCollection")
-        private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
+      private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
 
     public Optional<AKSServiceResponseResponseDataCollection> getDataCollection() {
         return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
@@ -126,7 +126,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="deploymentStatus", required=true)
-        private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
+      private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
 
     public AKSServiceResponseResponseDeploymentStatus getDeploymentStatus() {
         return this.deploymentStatus;
@@ -137,7 +137,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="deploymentType")
-        private final @Nullable String deploymentType;
+      private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
@@ -148,7 +148,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -159,7 +159,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="environmentImageRequest")
-        private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
+      private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
     public Optional<AKSServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
         return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
@@ -170,7 +170,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="error", required=true)
-        private final ServiceResponseBaseResponseError error;
+      private final ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError getError() {
         return this.error;
@@ -181,7 +181,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isDefault")
-        private final @Nullable Boolean isDefault;
+      private final @Nullable Boolean isDefault;
 
     public Optional<Boolean> getIsDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
@@ -192,7 +192,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kvTags")
-        private final @Nullable Map<String,String> kvTags;
+      private final @Nullable Map<String,String> kvTags;
 
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
@@ -203,7 +203,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="livenessProbeRequirements")
-        private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
+      private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
 
     public Optional<AKSServiceResponseResponseLivenessProbeRequirements> getLivenessProbeRequirements() {
         return this.livenessProbeRequirements == null ? Optional.empty() : Optional.ofNullable(this.livenessProbeRequirements);
@@ -214,7 +214,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxConcurrentRequestsPerContainer")
-        private final @Nullable Integer maxConcurrentRequestsPerContainer;
+      private final @Nullable Integer maxConcurrentRequestsPerContainer;
 
     public Optional<Integer> getMaxConcurrentRequestsPerContainer() {
         return this.maxConcurrentRequestsPerContainer == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
@@ -225,7 +225,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxQueueWaitMs")
-        private final @Nullable Integer maxQueueWaitMs;
+      private final @Nullable Integer maxQueueWaitMs;
 
     public Optional<Integer> getMaxQueueWaitMs() {
         return this.maxQueueWaitMs == null ? Optional.empty() : Optional.ofNullable(this.maxQueueWaitMs);
@@ -236,7 +236,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="modelConfigMap", required=true)
-        private final Map<String,Object> modelConfigMap;
+      private final Map<String,Object> modelConfigMap;
 
     public Map<String,Object> getModelConfigMap() {
         return this.modelConfigMap;
@@ -247,7 +247,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="models")
-        private final @Nullable List<ModelResponse> models;
+      private final @Nullable List<ModelResponse> models;
 
     public List<ModelResponse> getModels() {
         return this.models == null ? List.of() : this.models;
@@ -258,7 +258,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="namespace")
-        private final @Nullable String namespace;
+      private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -269,7 +269,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="numReplicas")
-        private final @Nullable Integer numReplicas;
+      private final @Nullable Integer numReplicas;
 
     public Optional<Integer> getNumReplicas() {
         return this.numReplicas == null ? Optional.empty() : Optional.ofNullable(this.numReplicas);
@@ -280,7 +280,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -291,7 +291,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scoringTimeoutMs")
-        private final @Nullable Integer scoringTimeoutMs;
+      private final @Nullable Integer scoringTimeoutMs;
 
     public Optional<Integer> getScoringTimeoutMs() {
         return this.scoringTimeoutMs == null ? Optional.empty() : Optional.ofNullable(this.scoringTimeoutMs);
@@ -302,7 +302,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scoringUri", required=true)
-        private final String scoringUri;
+      private final String scoringUri;
 
     public String getScoringUri() {
         return this.scoringUri;
@@ -313,7 +313,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -324,7 +324,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="swaggerUri", required=true)
-        private final String swaggerUri;
+      private final String swaggerUri;
 
     public String getSwaggerUri() {
         return this.swaggerUri;
@@ -335,7 +335,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="trafficPercentile")
-        private final @Nullable Double trafficPercentile;
+      private final @Nullable Double trafficPercentile;
 
     public Optional<Double> getTrafficPercentile() {
         return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
@@ -346,7 +346,7 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

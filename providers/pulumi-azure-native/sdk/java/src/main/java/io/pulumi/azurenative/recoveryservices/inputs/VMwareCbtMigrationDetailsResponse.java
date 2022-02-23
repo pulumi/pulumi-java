@@ -26,7 +26,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
-        private final String dataMoverRunAsAccountId;
+      private final String dataMoverRunAsAccountId;
 
     public String getDataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
@@ -38,7 +38,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -49,7 +49,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastRecoveryPointReceived", required=true)
-        private final String lastRecoveryPointReceived;
+      private final String lastRecoveryPointReceived;
 
     public String getLastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
@@ -60,7 +60,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable String licenseType;
+      private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -71,7 +71,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="migrationRecoveryPointId", required=true)
-        private final String migrationRecoveryPointId;
+      private final String migrationRecoveryPointId;
 
     public String getMigrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
@@ -82,7 +82,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="osType", required=true)
-        private final String osType;
+      private final String osType;
 
     public String getOsType() {
         return this.osType;
@@ -93,7 +93,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="protectedDisks")
-        private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
+      private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
     public List<VMwareCbtProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
@@ -104,7 +104,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="snapshotRunAsAccountId", required=true)
-        private final String snapshotRunAsAccountId;
+      private final String snapshotRunAsAccountId;
 
     public String getSnapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
@@ -115,7 +115,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-        private final @Nullable String targetAvailabilitySetId;
+      private final @Nullable String targetAvailabilitySetId;
 
     public Optional<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
@@ -126,7 +126,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
-        private final @Nullable String targetBootDiagnosticsStorageAccountId;
+      private final @Nullable String targetBootDiagnosticsStorageAccountId;
 
     public Optional<String> getTargetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
@@ -137,7 +137,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetLocation", required=true)
-        private final String targetLocation;
+      private final String targetLocation;
 
     public String getTargetLocation() {
         return this.targetLocation;
@@ -148,7 +148,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetNetworkId")
-        private final @Nullable String targetNetworkId;
+      private final @Nullable String targetNetworkId;
 
     public Optional<String> getTargetNetworkId() {
         return this.targetNetworkId == null ? Optional.empty() : Optional.ofNullable(this.targetNetworkId);
@@ -159,7 +159,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetResourceGroupId")
-        private final @Nullable String targetResourceGroupId;
+      private final @Nullable String targetResourceGroupId;
 
     public Optional<String> getTargetResourceGroupId() {
         return this.targetResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceGroupId);
@@ -170,7 +170,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmName")
-        private final @Nullable String targetVmName;
+      private final @Nullable String targetVmName;
 
     public Optional<String> getTargetVmName() {
         return this.targetVmName == null ? Optional.empty() : Optional.ofNullable(this.targetVmName);
@@ -181,7 +181,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmSize")
-        private final @Nullable String targetVmSize;
+      private final @Nullable String targetVmSize;
 
     public Optional<String> getTargetVmSize() {
         return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
@@ -192,7 +192,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmNics")
-        private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
+      private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
     public List<VMwareCbtNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
@@ -203,7 +203,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmwareMachineId", required=true)
-        private final String vmwareMachineId;
+      private final String vmwareMachineId;
 
     public String getVmwareMachineId() {
         return this.vmwareMachineId;

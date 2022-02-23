@@ -23,7 +23,7 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountId")
-        private final @Nullable String accountId;
+      private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
@@ -34,7 +34,7 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName")
-        private final @Nullable String accountName;
+      private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);

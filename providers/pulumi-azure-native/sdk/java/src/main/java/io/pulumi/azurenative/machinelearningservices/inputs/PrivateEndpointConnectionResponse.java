@@ -29,7 +29,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -40,7 +40,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable IdentityResponse identity;
+      private final @Nullable IdentityResponse identity;
 
     public Optional<IdentityResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -51,7 +51,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -62,7 +62,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -73,7 +73,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateEndpoint")
-        private final @Nullable PrivateEndpointResponse privateEndpoint;
+      private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -84,7 +84,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-        private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -95,7 +95,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -106,7 +106,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable SkuResponse sku;
+      private final @Nullable SkuResponse sku;
 
     public Optional<SkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -117,7 +117,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="systemData", required=true)
-        private final SystemDataResponse systemData;
+      private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {
         return this.systemData;
@@ -128,7 +128,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -139,7 +139,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

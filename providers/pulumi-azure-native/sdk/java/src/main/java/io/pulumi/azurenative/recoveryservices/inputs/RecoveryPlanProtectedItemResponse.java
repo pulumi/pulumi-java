@@ -23,7 +23,7 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="virtualMachineId")
-        private final @Nullable String virtualMachineId;
+      private final @Nullable String virtualMachineId;
 
     public Optional<String> getVirtualMachineId() {
         return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);

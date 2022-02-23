@@ -17,14 +17,14 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
     public static final TaxonomyIamBindingArgs Empty = new TaxonomyIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TaxonomyIamBindingConditionArgs> condition;
+      private final @Nullable Input<TaxonomyIamBindingConditionArgs> condition;
 
     public Input<TaxonomyIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -36,14 +36,14 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -56,7 +56,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -67,7 +67,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taxonomy", required=true)
-        private final Input<String> taxonomy;
+      private final Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy;

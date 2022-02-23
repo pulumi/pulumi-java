@@ -24,49 +24,49 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     public static final ModelBiasJobDefinitionArgs Empty = new ModelBiasJobDefinitionArgs();
 
     @InputImport(name="jobDefinitionName")
-        private final @Nullable Input<String> jobDefinitionName;
+      private final @Nullable Input<String> jobDefinitionName;
 
     public Input<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
     }
 
     @InputImport(name="jobResources", required=true)
-        private final Input<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources;
+      private final Input<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Input<ModelBiasJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
     @InputImport(name="modelBiasAppSpecification", required=true)
-        private final Input<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification;
+      private final Input<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification;
 
     public Input<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> getModelBiasAppSpecification() {
         return this.modelBiasAppSpecification;
     }
 
     @InputImport(name="modelBiasBaselineConfig")
-        private final @Nullable Input<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig;
+      private final @Nullable Input<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig;
 
     public Input<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> getModelBiasBaselineConfig() {
         return this.modelBiasBaselineConfig == null ? Input.empty() : this.modelBiasBaselineConfig;
     }
 
     @InputImport(name="modelBiasJobInput", required=true)
-        private final Input<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput;
+      private final Input<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput;
 
     public Input<ModelBiasJobDefinitionModelBiasJobInputArgs> getModelBiasJobInput() {
         return this.modelBiasJobInput;
     }
 
     @InputImport(name="modelBiasJobOutputConfig", required=true)
-        private final Input<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig;
+      private final Input<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig;
 
     public Input<ModelBiasJobDefinitionMonitoringOutputConfigArgs> getModelBiasJobOutputConfig() {
         return this.modelBiasJobOutputConfig;
     }
 
     @InputImport(name="networkConfig")
-        private final @Nullable Input<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig;
+      private final @Nullable Input<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Input<ModelBiasJobDefinitionNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -77,14 +77,14 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-        private final @Nullable Input<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition;
+      private final @Nullable Input<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Input<ModelBiasJobDefinitionStoppingConditionArgs> getStoppingCondition() {
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;
@@ -95,7 +95,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ModelBiasJobDefinitionTagArgs>> tags;
+      private final @Nullable Input<List<ModelBiasJobDefinitionTagArgs>> tags;
 
     public Input<List<ModelBiasJobDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

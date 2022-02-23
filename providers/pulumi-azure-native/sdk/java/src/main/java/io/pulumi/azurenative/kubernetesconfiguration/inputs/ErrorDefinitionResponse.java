@@ -21,7 +21,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-        private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;

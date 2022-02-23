@@ -19,49 +19,49 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
     public static final DataSourceOneDriveConfigurationArgs Empty = new DataSourceOneDriveConfigurationArgs();
 
     @InputImport(name="disableLocalGroups")
-        private final @Nullable Input<Boolean> disableLocalGroups;
+      private final @Nullable Input<Boolean> disableLocalGroups;
 
     public Input<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Input.empty() : this.disableLocalGroups;
     }
 
     @InputImport(name="exclusionPatterns")
-        private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Input<List<String>> exclusionPatterns;
 
     public Input<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-        private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Input<List<String>> inclusionPatterns;
 
     public Input<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="oneDriveUsers", required=true)
-        private final Input<DataSourceOneDriveUsersArgs> oneDriveUsers;
+      private final Input<DataSourceOneDriveUsersArgs> oneDriveUsers;
 
     public Input<DataSourceOneDriveUsersArgs> getOneDriveUsers() {
         return this.oneDriveUsers;
     }
 
     @InputImport(name="secretArn", required=true)
-        private final Input<String> secretArn;
+      private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="tenantDomain", required=true)
-        private final Input<String> tenantDomain;
+      private final Input<String> tenantDomain;
 
     public Input<String> getTenantDomain() {
         return this.tenantDomain;

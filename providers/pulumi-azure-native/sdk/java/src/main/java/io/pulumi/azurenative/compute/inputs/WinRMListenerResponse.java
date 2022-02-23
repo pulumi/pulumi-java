@@ -23,7 +23,7 @@ public final class WinRMListenerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="certificateUrl")
-        private final @Nullable String certificateUrl;
+      private final @Nullable String certificateUrl;
 
     public Optional<String> getCertificateUrl() {
         return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
@@ -34,7 +34,7 @@ public final class WinRMListenerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);

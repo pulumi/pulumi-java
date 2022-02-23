@@ -19,7 +19,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionId")
-        private final @Nullable Input<String> extensionId;
+      private final @Nullable Input<String> extensionId;
 
     public Input<String> getExtensionId() {
         return this.extensionId == null ? Input.empty() : this.extensionId;
@@ -30,7 +30,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="farmBeatsResourceName", required=true)
-        private final Input<String> farmBeatsResourceName;
+      private final Input<String> farmBeatsResourceName;
 
     public Input<String> getFarmBeatsResourceName() {
         return this.farmBeatsResourceName;
@@ -41,7 +41,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

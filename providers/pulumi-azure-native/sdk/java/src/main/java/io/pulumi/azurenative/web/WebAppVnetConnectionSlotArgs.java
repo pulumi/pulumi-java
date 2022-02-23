@@ -21,7 +21,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certBlob")
-        private final @Nullable Input<String> certBlob;
+      private final @Nullable Input<String> certBlob;
 
     public Input<String> getCertBlob() {
         return this.certBlob == null ? Input.empty() : this.certBlob;
@@ -32,7 +32,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable Input<String> dnsServers;
+      private final @Nullable Input<String> dnsServers;
 
     public Input<String> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -43,7 +43,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isSwift")
-        private final @Nullable Input<Boolean> isSwift;
+      private final @Nullable Input<Boolean> isSwift;
 
     public Input<Boolean> getIsSwift() {
         return this.isSwift == null ? Input.empty() : this.isSwift;
@@ -54,7 +54,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -65,7 +65,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -76,7 +76,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="slot", required=true)
-        private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -98,7 +98,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vnetName")
-        private final @Nullable Input<String> vnetName;
+      private final @Nullable Input<String> vnetName;
 
     public Input<String> getVnetName() {
         return this.vnetName == null ? Input.empty() : this.vnetName;
@@ -109,7 +109,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vnetResourceId")
-        private final @Nullable Input<String> vnetResourceId;
+      private final @Nullable Input<String> vnetResourceId;
 
     public Input<String> getVnetResourceId() {
         return this.vnetResourceId == null ? Input.empty() : this.vnetResourceId;

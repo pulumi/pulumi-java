@@ -21,28 +21,28 @@ public final class RuleGroupSizeConstraintStatement extends io.pulumi.resources.
     public static final RuleGroupSizeConstraintStatement Empty = new RuleGroupSizeConstraintStatement();
 
     @InputImport(name="comparisonOperator", required=true)
-        private final RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
+      private final RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
 
     public RuleGroupSizeConstraintStatementComparisonOperator getComparisonOperator() {
         return this.comparisonOperator;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-        private final RuleGroupFieldToMatch fieldToMatch;
+      private final RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="size", required=true)
-        private final Double size;
+      private final Double size;
 
     public Double getSize() {
         return this.size;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final List<RuleGroupTextTransformation> textTransformations;
+      private final List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> getTextTransformations() {
         return this.textTransformations;

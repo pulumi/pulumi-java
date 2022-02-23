@@ -23,7 +23,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-        private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -34,7 +34,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullSecret")
-        private final @Nullable Input<String> pullSecret;
+      private final @Nullable Input<String> pullSecret;
 
     public Input<String> getPullSecret() {
         return this.pullSecret == null ? Input.empty() : this.pullSecret;
@@ -45,7 +45,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupId")
-        private final @Nullable Input<String> resourceGroupId;
+      private final @Nullable Input<String> resourceGroupId;
 
     public Input<String> getResourceGroupId() {
         return this.resourceGroupId == null ? Input.empty() : this.resourceGroupId;
@@ -56,7 +56,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

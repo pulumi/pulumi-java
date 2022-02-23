@@ -24,14 +24,14 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable Input<List<ResponsePlanActionArgs>> actions;
+      private final @Nullable Input<List<ResponsePlanActionArgs>> actions;
 
     public Input<List<ResponsePlanActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
     @InputImport(name="chatChannel")
-        private final @Nullable Input<ResponsePlanChatChannelArgs> chatChannel;
+      private final @Nullable Input<ResponsePlanChatChannelArgs> chatChannel;
 
     public Input<ResponsePlanChatChannelArgs> getChatChannel() {
         return this.chatChannel == null ? Input.empty() : this.chatChannel;
@@ -42,7 +42,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -53,14 +53,14 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engagements")
-        private final @Nullable Input<List<String>> engagements;
+      private final @Nullable Input<List<String>> engagements;
 
     public Input<List<String>> getEngagements() {
         return this.engagements == null ? Input.empty() : this.engagements;
     }
 
     @InputImport(name="incidentTemplate", required=true)
-        private final Input<ResponsePlanIncidentTemplateArgs> incidentTemplate;
+      private final Input<ResponsePlanIncidentTemplateArgs> incidentTemplate;
 
     public Input<ResponsePlanIncidentTemplateArgs> getIncidentTemplate() {
         return this.incidentTemplate;
@@ -71,7 +71,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ResponsePlanTagArgs>> tags;
+      private final @Nullable Input<List<ResponsePlanTagArgs>> tags;
 
     public Input<List<ResponsePlanTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

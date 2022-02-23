@@ -27,7 +27,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentMode")
-        private final @Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
+      private final @Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
     public Input<Either<String,WindowsPatchAssessmentMode>> getAssessmentMode() {
         return this.assessmentMode == null ? Input.empty() : this.assessmentMode;
@@ -38,7 +38,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHotpatching")
-        private final @Nullable Input<Boolean> enableHotpatching;
+      private final @Nullable Input<Boolean> enableHotpatching;
 
     public Input<Boolean> getEnableHotpatching() {
         return this.enableHotpatching == null ? Input.empty() : this.enableHotpatching;
@@ -49,7 +49,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patchMode")
-        private final @Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode;
+      private final @Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
     public Input<Either<String,WindowsVMGuestPatchMode>> getPatchMode() {
         return this.patchMode == null ? Input.empty() : this.patchMode;

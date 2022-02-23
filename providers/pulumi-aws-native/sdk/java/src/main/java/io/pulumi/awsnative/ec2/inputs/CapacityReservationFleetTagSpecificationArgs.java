@@ -17,14 +17,14 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     public static final CapacityReservationFleetTagSpecificationArgs Empty = new CapacityReservationFleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-        private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
+      private final @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
 
     public Input<List<CapacityReservationFleetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

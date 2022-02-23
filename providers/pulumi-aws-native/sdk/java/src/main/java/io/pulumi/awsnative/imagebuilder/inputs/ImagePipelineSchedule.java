@@ -24,7 +24,7 @@ public final class ImagePipelineSchedule extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pipelineExecutionStartCondition")
-        private final @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
+      private final @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
 
     public Optional<ImagePipelineSchedulePipelineExecutionStartCondition> getPipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition == null ? Optional.empty() : Optional.ofNullable(this.pipelineExecutionStartCondition);
@@ -35,7 +35,7 @@ public final class ImagePipelineSchedule extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scheduleExpression")
-        private final @Nullable String scheduleExpression;
+      private final @Nullable String scheduleExpression;
 
     public Optional<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Optional.empty() : Optional.ofNullable(this.scheduleExpression);

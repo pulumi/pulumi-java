@@ -20,7 +20,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,7 +31,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId")
-        private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;
@@ -67,7 +67,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="telemetry")
-        private final @Nullable Input<CustomServiceTelemetryGetArgs> telemetry;
+      private final @Nullable Input<CustomServiceTelemetryGetArgs> telemetry;
 
     public Input<CustomServiceTelemetryGetArgs> getTelemetry() {
         return this.telemetry == null ? Input.empty() : this.telemetry;

@@ -22,7 +22,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -44,7 +44,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalAssignmentName")
-        private final @Nullable Input<String> principalAssignmentName;
+      private final @Nullable Input<String> principalAssignmentName;
 
     public Input<String> getPrincipalAssignmentName() {
         return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
@@ -55,7 +55,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -66,7 +66,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalType", required=true)
-        private final Input<Either<String,PrincipalType>> principalType;
+      private final Input<Either<String,PrincipalType>> principalType;
 
     public Input<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType;
@@ -77,7 +77,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<Either<String,DatabasePrincipalRole>> role;
+      private final Input<Either<String,DatabasePrincipalRole>> role;
 
     public Input<Either<String,DatabasePrincipalRole>> getRole() {
         return this.role;
@@ -99,7 +99,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

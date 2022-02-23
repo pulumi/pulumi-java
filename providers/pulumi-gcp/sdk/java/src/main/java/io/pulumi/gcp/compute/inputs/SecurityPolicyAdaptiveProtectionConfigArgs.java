@@ -19,7 +19,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="layer7DdosDefenseConfig")
-        private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
+      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> getLayer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig == null ? Input.empty() : this.layer7DdosDefenseConfig;

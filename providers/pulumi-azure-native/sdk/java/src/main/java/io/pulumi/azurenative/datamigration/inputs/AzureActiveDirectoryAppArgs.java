@@ -22,7 +22,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="appKey", required=true)
-        private final Input<String> appKey;
+      private final Input<String> appKey;
 
     public Input<String> getAppKey() {
         return this.appKey;
@@ -33,7 +33,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="applicationId", required=true)
-        private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -44,7 +44,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;

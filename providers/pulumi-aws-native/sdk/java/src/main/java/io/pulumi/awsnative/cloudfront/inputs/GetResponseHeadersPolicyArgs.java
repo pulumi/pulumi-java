@@ -13,7 +13,7 @@ public final class GetResponseHeadersPolicyArgs extends io.pulumi.resources.Invo
     public static final GetResponseHeadersPolicyArgs Empty = new GetResponseHeadersPolicyArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

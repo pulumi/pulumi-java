@@ -19,14 +19,14 @@ public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi
     public static final ModelBiasJobDefinitionModelBiasJobInputArgs Empty = new ModelBiasJobDefinitionModelBiasJobInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-        private final Input<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
+      private final Input<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
 
     public Input<ModelBiasJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
     @InputImport(name="groundTruthS3Input", required=true)
-        private final Input<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+      private final Input<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Input<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {
         return this.groundTruthS3Input;

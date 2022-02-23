@@ -24,7 +24,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="allowedDeviceManagementLevels")
-        private final @Nullable Input<List<String>> allowedDeviceManagementLevels;
+      private final @Nullable Input<List<String>> allowedDeviceManagementLevels;
 
     public Input<List<String>> getAllowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? Input.empty() : this.allowedDeviceManagementLevels;
@@ -37,7 +37,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="allowedEncryptionStatuses")
-        private final @Nullable Input<List<String>> allowedEncryptionStatuses;
+      private final @Nullable Input<List<String>> allowedEncryptionStatuses;
 
     public Input<List<String>> getAllowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? Input.empty() : this.allowedEncryptionStatuses;
@@ -50,7 +50,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="osConstraints")
-        private final @Nullable Input<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
+      private final @Nullable Input<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
 
     public Input<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> getOsConstraints() {
         return this.osConstraints == null ? Input.empty() : this.osConstraints;
@@ -61,7 +61,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="requireAdminApproval")
-        private final @Nullable Input<Boolean> requireAdminApproval;
+      private final @Nullable Input<Boolean> requireAdminApproval;
 
     public Input<Boolean> getRequireAdminApproval() {
         return this.requireAdminApproval == null ? Input.empty() : this.requireAdminApproval;
@@ -72,7 +72,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="requireCorpOwned")
-        private final @Nullable Input<Boolean> requireCorpOwned;
+      private final @Nullable Input<Boolean> requireCorpOwned;
 
     public Input<Boolean> getRequireCorpOwned() {
         return this.requireCorpOwned == null ? Input.empty() : this.requireCorpOwned;
@@ -84,7 +84,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="requireScreenLock")
-        private final @Nullable Input<Boolean> requireScreenLock;
+      private final @Nullable Input<Boolean> requireScreenLock;
 
     public Input<Boolean> getRequireScreenLock() {
         return this.requireScreenLock == null ? Input.empty() : this.requireScreenLock;

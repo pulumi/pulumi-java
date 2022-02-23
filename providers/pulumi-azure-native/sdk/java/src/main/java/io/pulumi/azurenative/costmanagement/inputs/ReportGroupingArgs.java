@@ -24,7 +24,7 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ReportColumnType>> type;
+      private final Input<Either<String,ReportColumnType>> type;
 
     public Input<Either<String,ReportColumnType>> getType() {
         return this.type;

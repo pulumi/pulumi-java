@@ -21,7 +21,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentCanarySettings")
-        private final @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings;
+      private final @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
     public Input<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
         return this.deploymentCanarySettings == null ? Input.empty() : this.deploymentCanarySettings;
@@ -32,7 +32,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-        private final Input<String> restApiId;
+      private final Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId;
@@ -54,7 +54,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-        private final @Nullable Input<DeploymentStageDescriptionArgs> stageDescription;
+      private final @Nullable Input<DeploymentStageDescriptionArgs> stageDescription;
 
     public Input<DeploymentStageDescriptionArgs> getStageDescription() {
         return this.stageDescription == null ? Input.empty() : this.stageDescription;
@@ -65,7 +65,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-        private final @Nullable Input<String> stageName;
+      private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;

@@ -28,7 +28,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     public static final MonitoringScheduleMonitoringJobDefinitionArgs Empty = new MonitoringScheduleMonitoringJobDefinitionArgs();
 
     @InputImport(name="baselineConfig")
-        private final @Nullable Input<MonitoringScheduleBaselineConfigArgs> baselineConfig;
+      private final @Nullable Input<MonitoringScheduleBaselineConfigArgs> baselineConfig;
 
     public Input<MonitoringScheduleBaselineConfigArgs> getBaselineConfig() {
         return this.baselineConfig == null ? Input.empty() : this.baselineConfig;
@@ -39,42 +39,42 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable Input<Object> environment;
+      private final @Nullable Input<Object> environment;
 
     public Input<Object> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
     }
 
     @InputImport(name="monitoringAppSpecification", required=true)
-        private final Input<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
+      private final Input<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
 
     public Input<MonitoringScheduleMonitoringAppSpecificationArgs> getMonitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @InputImport(name="monitoringInputs", required=true)
-        private final Input<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
+      private final Input<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
 
     public Input<List<MonitoringScheduleMonitoringInputArgs>> getMonitoringInputs() {
         return this.monitoringInputs;
     }
 
     @InputImport(name="monitoringOutputConfig", required=true)
-        private final Input<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
+      private final Input<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
 
     public Input<MonitoringScheduleMonitoringOutputConfigArgs> getMonitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @InputImport(name="monitoringResources", required=true)
-        private final Input<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
+      private final Input<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
 
     public Input<MonitoringScheduleMonitoringResourcesArgs> getMonitoringResources() {
         return this.monitoringResources;
     }
 
     @InputImport(name="networkConfig")
-        private final @Nullable Input<MonitoringScheduleNetworkConfigArgs> networkConfig;
+      private final @Nullable Input<MonitoringScheduleNetworkConfigArgs> networkConfig;
 
     public Input<MonitoringScheduleNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -85,14 +85,14 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-        private final @Nullable Input<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
+      private final @Nullable Input<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
 
     public Input<MonitoringScheduleStoppingConditionArgs> getStoppingCondition() {
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;

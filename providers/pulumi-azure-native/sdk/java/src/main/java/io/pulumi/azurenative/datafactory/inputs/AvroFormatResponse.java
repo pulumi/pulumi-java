@@ -24,7 +24,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deserializer")
-        private final @Nullable Object deserializer;
+      private final @Nullable Object deserializer;
 
     public Optional<Object> getDeserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
@@ -35,7 +35,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serializer")
-        private final @Nullable Object serializer;
+      private final @Nullable Object serializer;
 
     public Optional<Object> getSerializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
@@ -47,7 +47,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

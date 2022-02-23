@@ -20,14 +20,14 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     public static final WorkGroupResultConfigurationArgs Empty = new WorkGroupResultConfigurationArgs();
 
     @InputImport(name="encryptionConfiguration")
-        private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="outputLocation")
-        private final @Nullable Input<String> outputLocation;
+      private final @Nullable Input<String> outputLocation;
 
     public Input<String> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;

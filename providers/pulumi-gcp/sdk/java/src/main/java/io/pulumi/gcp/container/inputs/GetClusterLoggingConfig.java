@@ -14,7 +14,7 @@ public final class GetClusterLoggingConfig extends io.pulumi.resources.InvokeArg
     public static final GetClusterLoggingConfig Empty = new GetClusterLoggingConfig();
 
     @InputImport(name="enableComponents", required=true)
-        private final List<String> enableComponents;
+      private final List<String> enableComponents;
 
     public List<String> getEnableComponents() {
         return this.enableComponents;

@@ -18,42 +18,42 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     public static final JobDataCatalogOutputArgs Empty = new JobDataCatalogOutputArgs();
 
     @InputImport(name="catalogId")
-        private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
     }
 
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databaseOptions")
-        private final @Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+      private final @Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
     public Input<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
         return this.databaseOptions == null ? Input.empty() : this.databaseOptions;
     }
 
     @InputImport(name="overwrite")
-        private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Input<Boolean> overwrite;
 
     public Input<Boolean> getOverwrite() {
         return this.overwrite == null ? Input.empty() : this.overwrite;
     }
 
     @InputImport(name="s3Options")
-        private final @Nullable Input<JobS3TableOutputOptionsArgs> s3Options;
+      private final @Nullable Input<JobS3TableOutputOptionsArgs> s3Options;
 
     public Input<JobS3TableOutputOptionsArgs> getS3Options() {
         return this.s3Options == null ? Input.empty() : this.s3Options;
     }
 
     @InputImport(name="tableName", required=true)
-        private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

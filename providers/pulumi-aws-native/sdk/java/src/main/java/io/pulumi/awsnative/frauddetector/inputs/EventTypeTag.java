@@ -13,14 +13,14 @@ public final class EventTypeTag extends io.pulumi.resources.InvokeArgs {
     public static final EventTypeTag Empty = new EventTypeTag();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

@@ -22,7 +22,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="completedDatapointCount", required=true)
-        private final Double completedDatapointCount;
+      private final Double completedDatapointCount;
 
     public Double getCompletedDatapointCount() {
         return this.completedDatapointCount;
@@ -33,7 +33,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="incrementalDatasetLastRefreshTime", required=true)
-        private final String incrementalDatasetLastRefreshTime;
+      private final String incrementalDatasetLastRefreshTime;
 
     public String getIncrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
@@ -44,7 +44,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="skippedDatapointCount", required=true)
-        private final Double skippedDatapointCount;
+      private final Double skippedDatapointCount;
 
     public Double getSkippedDatapointCount() {
         return this.skippedDatapointCount;
@@ -55,7 +55,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="totalDatapointCount", required=true)
-        private final Double totalDatapointCount;
+      private final Double totalDatapointCount;
 
     public Double getTotalDatapointCount() {
         return this.totalDatapointCount;

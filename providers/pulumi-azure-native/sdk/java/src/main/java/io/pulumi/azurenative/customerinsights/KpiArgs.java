@@ -27,7 +27,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliases")
-        private final @Nullable Input<List<KpiAliasArgs>> aliases;
+      private final @Nullable Input<List<KpiAliasArgs>> aliases;
 
     public Input<List<KpiAliasArgs>> getAliases() {
         return this.aliases == null ? Input.empty() : this.aliases;
@@ -38,7 +38,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calculationWindow", required=true)
-        private final Input<CalculationWindowTypes> calculationWindow;
+      private final Input<CalculationWindowTypes> calculationWindow;
 
     public Input<CalculationWindowTypes> getCalculationWindow() {
         return this.calculationWindow;
@@ -49,7 +49,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calculationWindowFieldName")
-        private final @Nullable Input<String> calculationWindowFieldName;
+      private final @Nullable Input<String> calculationWindowFieldName;
 
     public Input<String> getCalculationWindowFieldName() {
         return this.calculationWindowFieldName == null ? Input.empty() : this.calculationWindowFieldName;
@@ -60,7 +60,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -71,7 +71,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -82,7 +82,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityType", required=true)
-        private final Input<EntityTypes> entityType;
+      private final Input<EntityTypes> entityType;
 
     public Input<EntityTypes> getEntityType() {
         return this.entityType;
@@ -93,7 +93,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityTypeName", required=true)
-        private final Input<String> entityTypeName;
+      private final Input<String> entityTypeName;
 
     public Input<String> getEntityTypeName() {
         return this.entityTypeName;
@@ -104,7 +104,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-        private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -115,7 +115,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extracts")
-        private final @Nullable Input<List<KpiExtractArgs>> extracts;
+      private final @Nullable Input<List<KpiExtractArgs>> extracts;
 
     public Input<List<KpiExtractArgs>> getExtracts() {
         return this.extracts == null ? Input.empty() : this.extracts;
@@ -126,7 +126,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -137,7 +137,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function", required=true)
-        private final Input<KpiFunctions> function;
+      private final Input<KpiFunctions> function;
 
     public Input<KpiFunctions> getFunction() {
         return this.function;
@@ -148,7 +148,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupBy")
-        private final @Nullable Input<List<String>> groupBy;
+      private final @Nullable Input<List<String>> groupBy;
 
     public Input<List<String>> getGroupBy() {
         return this.groupBy == null ? Input.empty() : this.groupBy;
@@ -159,7 +159,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-        private final Input<String> hubName;
+      private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -170,7 +170,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kpiName")
-        private final @Nullable Input<String> kpiName;
+      private final @Nullable Input<String> kpiName;
 
     public Input<String> getKpiName() {
         return this.kpiName == null ? Input.empty() : this.kpiName;
@@ -181,7 +181,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -192,7 +192,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresHolds")
-        private final @Nullable Input<KpiThresholdsArgs> thresHolds;
+      private final @Nullable Input<KpiThresholdsArgs> thresHolds;
 
     public Input<KpiThresholdsArgs> getThresHolds() {
         return this.thresHolds == null ? Input.empty() : this.thresHolds;
@@ -203,7 +203,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-        private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;

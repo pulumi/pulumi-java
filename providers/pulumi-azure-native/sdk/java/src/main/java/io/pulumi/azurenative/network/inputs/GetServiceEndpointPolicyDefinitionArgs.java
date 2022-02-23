@@ -17,7 +17,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceEndpointPolicyDefinitionName", required=true)
-        private final String serviceEndpointPolicyDefinitionName;
+      private final String serviceEndpointPolicyDefinitionName;
 
     public String getServiceEndpointPolicyDefinitionName() {
         return this.serviceEndpointPolicyDefinitionName;
@@ -39,7 +39,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceEndpointPolicyName", required=true)
-        private final String serviceEndpointPolicyName;
+      private final String serviceEndpointPolicyName;
 
     public String getServiceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;

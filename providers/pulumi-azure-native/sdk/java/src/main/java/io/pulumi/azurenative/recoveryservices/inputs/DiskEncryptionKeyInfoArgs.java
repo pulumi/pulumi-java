@@ -23,7 +23,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultResourceArmId")
-        private final @Nullable Input<String> keyVaultResourceArmId;
+      private final @Nullable Input<String> keyVaultResourceArmId;
 
     public Input<String> getKeyVaultResourceArmId() {
         return this.keyVaultResourceArmId == null ? Input.empty() : this.keyVaultResourceArmId;
@@ -34,7 +34,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretIdentifier")
-        private final @Nullable Input<String> secretIdentifier;
+      private final @Nullable Input<String> secretIdentifier;
 
     public Input<String> getSecretIdentifier() {
         return this.secretIdentifier == null ? Input.empty() : this.secretIdentifier;

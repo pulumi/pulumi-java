@@ -26,7 +26,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-        private final @Nullable Input<List<DataDiskArgs>> dataDisks;
+      private final @Nullable Input<List<DataDiskArgs>> dataDisks;
 
     public Input<List<DataDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageReference")
-        private final @Nullable Input<ImageReferenceArgs> imageReference;
+      private final @Nullable Input<ImageReferenceArgs> imageReference;
 
     public Input<ImageReferenceArgs> getImageReference() {
         return this.imageReference == null ? Input.empty() : this.imageReference;
@@ -48,7 +48,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osDisk")
-        private final @Nullable Input<OsDiskArgs> osDisk;
+      private final @Nullable Input<OsDiskArgs> osDisk;
 
     public Input<OsDiskArgs> getOsDisk() {
         return this.osDisk == null ? Input.empty() : this.osDisk;

@@ -23,7 +23,7 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="destination")
-        private final @Nullable String destination;
+      private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);

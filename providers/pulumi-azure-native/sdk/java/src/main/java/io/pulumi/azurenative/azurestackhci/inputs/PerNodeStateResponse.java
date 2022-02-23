@@ -21,7 +21,7 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arcInstance", required=true)
-        private final String arcInstance;
+      private final String arcInstance;
 
     public String getArcInstance() {
         return this.arcInstance;
@@ -32,7 +32,7 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

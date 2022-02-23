@@ -23,7 +23,7 @@ public final class PerInstanceConfigPreservedStateArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="disks")
-        private final @Nullable Input<List<PerInstanceConfigPreservedStateDiskArgs>> disks;
+      private final @Nullable Input<List<PerInstanceConfigPreservedStateDiskArgs>> disks;
 
     public Input<List<PerInstanceConfigPreservedStateDiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -34,7 +34,7 @@ public final class PerInstanceConfigPreservedStateArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;

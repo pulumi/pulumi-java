@@ -25,7 +25,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="assessmentCount")
-        private final @Nullable Input<Integer> assessmentCount;
+      private final @Nullable Input<Integer> assessmentCount;
 
     public Input<Integer> getAssessmentCount() {
         return this.assessmentCount == null ? Input.empty() : this.assessmentCount;
@@ -36,7 +36,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedDetails")
-        private final @Nullable Input<Map<String,String>> extendedDetails;
+      private final @Nullable Input<Map<String,String>> extendedDetails;
 
     public Input<Map<String,String>> getExtendedDetails() {
         return this.extendedDetails == null ? Input.empty() : this.extendedDetails;
@@ -47,7 +47,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupCount")
-        private final @Nullable Input<Integer> groupCount;
+      private final @Nullable Input<Integer> groupCount;
 
     public Input<Integer> getGroupCount() {
         return this.groupCount == null ? Input.empty() : this.groupCount;

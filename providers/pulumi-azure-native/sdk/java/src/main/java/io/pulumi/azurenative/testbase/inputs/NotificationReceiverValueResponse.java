@@ -25,7 +25,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="distributionGroupListReceiverValue")
-        private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
+      private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
     public Optional<DistributionGroupListReceiverValueResponse> getDistributionGroupListReceiverValue() {
         return this.distributionGroupListReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.distributionGroupListReceiverValue);
@@ -36,7 +36,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="subscriptionReceiverValue")
-        private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
+      private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
     public Optional<SubscriptionReceiverValueResponse> getSubscriptionReceiverValue() {
         return this.subscriptionReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReceiverValue);
@@ -47,7 +47,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userObjectReceiverValue")
-        private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
+      private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
     public Optional<UserObjectReceiverValueResponse> getUserObjectReceiverValue() {
         return this.userObjectReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.userObjectReceiverValue);

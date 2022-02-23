@@ -17,7 +17,7 @@ public final class GetDataQualityJobDefinitionArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="jobDefinitionArn", required=true)
-        private final String jobDefinitionArn;
+      private final String jobDefinitionArn;
 
     public String getJobDefinitionArn() {
         return this.jobDefinitionArn;

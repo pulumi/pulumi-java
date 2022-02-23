@@ -20,7 +20,7 @@ public final class ResponsePlanChatChannel extends io.pulumi.resources.InvokeArg
     public static final ResponsePlanChatChannel Empty = new ResponsePlanChatChannel();
 
     @InputImport(name="chatbotSns")
-        private final @Nullable List<String> chatbotSns;
+      private final @Nullable List<String> chatbotSns;
 
     public List<String> getChatbotSns() {
         return this.chatbotSns == null ? List.of() : this.chatbotSns;

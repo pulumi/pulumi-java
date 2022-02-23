@@ -22,7 +22,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName")
-        private final @Nullable Input<String> resourceSetName;
+      private final @Nullable Input<String> resourceSetName;
 
     public Input<String> getResourceSetName() {
         return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
@@ -35,7 +35,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetType", required=true)
-        private final Input<String> resourceSetType;
+      private final Input<String> resourceSetType;
 
     public Input<String> getResourceSetType() {
         return this.resourceSetType;
@@ -46,7 +46,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-        private final Input<List<ResourceSetResourceArgs>> resources;
+      private final Input<List<ResourceSetResourceArgs>> resources;
 
     public Input<List<ResourceSetResourceArgs>> getResources() {
         return this.resources;
@@ -57,7 +57,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ResourceSetTagArgs>> tags;
+      private final @Nullable Input<List<ResourceSetTagArgs>> tags;
 
     public Input<List<ResourceSetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

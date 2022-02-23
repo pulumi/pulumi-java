@@ -23,7 +23,7 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="code", required=true)
-        private final Integer code;
+      private final Integer code;
 
     public Integer getCode() {
         return this.code;
@@ -34,7 +34,7 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -45,7 +45,7 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recommendations", required=true)
-        private final List<String> recommendations;
+      private final List<String> recommendations;
 
     public List<String> getRecommendations() {
         return this.recommendations;
@@ -56,7 +56,7 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="title", required=true)
-        private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;

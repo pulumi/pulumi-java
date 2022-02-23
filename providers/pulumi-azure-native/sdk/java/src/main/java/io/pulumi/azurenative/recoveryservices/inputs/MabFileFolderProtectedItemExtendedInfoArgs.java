@@ -24,7 +24,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-        private final @Nullable Input<String> lastRefreshedAt;
+      private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
@@ -35,7 +35,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-        private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -46,7 +46,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="recoveryPointCount")
-        private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;

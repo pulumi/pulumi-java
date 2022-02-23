@@ -22,7 +22,7 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -33,7 +33,7 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableName", required=true)
-        private final Input<String> variableName;
+      private final Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName;

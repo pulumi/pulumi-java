@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="inspectConfig")
-        private final @Nullable Input<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
 
     public Input<PreventionInspectTemplateInspectConfigGetArgs> getInspectConfig() {
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
@@ -55,7 +55,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;

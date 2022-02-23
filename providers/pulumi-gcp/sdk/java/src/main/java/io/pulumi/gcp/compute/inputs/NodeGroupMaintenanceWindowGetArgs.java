@@ -18,7 +18,7 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

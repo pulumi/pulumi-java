@@ -14,14 +14,14 @@ public final class ClusterNodePoolAutoscalingArgs extends io.pulumi.resources.Re
     public static final ClusterNodePoolAutoscalingArgs Empty = new ClusterNodePoolAutoscalingArgs();
 
     @InputImport(name="maxNodeCount", required=true)
-        private final Input<Integer> maxNodeCount;
+      private final Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount;
     }
 
     @InputImport(name="minNodeCount", required=true)
-        private final Input<Integer> minNodeCount;
+      private final Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount;

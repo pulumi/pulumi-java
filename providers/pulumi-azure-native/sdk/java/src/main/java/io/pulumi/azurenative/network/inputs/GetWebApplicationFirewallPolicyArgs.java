@@ -17,7 +17,7 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final String policyName;
+      private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

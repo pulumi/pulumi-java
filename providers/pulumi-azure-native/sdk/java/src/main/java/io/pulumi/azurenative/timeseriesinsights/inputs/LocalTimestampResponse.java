@@ -24,7 +24,7 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="format")
-        private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -35,7 +35,7 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeZoneOffset")
-        private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
+      private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
     public Optional<LocalTimestampResponseTimeZoneOffset> getTimeZoneOffset() {
         return this.timeZoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timeZoneOffset);

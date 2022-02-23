@@ -21,7 +21,7 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -32,7 +32,7 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="topic")
-        private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;

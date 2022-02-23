@@ -20,7 +20,7 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableNestedVirtualization")
-        private final @Nullable Input<Boolean> enableNestedVirtualization;
+      private final @Nullable Input<Boolean> enableNestedVirtualization;
 
     public Input<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
@@ -31,7 +31,7 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
      * 
      */
     @InputImport(name="threadsPerCore")
-        private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;

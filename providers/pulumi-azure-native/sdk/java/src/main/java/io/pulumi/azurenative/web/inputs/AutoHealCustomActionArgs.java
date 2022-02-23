@@ -24,7 +24,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="exe")
-        private final @Nullable Input<String> exe;
+      private final @Nullable Input<String> exe;
 
     public Input<String> getExe() {
         return this.exe == null ? Input.empty() : this.exe;
@@ -35,7 +35,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

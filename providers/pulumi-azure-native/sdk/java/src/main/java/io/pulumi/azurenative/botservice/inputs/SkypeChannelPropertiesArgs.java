@@ -24,7 +24,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="callingWebHook")
-        private final @Nullable Input<String> callingWebHook;
+      private final @Nullable Input<String> callingWebHook;
 
     public Input<String> getCallingWebHook() {
         return this.callingWebHook == null ? Input.empty() : this.callingWebHook;
@@ -35,7 +35,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableCalling")
-        private final @Nullable Input<Boolean> enableCalling;
+      private final @Nullable Input<Boolean> enableCalling;
 
     public Input<Boolean> getEnableCalling() {
         return this.enableCalling == null ? Input.empty() : this.enableCalling;
@@ -46,7 +46,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableGroups")
-        private final @Nullable Input<Boolean> enableGroups;
+      private final @Nullable Input<Boolean> enableGroups;
 
     public Input<Boolean> getEnableGroups() {
         return this.enableGroups == null ? Input.empty() : this.enableGroups;
@@ -57,7 +57,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableMediaCards")
-        private final @Nullable Input<Boolean> enableMediaCards;
+      private final @Nullable Input<Boolean> enableMediaCards;
 
     public Input<Boolean> getEnableMediaCards() {
         return this.enableMediaCards == null ? Input.empty() : this.enableMediaCards;
@@ -68,7 +68,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableMessaging")
-        private final @Nullable Input<Boolean> enableMessaging;
+      private final @Nullable Input<Boolean> enableMessaging;
 
     public Input<Boolean> getEnableMessaging() {
         return this.enableMessaging == null ? Input.empty() : this.enableMessaging;
@@ -79,7 +79,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableScreenSharing")
-        private final @Nullable Input<Boolean> enableScreenSharing;
+      private final @Nullable Input<Boolean> enableScreenSharing;
 
     public Input<Boolean> getEnableScreenSharing() {
         return this.enableScreenSharing == null ? Input.empty() : this.enableScreenSharing;
@@ -90,7 +90,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableVideo")
-        private final @Nullable Input<Boolean> enableVideo;
+      private final @Nullable Input<Boolean> enableVideo;
 
     public Input<Boolean> getEnableVideo() {
         return this.enableVideo == null ? Input.empty() : this.enableVideo;
@@ -101,7 +101,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupsMode")
-        private final @Nullable Input<String> groupsMode;
+      private final @Nullable Input<String> groupsMode;
 
     public Input<String> getGroupsMode() {
         return this.groupsMode == null ? Input.empty() : this.groupsMode;
@@ -112,7 +112,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="incomingCallRoute")
-        private final @Nullable Input<String> incomingCallRoute;
+      private final @Nullable Input<String> incomingCallRoute;
 
     public Input<String> getIncomingCallRoute() {
         return this.incomingCallRoute == null ? Input.empty() : this.incomingCallRoute;
@@ -123,7 +123,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;

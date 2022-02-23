@@ -27,7 +27,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowProtectedAppendWrites")
-        private final @Nullable Boolean allowProtectedAppendWrites;
+      private final @Nullable Boolean allowProtectedAppendWrites;
 
     public Optional<Boolean> getAllowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites == null ? Optional.empty() : Optional.ofNullable(this.allowProtectedAppendWrites);
@@ -38,7 +38,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -49,7 +49,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="immutabilityPeriodSinceCreationInDays")
-        private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
+      private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
     public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays == null ? Optional.empty() : Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
@@ -60,7 +60,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -71,7 +71,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="updateHistory", required=true)
-        private final List<UpdateHistoryPropertyResponse> updateHistory;
+      private final List<UpdateHistoryPropertyResponse> updateHistory;
 
     public List<UpdateHistoryPropertyResponse> getUpdateHistory() {
         return this.updateHistory;

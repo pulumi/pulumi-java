@@ -19,7 +19,7 @@ public final class DicomStoreStreamConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-        private final Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+      private final Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
     public Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
         return this.bigqueryDestination;

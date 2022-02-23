@@ -19,7 +19,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-        private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -41,7 +41,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseId")
-        private final @Nullable Input<String> releaseId;
+      private final @Nullable Input<String> releaseId;
 
     public Input<String> getReleaseId() {
         return this.releaseId == null ? Input.empty() : this.releaseId;
@@ -52,7 +52,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

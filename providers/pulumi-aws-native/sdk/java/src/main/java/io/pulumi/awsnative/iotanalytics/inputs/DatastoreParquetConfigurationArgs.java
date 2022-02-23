@@ -15,7 +15,7 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
     public static final DatastoreParquetConfigurationArgs Empty = new DatastoreParquetConfigurationArgs();
 
     @InputImport(name="schemaDefinition")
-        private final @Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition;
+      private final @Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
     public Input<DatastoreSchemaDefinitionArgs> getSchemaDefinition() {
         return this.schemaDefinition == null ? Input.empty() : this.schemaDefinition;

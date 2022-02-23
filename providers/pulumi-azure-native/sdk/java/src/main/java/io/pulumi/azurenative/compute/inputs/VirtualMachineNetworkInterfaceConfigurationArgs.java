@@ -30,7 +30,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="deleteOption")
-        private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+      private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
     public Input<Either<String,DeleteOptions>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -41,14 +41,14 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="dnsSettings")
-        private final @Nullable Input<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
+      private final @Nullable Input<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
 
     public Input<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
     @InputImport(name="dscpConfiguration")
-        private final @Nullable Input<SubResourceArgs> dscpConfiguration;
+      private final @Nullable Input<SubResourceArgs> dscpConfiguration;
 
     public Input<SubResourceArgs> getDscpConfiguration() {
         return this.dscpConfiguration == null ? Input.empty() : this.dscpConfiguration;
@@ -59,7 +59,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-        private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
     public Input<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
@@ -70,7 +70,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="enableFpga")
-        private final @Nullable Input<Boolean> enableFpga;
+      private final @Nullable Input<Boolean> enableFpga;
 
     public Input<Boolean> getEnableFpga() {
         return this.enableFpga == null ? Input.empty() : this.enableFpga;
@@ -81,7 +81,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="enableIPForwarding")
-        private final @Nullable Input<Boolean> enableIPForwarding;
+      private final @Nullable Input<Boolean> enableIPForwarding;
 
     public Input<Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
@@ -92,7 +92,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="ipConfigurations", required=true)
-        private final Input<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+      private final Input<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
     public Input<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations;
@@ -103,7 +103,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -114,7 +114,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="networkSecurityGroup")
-        private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
+      private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
 
     public Input<SubResourceArgs> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
@@ -125,7 +125,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;

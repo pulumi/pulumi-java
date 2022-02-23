@@ -24,7 +24,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable List<String> allow;
+      private final @Nullable List<String> allow;
 
     public List<String> getAllow() {
         return this.allow == null ? List.of() : this.allow;
@@ -35,7 +35,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deny")
-        private final @Nullable List<String> deny;
+      private final @Nullable List<String> deny;
 
     public List<String> getDeny() {
         return this.deny == null ? List.of() : this.deny;

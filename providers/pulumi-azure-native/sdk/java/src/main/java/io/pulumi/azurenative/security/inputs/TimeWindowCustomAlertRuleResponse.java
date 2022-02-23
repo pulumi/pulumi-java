@@ -23,7 +23,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -56,7 +56,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxThreshold", required=true)
-        private final Integer maxThreshold;
+      private final Integer maxThreshold;
 
     public Integer getMaxThreshold() {
         return this.maxThreshold;
@@ -67,7 +67,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="minThreshold", required=true)
-        private final Integer minThreshold;
+      private final Integer minThreshold;
 
     public Integer getMinThreshold() {
         return this.minThreshold;
@@ -79,7 +79,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ruleType", required=true)
-        private final String ruleType;
+      private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -90,7 +90,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="timeWindowSize", required=true)
-        private final String timeWindowSize;
+      private final String timeWindowSize;
 
     public String getTimeWindowSize() {
         return this.timeWindowSize;

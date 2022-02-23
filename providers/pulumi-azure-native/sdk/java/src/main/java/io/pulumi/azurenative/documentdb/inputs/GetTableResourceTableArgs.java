@@ -17,7 +17,7 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

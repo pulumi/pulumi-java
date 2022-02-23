@@ -19,7 +19,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerName", required=true)
-        private final String containerName;
+      private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -30,7 +30,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final String fabricName;
+      private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -41,7 +41,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable String filter;
+      private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -52,7 +52,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protectedItemName", required=true)
-        private final String protectedItemName;
+      private final String protectedItemName;
 
     public String getProtectedItemName() {
         return this.protectedItemName;
@@ -63,7 +63,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-        private final String vaultName;
+      private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;

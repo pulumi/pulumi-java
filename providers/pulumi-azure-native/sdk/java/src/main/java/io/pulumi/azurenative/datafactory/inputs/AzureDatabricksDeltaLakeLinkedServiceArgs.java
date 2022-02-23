@@ -32,7 +32,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -43,7 +43,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -54,7 +54,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clusterId")
-        private final @Nullable Input<Object> clusterId;
+      private final @Nullable Input<Object> clusterId;
 
     public Input<Object> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -65,7 +65,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -76,7 +76,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -87,7 +87,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="domain", required=true)
-        private final Input<Object> domain;
+      private final Input<Object> domain;
 
     public Input<Object> getDomain() {
         return this.domain;
@@ -109,7 +109,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -120,7 +120,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -132,7 +132,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="workspaceResourceId")
-        private final @Nullable Input<Object> workspaceResourceId;
+      private final @Nullable Input<Object> workspaceResourceId;
 
     public Input<Object> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;

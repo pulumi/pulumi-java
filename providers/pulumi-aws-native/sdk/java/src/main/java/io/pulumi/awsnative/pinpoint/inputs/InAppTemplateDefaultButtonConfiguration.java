@@ -17,42 +17,42 @@ public final class InAppTemplateDefaultButtonConfiguration extends io.pulumi.res
     public static final InAppTemplateDefaultButtonConfiguration Empty = new InAppTemplateDefaultButtonConfiguration();
 
     @InputImport(name="backgroundColor")
-        private final @Nullable String backgroundColor;
+      private final @Nullable String backgroundColor;
 
     public Optional<String> getBackgroundColor() {
         return this.backgroundColor == null ? Optional.empty() : Optional.ofNullable(this.backgroundColor);
     }
 
     @InputImport(name="borderRadius")
-        private final @Nullable Integer borderRadius;
+      private final @Nullable Integer borderRadius;
 
     public Optional<Integer> getBorderRadius() {
         return this.borderRadius == null ? Optional.empty() : Optional.ofNullable(this.borderRadius);
     }
 
     @InputImport(name="buttonAction")
-        private final @Nullable InAppTemplateButtonAction buttonAction;
+      private final @Nullable InAppTemplateButtonAction buttonAction;
 
     public Optional<InAppTemplateButtonAction> getButtonAction() {
         return this.buttonAction == null ? Optional.empty() : Optional.ofNullable(this.buttonAction);
     }
 
     @InputImport(name="link")
-        private final @Nullable String link;
+      private final @Nullable String link;
 
     public Optional<String> getLink() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
     @InputImport(name="text")
-        private final @Nullable String text;
+      private final @Nullable String text;
 
     public Optional<String> getText() {
         return this.text == null ? Optional.empty() : Optional.ofNullable(this.text);
     }
 
     @InputImport(name="textColor")
-        private final @Nullable String textColor;
+      private final @Nullable String textColor;
 
     public Optional<String> getTextColor() {
         return this.textColor == null ? Optional.empty() : Optional.ofNullable(this.textColor);

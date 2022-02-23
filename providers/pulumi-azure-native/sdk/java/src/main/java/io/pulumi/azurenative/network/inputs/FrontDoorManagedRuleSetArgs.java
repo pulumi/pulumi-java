@@ -28,7 +28,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="exclusions")
-        private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
+      private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
 
     public Input<List<ManagedRuleExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -39,7 +39,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleGroupOverrides")
-        private final @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+      private final @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
     public Input<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
         return this.ruleGroupOverrides == null ? Input.empty() : this.ruleGroupOverrides;
@@ -50,7 +50,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetAction")
-        private final @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction;
+      private final @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
     public Input<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
         return this.ruleSetAction == null ? Input.empty() : this.ruleSetAction;
@@ -61,7 +61,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-        private final Input<String> ruleSetType;
+      private final Input<String> ruleSetType;
 
     public Input<String> getRuleSetType() {
         return this.ruleSetType;
@@ -72,7 +72,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-        private final Input<String> ruleSetVersion;
+      private final Input<String> ruleSetVersion;
 
     public Input<String> getRuleSetVersion() {
         return this.ruleSetVersion;

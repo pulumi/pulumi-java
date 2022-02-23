@@ -19,7 +19,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="environmentId", required=true)
-        private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
@@ -30,7 +30,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -41,7 +41,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userName", required=true)
-        private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;

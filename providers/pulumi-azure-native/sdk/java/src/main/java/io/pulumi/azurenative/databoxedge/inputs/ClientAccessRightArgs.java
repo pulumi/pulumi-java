@@ -24,7 +24,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessPermission", required=true)
-        private final Input<Either<String,ClientPermissionType>> accessPermission;
+      private final Input<Either<String,ClientPermissionType>> accessPermission;
 
     public Input<Either<String,ClientPermissionType>> getAccessPermission() {
         return this.accessPermission;
@@ -35,7 +35,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="client", required=true)
-        private final Input<String> client;
+      private final Input<String> client;
 
     public Input<String> getClient() {
         return this.client;

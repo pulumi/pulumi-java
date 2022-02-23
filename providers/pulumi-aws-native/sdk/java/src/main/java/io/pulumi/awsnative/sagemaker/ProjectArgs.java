@@ -18,14 +18,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="projectDescription")
-        private final @Nullable Input<String> projectDescription;
+      private final @Nullable Input<String> projectDescription;
 
     public Input<String> getProjectDescription() {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
     }
 
     @InputImport(name="projectName")
-        private final @Nullable Input<String> projectName;
+      private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -36,7 +36,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails", required=true)
-        private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
+      private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
     public Input<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
@@ -47,7 +47,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Input<List<ProjectTagArgs>> tags;
 
     public Input<List<ProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

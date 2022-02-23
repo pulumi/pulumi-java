@@ -22,7 +22,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="emailAddress", required=true)
-        private final Input<String> emailAddress;
+      private final Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress;
@@ -33,7 +33,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

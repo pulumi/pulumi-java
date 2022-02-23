@@ -23,7 +23,7 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -34,7 +34,7 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

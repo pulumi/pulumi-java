@@ -26,7 +26,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<Either<String,AzureFirewallSkuName>> name;
+      private final @Nullable Input<Either<String,AzureFirewallSkuName>> name;
 
     public Input<Either<String,AzureFirewallSkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,AzureFirewallSkuTier>> tier;
+      private final @Nullable Input<Either<String,AzureFirewallSkuTier>> tier;
 
     public Input<Either<String,AzureFirewallSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

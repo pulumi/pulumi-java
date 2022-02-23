@@ -24,7 +24,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * 
      */
     @InputImport(name="instantRpRetentionRangeInDays")
-        private final @Nullable Integer instantRpRetentionRangeInDays;
+      private final @Nullable Integer instantRpRetentionRangeInDays;
 
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Optional.empty() : Optional.ofNullable(this.instantRpRetentionRangeInDays);
@@ -35,7 +35,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable String retentionPolicy;
+      private final @Nullable String retentionPolicy;
 
     public Optional<String> getRetentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
@@ -46,7 +46,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * 
      */
     @InputImport(name="schedulePolicy")
-        private final @Nullable String schedulePolicy;
+      private final @Nullable String schedulePolicy;
 
     public Optional<String> getSchedulePolicy() {
         return this.schedulePolicy == null ? Optional.empty() : Optional.ofNullable(this.schedulePolicy);
@@ -57,7 +57,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable String timeZone;
+      private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);

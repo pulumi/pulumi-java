@@ -26,7 +26,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="bearerTokenSendingMethods")
-        private final @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
+      private final @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
     public Input<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
@@ -37,7 +37,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="openidProviderId")
-        private final @Nullable Input<String> openidProviderId;
+      private final @Nullable Input<String> openidProviderId;
 
     public Input<String> getOpenidProviderId() {
         return this.openidProviderId == null ? Input.empty() : this.openidProviderId;

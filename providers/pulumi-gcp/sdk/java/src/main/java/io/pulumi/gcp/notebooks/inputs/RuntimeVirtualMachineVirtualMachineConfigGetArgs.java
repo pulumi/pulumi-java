@@ -28,7 +28,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="acceleratorConfig")
-        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig;
+      private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -40,7 +40,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="containerImages")
-        private final @Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages;
+      private final @Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages;
 
     public Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> getContainerImages() {
         return this.containerImages == null ? Input.empty() : this.containerImages;
@@ -52,7 +52,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="dataDisk", required=true)
-        private final Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk;
+      private final Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> getDataDisk() {
         return this.dataDisk;
@@ -64,7 +64,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="encryptionConfig")
-        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig;
+      private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -78,7 +78,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="guestAttributes")
-        private final @Nullable Input<Map<String,String>> guestAttributes;
+      private final @Nullable Input<Map<String,String>> guestAttributes;
 
     public Input<Map<String,String>> getGuestAttributes() {
         return this.guestAttributes == null ? Input.empty() : this.guestAttributes;
@@ -94,7 +94,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="internalIpOnly")
-        private final @Nullable Input<Boolean> internalIpOnly;
+      private final @Nullable Input<Boolean> internalIpOnly;
 
     public Input<Boolean> getInternalIpOnly() {
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
@@ -107,7 +107,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -118,7 +118,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="machineType", required=true)
-        private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -132,7 +132,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -156,7 +156,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -169,7 +169,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="nicType")
-        private final @Nullable Input<String> nicType;
+      private final @Nullable Input<String> nicType;
 
     public Input<String> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -181,7 +181,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+      private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -197,7 +197,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<String> subnet;
+      private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -210,7 +210,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

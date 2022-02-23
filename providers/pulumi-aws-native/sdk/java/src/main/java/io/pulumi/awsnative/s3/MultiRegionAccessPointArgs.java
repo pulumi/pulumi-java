@@ -22,7 +22,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -33,7 +33,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicAccessBlockConfiguration")
-        private final @Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+      private final @Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
@@ -44,7 +44,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regions", required=true)
-        private final Input<List<MultiRegionAccessPointRegionArgs>> regions;
+      private final Input<List<MultiRegionAccessPointRegionArgs>> regions;
 
     public Input<List<MultiRegionAccessPointRegionArgs>> getRegions() {
         return this.regions;

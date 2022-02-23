@@ -13,14 +13,14 @@ public final class DomainSubDomainSetting extends io.pulumi.resources.InvokeArgs
     public static final DomainSubDomainSetting Empty = new DomainSubDomainSetting();
 
     @InputImport(name="branchName", required=true)
-        private final String branchName;
+      private final String branchName;
 
     public String getBranchName() {
         return this.branchName;
     }
 
     @InputImport(name="prefix", required=true)
-        private final String prefix;
+      private final String prefix;
 
     public String getPrefix() {
         return this.prefix;

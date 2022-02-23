@@ -19,7 +19,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * 
      */
     @InputImport(name="actionsRequired")
-        private final @Nullable String actionsRequired;
+      private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
@@ -30,7 +30,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * 
      */
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -41,7 +41,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

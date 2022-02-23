@@ -24,7 +24,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable String clientId;
+      private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -35,7 +35,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable String clientSecret;
+      private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -46,7 +46,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isValidated", required=true)
-        private final Boolean isValidated;
+      private final Boolean isValidated;
 
     public Boolean getIsValidated() {
         return this.isValidated;
@@ -68,7 +68,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="landingPageUrl")
-        private final @Nullable String landingPageUrl;
+      private final @Nullable String landingPageUrl;
 
     public Optional<String> getLandingPageUrl() {
         return this.landingPageUrl == null ? Optional.empty() : Optional.ofNullable(this.landingPageUrl);
@@ -79,7 +79,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="lastSubmissionId", required=true)
-        private final String lastSubmissionId;
+      private final String lastSubmissionId;
 
     public String getLastSubmissionId() {
         return this.lastSubmissionId;
@@ -90,7 +90,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="redirectAction", required=true)
-        private final String redirectAction;
+      private final String redirectAction;
 
     public String getRedirectAction() {
         return this.redirectAction;
@@ -101,7 +101,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="registerBeforeOAuthFlow", required=true)
-        private final Boolean registerBeforeOAuthFlow;
+      private final Boolean registerBeforeOAuthFlow;
 
     public Boolean getRegisterBeforeOAuthFlow() {
         return this.registerBeforeOAuthFlow;
@@ -112,7 +112,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="signingSecret")
-        private final @Nullable String signingSecret;
+      private final @Nullable String signingSecret;
 
     public Optional<String> getSigningSecret() {
         return this.signingSecret == null ? Optional.empty() : Optional.ofNullable(this.signingSecret);
@@ -123,7 +123,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="verificationToken")
-        private final @Nullable String verificationToken;
+      private final @Nullable String verificationToken;
 
     public Optional<String> getVerificationToken() {
         return this.verificationToken == null ? Optional.empty() : Optional.ofNullable(this.verificationToken);

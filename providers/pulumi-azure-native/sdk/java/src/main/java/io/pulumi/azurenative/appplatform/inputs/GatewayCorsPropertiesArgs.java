@@ -26,7 +26,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowCredentials")
-        private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Input<Boolean> allowCredentials;
 
     public Input<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
@@ -37,7 +37,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedHeaders")
-        private final @Nullable Input<List<String>> allowedHeaders;
+      private final @Nullable Input<List<String>> allowedHeaders;
 
     public Input<List<String>> getAllowedHeaders() {
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
@@ -48,7 +48,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedMethods")
-        private final @Nullable Input<List<String>> allowedMethods;
+      private final @Nullable Input<List<String>> allowedMethods;
 
     public Input<List<String>> getAllowedMethods() {
         return this.allowedMethods == null ? Input.empty() : this.allowedMethods;
@@ -59,7 +59,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedOrigins")
-        private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
@@ -70,7 +70,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="exposedHeaders")
-        private final @Nullable Input<List<String>> exposedHeaders;
+      private final @Nullable Input<List<String>> exposedHeaders;
 
     public Input<List<String>> getExposedHeaders() {
         return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
@@ -81,7 +81,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxAge")
-        private final @Nullable Input<Integer> maxAge;
+      private final @Nullable Input<Integer> maxAge;
 
     public Input<Integer> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;

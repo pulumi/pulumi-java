@@ -22,7 +22,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-        private final @Nullable Input<Integer> code;
+      private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -44,7 +44,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-        private final @Nullable Input<StatusDetailsArgs> details;
+      private final @Nullable Input<StatusDetailsArgs> details;
 
     public Input<StatusDetailsArgs> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -55,7 +55,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -66,7 +66,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -77,7 +77,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -88,7 +88,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-        private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;

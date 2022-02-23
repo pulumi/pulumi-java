@@ -19,7 +19,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logGroupName")
-        private final @Nullable Input<String> logGroupName;
+      private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -30,7 +30,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRoleArn")
-        private final @Nullable Input<String> logRoleArn;
+      private final @Nullable Input<String> logRoleArn;
 
     public Input<String> getLogRoleArn() {
         return this.logRoleArn == null ? Input.empty() : this.logRoleArn;

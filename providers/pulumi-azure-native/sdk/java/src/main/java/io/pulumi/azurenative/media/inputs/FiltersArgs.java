@@ -30,7 +30,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crop")
-        private final @Nullable Input<RectangleArgs> crop;
+      private final @Nullable Input<RectangleArgs> crop;
 
     public Input<RectangleArgs> getCrop() {
         return this.crop == null ? Input.empty() : this.crop;
@@ -41,7 +41,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deinterlace")
-        private final @Nullable Input<DeinterlaceArgs> deinterlace;
+      private final @Nullable Input<DeinterlaceArgs> deinterlace;
 
     public Input<DeinterlaceArgs> getDeinterlace() {
         return this.deinterlace == null ? Input.empty() : this.deinterlace;
@@ -52,7 +52,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overlays")
-        private final @Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
+      private final @Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
     public Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
         return this.overlays == null ? Input.empty() : this.overlays;
@@ -63,7 +63,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotation")
-        private final @Nullable Input<Either<String,Rotation>> rotation;
+      private final @Nullable Input<Either<String,Rotation>> rotation;
 
     public Input<Either<String,Rotation>> getRotation() {
         return this.rotation == null ? Input.empty() : this.rotation;

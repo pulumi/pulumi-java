@@ -23,7 +23,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="category", required=true)
-        private final Input<String> category;
+      private final Input<String> category;
 
     public Input<String> getCategory() {
         return this.category;
@@ -34,7 +34,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

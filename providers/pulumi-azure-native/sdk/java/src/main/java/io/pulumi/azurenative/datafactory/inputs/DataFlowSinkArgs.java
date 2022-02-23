@@ -26,7 +26,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-        private final @Nullable Input<DatasetReferenceArgs> dataset;
+      private final @Nullable Input<DatasetReferenceArgs> dataset;
 
     public Input<DatasetReferenceArgs> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -37,7 +37,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowlet")
-        private final @Nullable Input<DataFlowReferenceArgs> flowlet;
+      private final @Nullable Input<DataFlowReferenceArgs> flowlet;
 
     public Input<DataFlowReferenceArgs> getFlowlet() {
         return this.flowlet == null ? Input.empty() : this.flowlet;
@@ -59,7 +59,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
 
     public Input<LinkedServiceReferenceArgs> getLinkedService() {
         return this.linkedService == null ? Input.empty() : this.linkedService;
@@ -70,7 +70,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -81,7 +81,7 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaLinkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getSchemaLinkedService() {
         return this.schemaLinkedService == null ? Input.empty() : this.schemaLinkedService;

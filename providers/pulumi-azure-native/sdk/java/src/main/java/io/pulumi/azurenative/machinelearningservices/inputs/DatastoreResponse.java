@@ -29,35 +29,35 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
     public static final DatastoreResponse Empty = new DatastoreResponse();
 
     @InputImport(name="azureDataLakeSection")
-        private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
+      private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
 
     public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {
         return this.azureDataLakeSection == null ? Optional.empty() : Optional.ofNullable(this.azureDataLakeSection);
     }
 
     @InputImport(name="azureMySqlSection")
-        private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
+      private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
 
     public Optional<AzureMySqlSectionResponse> getAzureMySqlSection() {
         return this.azureMySqlSection == null ? Optional.empty() : Optional.ofNullable(this.azureMySqlSection);
     }
 
     @InputImport(name="azurePostgreSqlSection")
-        private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
+      private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
 
     public Optional<AzurePostgreSqlSectionResponse> getAzurePostgreSqlSection() {
         return this.azurePostgreSqlSection == null ? Optional.empty() : Optional.ofNullable(this.azurePostgreSqlSection);
     }
 
     @InputImport(name="azureSqlDatabaseSection")
-        private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
+      private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
 
     public Optional<AzureSqlDatabaseSectionResponse> getAzureSqlDatabaseSection() {
         return this.azureSqlDatabaseSection == null ? Optional.empty() : Optional.ofNullable(this.azureSqlDatabaseSection);
     }
 
     @InputImport(name="azureStorageSection")
-        private final @Nullable AzureStorageSectionResponse azureStorageSection;
+      private final @Nullable AzureStorageSectionResponse azureStorageSection;
 
     public Optional<AzureStorageSectionResponse> getAzureStorageSection() {
         return this.azureStorageSection == null ? Optional.empty() : Optional.ofNullable(this.azureStorageSection);
@@ -68,7 +68,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdBy", required=true)
-        private final UserInfoResponse createdBy;
+      private final UserInfoResponse createdBy;
 
     public UserInfoResponse getCreatedBy() {
         return this.createdBy;
@@ -79,7 +79,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime", required=true)
-        private final String createdTime;
+      private final String createdTime;
 
     public String getCreatedTime() {
         return this.createdTime;
@@ -90,7 +90,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataStoreType")
-        private final @Nullable String dataStoreType;
+      private final @Nullable String dataStoreType;
 
     public Optional<String> getDataStoreType() {
         return this.dataStoreType == null ? Optional.empty() : Optional.ofNullable(this.dataStoreType);
@@ -101,7 +101,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -112,7 +112,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glusterFsSection")
-        private final @Nullable GlusterFsSectionResponse glusterFsSection;
+      private final @Nullable GlusterFsSectionResponse glusterFsSection;
 
     public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
         return this.glusterFsSection == null ? Optional.empty() : Optional.ofNullable(this.glusterFsSection);
@@ -123,7 +123,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hasBeenValidated")
-        private final @Nullable Boolean hasBeenValidated;
+      private final @Nullable Boolean hasBeenValidated;
 
     public Optional<Boolean> getHasBeenValidated() {
         return this.hasBeenValidated == null ? Optional.empty() : Optional.ofNullable(this.hasBeenValidated);
@@ -134,7 +134,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedInfo")
-        private final @Nullable LinkedInfoResponse linkedInfo;
+      private final @Nullable LinkedInfoResponse linkedInfo;
 
     public Optional<LinkedInfoResponse> getLinkedInfo() {
         return this.linkedInfo == null ? Optional.empty() : Optional.ofNullable(this.linkedInfo);
@@ -145,7 +145,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="modifiedBy", required=true)
-        private final UserInfoResponse modifiedBy;
+      private final UserInfoResponse modifiedBy;
 
     public UserInfoResponse getModifiedBy() {
         return this.modifiedBy;
@@ -156,7 +156,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="modifiedTime", required=true)
-        private final String modifiedTime;
+      private final String modifiedTime;
 
     public String getModifiedTime() {
         return this.modifiedTime;
@@ -167,7 +167,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -178,7 +178,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags", required=true)
-        private final Map<String,String> tags;
+      private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags;

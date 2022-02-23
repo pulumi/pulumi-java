@@ -25,7 +25,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dnsSearchDomain")
-        private final @Nullable String dnsSearchDomain;
+      private final @Nullable String dnsSearchDomain;
 
     public Optional<String> getDnsSearchDomain() {
         return this.dnsSearchDomain == null ? Optional.empty() : Optional.ofNullable(this.dnsSearchDomain);
@@ -36,7 +36,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable List<String> dnsServers;
+      private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -47,7 +47,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="mtu")
-        private final @Nullable Integer mtu;
+      private final @Nullable Integer mtu;
 
     public Optional<Integer> getMtu() {
         return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
@@ -58,7 +58,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="ntpServer")
-        private final @Nullable String ntpServer;
+      private final @Nullable String ntpServer;
 
     public Optional<String> getNtpServer() {
         return this.ntpServer == null ? Optional.empty() : Optional.ofNullable(this.ntpServer);
@@ -69,7 +69,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="utilityAddresses", required=true)
-        private final List<String> utilityAddresses;
+      private final List<String> utilityAddresses;
 
     public List<String> getUtilityAddresses() {
         return this.utilityAddresses;

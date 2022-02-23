@@ -31,7 +31,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessKeyId")
-        private final @Nullable Input<Object> accessKeyId;
+      private final @Nullable Input<Object> accessKeyId;
 
     public Input<Object> getAccessKeyId() {
         return this.accessKeyId == null ? Input.empty() : this.accessKeyId;
@@ -42,7 +42,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -53,7 +53,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -86,7 +86,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="forcePathStyle")
-        private final @Nullable Input<Object> forcePathStyle;
+      private final @Nullable Input<Object> forcePathStyle;
 
     public Input<Object> getForcePathStyle() {
         return this.forcePathStyle == null ? Input.empty() : this.forcePathStyle;
@@ -97,7 +97,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -108,7 +108,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretAccessKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretAccessKey() {
         return this.secretAccessKey == null ? Input.empty() : this.secretAccessKey;
@@ -119,7 +119,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceUrl")
-        private final @Nullable Input<Object> serviceUrl;
+      private final @Nullable Input<Object> serviceUrl;
 
     public Input<Object> getServiceUrl() {
         return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
@@ -131,7 +131,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -28,7 +28,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="backupManagementType")
-        private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -39,7 +39,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="backupSetName")
-        private final @Nullable String backupSetName;
+      private final @Nullable String backupSetName;
 
     public Optional<String> getBackupSetName() {
         return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
@@ -50,7 +50,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="containerName")
-        private final @Nullable String containerName;
+      private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
@@ -61,7 +61,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="createMode")
-        private final @Nullable String createMode;
+      private final @Nullable String createMode;
 
     public Optional<String> getCreateMode() {
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
@@ -72,7 +72,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-        private final @Nullable String deferredDeleteTimeInUTC;
+      private final @Nullable String deferredDeleteTimeInUTC;
 
     public Optional<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
@@ -83,7 +83,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-        private final @Nullable String deferredDeleteTimeRemaining;
+      private final @Nullable String deferredDeleteTimeRemaining;
 
     public Optional<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
@@ -94,7 +94,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="extendedInfo")
-        private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
+      private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
 
     public Optional<AzureVmWorkloadProtectedItemExtendedInfoResponse> getExtendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
@@ -105,7 +105,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -116,7 +116,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-        private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
     public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
@@ -127,7 +127,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="isRehydrate")
-        private final @Nullable Boolean isRehydrate;
+      private final @Nullable Boolean isRehydrate;
 
     public Optional<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
@@ -138,7 +138,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-        private final @Nullable Boolean isScheduledForDeferredDelete;
+      private final @Nullable Boolean isScheduledForDeferredDelete;
 
     public Optional<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
@@ -149,7 +149,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="kpisHealths")
-        private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
+      private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
     public Map<String,KPIResourceHealthDetailsResponse> getKpisHealths() {
         return this.kpisHealths == null ? Map.of() : this.kpisHealths;
@@ -160,7 +160,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="lastBackupErrorDetail")
-        private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
+      private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
 
     public Optional<ErrorDetailResponse> getLastBackupErrorDetail() {
         return this.lastBackupErrorDetail == null ? Optional.empty() : Optional.ofNullable(this.lastBackupErrorDetail);
@@ -171,7 +171,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="lastBackupStatus")
-        private final @Nullable String lastBackupStatus;
+      private final @Nullable String lastBackupStatus;
 
     public Optional<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
@@ -182,7 +182,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="lastBackupTime")
-        private final @Nullable String lastBackupTime;
+      private final @Nullable String lastBackupTime;
 
     public Optional<String> getLastBackupTime() {
         return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
@@ -193,7 +193,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-        private final @Nullable String lastRecoveryPoint;
+      private final @Nullable String lastRecoveryPoint;
 
     public Optional<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
@@ -204,7 +204,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="parentName")
-        private final @Nullable String parentName;
+      private final @Nullable String parentName;
 
     public Optional<String> getParentName() {
         return this.parentName == null ? Optional.empty() : Optional.ofNullable(this.parentName);
@@ -215,7 +215,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="parentType")
-        private final @Nullable String parentType;
+      private final @Nullable String parentType;
 
     public Optional<String> getParentType() {
         return this.parentType == null ? Optional.empty() : Optional.ofNullable(this.parentType);
@@ -226,7 +226,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable String policyId;
+      private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -237,7 +237,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="protectedItemDataSourceId")
-        private final @Nullable String protectedItemDataSourceId;
+      private final @Nullable String protectedItemDataSourceId;
 
     public Optional<String> getProtectedItemDataSourceId() {
         return this.protectedItemDataSourceId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataSourceId);
@@ -248,7 +248,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="protectedItemHealthStatus")
-        private final @Nullable String protectedItemHealthStatus;
+      private final @Nullable String protectedItemHealthStatus;
 
     public Optional<String> getProtectedItemHealthStatus() {
         return this.protectedItemHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.protectedItemHealthStatus);
@@ -260,7 +260,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-        private final String protectedItemType;
+      private final String protectedItemType;
 
     public String getProtectedItemType() {
         return this.protectedItemType;
@@ -271,7 +271,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="protectionState")
-        private final @Nullable String protectionState;
+      private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
@@ -282,7 +282,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="protectionStatus")
-        private final @Nullable String protectionStatus;
+      private final @Nullable String protectionStatus;
 
     public Optional<String> getProtectionStatus() {
         return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
@@ -293,7 +293,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="serverName")
-        private final @Nullable String serverName;
+      private final @Nullable String serverName;
 
     public Optional<String> getServerName() {
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
@@ -304,7 +304,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="sourceResourceId")
-        private final @Nullable String sourceResourceId;
+      private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -315,7 +315,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends io.pu
      * 
      */
     @InputImport(name="workloadType")
-        private final @Nullable String workloadType;
+      private final @Nullable String workloadType;
 
     public Optional<String> getWorkloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);

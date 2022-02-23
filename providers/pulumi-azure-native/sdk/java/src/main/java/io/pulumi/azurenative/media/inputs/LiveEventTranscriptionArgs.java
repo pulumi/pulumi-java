@@ -26,7 +26,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputTrackSelection")
-        private final @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
+      private final @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
     public Input<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
         return this.inputTrackSelection == null ? Input.empty() : this.inputTrackSelection;
@@ -37,7 +37,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="language")
-        private final @Nullable Input<String> language;
+      private final @Nullable Input<String> language;
 
     public Input<String> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -48,7 +48,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="outputTranscriptionTrack")
-        private final @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+      private final @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
     public Input<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
         return this.outputTranscriptionTrack == null ? Input.empty() : this.outputTranscriptionTrack;

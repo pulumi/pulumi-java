@@ -24,7 +24,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVault", required=true)
-        private final KeyVaultReferenceResponse keyVault;
+      private final KeyVaultReferenceResponse keyVault;
 
     public KeyVaultReferenceResponse getKeyVault() {
         return this.keyVault;
@@ -35,7 +35,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="secretName", required=true)
-        private final String secretName;
+      private final String secretName;
 
     public String getSecretName() {
         return this.secretName;
@@ -46,7 +46,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="secretVersion")
-        private final @Nullable String secretVersion;
+      private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);

@@ -23,7 +23,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="handSize")
-        private final @Nullable Input<Integer> handSize;
+      private final @Nullable Input<Integer> handSize;
 
     public Input<Integer> getHandSize() {
         return this.handSize == null ? Input.empty() : this.handSize;
@@ -34,7 +34,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queueLengthLimit")
-        private final @Nullable Input<Integer> queueLengthLimit;
+      private final @Nullable Input<Integer> queueLengthLimit;
 
     public Input<Integer> getQueueLengthLimit() {
         return this.queueLengthLimit == null ? Input.empty() : this.queueLengthLimit;
@@ -45,7 +45,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queues")
-        private final @Nullable Input<Integer> queues;
+      private final @Nullable Input<Integer> queues;
 
     public Input<Integer> getQueues() {
         return this.queues == null ? Input.empty() : this.queues;

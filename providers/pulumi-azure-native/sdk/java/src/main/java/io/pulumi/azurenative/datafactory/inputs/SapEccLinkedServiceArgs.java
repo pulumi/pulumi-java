@@ -31,7 +31,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<String> encryptedCredential;
+      private final @Nullable Input<String> encryptedCredential;
 
     public Input<String> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -75,7 +75,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -86,7 +86,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -98,7 +98,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -109,7 +109,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -120,7 +120,7 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

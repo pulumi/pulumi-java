@@ -23,7 +23,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scriptArguments")
-        private final @Nullable String scriptArguments;
+      private final @Nullable String scriptArguments;
 
     public Optional<String> getScriptArguments() {
         return this.scriptArguments == null ? Optional.empty() : Optional.ofNullable(this.scriptArguments);
@@ -34,7 +34,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scriptData")
-        private final @Nullable String scriptData;
+      private final @Nullable String scriptData;
 
     public Optional<String> getScriptData() {
         return this.scriptData == null ? Optional.empty() : Optional.ofNullable(this.scriptData);
@@ -45,7 +45,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scriptSource")
-        private final @Nullable String scriptSource;
+      private final @Nullable String scriptSource;
 
     public Optional<String> getScriptSource() {
         return this.scriptSource == null ? Optional.empty() : Optional.ofNullable(this.scriptSource);
@@ -56,7 +56,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable String timeout;
+      private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);

@@ -23,7 +23,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;

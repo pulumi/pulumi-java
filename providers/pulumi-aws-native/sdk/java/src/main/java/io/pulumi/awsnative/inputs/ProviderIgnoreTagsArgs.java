@@ -24,7 +24,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyPrefixes")
-        private final @Nullable Input<List<String>> keyPrefixes;
+      private final @Nullable Input<List<String>> keyPrefixes;
 
     public Input<List<String>> getKeyPrefixes() {
         return this.keyPrefixes == null ? Input.empty() : this.keyPrefixes;
@@ -35,7 +35,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keys")
-        private final @Nullable Input<List<String>> keys;
+      private final @Nullable Input<List<String>> keys;
 
     public Input<List<String>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;

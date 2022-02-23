@@ -27,7 +27,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="apiKey")
-        private final @Nullable String apiKey;
+      private final @Nullable String apiKey;
 
     public Optional<String> getApiKey() {
         return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
@@ -38,7 +38,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="batchSize")
-        private final @Nullable Integer batchSize;
+      private final @Nullable Integer batchSize;
 
     public Optional<Integer> getBatchSize() {
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
@@ -49,7 +49,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable String endpoint;
+      private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -60,7 +60,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="inputs")
-        private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
+      private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
 
     public Optional<AzureMachineLearningWebServiceInputsResponse> getInputs() {
         return this.inputs == null ? Optional.empty() : Optional.ofNullable(this.inputs);
@@ -71,7 +71,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="outputs")
-        private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
+      private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
 
     public List<AzureMachineLearningWebServiceOutputColumnResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
@@ -83,7 +83,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

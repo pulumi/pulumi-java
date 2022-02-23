@@ -17,14 +17,14 @@ public final class ThemeValue extends io.pulumi.resources.InvokeArgs {
     public static final ThemeValue Empty = new ThemeValue();
 
     @InputImport(name="children")
-        private final @Nullable List<ThemeValues> children;
+      private final @Nullable List<ThemeValues> children;
 
     public List<ThemeValues> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
 
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

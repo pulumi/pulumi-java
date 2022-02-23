@@ -13,14 +13,14 @@ public final class GetMissionProfileArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetMissionProfileArgs Empty = new GetMissionProfileArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

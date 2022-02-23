@@ -15,14 +15,14 @@ public final class FilterStringFilterArgs extends io.pulumi.resources.ResourceAr
     public static final FilterStringFilterArgs Empty = new FilterStringFilterArgs();
 
     @InputImport(name="comparison", required=true)
-        private final Input<FilterStringComparison> comparison;
+      private final Input<FilterStringComparison> comparison;
 
     public Input<FilterStringComparison> getComparison() {
         return this.comparison;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

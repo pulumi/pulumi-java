@@ -22,7 +22,7 @@ public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="objectId", required=true)
-        private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;

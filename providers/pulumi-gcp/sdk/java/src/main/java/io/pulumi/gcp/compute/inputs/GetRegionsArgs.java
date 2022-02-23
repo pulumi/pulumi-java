@@ -19,7 +19,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -31,7 +31,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

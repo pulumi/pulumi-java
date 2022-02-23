@@ -23,7 +23,7 @@ public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endIP")
-        private final @Nullable String endIP;
+      private final @Nullable String endIP;
 
     public Optional<String> getEndIP() {
         return this.endIP == null ? Optional.empty() : Optional.ofNullable(this.endIP);
@@ -34,7 +34,7 @@ public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startIP")
-        private final @Nullable String startIP;
+      private final @Nullable String startIP;
 
     public Optional<String> getStartIP() {
         return this.startIP == null ? Optional.empty() : Optional.ofNullable(this.startIP);

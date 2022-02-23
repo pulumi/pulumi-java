@@ -20,7 +20,7 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-        private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;

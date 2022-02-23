@@ -17,7 +17,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     public static final DatabaseIAMBindingState Empty = new DatabaseIAMBindingState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DatabaseIAMBindingConditionGetArgs> condition;
+      private final @Nullable Input<DatabaseIAMBindingConditionGetArgs> condition;
 
     public Input<DatabaseIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="database")
-        private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -39,7 +39,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -50,14 +50,14 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instance")
-        private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="members")
-        private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -69,7 +69,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -82,7 +82,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

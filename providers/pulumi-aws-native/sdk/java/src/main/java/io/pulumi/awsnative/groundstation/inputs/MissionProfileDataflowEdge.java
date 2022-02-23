@@ -15,14 +15,14 @@ public final class MissionProfileDataflowEdge extends io.pulumi.resources.Invoke
     public static final MissionProfileDataflowEdge Empty = new MissionProfileDataflowEdge();
 
     @InputImport(name="destination")
-        private final @Nullable String destination;
+      private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @InputImport(name="source")
-        private final @Nullable String source;
+      private final @Nullable String source;
 
     public Optional<String> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);

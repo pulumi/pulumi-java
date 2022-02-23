@@ -18,7 +18,7 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-        private final Input<String> cluster;
+      private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -29,7 +29,7 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-        private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -40,7 +40,7 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSetId", required=true)
-        private final Input<String> taskSetId;
+      private final Input<String> taskSetId;
 
     public Input<String> getTaskSetId() {
         return this.taskSetId;

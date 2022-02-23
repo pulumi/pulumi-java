@@ -24,7 +24,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultCustomBlockResponseBody")
-        private final @Nullable String defaultCustomBlockResponseBody;
+      private final @Nullable String defaultCustomBlockResponseBody;
 
     public Optional<String> getDefaultCustomBlockResponseBody() {
         return this.defaultCustomBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseBody);
@@ -35,7 +35,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultCustomBlockResponseStatusCode")
-        private final @Nullable Integer defaultCustomBlockResponseStatusCode;
+      private final @Nullable Integer defaultCustomBlockResponseStatusCode;
 
     public Optional<Integer> getDefaultCustomBlockResponseStatusCode() {
         return this.defaultCustomBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
@@ -46,7 +46,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultRedirectUrl")
-        private final @Nullable String defaultRedirectUrl;
+      private final @Nullable String defaultRedirectUrl;
 
     public Optional<String> getDefaultRedirectUrl() {
         return this.defaultRedirectUrl == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectUrl);
@@ -57,7 +57,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable String enabledState;
+      private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -68,7 +68,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);

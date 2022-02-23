@@ -17,35 +17,35 @@ public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeA
     public static final ExtendedErrorInfoResponse Empty = new ExtendedErrorInfoResponse();
 
     @InputImport(name="additionalInfo")
-        private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
+      private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
 
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo == null ? List.of() : this.additionalInfo;
     }
 
     @InputImport(name="code")
-        private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
     @InputImport(name="details")
-        private final @Nullable List<ExtendedErrorInfoResponse> details;
+      private final @Nullable List<ExtendedErrorInfoResponse> details;
 
     public List<ExtendedErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
 
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
     @InputImport(name="target")
-        private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);

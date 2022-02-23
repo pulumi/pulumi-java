@@ -19,7 +19,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -31,7 +31,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -43,7 +43,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription")
-        private final @Nullable Input<String> subscription;
+      private final @Nullable Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription == null ? Input.empty() : this.subscription;

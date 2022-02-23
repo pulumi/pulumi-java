@@ -24,7 +24,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable String operator;
+      private final @Nullable String operator;
 
     public Optional<String> getOperator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
@@ -35,7 +35,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values")
-        private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

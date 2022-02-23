@@ -19,7 +19,7 @@ public final class PatchDeploymentOneTimeScheduleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="executeTime", required=true)
-        private final Input<String> executeTime;
+      private final Input<String> executeTime;
 
     public Input<String> getExecuteTime() {
         return this.executeTime;

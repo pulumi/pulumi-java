@@ -25,7 +25,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -36,7 +36,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variableName", required=true)
-        private final Input<Either<String,WebApplicationFirewallMatchVariable>> variableName;
+      private final Input<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 
     public Input<Either<String,WebApplicationFirewallMatchVariable>> getVariableName() {
         return this.variableName;

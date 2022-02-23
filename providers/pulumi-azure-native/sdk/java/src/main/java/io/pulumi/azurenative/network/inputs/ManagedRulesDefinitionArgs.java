@@ -25,7 +25,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exclusions")
-        private final @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
+      private final @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
     public Input<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -36,7 +36,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedRuleSets", required=true)
-        private final Input<List<ManagedRuleSetArgs>> managedRuleSets;
+      private final Input<List<ManagedRuleSetArgs>> managedRuleSets;
 
     public Input<List<ManagedRuleSetArgs>> getManagedRuleSets() {
         return this.managedRuleSets;

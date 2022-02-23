@@ -17,7 +17,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     public static final StorageLensArgs Empty = new StorageLensArgs();
 
     @InputImport(name="storageLensConfiguration", required=true)
-        private final Input<StorageLensConfigurationArgs> storageLensConfiguration;
+      private final Input<StorageLensConfigurationArgs> storageLensConfiguration;
 
     public Input<StorageLensConfigurationArgs> getStorageLensConfiguration() {
         return this.storageLensConfiguration;
@@ -28,7 +28,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<StorageLensTagArgs>> tags;
+      private final @Nullable Input<List<StorageLensTagArgs>> tags;
 
     public Input<List<StorageLensTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

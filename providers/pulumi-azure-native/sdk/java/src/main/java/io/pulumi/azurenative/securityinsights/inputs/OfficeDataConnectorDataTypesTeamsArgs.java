@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<Either<String,DataTypeState>> state;
+      private final @Nullable Input<Either<String,DataTypeState>> state;
 
     public Input<Either<String,DataTypeState>> getState() {
         return this.state == null ? Input.empty() : this.state;

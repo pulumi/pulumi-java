@@ -26,7 +26,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="inputs", required=true)
-        private final List<NodeInputResponse> inputs;
+      private final List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> getInputs() {
         return this.inputs;
@@ -37,7 +37,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="preset", required=true)
-        private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
+      private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
 
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> getPreset() {
         return this.preset;
@@ -60,7 +60,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -17,7 +17,7 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hyperVCollectorName", required=true)
-        private final String hyperVCollectorName;
+      private final String hyperVCollectorName;
 
     public String getHyperVCollectorName() {
         return this.hyperVCollectorName;
@@ -28,7 +28,7 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="projectName", required=true)
-        private final String projectName;
+      private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -39,7 +39,7 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

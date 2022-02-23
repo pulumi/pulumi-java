@@ -25,7 +25,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="provider")
-        private final @Nullable Input<Either<String,Provider>> provider;
+      private final @Nullable Input<Either<String,Provider>> provider;
 
     public Input<Either<String,Provider>> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;

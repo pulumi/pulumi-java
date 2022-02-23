@@ -15,14 +15,14 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     public static final SuiteDefinitionDeviceUnderTestArgs Empty = new SuiteDefinitionDeviceUnderTestArgs();
 
     @InputImport(name="certificateArn")
-        private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
     }
 
     @InputImport(name="thingArn")
-        private final @Nullable Input<String> thingArn;
+      private final @Nullable Input<String> thingArn;
 
     public Input<String> getThingArn() {
         return this.thingArn == null ? Input.empty() : this.thingArn;

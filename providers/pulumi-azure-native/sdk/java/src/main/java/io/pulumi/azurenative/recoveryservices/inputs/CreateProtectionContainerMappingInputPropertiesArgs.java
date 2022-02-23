@@ -26,7 +26,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -37,7 +37,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * 
      */
     @InputImport(name="providerSpecificInput")
-        private final @Nullable Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
+      private final @Nullable Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
     public Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> getProviderSpecificInput() {
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
@@ -48,7 +48,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * 
      */
     @InputImport(name="targetProtectionContainerId")
-        private final @Nullable Input<String> targetProtectionContainerId;
+      private final @Nullable Input<String> targetProtectionContainerId;
 
     public Input<String> getTargetProtectionContainerId() {
         return this.targetProtectionContainerId == null ? Input.empty() : this.targetProtectionContainerId;

@@ -15,7 +15,7 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     public static final FirewallPolicyPublishMetricActionArgs Empty = new FirewallPolicyPublishMetricActionArgs();
 
     @InputImport(name="dimensions", required=true)
-        private final Input<List<FirewallPolicyDimensionArgs>> dimensions;
+      private final Input<List<FirewallPolicyDimensionArgs>> dimensions;
 
     public Input<List<FirewallPolicyDimensionArgs>> getDimensions() {
         return this.dimensions;

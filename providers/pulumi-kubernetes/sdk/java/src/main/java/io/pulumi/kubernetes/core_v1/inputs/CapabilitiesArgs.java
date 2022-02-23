@@ -24,7 +24,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="add")
-        private final @Nullable Input<List<String>> add;
+      private final @Nullable Input<List<String>> add;
 
     public Input<List<String>> getAdd() {
         return this.add == null ? Input.empty() : this.add;
@@ -35,7 +35,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drop")
-        private final @Nullable Input<List<String>> drop;
+      private final @Nullable Input<List<String>> drop;
 
     public Input<List<String>> getDrop() {
         return this.drop == null ? Input.empty() : this.drop;

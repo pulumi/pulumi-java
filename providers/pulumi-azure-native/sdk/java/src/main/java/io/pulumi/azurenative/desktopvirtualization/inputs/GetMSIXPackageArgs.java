@@ -17,7 +17,7 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostPoolName", required=true)
-        private final String hostPoolName;
+      private final String hostPoolName;
 
     public String getHostPoolName() {
         return this.hostPoolName;
@@ -28,7 +28,7 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="msixPackageFullName", required=true)
-        private final String msixPackageFullName;
+      private final String msixPackageFullName;
 
     public String getMsixPackageFullName() {
         return this.msixPackageFullName;
@@ -39,7 +39,7 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

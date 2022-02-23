@@ -25,7 +25,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="referenceName")
-        private final @Nullable Input<String> referenceName;
+      private final @Nullable Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName == null ? Input.empty() : this.referenceName;
@@ -36,7 +36,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
+      private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
     public Input<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
         return this.type == null ? Input.empty() : this.type;

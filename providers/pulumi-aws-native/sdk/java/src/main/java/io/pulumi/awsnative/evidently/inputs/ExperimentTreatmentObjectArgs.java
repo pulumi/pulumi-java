@@ -15,28 +15,28 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
     public static final ExperimentTreatmentObjectArgs Empty = new ExperimentTreatmentObjectArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="feature", required=true)
-        private final Input<String> feature;
+      private final Input<String> feature;
 
     public Input<String> getFeature() {
         return this.feature;
     }
 
     @InputImport(name="treatmentName", required=true)
-        private final Input<String> treatmentName;
+      private final Input<String> treatmentName;
 
     public Input<String> getTreatmentName() {
         return this.treatmentName;
     }
 
     @InputImport(name="variation", required=true)
-        private final Input<String> variation;
+      private final Input<String> variation;
 
     public Input<String> getVariation() {
         return this.variation;

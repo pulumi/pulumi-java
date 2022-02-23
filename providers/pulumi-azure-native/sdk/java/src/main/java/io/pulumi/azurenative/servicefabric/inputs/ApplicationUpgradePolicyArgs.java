@@ -28,7 +28,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="applicationHealthPolicy")
-        private final @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
+      private final @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
     public Input<ArmApplicationHealthPolicyArgs> getApplicationHealthPolicy() {
         return this.applicationHealthPolicy == null ? Input.empty() : this.applicationHealthPolicy;
@@ -39,7 +39,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="forceRestart")
-        private final @Nullable Input<Boolean> forceRestart;
+      private final @Nullable Input<Boolean> forceRestart;
 
     public Input<Boolean> getForceRestart() {
         return this.forceRestart == null ? Input.empty() : this.forceRestart;
@@ -50,7 +50,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recreateApplication")
-        private final @Nullable Input<Boolean> recreateApplication;
+      private final @Nullable Input<Boolean> recreateApplication;
 
     public Input<Boolean> getRecreateApplication() {
         return this.recreateApplication == null ? Input.empty() : this.recreateApplication;
@@ -61,7 +61,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rollingUpgradeMonitoringPolicy")
-        private final @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
+      private final @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
     public Input<ArmRollingUpgradeMonitoringPolicyArgs> getRollingUpgradeMonitoringPolicy() {
         return this.rollingUpgradeMonitoringPolicy == null ? Input.empty() : this.rollingUpgradeMonitoringPolicy;
@@ -72,7 +72,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="upgradeMode")
-        private final @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode;
+      private final @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode;
 
     public Input<Either<String,RollingUpgradeMode>> getUpgradeMode() {
         return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
@@ -83,7 +83,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="upgradeReplicaSetCheckTimeout")
-        private final @Nullable Input<String> upgradeReplicaSetCheckTimeout;
+      private final @Nullable Input<String> upgradeReplicaSetCheckTimeout;
 
     public Input<String> getUpgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout == null ? Input.empty() : this.upgradeReplicaSetCheckTimeout;

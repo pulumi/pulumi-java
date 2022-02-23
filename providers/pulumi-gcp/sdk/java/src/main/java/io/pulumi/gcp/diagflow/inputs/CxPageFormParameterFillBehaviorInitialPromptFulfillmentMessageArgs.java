@@ -19,7 +19,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @InputImport(name="text")
-        private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
+      private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
     public Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;

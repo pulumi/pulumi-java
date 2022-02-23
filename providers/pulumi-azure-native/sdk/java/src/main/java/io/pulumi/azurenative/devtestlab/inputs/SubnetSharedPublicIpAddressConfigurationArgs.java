@@ -24,7 +24,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="allowedPorts")
-        private final @Nullable Input<List<PortArgs>> allowedPorts;
+      private final @Nullable Input<List<PortArgs>> allowedPorts;
 
     public Input<List<PortArgs>> getAllowedPorts() {
         return this.allowedPorts == null ? Input.empty() : this.allowedPorts;

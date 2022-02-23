@@ -21,7 +21,7 @@ public final class ManagedVirtualNetworkReferenceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="referenceName", required=true)
-        private final String referenceName;
+      private final String referenceName;
 
     public String getReferenceName() {
         return this.referenceName;
@@ -32,7 +32,7 @@ public final class ManagedVirtualNetworkReferenceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

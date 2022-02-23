@@ -27,7 +27,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dateTimeParameters")
-        private final @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
+      private final @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
     public Input<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
         return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
@@ -38,7 +38,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="decimalParameters")
-        private final @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
+      private final @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
     public Input<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
         return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
@@ -49,7 +49,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integerParameters")
-        private final @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
+      private final @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
 
     public Input<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
         return this.integerParameters == null ? Input.empty() : this.integerParameters;
@@ -60,7 +60,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stringParameters")
-        private final @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
+      private final @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
 
     public Input<List<AnalysisStringParameterArgs>> getStringParameters() {
         return this.stringParameters == null ? Input.empty() : this.stringParameters;

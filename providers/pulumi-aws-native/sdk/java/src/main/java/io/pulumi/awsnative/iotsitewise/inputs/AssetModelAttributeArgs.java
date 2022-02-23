@@ -15,7 +15,7 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     public static final AssetModelAttributeArgs Empty = new AssetModelAttributeArgs();
 
     @InputImport(name="defaultValue")
-        private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;

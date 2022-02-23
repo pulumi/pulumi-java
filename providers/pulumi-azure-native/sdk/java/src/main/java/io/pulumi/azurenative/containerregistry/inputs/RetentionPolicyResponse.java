@@ -24,7 +24,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="days")
-        private final @Nullable Integer days;
+      private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
@@ -35,7 +35,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastUpdatedTime", required=true)
-        private final String lastUpdatedTime;
+      private final String lastUpdatedTime;
 
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -46,7 +46,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

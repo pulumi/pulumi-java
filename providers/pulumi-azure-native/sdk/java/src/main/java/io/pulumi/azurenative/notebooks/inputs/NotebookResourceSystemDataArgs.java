@@ -19,42 +19,42 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 
     @InputImport(name="createdAt")
-        private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
     @InputImport(name="createdBy")
-        private final @Nullable Input<String> createdBy;
+      private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
     @InputImport(name="createdByType")
-        private final @Nullable Input<String> createdByType;
+      private final @Nullable Input<String> createdByType;
 
     public Input<String> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
     @InputImport(name="lastModifiedAt")
-        private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
     @InputImport(name="lastModifiedBy")
-        private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
     @InputImport(name="lastModifiedByType")
-        private final @Nullable Input<String> lastModifiedByType;
+      private final @Nullable Input<String> lastModifiedByType;
 
     public Input<String> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;

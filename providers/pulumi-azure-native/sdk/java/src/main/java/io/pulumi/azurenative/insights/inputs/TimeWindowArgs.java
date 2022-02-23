@@ -23,7 +23,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end", required=true)
-        private final Input<String> end;
+      private final Input<String> end;
 
     public Input<String> getEnd() {
         return this.end;
@@ -34,7 +34,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start", required=true)
-        private final Input<String> start;
+      private final Input<String> start;
 
     public Input<String> getStart() {
         return this.start;
@@ -45,7 +45,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

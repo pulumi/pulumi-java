@@ -15,7 +15,7 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     public static final SpotFleetTargetGroupsConfigArgs Empty = new SpotFleetTargetGroupsConfigArgs();
 
     @InputImport(name="targetGroups", required=true)
-        private final Input<List<SpotFleetTargetGroupArgs>> targetGroups;
+      private final Input<List<SpotFleetTargetGroupArgs>> targetGroups;
 
     public Input<List<SpotFleetTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;

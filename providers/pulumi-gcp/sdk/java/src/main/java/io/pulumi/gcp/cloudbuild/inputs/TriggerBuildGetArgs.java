@@ -28,7 +28,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="artifacts")
-        private final @Nullable Input<TriggerBuildArtifactsGetArgs> artifacts;
+      private final @Nullable Input<TriggerBuildArtifactsGetArgs> artifacts;
 
     public Input<TriggerBuildArtifactsGetArgs> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -40,7 +40,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availableSecrets")
-        private final @Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
+      private final @Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
 
     public Input<TriggerBuildAvailableSecretsGetArgs> getAvailableSecrets() {
         return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
@@ -54,7 +54,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="images")
-        private final @Nullable Input<List<String>> images;
+      private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -66,7 +66,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logsBucket")
-        private final @Nullable Input<String> logsBucket;
+      private final @Nullable Input<String> logsBucket;
 
     public Input<String> getLogsBucket() {
         return this.logsBucket == null ? Input.empty() : this.logsBucket;
@@ -78,7 +78,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<TriggerBuildOptionsGetArgs> options;
+      private final @Nullable Input<TriggerBuildOptionsGetArgs> options;
 
     public Input<TriggerBuildOptionsGetArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -92,7 +92,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queueTtl")
-        private final @Nullable Input<String> queueTtl;
+      private final @Nullable Input<String> queueTtl;
 
     public Input<String> getQueueTtl() {
         return this.queueTtl == null ? Input.empty() : this.queueTtl;
@@ -104,7 +104,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="secrets")
-        private final @Nullable Input<List<TriggerBuildSecretGetArgs>> secrets;
+      private final @Nullable Input<List<TriggerBuildSecretGetArgs>> secrets;
 
     public Input<List<TriggerBuildSecretGetArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -117,7 +117,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<TriggerBuildSourceGetArgs> source;
+      private final @Nullable Input<TriggerBuildSourceGetArgs> source;
 
     public Input<TriggerBuildSourceGetArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -129,7 +129,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="steps", required=true)
-        private final Input<List<TriggerBuildStepGetArgs>> steps;
+      private final Input<List<TriggerBuildStepGetArgs>> steps;
 
     public Input<List<TriggerBuildStepGetArgs>> getSteps() {
         return this.steps;
@@ -140,7 +140,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="substitutions")
-        private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Input<Map<String,String>> substitutions;
 
     public Input<Map<String,String>> getSubstitutions() {
         return this.substitutions == null ? Input.empty() : this.substitutions;
@@ -151,7 +151,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -165,7 +165,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

@@ -17,14 +17,14 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     public static final TagValueIamBindingArgs Empty = new TagValueIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TagValueIamBindingConditionArgs> condition;
+      private final @Nullable Input<TagValueIamBindingConditionArgs> condition;
 
     public Input<TagValueIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -37,7 +37,7 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -48,7 +48,7 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagValue", required=true)
-        private final Input<String> tagValue;
+      private final Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue;

@@ -26,7 +26,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="items")
-        private final @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
+      private final @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
 
     public Input<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
         return this.items == null ? Input.empty() : this.items;

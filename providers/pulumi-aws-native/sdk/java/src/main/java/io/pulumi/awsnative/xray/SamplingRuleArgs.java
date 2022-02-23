@@ -19,35 +19,35 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final SamplingRuleArgs Empty = new SamplingRuleArgs();
 
     @InputImport(name="ruleName")
-        private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
     @InputImport(name="samplingRule")
-        private final @Nullable Input<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
+      private final @Nullable Input<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
 
     public Input<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> getSamplingRule() {
         return this.samplingRule == null ? Input.empty() : this.samplingRule;
     }
 
     @InputImport(name="samplingRuleRecord")
-        private final @Nullable Input<SamplingRuleRecordArgs> samplingRuleRecord;
+      private final @Nullable Input<SamplingRuleRecordArgs> samplingRuleRecord;
 
     public Input<SamplingRuleRecordArgs> getSamplingRuleRecord() {
         return this.samplingRuleRecord == null ? Input.empty() : this.samplingRuleRecord;
     }
 
     @InputImport(name="samplingRuleUpdate")
-        private final @Nullable Input<SamplingRuleUpdateArgs> samplingRuleUpdate;
+      private final @Nullable Input<SamplingRuleUpdateArgs> samplingRuleUpdate;
 
     public Input<SamplingRuleUpdateArgs> getSamplingRuleUpdate() {
         return this.samplingRuleUpdate == null ? Input.empty() : this.samplingRuleUpdate;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+      private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
 
     public Input<List<TagsItemPropertiesArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

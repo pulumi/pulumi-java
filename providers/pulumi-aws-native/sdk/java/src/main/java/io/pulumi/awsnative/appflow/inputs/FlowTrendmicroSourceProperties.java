@@ -13,7 +13,7 @@ public final class FlowTrendmicroSourceProperties extends io.pulumi.resources.In
     public static final FlowTrendmicroSourceProperties Empty = new FlowTrendmicroSourceProperties();
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;

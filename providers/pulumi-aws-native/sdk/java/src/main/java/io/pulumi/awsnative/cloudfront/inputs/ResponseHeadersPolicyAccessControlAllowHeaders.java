@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlAllowHeaders extends io.pul
     public static final ResponseHeadersPolicyAccessControlAllowHeaders Empty = new ResponseHeadersPolicyAccessControlAllowHeaders();
 
     @InputImport(name="items", required=true)
-        private final List<String> items;
+      private final List<String> items;
 
     public List<String> getItems() {
         return this.items;

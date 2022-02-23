@@ -21,7 +21,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-        private final @Nullable Input<Either<String,IpActionType>> action;
+      private final @Nullable Input<Either<String,IpActionType>> action;
 
     public Input<Either<String,IpActionType>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -32,7 +32,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipMask")
-        private final @Nullable Input<String> ipMask;
+      private final @Nullable Input<String> ipMask;
 
     public Input<String> getIpMask() {
         return this.ipMask == null ? Input.empty() : this.ipMask;

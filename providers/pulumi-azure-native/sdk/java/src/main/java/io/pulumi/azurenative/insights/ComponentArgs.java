@@ -28,7 +28,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationType", required=true)
-        private final Input<Either<String,ApplicationType>> applicationType;
+      private final Input<Either<String,ApplicationType>> applicationType;
 
     public Input<Either<String,ApplicationType>> getApplicationType() {
         return this.applicationType;
@@ -39,7 +39,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableIpMasking")
-        private final @Nullable Input<Boolean> disableIpMasking;
+      private final @Nullable Input<Boolean> disableIpMasking;
 
     public Input<Boolean> getDisableIpMasking() {
         return this.disableIpMasking == null ? Input.empty() : this.disableIpMasking;
@@ -50,7 +50,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowType")
-        private final @Nullable Input<Either<String,FlowType>> flowType;
+      private final @Nullable Input<Either<String,FlowType>> flowType;
 
     public Input<Either<String,FlowType>> getFlowType() {
         return this.flowType == null ? Input.empty() : this.flowType;
@@ -61,7 +61,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hockeyAppId")
-        private final @Nullable Input<String> hockeyAppId;
+      private final @Nullable Input<String> hockeyAppId;
 
     public Input<String> getHockeyAppId() {
         return this.hockeyAppId == null ? Input.empty() : this.hockeyAppId;
@@ -72,7 +72,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immediatePurgeDataOn30Days")
-        private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
+      private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
 
     public Input<Boolean> getImmediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Input.empty() : this.immediatePurgeDataOn30Days;
@@ -83,7 +83,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingestionMode")
-        private final @Nullable Input<Either<String,IngestionMode>> ingestionMode;
+      private final @Nullable Input<Either<String,IngestionMode>> ingestionMode;
 
     public Input<Either<String,IngestionMode>> getIngestionMode() {
         return this.ingestionMode == null ? Input.empty() : this.ingestionMode;
@@ -94,7 +94,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -105,7 +105,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -116,7 +116,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestSource")
-        private final @Nullable Input<Either<String,RequestSource>> requestSource;
+      private final @Nullable Input<Either<String,RequestSource>> requestSource;
 
     public Input<Either<String,RequestSource>> getRequestSource() {
         return this.requestSource == null ? Input.empty() : this.requestSource;
@@ -127,7 +127,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -138,7 +138,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-        private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -149,7 +149,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-        private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -160,7 +160,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samplingPercentage")
-        private final @Nullable Input<Double> samplingPercentage;
+      private final @Nullable Input<Double> samplingPercentage;
 
     public Input<Double> getSamplingPercentage() {
         return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
@@ -171,7 +171,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

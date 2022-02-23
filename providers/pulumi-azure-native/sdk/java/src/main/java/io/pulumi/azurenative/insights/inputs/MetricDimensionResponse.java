@@ -22,7 +22,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

@@ -22,7 +22,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hours", required=true)
-        private final Input<Integer> hours;
+      private final Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours;
@@ -33,7 +33,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minutes", required=true)
-        private final Input<Integer> minutes;
+      private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;
@@ -44,7 +44,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seconds", required=true)
-        private final Input<Integer> seconds;
+      private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;

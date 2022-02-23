@@ -15,7 +15,7 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
     public static final GetInstanceReservationAffinity Empty = new GetInstanceReservationAffinity();
 
     @InputImport(name="specificReservations", required=true)
-        private final List<GetInstanceReservationAffinitySpecificReservation> specificReservations;
+      private final List<GetInstanceReservationAffinitySpecificReservation> specificReservations;
 
     public List<GetInstanceReservationAffinitySpecificReservation> getSpecificReservations() {
         return this.specificReservations;
@@ -26,7 +26,7 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -22,7 +22,7 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;

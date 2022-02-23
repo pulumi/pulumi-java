@@ -29,7 +29,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchValue", required=true)
-        private final Input<List<String>> matchValue;
+      private final Input<List<String>> matchValue;
 
     public Input<List<String>> getMatchValue() {
         return this.matchValue;
@@ -40,7 +40,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchVariable", required=true)
-        private final Input<Either<String,MatchVariable>> matchVariable;
+      private final Input<Either<String,MatchVariable>> matchVariable;
 
     public Input<Either<String,MatchVariable>> getMatchVariable() {
         return this.matchVariable;
@@ -51,7 +51,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negateCondition")
-        private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
@@ -62,7 +62,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-        private final Input<Either<String,Operator>> operator;
+      private final Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator;
@@ -73,7 +73,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -84,7 +84,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transforms")
-        private final @Nullable Input<List<Either<String,TransformType>>> transforms;
+      private final @Nullable Input<List<Either<String,TransformType>>> transforms;
 
     public Input<List<Either<String,TransformType>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;

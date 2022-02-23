@@ -23,7 +23,7 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxSurge")
-        private final @Nullable Input<String> maxSurge;
+      private final @Nullable Input<String> maxSurge;
 
     public Input<String> getMaxSurge() {
         return this.maxSurge == null ? Input.empty() : this.maxSurge;

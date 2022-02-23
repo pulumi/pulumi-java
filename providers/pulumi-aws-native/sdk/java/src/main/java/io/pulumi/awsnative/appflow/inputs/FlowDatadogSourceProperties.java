@@ -13,7 +13,7 @@ public final class FlowDatadogSourceProperties extends io.pulumi.resources.Invok
     public static final FlowDatadogSourceProperties Empty = new FlowDatadogSourceProperties();
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;

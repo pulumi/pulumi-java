@@ -16,14 +16,14 @@ public final class BackupPlanCopyActionResourceType extends io.pulumi.resources.
     public static final BackupPlanCopyActionResourceType Empty = new BackupPlanCopyActionResourceType();
 
     @InputImport(name="destinationBackupVaultArn", required=true)
-        private final String destinationBackupVaultArn;
+      private final String destinationBackupVaultArn;
 
     public String getDestinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
     @InputImport(name="lifecycle")
-        private final @Nullable BackupPlanLifecycleResourceType lifecycle;
+      private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
     public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
         return this.lifecycle == null ? Optional.empty() : Optional.ofNullable(this.lifecycle);

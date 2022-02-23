@@ -24,7 +24,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="firewallPolicyName", required=true)
-        private final Input<String> firewallPolicyName;
+      private final Input<String> firewallPolicyName;
 
     public Input<String> getFirewallPolicyName() {
         return this.firewallPolicyName;
@@ -35,7 +35,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -68,7 +68,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ruleCollectionGroupName")
-        private final @Nullable Input<String> ruleCollectionGroupName;
+      private final @Nullable Input<String> ruleCollectionGroupName;
 
     public Input<String> getRuleCollectionGroupName() {
         return this.ruleCollectionGroupName == null ? Input.empty() : this.ruleCollectionGroupName;
@@ -90,7 +90,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ruleCollections")
-        private final @Nullable Input<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;
+      private final @Nullable Input<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;
 
     public Input<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> getRuleCollections() {
         return this.ruleCollections == null ? Input.empty() : this.ruleCollections;

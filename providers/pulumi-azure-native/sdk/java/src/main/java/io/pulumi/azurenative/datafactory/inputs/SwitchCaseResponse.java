@@ -63,7 +63,7 @@ public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="activities")
-        private final @Nullable List<Object> activities;
+      private final @Nullable List<Object> activities;
 
     public List<Object> getActivities() {
         return this.activities == null ? List.of() : this.activities;
@@ -74,7 +74,7 @@ public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

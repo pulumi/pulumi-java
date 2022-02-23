@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -58,7 +58,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Boolean primary;
+      private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -69,7 +69,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="privateIPAddress")
-        private final @Nullable String privateIPAddress;
+      private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -80,7 +80,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-        private final @Nullable String privateIPAllocationMethod;
+      private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
@@ -91,7 +91,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -102,7 +102,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable SubResourceResponse subnet;
+      private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -113,7 +113,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

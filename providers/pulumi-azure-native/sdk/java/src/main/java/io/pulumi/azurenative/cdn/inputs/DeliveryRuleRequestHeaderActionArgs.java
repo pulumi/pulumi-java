@@ -24,7 +24,7 @@ public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final Input<HeaderActionParametersArgs> parameters;
+      private final Input<HeaderActionParametersArgs> parameters;
 
     public Input<HeaderActionParametersArgs> getParameters() {
         return this.parameters;

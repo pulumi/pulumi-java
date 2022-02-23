@@ -24,7 +24,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * 
      */
     @InputImport(name="negatives")
-        private final @Nullable Double negatives;
+      private final @Nullable Double negatives;
 
     public Optional<Double> getNegatives() {
         return this.negatives == null ? Optional.empty() : Optional.ofNullable(this.negatives);
@@ -35,7 +35,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * 
      */
     @InputImport(name="negativesAboveThreshold")
-        private final @Nullable Double negativesAboveThreshold;
+      private final @Nullable Double negativesAboveThreshold;
 
     public Optional<Double> getNegativesAboveThreshold() {
         return this.negativesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.negativesAboveThreshold);
@@ -46,7 +46,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * 
      */
     @InputImport(name="positives")
-        private final @Nullable Double positives;
+      private final @Nullable Double positives;
 
     public Optional<Double> getPositives() {
         return this.positives == null ? Optional.empty() : Optional.ofNullable(this.positives);
@@ -57,7 +57,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * 
      */
     @InputImport(name="positivesAboveThreshold")
-        private final @Nullable Double positivesAboveThreshold;
+      private final @Nullable Double positivesAboveThreshold;
 
     public Optional<Double> getPositivesAboveThreshold() {
         return this.positivesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.positivesAboveThreshold);
@@ -68,7 +68,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * 
      */
     @InputImport(name="scoreThreshold")
-        private final @Nullable Integer scoreThreshold;
+      private final @Nullable Integer scoreThreshold;
 
     public Optional<Integer> getScoreThreshold() {
         return this.scoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.scoreThreshold);

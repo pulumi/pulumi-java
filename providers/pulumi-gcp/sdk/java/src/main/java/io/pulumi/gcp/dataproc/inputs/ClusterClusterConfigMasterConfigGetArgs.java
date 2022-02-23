@@ -23,7 +23,7 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="accelerators")
-        private final @Nullable Input<List<ClusterClusterConfigMasterConfigAcceleratorGetArgs>> accelerators;
+      private final @Nullable Input<List<ClusterClusterConfigMasterConfigAcceleratorGetArgs>> accelerators;
 
     public Input<List<ClusterClusterConfigMasterConfigAcceleratorGetArgs>> getAccelerators() {
         return this.accelerators == null ? Input.empty() : this.accelerators;
@@ -34,7 +34,7 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="diskConfig")
-        private final @Nullable Input<ClusterClusterConfigMasterConfigDiskConfigGetArgs> diskConfig;
+      private final @Nullable Input<ClusterClusterConfigMasterConfigDiskConfigGetArgs> diskConfig;
 
     public Input<ClusterClusterConfigMasterConfigDiskConfigGetArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
@@ -46,14 +46,14 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="imageUri")
-        private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
     }
 
     @InputImport(name="instanceNames")
-        private final @Nullable Input<List<String>> instanceNames;
+      private final @Nullable Input<List<String>> instanceNames;
 
     public Input<List<String>> getInstanceNames() {
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
@@ -66,7 +66,7 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="machineType")
-        private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -80,7 +80,7 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="minCpuPlatform")
-        private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -92,7 +92,7 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="numInstances")
-        private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Input<Integer> numInstances;
 
     public Input<Integer> getNumInstances() {
         return this.numInstances == null ? Input.empty() : this.numInstances;

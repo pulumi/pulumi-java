@@ -134,6 +134,21 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ApplicationSecurityGroup(String name) {
+        this(name, ApplicationSecurityGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApplicationSecurityGroup(String name, ApplicationSecurityGroupArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

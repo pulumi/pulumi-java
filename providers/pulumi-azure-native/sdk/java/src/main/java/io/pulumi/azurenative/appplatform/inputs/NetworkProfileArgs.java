@@ -23,7 +23,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appNetworkResourceGroup")
-        private final @Nullable Input<String> appNetworkResourceGroup;
+      private final @Nullable Input<String> appNetworkResourceGroup;
 
     public Input<String> getAppNetworkResourceGroup() {
         return this.appNetworkResourceGroup == null ? Input.empty() : this.appNetworkResourceGroup;
@@ -34,7 +34,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appSubnetId")
-        private final @Nullable Input<String> appSubnetId;
+      private final @Nullable Input<String> appSubnetId;
 
     public Input<String> getAppSubnetId() {
         return this.appSubnetId == null ? Input.empty() : this.appSubnetId;
@@ -45,7 +45,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCidr")
-        private final @Nullable Input<String> serviceCidr;
+      private final @Nullable Input<String> serviceCidr;
 
     public Input<String> getServiceCidr() {
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
@@ -56,7 +56,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRuntimeNetworkResourceGroup")
-        private final @Nullable Input<String> serviceRuntimeNetworkResourceGroup;
+      private final @Nullable Input<String> serviceRuntimeNetworkResourceGroup;
 
     public Input<String> getServiceRuntimeNetworkResourceGroup() {
         return this.serviceRuntimeNetworkResourceGroup == null ? Input.empty() : this.serviceRuntimeNetworkResourceGroup;
@@ -67,7 +67,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRuntimeSubnetId")
-        private final @Nullable Input<String> serviceRuntimeSubnetId;
+      private final @Nullable Input<String> serviceRuntimeSubnetId;
 
     public Input<String> getServiceRuntimeSubnetId() {
         return this.serviceRuntimeSubnetId == null ? Input.empty() : this.serviceRuntimeSubnetId;

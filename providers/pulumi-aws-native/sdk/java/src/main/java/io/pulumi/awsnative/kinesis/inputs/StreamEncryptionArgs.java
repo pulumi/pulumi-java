@@ -23,7 +23,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionType", required=true)
-        private final Input<StreamEncryptionEncryptionType> encryptionType;
+      private final Input<StreamEncryptionEncryptionType> encryptionType;
 
     public Input<StreamEncryptionEncryptionType> getEncryptionType() {
         return this.encryptionType;
@@ -34,7 +34,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyId", required=true)
-        private final Input<String> keyId;
+      private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;

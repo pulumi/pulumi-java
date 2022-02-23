@@ -20,7 +20,7 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -31,7 +31,7 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAcl")
-        private final @Nullable Input<String> defaultAcl;
+      private final @Nullable Input<String> defaultAcl;
 
     public Input<String> getDefaultAcl() {
         return this.defaultAcl == null ? Input.empty() : this.defaultAcl;
@@ -42,7 +42,7 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-        private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Input<String> predefinedAcl;
 
     public Input<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
@@ -53,7 +53,7 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-        private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;

@@ -13,7 +13,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
     @InputImport(name="dataControllerName", required=true)
-        private final String dataControllerName;
+      private final String dataControllerName;
 
     public String getDataControllerName() {
         return this.dataControllerName;
@@ -24,7 +24,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

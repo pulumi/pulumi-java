@@ -23,7 +23,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="symmetricKey")
-        private final @Nullable SymmetricKeyResponse symmetricKey;
+      private final @Nullable SymmetricKeyResponse symmetricKey;
 
     public Optional<SymmetricKeyResponse> getSymmetricKey() {
         return this.symmetricKey == null ? Optional.empty() : Optional.ofNullable(this.symmetricKey);

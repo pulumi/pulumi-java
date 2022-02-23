@@ -26,7 +26,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations")
-        private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
@@ -37,7 +37,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streams")
-        private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
+      private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
 
     public Input<List<Either<String,KnownDataFlowStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;

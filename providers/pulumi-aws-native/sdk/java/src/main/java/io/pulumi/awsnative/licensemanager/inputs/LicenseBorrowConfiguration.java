@@ -14,14 +14,14 @@ public final class LicenseBorrowConfiguration extends io.pulumi.resources.Invoke
     public static final LicenseBorrowConfiguration Empty = new LicenseBorrowConfiguration();
 
     @InputImport(name="allowEarlyCheckIn", required=true)
-        private final Boolean allowEarlyCheckIn;
+      private final Boolean allowEarlyCheckIn;
 
     public Boolean getAllowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
 
     @InputImport(name="maxTimeToLiveInMinutes", required=true)
-        private final Integer maxTimeToLiveInMinutes;
+      private final Integer maxTimeToLiveInMinutes;
 
     public Integer getMaxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;

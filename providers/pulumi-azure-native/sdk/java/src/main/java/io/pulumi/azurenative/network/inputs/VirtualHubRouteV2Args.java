@@ -24,7 +24,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationType")
-        private final @Nullable Input<String> destinationType;
+      private final @Nullable Input<String> destinationType;
 
     public Input<String> getDestinationType() {
         return this.destinationType == null ? Input.empty() : this.destinationType;
@@ -35,7 +35,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinations")
-        private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
@@ -46,7 +46,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nextHopType")
-        private final @Nullable Input<String> nextHopType;
+      private final @Nullable Input<String> nextHopType;
 
     public Input<String> getNextHopType() {
         return this.nextHopType == null ? Input.empty() : this.nextHopType;
@@ -57,7 +57,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nextHops")
-        private final @Nullable Input<List<String>> nextHops;
+      private final @Nullable Input<List<String>> nextHops;
 
     public Input<List<String>> getNextHops() {
         return this.nextHops == null ? Input.empty() : this.nextHops;

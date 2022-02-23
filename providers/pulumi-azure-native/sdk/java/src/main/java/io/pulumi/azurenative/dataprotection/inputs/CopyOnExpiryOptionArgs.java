@@ -23,7 +23,7 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final Input<String> objectType;
+      private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;

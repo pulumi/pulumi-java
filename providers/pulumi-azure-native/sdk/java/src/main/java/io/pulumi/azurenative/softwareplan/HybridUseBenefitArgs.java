@@ -20,7 +20,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="planId")
-        private final @Nullable Input<String> planId;
+      private final @Nullable Input<String> planId;
 
     public Input<String> getPlanId() {
         return this.planId == null ? Input.empty() : this.planId;
@@ -31,7 +31,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-        private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -42,7 +42,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;

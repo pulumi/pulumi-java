@@ -21,7 +21,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expressRouteID", required=true)
-        private final String expressRouteID;
+      private final String expressRouteID;
 
     public String getExpressRouteID() {
         return this.expressRouteID;
@@ -32,7 +32,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expressRoutePrivatePeeringID", required=true)
-        private final String expressRoutePrivatePeeringID;
+      private final String expressRoutePrivatePeeringID;
 
     public String getExpressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
@@ -43,7 +43,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primarySubnet", required=true)
-        private final String primarySubnet;
+      private final String primarySubnet;
 
     public String getPrimarySubnet() {
         return this.primarySubnet;
@@ -54,7 +54,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secondarySubnet", required=true)
-        private final String secondarySubnet;
+      private final String secondarySubnet;
 
     public String getSecondarySubnet() {
         return this.secondarySubnet;

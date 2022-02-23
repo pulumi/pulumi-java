@@ -23,7 +23,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -34,7 +34,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolName", required=true)
-        private final Input<String> hostPoolName;
+      private final Input<String> hostPoolName;
 
     public Input<String> getHostPoolName() {
         return this.hostPoolName;
@@ -45,7 +45,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePath")
-        private final @Nullable Input<String> imagePath;
+      private final @Nullable Input<String> imagePath;
 
     public Input<String> getImagePath() {
         return this.imagePath == null ? Input.empty() : this.imagePath;
@@ -56,7 +56,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isActive")
-        private final @Nullable Input<Boolean> isActive;
+      private final @Nullable Input<Boolean> isActive;
 
     public Input<Boolean> getIsActive() {
         return this.isActive == null ? Input.empty() : this.isActive;
@@ -67,7 +67,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isRegularRegistration")
-        private final @Nullable Input<Boolean> isRegularRegistration;
+      private final @Nullable Input<Boolean> isRegularRegistration;
 
     public Input<Boolean> getIsRegularRegistration() {
         return this.isRegularRegistration == null ? Input.empty() : this.isRegularRegistration;
@@ -78,7 +78,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdated")
-        private final @Nullable Input<String> lastUpdated;
+      private final @Nullable Input<String> lastUpdated;
 
     public Input<String> getLastUpdated() {
         return this.lastUpdated == null ? Input.empty() : this.lastUpdated;
@@ -89,7 +89,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageFullName")
-        private final @Nullable Input<String> msixPackageFullName;
+      private final @Nullable Input<String> msixPackageFullName;
 
     public Input<String> getMsixPackageFullName() {
         return this.msixPackageFullName == null ? Input.empty() : this.msixPackageFullName;
@@ -100,7 +100,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageApplications")
-        private final @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications;
+      private final @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications;
 
     public Input<List<MsixPackageApplicationsArgs>> getPackageApplications() {
         return this.packageApplications == null ? Input.empty() : this.packageApplications;
@@ -111,7 +111,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageDependencies")
-        private final @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies;
+      private final @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies;
 
     public Input<List<MsixPackageDependenciesArgs>> getPackageDependencies() {
         return this.packageDependencies == null ? Input.empty() : this.packageDependencies;
@@ -122,7 +122,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageFamilyName")
-        private final @Nullable Input<String> packageFamilyName;
+      private final @Nullable Input<String> packageFamilyName;
 
     public Input<String> getPackageFamilyName() {
         return this.packageFamilyName == null ? Input.empty() : this.packageFamilyName;
@@ -133,7 +133,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-        private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -144,7 +144,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageRelativePath")
-        private final @Nullable Input<String> packageRelativePath;
+      private final @Nullable Input<String> packageRelativePath;
 
     public Input<String> getPackageRelativePath() {
         return this.packageRelativePath == null ? Input.empty() : this.packageRelativePath;
@@ -155,7 +155,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -166,7 +166,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

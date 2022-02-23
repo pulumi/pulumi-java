@@ -13,7 +13,7 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
     @InputImport(name="accountId", required=true)
-        private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;

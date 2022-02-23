@@ -28,7 +28,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-        private final Input<String> backupManagementType;
+      private final Input<String> backupManagementType;
 
     public Input<String> getBackupManagementType() {
         return this.backupManagementType;
@@ -39,7 +39,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectedItemsCount")
-        private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Input<Integer> protectedItemsCount;
 
     public Input<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
@@ -50,7 +50,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionPolicy")
-        private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+      private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;

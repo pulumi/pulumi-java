@@ -26,7 +26,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentName", required=true)
-        private final Input<String> componentName;
+      private final Input<String> componentName;
 
     public Input<String> getComponentName() {
         return this.componentName;
@@ -37,7 +37,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getLicenseKey() {
         return this.licenseKey == null ? Input.empty() : this.licenseKey;
@@ -49,7 +49,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

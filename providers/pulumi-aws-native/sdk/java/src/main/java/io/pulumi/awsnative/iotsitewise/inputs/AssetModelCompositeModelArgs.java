@@ -25,7 +25,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="compositeModelProperties")
-        private final @Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties;
+      private final @Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties;
 
     public Input<List<AssetModelPropertyArgs>> getCompositeModelProperties() {
         return this.compositeModelProperties == null ? Input.empty() : this.compositeModelProperties;
@@ -36,7 +36,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

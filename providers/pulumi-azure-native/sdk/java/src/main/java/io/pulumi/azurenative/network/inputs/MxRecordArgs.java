@@ -24,7 +24,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exchange")
-        private final @Nullable Input<String> exchange;
+      private final @Nullable Input<String> exchange;
 
     public Input<String> getExchange() {
         return this.exchange == null ? Input.empty() : this.exchange;
@@ -35,7 +35,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preference")
-        private final @Nullable Input<Integer> preference;
+      private final @Nullable Input<Integer> preference;
 
     public Input<Integer> getPreference() {
         return this.preference == null ? Input.empty() : this.preference;

@@ -24,7 +24,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageUri")
-        private final @Nullable Input<String> storageUri;
+      private final @Nullable Input<String> storageUri;
 
     public Input<String> getStorageUri() {
         return this.storageUri == null ? Input.empty() : this.storageUri;

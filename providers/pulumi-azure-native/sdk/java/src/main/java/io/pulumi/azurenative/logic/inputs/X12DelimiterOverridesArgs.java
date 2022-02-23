@@ -26,7 +26,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-        private final Input<Integer> componentSeparator;
+      private final Input<Integer> componentSeparator;
 
     public Input<Integer> getComponentSeparator() {
         return this.componentSeparator;
@@ -37,7 +37,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-        private final Input<Integer> dataElementSeparator;
+      private final Input<Integer> dataElementSeparator;
 
     public Input<Integer> getDataElementSeparator() {
         return this.dataElementSeparator;
@@ -48,7 +48,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="messageId")
-        private final @Nullable Input<String> messageId;
+      private final @Nullable Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId == null ? Input.empty() : this.messageId;
@@ -59,7 +59,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protocolVersion")
-        private final @Nullable Input<String> protocolVersion;
+      private final @Nullable Input<String> protocolVersion;
 
     public Input<String> getProtocolVersion() {
         return this.protocolVersion == null ? Input.empty() : this.protocolVersion;
@@ -70,7 +70,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-        private final Input<Integer> replaceCharacter;
+      private final Input<Integer> replaceCharacter;
 
     public Input<Integer> getReplaceCharacter() {
         return this.replaceCharacter;
@@ -81,7 +81,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-        private final Input<Boolean> replaceSeparatorsInPayload;
+      private final Input<Boolean> replaceSeparatorsInPayload;
 
     public Input<Boolean> getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -92,7 +92,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-        private final Input<Integer> segmentTerminator;
+      private final Input<Integer> segmentTerminator;
 
     public Input<Integer> getSegmentTerminator() {
         return this.segmentTerminator;
@@ -103,7 +103,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-        private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+      private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Input<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -114,7 +114,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetNamespace")
-        private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace == null ? Input.empty() : this.targetNamespace;

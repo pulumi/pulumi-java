@@ -21,7 +21,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="specificReservation")
-        private final @Nullable Input<InstanceReservationAffinitySpecificReservationGetArgs> specificReservation;
+      private final @Nullable Input<InstanceReservationAffinitySpecificReservationGetArgs> specificReservation;
 
     public Input<InstanceReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
@@ -32,7 +32,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

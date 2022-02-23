@@ -25,7 +25,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="doubleEncryption")
-        private final @Nullable Input<Either<String,DoubleEncryption>> doubleEncryption;
+      private final @Nullable Input<Either<String,DoubleEncryption>> doubleEncryption;
 
     public Input<Either<String,DoubleEncryption>> getDoubleEncryption() {
         return this.doubleEncryption == null ? Input.empty() : this.doubleEncryption;

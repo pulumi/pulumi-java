@@ -23,7 +23,7 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -34,7 +34,7 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;

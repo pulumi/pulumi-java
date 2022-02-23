@@ -19,14 +19,14 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     public static final FlowTaskPropertiesObjectArgs Empty = new FlowTaskPropertiesObjectArgs();
 
     @InputImport(name="key", required=true)
-        private final Input<FlowOperatorPropertiesKeys> key;
+      private final Input<FlowOperatorPropertiesKeys> key;
 
     public Input<FlowOperatorPropertiesKeys> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

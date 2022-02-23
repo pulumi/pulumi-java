@@ -30,7 +30,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHeaders")
-        private final @Nullable Input<List<MonitorConfigCustomHeadersArgs>> customHeaders;
+      private final @Nullable Input<List<MonitorConfigCustomHeadersArgs>> customHeaders;
 
     public Input<List<MonitorConfigCustomHeadersArgs>> getCustomHeaders() {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
@@ -41,7 +41,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedStatusCodeRanges")
-        private final @Nullable Input<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges;
+      private final @Nullable Input<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges;
 
     public Input<List<MonitorConfigExpectedStatusCodeRangesArgs>> getExpectedStatusCodeRanges() {
         return this.expectedStatusCodeRanges == null ? Input.empty() : this.expectedStatusCodeRanges;
@@ -52,7 +52,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-        private final @Nullable Input<Double> intervalInSeconds;
+      private final @Nullable Input<Double> intervalInSeconds;
 
     public Input<Double> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
@@ -63,7 +63,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -74,7 +74,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Double> port;
+      private final @Nullable Input<Double> port;
 
     public Input<Double> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -85,7 +85,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileMonitorStatus")
-        private final @Nullable Input<Either<String,ProfileMonitorStatus>> profileMonitorStatus;
+      private final @Nullable Input<Either<String,ProfileMonitorStatus>> profileMonitorStatus;
 
     public Input<Either<String,ProfileMonitorStatus>> getProfileMonitorStatus() {
         return this.profileMonitorStatus == null ? Input.empty() : this.profileMonitorStatus;
@@ -96,7 +96,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<Either<String,MonitorProtocol>> protocol;
+      private final @Nullable Input<Either<String,MonitorProtocol>> protocol;
 
     public Input<Either<String,MonitorProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -107,7 +107,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutInSeconds")
-        private final @Nullable Input<Double> timeoutInSeconds;
+      private final @Nullable Input<Double> timeoutInSeconds;
 
     public Input<Double> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -118,7 +118,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toleratedNumberOfFailures")
-        private final @Nullable Input<Double> toleratedNumberOfFailures;
+      private final @Nullable Input<Double> toleratedNumberOfFailures;
 
     public Input<Double> getToleratedNumberOfFailures() {
         return this.toleratedNumberOfFailures == null ? Input.empty() : this.toleratedNumberOfFailures;

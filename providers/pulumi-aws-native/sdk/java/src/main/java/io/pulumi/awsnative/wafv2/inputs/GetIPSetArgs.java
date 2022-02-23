@@ -14,21 +14,21 @@ public final class GetIPSetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIPSetArgs Empty = new GetIPSetArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="scope", required=true)
-        private final IPSetScope scope;
+      private final IPSetScope scope;
 
     public IPSetScope getScope() {
         return this.scope;

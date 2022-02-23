@@ -14,14 +14,14 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     public static final ApplicationFleetAssociationArgs Empty = new ApplicationFleetAssociationArgs();
 
     @InputImport(name="applicationArn", required=true)
-        private final Input<String> applicationArn;
+      private final Input<String> applicationArn;
 
     public Input<String> getApplicationArn() {
         return this.applicationArn;
     }
 
     @InputImport(name="fleetName", required=true)
-        private final Input<String> fleetName;
+      private final Input<String> fleetName;
 
     public Input<String> getFleetName() {
         return this.fleetName;

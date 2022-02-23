@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="args")
-        private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -52,7 +52,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="commands")
-        private final @Nullable Input<List<String>> commands;
+      private final @Nullable Input<List<String>> commands;
 
     public Input<List<String>> getCommands() {
         return this.commands == null ? Input.empty() : this.commands;
@@ -74,7 +74,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="envFroms")
-        private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> getEnvFroms() {
@@ -87,7 +87,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="envs")
-        private final @Nullable Input<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
 
     public Input<List<ServiceTemplateSpecContainerEnvGetArgs>> getEnvs() {
         return this.envs == null ? Input.empty() : this.envs;
@@ -100,7 +100,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="image", required=true)
-        private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -114,7 +114,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ports")
-        private final @Nullable Input<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
 
     public Input<List<ServiceTemplateSpecContainerPortGetArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -128,7 +128,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resources")
-        private final @Nullable Input<ServiceTemplateSpecContainerResourcesGetArgs> resources;
+      private final @Nullable Input<ServiceTemplateSpecContainerResourcesGetArgs> resources;
 
     public Input<ServiceTemplateSpecContainerResourcesGetArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -141,7 +141,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="volumeMounts")
-        private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
 
     public Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -160,7 +160,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="workingDir")
-        private final @Nullable Input<String> workingDir;
+      private final @Nullable Input<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<String> getWorkingDir() {

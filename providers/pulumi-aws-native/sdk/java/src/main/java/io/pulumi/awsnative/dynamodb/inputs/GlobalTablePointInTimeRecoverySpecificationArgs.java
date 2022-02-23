@@ -15,7 +15,7 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     public static final GlobalTablePointInTimeRecoverySpecificationArgs Empty = new GlobalTablePointInTimeRecoverySpecificationArgs();
 
     @InputImport(name="pointInTimeRecoveryEnabled")
-        private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
     public Input<Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;

@@ -24,7 +24,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationPath", required=true)
-        private final Input<String> destinationPath;
+      private final Input<String> destinationPath;
 
     public Input<String> getDestinationPath() {
         return this.destinationPath;
@@ -35,7 +35,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;

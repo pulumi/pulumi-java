@@ -22,7 +22,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupType", required=true)
-        private final Input<String> backupType;
+      private final Input<String> backupType;
 
     public Input<String> getBackupType() {
         return this.backupType;
@@ -34,7 +34,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final Input<String> objectType;
+      private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
