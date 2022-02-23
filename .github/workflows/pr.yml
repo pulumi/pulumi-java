@@ -11,7 +11,7 @@ env:
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
 jobs:
-  build-java-sdk:
+  build-base-java-sdk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -51,30 +51,58 @@ jobs:
         run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
+  test_go:
+    needs: build-base-java-sdk
+    steps:
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
+  provider-random:
+    needs: build-base-java-sdk
+    steps:
       - name: Build pulumi-random JVM SDK
         run: make provider.random.build
       - name: Install pulumi-random JVM SDK to a local Maven repo
         run: make provider.random.install
+  provider-azure-native:
+    needs: build-base-java-sdk
+    steps:
       - name: Build pulumi-azure-native JVM SDK
         run: make provider.azure-native.build
       - name: Install pulumi-azure-native JVM SDK to a local Maven repo
         run: make provider.azure-native.install
+  provider-google-native:
+    needs: build-base-java-sdk
+    steps:
       - name: Build pulumi-google-native JVM SDK
         run: make provider.google-native.build
       - name: Install pulumi-google-native JVM SDK to a local Maven repo
         run: make provider.google-native.install
+  provider-aws:
+    needs: build-base-java-sdk
+    steps:
+      - name: Build pulumi-aws JVM SDK
+        run: make provider.aws.build
+      - name: Install pulumi-aws JVM SDK to a local Maven repo
+        run: make provider.aws.install
+  provider-aws-native:
+    needs: build-base-java-sdk
+    steps:
       - name: Build pulumi-aws-native JVM SDK
         run: make provider.aws-native.build
       - name: Install pulumi-aws-native JVM SDK to a local Maven repo
         run: make provider.aws-native.install
+  provider-kubernetes:
+    needs: build-base-java-sdk
+    steps:
       - name: Build pulumi-kubernetes JVM SDK
         run: make provider.kubernetes.build
       - name: Install pulumi-kubernetes JVM SDK to a local Maven repo
         run: make provider.kubernetes.install
+  integration-tests:
+    steps:
       - name: Integration tests
         run: make integration_tests
+    needs: build-base-java-sdk
   go-lint:
     container: golangci/golangci-lint:latest
     name: Lint ${{ matrix.directory }}
